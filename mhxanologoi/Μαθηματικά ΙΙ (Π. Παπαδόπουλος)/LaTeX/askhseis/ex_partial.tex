@@ -1,0 +1,265 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+% \usepackage{paralist} 
+
+%\renewcommand{\baselinestretch}{1.2}
+
+\everymath{\displaystyle}
+
+\begin{document}
+
+\begin{center}
+\fbox{\large\bfseries Ασκήσεις στις Μερικές Παραγώγους}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+\item Να βρεθούν οι μερικές παράγωγοι 1ης τάξης των παρακάτω συναρτήσεων:
+
+\begin{enumerate}[i)]
+
+\item $f(x,y)=y\sin (xy)$ \hfill Απ: \begin{tabular}{l} $\scriptstyle{f_x=y^2\cos(xy)}$ \\ $\scriptstyle{f_y=\sin(xy)+yx\cos(xy)}$\end{tabular}
+
+\item $f(x,y)=(x+y)\cos(x+y)$\hfill Απ: \begin{tabular}{l} $\scriptstyle{f_x=f_y=\cos(x+y)-(x+y)\sin(x+y)}$\end{tabular}
+
+\item $f(x,y)=\ln(x+y)$\hfill Απ: \begin{tabular}{l} $\scriptstyle{f_x=\frac{y}{x+y}}$ \\ $\scriptstyle{f_y=\ln(x+y)+\frac{y}{x+y}}$\end{tabular}
+
+%\item $f(x,y)=\cos(xy)\cdot\sin(x+y)$\hfill Απ: \begin{tabular}{c} $f_y=-x\sin(xy)\sin(x+y)+\cos(xy)\cos(x+y)$ \\ $f_x=-y\sin(xy)\sin(x+y)+\cos(xy)\cos(x+y)$\end{tabular}
+
+\item $f(x,y)=\ln\cos(xy)\sin e^x$\hfill Απ: \begin{tabular}{l} $\scriptstyle{f_x=-y\tan (xy)\sin(e^x)+e^x\ln(\cos(xy))\cos(e^x)}$ \\ $\scriptstyle{f_y=-\frac{x\sin(xy)\sin(e^x)}{\cos(xy)}}$\end{tabular}
+
+\item $f(x,y)=\arcsin(\frac{x}{y})$\hfill Απ: \begin{tabular}{l} $\scriptstyle{f_x=\frac{1}{\sqrt{y^2-x^2}}}$ \\ $\scriptstyle{f_y=-\frac{x}{y\sqrt{y^2-x^2}}}$\end{tabular}
+\end{enumerate}
+
+\item Να υπολογισθεί η μερική παράγωγος $\pdv{f}{y}{x}$ στη θέση $\left(\pi,-\frac{\pi}{2}\right)$, όταν $f(x,y)=\ln\left(\cos y+x\cos x\right)$.
+
+\hfill Απ: $\scriptstyle{\frac{1}{\pi^2}}$
+
+\item Να δείξετε ότι για την συνάρτηση $ f(x,y) = x^{y} $, ισχύει ότι $ f_{xy} = f_{yx} $.
+
+\item Να δείξετε ότι η συνάρτηση $ f(x,y) = (y+3x)^{\frac{ 1 }{ 2 }} - (y-3x)^{2} $ ικανοποιεί τη
+	σχέση $ \pdv[2]{f}{x} - 9 \pdv[2]{f}{y} = 0 $.
+
+\item Να δείξετε ότι οι παρακάτω συναρτήσεις είναι αρμονικές:
+	\begin{enumerate}[(i)]
+		\item $f(x,y) = \ln(x^{2} + y^{2})$
+		\item $ f(x,y) = \frac{ x }{ 2 } \ln(x^{2} + y^{2}) - y \arctan(\frac{ y }{ x } ) $
+	\end{enumerate}
+
+\item Να αποδείξετε ότι αν μία συνάρτηση $f(x,y)$, που έχει συνεχείς μερικές παραγώγους 2ης τάξης
+	 είναι αρμονική, τότε και οι συναρτήσεις 
+	 \begin{enumerate*}[i)]
+	 \item $ f_{x} $ 
+	 \item $ f_{y} $
+	 \item $ xf_{x}+yf_{y} $
+	 \item $ xf_{x}-yf_{y} $
+	 \end{enumerate*}
+	 είναι αρμονικές.
+
+\item Να βρεθεί το ολικό διαφορικό 1ης τάξης, της συνάρτησης $f(x,y)=\ln(xy)+\cos(y^2)$
+
+	\hfill Απ: $\scriptstyle{df=\frac{dx}{x}+\left(\frac{1}{y}-2y\sin(y^2)\right)dy}$
+
+\item Να βρεθεί το ολικό διαφορικό 1ης τάξης, της συνάρτησης $ f(x,y) = \arctan(\frac{ x+y }{ x-y
+	}) $, αν $ x>0 $ και $ y>0 $.
+
+	\hfill Απ: $df = \frac{ -ydx + xdy }{ x^{2} + y^{2} } $ 
+
+\item Να βρεθεί το ολικό διαφορικό της συνάρτησης $ f(x,y) = x^{y} \cdot y^{x} $, αν $ x>0$ και $ y>0 $.
+
+	\hfill Απ: $\scriptstyle{df =  (x^{y-1}\cdot y^{x+1} + x^{y}\cdot y^{x} \ln{y} )dx + (x^{y}\cdot y^{x} \ln{x} + x^{y+1} \cdot y^{x-1})dy} $ 
+
+\item Να υπολογιστεί κατά προσέγγιση η τιμή των παραστάσεων
+ \begin{enumerate}[i)]
+ 	\item $A = (1,02)^{3,01} $
+	\item $B =  \sqrt{ 9(1,95)^{2} + (8,1)^{2} } $ 
+ \end{enumerate}	
+
+ \hfill Απ: $\scriptstyle{ A \approx 1,06 ,  B \approx 9,99} $
+
+ 
+\item Να βρεθεί η παράγωγος 1ης τάξης $\dv{f}{t}$ της σύνθετης συνάρτησης $f(x,y)=\ln(y^2-x^2)$, όταν $x=\sin t, y=\cos t$, για $t=\frac{\pi}{8}$.
+
+\hfill Απ: $\scriptstyle{-2}$
+
+\item Να βρεθεί η παράγωγος 1ης τάξης $\dv{w}{t}$ της σύνθετης συνάρτησης $ w = xy+z $, όπου $ x =
+	\cos{t}, y = \sin{t}$ και $ z = t $, για $ t = \frac{ \pi }{ 4 } $.
+
+	\hfill Απ: 1
+
+\item Να υπολογιστούν οι μερικές παράγωγοι 1ης τάξης, ως προς $u$ και $v$, της συνάρτησης $ f(x,y,z)
+	= x + 2y + z^{2}$, όπου $ x = \frac{ u }{ v } $, $y = u^{2} + \ln{v} $ και $ z = 2u $.
+
+	\hfill Απ: $ \pdv{f}{u} = \frac{1}{ v } + 12u $, $\pdv{f}{v} = -\frac{ u }{ v^{2} } + \frac{
+	2 }{ v } $
+
+ \item Έστω η συνάρτηση $ f : \mathbb{R}^{2} \to \mathbb{R} $ που ορίζεται με τον τύπο $ f(x,y) =
+	 x^{2} + xy $, όπου $ x=r \cos{\theta} $ και $ y= r \sin{\theta} $. Να υπολογίσετε με τη χρήση
+	 του κανόνα αλυσίδας τις μερικές παραγώγους $ \pdv{f}{r} $ και $ \pdv{f}{\theta} $.
+
+	 \hfill Απ: \begin{tabular}{l}
+		 $\scriptstyle{i) \pdv{f}{r} = 2r(\cos{\theta} )(\cos{\theta} + \sin{\theta})}
+			 $ \\
+			 $\scriptstyle{ii) \pdv{f}{\theta}=r^{2}(\cos{2\theta} - \sin{2 \theta})} $
+	 \end{tabular}
+
+
+ \item Έστω η συνάρτηση $ f : \mathbb{R}^{2} \to \mathbb{R} $ που ορίζεται με τον τύπο $ f(x,y,z) =
+	 xyz^{2}$, όπου $ x = \sin{t}, y = \cos{t} $ και $ z = t^{2}+1 $. Να υπολογίσετε την μερική
+	 παράγωγο 2ης τάξης $ \pdv[2]{f}{t} $.
+
+	 \hfill Απ: $\scriptstyle{\pdv[2]{f}{t} = -2(t^{2}+1)^{2} \sin{2t} + 8t(t^{2}+1) \cos{2t} +
+	 2(t^{2}+1) \sin{2t} + 4t^{2} \sin{2t}}$
+
+ \item Έστω η συνάρτηση $ f : \mathbb{R}^{2} \to \mathbb{R} $ που ορίζεται με τον τύπο $ f(x,y) =
+	 x+y$, όπου $ x = u^{2} - v^{2} $ και $ y = e^{uv} $. Να υπολογίσετε την μερική παράγωγο 2ης
+	 τάξης $ \pdv[2]{f}{u} $.
+
+	 \hfill Απ: $ \scriptstyle{\pdv[2]{f}{u} = 2 + v^{2}e^{uv}} $
+
+ \item Αν $ z=f(x,y) $ είναι μια συνάρτηση με συνεχείς δεύτερες μερικές παραγώγους με $
+	 x=u^{2}+v^{2} $ και $ y = 2uv $, να υπολογίσετε τις παραγώγους
+	 \begin{enumerate*}[i)]
+		 \item $\pdv{z}{u}$
+		 \item $\pdv[2]{z}{u}$
+	 \end{enumerate*}
+
+	 \hfill Απ:  \begin{tabular}{l}
+		 $\scriptstyle{\rm{i})  \pdv{z}{u} = 2u\pdv{z}{x}+2v\pdv{z}{y}}  $ \\
+		 $\scriptstyle{\rm{ii}) \pdv[2]{z}{u} =
+		 2\pdv{z}{x}+4u^{2}\pdv[2]{z}{x}+8uv\pdv[2]{z}{x}{y}+4v^{2}\pdv[2]{z}{y}} $
+	 \end{tabular}
+
+
+ \item Δίνεται η συνάρτηση $ f : \mathbb{R}^{2} \to \mathbb{R} $ με τύπο $ z=f(x,y) $, όπου $ x=u+v
+	 $ και $ y = u-v $. Να αποδείξετε ότι 
+	 \[
+		 (z_{x})^{2} - (z_{y})^{2} = z_{u}\cdot z_{v} 
+	 \] 
+
+ \item Δίνεται η συνάρτηση $ z : \mathbb{R} ^{2} \to \mathbb{R} $ με τύπο $ z = f(u) + g(v) $, όπου
+	 $ u = ax + by $ και $ v = ax - by $, όπου $ a,b \in \mathbb{R} $. Να αποδείξετε ότι 
+	 \[
+		 a^{2}\pdv[2]{z}{y} - b^{2}\pdv[2]{z}{x} = 0 
+	 \] 
+	 
+
+ \item Έστω $ g(x,y) = f(x^{2} - y^{2}, y^{2} - x^{2}) $, όπου η συνάρτηση $f$ είναι διαφορίσιμη. Να
+	 αποδείξετε ότι η συνάρτηση $g$ ικανοποιεί την διαφορική εξίσωση με μερικές παραγώγους
+	 \[
+		 x\pdv{g}{y} + y\pdv{g}{x} = 0
+	 \] 
+
+	
+
+
+ 
+ \item Αν $ z = f(x,y) $, με $ x=r \cos{\theta} $ και $ y = r \sin{\theta} $, τότε να δείξετε ότι
+	 \[
+		 \left(\pdv{f}{x}\right)^{2} + \left(\pdv{f}{y}\right)^{2} = \left(\pdv{f}{r}\right)^{2} + \frac{1}{ r^{2} }
+		 \left(\pdv{f}{\theta}\right)^{2} 
+	 \] 
+
+ % \item Να μετασχηματιστεί η εξίσωση \textlatin{Laplace} σε 
+	 % \begin{inparaenum}[(i)]
+	 	% \item πολικές
+		% \item κυλινδρικές 
+		% \item σφαιρικές
+	 % \end{inparaenum}
+			% συντεταγμένες
+
+			% \hfill Απ: \begin{tabular}{l} $\scriptstyle{\rm{i}) 
+		 % \pdv[2]f{x} + \pdv[2]{f}{y} = \pdv[2]{f}{r} + \frac{ 1 }{ r } \pdv{f}{r} + \frac{ 1 }{
+		 % r^{2} } \pdv[2]{f}{\theta}}$  \\ $\scriptstyle{\rm{ii})
+		 % \pdv[2]{f}{x}+\pdv[2]{f}{y}+\pdv[2]{f}{z} = \pdv[2]{f}{r} + \frac{1}{r} \pdv{f}{r} +
+		 % \frac{1}{r^{2}} \pdv[2]{f}{r} + \pdv[2]{f}{z}}$ \\ $\scriptstyle{\rm{iii}) \pdv[2]{f}{x}+\pdv[2]{f}{y}+\pdv[2]{f}{z} = \frac{ 1 }{ r^{2} } \pdv{}{r}(r^{2}\pdv{f}{r}) + \frac{ 1 }{ r^{2} \sin^{2}{\phi} }
+	 % \pdv[2]{f}{\theta} + \frac{ 1 }{ r^{2} \sin{\phi } } \pdv{}{\phi}(\sin{\phi} \pdv{f}{\phi})}$
+% \end{tabular}
+
+
+ \item Να δείξετε ότι η συνάρτηση $ z = f(x,y) = xyf\left(\frac{ x-y }{ xy }\right) $ ικανοποιεί τη
+	 σχέση $ x^{4} z_{xx} = y^{4} z_{yy} $.
+
+
+ \item Αν $ z = f(x,y) $, με $ x = x(u,v) $ και $ y = y(u,v) $, τότε να υπολογιστούν οι $ f_{uu},
+	 f_{vv} $ και $ f_{uv} $.
+
+
+
+ \item Έστω η συνεχής συνάρτηση $ f : \mathbb{R}^{2} \to \mathbb{R} $ των ανεξάρτητων μεταβλητών $
+	 x,y $ που είναι ομογενής βαθμού $ \mu $. Αν η $f$ έχει συνεχείς μερικές παραγώγους 2ης τάξης
+	 στο $ \mathbb{R}^{2} $ να αποδείξετε ότι ισχύει 
+	 \[
+		 x^{2}\pdv[2]{f}{x} + 2xy\pdv[2]{f}{x}{y} + y^{2}\pdv[2]{f}{y} = \mu(\mu -1)f(x,y)
+	 \] 
+
+ \item Αν $ u = u(x,y) $ και $ v = v(x,y) $ είναι ομογενείς συναρτήσεις βαθμού ομογένειας $\mu$, να
+	 αποδείξετε ότι για κάθε συνάρτηση $f$ με συχεχείς μερικές παραγώγους 1ης τάξης ως προς τις
+	 μεταβλητές $u$, $v$, ισχύει
+	 \[
+		 x\pdv{f}{x} + y\pdv{f}{y} = \mu \left(u\pdv{f}{u} + v\pdv{f}{v}\right) 
+	 \] 
+
+ \item  Έστω $ u = u(x,y) $ και $ v = v(x,y) $ δύο ομογενείς συναρτήσεις βαθμού ομογένειας $\mu$, με
+	 $u(x,y)\neq 0$ και $ v(x,y)\neq 0 $ για κάθε $(x,y) \in \mathbb{R}^{2} $. Να αποδείξετε ότι
+	 \[
+		 udv - vdu = \frac{ 1 }{ \mu } \cdot \pdv{(u,v)}{(x,y)}\cdot(xdy-ydx) 
+	 \] 
+
+
+
+\item Να εξεταστεί αν η παράσταση είναι τέλειο διαφορικό και να βρεθεί η συνάρτηση δυναμικού:
+
+\begin{enumerate}[i)]
+	\item $ (3x^{2}y+2xy^{2}+y^{3})dx + (x^{3}+2x^{2}y+3xy^{2})dy $. \hfill Απ: $\scriptstyle{
+		f(x,y)=x^{3}y+y^{2}x^{2}+xy^{3}+c} $
+\item $(6xy^3-\sin x)dx+(9x^2y^2+\cos y)dy$\hfill Απ: $\scriptstyle{f(x,y)=3x^2y^3+\cos x+\sin y+c}$
+\item $(2e^{x}+\frac{1}{x}-3\sin y)dx+3(y^2-x\cos y)dy$\hfill Απ: $\scriptstyle{f(x,y)=y^{3}-3x\sin y+2e^{x}+\ln x+c}$
+		\item $ \cos{(x+yx)} dx + z \cos{(x+yz)} dy + y \cos{(x+yz)} dz $  \hfill  Απ:
+			$\scriptstyle{ f(x,y,z) = \sin{(x+yz)} +c} $.
+
+\end{enumerate}
+
+
+\item Να υπολογιστεί το $a$ ώστε η παράσταση $ \frac{ x + ay }{ (x-y)^{3} }dx + \frac{ ax+y }{
+	(x-y)^{3} }dy $ να είναι τέλειο διαφορικό.
+
+	\hfill Απ: $ a=1 $
+
+
+
+\item Να βρεθούν τα αναπτύγματα Taylor, μέχρι και όρους 2ης τάξης, των συναρτήσεων:
+
+\begin{enumerate}[i)]
+	\item  $f(x,y)=y\cos{xy} $, γύρω από το σημείο $ \left(1, \frac{ \pi }{ 2 }\right)
+		$.
+
+		\hfill Απ: $\scriptstyle{f(x,y)=-\frac{\pi^{2}}{4}(x-1) - \frac{ \pi }{ 2 } \left(y - \frac{
+			\pi }{2 }\right) - \pi(x-1)\left(y-\frac{\pi}{2}\right)- \left(y- \frac{ \pi }{ 2}
+	\right)^{2}} $
+
+\item $ f(x,y)=e^{x}\tan{y} $ με όρους $ (x-1) $ και $ \left(y - \frac{
+	\pi }{ 4 }\right) $
+
+	\hfill Απ: $\scriptstyle{ f(x,y) = e + e(x-1) + 2e\left(y- \frac{ \pi }{ 4 }\right)+ \frac{1}{ 2 } \left(e(x-1)^{2}+4e(x-1)\left(y- \frac{ \pi }{ 4 }\right) + 4e\left(y- \frac{ \pi }{ 4 }
+\right)^{2}\right)} $
+\end{enumerate}
+
+\item Να βρεθεί το ανάπτυγμα Maclaurin, μέχρι όρους 2ης τάξης, της συνάρτησης $ f(x,y)
+	= e^{x}\ln(1+y)$.
+
+	\hfill Απ: $\scriptstyle{ f(x,y)=y + xy - \frac{1}{ 2 } y^{2} + \frac{1}{ 2 } x^{2}y - \frac{1}{
+	2 } xy^{2} + \frac{1}{ 3 } y^{3}} $
+
+
+
+%\item $f(x,y)=x^3+xy^2$, κατά δυνάμεις του $x+1$ και $y+2$.
+%\item $f(x,y)=e^y\ln x$, γύρω από το σημείο $(1,2)$
+
+
+\end{enumerate}
+
+
+\end{document}

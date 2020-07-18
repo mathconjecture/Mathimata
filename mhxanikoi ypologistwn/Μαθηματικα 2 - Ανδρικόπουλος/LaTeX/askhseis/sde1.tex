@@ -1,0 +1,82 @@
+\input{$HOME/Desktop/preamble/preamble.tex}
+\input{$HOME/Desktop/preamble/definitions.tex}
+
+\usepackage{qtree}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{paralist} 
+
+%\renewcommand{\baselinestretch}{1.2}
+
+\everymath{\displaystyle}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+\fbox{\large\bfseries Ασκήσεις στις Ακριβείς ΣΔΕ}
+\end{center}
+
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+	\item Να εξετάσετε ποιες από τις παρακάτω σδε είναι Ακριβείς.
+
+\begin{enumerate}[i)]
+
+\item $(3x^2+6xy^2)dx+(6x^2y+4y^3)dy=0$\hfill Απ: είναι
+\item $ (x^{2}y^{3}+2y)dx + (2x-2x^{3}y^{2})dy=0 $ \hfill Απ:  δεν είναι
+\item $ (y^{2} \sin{x}) dy + (e^{x} \cos{y})dx=0 $ \hfill Απ: δεν είναι 
+
+
+	
+\end{enumerate}
+
+\item Να λυθούν οι παρακάτω σδε.
+
+	\begin{enumerate}[i)]
+		\item $ (2x+y^{3})dx + (3xy^{2}+4)dy = 0 $ \hfill Απ: $ x^{2}+xy^{3} + 4y = c $
+		\item $(3x^2+6xy^2)dx+(6x^2y+4y^3)dy=0$\hfill Απ: $x^3+3x^2y^2+y^4=c$
+		\item $ \left[1+ \ln{(xy)}\right]dy+ \frac{y}{x} dx = 0 $, $ x>0 $, $ y>0 $ \hfill Απ: $ y \ln{(xy)} =c$
+		\item $ (\sin y)^{2}dx + x(\sin{2y} )dy = 0 $ \hfill Απ: $ x \sin^{2}{y} = c$  
+		\item $ (e^{y}-2xy)dx+(xe^{y}-x^{2})dy = 0 $ \hfill Απ: $ xe^{y}-x^{2}y=c $ 
+		\item $ \left(\frac{2x}{1+x^{2}}+y\right)dx + (e^{y}+x)dy = 0 $ \hfill Απ: $ e^{y}+ xy + \ln{(1+x^{2})}
+			=c $ 
+		\item $ - \frac{1}{y} dx + \left(\frac{x}{y^{2}} + 3y^{2}\right)dy = 0 $ \hfill Απ: $-
+			\frac{x}{y} + y^{3} = c $ 
+		\item $\left(1+x-\frac{2}{y}\right)dx+\left(1+\frac{2x}{y^2}\right)dy=0$\hfill Απ: $x+y+\frac{x^2}{2}-\frac{2x}{y}=c$
+		\item $ e^{x}(y^{3}+xy^{3}+1)dx + 3y^{2}(xe^{x}-6)dy=0 $,\quad $y(0)=1$ \hfill Απ: $
+			y^{3}(xe^{x}-6)+e^{x}+5=0 $ 
+		\item $\left(4x^3y^3+\frac{1}{x}\right)dx+\left(3x^4y^2-\frac{1}{y}\right)dy=0, \quad x(e)=1$\hfill Απ: $x^4y^3+\ln \Bigl|\frac{x}{y}\Bigr|=e^3-1$
+
+	\end{enumerate}
+
+\item Να λυθούν οι παρακάτω σδε με τη βοήθεια κατάλληλων ολοκληρωτικών παραγόντων.
+	
+	\begin{enumerate}[i)]
+		\item $ e^{x}(x+1)dx - (xe^{x}-ye^{y})dy = 0 $ \hfill Απ: $ \mu(y) = e^{-y} $, $xe^{x-y} +
+			\frac{y^{2}}{2} = c $
+		\item $ (x^{2}+y^{2})dx - 2xydy = 0 $ \hfill Απ: $ \mu(x)= \frac{1}{x^{2}} $, $ -
+			\frac{y^{2}}{x} + x = c $
+		\item $ y' =- \frac{5xy+4y^{2}+1}{x^{2}+2xy} $ \hfill Απ: $ \mu(x)=x^{3} $, $
+			x^{5}y+x^{4}y^{2} + \frac{x^{4}}{4} = c $ 
+		\item $ y(2e^{x}+4x)dx + 3(e^{x}+x^{2})dy = 0 $ \hfill Απ: $ \mu(y)= \sqrt{ y } $, $
+			2(e^{x}+x^{2})y^{\frac{3}{2}}=c $ 
+	\end{enumerate}
+
+\item Να λυθούν οι παρακάτω σδε με τη βοήθεια των ολοκληρωτικών παραγόντων: $ y>0 $. 
+
+
+\begin{enumerate}[i)]
+	\item $ x^{2}y^{3}+x(1+y^{2})dy=0 $, $ y>0 $, \quad $ \mu(x,y)= \frac{1}{xy^{3}} $ \hfill Απ: $ \frac{x^{2}}{2} - \frac{1}{2y^{2}} + \ln{y} = c $ 
+	\item $ y'=- \frac{5x^{2}+2xy+3y^{3}}{3(x^{2}+xy^{2}+2y^{3})} $, \quad $ \mu(x+y) = (x+y)^{2}
+		$ \hfill Απ: $ (x+y)^{3}(x^{2}+y^{3}) = c $ 
+	\item $ y' = -\frac{y^{2}+xy+1}{x^{2}+xy+1} $, \quad $ \mu(xy) = e^{xy} $ \hfill Απ: $
+		e^{xy}(x+y)=c $ 
+	\end{enumerate}
+
+
+\end{enumerate}
+
+\end{document}

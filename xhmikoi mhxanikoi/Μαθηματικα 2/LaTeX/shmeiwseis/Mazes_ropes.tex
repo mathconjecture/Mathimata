@@ -1,0 +1,135 @@
+\input{preamble.tex}
+\input{definitions_ask.tex}
+
+\pagestyle{vangelis}
+\everymath{\displaystyle}
+
+
+\begin{document}
+
+
+\section*{Εφαρμογές Διπλού Ολοκληρώματος}
+
+Έστω ότι το χωρίο $D$ είναι ένα \textbf{υλικό φύλλο} και ότι η πυκνότητα της 
+μάζας σε κάθε σημείο του $(x,y)$ δίνεται από την συνεχή συνάρτηση $\delta=\delta(x,y)$.
+
+Η \textcolor{Col1}{συνολική μάζα} $M$ που κατανέμεται στο χωρίο $D$ δίνεται από τον τύπο:
+\[
+   \text{\bfseries Μάζα:} \quad M=\iint_{D}\delta(x,y)\,dxdy
+\]
+
+Οι \textcolor{Col1}{στατικές (πρώτες) ροπές} ως προς τους άξονες $x$ και $y$, 
+δίνονται αντίστοιχα από τους τύπους:
+\[
+  \begin{tabular}{>{\bfseries}l<{}>{$}l<{$}}
+    Στατικές Ροπές: & M_{x}=\iint_{D}y\delta(x,y)\,dxdy \\
+      &  M_{y}=\iint_{D}x\delta(x,y)\,dxdy \\
+  \end{tabular}
+\]
+
+Οι συντεταγμένες $(\overline{x},\overline{y})$ του \textcolor{Col1}{κέντρου μάζας} 
+$K$ του χωρίου $D$ δίνονται από τους τύπους:
+\[
+  \text{\bfseries Κέντρο Μάζας:} \quad \overline{x}=\frac{M_{y}}{M},\; 
+  \overline{y}=\frac{M_{x}}{M}
+\]
+
+Οι \textcolor{Col1}{ροπές αδράνειας (δεύτερες ροπές)} ως προς τους άξονες $x$ και $y$, 
+η ροπή αδράνειας ως προς τυχαία ευθεία $L$ με $r(x,y)$ να είναι η απόσταση του $(x,y)$ 
+από την $L$ και η πολική ροπή ως προς την αρχή των αξόνων, δίνονται αντίστοιχα από 
+τους τύπους:
+\[
+  \begin{tabular}{>{\bfseries}l<{}>{$}l<{$}}
+    Ροπές Αδράνειας: 
+     & I_{x}=\iint_{D}y^{2}\delta(x,y)\,dxdy \\
+     &  I_{y}=\iint_{D}x^{2}\delta(x,y)\,dxdy \\
+     &  I_{L}=\iint_{D}r^{2}(x,y)\delta(x,y)\,dxdy \\
+     &  I_{o}=\iint_{D}(x^{2}+y^{2})\delta(x,y)\,dxdy =  I_{x}+I_{y}
+  \end{tabular}
+\]
+
+
+
+\section*{Εφαρμογές Τριπλού Ολοκληρώματος}
+
+Έστω ότι το στερεό χωρίο $V$ είναι ένα \textbf{υλικό σώμα} και ότι η πυκνότητα της 
+μάζας σε κάθε σημείο του $(x,y,z)$ δίνεται από την συνεχή συνάρτηση 
+$\delta=\delta(x,y,z)$.
+
+Η \textcolor{Col1}{συνολική μάζα} $M$ που κατανέμεται στο χωρίο $V$ δίνεται από τον τύπο:
+\[
+   \text{\bfseries Μάζα:} \quad M=\iiint_{V}\delta(x,y,z)\,dxdydz
+\]
+
+Οι \textcolor{Col1}{στατικές (πρώτες) ροπές} ως προς τα επίπεδα συντεταγμένων $Oxy$, 
+$Oxz$ και $Oyz$ δίνονται αντίστοιχα από τους τύπους:
+\[
+  \begin{tabular}{>{\bfseries}l<{}>{$}l<{$}}
+    Στατικές Ροπές: & M_{xy}=\iiint_{V}z\delta(x,y,z)\,dxdydz \\
+      &  M_{xz}=\iiint_{V}y\delta(x,y,z)\,dxdydz \\
+      & M_{yz}=\iiint_{V}x\delta(x,y,z)\,dxdydz
+  \end{tabular}
+\]
+
+Οι συντεταγμένες $(\overline{x},\overline{y},\overline{z})$ του 
+\textcolor{Col1}{κέντρου μάζας} $K$ του χωρίου $V$ δίνονται από τους τύπους:
+\[
+  \text{\bfseries Κέντρο Μάζας:} \quad \overline{x}=\frac{M_{yz}}{M},\; 
+  \overline{y}=\frac{M_{xz}}{M},\; \overline{z}=\frac{M_{xy}}{M}
+\]
+
+Οι \textcolor{Col1}{ροπές αδράνειας (δεύτερες ροπές)} ως προς τα επίπεδα συντεταγμένων 
+$Oxy$, $Oxz$ και $Oyz$, τους άξονες $x$, $y$ και $z$ και η ροπή αδράνειας ως 
+προς την αρχή των αξόνων, δίνονται αντίστοιχα από τους τύπους:
+\[
+  \begin{tabular}{>{\bfseries}l<{}>{$}l<{$}}
+     Ροπές Αδράνειας: & I_{xy}=\iiint_{V}z^{2}\delta(x,y,z)\,dxdydz \\
+      &  I_{xz}=\iiint_{V}y^{2}\delta(x,y,z)\,dxdydz \\
+      &  I_{yz}=\iiint_{V}x^{2}\delta(x,y,z)\,dxdydz \\
+      &  I_{x}=\iiint_{V}(y^{2}+z^{2})\delta(x,y,z)\,dxdydz = I_{xy}+I_{xz} \\
+      &  I_{y}=\iiint_{V}(x^{2}+z^{2})\delta(x,y,z)\,dxdydz = I_{xy}+I{yz} \\
+      &  I_{z}=\iiint_{V}(x^{2}+y^{2})\delta(x,y,z)\,dxdydz = I_{xz}+I_{yz} \\
+      &  I_{o}=\iiint_{V}(x^{2}+y^{2}+z^{2})\delta(x,y,z)\,dxdydz =  I_{xy}+I_{xz}+I_{yz}
+  \end{tabular}
+\]
+
+
+\section*{Εφαρμογές Επικαμπύλιου Ολοκληρώματος}
+
+Έστω ότι $c$ είναι μια \textbf{υλική καμπύλη} και ότι η πυκνότητα της μάζας σε 
+κάθε σημείο της $(x,y,z)$ δίνεται από την συνεχή συνάρτηση $\delta=\delta(x,y,z)$.
+
+Η \textcolor{Col1}{συνολική μάζα} $M$ που κατανέμεται στην καμπύλη $c$ δίνεται από 
+τον τύπο:
+\[
+   \text{\bfseries Μάζα:} \quad M=\int_{c}\delta(x,y,z)\,ds
+\]
+
+Οι \textcolor{Col1}{(πρώτες) ροπές} ως προς τα επίπεδα συντεταγμένων $Oxy$, $Oxz$ και 
+$Oyz$, δίνονται αντίστοιχα από τους τύπους:
+\[
+  \begin{tabular}{>{\bfseries}l<{}>{$}l<{$}}
+    Πρώτες Ροπές: & M_{xy}=\int_{c}z\delta(x,y,z)\,ds \\
+      &  M_{xz}=\int_{c}y\delta(x,y,z)\,ds \\
+      & M_{yz}=\int_{c}x\delta(x,y,z)\,ds
+  \end{tabular}
+\]
+
+Οι συντεταγμένες $(\overline{x},\overline{y}, \overline{z})$ του \textcolor{Col1}{κέντρου
+μάζας} $K$ της καμπύλης $c$ δίνονται από τους τύπους:
+\[
+  \text{\bfseries Κέντρο Μάζας:} \quad \overline{x}=\frac{M_{yz}}{M},\; 
+  \overline{y}=\frac{M_{xz}}{M},\; \overline{z}=\frac{M_{xy}}{M}
+\]
+
+Οι \textcolor{Col1}{ροπές αδράνειας (δεύτερες ροπές)} ως προς τους άξονες $x$, $y$ και 
+$z$, δίνονται αντίστοιχα από τους τύπους:
+\[
+  \begin{tabular}{>{\bfseries}l<{}>{$}l<{$}}
+     Ροπές Αδράνειας: & I_{x}=\int_{c}(y^{2}+z^{2})\delta(x,y,z)\,ds \\
+      &  I_{y}=\int_{c}(x^{2}+z^{2})\delta(x,y,z)\,ds \\
+      &  I_{z}=\int_{c}(x^{2}+y^{2})\delta(x,y,z)\,ds \\
+  \end{tabular}
+\]
+
+\end{document}

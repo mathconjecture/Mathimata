@@ -1,0 +1,146 @@
+\input{preamble_ask.tex}
+\input{definitions.tex}
+
+
+\pagestyle{askhseis}
+\everymath{\displaystyle}
+
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large\bf \textcolor{Col1}{Ασκήσεις Διπλό Ολοκλήρωμα}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Να υπολογιστούν τα παρακάτω διπλά ολοκληρώματα (ορθογώνια χωρία).
+    \begin{enumerate}[i)]
+      \item $\int\limits_1^2\!\!\!\int\limits_0^ 3xy\,dxdy$ 
+        \hfill Απ: $\frac{27}{4}$ %spandagos p. 54 ex. 1
+      \item $\iint\limits_{R}(x^2+y^2)\,dxdy,\quad R=[0,1]\times[0,1]$ 
+        \hfill Απ: $\frac{2}{3}$ %spandagos p.104 ask.3
+      \item $\iint\limits_{R}y(x^3-12x)\,dxdy,\quad R=[-2,1]\times[0,1]$ 
+        \hfill Απ: $\frac{57}{8}$
+      \item $\iint\limits_{R}\cos x\sin y\,dxdy,\quad 
+        R=\left[0,\frac{\pi}{2}\right]\times\left[0,\frac{\pi}{2}\right]$ 
+        \hfill Απ: $1$
+      \item $\iint\limits_{R}\sin(x+y)\,dxdy, \quad 
+        R=\left[0,\frac{\pi}{2}\right]\times\left[0,\frac{\pi}{2}\right]$ 
+        \hfill Απ: $2$ %spandagos p.56 ex.2
+      \item $ \iint\limits_{R}y\sin(xy)\,dxdy, \quad R=[1,2]\times[0,\pi] $ 
+        \hfill Απ: $ 0 $ 
+    \end{enumerate}
+
+  \item Να υπολογιστούν τα παρακάτω διπλά ολοκληρώματα (γενικά χωρία).
+    \begin{enumerate}[i)]
+      % \item $\int\limits_1^2\!\!\int\limits_0^{4x} xy\,dydx$ 
+      %   \hfill Απ: $30$ %spandagos p.54 ex.2
+      \item $\int\limits_0^1\!\!\int\limits_{x^2}^{x}(x^2+3y+2)\,dydx$ 
+        \hfill Απ: $\frac{7}{12}$ %spandagos p.105 ask.6
+      \item $\int\limits_0^1\!\!\int\limits_0^{x^2}e^{\frac{y}{x}}\,dydx$
+        \hfill Απ: $\frac{1}{2}$ %spandagos p.105 ask.8
+      \item $\iint\limits_{D}xy\,dxdy,\quad D=
+        \left\{(x,y)\in\mathbb{R}^2\mid 0\leq x\leq 2,\; 0\leq y\leq \sqrt{x}\,\right\}$ 
+        \hfill Απ: $\frac{4}{3}$
+      \item $\iint\limits_{D}(x^2-y^2)\,dxdy,\quad D=
+        \left\{(x,y)\in\mathbb{R}^2 \mid -1\leq x\leq 1,\;-x^2\leq y\leq x^2\,\right\}$  
+        \hfill Απ: $ \frac{64}{105}$
+      \item $ \iint\limits_{D} \frac{1}{(x+y)^{3}}, \quad 
+        D= \{(x,y)\in \mathbb{R}^{2} \mid x+y-3 \leq 0,\; x \geq 1,\; y \geq 1 \}$ 
+        \hfill Απ: $ \frac{1}{36} $  
+      \item $\iint\limits_{D}(x-1)\,dxdy,\quad D$ περικλείεται από τις καμπύλες 
+        $y=x$ και $y=x^3$. %spandagos p.63 ex 
+        \hfill Απ: $-\frac{1}{2}$
+      \item $ \iint\limits_{D} y\,dxdy, \quad D $ περικλείεται από τις παραβολές 
+        $ y^2=4x $ και $ x^{2}=4y $ 
+        \hfill Απ: $ \frac{48}{5} $ %spandagos p.109 ask.14
+      \item $ \iint\limits_{D} (x^{2}-xy)\,dxdy, \quad D $ το τρίγωνο με κορυφές τα 
+        σημεία $ (0,0) $, $ \left(\frac{1}{2}, \frac{1}{2}\right) $, $ (1,0) $ 
+        \hfill Απ: $ \frac{5}{96} $ %spandagos p.115 ask.28
+      \item $ \iint\limits_{D} xy\,dxdy, \quad D $ περικλείεται από τις καμπύλες 
+        $ x=y^{2} $, $ x=4-y^{2} $ και $ y=0 $, 1ο τεταρτ.
+        \hfill Απ: $4$ %spandagos p.135 ask.57
+
+    \end{enumerate}
+
+  \item Να υπολογιστούν τα παρακάτω διπλά ολοκληρώματα, επιλέγοντας την κατάλληλη 
+    σειρά ολοκλήρωσης.
+    \begin{enumerate}[i)]
+      \item $ \int _{0}^{2} \Biggl[\int_{0}^{\frac{x^2}{2}}
+          \frac{x}{\sqrt{1+x^{2}+y^{2}}}\,dy\Biggr] \,{dx} $
+        \hfill Απ: $-1+\frac{5}{4}\ln 5$ %spandagos p.64 ex.
+      \item $\iint\limits_{D}\frac{\sin x}{x}\,dxdy,\quad D$ περικλείεται από 
+        τις ευθείες $y=x, y=0$ και $x=\pi$.  
+        \hfill Απ: $2$
+    \end{enumerate}
+
+  \item Να βρείτε το \textbf{εμβαδόν} του χωρίου $D$ που περικλείεται από τις καμπύλες: 
+    \begin{enumerate}[i)]
+      \item $y=x$ και $y=x^2$ στο $1$ο τεταρτημόριο. \hfill Απ: $\frac{1}{6}$
+      \item $x+y=2$ και $y=x^2$ \hfill Απ: $\frac{9}{2}$
+      \item $y=3-2x^2$ και $y=x^4$ \hfill Απ: $\frac{64}{15}$
+      \item $x=\frac{1}{4}$ και $y^2=4x$ \hfill Απ: $\frac{1}{3}$ %spand p.168 ask.95
+      \item $y^2=x$ και $y=x^2$ \hfill Απ: $\frac{1}{3}$ %spandagos p.170 ask.100
+      \item $xy=2$, $4y=x^2$ και $y=4$ \hfill Απ: $\frac{28}{3}-2\ln 4$ 
+        %spandagos p.77 ex.1
+    \end{enumerate}
+
+  \item Να υπολογιστεί ο \textbf{όγκος} του στερεού που περικλείεται κάτω από 
+    την επιφάνεια $y=x^2+z^2+1$ και πάνω από το τετραγωνικό χωρίο $D$ πλευράς $1$ 
+    του επιπέδου $Oxz$.
+    \hfill Απ: $\frac{5}{3}$ %spandagos p.80 ex.1
+
+  \item Να υπολογιστεί ο \textbf{όγκος} του τετραέδρου που περικλείεται από το 
+    επίπεδο $x+y+z=1$ και τα επίπεδα συντεταγμένων.  
+    \hfill Απ: $\frac{1}{6}$ %spandagos p.80 ex.2
+
+
+  \item Να υπολογίσετε τη \textbf{μέση τιμή} της συνάρτησης $ f(x,y)=2x+3y $, στο 
+    ορθογώνιο χωρίο $D= [1,4] \times [0,5]$.
+    \hfill Απ: $ \frac{25}{2} $ 
+\end{enumerate}
+
+\pagebreak
+
+\begin{center}
+  \minibox{\large\bf \textcolor{Col1}{Υποδείξεις}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Ο τύπος του εμβαδού επίπεδου χωρίου $D$ είναι: 
+    \[
+      E_{D}=\iint\limits_{D}\,dxdy
+    \]
+
+  \item Ο τύπος του \textbf{όγκου} του στερεού που περικλείεται \textbf{κάτω} 
+    από τη γραφική παράσταση επιφάνειας $z=f(x,y)$ και \textbf{πάνω} από ένα 
+    χωρίο $D$ του επιπέδου $Oxy$ είναι: 
+    \[
+      V=\iint\limits_{D}f(x,y)\,dxdy
+    \]
+
+  \item Η εξίσωση του επιπέδου της άσκησης $6$ είναι $x+y+z=1$, άρα η ζητούμενη 
+    \textbf{συνάρτηση} του επιπέδου θα είναι $z=\underbrace{1-x-y}_{f(x,y)}$.
+
+  \item Οι εξισώσεις των \textbf{συντεταγμένων} επιπέδων είναι:
+    \begin{itemize}
+      \item $Oxy: \, z=0$
+      \item $Oxz: \, y=0$
+      \item $Oyz: \, x=0$
+    \end{itemize}
+
+  \item Η \textbf{μέση τιμή} μιας συνάρτησης $ f(x,y) $ σε ένα κλειστό και 
+    φραγμένο χωρίο $D\subseteq \mathbb{R}^{2}$ δίνεται από τον τύπο 
+    \[
+      \bar{f}(x, y) = \frac{1}{E_{D}} \iint_{D}f(x,y)\,dxdy
+    \]
+    όπου $ E_{D} $ είναι το εμβαδό του $D$.
+\end{enumerate}
+
+
+
+\end{document}

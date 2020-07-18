@@ -1,0 +1,117 @@
+\input{$HOME/Desktop/preamble/preamble.tex}
+\input{$HOME/Desktop/preamble/definitions.tex}
+
+%\everymath{\displaystyle}
+
+\begin{document}
+
+\begin{center}
+\fbox{\large\bf Ασκήσεις στα Συστηματα ΣΔΕ (Μεθοδος Ιδιοτιμων)}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+
+\item Να επιλυθουν τα ακολουθα συστηματα
+
+\begin{enumerate}[i)]
+\item \begin{tabular}{l} $y_1'=2y_1-y_2$ \\ $y_2'=-y_1+2y_2$\end{tabular} \hfill Απ: \begin{tabular}{l} $y_1=c_1e^{3t}+c_2e^t$ \\ $y_2=-c_1e^{3t}+c_2e^t$\end{tabular}
+
+
+\item \begin{tabular}{l} $\dot x=x-2y$ \\ $\dot y=x-y$\end{tabular}, \begin{tabular}{l} $x(0)=1$ \\ $y(0)=1$\end{tabular}\hfill Απ:  \begin{tabular}{l} $x=\cos t-\sin t$ \\ $y=\cos t$\end{tabular}
+
+\item  \begin{tabular}{l} $y_1'=3y_1+y_2-y_3$ \\ $y_2'=y_1+3y+3y_2-y_3$ \\ $y_3'=-y_1-y_2+5y_3$\end{tabular}\hfill Απ: $\footnotesize{\bar{y}(t)=c_1e^{2t}\begin{pmatrix}
+1\\-1\\0
+\end{pmatrix}+c_2e^{3t}\begin{pmatrix}
+1\\1\\1
+\end{pmatrix}+c_3e^{6t}\begin{pmatrix}
+1\\1\\-2
+\end{pmatrix}}$
+
+\item \item  \begin{tabular}{l} $y_1'=y_1+y_2+y_3$ \\ $y_2'=2y_1+y_2-y_3$ \\ $y_3'=-y_2+y_3$\end{tabular}\hfill Απ: $\scriptstyle{\bar{y}(t)=c_1e^{-t}\begin{pmatrix}
+3\\-4\\-2
+\end{pmatrix}+c_2e^{2t}\begin{pmatrix}
+0\\1\\-1
+\end{pmatrix}+c_3e^{2t}\left[\begin{pmatrix}
+0\\1\\-1
+\end{pmatrix}t+\begin{pmatrix}
+1\\0\\1
+\end{pmatrix}\right]}$
+\end{enumerate}
+
+
+\item Να βρεθει η γενικη λυση των παρακατω συστηματων σδε με τη μεθοδο των ιδιοτιμων.
+\begin{enumerate}[i)]
+
+\item \begin{tabular}{l} $y_1'=y_2$ \\ $y_2'=-2y_1+3y_2$\end{tabular} \hfill Απ: $\small{\bar{y}(t)=c_1e^{t}\begin{pmatrix}
+1\\1
+\end{pmatrix}+c_2e^{2t}\begin{pmatrix}
+1\\2
+\end{pmatrix}}$
+
+\item \begin{tabular}{l} $y_1'=y_1-4y_2$ \\ $y_2'=4y_1-7y_2$\end{tabular} \hfill Απ: $\small{\bar{y}(t)=c_1e^{-3t}\begin{pmatrix}
+1\\1
+\end{pmatrix}+c_2e^{-3t}\left[\begin{pmatrix}
+1\\1
+\end{pmatrix}t+\begin{pmatrix}
+\sfrac{1}{4}\\0
+\end{pmatrix}\right]}$
+
+\item \begin{tabular}{l} $y_1'=2y_1+y_2$ \\ $y_2'=-4y_1+2y_2$\end{tabular} \hfill Απ: \begin{tabular}{l}
+$y_1(t)=e^{2t}(c_1'\cos 2t+c_2'\sin 2t)$ \\
+$y_2(t)=e^{2t}(2c_2'\cos 2t-2c_1'\sin 2t)$
+\end{tabular}
+
+\end{enumerate}
+
+\item Να βρεθει η γενικη λυση των παρακατω συστηματων σδε με τη μεθοδο των ιδιοτιμων.
+
+\begin{enumerate}[i)]
+
+\item \begin{tabular}{l} $y_1'=y_1+y_2+y_3$ \\ $y_2'=+3y_2+2y_3$ \\ $y_3'=+5y_3$\end{tabular}\hfill Απ: $\scriptstyle{\bar{y}(t)=c_1e^{t}\begin{pmatrix}
+1\\0\\0
+\end{pmatrix}+c_2e^{3t}\begin{pmatrix}
+1\\2\\0
+\end{pmatrix}+c_3e^{5t}\begin{pmatrix}
+1\\2\\3
+\end{pmatrix}}$
+
+\item  \begin{tabular}{l} $y_1'=3y_1-y_2-y_3$ \\ $y_2'=y_1+y_2-y_3$ \\ $y_3'=y_1-y_2+y_3$\end{tabular}\hfill Απ: $\scriptstyle{\bar{y}(t)=c_1e^{t}\begin{pmatrix}
+1\\1\\1
+\end{pmatrix}+c_2e^{2t}\begin{pmatrix}
+1\\1\\0
+\end{pmatrix}+c_3e^{2t}\begin{pmatrix}
+1\\0\\1
+\end{pmatrix}}$
+
+
+\item  \begin{tabular}{l} $y_1'=y_2$ \\ $y_2'=y_3$ \\ $y_3'=y_1-3y_2+3y_3$\end{tabular} 
+
+\hfill Απ: $\scriptstyle{\bar{y}(t)=c_1e^{t}\begin{pmatrix}
+1\\1\\1
+\end{pmatrix}+c_2e^{t}\left[\begin{pmatrix}
+1\\1\\1
+\end{pmatrix}t+\begin{pmatrix}
+-1\\0\\1
+\end{pmatrix}\right]+c_3e^{t}\left[\begin{pmatrix}
+1\\1\\1
+\end{pmatrix}\frac{t^2}{2}+\begin{pmatrix}
+-1\\0\\1
+\end{pmatrix}t+\begin{pmatrix}
+1\\0\\0
+\end{pmatrix}\right]}$
+
+\item  \begin{tabular}{l} $y_1'=y_1$ \\ $y_2'=2y_3$ \\ $y_3'=-2y_2$\end{tabular}\hfill Απ: \begin{tabular}{l}
+$y_1(t)=c_1e^t$ \\
+$y_2(t)=c_2'\cos 2t+c_3'\sin 2t$ \\
+$y_3(t)=c_3'\cos 2t-c_2'\sin 2t$
+\end{tabular}
+
+\end{enumerate}
+
+
+
+\end{enumerate}
+
+\end{document}

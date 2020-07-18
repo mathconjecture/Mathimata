@@ -1,0 +1,134 @@
+\input{preamble.tex}
+\input{definitions_ask.tex}
+
+\usepackage{array}
+\pagestyle{askhseis}
+\everymath{\displaystyle}
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large \bfseries \textcolor{Col1}{Ασκήσεις Καμπύλες - Τρίεδρο Frenet}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Θεωρούμε την καμπύλη $\mathbf{r}(t) = (-3\sin 2t) \mathbf{i} + (-3\cos 2t)
+    \mathbf{j}$ , $t\in\mathbb{R}$. 
+    Να βρεθούν τα μοναδιαία διανύσματα $\mathbf{T},\mathbf{N}$ και η καμπυλότητα.
+
+    \hfill Απ: \begin{tabular}{l}
+      $ \mathbf{T} = -\cos 2t \mathbf{i} + \sin 2t \mathbf{j} $, \quad 
+      $ \mathbf{N} = \sin 2t \mathbf{i} + \cos 2t \mathbf{j} $, \quad
+      $ \mathbf{\kappa} = {1}/{3} $
+    \end{tabular}
+
+  \item Θεωρούμε την καμπύλη $\mathbf{r}(t) = 2\cos t \mathbf{i} + 2\sin t \mathbf{j}+ 
+    3t \mathbf{k}$ , $t\in\mathbb{R}$. Να βρεθούν τα μοναδιαία διανύσματα 
+    $\mathbf{T},\mathbf{N},\mathbf{B}$.
+
+    \hfill Απ: 
+    \begin{tabular}{l}
+      $\mathbf{T} = \frac{-2\sin t}{\sqrt{13}} \mathbf{i} + \frac{2\cos t}{\sqrt{13}} 
+      \mathbf{j} + \frac{3}{\sqrt{13}} \mathbf{k}$, \quad
+      $ \mathbf{N} = -\cos t \mathbf{i} + -\sin t \mathbf{j} + 0 \mathbf{k}$, \quad
+      $\mathbf{B} = \frac{3\sin t}{\sqrt{13}} \mathbf{i} + \frac{-3\cos
+      t}{\sqrt{13}} \mathbf{j} + \frac{2}{\sqrt{13}} \mathbf{k}$
+    \end{tabular}
+
+  \item Θεωρούμε την καμπύλη $ \mathbf{r}(t) = (3t-t^3)\mathbf{i}+(3t^2)\mathbf{j}+
+    (3t+t^3)\mathbf{k} $ , $t\in\mathbb{R}$. 
+    Να βρεθούν τα μοναδιαία διανύσματα $\mathbf{T},\mathbf{N}, \mathbf{B}$ 
+    και η καμπυλότητα.
+
+    \hfill Απ: 
+    \begin{tabular}{l}
+      $\mathbf{T}=\frac{(1-t^2)}{\sqrt{2}(1+t^2)}\mathbf{i}+\frac{2t}{\sqrt{2}(1+t^2)}\mathbf{j}+\frac{1}{\sqrt{2}} \mathbf{k}$, $\mathbf{N}=
+      \frac{-2t}{1+t^2}\mathbf{i}+\frac{1-t^2}{1+t^2}\mathbf{j}$,
+      $\mathbf{B}=\frac{t^2-1}{\sqrt{2}(1+t^2)}\mathbf{i}+\frac{-2t}{\sqrt{2}(1+t^2)}\mathbf{j}+\frac{1}{\sqrt{2}}
+      \mathbf{k}$ \\
+      $\kappa = \frac{1}{3(1+t^2)^2}$
+    \end{tabular}
+
+  \item Να δείξετε ότι ο κύκλος ακτίνας $ a $ έχει σταθερή καμπυλότητα και ίση με $
+    {1}/{a} $.
+
+
+  \item Δίνεται η καμπύλη $\mathbf{r} = b\cos\frac{z}{a} 
+    \mathbf{i} + b\sin \frac{z}{a} \mathbf{j} + z \mathbf{k}$.
+    \begin{enumerate}[i)]
+      \item Να γραφεί με διανυσματική παραμετρική μορφή με παράμετρο το μήκος τόξου 
+        $s$, όταν η αρχή είναι το σημείο $z=0$.
+      \item Να βρεθεί το μοναδιαίο εφαπτόμενο και κάθετο διάνυσμα.
+      \item Να βρεθεί η καμπυλότητα και η στρέψη.
+    \end{enumerate}
+
+    \hfill Απ: 
+    \begin{enumerate*}[i)]
+      \item $ \mathbf{r}(s) = b\cos\frac{s}{\sqrt{a^{2}+b^{2}}} \mathbf{i} +
+        b\sin\frac{s}{\sqrt{a^{2}+b^{2}}} \mathbf{j} + \frac{as}{\sqrt{a^{2}+b^{2}}}
+        \mathbf{k} $ 
+      \item $ \mathbf{\kappa}= \frac{b}{\sqrt{a^{2}+b^{2}}} $
+      \item $ \mathbf{\sigma}=\frac{a}{\sqrt{a^{2}+b^{2}}}$
+    \end{enumerate*}
+
+  \item  Θεωρούμε τις παρακάτω καμπύλες. Να γραφούν οι εξισώσεις με παράμετρο 
+    το μήκος τόξου $s$.
+    \begin{enumerate}[i)]
+      \item  $\mathbf{r_{1}}(t) = \cos t \mathbf{i} + \sin t \mathbf{j} + t \mathbf{k}$, 
+        $t\in [0,2\pi]$
+      \item  $\mathbf{r_{2}}(t) = e^{t}\cos t \mathbf{i} + e^{t}\sin t \mathbf{j} + e^t
+        \mathbf{k}$, $t\in [0,\pi]$
+    \end{enumerate}
+    Για την $ \mathbf{r_{2}}(t) $ να δείξετε ότι κάθε διάνυσμα του τριέδρου 
+    Frenet της καμπύλης, στο τυχαίο σημείο, σχηματίζει σταθερή γωνία με τον 
+    άξονα $ z $.
+
+    \hfill  Απ: \begin{tabular}{l}
+      $   \rm{i)}\quad \mathbf{r_{1}}(s) = \cos \frac{s}{\sqrt{2}} \mathbf{i} + \sin
+      \frac{s}{\sqrt{2}} \mathbf{j} + \frac{s}{\sqrt{2}} \mathbf{k} $ \\
+      $\rm{ii)}\quad \mathbf{r_{2}}(s) = {\color{red}q}\cos\ln({{\color{red}q}}) 
+      \mathbf{i} + {\color{red}q}\sin\ln({{\color{red}q}}) \mathbf{j} + 
+      {\color{red}q} \mathbf{k},\;\text{όπου}\; 
+      {\color{red}{q}}=\left(\frac{s}{\sqrt{3}}+1\right)$
+    \end{tabular}
+
+  \item Θεωρούμε την καμπύλη $ \mathbf{r}(t) = \cos{t} \mathbf{i} + 
+    \sin{t} \mathbf{j} + t \mathbf{k}$. 
+    \begin{enumerate}[i)]
+      \item Να βρεθούν τα μοναδιαία διανύσματα $\mathbf{T},\mathbf{N}, \mathbf{B}$.
+      \item Να βρεθούν οι εξισώσεις της εφαπτόμενης, της 1ης και 2ης κάθετης της 
+        καμπύλης στο τυχαίο σημείο $ t_{0} $.
+      \item Να βρεθούν οι εξισώσεις των τριών επιπέδων του τριέδρου Frenet της καμπύλης 
+        στο σημειο για $ t = \frac{\pi}{2} $.
+    \end{enumerate}
+
+    \hfill Απ: \begin{tabular}{l}
+      $ \mathrm{i)} \quad \mathbf{T} = - \frac{\sin{t}}{\sqrt{2}} \mathbf{i} + 
+      \frac{\cos{t}}{\sqrt{2}} \mathbf{j} + \frac{1}{\sqrt{2}} \mathbf{k} $, \quad
+      $ \phantom{\mathrm{i)}} \quad \mathbf{N} = \phantom{-}\frac{\sin{t}}{\sqrt{2}} 
+      \mathbf{i} - \frac{\cos{t}}{\sqrt{2}} \mathbf{j} + \frac{1}{\sqrt{2}} 
+      \mathbf{k} $, \quad
+      $ \phantom{\mathrm{i)}} \quad \mathbf{B} = - \cos{t} \mathbf{i} - \sin{t} 
+      \mathbf{j} + 0 \mathbf{k} $ \\
+      $ \mathrm{ii)} \quad \text{ε}: \; \mathbf{R}(t) = \left(\cos{t_{0}} - t 
+        \frac{\sin{t_{0}}}{\sqrt{2}}\right) \mathbf{i} + \left(\sin{t_{0}} + 
+      t\frac{\cos{t_{0}}}{\sqrt{2} }\right) \mathbf{j} + 
+      \left(t_{0} + t\frac{1}{\sqrt{2}}\right) \mathbf{k}$ \\
+      $ \phantom{\mathrm{ii)}} \quad \text{1η:} \; \mathbf{R}(t) = 
+      (\cos{t_{0}} - t \cos{t_{0}} ) \mathbf{i} + (\sin{t_{0}} - t \sin{t_{0}} )
+      \mathbf{j}+ t_{0} \mathbf{k}$ \\
+      $ \phantom{\mathrm{ii)}} \quad \text{2η:} \; \mathbf{R}(t) = 
+      (\cos{t_{0}} + t \frac{\sin{t_{0}}}{\sqrt{2}}) \mathbf{i} + (\sin{t_{0}} - t
+      \frac{\cos{t_{0}}}{\sqrt{2}}) \mathbf{j}+ (t_{0} + t \frac{1}{\sqrt{2}}) 
+      \mathbf{k}$ \\
+      $\mathrm{iii)} \quad  \text{εγγ.:} \; x+z = \frac{\pi}{2}, \quad \text{καθ.:} \; 
+      -x + z = \frac{\pi}{2}, \quad \text{ευθ.:} \; y=1 $ 
+    \end{tabular}
+
+\end{enumerate}
+
+
+
+\end{document}

@@ -1,0 +1,42 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\pagestyle{askhseis}
+\everymath{\displaystyle}
+
+\begin{document}
+
+\begin{center}
+  \fbox{\large\bfseries Γραμμικές 2ης τάξης}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Να λυθούν οι παρακάτω σδε με τη μέθοδο υποβιβασμού τάξης.
+
+    \begin{enumerate}[(i)]
+      \item $ 2t^{2}y''(t) - ty'(t)+y(t)=0 $,\; $ t>0 $,\; $ y_{1}=t $ 
+        \hfill Απ: $ y= c_{1}t + c_{2} \sqrt{t} $ 
+      \item $ 2t^{2}y''(t) - ty'(t) - 2y(t) = 0 $,\; $ t>0 $,\; $ y_{1} = t^{2} $ 
+        \hfill Απ: $ y= c_{1}t^{2}+ c_{2} \frac{1}{\sqrt{t}} $
+      \item $ (1+t)y''(t)-y'(t)-ty(t) = 0 $,\; $ y_{1}=e^{t} $ 
+        \hfill Απ: $ y= c_{1}e^{t} + c_{2} \frac{e^{-t}}{4} (2t+3) $ 
+      \item $ ty''(t)+(1-2t)y'(t)+(t-1)y(t)=te^{t} $,\; $ t>0 $,\; $ y_{1}=e^{t} $ 
+        \hfill Απ: $ y = c_{1}e^{t}+ c_{2}e^{t} \ln{t} + \frac{t^{2} e^{t}}{4} $ 
+      \item $ t^{2}y''(t)+3ty'(t)+t=0 $,\; $ t>0 $,\; $ y_{1}= \frac{1}{t} $ 
+        \hfill Απ: $ y = \frac{1}{t} (c_{1}+ c_{2} \ln{t}) $ 
+    \end{enumerate}
+\end{enumerate}
+
+
+\vspace{\baselineskip}
+
+\begin{description}
+  \item[Υποδείξεις:] Ένας 2ος τρόπος να λυθεί η τελευταία άσκηση παραπάνω, 
+    είναι να θέσουμε με $ u=y' $ και αυτόματα η σδε μετασχηματίζεται σε 1ης τάξης, 
+    ως προς $u$ και $t$ την οποία εύκολα επιλύουμε.
+\end{description}
+
+\end{document}

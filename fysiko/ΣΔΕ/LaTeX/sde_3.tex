@@ -1,0 +1,74 @@
+\input{$HOME/Desktop/preamble/preamble.tex}
+\input{$HOME/Desktop/preamble/definitions.tex}
+
+
+\everymath{\displaystyle}
+\thispagestyle{empty}
+
+
+
+\begin{document}
+
+\begin{center}
+\fbox{\large\bf \begin{tabular}{c} Συνήθεις Διαφορικές Εξισώσεις \\ (Αργυρίου)\end{tabular}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+
+\item Να λυθούν οι παρακάτω σδε, Γραμμικές 2ης τάξης (σταθ. συντελεςστές).
+
+\begin{enumerate}[i)]
+
+\item $y''-y=0$ \hfill Απ: $y=c_1e^x+c_2e^{-x}$
+\item $y''+y=0$ \hfill Απ: $y=c_1\cos x+c_2\sin x$
+\item $y''-3y'-5y=0$ \hfill Απ: $y=e^{\frac{3}{2}x}(c_1e^{\frac{\sqrt{29}}{2}x}+c_2e^{-\frac{\sqrt{29}}{2}x})$
+\item $y''+2y'+3y=0$ \hfill Απ: $y=e^{-x}(c_1\cos\sqrt{2}x+c_2\sin\sqrt{2}x)$
+
+\end{enumerate}
+
+\item Να υπολογισθεί η ορίζουσα \textlatin{Wronski} για τα ακόλουθα ζεύγη συναρτήσεων:
+
+\begin{enumerate}[i)]
+
+\item $y_1=\cosh x$, $y_2=\sinh x$ \hfill Απ: $W=1$
+\item $y_1=\cos x$,  $y_2=\sin x$ \hfill Απ: $W=1$
+\item $y_1=\cos^2x$, $y_2=1+\cos 2x$ \hfill Απ: $W=0$
+\item $y_1=\sin x\cos x$, $y_2=\sin 2x$ \hfill Απ: $W=0$
+
+\end{enumerate}
+
+\item Να λυθούν οι παρακάτω σδε, Γραμμικές 2ης τάξης.
+
+\begin{enumerate}[i)]
+
+\item $y''+y=\sin 2x$ \hfill Απ: $y=c_1\cos x+c_2\sin x-\frac{1}{3}\sin 2x$
+\item $y''+y=2\sin^2 x$ \hfill Απ: $y=c_1\cos x+c_2\sin x+\frac{1}{3}\cos 2x+1$
+\item $y''+y=x\cosh x$ \hfill Απ: $y=c_1\cos x+c_2\sin x +\frac{1}{2}(x\cosh x-\sinh x)$
+
+\end{enumerate}
+
+\item Να λυθεί το παρακάτω πρόβλημα αρχικών συνθηκών (ΠΑΤ) 
+\[
+y''-y=\sin x \quad \text{όπου}\quad y(0)=0,\; y'(0)=-\frac{1}{2}
+\]
+
+\hfill Απ: $y=-\frac{1}{2}\sin x$
+
+\item Να λυθεί η παρακάτω σδε, $y''+4y'+4y=3xe^{-2x}$
+
+\hfill Απ: $y=(c_1+c_2x+\frac{1}{2}x^3)e^{-2x}$
+
+\item Να λυθούν οι παρακάτω σδε, με τη μέθοδο της μεταβολής των παραμέτρων (\textlatin{Lagrange})
+
+\item $y''+y=\sec x$ \hfill Απ: $y=c_1\cos x+c_2\sin x - \cos x\ln\abs{\sec x}+x\sin x$
+\item $y''+4y=\sin^2x$ \hfill Απ: $y=c_1\cos 2x+c_2\sin 2x+\frac{1}{6}\cos^22x+\frac{1}{12}\sin^22x$
+\item $y''+2y+y=e^{-x}\ln x$ \hfill Απ: $y=(c_1+c_2x+\frac{x^2}{2}\ln x-\frac{3x^2}{4})e^{-x}$
+
+
+\end{enumerate}
+
+
+
+\end{document}

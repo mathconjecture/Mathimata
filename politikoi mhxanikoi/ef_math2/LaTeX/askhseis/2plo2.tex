@@ -1,0 +1,138 @@
+\input{preamble.tex}
+\input{definitions_ask.tex}
+
+
+\pagestyle{askhseis}
+\everymath{\displaystyle}
+
+\begin{document}
+
+\begin{center}
+  \minibox[c]{\large\bf \textcolor{Col1}{Ασκήσεις Διπλό Ολοκλήρωμα} \\
+  \textcolor{Col1}{(Αλλαγή Μεταβλητών)}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Να υπολογίσετε τα παρακάτω διπλά ολοκληρώματα κάνοντας χρήση των πολικών 
+    και ελλειπτικών συντεταγμένων.
+    \begin{enumerate}[i)]
+      \item $I=\iint_{D}e^{x^2+y^2}\,dxdy$, 
+        \quad $D=\{(x,y)\in\mathbb{R}^2 \mid x^2+y^2\leq a^2,\; a>0\}$ 
+        \hfill Απ: $\pi(e^{a^2}-1)$ %spandagos p.73 ex.1
+      \item $I=\iint_{D}x\,dxdy$, \quad $ D= \{(x,y)\in \mathbb{R}^{2} \mid x^{2}+y^{2} 
+        \leq 4,\; x^{2}+y^{2} \geq 1,\; x \geq 0,\; y \geq 0 \} $ 
+        \hfill Απ: $ \frac{7}{3} $ %spandagos p.73 ex.2
+      \item $I=\iint_{D}\sin(x^2+y^2)\,dxdy$, \quad $D= \{(x,y)\in \mathbb{R}^{2} 
+        \mid x^{2}+y^{2} \leq a^{2} \}$ 
+        \hfill Απ: $\pi (1 - \cos{a^{2}}) $
+      \item $I=\iint_{D}(x^2+y^2)\,dxdy$, \quad $ D= \{(x,y)\in \mathbb{R}^{2} 
+        \mid (x-a)^{2}+y^{2} \leq a^{2},\; a>0 \}  $ 
+        \hfill Απ: $\frac{3}{2}a^4\pi$
+      \item $I=\iint_{D}\sqrt{x^2+y^2}\,dxdy$, \quad $ D= \{(x,y)\in \mathbb{R}^{2} 
+        \mid 2x \leq x^{2}+y^{2} \leq 4,\, x \geq 0  \} $ 
+        \hfill Απ: $\frac{8}{3}\Bigl(\pi-\frac{4}{3}\Bigr)$
+      \item $ I=\iint_{D} \sqrt{ 1-x^{2}-y^{2} } \,dxdy $, 
+        \quad $ D= \{(x,y)\in \mathbb{R}^{2} \mid x^{2}+y^{2} \leq x\} $ 
+        \hfill Απ:  $ \frac{3\pi -4}{9} $ %spandagos p.141 ask.66
+      \item $ I=\iint_{D} \sqrt{ 16-x^{2}-y^{2}}\,dxdy  $, \quad $ D= \{(x,y)\in
+        \mathbb{R}^{2} \mid x^{2}+y^{2} \leq 4y \} $ \hfill Απ: $ \frac{64}{3} 
+        \Bigl(\pi - \frac{4}{3}\Bigr) $  
+      \item $ I=\iint_{D} \arctan(\frac{y}{x})\,dxdy $, 
+        \quad $ D= \{(x,y)\in \mathbb{R}^{2} \mid x^{2}+y^{2} \leq 4,\, x \geq 1,\, y 
+        \geq 0 \} $ 
+        \hfill Απ: $ \frac{\pi ^{2}}{9} - \frac{\pi \sqrt{3}}{6} - 
+        \frac{1}{2} \ln{\frac{1}{2} } $ %spandagos p.144 ask 69
+    \end{enumerate}
+
+  \item Να υπολογιστούν τα παρακάτω διπλά ολοκληρώματα κάνοντας χρήση 
+    κατάλληλων μετασχηματισμών.
+    \begin{enumerate}[i)]
+      \item $I=\iint_{D}e^{\frac{y}{x+y}}\,dxdy$, \quad $ D= \{(x,y)\in \mathbb{R}^{2} 
+        \mid x+y \leq 1,\; x \geq 0,\; y \geq 0 \}$ \hfill Απ: $\frac{1}{2}(e-1)$
+        %spandagos p.157 ask.84
+      \item $ I= \iint_{D}e^{(x+y)^{2}}\,dxdy $, \quad $ D = \{ (x,y) \in \mathbb{R}^{2}
+        \mid x+y \leq 2,\; y \leq x,\; y \geq 0 \} $ \hfill Απ: $ \frac{1}{4} (e^{4}-1)$ 
+      \item $ I=\iint_{D}(x^{2}+y^{2})\,dxdy $, \quad $ D= \{(x,y)\in \mathbb{R}^{2} 
+        \mid 2 \leq xy \leq 4,\; 1 \leq x^{2}-y^{2} \leq 9 \} $ \hfill Απ: 8 
+        %spandagos p.154 ask.81
+      \item $I=\iint_{D}\frac{dxdy}{(x+y)^2(x-y)^2}$, \quad $D$ τρίγωνο με κορυφές τα
+        σημεία $(1,0), (3,0), (2,1)$  \hfill Απ: $\frac{1}{9}$ %spand p.152 ask.79
+      \item $ I=\iint_{D} \frac{dxdy}{1+(x-y)^{2}} $, \quad $D$ τρίγωνο με κορυφές τα 
+        σημεία $(0,0), (1,0), (1,1)$ \hfill Απ: $ \frac{\pi}{4} - \ln{\sqrt{ 2 }} $ 
+        %spandagos p.158 ask.86 (θετω u=y-x, v=x D^*=(0,0), (-1,1), (0,1))
+      \item $ I=\iint_{D} \cos{\left(\frac{x-y}{x+y}\right)},dxdy $, \quad 
+        $ D= \{(x,y)\in \mathbb{R}^{2} \mid x+y \leq 1,\; x \geq 0,\; y \geq 0 \} $ 
+        \hfill Απ: $ \frac{\sin 1}{2} $ %spandagos p.158 ask.86
+      \item $ I=\iint_{D}(x+y)^{2} \sin^{2}{(x-y)}\,dxdy $, \quad $ D $ τετράγωνο 
+        με κορυφές $ (0,1) $, $ (1,2) $, $ (2,1) $, $ (1,0) $
+        \hfill Απ: $ \frac{13}{6} (2 - \sin{2}) $ 
+    \end{enumerate}
+
+    \section*{Εφαρμογές του διπλού ολοκληρώματος} 
+
+  \item Να υπολογιστεί ο \textbf{όγκος} του στερεού που περικλείεται από το 
+    παραβολοειδές με εξίσωση $ x^{2}+y^{2}+z=4 $ και από το επίπεδο $ z=0 $.
+    \hfill Απ: $ 8\pi $ 
+
+  \item Να υπολογιστεί ο \textbf{όγκος} του στερεού που περικλείεται από τις 
+    επιφάνειες $ x^{2}+y^{2}=1 $ και $ y+z=2 $.
+    \hfill Απ: $ 2 \pi $ 
+
+  \item Να υπολογιστεί ο \textbf{όγκος} του στερεού που περικλείεται από τις 
+    επιφάνειες $ z=x^{2}+y^{2} $ και $ x^{2}+y^{2}=2x $.
+    \hfill Απ: $ \frac{3 \pi}{2} $ 
+
+  \item Να υπολογιστεί ο \textbf{όγκος} του στερεού που περικλείεται από το 
+    παραβολοειδές $ z = x^{2}+y^{2} $ και τον κώνο με εξίσωση $ z^{2}=x^{2}+y^{2} $.
+    \hfill Απ: $ \pi/6 $ %spandagos p.188 ask.125
+
+  \item Να υπολογιστεί ο \textbf{όγκος} του στερεού που περικλείεται πάνω από τον 
+    παραβολικό κύλινδρο $ z=4-y^{2} $ και κάτω από το ελλειπτικό παραβολοειδές 
+    $ z=x^{2}+3y^{2} $.  
+    \hfill Απ: $ 4 \pi $  
+
+  \item Να υπολογιστεί ο \textbf{όγκος} της μπάλας $ x^{2}+y^{2}+z^{2}=\rho^{2} $.
+    \hfill Απ: $ \frac{4}{3} \pi \rho^{3} $ 
+
+  \item Να υπολογιστεί ο \textbf{όγκος} του ελλειψοειδούς 
+    $ \frac{x^{2}}{a^{2}} + \frac{y^{2}}{b^{2}} + \frac{z^{2}}{c^{2}} =1 $, με  
+    $ a,b,c > 0 $.
+    \hfill Απ: $ \frac{4}{3} \pi abc $ 
+
+  \item Να υπολογιστεί το \textbf{εμβαδό} του τμήματος της κωνικής επιφάνειας 
+    $ 3z^{2}=x^{2}+y^{2} $ που βρίσκεται εντός του κυλίνδρου 
+    $ 4y=x^{2}+y^{2} $, $ z \geq 0 $. \hfill Απ: $ 8 \pi \sqrt{3}/{3} $ 
+    %spandagos p. 209 ask. 152
+
+  \item Να υπολογιστεί το \textbf{εμβαδό} του τμήματος της κωνικής επιφάνειας 
+    $ x^{2}=y^{2}+z^{2} $ που βρίσκεται εντός του κυλίνδρου 
+    $ =x^{2}+y^{2} = a^{2} $, $ x \geq 0,\; a > 0 $. 
+    \hfill Απ: $ \pi a^{2}$ %spandagos p. 209 ask. 152
+
+  \item Να υπολογιστεί το \textbf{εμβαδό} του τμήματος της επιφάνειας της σφαίρας
+    $x^{2} + y^{2}+z^{2}=25 $ που βρίσκεται μεταξύ των επιπέδων $ z=2 $ και $ z=4 $.
+    \hfill Απ: $ 20 \pi $.  %spandagos p. 212 ask. 155
+\end{enumerate}
+
+
+\vspace{\baselineskip}
+
+\begin{center}
+  \minibox{\large\bf \textcolor{Col1}{Υποδείξεις}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Ο τύπος του εμβαδού τμήματος επιφάνειας $S$ πάνω σε επιφάνεια $ z=f(x,y) $ 
+    είναι: 
+    \[
+      E_{S}=\iint\limits_{D} \sqrt{1 + (f_{x})^{2}+(f_{y})^{2}} \,dxdy
+    \]
+\end{enumerate}
+
+
+
+\end{document}

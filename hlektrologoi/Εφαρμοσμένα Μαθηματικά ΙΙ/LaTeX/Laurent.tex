@@ -1,0 +1,63 @@
+\input{preamble.tex}
+\input{definitions.tex}
+
+
+
+\everymath{\displaystyle}
+
+\begin{document}
+
+\begin{center}
+\fbox{\large\bfseries  Ασκήσεις στις σειρές \textlatin{Laurent}}
+\end{center}
+
+\vspace{\baselineskip} 
+
+\begin{enumerate}
+
+\item Να γράψετε το ανάπτυγμα \textlatin{Taylor} της συνάρτησης $f(z)=\frac{1}{z}$ γύρω από το σημείο $z_0=1$. 
+
+\hfill Απ: $f(z)=\sum_{n=0}^{\infty}(-1)^n(z-1)^n, \quad \abs{z-1}<1$
+
+\item Να γράψετε το ανάπτυγμα \textlatin{Maclaurin} της συνάρτησης $f(z)=\frac{z}{z^2-2z+3}$
+
+\hfill Απ: $f(z)=\frac{1}{4}\sum_{n=0}^{\infty}(-1)^nz^n-\frac{1}{4}\sum_{n=0}^{\infty}\Bigl(\frac{z}{3}\Bigr)^n, \quad \abs{z}<1$
+
+\item Να γράψετε το ανάπτυγμα \textlatin{Laurent} της συνάρτησης $f(z)=\frac{1}{(z-1)(z+2)}$ για:
+
+\begin{enumerate}[i)]
+\item $1<\abs{z}<2$ \hfill Απ: $f(z)=\frac{1}{3}\sum_{n=0}^{\infty}\Bigl(\frac{1}{z}\Bigl)^{n+1}+\frac{1}{6}(-1)^{n+1}\Bigl(\frac{z}{2}\Bigl)^n$
+\item $\abs{z}>2$\hfill Απ: $f(z)=\frac{1}{3}\sum_{n=0}^{\infty}\Bigl(\frac{1}{z}\Big)^{n+1}+\frac{1}{3}\sum_{n=0}^{\infty}(-1)^{n+1}\frac{2^n}{z^{n+1}}$
+\item $\abs{z}<1$\hfill Απ: $f(z)=-\frac{1}{3}\sum_{n=0}^{\infty}z^n+\frac{1}{6}\sum_{n=0}^{\infty}(-1)^{n+1}\Bigl(\frac{z}{2}\Bigr)^n$
+\item $\abs{z-1}<2$\hfill Απ: $f(z)=\frac{1}{3}\frac{1}{z-1}+\sum_{n=0}^{\infty}(-1)^{n+1}\frac{(z-1)^n}{3^{n+2}}$
+\end{enumerate}
+
+
+\item Να γράψετε το ανάπτυγμα \textlatin{Laurent} της συνάρτησης $f(z)=\frac{3z}{z^2-3z+2}$, για: 
+
+\begin{enumerate}[i)]
+\item $\abs{z}<1\hfill$  Απ: $f(z)=3\sum_{n=0}^{\infty}z^n-3\sum_{n=0}^{\infty}\Bigl(\frac{z}{2}\Bigr)^n$
+\item $1<\abs{z}<2$\hfill Απ: $f(z)=-3\frac{1}{z^{n+1}}-3\sum_{n=0}^{\infty}\Bigl(\frac{z}{2}\Bigr)^n$
+\item $\abs{z}>2$\hfill Απ: $f(z)=-3\sum_{n=0}^{\infty}\Bigl(\frac{1}{z}\Bigr)^{n+1}-3\sum_{n=0}^{\infty}\frac{2^n}{z^{n+1}}$
+\end{enumerate}
+
+\item Να γράψετε το ανάπτυγμα \textlatin{Laurent} της συνάρτησης $f(z)=\frac{1}{z}+\frac{1}{z+2}+\frac{1}{(z-1)^2}$ στον δακτύλιο $1<\abs{z}<2$
+
+\hfill Απ: $f(z)=\frac{1}{z}+\frac{1}{2}\sum_{n=0}^{\infty}(-1)^n\Bigl(\frac{z}{2}\Bigr)^n+\sum_{n=1}^{\infty}(n+1)\Bigl(\frac{1}{z}\Bigr)^{n+2}$
+
+\item Να γράψετε το ανάπτυγμα \textlatin{Laurent} της συνάρτησης $f(z)=\frac{1}{(z^2-1)^2}$ στον δακτύλιο $0<\abs{z-1}<2$.
+
+\hfill Απ: $f(z)=\frac{-\frac{1}{4}}{z-1}+\frac{\frac{1}{4}}{(z-1)^2}+\frac{1}{8}\sum_{n=0}^{\infty}(-1)^n\Bigl(\frac{z-1}{2}\Bigr)^n-\frac{1}{16}\sum_{n=1}^{\infty}(-1)^n\Bigl(\frac{z-1}{2}\Bigr)^{n-1}$
+
+\item Να γράψετε το ανάπτυγμα \textlatin{Laurent} της συνάρτησης $f(z)=\frac{\sin z}{z^2(1-z)}$, γύρω από το σημείο $z_0=0$.
+
+\item Να γράψετε το ανάπτυγμα \textalatin{Laurent} της συνάρτησης $f(z)=\frac{1}{(1+z^2)^2}$, γύρω από το σημείο $z_0=0$.
+
+\item (\textbf{Θέμα Εξετάσεων} με \boldmath{$z_0=-i$}\unboldmath) Αναπτύξτε σε σειρά \textlatin{Laurent} τη συνάρτηση $f(z)=\frac{1}{z(z-1)}$ σε όλους του πεπερασμένους δακτυλίους, γύρω από το $z_0=i$
+
+\end{enumerate}
+
+
+
+
+\end{document}

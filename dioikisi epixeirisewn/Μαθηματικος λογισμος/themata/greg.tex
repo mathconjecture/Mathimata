@@ -1,0 +1,81 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[english,greek]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+
+\begin{document}
+
+{\bfseries Θέμα:} 1. ΄Εστω ότι κάποιος αγόρασε ένα οικόπεδο στην τιμή των $10000$ ευρώ. Υποθέστε
+ότι ο ρυθμός αύξησης της τιμής του οικοπέδου είναι
+$\sqrt{0,2t}$, ενώ ο ρυθμός με τον
+οποίο χάνουν την αξία τους τα χρήματα που τοποθετήθηκαν σε αυτήν την επένδυση
+αντιστοιχούν σε συνεχή ανατοκισμό με ρυθμό προεξόφλησης $4\%$. Να βρεθεί ο άριστος
+χρόνος πώλησης του οικοπέδου και η αξία πώλησής του. 
+
+\vspace{\baselineskip}
+
+{\bfseries Λύση:}
+
+Η παρούσα αξία του οικοπέδου δίνεται από τον τύπο:
+\[
+A(t)=V(t)e^{-0,04t}
+\]
+όπου $V(t)=10000e^{\sqrt{0,2t}}$ η συνάρτηση σύμφωνα με την οποία αυξάνει η αξία του οικοπέδου με την πάροδο του χρόνου.
+
+Άρα
+\begin{align*}
+A(t)&=10000\; e^{\sqrt{0,25}}e^{-0,04t} \Leftrightarrow \\
+&=10000\; e^{\sqrt{0,2t}-0,04t} 
+\end{align*}
+
+Λογαριθμίζω και τα δύο μέλη (θα είναι πιο εύκολο να υπολογίσω την παράγωγο του $A(t)$ στη συνέχεια) και έχω:
+
+\begin{align*}
+\ln A(t) &= \ln(10000\; e^{\sqrt{0,2t}-0,04t}) \Leftrightarrow \\
+&=\ln 10000 + \ln e^{\sqrt{0,2t}-0,04t} \Leftrightarrow \\
+&=\ln 10000 + (\sqrt{0,2t} - 0,04t) 
+\end{align*}
+
+Τώρα παραγωγίζω και τα δύο μέλη: (Αυτή η διαδικασία λέγεται Λογαριθμική παραγώγιση και χρησιμοποιείται για να υπολογίζω δύσκολες παραγώγους)
+
+\begin{align*}
+\frac{A'(t)}{A(t)} &= 0 + \frac{0,2}{2\sqrt{0,2t}} - 0,04 \Leftrightarrow \\
+A'(t) &= A(t) (\frac{0,1}{\sqrt{0,2t}}-0,04) \Leftrightarrow \\
+\end{align*}
+
+{\bfseries Αναγκαία συνθήκη $1$ης τάξης (εύρεση στάσιμων σημείων)}
+
+\begin{align*}
+A'(t)&=0 \Leftrightarrow \\
+A(t) (\frac{0,1}{\sqrt{0,2t}}-0,04) &=0 \Leftrightarrow \\
+\frac{0,1}{\sqrt{0,2t}}-0,04 &=0 \Leftrightarrow \\
+\frac{0,1}{\sqrt{0,2t}} &= 0,04 \Leftrightarrow \\
+0,04\sqrt{0,2}\sqrt{t} &= 0,1 \Leftrightarrow \\
+\sqrt{t} &= \frac{0,1}{0,04\sqrt{0,2}} \Leftrightarrow \\
+\sqrt{t} &= \frac{\frac{1}{10}}{\frac{4}{100}\frac{1}{\sqrt{5}}} \Leftrightarrow \\ 
+\sqrt{t} &= \frac{10\sqrt{5}}{4} \Leftrightarrow \\
+t^* &= \frac{100\cdot 5}{16} = 31,25 
+\end{align*}
+
+Υπολογίζω την $2$η παράγωγο: 
+
+\begin{align*}
+A''(t) &= A'(t)(\frac{0,1}{\sqrt{0,2t}}-0,04) + A(t)(\frac{0,1}{\sqrt{0,2t}}-0,04)' \Leftrightarrow \\
+&= A'(t) (\frac{0,1}{\sqrt{0,2t}}-0,04) + A(t)(-\frac{1}{2}\frac{\sqrt{5}}{10}\cdot t^{-\frac{3}{2}}) \Leftrightarrow \\
+&= A'(t) (\frac{0,1}{\sqrt{0,2t}}-0,04) + A(t)(-\frac{1}{2}\frac{\sqrt{5}}{10}\cdot \frac{1}{\sqrt{t^3}} 
+\end{align*}
+
+Υπολογίζω την $2$η παράγωγο στο στάσιμο σημείο και έχω ότι ο $1$ος όρος της μηδενίζεται αυτόματα γιατί $A'(t^*)=0$ και άρα
+
+\[Α''(t^*) <0 \]
+
+αφού $A(t)>0$.
+
+άρα πρόκειται για μέγιστο!
+
+\end{document}

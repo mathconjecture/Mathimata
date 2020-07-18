@@ -1,0 +1,1228 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[english,greek]{babel}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{graphicx}
+
+\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+
+
+
+
+
+
+
+\begin{document}
+
+
+\thispagestyle{empty}
+
+
+\begin{center}
+\begin{tabular}{@{}c@{}}
+\includegraphics{logo.jpg}
+\end{tabular}
+\end{center}
+
+\vspace{5\baselineskip}
+
+\begin{center}
+{\LARGE\textbf{Δυναμικά Μαθηματικά Υποδείγματα}}\\[5\baselineskip]
+
+
+
+{\large\textbf{ Εργασίες - Ασκήσεις προς Επίλυση \\[5pt]Κεφάλαια 15-16: Διαφορικές Εξισώσεις}}
+\end{center}
+
+\vspace{15\baselineskip}
+
+\begin{center}
+Καθηγητής: Γεώργιος Ανδρουλάκης
+
+
+
+
+\vspace{\baselineskip}
+\noindent
+
+Φοιτήτρια: Ματίνα Συλλιγάρδου\\
+Α.Μ.: 2793\\
+Έτος: $4$ο\\
+Εξάμηνο: $8$ο
+\end{center}
+
+
+
+\vfill
+
+
+
+
+
+\section{Ασκηση}
+
+{\bfseries Να λυθούν οι ακόλουθες γραμμικές διαφορικές εξισώσεις πρώτου βαθμού με σταθερούς συντελεστές και δεδομένο σταθερό όρο.}
+
+\vspace{2\baselineskip}
+
+\begin{description}
+
+\item [$\alpha$)] $\boxed{\frac{dy}{dx} + y = 4$, όπου $y(0) = 0}$
+
+\textbf{Λύση}:
+\vspace{\baselineskip}
+
+Έχω $a=1\neq 0, b=4$, επομένως:
+
+\begin{minipage}{0.4\textwidth}
+\begin{align*}
+y(t) &= y_c + y_p \\
+&=Ae^{-at} + \frac{b}{a} \\
+&= Ae^{-t} + 4 \quad\text{γενική λύση}
+\end{align*}
+\end{minipage}\hfill\begin{minipage}{0.4\textwidth}
+\begin{align*}
+y(0) &= 0 \\
+Α+4 &= 0 \\
+A=&-4
+\end{align*}
+\end{minipage}
+
+Άρα
+\[
+\underline{y(t) = -4e^{-t} + 4 \quad \text{η ορισμένη λύση.}}
+\]
+
+\vspace{\baselineskip}
+
+\item [$\beta$)] $\boxed{\frac{dy}{dx} = 23$, όπου $y(0) = 1}$
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+Έχω $a=0, b=23$, επομένως:
+
+\begin{minipage}{0.4\textwidth}
+\begin{align*}
+y(t) &= y_c + y_p \\
+&=A + bt \\
+&= A + 23t \quad\text{γενική λύση}
+\end{align*}
+\end{minipage}\hfill\begin{minipage}{0.4\textwidth}
+\begin{align*}
+y(0) &= 1 \\
+Α &= 1 \\
+\end{align*}
+\end{minipage}
+
+Άρα
+\[
+\underline{y(t) = 1 + 23t \quad \text{η ορισμένη λύση.}}
+\]
+
+\vspace{\baselineskip}
+
+\item [$\gamma$)] $\boxed{\frac{dy}{dx} -5 y = 0$, όπου $y(0) = 6}$
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+Έχω $a=-5\neq 0, b=0 \quad(\text{ομογενής}),$ επομένως:
+
+\begin{minipage}{0.4\textwidth}
+\begin{align*}
+y(t) &= Ae^{-at} \\
+&=Ae^{5t} \quad\text{γενική λύση}
+\end{align*}
+\end{minipage}\hfill\begin{minipage}{0.4\textwidth}
+\begin{align*}
+y(0) &= 6 \\
+Α &= 6 \\
+\end{align*}
+\end{minipage}
+
+Άρα
+\[
+\underline{y(t) = 6e^{5t} \quad \text{η ορισμένη λύση.}}
+\]
+
+\vspace{\baselineskip}
+
+\item [$\delta$)] $\boxed{\frac{dy}{dx} +3 y = 2$, όπου $y(0) = 4}$
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+Έχω $a=3\neq 0, b=2,$ επομένως:
+
+\begin{minipage}{0.4\textwidth}
+\begin{align*}
+y(t) &= y_c + y_p \\
+&=Ae^{-at} + \frac{b}{a} \\
+&= Ae^{-3t} + \frac{2}{3} \quad\text{γενική λύση}
+\end{align*}
+\end{minipage}\hfill\begin{minipage}{0.4\textwidth}
+\begin{align*}
+y(0) &= 4 \\
+Α+\frac{2}{3} &= 4 \\
+A&=\frac{10}{3}
+\end{align*}
+\end{minipage}
+
+Άρα
+\begin{align*}
+y(t) &= \frac{10}{3}e^{-3t} + \frac{2}{3} \\
+&= \underline{\frac{2}{3} (5e^{-3t} + 1)\quad \text{η ορισμένη λύση.}}
+\end{align*}
+\end{description}
+
+\vspace{2\baselineskip}
+
+\section{Άσκηση}{\bfseries Δείξτε ότι η εξίσωση $\frac{dP}{dt} + j(\beta+\delta)P = j(\alpha+\gamma)$ μπορεί να γραφεί και ως $\frac{dP}{dt} + k(P-P^*) = 0$.
+Εαν θεωρήσουμε ότι $P-P^* \equiv\Delta$ (αξιοσημείωτη απόκλιση) ώστε
+$\frac{d\Delta}{dt} = \frac{dP}{dt}$ τότε η διαφορική εξίσωση μπορεί να γραφεί ως
+\[
+\frac{d\Delta}{dt} + k\Delta =0.
+\]}
+
+\vspace{2\baselineskip}
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+Ξέρουμε ότι η τιμή ισορροπίας στο υπόδειγμα αγοράς δίνεται από $P^*=\frac{\alpha+\gamma}{\beta+\delta}$ με $\alpha, \beta, \gamma, \delta >0, \;\text{άρα} \; \neq 0$ και επίσης για τον συντελεστή προσαρμογής $j$ ισχύει επίσης ότι $j>0$.
+Άρα έχουμε ότι $j(\beta+\delta)\neq 0$. Επομένως, διαιρώντας:
+\begin{align*}
+\frac{dP}{dt} + j(\beta+\delta) &= j(\alpha + \gamma) \\
+\frac{\frac{dP}{dt}}{j(\beta+\delta)} + P &= \frac{\alpha+\gamma}{\beta+\delta} \\
+\frac{\frac{dP}{dt}}{j(\beta+\delta)} + P &= P^* \\
+\frac{\frac{dP}{dt}}{j(\beta+\delta)} + P - P^* &= 0 \\
+\frac{dP}{dt} + j(\beta+\delta)(P-P^*) &=0 \\
+\end{align*}
+και αν θέσουμε $k\equiv j(\beta+\delta)$ προκύπτει η ζητούμενη σχέση:
+\[
+\frac{dP}{dt} + k(P-P^*) = 0.
+\]
+Εαν θεωρήσουμε ότι $P-P^*\equiv \Delta$ ώστε $\frac{d\Delta}{dt} = \frac{dP}{dt}$ τότε η παραπάνω εξίσωση που μόλις αποδείξαμε γίνεται:
+\[
+\frac{d\Delta}{dt} + k\Delta = 0.
+\]
+
+\vspace{2\baselineskip}
+
+\section{Άσκηση}{\bfseries Να επιλυθούν οι ακόλουθες διαφορικές εξισώσεις πρώτης τάξης.}
+
+\vspace{2\baselineskip}
+
+\begin{description}
+
+\item [($1$)] $\boxed{\frac{dy}{dt} + 5y = 15}$
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+Έχω $a=5\neq 0, b=15$, επομένως:
+
+\begin{minipage}{0.4\textwidth}
+\begin{align*}
+y(t) &= y_c + y_p \\
+&=Ae^{-at} + \frac{b}{a} \\
+&= \underline{Ae^{-5t} + 3 \quad\text{γενική λύση}}
+\end{align*}
+\end{minipage}
+
+\vspace{\baselineskip}
+
+
+\item [($2$)] $\boxed{\frac{dy}{dt} + 2ty = 0}$
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+Έχω $u(t)=2t, w(t)=0 \quad(\text{ομογενής}),$ επομένως:
+
+\[\int u(t)dt = \int 2tdt = 2\int tdt = 2\frac{t^2}{2} = t^2.\]
+
+\begin{minipage}{0.4\textwidth}
+Άρα
+\begin{align*}
+y(t) &= Ae^{-\int u(t)dt} \\
+&= \underline{Ae^{-t^2} \quad\text{γενική λύση}}
+\end{align*}
+\end{minipage}
+
+\vspace{\baselineskip}
+
+
+\item [($3$)] $\boxed{\frac{dy}{dt} + 2ty = t}$
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+Έχω $u(t)=2t, w(t)=t$, επομένως:
+
+\[
+\int u(t)dt = \int 2tdt = 2\int tdt = 2\frac{t^2}{2} = t^2.
+\]
+
+\[
+\int w(t)e^{\int u(t)dt}dt = \int te^{t^2}dt \underset{\substack{dx=2tdt\\tdt=\frac{dx}{2}}}{\overset{x=t^2}{=}} \frac{1}{2}\int e^xdx = \frac{1}{2} e^{t^2}.
+\]
+\begin{minipage}{0.4\textwidth}
+Άρα
+\begin{align*}
+y(t) &= e^{-\int u(t)dt}\left(A + \int w(t)e^{\int u(t)dt}dt\right) \\
+&= e^{-t^2}(A+\frac{1}{2}e^{t^2}) \\
+&= Ae^{-t^2}+\frac{1}{2} \quad\text{γενική λύση}.
+\end{align*}
+\end{minipage}\hfill\begin{minipage}{0.4\textwidth}
+\begin{align*}
+y(0) &= \frac{3}{2} \\
+Α+ \frac{1}{2}&= \frac{3}{2} \\
+A&=1
+\end{align*}
+\end{minipage}
+
+Τελικά
+\[
+\underline{y(t) = e^{-t^2} + \frac{1}{2} \quad \text{η ορισμένη λύση.}}
+\]
+
+\vspace{\baselineskip}
+
+
+\item [($4$)] $\boxed{\frac{dy}{dt} + t^2y = 5t^2}$
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+Έχω $u(t)=t^2, w(t)=5t^2$, επομένως:
+
+\[
+\int u(t)dt = \int t^2dt = \frac{t^3}{3}.
+\]
+
+\[
+\int w(t)e^{\int u(t)dt}dt = \int 5t^2e^{\frac{t^3}{3}}dt = 5\int t^2e^{\frac{t^3}{3}}dt = \underset{dx=t^2dt}{\overset{x=\frac{t^3}{3}}{=}} 5\int e^xdx = 5 e^{\frac{t^3}{3}}.
+\]
+\begin{minipage}{0.4\textwidth}
+Άρα
+\begin{align*}
+y(t) &= e^{-\int u(t)dt}\left(A + \int w(t)e^{\int u(t)dt}dt\right) \\
+&= e^{-\frac{t^3}{3}}(A+5e^{\frac{t^3}{3}}) \\
+&= Ae^{-\frac{t^3}{3}}+5 \quad\text{γενική λύση}.
+\end{align*}
+\end{minipage}\hfill\begin{minipage}{0.4\textwidth}
+\begin{align*}
+y(0) &= 6 \\
+Α+5 &= 0 \\
+A&=1
+\end{align*}
+\end{minipage}
+
+Τελικά
+\[
+\underline{y(t) = e^{-\frac{t^3}{3}}+5 \quad \text{η ορισμένη λύση.}}
+\]
+
+
+\end{description}
+
+\vspace{2\baselineskip}
+
+\section{Άσκηση} {\bfseries Είναι οι ακόλουθες διαφορικές εξισώσεις ακριβείς? Εάν δεν είναι είναι ακριβείς πειραματιστείτε με τα $t,y$ και $y^2$ ως πιθανούς παράγοντες ολοκλήρωσης.}
+
+\vspace{2\baselineskip}
+
+\begin{description}
+
+\item [$(\alpha)$] $\boxed{2(t^3+1)dy + 3yt^2dt = 0}$
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+Έχουμε:
+$M=2(t^3+1)$ και $N=3yt^2$.
+\[
+\pdv{M}{t} = 6t^2 \neq
+\pdv{N}{y}= 3t^2
+\]
+Άρα η δ.ε. δεν είναι ακριβής. Γι' αυτό πολλαπλασιάζουμε με $y$ και έχουμε:
+\[
+2y(t^3+1)dy + 3y^2t^2dt = 0
+\]
+η οποία είναι ακριβής, γιατί:
+$M'=2y(t^3+1)$ και $N'=3y^2t^2$.
+\[
+\pdv{M'}{t}= 6yt^2 = \pdv{N'}{y}=6yt^2
+\]
+
+\vspace{\baselineskip}
+
+\item [$(\beta)$] $\boxed{4y^3tdy + 2(y^4+3t)dt = 0}$
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+Έχουμε:
+$M=4y^3t$ και $N=2y^4+6t$.
+\[
+\pdv{M}{t} = 4y^3 \neq
+\pdv{N}{y}=8y^3
+\]
+Άρα η δ.ε. δεν είναι ακριβής. Γι' αυτό πολλαπλασιάζουμε με $t$ και έχουμε:
+\[
+4y^3t^2dy + (2y^4t+6t^2)dt = 0
+\]
+η οποία είναι ακριβής, γιατί:
+$M'=4y^3t^2$ και $N'=2y^4t+6t^2$.
+\[
+\pdv{M'}{t}= 8y^3t = \pdv{N'}{y}=8y^3t
+\]
+\end{description}
+
+\vspace{2\baselineskip}
+
+\section{Άσκηση}{\bfseries  Προσδιορίστε για κάθε διαφορική εξίσωση τα ακόλουθα:
+\begin{description}
+\item [($1$)]Εάν οι μεταβλητές είναι διαχωρίσιμες
+\item [($2$)]Εάν η εξίσωση είναι γραμμική ή έαν είναι δυνατό να μετασχηματιστεί σε γραμμική.
+\end{description}}
+
+\vspace{2\baselineskip}
+
+
+
+\begin{description}
+\item [$(\alpha)$] $\boxed{2tdy + 2ydt=0}$
+
+\textbf{Απάντηση:}
+
+\vspace{\baselineskip}
+
+Οι μεταβλητές είναι διαχωρίσιμες, γιατί η δ.ε. αν διαιρέσουμε με $2y$ και στη συνέχεια με $t$ γράφεται ως:
+
+\[
+\frac{dy}{y}+\frac{dt}{t}=0
+\]
+Είναι επίσης και γραμμική, γιατί:
+
+\[
+\frac{dy}{y}+\frac{dt}{t}=0 \Rightarrow
+\frac{dy}{dt}+\frac{y}{t}=0 \Rightarrow
+\frac{dy}{dt}+\frac{1}{t}y=0
+\]
+η οποία είναι ομογενής με $u(t)=\frac{1}{t}$.
+
+\vspace{\baselineskip}
+
+\item [$(\beta)$] $\boxed{\frac{y}{y+t}dy + \frac{2t}{y+t}dt=0}$
+
+
+\textbf{Απάντηση:}
+
+\vspace{\baselineskip}
+
+Την πολλαπλασιάζω με $y+t$ και έχω:
+\[
+ydy+2tdt=0
+\]
+η οποία είναι χωριζομένων μεταβλητών. Επίσης η δ.ε. γράφεται ως:
+\[
+\frac{dy}{dt}=-\frac{2t}{y} \Rightarrow \frac{dy}{dt}=-2ty^{-1}
+\]
+η οποία είναι μια δ.ε. \textlatin{Bernoulli} με $m=-1$ και η οποία μπορεί να αναχθεί σε γραμμική.
+
+\vspace{\baselineskip}
+
+\item [$(\gamma)$] $\boxed{\frac{dy}{dt}=\frac{-t}{y}}$
+
+\textbf{Απάντηση:}
+
+\vspace{\baselineskip}
+
+\begin{align*}
+\frac{dy}{dt}&=\frac{-t}{y} \\
+ydy&=-tdt\\
+ydy&+tdt=0
+\end{align*}
+η οποία είναι μια δ.ε. χωριζομένων μεταβλητών. Μπορεί επίσης να αναχθεί σε γραμμική, αφού γράφεται και ως:
+
+\[
+\frac{dy}{dt}=-ty^{-1}
+\]
+η οποία είναι μια δ.ε. \textlatin{Bernoulli}.
+
+\vspace{\baselineskip}
+
+\item [$(\delta)$] $\boxed{\frac{dy}{dt}=3y^2t}$
+
+\textbf{Απάντηση:}
+
+\vspace{\baselineskip}
+
+Έχουμε:
+\begin{align*}
+\frac{dy}{dt} &=3y^2t \\
+y'&=3y^2t \\
+\frac{y'}{y^2} &= 3t
+\end{align*}
+Θέτουμε $v=-\frac{1}{y}\Rightarrow v'=\frac{y'}{y^2}$ και με αντικατάσταση βρίσκουμε ότι:
+\begin{align*}
+-v'&=3t \\
+v'&=-3t
+\end{align*}
+η οποία είναι γραμμική $1$ης τάξης ως προς $v$ με $u(t)=0$.
+
+
+
+
+\end{description}
+
+\vspace{2\baselineskip}
+
+\section{Άσκηση} {\bfseries Βρείτε τη γενική λύση για τις ακόλουθες διαφορικές εξισώσεις και στη συνέχεια προσδιορίστε την λύση τους για τις αρχικές συνθήκες $y(0)=4$ και $y'(0)=2$. }
+
+\vspace{2\baselineskip}
+
+\begin{description}
+
+\item [$(\alpha)$] $\boxed{y''(t)+3y'(t) -4y=12}$
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+$a_1=3, a_2=-4\neq 0, b=12$.
+
+$y_p=\frac{b}{a_2}=\frac{12}{4}=-3$
+
+Για τη συμπληρωματική συνάρτηση, λύνω την αντίστοιχη ομογενή
+
+$y''(t) + 3y'(t) -4y = 0$
+
+Θεωρώ το χαρακτηριστικό πολυώνυμο:
+\begin{align*}
+r^2+3r-4&=0 \Leftrightarrow \\
+(r-1)(r+4)&=0
+\end{align*}
+
+Άρα $y_c=Ae^{r_1t} + Be^{r_2t} = Ae^t + Be^{-4t}$
+
+Δηλαδή,
+
+\begin{align*}
+y(t) &= Ae^t + Be^{-4t} -3 \quad \text{γενική λύση} \\
+y'(t) &= Ae^t-5Be^{-4t}
+\end{align*}
+
+\[
+  \left.\begin{aligned}
+y(0)&=4 \\
+y'(0)&=2\\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+A+B-3=4 \\
+A-4B=2\\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+A+B&=7 \\
+A-4B&=2
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+-A-B&=-7 \\
+A-4B&=2
+  \end{aligned}\:\right\}\Rightarrow
+\]
+$-5Β=-5$.
+
+Άρα $B=1$ και $A=6$
+
+Τελικά: $\underline{y(t) = 6e^t+e^{-4t} -3 \quad \text{ορισμένη λύση}}$.
+
+\vspace{\baselineskip}
+
+\item [$(\beta)$] $\boxed{y''(t)+6y'(t) +5y=10}$
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+$a_1=6, a_2=5\neq 0, b=10$.
+
+$y_p=\frac{b}{a_2}=\frac{10}{5}=2$
+
+Για τη συμπληρωματική συνάρτηση, λύνω την αντίστοιχη ομογενή
+
+$y''(t)+6y'(t) +5y = 0$
+
+Θεωρώ το χαρακτηριστικό πολυώνυμο:
+\begin{align*}
+r^2+6r+5&=0 \Leftrightarrow \\
+(r+1)(r+5)&=0
+\end{align*}
+
+Άρα $y_c=Ae^{-t} + Be^{-5t} $
+
+Δηλαδή,
+
+\begin{align*}
+y(t) &= Ae^{-t} + Be^{-5t} +2 \quad \text{γενική λύση} \\
+y'(t) &= -Ae^{-t}-5Be^{-5t}
+\end{align*}
+
+\[
+  \left.\begin{aligned}
+y(0)&=4 \\
+y'(0)&=2\\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+A=B+2&=4 \\
+-A-5B&=2\\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+A+B&=2\\
+-A-5B&=2
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+A&=3 \\
+B&=-1
+  \end{aligned}\:\right\}
+\]
+
+
+Τελικά: $\underline{y(t) = 3e^{-t}-e^{-4t} +2 \quad \text{ορισμένη λύση}}$.
+
+
+\vspace{\baselineskip}
+
+\item [$(\gamma)$] $\boxed{y''(t)-2y'(t) +y=3}$
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+$a_1=-2, a_2=1\neq 0, b=3$.
+
+$y_p=\frac{b}{a_2}=\frac{3}{1}=3$
+
+Για τη συμπληρωματική συνάρτηση, λύνω την αντίστοιχη ομογενή
+
+$y''(t)+-2y'(t) +y = 0$
+
+Θεωρώ το χαρακτηριστικό πολυώνυμο:
+\begin{align*}
+r^2-2r+1&=0 \Leftrightarrow \\
+(r-1)^2&=0 \quad \text{δηλαδή $r=1$ είναι διπλή ρίζα}.
+\end{align*}
+
+Άρα $y_c=Ae^{t} + Bτe^{t} $
+
+Δηλαδή,
+
+\begin{align*}
+y(t) &= Ae^{t} + Bte^{t} +3 \quad \text{γενική λύση} \\
+y'(t) &= Ae^{t} + Be^{t} + Bte^t
+\end{align*}
+
+\[
+  \left.\begin{aligned}
+y(0)&=4 \\
+y'(0)&=2\\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+A+3&=4\\
+A+B&=2\\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+A&=1\\
+B&=1
+  \end{aligned}\:\right\}
+\]
+
+
+Τελικά: $\underline{y(t) = e^{t}+te^{t} +3 = e^t(1+t) +3 \quad \text{ορισμένη λύση}}$.
+
+
+\vspace{\baselineskip}
+
+\item [$(\delta)$] $\boxed{y''(t)+8y'(t) +16y=0}$
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+$a_1=8, a_2=16\neq 0, b=0$.
+
+$y_p=\frac{b}{a_2}=0$
+
+Για τη συμπληρωματική συνάρτηση, λύνω την αντίστοιχη ομογενή
+
+$y''(t)+8y'(t) + 16 = 0$
+
+Θεωρώ το χαρακτηριστικό πολυώνυμο:
+\begin{align*}
+r^2+8r+16&=0 \Leftrightarrow \\
+(r+4)^2&=0 \quad \text{δηλαδή $r=4$ είναι διπλή ρίζα}.
+\end{align*}
+
+Άρα $y_c=Ae^{4t} + Bte^{4t} $
+
+Δηλαδή,
+
+\begin{align*}
+y(t) &= Ae^{4t} + Bte^{4t} \quad \text{γενική λύση} \\
+y'(t) &= 4Ae^{4t} + Be^{4t} + 4B4te^{4t}
+\end{align*}
+
+\[
+  \left.\begin{aligned}
+y(0)&=4 \\
+y'(0)&=2\\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+A&=4\\
+4A+B&=2\\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+A&=4\\
+B&=-14
+  \end{aligned}\:\right\}
+\]
+
+
+Τελικά: $\underline{y(t) = 4e^{4t}-14te^{4t} \quad \text{ορισμένη λύση}}$.
+\end{description}
+
+
+\vspace{2\baselineskip}
+
+\section{Άσκηση} {\bfseries Βρείτε τα $y_p$ και $y_c$ καθώς και τη γενική και μερική λύση για τις ακόλουθες εξισώσεις.}
+
+\vspace{2\baselineskip}
+
+\begin{description}
+
+\item [$(1)$] $\boxed{y''(t)-4y'(t) +8y=0}$
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+$a_1=-4, a_2=8\neq 0, b=0$.
+
+$y_p=\frac{b}{a_2}=0$
+
+Για τη συμπληρωματική συνάρτηση, λύνω την αντίστοιχη ομογενή
+
+$y''(t)-4y'(t) + 8 = 0$
+
+Θεωρώ το χαρακτηριστικό πολυώνυμο:
+\begin{align*}
+r^2-4r+8&=0 \Leftrightarrow \\
+r_1=2+2i&, r_2 = 2-2i
+\end{align*}
+
+Άρα $y_c=y_c=e^{2t}(A\cos 2t +B\sin 2t)$
+
+Δηλαδή,
+
+\begin{align*}
+y(t) &= e^{2t}(A\cos 2t +B\sin 2t) \quad \text{γενική λύση} \\
+y'(t) &= 2e^{2t}(A\cos 2t +B\sin 2t)+e^{2t}(-4\sin 2t + 4B\cos 2t)
+\end{align*}
+
+\[
+  \left.\begin{aligned}
+y(0)&=3 \\
+y'(0)&=7\\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+A&=3\\
+2A+4B&=7\\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+A&=3\\
+B&=\frac{1}{4}
+  \end{aligned}\:\right\}
+\]
+
+
+Τελικά: $\underline{y(t) = e^{2t}(3\cos 2t +\frac{1}{4}\sin 2t) \quad \text{ορισμένη λύση}}$.
+
+\vspace{\baselineskip}
+
+
+
+\item [$(2)$] $\boxed{y''(t)+4y'(t) +8y=2}$
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+$a_1=4, a_2=8\neq 0, b=2$.
+
+$y_p=\frac{b}{a_2}=\frac{1}{4}$
+
+Για τη συμπληρωματική συνάρτηση, λύνω την αντίστοιχη ομογενή
+
+$y''(t) +4y'(t) + 8 = 0$
+
+Θεωρώ το χαρακτηριστικό πολυώνυμο:
+\begin{align*}
+r^2+4r+8&=0 \Leftrightarrow \\
+r_1=-2+2i&, r_2 = -2-2i
+\end{align*}
+
+Άρα $y_c=e^{-2t}(A\cos 2t +B\sin 2t)$
+
+Δηλαδή,
+
+\begin{align*}
+y(t) &= e^{-2t}(A\cos 2t +B\sin 2t) + \frac{1}{4} \quad \text{γενική λύση} \\
+y'(t) &= -2e^{-2t}(A\cos 2t +B\sin 2t)+e^{-2t}(-4\sin 2t + 4B\cos 2t)
+\end{align*}
+
+\[
+  \left.\begin{aligned}
+y(0)&=2\frac{1}{4} \\
+y'(0)&=4\\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+A+\frac{1}{4}&=2\frac{1}{4}\\
+-2A+4B&=4\\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+A&=2\\
+B&=2
+  \end{aligned}\:\right\}
+\]
+
+
+Τελικά: \begin{align*}y(t) &= e^{-2t}(2\cos 2t +2\sin 2t) + \frac{1}{4}\\ &= \underline{2e^{-2t}(\cos 2t +\sin 2t) + \frac{1}{4}\quad \text{ορισμένη λύση}}.\end{align*}
+
+
+
+\vspace{\baselineskip}
+
+
+\item [$(3)$] $\boxed{y''(t)+3y'(t) -4y=12}$
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+$a_1=3, a_2=-4\neq 0, b=12$.
+
+$y_p=\frac{b}{a_2}=\frac{12}{-4}=-3$
+
+Για τη συμπληρωματική συνάρτηση, λύνω την αντίστοιχη ομογενή
+
+$y''(t) +3y'(t) -4 = 0$
+
+Θεωρώ το χαρακτηριστικό πολυώνυμο:
+\begin{align*}
+r^2+3r-4&=0 \Leftrightarrow \\
+(r+4)(r-1) &= \Leftrightarrow \\
+r_1=-4&, r_2 = 1
+\end{align*}
+
+Άρα $y_c=Ae^{t} +Be^{-4t}$
+
+Δηλαδή,
+
+\begin{align*}
+y(t) &=Ae^{t} +Be^{-4t} -3 \quad \text{γενική λύση} \\
+y'(t) &= Ae^{t} -4Be^{-4t}
+\end{align*}
+
+\[
+  \left.\begin{aligned}
+y(0)&=2 \\
+y'(0)&=2\\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+A+B-3&=2\\
+A-4B&=2\\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+A+B&=5\\
+A-4B&=2
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+A&=\frac{22}{5} \\
+B&=\frac{3}{5}
+  \end{aligned}\:\right\}
+\]
+
+
+Τελικά: \begin{align*}y(t) &= \underline{\frac{1}{5}(22e^t -12e^{-4t})-3 \quad \text{ορισμένη λύση}}.\end{align*}
+
+\vspace{\baselineskip}
+
+
+\item [$(4)$] $\boxed{y''(t)+9y=3}$
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+$a_1=0, a_2=9\neq 0, b=3$.
+
+$y_p=\frac{b}{a_2}=\frac{1}{3}$
+
+Για τη συμπληρωματική συνάρτηση, λύνω την αντίστοιχη ομογενή
+
+$y''(t)+9y = 0$
+
+Θεωρώ το χαρακτηριστικό πολυώνυμο:
+\begin{align*}
+r^2+9&=0 \Leftrightarrow \\
+r^2&=-9 \Leftrightarrow \\
+r&=\pm i\sqrt{9} \Leftrightarrow \\
+r&=\pm 3i
+\end{align*}
+
+Άρα $y_c=e^{0}(A\cos 3t +B\sin 3t) = A\cos 3t +B\sin 3t$
+
+Δηλαδή,
+
+\begin{align*}
+y(t) &= A\cos 3t +B\sin 3t + \frac{1}{3} \quad \text{γενική λύση} \\
+y'(t) &= -3A\sin 3t +3B\cos 3t
+\end{align*}
+
+\[
+  \left.\begin{aligned}
+y(0)&=1 \\
+y'(0)&=8\\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+A+\frac{1}{3}&=1\frac{1}{4}\\
+3B&=8\\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+A&=\frac{2}{3}\\
+B&=\frac{8}{3}
+  \end{aligned}\:\right\}
+\]
+
+
+Τελικά: \begin{align*}y(t) &= \frac{2}{3}\cos 3t +\frac{8}{3}\sin 3t) + \frac{1}{3}\\ &= \underline{\frac{2}{3}(\cos 3t +4\sin 3t) + \frac{1}{3}\quad \text{ορισμένη λύση}}.\end{align*}
+\end{description}
+
+\vspace{2\baselineskip}
+
+\section{Άσκηση} {\bfseries Έστω $m,n,u$ και $w$ διάφοροι του μηδενός.
+\begin{align*}
+Q_d&=\alpha -\beta P +mP' +nP'' \quad\text{όπου $\alpha,\beta >0$}\\
+Q_s&=\gamma +\delta P +uP'+wP'' \quad\text{όπου $\gamma,\delta >0$}
+\end{align*}
+Θεωρώντας ότι η προσφορά είναι ίση με τη ζήτηση σε κάθε χρονική στιγμή να γραφεί η νεά διαφορική εξίσωση του μοντέλου.
+
+Βρείτε την τιμή ισορροπίας που είναι ανεξάρτητη από το χρόνο.}
+
+\textbf{Λύση}:
+
+\vspace{\baselineskip}
+
+Σε κατάσταση ισορροπίας έχω:
+\[
+Q_d=Q_s \Leftrightarrow
+\]
+\begin{align*}
+\alpha -\beta P +mP' + nP'' =-\gamma + \delta P +uP'+wP'' &\Leftrightarrow\\
+\alpha+\gamma-(\beta+\delta)P +(m-n)P''+(n-w)P'' = 0 &\Leftrightarrow \\
+(n-w)P'' + (m-n)P'-(\beta+\delta)P =-(\alpha+\gamma)&
+\end{align*}
+Αν $n-w\neq0$ έχω:
+\[
+P''+\frac{m-n}{n-w}P'-\frac{\beta+\delta}{n-w}P = -\frac{\alpha+\gamma}{n-w}
+\]
+Άρα η νέα δ.ε. του μοντέλου είναι $2$ης τάξης με σταθερούς συντελεστές. Επειδή $a_2=-\frac{\beta+\delta}{n-w}\neq0$ με $\beta,\delta>0$ και $b=-\frac{\alpha+\gamma}{n-w}$ ο σταθερός όρος του β' μέλους, έχω:
+\[
+y_p=P_p=\frac{b}{a_2}=-\frac{\alpha+\gamma}{\beta+\delta}
+\]
+
+\vspace{2\baselineskip}
+
+\section{Άσκηση}  {\bfseries Βρείτε την ειδική λύση των ΔΕ.}
+
+\vspace{2\baselineskip}
+
+\begin{description}
+\item [($\alpha$)] $\boxed{y''(t)+2y'(t) +y=t}$
+
+\textbf{Λύση:}
+
+\vspace{\baselineskip}
+
+Ζητάμε την ειδική λύση $y_p$ της ΔΕ.
+
+Δοκιμάζουμε: $y(t)=a_0+a_1t$
+
+Οπότε:
+\begin{align*}
+y'(t)&=a_1\\
+y''(t)&=0
+\end{align*}
+Άρα η ΔΕ. με αντικατάτασταση των $y,y',y''$ γίνεται:
+\[
+0+2a_1+a_0+a_1t=t
+\]
+και από την ισότητα των πολυωνύμων, έχω:
+\[
+\left.\begin{aligned}
+a_1&=1\\
+2a_1+a_0&=0
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+a_1&=1\\
+a_0&=-2
+  \end{aligned}\:\right\}
+\]
+Άρα $\underline{y_p=-2+t = t-2}$.
+
+\vspace{\baselineskip}
+
+\item [($\beta$)] $\boxed{y''(t)+4y'(t) +y=2t^2}$
+
+\textbf{Λύση:}
+
+\vspace{\baselineskip}
+
+Ζητάμε την ειδική λύση $y_p$ της ΔΕ.
+
+Δοκιμάζουμε: $y(t)=a_0+a_1t+a_2t^2$
+
+Οπότε:
+\begin{align*}
+y'(t)&=a_1+2a_2t\\
+y''(t)&=2a_2
+\end{align*}
+Άρα η ΔΕ. με αντικατάτασταση των $y,y',y''$ γίνεται:
+\begin{align*}
+2a_2+4(a_1+2a_2t)+a_0+a_1t+a_2t^2&=2t^2 \Leftrightarrow\\
+2a_2+4a_1 + 8a_2t+a_0+a_1t+a_2t^2&=2t^2 \Leftrightarrow\\
+2a_2+4a_1+a_0+(8a_2+a_1)t+a_2t^2 &= 2t^2 \Leftrightarrow\\
+\end{align*}
+και από την ισότητα των πολυωνύμων, έχω:
+\[
+\left.\begin{aligned}
+2a_2+4a_1+a_0&=0 \\
+8a_2+a_1 &=0 \\
+a_2&=2
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+a_0&=60\\
+a_1&=-16 \\
+a_2&=2
+  \end{aligned}\:\right\}
+\]
+Άρα $\underline{y_p=60-16t+2t^2}$.
+
+\vspace{\baselineskip}
+
+\item [($\gamma$)] $\boxed{y''(t)+y'(t) +2y=e^t}$
+
+\textbf{Λύση:}
+
+\vspace{\baselineskip}
+
+Ζητάμε την ειδική λύση $y_p$ της ΔΕ.
+
+Δοκιμάζουμε: $y(t)=Ae^t$
+
+Οπότε:
+\begin{align*}
+y'(t)&=Ae^t\\
+y''(t)&=Ae^t
+\end{align*}
+Άρα η ΔΕ. με αντικατάτασταση των $y,y',y''$ γίνεται:
+\begin{align*}
+Ae^t+Ae^t+2Ae^t&=e^t \Leftrightarrow\\
+4Ae^t&=e^t \Leftrightarrow\\
+4A&=1 \Leftrightarrow\\
+A&=\frac{1}{4}
+\end{align*}
+
+Άρα $y_p\underline{=\frac{1}{4}e^t}$.
+
+\vspace{\baselineskip}
+
+\item [($\delta$)] $\boxed{y''(t)+y'(t) +3y=\sin t}$
+
+\textbf{Λύση:}
+
+\vspace{\baselineskip}
+
+Ζητάμε την ειδική λύση $y_p$ της ΔΕ.
+
+Δοκιμάζουμε: $y(t)=A\cos t+B\sin t$
+
+Οπότε:
+\begin{align*}
+y'(t)&=-A\sin t+B\cos t\\
+y''(t)&=-A\cos t-B\sin t
+\end{align*}
+Άρα η ΔΕ. με αντικατάτασταση των $y,y',y''$ γίνεται:
+\begin{align*}
+-A\cos t-B\sin t -A\sin t+B\cos t+3A\cos t+3B\sin t &=\sin t \Leftrightarrow\\
+(2A+B)\cos t +(2A-B)\sin t&=\sin t
+\end{align*}
+και εξισώνοντας, έχω:
+\[
+\left.\begin{aligned}
+2Α+Β &=0\\
+2Β-Α &=1 \\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+ \left.\begin{aligned}
+Β&=-2Α\\
+-4Α-Α&=1 \\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+  \left.\begin{aligned}
+B&=\frac{2}{5}\\
+A&=-\frac{1}{5} \\
+  \end{aligned}\:\right\}\Leftrightarrow \quad
+\]
+Άρα $\underline{y_p=-\frac{1}{5}\cos t +\frac{2}{5}\sin t = \frac{1}{5}(2\sin t-\cos t)}$.
+\end{description}
+
+\vspace{2\baselineskip}
+
+\section{Άσκηση}{\bfseries Βρείτε τη λύση των ΔΕ.}
+
+\vspace{2\baselineskip}
+
+\begin{description}
+
+\item [$(a)$] $\boxed{y'''(t)+2y''(t)+y'(t)+2y = 8}$
+
+\textbf{Λύση:}
+
+\vspace{\baselineskip}
+
+$a_1=2, a_2=1, a_3=2\neq 0, b=8$
+
+Άρα $y_p=\frac{8}{2}=4$
+
+Για το $y_c$ έχω:
+
+\begin{align*}
+r^3+2r^2+r+2&=0 \Leftrightarrow \\
+r^2(r+2)+r+2 &=0 \Leftrightarrow\\
+(r+2)(r^2+1)&=0 \Leftrightarrow\\
+r=-2 &, r=\pm i
+\end{align*}
+Αρα $y_c = A_1e^{-2t}+A_2\cos t+A_3\sin t$
+
+Τελικά $\underline{y(t) = A_1e^{-2t}+A_2\cos t+A_3\sin t +4}$.
+
+
+\vspace{\baselineskip}
+
+\item [$(b)$] $\boxed{y'''(t)+y''(t)+3y'(t) = 1}$
+
+\textbf{Λύση:}
+
+\vspace{\baselineskip}
+
+$a_1=1, a_2=3\neq 0, a_3=0, b=1$
+
+Άρα $y_p=\frac{b}{a_2}t = \frac{1}{3}t$
+
+Για το $y_c$ έχω:
+
+\begin{align*}
+r^3+r^2+3r&=0 \Leftrightarrow \\
+r(r^2+r+3r) &=0 \Leftrightarrow\\
+(r+2)(r^2+1)&=0 \Leftrightarrow\\
+r=-2 &, r=-\frac{1}{2}\pm \frac{\sqrt{11}}{2}i
+\end{align*}
+Αρα $y_c = A_1e^0+e^{-\frac{1}{2}}(A_2\cos\frac{\sqrt{11}}{2}t+A_3\sin\frac{\sqrt{11}}{2}t)$
+
+Τελικά $\underline{y(t) = A_1+e^{-\frac{1}{2}}(A_2\cos\frac{\sqrt{11}}{2}t+A_3\sin\frac{\sqrt{11}}{2}t)+\frac{1}{3}t}$.
+
+\vspace{\baselineskip}
+
+\item [$(c)$] $\boxed{
+3y'''(t)+9y''(t) = 1  \Leftrightarrow
+y'''(t)+3y''(t) = \frac{1}{3}
+}$
+
+\textbf{Λύση:}
+
+\vspace{\baselineskip}
+
+$a_1=3\neq 0, a_2=0, a_3=0, b=\frac{1}{3}$
+
+Δοκιμάζουμε $y_p=kt^2$, και έχω: $y_p'(t)=2kt$, $y_p''(t)=2k$ και $y_p'''(t)=0$.
+Άρα η δ.ε. μας δίνει $3\cdot 2k = \frac{1}{3}$ και άρα $k=\frac{1}{18}.$
+
+Επομένως $y_p(t)=\frac{1}{18}t^2$.
+
+Για το $y_c$ έχω:
+
+\begin{align*}
+r^3+3r^2&=0 \Leftrightarrow \\
+r^2(r+3) &=0 \Leftrightarrow\\
+r^2=0 &, r=-3
+\end{align*}
+Αρα $y_c = A_1e^0+A_2te^0+A_3e^{-3t}=A_1+A_2t+A_3e^{-3t}$.
+
+
+Τελικά $\underline{y(t) = A_1+A_2t+A_3e^{-3t} +\frac{1}{18}t^2}$.
+
+\vspace{\baselineskip}
+
+\item [$(d)$] $\boxed{3y^{(4)}(t)+y''(t) = 4}$
+
+\textbf{Λύση:}
+
+\vspace{\baselineskip}
+
+$a_1=0, a_2=1\neq 0, a_3=0, a_4=0, b=4$
+
+Δοκιμάζουμε $y_p=kt^2$ και έχουμε $y_p'(t)=2kt$, $y_p''(t)=2k$ και $y_p'''(t)=y_p^{(4)}(t)=0$.
+
+Η δ.ε. μας δίνει $\frac{1}{3}2k=\frac{4}{3}$ και άρα $k=2$.
+
+Άρα $y_p(t)=2t^2$.
+
+Για το $y_c$ έχω:
+
+\begin{align*}
+r^4+r^2&=0 \Leftrightarrow \\
+r^2(r^2+1) &=0 \Leftrightarrow\\
+r=0 \:\text{(διπλή ρίζα)} &, r=\pm i
+\end{align*}
+Αρα $y_c = A_1e^0+A_2te^0+e^{0}(A_3\cos t+A_4\sin t)=A_1+A_2t+A_3\cos t+A_4\sin t$.
+
+
+Τελικά $\underline{y(t) =A_1+A_2t+A_3\cos t+A_4\sin t +2t^2}$.
+
+\end{description}
+
+
+
+
+
+
+\end{document} 

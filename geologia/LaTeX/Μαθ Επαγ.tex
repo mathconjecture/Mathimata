@@ -1,0 +1,64 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[english,greek]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+\fbox{\Large\bfseries Ασκήσεις στη Μαθηματική Επαγωγή}
+\end{center}
+
+\vspace{1cm}
+
+
+\textbf{Παράδειγμα:} Να αποδείξετε ότι 
+
+\begin{equation}\label{eq:prop}
+\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\cdots + \frac{1}{n(n+1)} = \frac{n}{n+1}, \quad \text{ισχύει} \quad \forall n\in \mathbb{N}.
+\end{equation}
+
+\textbf{Απόδειξη:}
+
+\begin{itemize}
+\item Αρχικά αποδεικνύουμε ότι η πρόταση ισχύει για $n=1$. (Δηλ. αποδεικνύουμε ότι $P(1)$).
+
+Πράγματι για $n=1$ (δηλ. με αντικατάσταση στη σχέση (\ref{eq:prop}) )έχω: 
+\[
+\frac{1}{1\cdot 2} = \frac{1}{1+1} \Leftrightarrow \frac{1}{2}=\frac{1}{2}.
+\]
+\item Έστω ότι η πρόταση ισχύει για $n=k$, $k\in \mathbb{N}$ τυχαίος φυσικός αριθμός (Δηλ. έστω ότι $P(k)$).
+Δηλαδή, έστω ότι:  
+
+\begin{equation}\label{eq:ye}
+\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\cdots + \frac{1}{k(k+1)} = \frac{k}{k+1}.
+\end{equation}
+
+\item Τελικά αποδεικνύουμε ότι η πρόταση ισχύει για $n=k+1$ (Δηλ. $P(k+1)$). Πράγματι: 
+\begin{align*}
+\underbrace{\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\cdots +\frac{1}{k(k+1)}}+\frac{1}{(k+1)(k+1+1)} &= \frac{k}{k+1}+\frac{1}{(k+1)(k+1+1)} \\
+&\overset{(\ref{eq:ye})}{=} \frac{k(k+2)+1}{(k+1)(k+2)}  \\
+&=  \frac{k^2+2k+1}{(k+1)(k+2)}  \\ 
+&=  \frac{(k+1)^2}{(k+1)(k+2)}  \\
+&=  \frac{k+1}{k+2}  \\ 
+&=  \frac{k+1}{k+1+1}
+\end{align*}
+\end{itemize}
+
+\vspace{1cm}
+
+\textbf{Ασκήσεις:} Να αποδειχθούν οι παρακάτω προτάσεις.
+\begin{enumerate}
+\item $2+4+6+\cdots +2n = n(n+1)$, για κάθε $n\in \mathbb{N}$.
+\item $1^2+2^2+\cdots +n^2 = \frac{n(n+1)(n+2)}{6}$, για κάθε $n\in \mathbb{N}$.
+\item $1\cdot 2 + 2\cdot 3 +\cdots + n(n+1) = \frac{n(n+1)(n+2)}{3}$, για κάθε $n\geq 1$.
+\end{enumerate}
+
+\end{document}

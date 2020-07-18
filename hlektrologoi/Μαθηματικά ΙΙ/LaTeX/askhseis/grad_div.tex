@@ -1,0 +1,50 @@
+\input{preamble.tex}
+\input{definitions_ask.tex}
+
+\pagestyle{askhseis}
+\everymath{\displaystyle}
+\renewcommand{\vec}{\mathbf}
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large\bf \textcolor{Col1}{Ασκήσεις Κλίση, Απόκλιση, Στροβιλισμός}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+\item Να βρεθεί η κλίση της συνάρτησης $ f(x,y)=3y^2e^x+2x^3y $ στο σημείο $P(1,2)$.
+
+\hfill Απ: $\grad f(1,2)=12(1+e)\vec{i}+2(1+6e)\vec{j}$
+
+\item Να βρεθεί η κλίση της συνάρτησης $ f(x,y, z)=xy\ln(x-z) $ στο σημείο $P(1,1,-1)$
+
+\hfill Απ: $\grad f(1,-1,1)=\Bigl(\frac{1}{2}+\ln2\Bigr)\vec{i}+\ln 2\vec{j}- 
+\frac{1}{2}\vec{k} $
+
+
+\item Να υπολογιστεί η απόκλιση του διανυσματικού πεδίου
+$ \boldsymbol{F}(x,y,z)=(2x^3-z)\vec{i}+y\cos x\vec{j}+xe^z\vec{k} $
+
+\hfill Απ: $\div\boldsymbol{F}=6x^2+\cos x+xe^z$
+
+\item Να βρεθεί η απόκλιση του διανυσματικού πεδίου 
+  $ \boldsymbol{F}=(2x^2y^3)\vec{i}-(3y^2z)\vec{j}+(z^2y)\vec{k} $ στο σημείο $P(2,-1,1)$
+
+\hfill Απ: $\div F(2,-1,1)=-4$
+
+\item Να υπολογιστεί ο στροβιλισμός του διανυσματικού πεδίου
+$ \boldsymbol{F}(x,y,z)=(x+y)\vec{i}+(4z\sin x)\vec{j}+x^3\vec{k} $
+
+\hfill Απ: $\curl F=-4\sin x\vec{i}-3x^2\vec{j}+(4z\cos x-1)\vec{k}$
+
+\item Να βρεθεί ο στροβιλισμός του διανυσματικού πεδίου 
+$ x^2y\vec{i}+(x^2-yz)\vec{j}+3xz\vec{k} $
+
+\hfill Απ: $\curl F=y\vec{i}-3z\vec{j}+x(2-x)\vec{k}$
+\end{enumerate}
+
+
+
+\end{document}

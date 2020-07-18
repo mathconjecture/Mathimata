@@ -1,0 +1,108 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\pagestyle{askhseis}
+\everymath{\displaystyle}
+
+
+\begin{document}
+
+\begin{center}
+  {\color{Col2}\minibox[frame,rule=1pt]{\bfseries\large Κλίση}}
+\end{center} 
+
+
+\section*{Κλίση - Λαπλασιανή - Αρμονικές Συναρτήσεις}
+
+\begin{enumerate}
+  \item Να υπολογίσετε την κλίση των παρακάτω συναρτήσεων.
+    \begin{enumerate}[i)]
+      \item $ f(x,y) = x^{2} \mathrm{e}^{y+x^{3}} $ 
+        \hfill Απ: $ \grad(f) = (2x\mathrm{e}^{y+x^{3}}+3x^{4}\mathrm{e}^{y+x^{3}}, 
+        x^{2} \mathrm{e}^{y+x^{3}}) $ 
+      \item $ f(x,y) = \frac{1}{y+x^{3}} $ 
+        \hfill Απ: $\grad(f) =\left(\frac{-3x^{2}}{(y+x^{3})^{2}},
+        \frac{-1}{(y+x^{3})^{2}}\right)$ 
+      \item $ f(x,y) = x^{2}y^{3}z $   
+        \hfill Απ: $ \grad(f) = (2xy^{3}z,3xy^{2}z,x^{2}y^{3}) $ 
+      \item $ f(x,y) = x^{2} y \mathrm{e}^{zy}  $ 
+        \hfill Απ: $ \grad(f) = (2xy\mathrm{e}^{zy},
+        x^{2}\mathrm{e}^{zy}+x^{2}yz\mathrm{e}^{zy},x^{2}y^{2} \mathrm{e}^{zy})$ 
+    \end{enumerate}
+
+  \item Αν $ d\mathbf{r} = dx \mathbf{i}+ dy \mathbf{j}$, τότε να αποδείξετε ότι 
+    $ \grad{f} \cdot d \mathbf{r} = df $
+
+  \item Να υπολογίσετε τη Λαπλασιανή των παρακάτω συναρτήσεων.
+    \begin{enumerate}[i)]
+      \item $ f(x,y) = x^{2} \mathrm{e}^{y+x^{3}} $ 
+        \hfill Απ: $ \grad^{2} f = 2 \mathrm{e}^{y+x^{3}} + 6x^{3} \mathrm{e}^{y+x^{3}} 
+        + 12x^{3} \mathrm{e}^{y+x^{3}} + 9x^{6} \mathrm{e}^{y+x^{3}} + x^{2}
+        \mathrm{e}^{y+x^{3}} $ 
+      \item $ f(x,y) = \frac{1}{y+x^{3}} $
+        \hfill Απ: $ \grad^{2}f = \frac{-6(y+x^{3})+18x^{4}+6x^{2}}{(y+x^{3})^{3}} $ 
+    \end{enumerate}
+
+  \item Να δείξετε ότι οι παρακάτω συναρτήσεις είναι αρμονικές:
+    \begin{enumerate}[(i)]
+      \item $ f(x,y) = x^{3}-3xy^{2} $
+      \item $ f(x,y) = \ln(x^{2} + y^{2}) $
+    \end{enumerate}
+\end{enumerate}
+
+ 
+
+\section*{Εφαπτόμενο Επίπεδο - Κάθετη Ευθεία}
+
+\begin{enumerate}
+  \item Να υπολογίσετε το εφαπτόμενο επίπεδο και την κάθετη ευθεία της επιφάνειας 
+    $ x^{2}+2y^{2}-z = 0 $ στο σημείο $ (1,1,3) $.
+
+    \hfill Απ: \begin{tabular}{l}
+      $ \Pi : 2x+4y-z -3 = 0 $ \\
+      $ K : \frac{x-1}{2} = \frac{y-1}{4} = \frac{z-3}{-1} $
+    \end{tabular} 
+
+  \item Να υπολογίσετε το εφαπτόμενο επίπεδο και την κάθετη ευθεία της επιφάνειας 
+    $ z = xy $ στο σημείο $ (2,3,6) $.
+
+    \hfill Απ: \begin{tabular}{l}
+      $ \Pi : 3x+2y-z-6 = 0 $ \\
+      $ K : \frac{x-2}{3} = \frac{y-3}{2} = \frac{z-6}{-1} $
+    \end{tabular} 
+
+  \item Να υπολογίσετε τις εξισώσεις του εφαπτόμενου επιπέδου και την κάθετης ευθείας 
+    της επιφάνειας $ x^{2} + y^{2} + z = 9 $ στο σημείο $ P(1,2,4) $.
+
+    \hfill Απ: \begin{tabular}{l}
+      $ \Pi : 2x+4y+z-14=0 $ \\
+      $ K : \frac{x-1}{2} = \frac{y-2}{4} = z-4 $
+    \end{tabular} 
+
+  \item Να υπολογίσετε τις εξισώσεις του εφαπτόμενου επιπέδου και την κάθετης ευθείας 
+    της επιφάνειας $ 2x^{2} + 2y^{2} - z^{2} +12=0 $ στο σημείο $ P(1,-1,4) $.
+
+    \hfill Απ: \begin{tabular}{l}
+      $ \Pi : x-y-2z+6=0 $ \\
+      $ K : \frac{x-1}{-4} = \frac{y+1}{4} = \frac{z-4}{8} $
+    \end{tabular} 
+
+  \item Να υπολογίσετε το εφαπτόμενο επίπεδο και την κάθετη ευθεία της επιφάνειας 
+    $ \frac{x^{2}}{a^{2}} + \frac{y^{2}}{b^{2}} + \frac{z^{2}}{c^{2}} = 1  $ στο σημείο 
+    $ (1,1,2) $.
+
+    \hfill Απ: \begin{tabular}{l}
+      $ \Pi : \frac{2}{a^{2}} x+ \frac{2}{b^{2}} y+ \frac{4}{c^{2}} z- 
+      \left(\frac{2}{a^{2}}+ \frac{2}{b^{2}}+ \frac{8}{c^{2}}\right) = 0 $ \\
+      $ K : \frac{x-1}{2/a^{2}} = \frac{y-1}{2/b^{2}} = \frac{z-2}{4/c^{2}} $
+    \end{tabular} 
+
+  \item Να προσδιορίσετε τα σημεία της επιφάνειας $ x^{3}+y^{3}+z-3xy=0 $ στα οποία 
+    το εφαπτόμενο επίπεδο είναι οριζόντιο.
+    \hfill (\textbf{υπόδειξη:} $\Pi$ οριζόντιο $ \Leftrightarrow \grad f = \mathbf{0} $)
+
+    \hfill Απ: $ (0,0,0) $ και $ (1,1,1) $ 
+\end{enumerate}
+
+\end{document}

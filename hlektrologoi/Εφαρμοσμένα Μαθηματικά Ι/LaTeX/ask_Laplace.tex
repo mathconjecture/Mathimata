@@ -1,0 +1,131 @@
+\input{C:/Users/Vang/Desktop/MyNotesLaTeX/preamble.tex}
+\input{C:/Users/Vang/Desktop/MyNotesLaTeX/definitions.tex}
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+
+
+\begin{center}
+\fbox{\large\bfseries Ασκήσεις Στo Μετασχηματισμό \textlatin{Laplace}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+\item Να λυθούν οι ολοκληρωδιαφορικές εξισώσεις:
+\begin{enumerate}[i)]
+
+\item $y'(t)=\sin t+\int_{0}^{t}y(t-\xi)\cos\xi\, d\xi,\quad y(0)=0$ \hfill Απ: $y(t)=\frac{1}{2}t$
+\item $\phi''(t)+\int_{0}^{t}e^{2(t-\xi)}\phi'(\xi)\,d\xi=e^{2t},\quad \phi(0)=0, \phi'(0)=1$ \hfill Απ: $\phi(t)=e^t-1$
+\item $g'(t)-g(t)+\int_{0}^{t}(t-x)g'(x)\,dx - \int_{0}^{t}g(x)\,dx = t \quad, g(0)=1$\hfill Απ: $g'(t)=-e^t$
+
+\end{enumerate}
+
+\item Να λυθεί το σύστημα των ολοκληρωδιαφορικών εξισώσεων:
+
+\begin{enumerate}[i)]
+
+\item $\begin{cases}
+y_1(t)=1-\cos t+\int_{0}^{t}y_2(x)\,dx \\
+y_2(t)=\sin t+\int_{0}^{t}y_1(x)\,dx
+\end{cases}$ \hfill Απ: \begin{tabular}[t]{l}$y_1(t)=\frac{1}{2}e^t-\frac{1}{2}e^{-t}-\cos t$ \\
+$y_2(t)=\frac{1}{2}e^t-\frac{1}{2}e^{-t}$
+\end{tabular}
+
+\vspace{\baselineskip}
+
+\item $\begin{cases}
+y_1(t)=\cos t +\int_{0}^{t}y_2(x)\,dx \\
+y_2(t)=\sin t +\int_{0}^{t}y_1(x)\,dx
+\end{cases}$ \hfill Απ: \begin{tabular}[t]{l}$y_1(t)=\cos t$ \\
+$y_2(t)=0$
+\end{tabular}
+
+\vspace{\baselineskip}
+
+\item $\begin{cases}
+\phi_1(t)=t+\int_{0}^{t}\phi_2(x)\,dx \\
+\phi_2(t)=1-\int_{0}^{t}\phi_1(x)\,dx \\
+\phi_3(t)=\sin t-\frac{1}{2}\int_{0}^{t}(t-x)\phi_1(x)\,dx
+\end{cases}$ \hfill Απ: $\begin{tabular}[t]{l}$\phi_1(t)=2\sin t$ \\
+$\phi_2(t)=2\cos t -1$ \\
+$\phi_3(t)=t$
+\end{tabular}$
+
+\end{enumerate}
+
+\item Εξετάστε αν οι παρακάτω συναρτήσεις, μπορεί να είναι ο μετασχηματισμός \textlatin{Laplace} κάποιων συνεχών συναρτήσεων $f(t)$ εκθετικής τάξης. Δικαιολογήστε την απάντησή σας.
+
+\begin{enumerate}[i)]
+
+\item $F(s) = \frac{e^{-s}}{(s-2)^4}$ \hfill Απ: Ναι \; $f(t)=\frac{1}{3!}e^{2(t-1)}(t-1)^3v_1(t)$
+\item $F(s)=\frac{1}{s^2(s+2)}$ \hfill Απ: Ναι \; $f(t)=te^{-t}+e^{-2t}-e^{-t}$
+\item $F(s)=\frac{s^3}{s^3+2s^2+s+1}$ \hfill Απ: Οχι
+
+
+\end{enumerate}
+
+\item Αποδείξτε ότι ο μετασχηματισμός \textlatin{Laplace} της μεταφοράς της συνάρτησης $f(t), t\geq 0$ στο $c>0$ είναι:
+\[
+\mathcal{L}[v_c(t)f(t-c)]=e^{-s}F(s)
+\]
+όπου $v_c(t)$ η βηματική συνάρτηση (\textlatin{Heaviside}) και $F$ ο μετασχηματισμός \textlatin{Laplace} της $f$.
+
+\newpage
+
+\item Να βρείτε το μετασχηματισμό \textlatin{Laplace} των συναρτήσεων:
+
+\begin{enumerate}[i)]
+
+\item $f(t)=\begin{cases}
+1 & ,0\leq t<1 \\
+t-1 & ,1\leq t<2 \\
+0 & ,2\leq t <3 \\
+\sin(t-3) & ,t\geq 0
+\end{cases}$ \hfill Απ: ${\scriptstyle{F(s)=\frac{1}{s}+(\frac{1}{s^2}-\frac{1}{s})e^{-s}-(\frac{1}{s^2}+\frac{1}{s})e^{-2s}+\frac{1}{s^2+1}e^{-3s}}}$
+
+
+\item $f(t)=\begin{cases}
+e^{2t} & ,0\leq t<1 \\
+4 & , t\geq 1
+\end{cases}$\hfill Απ: $f(t)=\frac{1}{s-2}-(\frac{e^2}{S-2}-\frac{4}{s})e^{-s}$
+
+
+\end{enumerate}
+
+\item Αποδείξτε ότι ο μετασχηματισμός \textlatin{Laplace} της συνάρτησης $t^2f(t)$ είναι ίσος με $F''(s)$, όπου $F(s)$ ο μετασχηματισμός \textlatin{Laplace} της $f$.
+
+Να λυθούν τα παρακάτω προβλήματα αρχικών τιμών:
+
+\begin{enumerate}[i)]
+
+\item $y''(t)-3y'(t)+2y(t)=\begin{cases}
+0 & , 0\leq t <2 \\
+1 & , 2\geq t
+\end{cases}
+\quad , y(0)=1, y'(0)=0$.
+
+\hfill Απ: $y(t)=v_2(t)(\frac{1}{2}(t-2)-e^{t-2}+\frac{1}{2}e^{2(t-2)})+2e^t-e^{2t}$
+
+\end{enumerate}
+
+\item Να βρεθεί ο μετασχηματισμός \textlatin{Laplace} των συναρτήσεων: 
+
+\begin{enumerate}[i)]
+
+\item $f(t)=e^t\int_{0}^{t}e^{-x}\cos t\,dt$ \hfill Απ: $F(s)=\frac{1}{s-1}\cdot \frac{s}{s^2+1}$
+
+\end{enumerate}
+
+\item Αν υπάρχει ο μετασχηματισμός \textlatin{Laplace} $F(s)$ της συνάρτησης $f(t)$ και ισχύει ότι $f(0)=0$, $\lim\limits_{s\to+\infty}s^2F(s)=1$ και υπάρχει ο μετασχηματισμός \textlatin{Laplace} της $f'(t)$, να δειχθει ότι $f'(0)=1$.
+
+\end{enumerate}
+
+
+
+
+
+\end{document}

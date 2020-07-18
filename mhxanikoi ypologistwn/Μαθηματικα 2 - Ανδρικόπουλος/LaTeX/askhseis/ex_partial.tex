@@ -1,0 +1,181 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\pagestyle{askhseis}
+\everymath{\displaystyle}
+
+\begin{document}
+
+\begin{center}
+  {\color{Col2}\minibox[frame,rule=1pt]{\large\bfseries Ασκήσεις στις 
+  Μερικές Παραγώγους}}
+\end{center}
+
+\section*{Κανόνες Παραγώγισης}
+
+\begin{enumerate}
+  \item Με τη βοήθεια των κανόνων παραγώγισης να υπολογιστούν οι μερικές 
+    παράγωγοι των συναρτήσεων:
+
+    \begin{enumerate}[i)]
+      \item $f(x,y)=y\sin (xy)$ \hfill Απ: \begin{tabular}{l}
+          $f_x=y^2\cos(xy)$ \\ 
+          $f_y=\sin(xy)+yx\cos(xy)$
+        \end{tabular}
+
+      \item $f(x,y)=y\ln(x+y)$\hfill Απ: \begin{tabular}{l}
+          $f_x=\frac{y}{x+y}$ \\ 
+          $f_y=\ln(x+y)+\frac{y}{x+y}$
+        \end{tabular}
+
+      \item $f(x,y)=\arcsin(\frac{x}{y})$\hfill Απ: \begin{tabular}{l}
+          $f_x=\frac{1}{y^2-x^2}$ \\ 
+          $f_y=-\frac{x}{y\sqrt{y^2-x^2}}$
+        \end{tabular}
+      \item $ f(x,y,z) = (x+y^{2}) \sin{(xz)} $ \hfill Απ: \begin{tabular}{l}
+          $ f_{x} = \sin{(xz)} + z(x+y^{2}) \sin{(xz)} $ \\
+          $ f_{y} = 2y \sin{(xz)} $ \\
+          $ f_{z} = x(x+y^{2}) \sin{(xz)} $
+        \end{tabular} 
+    \end{enumerate}
+
+  \item Έστω η συνάρτηση $ f(x,y) = x^{2} \sin{(x+y)} $. Να υπολογίσετε τις μερικές 
+    παραγώγους 1ης και 2ης τάξης.
+
+    \hfill Απ: \begin{tabular}{l}
+      $ f_{x} = 2x \sin{(x+y)} + x^{2} \cos{(x+y)} $ \\
+      $ f_{y} = x^{2} \cos{(x+y)} $ \\
+      $ f_{xx} =  -x^{2} \sin{(x+y)} $ \\
+      $ f_{yy} = 2 \sin{(x+y)} + 4x \cos{(x+y)} -x^{2} \sin{(x+y)} $ \\
+      $ f_{xy}=f_{yx} =  2x \cos{(x+y)} -x^{2} \sin{(x+y)} $
+    \end{tabular}
+
+  \item Έστω η συνάρτηση $f(x,y)=\ln\left(\cos y+x\cos x\right)$.  Να υπολογισθεί 
+    η $ f_{xy} $ στο σημείο $(\pi,-\pi/2)$.  \hfill Απ: $\frac{1}{\pi^2}$
+
+    % \item Έστω η συνάρτηση $ f(x,y) = x^{y} $. Να δείξετε ότι ισχύει ότι το θεώρημα 
+    % Schwartz, δηλαδή ότι $ f_{xy} = f_{yx} $.
+
+    %hlektr
+    %\item Να δείξετε ότι η συνάρτηση $ f(x,y) = (y+3x)^{1/2} - 
+    %    (y-3x)^{2} $ ικανοποιεί τη σχέση $ f_{xx} - 9 f_{yy} = 0 $.
+
+    %    %span
+  \item  Δίνεται η συνάρτηση $ f(x,y) = \cos{(x+y)} + \cos{(x-y)} $. Να δείξετε ότι  
+    $ z_{xx} - z_{yy} = 0 $.
+
+  \item Να δείξετε ότι για τη συνάρτηση $ f(x,y) = x \arctan{\frac{y}{x}} $ 
+    ισχύει η σχέση $ x^{2} f_{xx} + 2xyf_{xy} + y^{2} f_{yy} = 0 $ 
+\end{enumerate}
+
+
+\section*{Σύνθετη Παραγώγιση}
+
+\begin{enumerate}
+
+  \item Να βρεθεί η παράγωγος $\dv{f}{t}$ της συνάρτησης 
+    $f(x,y)=\ln(y^2-x^2)$, όταν $x=\sin t, y=\cos t$, για $t=\frac{\pi}{8}$.
+
+    \hfill Απ: $-2$
+
+  \item Να βρεθεί η παράγωγος $\dv{w}{t}$ της συνάρτησης 
+    $ w = xy+z $, όταν $ x = \cos{t}, y = \sin{t}$ και $ z = t $, για 
+    $ t = \frac{ \pi }{ 4 } $.
+
+    \hfill Απ: 1
+
+  \item Δίνεται η συνάρτηση $ z=f(x,y) $, όπου $ x=u+v $ και $ y = u-v $. 
+    Να αποδείξετε ότι $ z_{xx}-z_{yy} = z_{u}\cdot z_{v} $ 
+
+  \item Έστω η συνάρτηση  $ f(x,y) = x^{2} + xy $, όπου $ x=r \cos{\theta} $ και 
+    $ y= r \sin{\theta} $. 
+    Να υπολογίσετε τις μερικές παραγώγους $ \pdv{f}{r} $ και $ \pdv{f}{\theta} $.  
+
+    \hfill Απ: 
+      $ \pdv{f}{r} = 2r(\cos{\theta} )(\cos{\theta} + \sin{\theta}) $ \; και \; 
+      $ \pdv{f}{\theta}=r^{2}(\cos{2\theta} - \sin{2 \theta}) $
+
+  \item Δίνεται η συνάρτηση $ f = f(x,y) $, όπου $ x=r \cos{\theta} $ και 
+    $ y= r \sin{\theta} $. Να δείξετε ότι 
+    \[
+      \left(\pdv[2]{f}{x}\right)^{2} + \left(\pdv[2]{f}{y}\right)^{2} = 
+      \left(\pdv[2]{f}{r}\right)^{2} + \frac{1}{r^{2}} 
+      \left(\pdv[2]{f}{\theta}\right)^{2}
+    \] 
+
+    % \item Να υπολογιστούν οι μερικές παράγωγοι, ως προς $u$ και $v$, 
+    %   της συνάρτησης $ f(x,y,z) = x + 2y + z^{2}$, όπου $ x = \frac{ u }{ v } $, 
+    %   $y = u^{2} + \ln{v} $ και $ z = 2u $.
+    %   \hfill Απ: $ \pdv{f}{u} = \frac{1}{ v } + 12u $, 
+    %   $\pdv{f}{v} = -\frac{ u }{ v^{2} } + \frac{ 2 }{ v } $
+
+\end{enumerate}
+
+\section*{Διαφορικό}
+
+\begin{enumerate}
+  \item Να υπολογίσετε το ολικό διαφορικό 1ης τάξης, της συνάρτησης 
+    $f(x,y)=\ln(xy)+\cos(y^2)$ 
+
+    \hfill Απ: $df=\frac{dx}{x}+\left(\frac{1}{y}-2y\sin(y^2)\right)dy$
+
+  \item Να υπολογίσετε τη διαφορά $ \Delta f $ και το ολικό διαφορικό $ df $ της 
+    συνάρτησης $ f(x,y) = \sin{(x+y)} $, στο σημείο $ (0,0) $, όταν $ \Delta x = 0,1 $ 
+    και $ \Delta y = 0,2 $.
+
+    \hfill Απ: $ \Delta f = 0.29552, \; df = 0.3 $
+\end{enumerate}
+
+
+\section*{Πολυώνυμο Taylor}
+
+\begin{enumerate}
+  \item Να βρεθούν τα αναπτύγματα Taylor, μέχρι και όρους 
+    \textbf{2ης τάξης}, των συναρτήσεων:
+
+    \begin{enumerate}[i)]
+      \item  $f(x,y)=y\cos{xy} $, γύρω από το σημείο 
+        $ \left(1, \frac{ \pi }{ 2 }\right) $.
+
+        \hfill Απ: $f(x,y)=-\frac{\pi^{2}}{4}(x-1) - \frac{ \pi }{ 2 } 
+        \left(y - \frac{ \pi }{2 }\right) - \pi(x-1)
+        \left(y-\frac{\pi}{2}\right)- \left(y- \frac{ \pi }{ 2} \right)^{2} $
+
+      \item $ f(x,y)=e^{x}\tan{y} $ σε δυνάμεις των $ (x-1) $ και 
+        $ \left(y - \frac{ \pi }{ 4 }\right) $
+
+        \hfill Απ: $ f(x,y) = e + e(x-1) + 2e\left(y- \frac{ \pi }{ 4 }\right)
+        + \frac{1}{ 2 } \left(e(x-1)^{2}+4e(x-1)\left(y- \frac{ \pi }{ 4 }
+        \right) + 4e\left(y- \frac{ \pi }{ 4 } \right)^{2}\right) $
+    \end{enumerate}
+
+  \item Να βρεθεί το ανάπτυγμα Maclaurin, μέχρι όρους 2ης τάξης, 
+    της συνάρτησης $ f(x,y) = e^{x}\ln(1+y)$.
+
+    \hfill Απ: $ f(x,y)=y + xy - \frac{1}{ 2 } y^{2} + \frac{1}{ 2 } x^{2}y - 
+    \frac{1}{ 2 } xy^{2} + \frac{1}{ 3 } y^{3} $
+\end{enumerate}
+
+\section*{Ακρότατα}
+
+\begin{enumerate}
+  \item Να βρεθούν και να χαρακτηριστούν τα κρίσιμα σημεία  των παρακάτω συναρτήσεων:
+    \begin{enumerate}[(i)]
+      \item $ f(x,y) = x^{3} + y^{3} + 3xy $ 
+        \hfill Απ: max: $(-1,-1)  $, σάγμα: $ (0,0) $
+      \item $ f(x,y) = x^{2}+y^{4} $ 
+        \hfill Απ: min: $ (0,0) $ 
+      \item $ f(x,y) = x^{3} + y^{3} - 3x -12y + 50 $ 
+        \hfill Απ: max: $ (-1,-2)$, min: $ (1,2) $, 
+        σάγμα: $ (1,-2), (-1,2) $
+      \item $ f(x,y) = x^{3} + y^{3} -3x -3y + 1 $ 
+        \hfill Απ: max: $(-1,-1)  $, min: $ (1,1) $
+      \item $ f(x,y) = x^{3} + 4xy -4y^{2} $ 
+        \hfill Απ: max: $ (-2/3, -1/3)  $
+      \item $ f(x,y) = (x^{2}-3y^{2})e^{1-x^{2}-y^{2}} $ 
+        \hfill Απ: max: $ (1,0)$, min: $ (0,1), (0,-1) $, 
+        σαγμα: $ (0,0) $
+    \end{enumerate}
+\end{enumerate}
+\end{document}

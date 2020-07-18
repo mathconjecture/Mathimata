@@ -1,0 +1,148 @@
+\input{preamble.tex}
+\input{definitions_ask.tex}
+
+
+%\renewcommand{\baselinestretch}{1.2}
+
+\pagestyle{vangelis}
+\everymath{\displaystyle}
+
+\begin{document}
+
+\begin{center}
+\fbox{\large\bfseries Ασκήσεις στις Μερικές Παραγώγους}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+
+
+
+
+    \section{Απλες}
+ 
+\item Να βρεθεί η παράγωγος 1ης τάξης $\dv{f}{t}$ της σύνθετης συνάρτησης $f(x,y)=\ln(y^2-x^2)$, όταν $x=\sin t, y=\cos t$, για $t=\frac{\pi}{8}$.
+
+\hfill Απ: $\scriptstyle{-2}$
+
+\item Να βρεθεί η παράγωγος 1ης τάξης $\dv{w}{t}$ της σύνθετης συνάρτησης $ w = xy+z $, όπου $ x =
+	\cos{t}, y = \sin{t}$ και $ z = t $, για $ t = \frac{ \pi }{ 4 } $.
+
+	\hfill Απ: 1
+
+\item Να υπολογιστούν οι μερικές παράγωγοι 1ης τάξης, ως προς $u$ και $v$, της συνάρτησης $ f(x,y,z)
+	= x + 2y + z^{2}$, όπου $ x = \frac{ u }{ v } $, $y = u^{2} + \ln{v} $ και $ z = 2u $.
+
+	\hfill Απ: $ \pdv{f}{u} = \frac{1}{ v } + 12u $, $\pdv{f}{v} = -\frac{ u }{ v^{2} } + \frac{
+	2 }{ v } $
+
+ \item Έστω η συνάρτηση $ f : \mathbb{R}^{2} \to \mathbb{R} $ που ορίζεται με τον τύπο $ f(x,y) =
+	 x^{2} + xy $, όπου $ x=r \cos{\theta} $ και $ y= r \sin{\theta} $. Να υπολογίσετε με τη χρήση
+	 του κανόνα αλυσίδας τις μερικές παραγώγους $ \pdv{f}{r} $ και $ \pdv{f}{\theta} $.
+
+	 \hfill Απ: \begin{tabular}{l}
+		 $\scriptstyle{i) \pdv{f}{r} = 2r(\cos{\theta} )(\cos{\theta} + \sin{\theta})}
+			 $ \\
+			 $\scriptstyle{ii) \pdv{f}{\theta}=r^{2}(\cos{2\theta} - \sin{2 \theta})} $
+	 \end{tabular}
+
+
+ \item Έστω η συνάρτηση $ f : \mathbb{R}^{2} \to \mathbb{R} $ που ορίζεται με τον τύπο $ f(x,y,z) =
+	 xyz^{2}$, όπου $ x = \sin{t}, y = \cos{t} $ και $ z = t^{2}+1 $. Να υπολογίσετε την μερική
+	 παράγωγο 2ης τάξης $ \pdv[2]{f}{t} $.
+
+	 \hfill Απ: $\scriptstyle{\pdv[2]{f}{t} = -2(t^{2}+1)^{2} \sin{2t} + 8t(t^{2}+1) \cos{2t} +
+	 2(t^{2}+1) \sin{2t} + 4t^{2} \sin{2t}}$
+
+ \item Έστω η συνάρτηση $ f : \mathbb{R}^{2} \to \mathbb{R} $ που ορίζεται με τον τύπο $ f(x,y) =
+	 x+y$, όπου $ x = u^{2} - v^{2} $ και $ y = e^{uv} $. Να υπολογίσετε την μερική παράγωγο 2ης
+	 τάξης $ \pdv[2]{f}{u} $.
+
+	 \hfill Απ: $ \scriptstyle{\pdv[2]{f}{u} = 2 + v^{2}e^{uv}} $
+
+
+
+     \section{καλες}
+
+ % \item Αν $ z=f(x,y) $ είναι μια συνάρτηση με συνεχείς δεύτερες μερικές παραγώγους με $
+	 % x=u^{2}+v^{2} $ και $ y = 2uv $, να υπολογίσετε τις παραγώγους
+	 % \begin{inparaenum}[i)]
+		 % \item $\pdv{z}{u}$
+		 % \item $\pdv[2]{z}{u}$
+	 % \end{inparaenum}
+
+	 % \hfill Απ:  \begin{tabular}{l}
+		 % $\scriptstyle{\textlatin\rm{i})  \pdv{z}{u} = 2u\pdv{z}{x}+2v\pdv{z}{y}}  $ \\
+		 % $\scriptstyle{\textlatin\rm{ii}) \pdv[2]{z}{u} =
+		 % 2\pdv{z}{x}+4u^{2}\pdv[2]{z}{x}+8uv\pdv[2]{z}{x}{y}+4v^{2}\pdv[2]{z}{y}} $
+	 % \end{tabular}
+
+
+
+
+	
+
+
+ 
+
+ % \item Να μετασχηματιστεί η εξίσωση \textlatin{Laplace} σε 
+	 % \begin{inparaenum}[(i)]
+	 	% \item πολικές
+		% \item κυλινδρικές 
+		% \item σφαιρικές
+	 % \end{inparaenum}
+			% συντεταγμένες
+
+			% \hfill Απ: \begin{tabular}{l} $\scriptstyle{\textlatin\rm{i}) 
+		 % \pdv[2]f{x} + \pdv[2]{f}{y} = \pdv[2]{f}{r} + \frac{ 1 }{ r } \pdv{f}{r} + \frac{ 1 }{
+		 % r^{2} } \pdv[2]{f}{\theta}}$  \\ $\scriptstyle{\textlatin\rm{ii})
+		 % \pdv[2]{f}{x}+\pdv[2]{f}{y}+\pdv[2]{f}{z} = \pdv[2]{f}{r} + \frac{1}{r} \pdv{f}{r} +
+		 % \frac{1}{r^{2}} \pdv[2]{f}{r} + \pdv[2]{f}{z}}$ \\ $\scriptstyle{\textlatin\rm{iii}) \pdv[2]{f}{x}+\pdv[2]{f}{y}+\pdv[2]{f}{z} = \frac{ 1 }{ r^{2} } \pdv{}{r}(r^{2}\pdv{f}{r}) + \frac{ 1 }{ r^{2} \sin^{2}{\phi} }
+	 % \pdv[2]{f}{\theta} + \frac{ 1 }{ r^{2} \sin{\phi } } \pdv{}{\phi}(\sin{\phi} \pdv{f}{\phi})}$
+% \end{tabular}
+
+
+
+ % \item Αν $ z = f(x,y) $, με $ x = x(u,v) $ και $ y = y(u,v) $, τότε να υπολογιστούν οι $ f_{uu},
+	 % f_{vv} $ και $ f_{uv} $.
+
+
+     \section{Ομογενεις}
+
+ \item Έστω η συνεχής συνάρτηση $ f : \mathbb{R}^{2} \to \mathbb{R} $ των ανεξάρτητων μεταβλητών $
+	 x,y $ που είναι ομογενής βαθμού $ \mu $. Αν η $f$ έχει συνεχείς μερικές παραγώγους 2ης τάξης
+	 στο $ \mathbb{R}^{2} $ να αποδείξετε ότι ισχύει 
+	 \[
+		 x^{2}\pdv[2]{f}{x} + 2xy\pdv[2]{f}{x}{y} + y^{2}\pdv[2]{f}{y} = \mu(\mu -1)f(x,y)
+	 \] 
+
+ \item Αν $ u = u(x,y) $ και $ v = v(x,y) $ είναι ομογενείς συναρτήσεις βαθμού ομογένειας $\mu$, να
+	 αποδείξετε ότι για κάθε συνάρτηση $f$ με συχεχείς μερικές παραγώγους 1ης τάξης ως προς τις
+	 μεταβλητές $u$, $v$, ισχύει
+	 \[
+		 x\pdv{f}{x} + y\pdv{f}{y} = \mu \left(u\pdv{f}{u} + v\pdv{f}{v}\right) 
+	 \] 
+
+ \item  Έστω $ u = u(x,y) $ και $ v = v(x,y) $ δύο ομογενείς συναρτήσεις βαθμού ομογένειας $\mu$, με
+	 $u(x,y)\neq 0$ και $ v(x,y)\neq 0 $ για κάθε $(x,y) \in \mathbb{R}^{2} $. Να αποδείξετε ότι
+	 \[
+		 udv - vdu = \frac{ 1 }{ \mu } \cdot \pdv{(u,v)}{(x,y)}\cdot(xdy-ydx) 
+	 \] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+
+
+\end{document}

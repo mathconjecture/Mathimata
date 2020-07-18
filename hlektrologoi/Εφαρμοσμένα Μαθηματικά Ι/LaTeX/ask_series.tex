@@ -1,0 +1,59 @@
+\input{preamble.tex}
+\input{definitions.tex}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+\fbox{\large\bfseries Ασκήσεις Στη Μέθοδο Σειρών}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+\item Να εξετάσετε τι είδους σημείο είναι το $x_0=0$ για τις παρακάτω εξισώσεις:
+\begin{enumerate}[i)]
+\item $x^3y''+\sin(2x)y=0, y=y(x)$\hfill Απ: κανονικό ιδιάζον
+\item $x^4y'' + (\cos x-1)y'=0, y=y(x)$\hfill Απ: μη-κανονικό ιδιάζον
+\item $(x-x^2)y''-(1+2x)y'+2y=0, y=y(x)$\hfill Απ: κανονικό ιδιάζον
+\item $x^{a}y''+\sin x y=0, y=y(x), a=1, a=4$\hfill Απ: \{\minibox[]{$a=1$, κανονικό ιδιάζον\\ 
+$a=4$, μη-κανονικό ιδιάζον}
+\end{enumerate}
+
+\item Για τις παρακάτω εξισώσεις να βρεθούν δύο γραμμικώς ανεξάρτητες λύσεις, υπό μορφή σειράς γύρω από το σημείο $x_0=0$.
+\begin{enumerate}[i)]
+\item $y''-xy'+y=0$\hfill Απ: \begin{tabular}[t]{l}
+$y_1=1-\frac{1}{2}x^2+\sum\limits_{n=2}^{\infty}(-1)\frac{(2n-3)!!}{(2n)!}x^{2n}$\\
+$y_2=x$
+\end{tabular}
+\item $y''+x^2y'-4xy=0$\hfill Απ:\begin{tabular}[t]{l}$y_1=1+\frac{2}{3}x^3+\frac{1}{4\cdot 5}x^6-\frac{1}{16\cdot 20}x^9+\cdots$ \\[5pt]
+$y_2=x+\frac{1}{4}x^4$
+\end{tabular}
+\item $y''-xy'+y=5, y(0)=5, y'(0)=3$\hfill Απ: \begin{tabular}[t]{l}
+$y(x)=5+3x$
+\end{tabular}
+\item $(x-x^2)y''-(1+2x)y'+2y=0$\hfill Απ: \begin{tabular}[t]{l}
+$y_1=1+2x$\\
+$y_2=\sum\limits_{n=2}^{\infty}\frac{n+1}{3}x^n$
+\end{tabular}
+\item $xy''+y=0$\hfill Απ: \begin{tabular}[t]{l}
+$y_1=-x+\sum\limits_{n=2}^{\infty}(-1)^n\frac{n}{(n!)^2}x^n$\\
+$y_2=y_1\ln x+1+x+\sum\limits_{n=2}^{\infty}(-1)^{n+1}\frac{n}{(n!)^2}(2H_{n-1}+\frac{1}{n})x^n$
+\end{tabular}
+\item $xy''+2y'-xy=0$\hfill Απ: \begin{tabular}[t]{l}
+$y_1=\frac{\cosh x}{x}$\\
+$y_2=\frac{\sinh x}{x}$
+\end{tabular}
+\item $xy''-2y'+xy=0$\hfill Απ: \begin{tabular}[t]{l}
+$y_1=1+\sum\limits_{n=1}^{\infty}\frac{(-1)^{n+1}}{2n(2n-2)!}x^{2n}$\\
+$y_2=\sum\limits_{n=2}^{\infty}\frac{(-1)^n}{(2n-1)(2n-3)!}x^{2n-1}$
+\end{tabular}
+
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+\end{document}

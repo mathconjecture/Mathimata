@@ -1,0 +1,67 @@
+\input{preamble.tex}
+\input{definitions.tex}
+
+
+
+
+
+\begin{document}
+
+
+
+\begin{center}
+\fbox{\bfseries\large Μέθοδος Δυναμοσειρών ($x_0$ Ομαλό Σημείο)}
+\end{center}
+
+\vspace{2\baselineskip}
+%\everymath{\displaystyle}
+%\pagestyle{empty}
+
+\begin{enumerate}
+
+\item Να λυθούν οι παρακάτω δ.ε. με τη μέθοδο των δυναμοσειρών.
+
+\begin{enumerate}[i)]
+
+\item \fbox{$y''+y=0,\quad x_0=0$}
+
+\vspace{\baselineskip}
+\underline{\textbf{Λύση}}
+
+\vspace{\baselineskip}
+Έχουμε $p(x)=0$ και $q(x)=1$ αναλυτικές $\forall x\in\mathbb{R}$ άρα και για $x_0=0$, οπότε το $x_0=0$ είναι \textbf{ομαλό} σημείο. 
+
+Άρα θεωρούμε λύση της μορφής 
+\[
+y(x)=\suma
+\]
+οπότε,
+\begin{align*}
+y'(x) &= \suma \\
+y''(x) &= \sumb
+\end{align*}
+και με αντικατάσταση στη δ.ε. έχουμε:
+
+\begin{align*}
+\sumc+\suma &=0 \Leftrightarrow \\
+\varsum{0}{\infty}a_{n+2}(n+1)(n+2)x^{n}+\suma &=0 \Leftrightarrow \\
+\varsum{0}{\infty}[a_{n+2}(n+1)(n+2)+a_n]x^n &=0 \Leftrightarrow \\
+\end{align*}
+Πρέπει:
+\[
+a_{n+2}=-\frac{1}{(n+1)(n+2)}a_n,\quad n\geq 0
+\]
+Άρα 
+\[
+a_2=-\frac{a_0}{2\cdot 1}=-\frac{a_0}{2},\quad a_4=-\frac{a_2}{4\cdot 3}=\frac{a_0}{4!},\quad a_6=-\frac{a_4}{6\cdot 5}=-\frac{a_0}{6!}, \ldots
+\]
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+
+
+\end{document}

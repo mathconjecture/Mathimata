@@ -1,0 +1,170 @@
+\input{C:/Users/Vang/Desktop/MyNotesLaTeX/preamble.tex}
+\input{C:/Users/Vang/Desktop/MyNotesLaTeX/definitions.tex}
+
+
+
+\begin{document}
+
+\begin{center}
+\fbox{\large \bfseries Ασκήσεις προς επίλυση με τη βοήθεια του \textlatin{Maxima}}
+\end{center}
+
+\vspace{2\baselineskip}
+
+\begin{enumerate}[\bfseries Άσκηση 1\ : ]
+\item Υποθέτουμε ότι έχουμε μια επιχείρηση της οποίας η συνάρτηση προσφοράς ενός προϊόντος της είναι η: $10P=Q_s+5000$, και ότι η ζήτηση για το προϊόν αυτό διαμορφώνεται στο ύψος των $550$ μονάδων την εβδομάδα, όταν η τιμή του είναι $400$ ν.μ. και $760$ μονάδες, όταν η τιμή του έιναι $300$ ν.μ.
+\begin{enumerate}[a)]
+\item Να προσδιοριστεί η συνάρτηση ζήτησης με την προυπόθεση ότι είναι γραμμική.
+\item Να βρεθει η τιμή και η ποσότητα ισορροπίας.
+\item Να γίνει γραφική επίλυση - απεικόνιση της αγοράς.
+\end{enumerate}
+
+\underline{\bfseries Λύση}
+
+\begin{enumerate}[a)]
+
+\item Σύμφωνα με την υπόθεση, η συνάρτηση ζήτησης είναι γραμμική συνάρτηση της τιμής. Άρα:
+\begin{equation}\label{eq:demand}
+Q_d=aP+b
+\end{equation}
+
+Επίσης όταν η τιμή είναι $400$ ν.μ. τότε η ζήτηση είναι $550$ μονάδες προϊόντος, άρα ισχύει:
+\begin{equation}\label{eq:dem1}
+550=a400+b
+\end{equation}
+και όταν η τιμή είναι $300$ ν.μ. τότε η ζήτηση διαμορφώνεται στις $760$ μονάδες προϊόντος, άρα:
+\[
+760=a300+b
+\]
+
+Επομένως:
+
+\[
+\left.
+\begin{align*}
+550&=a400+b \\
+760&=a300+b
+\end{align*}
+\right\}\Leftrightarrow
+\left.
+\begin{align*}
+550&=\phantom{-}a400+b \\
+-760&=-a300-b
+\end{align*}
+\right\}\Leftrightarrow
+\left.
+\begin{align*}
+550&=\phantom{-}a400+b \\
+-760&=-a300-b
+\end{align*}
+\right\}\overset{+}{\Leftrightarrow}
+\]
+\[
+-210=100a \Leftrightarrow a=-\frac{210}{100} \Leftrightarrow a=-2,1
+\]
+
+Οπότε με αντικατάσταση της τιμής του $a$ στην \eqref{eq:dem1} βρίσκουμε ότι $b=1390$.
+
+Άρα η ζητούμενη συνάρτηση ζήτησης είναι:
+\[
+\boldsymbol{Q_d=-2,1P+1390}
+\]
+
+\item Για να βρούμε την τιμή και την ποσότητα ισορροπίας, λύνουμε το σύστημα στην κατάσταση ισορροπίας:
+\[
+\left.
+\begin{align*}
+Q_d&=-2,1P+1390 \\
+Q_s&=\phantom{-}10P-5000
+\end{align*}
+\right\}
+\]
+
+Όπότε, έχουμε:
+\[
+Q_s=Q_d
+\]
+\[
+10P-5000=-2,1P+1390\Leftrightarrow 12,1P=6390\Leftrightarrow P=\frac{6390}{12,1} \Leftrightarrow
+\]
+\[
+ \boldsymbol{P^*\approx 528}
+\]
+Τέλος με αντικατάσταση της τιμής ισορροπίας σε μία από τις δύο εξισώσεις του συστήματος, έστω στην δεύτερη, έχουμε:
+\[
+Q=10\cdot 528-5000\Leftrightarrow 
+\]
+\[
+\boldsymbol{Q^*=280}
+\]
+
+\item 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=.22]{geogebra-export}
+\end{center}
+\end{figure}
+
+\end{enumerate}
+
+
+\item Να βρεθούν οι τιμές των $m, n$ έτσι ώστε ο πίνακας 
+\(
+L=\begin{pmatrix}
+m & \phantom{-}1 \\
+n & -1
+\end{pmatrix}
+\)
+να έχει αντίστροφο τον ίδιο τον $L$.
+
+Ο πίνακας $L$ θα έχει αντίστροφο τον εαυτό του αν και μόνον αν: $L\cdot L=I$. Οπότε:
+\[
+\begin{pmatrix}
+m & \phantom{-}1\\
+n & -1
+\end{pmatrix}\cdot 
+\begin{pmatrix}
+m & \phantom{-}1 \\
+n & -1
+\end{pmatrix}=
+\begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix}\Leftrightarrow
+\]
+\[
+\begin{pmatrix}
+m^2+n & m-1 \\
+mn-n & n+1
+\end{pmatrix}=
+\begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix}\Leftrightarrow
+\]
+
+Από την ισότητα των πινάκων, προκύπτει το παρακάτω σύστημα:
+
+\[
+\left.
+\begin{align*}
+m^2+n=1 \\
+m-1=0 \\
+mn-n=0 \\
+n+1=1
+\end{align*}
+\right\}\Leftrightarrow \boldsymbol{n=0} \quad\text{και}\quad \boldsymbol{m=1}
+\]
+Άρα ο ζητούμενος πίνακας είναι ο:
+\[
+L=\begin{pmatrix}
+1 & \phantom{-}1 \\
+0 & -1
+\end{pmatrix}
+\]
+
+\end{enumerate}
+
+
+\end{document}

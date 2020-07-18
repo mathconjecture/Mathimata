@@ -1,0 +1,234 @@
+\input{$HOME/Desktop/preamble/preamble.tex}
+\input{$HOME/Desktop/preamble/definitions.tex}
+
+
+\everymath{\displaystyle}
+\setlength{\tabcolsep}{1cm}
+
+
+\begin{document}
+
+\begin{center}
+	\fbox{\large \bfseries  Λύσεις 2ου  \textlatin{project}}	
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+	\setlength\itemsep{2em}
+	\item  
+
+		\begin{enumerate}[i)]
+			\item $ \lim_{(x,y)\to(0,0)} \frac{\sin{(x^{2}+y^{2})}}{x^{2}+y^{2}} \underset{\lim u = 0}
+				{\overset{u=x^{2}+y^{2}}{=}} \lim_{u\to 0} \frac{\sin{u}}{u} = 1 $
+
+			\item $ \lim_{(x,y,z)\to (1,1,1)} \frac{xy+yz+zx}{x^{2}+y^{2}+z^{2}} = \frac{1 \cdot 1 + 1 \cdot 1 + 1 \cdot1}{1^{2}+1^{2}+1^{2}} $
+
+			\item $ L_{1} = \lim_{x\to 0} \left(\lim_{y\to 0} \frac{x+y}{x-y}\right) = \lim_{x\to 0} \frac{x}{x} = \lim_{x\to 0} 1 = 1$
+
+				$ L_{2} = \lim_{y\to 0} \left(\lim_{x\to 0} \frac{x+y}{x-y}\right) = \lim_{y\to 0} \frac{y}{-y}
+				= \lim_{y\to 0} -1 = -1 $
+
+				Άρα δεν υπάρχει το όριο καθώς  $ (x,y)\to (0,0) $ γιατί τα επάλληλα όρια δεν είναι ίσα.
+
+				Επίσης η συνάρτηση φαίνεται πως δεν έχει όριο πάνω στην ευθεία $ y=x $ αφού η $f$ δεν είναι
+				συνεχής. 
+
+			\item Αν  $ \lim_{(x,y)\to (x_{0},y_{0})} f(x,y) = L $, τότε η $f$ δεν είναι απαραίτητο να ορίζεται
+				στο σημείο $ (x_{0},y_{0}) $. 
+
+				Το σημείο  $ (x_{0},y_{0}) $ πρέπει όμως να είναι σημείο \textbf{συσσώρευσης} του  πεδίου ορισμού
+				της.
+		\end{enumerate}
+
+	\item 
+		\begin{enumerate}[i)]
+			\item Η συνάρτηση δίνεται από τον τύπο:
+				\[
+					f(x,y,z) = y^{(0 \mod 3 + 1)} \cdot \ln{(4+3)z} \cdot y^{(9 \mod
+					2 + 1)x} = y \cdot \ln{7z} \cdot y^{2x} = y^{2x+1} \ln{7z} 
+				\]  
+
+				\renewcommand{\arraystretch}{2.5}
+				\[
+					\begin{tabular}{ll}
+						$ \pdv{f}{x} = 2y^{2x+1} \ln{7z} $ & $ \pdv[2]{f}{x} = 4y^{2x+1} \ln{7z} $ \\
+						$ \pdv{f}{y} = 2(2x+1)y^{2x} \ln{7z} $ & $ \pdv[2]{f}{y} = 4(2x+1)y^{2x-1} \ln{7z} $ \\
+						$ \pdv{f}{z} = y^{2x+1} \frac{1}{z} $ & $ \pdv[2]{f}{z} = -y^{2x+1} \frac{1}{z^{2}} $ \\
+															  & $ \pdv[2]{f}{x}{y} = \pdv[2]{f}{y}{x} =  4(2x+1)y^{2x} \ln{7z}  $  \\
+															  & $ \pdv[2]{f}{y}{z} = \pdv[2]{f}{z}{y} = 2(2x+1)y^{2x} \frac{1}{z}  $ \\
+															  & $ \pdv[2]{f}{x}{z} = \pdv[2]{f}{z}{x} = 2y^{2x+1} \frac{1}{z}  $\\
+					\end{tabular}
+				\]
+
+			\item Ζητάμε την κλίση της συνάρτησης $f$.
+				\[
+					\grad f = \left(\pdv{f}{x}, \pdv{f}{y}, \pdv{f}{z}\right) =
+					\left(\underbrace{2y^{2x+1} \ln{7z}}_{P}, \underbrace{2(2x+1)y^{2x}
+					\ln{7z}}_{Q}, \underbrace{y^{2x+1} \frac{1}{z}}_{R}\right)
+				\] 
+
+			\item 
+				\[
+					\div \grad f = \pdv{P}{x} + \pdv{Q}{y} + \pdv{R}{z} = 4y^{2x+1} \ln{7z} +
+					8x(2x+1)y^{2x-1} \ln{7z} - y^{2x+1} \frac{1}{z^{2}} 
+				\] 
+
+			\item 
+				\[
+					\curl \grad f = \begin{vmatrix*}[c]
+						\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+						\pdv{}{x} & \pdv{}{y} & \pdv{}{z} \\
+						2y^{2x+1} \ln{7z}  & 2(2x+1)y^{2x} \ln{7z} & y^{2x+1} \frac{1}{z} 
+					\end{vmatrix*} = 0
+				\]
+
+		\end{enumerate}
+
+	\item  Ζητάμε τοπικά ακρότατα για τη συνάρτηση
+		\[
+			f(x,y) = (x+y)^{4} + y^{2} 
+		\] 
+		\begin{itemize}
+			\item Βρίσκουμε όλες τις μερικές παραγώγους της  $f$
+				\[
+					\renewcommand{\arraystretch}{2.5}
+					\begin{tabular}{ll}
+						$ f_{x} = 4(x+y)^{3} $ & $ f_{xx} = 12(x+y)^{2} $ \\
+						$ f_{y} = 2y $ & $ f_{yy} = 2  $ \\
+											& $ f_{xy} = f_{yx} = 12(x+y)^{2} $
+					\end{tabular}
+				\] 
+
+			\item Βρίσκουμε τα κρίσιμα σημεία της  $f$
+				\[
+					\left.
+						\begin{tabular}{l}
+							$	f_{x} = 0$ \\
+							$	f_{y} = 0$
+						\end{tabular}
+					\right\} \Leftrightarrow 
+					\left.
+						\begin{tabular}{l}
+							$	4(x+y)^{3} = 0$ \\
+							$	4(x+y)^{3} + 2y = 0$
+						\end{tabular}
+					\right\} \Leftrightarrow  
+					\left.
+						\begin{tabular}{l}
+							$ x=-y	$ \\
+							$	4(x+y)^{3}+2y = 0$
+						\end{tabular}
+					\right\} \Leftrightarrow  
+					\left.
+						\begin{tabular}{l}
+							$ x=-y	$ \\
+							$ y=0	$
+						\end{tabular}
+					\right\} \Leftrightarrow  
+					\left.
+						\begin{tabular}{l}
+							$ x=0	$ \\
+							$ y=0	$
+						\end{tabular}
+					\right\}   
+				\] 
+				Άρα η  $f$  έχει μοναδικό στάσιμο σημείο το  $ (0,0) $.
+
+			\item Ελέγχουμε το στάσιμο σημείο  $ (0,0) $ με το κριτήριο της 2ης παραγώγου. 
+				\[
+					|H_{2}|=	\begin{vmatrix*}[c]
+						f_{xx} & f_{xy} \\
+						f_{yx} & f_{yy}
+					\end{vmatrix*} = 
+					\begin{vmatrix*}[c]
+						0 & 0 \\
+						0 & 2
+					\end{vmatrix*} = 0
+				\] 
+				Επομένως το κριτήριο δεν δίνει συμπέρασμα και γι᾽ αυτό ελέγχουμε με τη βοήθεια του ορισμού:
+
+				\[f(x,y) - f(0,0) = (x+y)^{4} + y^{2} > 0 \]  για κάθε  $ (x,y) $.  Επομένως
+				\[
+					f(x,y)>f(0,0) 
+				\]  που σημαίνει ότι στο σημείο  $ (0,0) $ η  $f$  παρουσιάζει τοπικό \textbf{ελάχιστο}.
+
+		\end{itemize}
+
+	\item Ζητάμε τοπικά ακρότατα για τη συνάρτηση
+		 \[
+			 f(x,y,z) = 7 - x^{2} - 2y^{2} - 3z^{2} +2xz 
+		 \] 
+		 \begin{itemize}
+			 \item  Βρίσκουμε όλες τις μερικές παραγώγους της  $f$
+				 \[
+					 \renewcommand{\arraystretch}{2.5}
+					  \begin{tabular}{lll}
+						  $\pdv{f}{x} = -2x+2z$ & $f_{xx} = -2$ &  $f_{xy}=f_{yx}=0$ \\
+						  $\pdv{f}{y} = -4y $& $f_{yy} = -4$ & $f_{yz}=f_{zy}=0$ \\
+						  $\pdv{f}{z} = -6z + 2x$ & $f_{zz} = -7$ &  $f_{xz}=f_{zx}=2$ \\
+					  \end{tabular} 
+				 \] 
+
+	 \item  Βρίσκουμε τα κρίσιμα σημεία
+		   \[
+					\left.
+						\begin{tabular}{l}
+							$ f_{x} = 0	$ \\
+							$ f_{y} = 0 	$\\
+							$ f_{z} = 0 	$\\
+
+						\end{tabular}
+					\right\}   \Leftrightarrow 
+					\left.
+						\begin{tabular}{l}
+							$-2x+2z=0	$ \\
+							$ -4y=0 	$ \\
+							$ -6z+2x=0  	$
+						\end{tabular}
+					\right\}   \Leftrightarrow 
+					\left.
+						\begin{tabular}{l}
+							$-2x+2z=0	$ \\
+							$ -4y=0 	$ \\
+							$ -6z+2x=0  	$
+						\end{tabular}
+					\right\} \Leftrightarrow (x,y,z)=(0,0,0)
+		   \] 
+		   Επομένως η  $f$  έχει μοναδικό στάσιμο σημείο, το  $ (0,0,0) $.
+
+	   \item  Ελέγχουμε το στάσιμο σημείο με τη βοήθεια του κριτηρίου 2ης παραγώγου
+		   \[
+			   |H_{1}|=f_{xx}=-2 
+		   \]
+		   \[
+			   |H_{2}|= \begin{vmatrix*}[c]
+				   f_{xx} & f_{xy} \\
+				   f_{yx} & f_{yy}
+			   \end{vmatrix*} = 
+			   \begin{vmatrix*}[r]
+				   -2 & 0 \\
+				   0 & -4
+			   \end{vmatrix*} = 8 > 0 
+		   \]
+		   \[
+			   |H_{3}|=\begin{vmatrix*}[c]
+				   f_{xx} & f_{xy} & f_{xz} \\
+				   f_{yx} & f_{yy} & f_{yz} \\
+				   f_{zx} & f_{zy} & f_{zz} 
+			    \end{vmatrix*} = 
+				\begin{vmatrix*}[r]
+					-2 & 0 & 2 \\
+					0 & -4 & 0 \\
+					2 & 0 & -6
+				\end{vmatrix*} = -32<0
+		   \]
+		   Επομένως η  $f$  στο σημείο  $ (0,0,0) $ παρουσιάζει τοπικό \textbf{μέγιστο}.
+
+		\end{itemize}
+
+	\item  Για το πρόβλημα, δείτε την υπόδειξη που δίνει.  Είναι αρκετά απλό.
+		   
+\end{enumerate}
+
+\end{document}

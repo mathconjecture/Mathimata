@@ -1,0 +1,123 @@
+\documentclass[a4paper,12pt]{article}
+
+% Babel language package
+\usepackage[english,greek]{babel}
+% Inputenc font encoding
+\usepackage[utf8]{inputenc}
+
+% math packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{physics}
+
+
+
+\begin{document}
+\thispagestyle{empty}
+
+
+\begin{center}
+\fbox{\large \bfseries  Πίνακες - Ορίζουσες - Βαθμός}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+
+\item  Να γίνουν οι πολλαπλασιασμοί των πινάκων.
+
+
+$A=\begin{pmatrix*}[r]
+2 & 1 & 2\\
+-1 & 2 & 1\\
+-2 & 0 & 5
+\end{pmatrix*}$,
+$B=\begin{pmatrix*}[r]
+-2 & 1 & 0\\
+2 & 0 & 3\\
+-1 & 4 & 1
+\end{pmatrix*}$\hfill Απ.: $Α\cdot Β=\begin{pmatrix*}[r]
+-4 & 10 & 5\\
+5 & 3 & 7\\
+-1 & 18 & 5
+\end{pmatrix*}$
+
+
+\item  Να υπολογιστούν οι πίνακες $A\cdot B$ και $Β\cdotΑ$
+
+
+
+$Α=\begin{pmatrix*}[r]
+2 & 1 & 0 \\
+1 & 2 & 1
+\end{pmatrix*}$, 
+$B=\begin{pmatrix*}[r]
+-2 & 1\\
+2 & 3\\
+-1 & 4
+\end{pmatrix*}$
+
+ Απ.: $Α\cdot Β=\begin{pmatrix*}[r]
+-2 & 5 \\
+1 & 11
+\end{pmatrix*}$ και $B\cdot A=\begin{pmatrix*}[r]
+-3 & 0 & 1\\
+7 & 8 & 3\\
+2 & 7 & 4
+\end{pmatrix*}$
+
+\item  Να υπολογιστούν οι ορίζουσες.
+
+\begin{enumerate}[i)]
+\item $\begin{vmatrix*}[r]
+0 & -1 & 2 \\
+0 & 1 & 1 \\
+3 & 2 & 1
+\end{vmatrix*}$
+\hfill Απ.: $-9$
+
+\item
+$\begin{vmatrix*}[r]
+-1 & 1 & 2 \\
+1 & 0 & 1 \\
+3 & 2 & 0
+\end{vmatrix*}$\hfill Απ.: $9$
+\item 
+$\begin{vmatrix*}[r]
+0 & -1 & 2 & 2\\
+1 & 1 & 1 & -1\\
+-2 & 0 & 3 & 5\\
+2 & -2 & -1 & -2 
+\end{vmatrix*}$\hfill Απ.: $5$
+\end{enumerate}
+
+\item  Να βρεθεί ο βαθμός των πινάκων.
+
+
+\begin{enumerate}[i)]
+\item $A=\begin{pmatrix*}[r]
+1 & 2 & 3\\
+4 & 5 & 6\\
+7 & 8 & 9
+\end{pmatrix*}$\hfill Απ.: $\rank A=2$ 
+\item $B=\begin{pmatrix*}[r]
+1 & 2 & 3 & 4\\
+-2 & 0 & 5 & 7
+\end{pmatrix*}$\hfill Απ.: $\rank Β=2$
+\item $C=\begin{pmatrix*}[r]
+2 & 5 & -4\\
+3 & 2 & 5 \\
+4 & 0 & 12\\
+-2 & -2 & -2
+\end{pmatrix*}$\hfill Απ.: $\rank C=2$
+\end{enumerate}
+\end{enumerate}
+
+
+\end{document}
+
+

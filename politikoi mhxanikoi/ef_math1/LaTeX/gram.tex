@@ -1,0 +1,65 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[english,greek]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+
+\usepackage{systeme} 
+
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+{\bfseries Ασκήσεις στα Γραμμικά Συστήματα (Με παράμετρο)}
+\end{center}
+
+\vspace{\baselineskip}
+
+
+\begin{enumerate}
+	\item Για ποιες τιμες του $\lambda$ το παρακάτω σύστημα έχει και μη μηδενικές λύσεις?
+
+		\systeme{
+			(2\-\ \lambda)x +y = 0, 
+			-x - \lambda y +z = 0, 
+			x + 3y + (1\-\ \lambda)z = 0
+		} \hfill Απ: $ \lambda = 1 $ και $ \lambda = -2 $
+
+
+	\item Να λυθεί και να διερευνηθεί για κάθε τιμή του πραγματικού $\lambda$, το παρακάτω σύστημα:
+
+		\systeme{
+			(\lambda\-\ 2)x + y =0, 
+			-x-2y+z =0, 
+			x+3y+(1\-\ \lambda)z=0
+		} \hfill Απ: $ \lambda =2 $, $ \lambda =3 $
+
+
+
+\item Για ποιες τιμές του $\lambda\in \mathbb{R}$ το παρακάτω σύστημα είναι αδύνατο?
+
+
+	\systeme{
+	x -\lambda y +z =1, 
+x-y+z =-1, 
+\lambda x+ \lambda^2 y -z= \lambda^2 
+	} \hfill Απ: $ \lambda = 1 $, $ \lambda = -1 $
+
+
+\item Να διερευνηθεί για κάθε τιμή του $\lambda$ το παρακάτω σύστημα και να δοθούν οι λύσεις του.
+
+	\systeme {
+	2\lambda x + y +\lambda z =1, 
+x +\lambda y+z =\lambda, 
+\lambda x+  y +\lambda z= -\lambda
+	} \hfill Απ: $ \lambda =0 $, $ \lambda = 1 $, $ \lambda = -1 $
+\end{enumerate}
+
+
+
+\end{document}

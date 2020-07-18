@@ -1,0 +1,51 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\everymath{\displaystyle}
+
+
+\begin{document}
+
+  Για να υπολογίσουμε το ανάπτυγμα της συνάρτησης σε δυνάμεις του $(x-1)$ και $(y-2)$ 
+  αρκεί ισοδύναμα να υπολογίσουμε το ανάπτυγμα της συνάρτησης γύρω από το 
+  σημείο $(x_0,y_0)=(1,2)$
+
+  Παρατηρώ ότι δεν αναφέρεται στην εκφώνηση μέχρι τους όρους ποιας τάξης 
+  xρειάζεται να βρω το ανάπτυγμα.  Γι' αυτό, μια και η συνάρτηση είναι πολυωνυμική,
+  βρίσκω μέχρι την τάξη όπου μηδενίζονται οι μερικές παράγωγοι: 
+
+  (Δηλαδή στο συγκεκριμένο παράδειγμα μέχρι $3$ης τάξης, αφού όλες οι παράγωγοι 
+  $4$ης και ανώτερης τάξης, θα είναι όλες μηδέν)
+  \twocolumnsides{
+  \begin{itemize}
+    \item $f_x=3x^2+y^2\Rightarrow f_x(1,2)=7$
+    \item $f_y=3y^2+2xy\Rightarrow f_y(1,2)=16$
+    \item $f_{xx}=6x\Rightarrow f_{xx}(1,2)=6$
+    \item $f_{xy}=2y\Rightarrow f_{xy}(1,2)=4$
+\end{itemize}}{\begin{itemize}
+    \item $f_{yy}=6y+2x\Rightarrow f_{yy}(1,2)=14$
+    \item $f_{xxx}=6$
+    \item $f_{xxy}=f_{xyx}=0$
+    \item $f_{xyy}=f_{yxy}=2$
+  \item $f_{yyy}=6$} 
+  Με αντικατάσταση των μερικών παραγώγων στον τύπο Taylor, έχουμε:
+  \begin{equation*}
+    \begin{split}
+      f(x,y)&=13+\Bigl(7(x-1)+16(y-2)\Bigr)+ \\ 
+            &\quad +\frac{1}{2!}\Bigl(6(x-1)^2 +2\cdot 4(x-1)(y-2)+14(y-2)^2\Bigr)+ \\
+            &\quad +\frac{1}{3!}\Bigl(6(x-1)^3+3\cdot 0(x-1)^2(y-2)+3\cdot 2(x-1)(y-2)^2+6(y-2)^3\Bigr).
+    \end{split}
+  \end{equation*}
+  Και μετά τις πράξεις, έχουμε: 
+  \begin{equation*}
+    \begin{split}
+      f(x,y)&=13+7(x-1)(y-2)+16(y-2)+3(x-1)^2+4(x-1)(y-2) \\
+            &\quad +7(y-2)^2+(x-1)^3+(x-1)(y-2)^2+(y-2)^3.
+    \end{split}
+  \end{equation*}
+  Δεν κάνουμε άλλες πράξεις.
+
+  Έχουμε το ανάπτυγμα της $f(x,y)$ σε δυνάμεις του $(x-1)$ και $(y-2)$ όπως ζητήθηκε.
+
+\end{document}

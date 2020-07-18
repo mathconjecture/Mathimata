@@ -1,0 +1,288 @@
+\input{$HOME/Desktop/preamble/preamble.tex}
+\input{$HOME/Desktop/preamble/definitions.tex}
+
+
+\pagestyle{vangelis}
+\everymath{\displaystyle}
+\usepackage{enumerate} 
+
+
+\begin{document}
+
+\begin{center}
+    \fbox{\large\bfseries Ασκήσεις}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+
+\item {\bfseries Δίνονται τα σημεία  \boldmath A$(-3,4) $, B$(1,2) $ και $\Gamma(4,-6) $.}
+    \begin{enumerate}[i)]
+        \item {\bfseries Να δειχθεί ότι τα σημεία δεν είναι συνευθειακά.}
+        \item {\bfseries Να βρεθεί η εξίσωση της διαμέσου  BM  του τριγώνου  AB$\Gamma$ }
+    \end{enumerate}
+
+    \begin{description}
+        \item[Λύση] 
+    \end{description}
+
+    \begin{enumerate}[i)]
+
+        \item 
+    Έστω ότι τα σημεία A$(-3,4) $, B$(1,2) $ και $\Gamma(4,-6) $ είναι συνευθειακά.
+
+    Αυτό σημαίνει ότι υπάρχει $\lambda \in \mathbb{R}$ τέτοιο ώστε 
+    \begin{align*}
+        \vec{AB} &= \lambda \vec{B\Gamma} \\
+        (1-(-3),2-4) &= \lambda (4-1,-6-2) \\
+        (4,-2) &= \lambda (3,-8) \\
+        (4,-2) &= (3\lambda, -8\lambda) \\
+    \end{align*}
+        \renewcommand{\arraystretch}{2}
+    \[
+		\left.
+            \begin{tabular}{c}
+                $ 4 = 3 \lambda $ \\
+            $ -2 = -8 \lambda $
+		\end{tabular}  
+    \right\} \Leftrightarrow 
+		\left.
+            \begin{tabular}{c}
+                $  \lambda = \frac{4}{3} $ \\
+                $  \lambda = \frac{-2}{-8} $
+		\end{tabular}  
+    \right\} \Leftrightarrow 
+		\left.
+            \begin{tabular}{c}
+                $  \lambda = \frac{4}{3} $ \\
+                $  \lambda = \frac{1}{4} $
+		\end{tabular}  
+    \right\} \quad \text{Άτοπο!}
+    \] 
+
+\item Εφόσον τα σημεία δεν είναι συνευθειακά ορίζουν τρίγωνο AB$\Gamma$.
+
+    Έστω $M$ το μέσο της πλευράς A$\Gamma$.
+
+    Οι συντεταγμένες του σημείου $ M $ δίνονται από τις σχέσεις:
+    \[
+        x_{M} = \frac{x_{A}+x_{\Gamma}}{2} \quad \text{και} \quad y_{M} = \frac{y_{A}+y_{\Gamma}}{2} 
+    \] 
+    Επομένως
+    \[
+        x_{M}= \frac{-3 + 4}{2} = \frac{1}{2} \quad \text{και} \quad y_{M}= \frac{4 - 6}{2} =
+        \frac{-2}{2} =-1 
+    \] 
+    Η εξίσωση της διαμέσου BM είναι
+    \[
+         y - y_{B} = \frac{y_{M}-y_{B}}{x_{M}-x_{B}} (x-x_{B}) \Leftrightarrow \\
+    \]
+    \[
+        y - 2 = \frac{-1 - 2}{\frac{1}{2} - 1 } (x-1) \Leftrightarrow 
+    \] 
+    \[
+        y-2= \frac{-3}{- \frac{1}{2}} (x-1) \Leftrightarrow 
+    \]
+    \[
+        y-2=6(x-1) \Leftrightarrow 
+    \]
+    \[
+         y-2=6x-6 
+    \] 
+    \[
+        \boxed{    y=6x-4 }
+    \]
+    \end{enumerate}
+
+    \pagebreak
+
+\item {\bfseries Να βρεθούν οι εξισώσεις των εφαπτόμενων ευθειών της έλλειψης \boldmath $
+    x^{2}+3y^{2}=4 $ που είναι παράλληλες στην ευθεία $ x-3y-2=0 $.}
+
+    \begin{description}
+        \item[Λύση] 
+    \end{description}
+
+    Η εξίσωση της εφαπτομένης της έλλειψης στο τυχαίο σημείο $ (x_{0}, y_{0}) $ είναι
+    \[
+        x x_{0} + 3y y_{0}= 4 \Leftrightarrow 3y y_{0} = 4 - x x_{0}  \Leftrightarrow y =
+        -\frac{x_{0}}{3 y_{0}}x + \frac{4}{3 y_{0}} 
+    \]
+    και θέλουμε να είναι παράλληλη στην ευθεία 
+    \[
+    x-3y-2=0 \Leftrightarrow 3y=x-2 \Leftrightarrow y = \frac{1}{3} x - \frac{2}{3}  
+    \]
+    Άρα πρέπει η εφαπτομένη και η ευθεία να έχουν ίδιο συντελεστή διεύθυνσης, δηλ πρέπει
+    \[
+       -\frac{x_{0}}{3 y_{0}} = \frac{1}{3} \Leftrightarrow 3 y_{0} = -3 x_{0} \Leftrightarrow 
+        \]
+        \begin{equation}\label{eq:3}
+        y_{0}=- x_{0} 
+    \end{equation} 
+    Το σημείο $ (x_{0}, y_{0}) $ είναι σημείο της έλλειψης, επομένως επαληθεύει την εξίσωσή της:
+    \begin{equation}\label{eq:4}
+        x_{0}^{2}+3 y_{0}^{2}=4 
+    \end{equation} 
+    Κάνοντας αντικατάσταση της εξίσωσης~\eqref{eq:3} στην~\eqref{eq:4} προκύπτει
+    \[
+        x_{0}^2+3(- x_{0})^{2}=4 \Leftrightarrow x_{0}^{2} + 3 x_{0}^{2} = 4 \Leftrightarrow 4
+        x_{0}^{2} = 4 \Leftrightarrow x_{0}^{2} = 1 \Leftrightarrow x_{0} = \pm 1
+    \] 
+    και αντικαθιστώντας στην σχέση~\eqref{eq:3} τις τιμές του $ x_{0} $ που μόλις βρήκαμε έχουμε
+    \[
+        x_{0}=1 \Rightarrow y_{0}=-1 \quad \text{και} \quad x_{0}=-1 \Rightarrow y_{0}=1 
+    \] 
+Επομένως οι εξισώσεις της έλλειψης που είναι παράλληλες στη δοσμένη ευθεία είναι οι
+\[
+    \varepsilon_{1}: y = - \frac{1}{3\cdot (-1)} x + \frac{4}{3\cdot (-1)} \Rightarrow  \boxed {y =
+    \frac{1}{3} x - \frac{4}{3}}
+\] 
+
+και 
+
+\[
+    \varepsilon_{2}: y = - \frac{-1}{3 \cdot 1} x + \frac{4}{3 \cdot 1} \Rightarrow \boxed{y=
+    \frac{1}{3} x + \frac{4}{3}}
+\] 
+
+    \item  {\bfseries Δίνεται η συνάρτηση \boldmath $ f(x,y) = y^{3} - x^{3}
+        +3x^{2}y - 3xy^{2} + 2xy - \sin^{10}{y} $.
+    Να δειχθεί ότι \boldmath $ f_{xy}+f_{xx} = 2 $.}
+
+        \begin{description}
+            \item[Λύση]
+        \end{description}
+
+Βρίσκω τις μερικές παραγώγους 1ης τάξης:
+\[ f_{x} = -3x^{2} + 6xy - 3y^{2} + 2y \]
+\[ f_{y} = 3y^{2}+3x^{2}-6xy +2x - 10 \sin^{9}{y}  \]
+Βρίσκω τις ζητούμενες μερικές παραγώγους 2ης τάξης:
+\[
+    f_{xx} =  -6x+6y
+\] 
+\[
+    f_{xy} = 6x -6y +2
+\] 
+Επομένως πράγματι ισχύει ότι
+\[
+    f_{xy}+ f_{xx} = -6x+6y+6x-6y+2 = 2
+\] 
+
+
+    \item {\bfseries Να λυθεί το πρόβλημα αρχικών τιμών \boldmath $  y''(x) + 5y'(x) +4y(x)=0
+        $, \boldmath $ y(0)=2 $, \boldmath $ y'(0)=3 $.}
+
+        \begin{description}
+            \item[Λύση] 
+        \end{description}
+
+                Λύνω την χαρακτηριστική εξίσωση:
+
+                \[
+                    \lambda ^{2} +5 \lambda + 4 = 0 
+                \] 
+
+                Βρίσκω τη διακρίνουσα του τριωνύμου:
+                \[
+                    \Delta = 5^{2}-4 \cdot 1 \cdot 4 = 25 - 16 = 9 > 0
+                \] 
+                Επομένως έχω δυο λύσεις ως προς $\lambda$, τις: 
+                \[
+                    \lambda _{1,2} = \frac{-5 \pm \sqrt{9}}{2} = \frac{-5 \pm 3}{2} \Rightarrow  
+               \]
+               \[
+                   \lambda _{1} = \frac{-5+3}{2} = \frac{-2}{2} = -1 \quad \text{και} \quad
+                   \lambda _{2} = \frac{-5-3}{2} = \frac{-8}{2} = -4   
+               \] 
+               
+Άρα η γενική λύση δίνεται από τον τύπο:
+\[
+    y(x)= c_{1}e^{-x}+ c_{2}e^{-4x} 
+\] 
+Βρίσκουμε την παράγωγο της $ y(x) $:
+\[
+    y'(x) = -c_{1}e^{-x}-4 c_{2}e^{-4x} 
+\]
+Εφαρμόζοντας τις αρχικές συνθήκες έχουμε:
+
+\begin{minipage}{0.4\textwidth}
+\begin{align}
+    y(0)&=2 \notag \Leftrightarrow  \\ 
+    c_{1}e^{0}+ c_{2}e^{0} &= 2 \notag \Leftrightarrow \\ 
+    c_{1} + c_{2} &= 2 \label{eq:1} 
+\end{align} 
+\end{minipage} 
+\hspace{\baselineskip} 
+\begin{minipage}{0.4\textwidth}
+\begin{align}
+    y'(0)&=3 \notag \Leftrightarrow \\
+    -c_{1}e^{0}-4 c_{2}e^{0} &= 3 \notag \Leftrightarrow \\
+    -c_{1} - 4 c_{2} &= 3 \label{eq:2}
+\end{align}
+\end{minipage}
+
+Λύνουμε το σύστημα των σχέσεων~\eqref{eq:1} και~\eqref{eq:2}:
+\[
+		\left.
+            \begin{tabular}{l}
+            $c_{1}+ c_{2}=2 $ \\
+            $-c_{1}- 4 c_{2}=3$
+		\end{tabular}
+    \right\} \Leftrightarrow 
+		\left.
+            \begin{tabular}{l}
+            $c_{1}=2- c_{2} $ \\
+            $-c_{1}- 4 c_{2}=3$
+		\end{tabular}  
+    \right\} \Leftrightarrow 
+		\left.
+            \begin{tabular}{l}
+            $c_{1}=2- c_{2} $ \\
+            $-(2- c_{2})- 4 c_{2}=3$
+		\end{tabular}  
+    \right\} \Leftrightarrow 
+		\left.
+            \begin{tabular}{l}
+            $c_{1}=2- c_{2} $ \\
+            $-2- 3c_{2}=3$
+		\end{tabular}  
+    \right\} \Leftrightarrow 
+\]
+\[
+		\left.
+            \begin{tabular}{l}
+            $c_{1}=2- c_{2} $ \\
+            $ -3c_{2}=5$
+		\end{tabular}  
+    \right\} \Leftrightarrow 
+		\left.
+            \begin{tabular}{l}
+            $c_{1}=2- c_{2} $ \\
+            $ c_{2}= -\frac{5}{3} $
+		\end{tabular}  
+    \right\} \Leftrightarrow 
+		\left.
+            \begin{tabular}{l}
+                $c_{1}=2 + \frac{5}{3}  $ \\
+            $ c_{2}= -\frac{5}{3} $
+		\end{tabular}  
+    \right\} \Leftrightarrow 
+		\left.
+            \begin{tabular}{l}
+                $c_{1}= \frac{11}{3}  $ \\
+            $ c_{2}= -\frac{5}{3} $
+		\end{tabular}  
+    \right\} \Leftrightarrow 
+\] 
+Άρα η λύση του προβλήματος αρχικών τιμών είναι η 
+\[
+    \boxed {  y(x)= \frac{11}{3} e^{-x} - \frac{5}{3} e^{-4x} }
+\]
+
+
+
+
+\end{enumerate}
+
+\end{document}

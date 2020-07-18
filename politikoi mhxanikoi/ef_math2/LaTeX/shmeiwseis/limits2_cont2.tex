@@ -1,0 +1,260 @@
+\input{preamble.tex}
+\input{definitions.tex}
+
+
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+
+
+
+\begin{document}
+
+
+\chapter{Όρια Συναρτήσεων Πολλών Μεταβλητών}
+
+\section{Ορίο Συνάρτησης δύο Μεταβλητών}
+
+\vspace{\baselineskip}
+
+\mydfn{%
+  Έστω $ f \colon A \subseteq \mathbb{R}^{2} \to \mathbb{R} $.
+
+  Λέμε ότι η $f$ έχει \textcolor{Col1}{όριο} τον αριθμό $ L \in \mathbb{R} $ στο σημείο 
+  $ (x_{0}, y_{0}) $, και το συμβολίζουμε με 
+  \[ \lim\limits_{(x,y)\to (x_{0},y_{0})}
+    f(x,y) = L \quad \text{ή} \quad \lim_{\substack{x\to x_{0} \\ y\to y_{0}}} 
+  f(x,y)=L, \; \text{αν} \] 
+  \[
+    \forall \varepsilon > 0, \; \exists \delta > 0 \; : \; \forall (x,y) \in A 
+    \; \text{με} \; 0 < \sqrt{(x- x_{0})^{2}+(y- y_{0})^{2}} < 
+    \delta \Rightarrow \abs{f(x,y)-L} < \varepsilon 
+\]}
+
+
+\section{Βασικά Θεωρήματα}
+
+\mythm{%
+  Έστω $ f,g \colon A \subseteq \mathbb{R}^{2} \to \mathbb{R} $ με 
+  $ \lim\limits_{\substack{x\to x_{0} \\y \to y_{0}}}  f(x,y) = L \in \mathbb{R} $ και 
+  $ \lim\limits_{\substack{x\to x_{0} \\y \to y_{0}}} g(x,y) = M \in \mathbb{R} $. Τότε:
+
+  \begin{minipage}[t]{0.48\textwidth}
+    \begin{enumerate}
+      \item $ \lim\limits_{\substack{x\to x_{0} \\y \to y_{0}}}  
+        [f(x,y)\pm g(x,y)] = L\pm M $
+      \item $ \lim\limits_{\substack{x\to x_{0} \\y \to y_{0}}}  
+        [a f(x,y)] = aL $ 
+      \item $ \lim\limits_{\substack{x\to x_{0} \\y \to y_{0}}}  
+        [f(x,y)\cdot g(x,y)] = L\cdot M $
+      \item $ \lim\limits_{\substack{x\to x_{0} \\y \to y_{0}}}  
+        \frac{f(x,y)}{g(x,y)} = \frac{L}{M}, \; M \neq 0, \; g(x,y) \neq 0 $
+      \item $ \lim\limits_{\substack{x\to x_{0} \\y \to y_{0}}}  
+        [f(x,y)]^{a} = {L}^{a}, \; a \in \mathbb{R}^{*}_{+}, \; f(x,y) \geq 0 $
+      \item $ \lim\limits_{\substack{x\to x_{0} \\y \to y_{0}}} \sqrt[n]{f(x,y)} =
+        \sqrt[n]{L}, \; n \in \mathbb{N} \; f(x,y) \geq 0  $
+    \end{enumerate}
+  \end{minipage} \hfill 
+  \begin{minipage}[t]{0.48\textwidth}
+    \begin{enumerate}
+      \setcounter{enumi}{6}
+    \item $ \lim\limits_{\substack{x\to x_{0} \\y \to y_{0}}}  \abs{f(x,y)} = \abs{L} $
+    \item $ \lim\limits_{\substack{x\to x_{0} \\y \to y_{0}}} a^{f(x,y)} = 
+      a^{L}, \; a >0 $
+    \item $ f(x,y) \leq g(x,y), \; \forall (x,y) \in A \Rightarrow L \leq M $
+  \end{enumerate}
+\end{minipage}
+}
+
+\begin{example}
+  \begin{align*}
+    \lim\limits_{(x,y)\to (0, 0)} \frac{x^{2}-xy}{\sqrt{x} - \sqrt{y}} 
+    &= \lim\limits_{(x,y)\to (0, 0)} \frac{x(x-y)(\sqrt{x} + \sqrt{y})}{(\sqrt{x} -
+    \sqrt{y} )(\sqrt{x} + \sqrt{y})} = \lim\limits_{(x,y)\to (0, 0)}
+    \frac{x(x-y)(\sqrt{x} - \sqrt{y} )}{x-y} \\
+    &= \lim\limits_{(x,y)\to (0,0)} [x(\sqrt{x} + \sqrt{y})] = \lim\limits_{(x,y)\to
+    (0, 0)} x \cdot \lim\limits_{(x,y)\to (0, 0)} (\sqrt{x} + \sqrt{y}) = 0 \cdot 0 = 0 
+  \end{align*}
+\end{example}
+
+\mythm{%
+  \begin{minipage}{0.3\textwidth}
+    \begin{enumerate}[i)]
+      \item $ \abs{f(x,y)} \leq \abs{g(x,y)} $ \hfill \tikzmark{a}
+      \item $ \lim\limits_{(x,y)\to (x_{0}, y_{0})} g(x,y) = 0 $ \hfill \tikzmark{b}
+    \end{enumerate}
+    \mybrace{a}{b}[$\lim\limits_{(x,y)\to (x_{0}, y_{0})} f(x,y) = 0 $]
+\end{minipage}}
+
+\begin{example}
+  Να υπολογίσετε το όριο $ \lim\limits_{(x,y)\to (0, 0)} xy \sin{\frac{1}{x}} $. 
+
+  \begin{solution}
+  \item {}
+    \begin{minipage}{0.42\textwidth}
+      \begin{enumerate}[i)]
+        \item $ \abs{xy \sin{\frac{1}{x}}} = \abs{xy} 
+          \abs{\sin{\frac{1}{x}}} \leq \abs{xy} \cdot 1 = \abs{xy} $ 
+          \hfill \tikzmark{a}
+        \item $ \lim\limits_{(x,y)\to (0, 0)} xy = 0$ \hfill \tikzmark{b}
+      \end{enumerate}
+    \end{minipage}
+
+    \mybrace{a}{b}[$ \lim\limits_{(x,y)\to (0, 0)} xy 
+    \sin{\frac{1}{x}} = 0$]
+  \end{solution}
+\end{example}
+
+\mythm{%
+  \begin{minipage}{0.3\textwidth}
+    \begin{enumerate}[i)]
+      \item $ \abs{g(x,y)} \leq M \in \mathbb{R} $ \hfill \tikzmark{a}
+      \item $ \lim\limits_{(x,y)\to (x_{0}, y_{0})} f(x,y) = 0 $ \hfill \tikzmark{b}
+    \end{enumerate}
+    \mybrace{a}{b}[$ \lim\limits_{(x,y)\to (x_{0}, y_{0})} [f(x,y)\cdot g(x,y)] = 0 $]
+\end{minipage}}
+
+\begin{example}
+  Να υπολογίσετε το όριο $ \lim\limits_{(x,y)\to (0, 0)} (x^{2}+y^{2}) 
+  \sin{\frac{1}{y}} $.  
+
+  \begin{solution}
+  \item {}
+    \begin{minipage}{0.35\textwidth}
+      \begin{enumerate}[i)]
+        \item $ \abs{\sin{\frac{1}{y}}} \leq 1 $ \hfill \tikzmark{a}
+        \item $ \lim\limits_{(x,y)\to (0, 0)} (x^{2}+y^{2}) = 0+0=0 $ 
+          \hfill \tikzmark{b}
+      \end{enumerate}
+    \end{minipage}
+    \mybrace{a}{b}[$ \lim\limits_{(x,y)\to (0, 0)} (x^{2}+y^{2}) \sin{\frac{1}{y}} 
+    = 0$]
+  \end{solution}
+\end{example}
+
+
+\section{Διαδοχικά ή Επάλληλα όρια}
+
+\mydfn{Ορίζουμε, τα \textcolor{Col1}{διαδοχικά} ή 
+  \textcolor{Col1}{επάλληλα} όρια, ως εξής:
+  \[
+    L_{1} = \lim_{x \to x_{0}} \left(\lim_{y \to y_{0}} f(x,y)\right) 
+    \quad \text{και ομοίως} \quad
+    L_{2} = \lim_{y \to y_{0}} \left(\lim_{x \to x_{0}} f(x,y)\right) 
+\]} 
+
+\begin{rem}
+  Αν συμβολίσουμε το όριο $ \lim\limits_{(x,y)\to (x_{0}, y_{0})} f(x,y) = L $,
+  τότε ισχύουν οι παρακάτω περιπτώσεις:
+  \begin{myitemize}
+    \item Αν υπάρχουν τα όρια $ L_{1} $ και $ L_{2} $ και $ L_{1} \neq L_{2} $, τότε
+      \textbf{δεν} \textbf{υπάρχει} το $ L $
+    \item Αν υπάρχουν τα $ L_{1} $ και $ L_{2} $, τότε 
+      \textbf{δεν} \textbf{εξασφαλίζεται} η ύπαρξη του $ L $ ακόμη και αν 
+      $ L_{1}=L_{2} $.
+    \item Αν υπάρχουν τα όρια $ L_{1} $ και $ L_{2} $ \textbf{και} \textbf{υπάρχει} το 
+      $ L $, τότε $ L_{1}=L_{2}=L $
+    \item Η ύπαρξη του $ L_{1} $ δεν εξασφαλίζει την ύπαρξη του $ L_{2} $ 
+      και αντιστρόφως.
+    \item Η ύπαρξη του $ L $ δεν εξασφαλίζει την ύπαρξη των $ L_{1} $ και $ L_{2} $.
+  \end{myitemize}
+\end{rem}
+
+\begin{example}
+  Να υπολογιστεί το όριο $ \lim\limits_{(x,y)\to (0, 0)} \frac{x-y}{x+y} $
+  \begin{solution}
+    \begin{align*}
+      L_{1}&= \lim_{x \to 0} \left(\lim_{y \to 0} \frac{x-y}{x+y}\right) = 
+      \lim_{x \to 0} \frac{x}{x} = \lim_{x \to 0} 1 = 1 
+      \intertext{και}
+      L_{2}&= \lim_{y \to 0} \left(\lim_{x \to 0} \frac{x-y}{x+y} \right) = 
+      \lim_{y \to 0} \frac{-y}{y} = \lim_{y \to 0}(-1) = -1
+    \end{align*}
+    Επομένως αφού $ L_{1} \neq L_{2} $ δεν υπάρχει το ζητούμενο όριο.
+  \end{solution}
+\end{example}
+
+\begin{example}
+  Να υπολογιστεί το όριο $ \lim\limits_{(x,y)\to (0, 0)} \frac{x^{3}+y}{x+y^{3}} $
+  \begin{solution}
+    \begin{align*}
+      L_{1} &= \lim_{x \to 0} \left(\lim_{y \to 0} \frac{x^{3}+y}{x+y^{3}}\right) = 
+      \lim_{x \to 0} \left(\frac{x^{3}}{x}\right) = \lim_{x \to 0} \left(x^{2}\right) = 0
+      \intertext{και}
+      L_{2} &= \lim_{y \to 0} \left( \lim_{x \to 0} \frac{x^{3}+y}{x+y^{3}}\right) = 
+      \lim_{y \to 0} \frac{y}{y^{3}} = \lim_{y \to 0} \left(\frac{1}{y^{2}}\right) = 
+      +\infty
+    \end{align*} 
+    Επομένως αφού $ L_{1} \neq L_{2} $ δεν υπάρχει το ζητούμενο όριο.
+  \end{solution}
+\end{example}
+
+\begin{example}
+  Να υπολογιστεί το όριο $ \lim\limits_{(x,y)\to (0, 0)} \frac{xy}{x^{2}+y^{2}} $.
+  \begin{solution}
+    \begin{align*}
+      L_{1} &= \lim_{x \to 0} \left(\lim_{y \to 0} \frac{xy}{x^{2}+y^{2}}\right) = 
+      \lim_{x \to 0} \frac{0}{x^{2}} = \lim_{x \to 0} 0 = 0
+      \intertext{και}
+      L_{2} &= \lim_{y \to 0} \left(\lim_{x \to 0} \frac{xy}{x^{2}+y^{2}}\right) = 
+      \lim_{y \to 0} \frac{0}{y^{2}} = \lim_{y \to 0} 0 = 0
+    \end{align*}
+  \end{solution}
+  Παρατηρούμε ότι $ L_{1} = L_{2} $, όμως δεν γνωρίζουμε αν υπάρχει το $L$, 
+  οπότε δεν μπορούμε να ισχυριστούμε ότι $ L=0 $.
+\end{example}
+
+
+\section{Συνέχεια Συναρτήσεων Πολλών Μεταβλητών}
+
+\mydfn{Η συνάρτηση $ f \colon A \subseteq \mathbb{R}^{2} \to \mathbb{R} $ 
+  λέγεται \textcolor{Col1}{συνεχής στο $ (x_{0}, y_{0}) \in A $} αν 
+$ \lim\limits_{(x,y)\to (x_{0}, y_{0})} f(x,y) = f(x_{0}, y_{0}) $.}
+
+\mydfn{Η συνάρτηση $ f \colon A \subseteq \mathbb{R}^{2} \to \mathbb{R} $ 
+  λέγεται \textcolor{Col1}{συνεχής στο Α}, αν είναι συνεχής σε \textbf{κάθε} σημείο 
+$ (x_{0}, y_{0}) \in A $.}
+
+\begin{rem}
+  Από τον παραπάνω ορισμό, καταλαβαίνουμε ότι μια συνάρτηση $ f(x,y) $ 
+  είναι συνεχής στο σημείο $ (x_{0}, y_{0}) $, αν
+  \begin{myitemize}
+    \item Υπάρχει το $ \lim\limits_{\substack{x\to x_{0} \\y \to y_{0}}} f(x,y) $
+    \item Υπάρχει το $ f(x_{0}, y_{0}) \in \mathbb{R} $
+    \item $  \lim\limits_{\substack{x\to x_{0} \\y \to y_{0}}} f(x,y)= 
+      f(x_{0}, y_{0}) $
+  \end{myitemize}
+\end{rem}
+
+\begin{example}
+  Να μελετηθεί πλήρως ως προς τη συνέχεια η συνάρτηση 
+  $ f(x,y) = \frac{x^{2}+y^{4}}{x^{4}+y^{2}} $.
+  \begin{solution}
+  \item {}
+    Παρατηρούμε ότι η συνάρτηση δεν ορίζεται στο σημείο $ (0,0) $. Οπότε:
+
+    Αν $ (x,y) \neq (0,0) $ τότε η $f= \frac{x^{4}+y^{2}}{x^{4}+y^{2}} $ είναι συνεχής 
+    ως ρητή συνάρτηση.
+
+    Αν $ (x,y)=(0,0) $, εξετάζουμε το όριο της $f$: 
+
+    Εξετάζουμε τα επάλληλα όρια της $f$ και έχουμε
+    \begin{myitemize}
+      \item $ L_{1} = \lim_{x \to 0} 
+        \left( 
+          \lim_{y \to 0} \frac{x^{2}+y^{4}}{x^{4}+y^{2}} 
+        \right) = \lim_{x \to 0} \frac{x^{2}}{x^{4}} = \lim_{x \to 0} \frac{1}{x^{2}}
+        \overset{(\frac{1}{0^{+}})}{=} +\infty $
+      \item $ L_{2} = \lim_{y \to 0} 
+        \left(
+          \lim_{x \to 0} 
+          \frac{x^{2}+y^{4}}{x^{4}+y^{2}}
+        \right) = \lim_{y \to 0} \frac{y^{4}}{y^{2}} = \lim_{y \to 0} y^{2} = 0 $
+    \end{myitemize}
+    Επομένως δεν υπάρχει το όριο της $f$ στο $ (0,0) $, γιατί τα επάλληλα όρια δεν 
+    είναι ίσα.
+    Άρα η $f$ δεν είναι συνεχής στο σημείο $(0,0)$.
+  \end{solution}
+\end{example}
+
+
+\end{document}

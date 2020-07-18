@@ -1,0 +1,138 @@
+\documentclass[a4paper,12pt]{article}
+
+
+\usepackage[english,greek]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{geometry}
+
+\geometry{left=25.63mm,right=25.63mm,top=36.25mm,bottom=36.25mm,footskip=24.16mm,headsep=24.16mm}
+
+\pagestyle{empty}
+
+
+\begin{document}
+
+\begin{center}
+\fbox{\large \bfseries Ασκήσεις Επανάληψης}
+\end{center}
+
+\vspace{2\baselineskip}
+
+\begin{enumerate}
+
+\item Να βρεθεί ο $(A^T \cdot A)^{-1}$ όταν:
+\(
+A=\begin{pmatrix}
+0 & 0 \\
+1 & 0 \\
+2 & -1 \\
+0 & 3 
+\end{pmatrix}
+\)\hfill Απ: $\frac{1}{46}\begin{pmatrix}
+10 & 2 \\
+2 & 5
+\end{pmatrix}$
+
+\item Να βρεθεί ο $(A^T \cdot A)^{-1}$ όταν:
+\(
+Α=\begin{pmatrix}
+0 & 0 & 1 \\
+2 & 0 & 0 \\
+2 & 2 & 0 \\
+0 & 1 & 1
+\end{pmatrix}
+\)\hfill Απ: $\frac{1}{40}\begin{pmatrix}
+9 & -8 & 4 \\
+-8 & 16 & -8 \\
+4 & -8 & 24
+\end{pmatrix}$
+
+
+\item Να βρεθεί ο $x$ ώστε ο βαθμός του πίνακα να είναι $1$.
+
+$A=\begin{pmatrix}
+\phantom{-}2 & -3 \\
+-6 & \phantom{-}x
+\end{pmatrix}$\hfill Απ: $x=9$
+
+\item Να βρεθεί ο $x$ ώστε ο βαθμός του πίνακα να είναι $2$.
+
+$Α=\begin{pmatrix}
+1 & 2 & 1\\
+2 & x & 1 \\
+1 & 1 & 0
+\end{pmatrix}$\hfill Απ: $x=3$
+
+\item Να υπολογιστεί ο βαθμός των πινάκων:
+
+\begin{enumerate}[i)]
+
+\item $A=\begin{pmatrix}
+\phantom{-}3 & \phantom{-}2 & 4 \\
+\phantom{-}1 & -2 & 3 \\
+-3 & -10 & 1 
+\end{pmatrix}$\hfill Απ: $\rank(A)=2$
+
+\item $B=\begin{pmatrix}
+1 & 1 & \phantom{-}1 \\
+2 & 0 & \phantom{-}4 \\
+3 & 2 & \phantom{-}4 \\
+0 & 5 & -5
+\end{pmatrix}$\hfill Απ: $\rank(B)=2$
+
+\end{enumerate}
+
+\item Δίνεται η συνάρτηση: \[f(x,y,z)=e^{5x}\sin(3y)\cos(4z)\] Να δείξετε ότι \[f_{xx}+f_{yy}+f_{zz}=0\] (ή με άλλα λόγια ότι η συνάρτηση ικανοποιεί την εξίσωση \textlatin{Laplace})
+
+\item Να βρεθεί η $f(x,y)$ αν είναι γνωστές οι μερικές παράγωγοί της:
+\[
+f_x=2\sin y + 3x^2 \quad \text{και} \quad f_y=2x\cos y 
+\]
+
+\hfill Απ: $f(x,y)=2x\sin y + x^3 + 3$
+
+\item Να βρεθεί η $f(x,y)$ αν είναι γνωστές οι παρακάτω σχέσεις: 
+\[
+f_x=2xy^2+4x^3e^y \quad \text{και} \quad f(-1,y)=y^2+e^y+2y+1
+\]
+
+\hfill Απ: $f(x,y)= y^2x^2 +e^yx^4+2y+1$
+
+\item Να βρεθεί η κλίση των συναρτήσεων:
+
+\begin{enumerate}[i)]
+
+\item $f(x,y,z)=x^2-y^2+2xy$ 
+
+\hfill Απ: $\grad f = (2x+2y,-2y+2x,0)$
+
+\item $f(x,y,z)=xz\cos y+z^2\sin y$ 
+
+\hfill Απ: $\grad f=(z\cos y, -xz\sin y + z^2\cos y, x\cos y + 2z\sin y)$
+
+\end{enumerate} 
+
+\item Να βρεθούν η απόκλιση και ο στροβιλισμός για τις παρακάτω διανυσματικές συναρτήσεις (Διανυσματικά Πεδία):
+\begin{enumerate}[i)]
+
+\item $\vec{F}(x,y,z)=(2xy+z^2,x^2-2yz,-y^2+2xz)$
+
+\hfill Απ: $\div F = 2y-2z+2x,\quad  \curl F=0$
+
+\item $\vec{F}(x,y,z)=(xz\sin y, z^2-y^2+x^2, 2xyz)$
+
+\hfill Απ: $\div F = z\sin y-2y+2xy,  \quad \curl F=(2xz-2z,x\sin y-2yz,2x-xz\cos y)$
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+\end{document}
