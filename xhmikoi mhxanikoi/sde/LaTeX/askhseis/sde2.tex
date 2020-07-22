@@ -1,4 +1,4 @@
-\input{preamble_ask.tex}
+\input{preamble.tex}
 \input{definitions_ask.tex}
 
 \pagestyle{askhseis}
@@ -10,37 +10,115 @@
 
 \begin{center}
   \minibox{\large \bfseries \color{Col1} Ασκήσεις ΣΔΕ (2ης ταξης)} 
-  % από σημειώσεις Πανδή
 \end{center}
 
 \vspace{\baselineskip}
 
 \begin{enumerate}
-  \item Να βρεθεί η γενική λύση των παρακάτω σδε.
+  \item Να δειχθεί ότι τα  παρακάτω σύνολα, αποτελούν Θεμελιώδη Σύνολα Λύσεων των 
+    αντίστοιχων διαφορικών εξισώσεων.
     \begin{enumerate}[i)]
-      \item $ x^{2}y'' - xy' + y = 0 $ \hfill Απ: $ y_{1}=x, \; y_{2} = x \ln{x} $ 
+      \item $ \{ \mathrm{e}^{-6x}, \mathrm{e}^{-4x} \} $,\quad 
+        $ y''(x)+10y'(x)+24y(x)=0 $ 
+      \item $ \{ \cos{2x}, \sin{2x} \}$, \quad $ y''(x)+4y(x)=0 $
+      \item $ \{ \mathrm{e}^{-x}, \mathrm{e}^{3x}, x\mathrm{e}^{3x} \} $, 
+        \quad $ y'''(x)-5y''(x)+3y'(x)+9y(x)=0 $
     \end{enumerate}
 
-  \item Να βρεθεί η γενική λύση των παρακάτω σδε.
+  \item Να λυθούν τα παρακάτω προβλήματα αρχικών τιμών.
     \begin{enumerate}[i)]
-      \item $ y'' - y=0 $, \quad $ y(0)=4, \; y'(0)=-5 $ 
-        \hfill Απ:  $ y= \mathrm{e}^{x}+3 \mathrm{e}^{-2x} $ 
-      \item $ y''-4y'+4y=0 $, \quad $ y(0)=3, \; y'(0)=1 $ 
-        \hfill Απ:  $ y=3 \mathrm{e}^{2x} - 5x \mathrm{e}^{2x} $
+      \item $ y''(x) - y(x)=0 $, \quad $ y(0)=4, \; y'(0)=-5 $ 
+        \hfill Απ:  $ y(x)= \mathrm{e}^{x}+3 \mathrm{e}^{-2x} $ 
+      \item $ y''(x)-4y'(x)+4y(x)=0 $, \quad $ y(0)=3, \; y'(0)=1 $ 
+        \hfill Απ:  $ y(x)=3 \mathrm{e}^{2x} - 5x \mathrm{e}^{2x} $
+      \item $ y''(x)-6y'(x)+9y(x)=0 $, \quad $ y(0)=0, \; y'(0)=2 $ 
+        \hfill Απ:  $ y(x)=2x \mathrm{e}^{3x} $
     \end{enumerate}
 
-  \item Να βρεθεί η γενική λύση των παρακάτω σδε.
+  \item Δίνεται η εξίσωση $ y''(x)-(2a-1)y'(x)+a(a-1)y(x)=0 $. Να υπολογιστεί 
+    η τιμή του $a$ για τις οποίες η λύση της εξίσωσης τείνει στο 0, καθως 
+    $ x \to \infty $.
+    \hfill Απ: $ a<0 $. 
+
+  \item Να βρεθεί η γενική λύση των παρακάτω σδε με τη μέθοδο των προσδιοριστέων 
+    συντελεστών.
     \begin{enumerate}[i)]
-      \item $ y''+4y=8x^{2} $, \quad $ y(0)=-1, \; y'(0)=2 $ 
-        \hfill Απ: $ y= \sin{2x} + 2x^{2}-1 $ 
-      \item $ y''-3y'+2y= \mathrm{e}^{x} $
-        \hfill Απ: $ y= c_{1} \mathrm{e}^{2x} + c_{2} \mathrm{e}^{x} - x
+      \item $ y''(x)+4y(x)=8x^{2} $, \quad $ y(0)=-1, \; y'(0)=2 $ 
+        \hfill Απ: $ y(x)= \sin{2x} + 2x^{2}-1 $ 
+      \item $ y''(x)-3y'(x)+2y(x)= \mathrm{e}^{x} $
+        \hfill Απ: $ y(x)= c_{1} \mathrm{e}^{2x} + c_{2} \mathrm{e}^{x} - x
         \mathrm{e}^{x}  $ 
+      \item $ y''(x) +2y'(x)+y= \mathrm{e}^{x} \cos{x} $
+        \hfill Απ: $ y(x)= c_{1} \mathrm{e}^{-x} + c_{2}x \mathrm{e}^{-x} +
+        \frac{4}{25} \mathrm{e}^{x} \sin{x} + \frac{3}{25} \mathrm{e}^{x} \cos{x} $  
+      \item $y''(x)-2y'(x)+y(x)=x\mathrm{e}^{x}$ 
+        \hfill Απ:  $y(x)=(c_{1}+c_{2}x+\frac{x^{3}}{6})\mathrm{e}^{x}$
+      \item $y''(x)+y(x)=3\sin 2x + x\cos 2x$ 
+        \hfill Απ: $y(x)=c_{1}\cos x+c_{2}\sin x-\frac{1}{3}x\cos 2x-\frac{5}{9}\sin 2x $
+      \item $y''(x)-y'(x)=\cos^{2}x$ 
+        \hfill Απ: $y(x) =c_{1}+c_{2}\mathrm{e}^{x}-\frac{1}{2}x-\frac{1}{10}\cos 2x- 
+        \frac{1}{20}\sin 2x$
+    \end{enumerate}
+
+  \item Με χρήση της μεθόδου των προσδιοριστέων συντελεστών, να βρεθεί μια μερική 
+    λύση των κάτωθι διαφορικών εξισώσεων:
+    \begin{enumerate}[i)]
+      \item $y''(x)-2y'(x)-3y(x)=x$ \hfill Απ: $y(x)=\frac{2-3x}{9}$
+      \item $9y''(x)-12y'(x)+4y(x)=\mathrm{e}^{-3x}$ 
+        \hfill Απ: $y(x)=\frac{\mathrm{e}^{-3x}}{121}$
+      \item $y''(x)+4y'(x)-5y(x)=-3\mathrm{e}^{x}$ 
+        \hfill Απ: $y(x)=-x\frac{\mathrm{e}^{x}}{2}$
+      \item $y''(x)-4y'(x)-5y(x)=-648x^{2}\mathrm{e}^{5x}$ 
+        \hfill Απ: $ y(x)=-6(x-3x^{2}+6x^{3})\mathrm{e}^{5x}$
+    \end{enumerate}
+
+  \item Με χρήση της μεθόδου μεταβολής των παραμέτρων (Lagrange), να βρεθεί 
+    μια μερική λύση των κάτωθι διαφορικών εξισώσεων:
+    \begin{enumerate}[i)]
+      \item $y''(x)-2y'(x)+y(x)=\mathrm{e}^{x}\ln x$, $x>0$ 
+        \hfill Απ: $y(x)=\frac{x^{2}\mathrm{e}^{x}}{4}(2\ln x-3)$
+      \item $y''(x)-9y(x)=\frac{1}{1+\mathrm{e}^{3x}}$ 
+        \hfill Απ: $y(x)=\frac{-1}{18}+\frac{\mathrm{e}^{3x}}{18}
+        \ln (1+\mathrm{e}^{-3x})- \frac{\mathrm{e}^{-3x}}{18}\ln(1+\mathrm{e}^{3x})$
+      \item $y''(x)-2y'(x)+y(x)=\frac{\mathrm{e}^x}{x}$, $x>0$ 
+        \hfill Απ: $y(x)=x\mathrm{e}^{x}(\ln x-1)$
+      \item $y''(x)-4y'(x)+4y(x)=\frac{\mathrm{e}^{2x}}{x^{2}}$, $x>0$ 
+        \hfill Απ: $y(x)=-\mathrm{e}^{2x}(\ln x +1)$
+      \item $y''(x)+3y'(x)+2y(x)=\cos \mathrm{e}^{x}$ 
+        \hfill Απ: $y(x)=-\mathrm{e}^{-2x}\cos \mathrm{e}^{x}$
+    \end{enumerate}
+
+  \item Να βρεθεί η γενική λύση των παρακάτω σδε με τη μέθοδο μεταβολής των 
+    παραμέτρων (Μέθοδος Largange).
+    \begin{enumerate}[i)]
       \item $ (1+x^{2})y''-2xy'+2y=2x $ 
 
         \hfill Απ: $ y= c_{1}x + c_{2}(x^{2}-1) - x \ln{(x^{2}+1)} - \frac{2x}{x^{2}+1}
         + (x^{2}-1) \arctan(x) - \frac{x(x^{2}-1)}{x^{2}+1} $
     \end{enumerate}
+
+  \item Να βρεθεί η γενική λύση των παρακάτω σδε.
+    \begin{enumerate}[i)]
+      \item $ x^{2}y'' - xy' + y = 0 $ \hfill Απ: $ y(x)= c_{1}x + c_{2}x \ln{x} $ 
+      \item $ x^{2}y'' - 4xy'+6y = 0 $ \hfill Απ: $ y(x)=c_{1}x^{2} + c_{2}x^{3} $ 
+      \item $ 4x^{2}y'' + 8x y' -3y = 7x^{2}-15x^{3} $ 
+        \hfill Απ: $ y(x)= c_{1} x^{1/2} - \frac{c_{2}}{2} x^{-3/2} + 
+        \frac{1}{3} x^{2} - \frac{1}{3} x^{3} $ 
+    \end{enumerate}
+
+  \item Να βρεθεί η γενική λύση της εξίσωσης 
+    \[
+      y''+y = 
+      \begin{cases} 
+        x, \quad &0 \leq x \leq \pi \\
+        \pi \mathrm{e}^{\pi -x}, \quad &x > \pi
+      \end{cases}
+    \] 
+    \hfill Απ: $ y(x) = 
+    \begin{cases} 
+      c_{1} \cos{x} + c_{2} \sin{x} + x \\
+      c_{1} \cos{x} + c_{2} \sin{x} + \frac{\pi}{2} \mathrm{e}^{\pi -x} 
+    \end{cases} $ 
 \end{enumerate}
 
 

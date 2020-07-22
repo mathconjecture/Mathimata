@@ -1,0 +1,39 @@
+\input{preamble.tex}
+\input{definitions_ask.tex}
+
+\pagestyle{askhseis}
+\everymath{\displaystyle}
+
+\begin{document}
+
+
+
+\begin{center}
+  \minibox[c]{\large \bfseries \color{Col1} Ασκήσεις ΣΔΕ \\ \large \bfseries
+  \textcolor{Col1}{(Μέθοδος Σειρών)}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Να λυθούν, με τη μέθοδο των σειρών, κοντά στο σημείο $ x_{0}=0 $, οι παρακάτω 
+    εξισώσεις.
+    \begin{enumerate}[i)]
+      \item $ y'' -xy'+2y=0 $
+        \hfill Απ: $ y = a_{0}\left(1-x^{2}\right) + a_{1}
+        \left(x - \frac{x^{3}}{6} - \frac{x^{5}}{120} - \frac{x^{7}}{1680} - 
+        \cdots \right) $ 
+
+      \item  $ x^{2}y'' - 2.5 x y' -2y=0 $ \quad (Euler-Cauchy)
+        \hfill Απ: $ y = c_{1}x^{-0.5}+ c_{2}x^{4} $ 
+
+      \item $ x(x-1)y''+(3x-1)y'+y=0 $ 
+        \hfill Απ: $ y= c_{1} \frac{1}{1-x} + c_{2} \frac{\ln{x}}{1-x}, 
+        \quad \abs{x} <1$ 
+
+      \item $ (x^{2}-x)y'' -xy'+y=0 $
+        \hfill Απ:  $ y= c_{1}x + c_{2}(x \ln{x} + 1) $
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
