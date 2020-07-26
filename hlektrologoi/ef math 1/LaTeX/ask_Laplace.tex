@@ -1,21 +1,21 @@
-\input{C:/Users/Vang/Desktop/MyNotesLaTeX/preamble.tex}
-\input{C:/Users/Vang/Desktop/MyNotesLaTeX/definitions.tex}
+\input{preamble.tex}
+\input{definitions.tex}
+
+\everymath{\displaystyle}
+\pagestyle{askhseis}
 
 
 \begin{document}
 
-\pagestyle{empty}
-
-
 
 \begin{center}
-\fbox{\large\bfseries Ασκήσεις Στo Μετασχηματισμό \textlatin{Laplace}}
+  \minibox{\large\bfseries \textcolor{Col1}{Ασκήσεις Στo Μετασχηματισμό Laplace}}
 \end{center}
 
 \vspace{\baselineskip}
 
 \begin{enumerate}
-\item Να λυθούν οι ολοκληρωδιαφορικές εξισώσεις:
+\item Να λυθούν οι ολοκληρoδιαφορικές εξισώσεις:
 \begin{enumerate}[i)]
 
 \item $y'(t)=\sin t+\int_{0}^{t}y(t-\xi)\cos\xi\, d\xi,\quad y(0)=0$ \hfill Απ: $y(t)=\frac{1}{2}t$
@@ -57,7 +57,7 @@ $\phi_3(t)=t$
 
 \end{enumerate}
 
-\item Εξετάστε αν οι παρακάτω συναρτήσεις, μπορεί να είναι ο μετασχηματισμός \textlatin{Laplace} κάποιων συνεχών συναρτήσεων $f(t)$ εκθετικής τάξης. Δικαιολογήστε την απάντησή σας.
+\item Εξετάστε αν οι παρακάτω συναρτήσεις, μπορεί να είναι ο μετασχηματισμός Laplace κάποιων συνεχών συναρτήσεων $f(t)$ εκθετικής τάξης. Δικαιολογήστε την απάντησή σας.
 
 \begin{enumerate}[i)]
 
@@ -68,15 +68,15 @@ $\phi_3(t)=t$
 
 \end{enumerate}
 
-\item Αποδείξτε ότι ο μετασχηματισμός \textlatin{Laplace} της μεταφοράς της συνάρτησης $f(t), t\geq 0$ στο $c>0$ είναι:
+\item Αποδείξτε ότι ο μετασχηματισμός {Laplace} της μεταφοράς της συνάρτησης $f(t), t\geq 0$ στο $c>0$ είναι:
 \[
 \mathcal{L}[v_c(t)f(t-c)]=e^{-s}F(s)
 \]
-όπου $v_c(t)$ η βηματική συνάρτηση (\textlatin{Heaviside}) και $F$ ο μετασχηματισμός \textlatin{Laplace} της $f$.
+όπου $v_c(t)$ η βηματική συνάρτηση (Heaviside) και $F$ ο μετασχηματισμός Laplace της $f$.
 
 \newpage
 
-\item Να βρείτε το μετασχηματισμό \textlatin{Laplace} των συναρτήσεων:
+\item Να βρείτε το μετασχηματισμό Laplace των συναρτήσεων:
 
 \begin{enumerate}[i)]
 
@@ -96,7 +96,7 @@ e^{2t} & ,0\leq t<1 \\
 
 \end{enumerate}
 
-\item Αποδείξτε ότι ο μετασχηματισμός \textlatin{Laplace} της συνάρτησης $t^2f(t)$ είναι ίσος με $F''(s)$, όπου $F(s)$ ο μετασχηματισμός \textlatin{Laplace} της $f$.
+\item Αποδείξτε ότι ο μετασχηματισμός Laplace της συνάρτησης $t^2f(t)$ είναι ίσος με $F''(s)$, όπου $F(s)$ ο μετασχηματισμός Laplace της $f$.
 
 Να λυθούν τα παρακάτω προβλήματα αρχικών τιμών:
 
@@ -112,7 +112,7 @@ e^{2t} & ,0\leq t<1 \\
 
 \end{enumerate}
 
-\item Να βρεθεί ο μετασχηματισμός \textlatin{Laplace} των συναρτήσεων: 
+\item Να βρεθεί ο μετασχηματισμός Laplace των συναρτήσεων: 
 
 \begin{enumerate}[i)]
 
@@ -120,7 +120,7 @@ e^{2t} & ,0\leq t<1 \\
 
 \end{enumerate}
 
-\item Αν υπάρχει ο μετασχηματισμός \textlatin{Laplace} $F(s)$ της συνάρτησης $f(t)$ και ισχύει ότι $f(0)=0$, $\lim\limits_{s\to+\infty}s^2F(s)=1$ και υπάρχει ο μετασχηματισμός \textlatin{Laplace} της $f'(t)$, να δειχθει ότι $f'(0)=1$.
+\item Αν υπάρχει ο μετασχηματισμός Laplace $F(s)$ της συνάρτησης $f(t)$ και ισχύει ότι $f(0)=0$, $\lim\limits_{s\to+\infty}s^2F(s)=1$ και υπάρχει ο μετασχηματισμός Laplace της $f'(t)$, να δειχθει ότι $f'(0)=1$.
 
 \end{enumerate}
 
