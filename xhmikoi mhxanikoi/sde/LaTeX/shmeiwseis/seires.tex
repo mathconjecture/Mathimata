@@ -1,0 +1,145 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\pagestyle{vangelis}
+
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col1}{Δυναμοσειρές}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{dfn}
+  Μια σειρά συναρτήσεων της μορφής $ \sum_{n=0}^{\infty} a_{n}(x- x_{0})^{n} $ 
+  όπου $ a_{n} $ και $ x_{0} $ είναι σταθεροί αριθμοί, ονομάζεται 
+  \textcolor{Col1}{δυναμοσειρά} με κέντρο το $ x= x_{0} $. 
+  Αν $ x_{0}=0 $ τότε έχουμε δυναμοσειρά 
+  $ \sum_{n=0}^{\infty} a_{n} x^{n} $ με κέντρο το 0 .
+\end{dfn}
+
+\begin{rem}
+  Στη συνέχεια θα αναφερθούμε κυρίως σε δυναμοσειρές με κέντρο το 0, αφού η 
+  αντικατάσταση $ t=x- x_{0} $ μετασχηματίζει οποιαδήποτε δυναμοσειρά της μορφής 
+  $ \sum_{n=0}^{\infty} a_{n}(x- x_{0})^{n} $ σε δυναμοσειρά της μορφής $
+  \sum_{n=0}^{\infty} a_{n} x^{n} $. 
+\end{rem}
+
+\section*{Ακτίνα και Διάστημα Σύγκλισης}
+
+\begin{dfn}
+  Ο αριθμός $ R = \lim_{n \to \infty} \abs{\frac{a_{n}}{a_{n+1}}} $ ονομάζεται 
+  \textcolor{Col1}{ακτίνα σύγκλισης} της δυναμοσειράς και ισχύει:
+  \begin{myitemize}
+    \item Αν $ R=0 $ τότε η σειρά συγκλίνει \textbf{μόνο για $ \mathbf{x=0} $}.
+    \item Αν $0 < R < \infty $ τότε η σειρά συγκλίνει για $ \mathbf{\abs{x} < R} $ και 
+      αποκλίνει για $ \abs{x} > R $.
+    \item Αν $ R= \infty $ τότε η σειρά συγκλίνει \textbf{για κάθε $ \mathbf{x \in
+      \mathbb{R}} $}.
+  \end{myitemize}
+\end{dfn}
+
+\begin{rem}
+  Μια δυναμοσειρά συγκλίνει πάντα στο κέντρο της $ x_{0} $.
+\end{rem}
+
+\begin{example}
+  Να βρεθεί το διάστημα και η ακτίνα σύγκλισης της δυναμοσειράς $ \sum_{n=0}^{\infty}
+  \frac{n}{2^{n}} x^{n} $.
+  \begin{solution}
+    \[
+      R= \lim_{n \to \infty} \abs{\frac{a_{n}}{a_{n+1}}} = 
+      \lim_{n \to \infty} \abs{\frac{\frac{n}{2^{n}}}{\frac{n+1}{2^{n+1}}}} = 
+      \lim_{n \to \infty} \left(\frac{n}{n+1} \cdot \frac{2^{n+1}}{2^{n}}\right) = 
+      \lim_{n \to \infty} \left(\frac{n}{n+1} \cdot \frac{\cancel{2^{n}} \cdot
+      2}{\cancel{2^{n}}} \right) = 
+      \lim_{n \to \infty} \left(\frac{n}{n+1} \cdot 2 \right) = 2 \cdot 1 = 2
+    \] 
+    Επομένως η ακτίνα σύγκλισης της δυναμοσειράς είναι $ R=2 $ και το 
+    διάστημα σύγκλισης είναι $ \abs{x} < 2 $.
+  \end{solution}
+\end{example}
+
+\section*{Πράξεις Δυναμοσειρών}
+
+Έστω $ \sum_{n=0}^{\infty} a_{n}x^{n} $ και $ \sum_{n=0}^{\infty} b_{n}x^{n} $ 
+δυναμοσειρές με ακτίνες σύγκλισης $ R_{1} $ και $ R_{2} $ αντίστοιχα και έστω 
+$ R = \min \{R_{1}, R_{2}\} $. Για $ \abs{x} < R $ ορίζουμε 
+\[
+  f(x) = \sum_{n=0}^{\infty} a_{n} x^{n} \quad \text{και} \quad g(x) =
+  \sum_{n=0}^{\infty} b_{n} x^{n}
+\] 
+Τότε για $ \mathbf{\abs{x} < R} $ ισχύει:
+\begin{myitemize}
+  \item $ f(x)\pm g(x)= \sum_{n=0}^{\infty} (a_{n}\pm b_{n}) x^{n} $
+  \item $ \lambda f(x) = \sum_{n=0}^{\infty} (\lambda a_{n}) x^{n}, \quad \lambda \in
+    \mathbb{R} $
+  \item $ f(x) \cdot g(x) = \sum_{n=0}^{\infty} (a_{0}b_{n} + a_{1}b_{n-1} + \cdots +
+    a_{n} b_{0}) x^{n} = \sum_{n=0}^{\infty} \bigl(\sum_{k=0}^{n} a_{k} b_{n-k}\bigr) 
+    x^{n} $
+\end{myitemize}
+
+\begin{prop}
+  Αν για κάθε $ \abs{x} < R $ ισχύει $ \sum_{n=0}^{\infty} a_{n}x^{n} =
+  \sum_{n=0}^{\infty} b_{n} x^{n} $ τότε $ a_{n}=b_{n}, \quad \forall n \geq 0 $.
+\end{prop}
+
+\begin{prop}
+  Ειδικότερα, αν $ \sum_{n=0}^{\infty} a_{n}x^{n} = 0 $ τότε $ a_{n}=0, \quad \forall n
+  \geq 0 $.
+\end{prop}
+
+\section*{Παραγώγιση Δυναμοσειρών}
+
+Έστω $ f(x) = \sum_{n=0}^{\infty} a_{n}x^{n}, \quad \abs{x} < R $. Τότε η $f$ είναι 
+άπειρες φορές παραγωγίσιμη και ισχύει:
+\begin{myitemize}
+  \item $ f'(x) = \sum_{n=\textcolor{Col1}{1}}^{\infty} n a_{n} x^{n-1} = 
+    \sum_{n=\textcolor{Col1}{0}}^{\infty} n a_{n}x^{n-1} $
+  \item $ f''(x) = \sum_{n=\textcolor{Col1}{2}}^{\infty} n(n-1) a_{n} x^{n-2} = 
+    \sum_{n=\textcolor{Col1}{0}}^{\infty} n(n-1) a_{n}x^{n-2} $
+\end{myitemize}
+
+\section{Αναλυτικές Συναρτήσεις}
+
+Μια συνάρτηση $f$ ονομάζεται \textcolor{Col1}{αναλυτική στο $ x_{0} $}, αν μπορεί να γραφεί σε μορφή 
+δυναμοσειράς με κέντρο το $ x_{0} $. Όπως είναι γνωστό, από την Ανάλυση, αν η $f$ 
+είναι αναλυτική στο $ x_{0} $ τότε το ανάπτυγμά της με μορφή δυναμοσειράς είναι 
+\textbf{μοναδικό} και ισχύει
+\[
+  f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(x_{0})}{n!} (x- x_{0})^{n} 
+  \quad \text{\color{Col1}Τύπος Taylor}
+\] 
+Αν $ x_{0}=0 $ τότε ισχύει 
+\[
+  f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^{n} 
+  \quad \text{\color{Col1} Τύπος Maclaurin}
+\] 
+
+\section*{Αναπτύγματα βασικών συναρτήσεων}
+
+\setlength{\jot}{10pt}
+\begin{align*}
+  \color{Col1}{\frac{1}{1-x}}&= 1+x+x^2+\cdots +x^n+\cdots = \sum_{n=0}^{\infty}x^n, 
+  \quad \text{για}\; \abs{x}<1 \\
+  \color{Col1}\frac{1}{1+x}&=1-x+x^2-\cdots+(-1)^nx^n+\cdots = 
+  \sum_{n=0}^{\infty}(-1)^n x^n, \quad \text{για}\; \abs{x}<1 \\
+  \color{Col1}e^x&= 1+x+\frac{x^2}{2!}+\cdots+\frac{x^n}{n!}+\cdots = 
+  \sum_{n=0}^{\infty}\frac{x^n}{n!}, \quad \text{για}\; \abs{x}<\infty \\
+  \color{Col1}\sin x&=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\cdots+\frac{(-1)^n 
+  x^{2n+1}}{(2n+1)!}+\cdots = \sum_{n=0}^{\infty}\frac{(-1)^nx^{2n+1}}{(2n+1)!},
+  \quad \text{για}\; \abs{x}<\infty \\
+  \color{Col1}\cos x&=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\cdots \frac{(-1)^nx^{2n}}{(2n)!}+
+  \cdots = \sum_{n=0}^{\infty}\frac{(-1)^nx^{2n}}{(2n)!}, 
+  \quad \text{για}\; \abs{x}<\infty \\
+  \color{Col1}\sinh x&= x +\frac{x^3}{3!}+\frac{x^5}{5!}+\cdots+
+  \frac{x^{2n+1}}{(2n+1)!}+\cdots = \sum_{n=0}^{\infty}\frac{x^{2n+1}}{(2n+1)!},
+  \quad \text{για}\; \abs{x}<\infty \\
+  \color{Col1}\cosh x&= 1+\frac{x^2}{2!}+\frac{x^4}{4!}+\cdots +\frac{x^{2n}}{(2n)!}+
+  \cdots = \sum_{n=0}^{\infty}\frac{x^{2n}}{(2n)!}, 
+  \quad \text{για}\; \abs{x}<\infty \\
+\end{align*}
+\end{document}
