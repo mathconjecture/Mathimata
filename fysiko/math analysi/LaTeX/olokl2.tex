@@ -1,97 +1,114 @@
-\documentclass[a4paper,12pt]{article}
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
 
-
-\usepackage[english,greek]{babel}
-\usepackage[utf8]{inputenc}
-
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsfonts}
-\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
-\usepackage{graphicx}
-\usepackage{physics} 
-\usepackage{enumerate} 
-
+\pagestyle{askhseis}
 \everymath{\displaystyle}
 
 
 \begin{document}
 
+
+
 \begin{center}
-\fbox{\Large\bfseries{Αόριστα Ολοκληρώματα}}
+  \minibox{\bfseries\large \textcolor{Col1}{Ασκήσεις στα Αόριστα Ολοκληρώματα}}
 \end{center}
 
 \vspace{\baselineskip}
 
 \begin{enumerate}
-	\item \label{ask:anal} Να αναλυθούν σε άθροισμα απλών κλασμάτων οι παρακάτω ρητές συναρτήσεις.
-\begin{enumerate}[i)]
-\item $\frac{f(x)}{g(x)}=\frac{x^2+4x+7}{(x+2)(x+3)^2}$ \hfill Απ: $A_1=3, A_2=-2, A_3=-4$
-\item $\frac{f(x)}{g(x)}=\frac{x^5+1}{(x^2-x-1)^3}$ \hfill Απ: \begin{tabular}{l} 
-$A_1=\phantom{-}1, B_1=\phantom{-}2$ \\ $A_2=\phantom{-}1, B_2=-3$ \\ $A_3=-1, B_3=\phantom{-}2$
-\end{tabular}
-\item $\frac{f(x)}{g(x)}=\frac{x^3-3x}{(x+1)^2(x^2+x+2)}$ \hfill Απ: $A_1=\frac{1}{2}, A_2=1, A_3=\frac{1}{2}, B_3=-3$
+  \item \label{ask:anal} Να αναλυθούν σε άθροισμα απλών κλασμάτων οι παρακάτω ρητές 
+    συναρτήσεις.
+    \begin{enumerate}[i)]
+      \item $\frac{f(x)}{g(x)}=\frac{x^2+4x+7}{(x+2)(x+3)^2}$ 
+        \hfill Απ: $A_1=3, A_2=-2, A_3=-4$
+      \item $\frac{f(x)}{g(x)}=\frac{x^5+1}{(x^2-x-1)^3}$ 
+        \hfill Απ: \begin{tabular}{l} $A_1=\phantom{-}1, B_1=\phantom{-}2$ \\ 
+          $A_2=\phantom{-}1, B_2=-3$ \\ $A_3=-1, B_3=\phantom{-}2$
+        \end{tabular}
+      \item $\frac{f(x)}{g(x)}=\frac{x^3-3x}{(x+1)^2(x^2+x+2)}$ 
+        \hfill Απ: $A_1=\frac{1}{2}, A_2=1, A_3=\frac{1}{2}, B_3=-3$
+    \end{enumerate}
+
+  \item \label{ask:rhtes} Να υπολογιστούν τα παρακάτω ολοκληρώματα ρητών συναρτήσεων.
+    \begin{enumerate}[i)]
+      \item $\int\frac{dx}{x^2-4}$\hfill Απ: $\frac{1}{4}\ln\abs{\frac{x-2}{x+2}}+c$
+      \item $\int\frac{x^2+x-1}{(x-2)(x^2+1)}\,dx$ \hfill Απ: $\ln\abs{x-2}+\arctan x+c$
+      \item $\int\frac{x+1}{x^3+x^2-6x}\,dx$ 
+        \hfill Απ: $\ln\frac{\abs{x-2}^{\frac{3}{10}}}{x^{\frac{1}{6}}\abs{x+3}^
+        {\frac{2}{15}}}$
+      \item $\int\frac{x^2}{1-x^4}\,dx$ 
+        \hfill Απ: $\frac{1}{4}\ln\abs{\frac{1+x}{1-x}}-\frac{1}{2}\arctan x+c$
+      \item $\int\frac{3x+5}{x^3-x^2-x+1}\, dx$ 
+        \hfill Απ: $\frac{1}{2}\ln\abs{\frac{x+1}{x-1}}-\frac{4}{x-1}+c$ 
+      \item $\int\frac{x^4-x^3-x-1}{x^3-x^2}\,dx$ 
+        \hfill Απ: $\frac{x^2}{2}+2\ln\abs{x}-\frac{1}{x}-2\ln\abs{x-1}+c$
+      \item \label{ex:seven} $\int\frac{1}{e^{2x}-3e^{x}}\,dx$ 
+        \hfill Απ: $-\frac{2}{9}x+\frac{1}{9}\ln\abs{e^x-3}+c$
+    \end{enumerate}
+
+  \item \label{ask:rizes} Να υπολογιστούν τα παρακάτω αόριστα ολοκληρώματα (με ριζικά).
+    \begin{enumerate}[i)]
+      \item $\int\frac{\sqrt{x+4}}{x}dx$
+        \hfill Απ: $2\sqrt{x+4}+2\ln\left|\frac{\sqrt{x+4}-2}{\sqrt{x+4}+2}\right|+c$
+      \item $\int\frac{1}{\sqrt{x^2+3x+2}}dx$
+        \hfill Απ: $\ln\left|\frac{t+1}{t-1}\right|+c$, όπου 
+        $t=\frac{\sqrt{x^2+3x+2}}{x+1}$
+      \item $\int\sqrt[3]{\frac{x-1}{x}}\frac{1}{x(x-1)}dx$
+        \hfill Απ: $3^3\sqrt[3]{\frac{x-1}{x}} +c$
+      \item  $\int\frac{1}{\sqrt{2x-1}-\sqrt[4]{2x-1}}dx$\hfill Απ: $(t+1)^2
+        +2\ln|t-1|+c$, όπου $t=\sqrt[4]{2x-1} \label{four} $
+      \item  $\int\frac{1}{x\sqrt{x^2+x+1}}dx$
+        \hfill Απ: $\ln\left|\frac{t+1}{t-1}+c\right|$, όπου $t=x-\sqrt{x^2+x+1}$
+      \item $ \int \frac{1}{\sqrt{x} + \sqrt{x-1} + 1} \, dx$ \hfill Απ: $
+        \scriptstyle{\frac{1}{2} \left(\frac{(\sqrt{x} - \sqrt{x-1})^{2}}{2} -
+            \sqrt{x} - \sqrt{x-1} + \ln{\abs{\sqrt{x} - \sqrt{x-1}}} + \frac{1}{\sqrt{x}
+        - \sqrt{x-1}} \right)} $
+    \end{enumerate}
+
+  \item\label{ask:trig} Να υπολογιστούν τα παρακάτω αόριστα ολοκληρώματα 
+    (τριγωνομετρικά)
+    \begin{enumerate}[i)]
+      \item $\int\sin^3x\cos^2xdx$
+        \hfill Απ: $-\frac{\cos^3x}{3}+\frac{\cos^5x}{5}+c$
+      \item $\int\sin^4x\cos^2xdx$
+        \hfill Απ: $\frac{1}{16}x-\frac{1}{64}\sin 4x-\frac{1}{48}\sin^3{(2x)+c}$
+      \item $\int\frac{\cos^2x}{\sin^6x}dx$
+        \hfill Απ: $-\frac{1}{5\tan^5x}-\frac{1}{\tan^3x}+c$
+      \item $\int\frac{1}{\sin x}dx$\hfill Απ:
+        $\ln\left|\tan\frac{x}{2}\right|+c$
+      \item $\int\frac{1}{\cos x}dx$\hfill Απ:
+        $\ln\left|\frac{\tan\frac{x}{2}+1}{\tan\frac{x}{2}-1}\right|+c$
+      \item $\int\frac{\cos x}{1+\cos x}dx$
+        \hfill Απ: $x-\tan\frac{x}{2}+c$
+    \end{enumerate}
 \end{enumerate}
 
 
-
-\item \label{ask:rhtes} Να υπολογιστούν τα παρακάτω ολοκληρώματα ρητών συναρτήσεων.
-
-\begin{enumerate}[i)]
-\item $\int\frac{dx}{x^2-4}$\hfill Απ: $\frac{1}{4}\ln\abs{\frac{x-2}{x+2}}+c$
-\item $\int\frac{x^2+x-1}{(x-2)(x^2+1)}\,dx$ \hfill Απ: $\ln\abs{x-2}+\arctan x+c$
-\item $\int\frac{x+1}{x^3+x^2-6x}\,dx$ \hfill Απ: $\ln\frac{\abs{x-2}^{\frac{3}{10}}}{x^{\frac{1}{6}}\abs{x+3}^{\frac{2}{15}}}$
-\item $\int\frac{x^2}{1-x^4}\,dx$ \hfill Απ: $\frac{1}{4}\ln\abs{\frac{1+x}{1-x}}-\frac{1}{2}\arctan x+c$
-\item $\int\frac{3x+5}{x^3-x^2-x+1}\, dx$ \hfill Απ: $\frac{1}{2}\ln\abs{\frac{x+1}{x-1}}-\frac{4}{x-1}+c$ 
-\item $\int\frac{x^4-x^3-x-1}{x^3-x^2}\,dx$ \hfill Απ: $\frac{x^2}{2}+2\ln\abs{x}-\frac{1}{x}-2\ln\abs{x-1}+c$
-\item \label{ex:seven} $\int\frac{1}{e^{2x}-3e^{x}}\,dx$ \hfill Απ: $-\frac{2}{9}x+\frac{1}{9}\ln\abs{e^x-3}+c$
-\end{enumerate}
-
-
-
-\item \label{ask:rizes} Να υπολογιστούν τα παρακάτω αόριστα ολοκληρώματα (με ριζικά).
-
-	\begin{enumerate}[i)]
-\item $\int\frac{\sqrt{x+4}}{x}dx$\hfill Απ: $2\sqrt{x+4}+2\ln\left|\frac{\sqrt{x+4}-2}{\sqrt{x+4}+2}\right|+c$
-\item $\int\frac{1}{\sqrt{x^2+3x+2}}dx$\hfill Απ: $\ln\left|\frac{t+1}{t-1}\right|+c$, όπου $t=\frac{\sqrt{x^2+3x+2}}{x+1}$
-\item $\int\sqrt[3]{\frac{x-1}{x}}\frac{1}{x(x-1)}dx$\hfill Απ: $3^3\sqrt[3]{\frac{x-1}{x}} +c$
-\item  $\int\frac{1}{\sqrt{2x-1}-\sqrt[4]{2x-1}}dx$\hfill Απ: $(t+1)^2
-	+2\ln|t-1|+c$, όπου $t=\sqrt[4]{2x-1} \label{four} $
-\item  $\int\frac{1}{x\sqrt{x^2+x+1}}dx$\hfill Απ: $\ln\left|\frac{t+1}{t-1}+c\right|$, όπου $t=x-\sqrt{x^2+x+1}$
-\item $ \int \frac{1}{\sqrt{x} + \sqrt{x-1} + 1} \, dx$ \hfill Απ: $
-	\scriptstyle{\frac{1}{2} \left(\frac{(\sqrt{x} - \sqrt{x-1})^{2}}{2} -
-	\sqrt{x} - \sqrt{x-1} + \ln{\abs{\sqrt{x} - \sqrt{x-1}}} + \frac{1}{\sqrt{x}
-- \sqrt{x-1}} \right)} $
-\end{enumerate}
-
-
-\item \label{ask:trig} Να υπολογιστούν τα παρακάτω αόριστα ολοκληρώματα (τριγωνομετρικά)
-	\begin{enumerate}[i)]
-		\item \label{ex:one} $\int\sin^3x\cos^2xdx$\hfill Απ: $-\frac{\cos^3x}{3}+\frac{\cos^5x}{5}+c$
-		\item \label{ex:two} $\int\sin^4x\cos^2xdx$\hfill Απ: $\frac{1}{16}x-\frac{1}{64}\sin 4x-\frac{1}{48}\sin^32x+c$
-		\item \label{ex:three} $\int\frac{\cos^2x}{\sin^6x}dx$\hfill Απ: $-\frac{1}{5\tan^5x}-\frac{1}{\tan^3x}+c$
-		\item \label{ex:four} $\int\frac{1}{\sin x}dx$\hfill Απ:
-			$\ln\left|\tan\frac{x}{2}\right|+c$
-		\item \label{ex:five} $\int\frac{1}{\cos x}dx$\hfill Απ:
-			$\ln\left|\frac{\tan\frac{x}{2}+1}{\tan\frac{x}{2}-1}\right|+c$
-		\item \label{ex:six} $\int\frac{\cos x}{1+\cos x}dx$\hfill Απ: $x-\tan\frac{x}{2}+c$
-\end{enumerate}
-\end{enumerate}
-
-
-
+\begin{center}
+  \minibox{\bfseries\large \textcolor{Col1}{Παρατηρήσεις-Υποδείξεις}}
+\end{center}
 
 \vspace{\baselineskip}
 
-{\Large\bfseries Παρατηρήσεις:}
 \begin{enumerate}
-	\item Για το \ref{ex:seven} της άσκησης~\eqref{ask:rhtes} αρχικά θέτουμε $
-		t = e^{x} $ και στη συνέχεια προκύπτει ολοκλήρωμα ρητής.
-	\item Για το \ref{four} της άσκησης~\eqref{ask:rizes}, παρατηρούμε ότι τα ριζικά έχουν την ίδια
-		υπόρριζη ποσότητα, αλλά είναι διαφορετικής τάξεως ριζικά. Σε αυτήν την
-		περίπτωση θέτουμε ίσο με $t$ το ριζικό τάξης ίσης με το Ελάχιστο Κοινό
-		Πολλαπλάσιο των τάξεων των ριζικών που εμφανίζονται, δηλαδή Ε.Κ.Π. $(2,4)
-		= 2 $, επομένως θέτουμε $t=\sqrt{2x-1}$. 
+  \item Για το \ref{ex:seven} της άσκησης~\eqref{ask:rhtes} αρχικά θέτουμε $
+    t = e^{x} $ και στη συνέχεια προκύπτει ολοκλήρωμα ρητής.
+  \item Για το \ref{four} της άσκησης~\eqref{ask:rizes}, παρατηρούμε ότι τα ριζικά 
+    έχουν την ίδια υπόρριζη ποσότητα, αλλά είναι διαφορετικής τάξεως ριζικά. 
+    Σε αυτήν την περίπτωση θέτουμε ίσο με $t$ το ριζικό τάξης ίσης με το Ελάχιστο Κοινό
+    Πολλαπλάσιο των τάξεων των ριζικών που εμφανίζονται, δηλαδή Ε.Κ.Π. $(2,4)
+    = 2 $, επομένως θέτουμε $t=\sqrt{2x-1}$. 
+  \item Για τα τριγωνομετρικά ολοκληρώματα, θυμάμαι τη γενική περίπτωση αντικατάστασης: 
+    \begin{center}
+      Θέτουμε $ \boldsymbol{t = \tan{\frac{x}{2}}} \Rightarrow \frac{x}{2} = \arctan{t} 
+      \Rightarrow x = 2 \arctan {t} $ οπότε $ \boldsymbol{dx = \frac{2}{1 + t^{2}} dt} $ 
+      και ισχύουν οι τύποι:
+    \end{center}
+    \[
+      \boxed{\sin x=\frac{2t}{1+t^2}} \quad \text{και} \quad \boxed{\cos x
+      =\frac{1-t^2}{1+t^2}}
+    \] 
 \end{enumerate}
+
 
 \end{document}
