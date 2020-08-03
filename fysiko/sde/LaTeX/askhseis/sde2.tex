@@ -1,0 +1,133 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+\everymath{\displaystyle}
+\pagestyle{askhseis}
+
+
+
+\begin{document}
+
+\begin{center}
+  \minibox[c]{\large\bfseries\textcolor{Col1}{Συνήθεις Διαφορικές Εξισώσεις - 2ης τάξης}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+
+  \section*{Ορίζουσα Wronski - Θεμελιώδη σύνολα λύσεων}
+
+\item Να υπολογισθεί η ορίζουσα \textbf{Wronski} για τα ακόλουθα ζεύγη συναρτήσεων:
+  \begin{enumerate}[i)]
+    \item $y_1=\cosh x$, $y_2=\sinh x$ \hfill Απ: $W=1$
+    \item $y_1=\cos x$,  $y_2=\sin x$ \hfill Απ: $W=1$
+    \item $y_1=\cos^2x$, $y_2=1+\cos 2x$ \hfill Απ: $W=0$
+    \item $y_1=\sin x\cos x$, $y_2=\sin 2x$ \hfill Απ: $W=0$
+  \end{enumerate}
+
+\item Να δειχθεί ότι τα  παρακάτω σύνολα, αποτελούν \textbf{θεμελιώδη} σύνολα λύσεων 
+  των αντίστοιχων διαφορικών εξισώσεων.
+  \begin{enumerate}[i)]
+    \item $ \{ \mathrm{e}^{-6x}, \mathrm{e}^{-4x} \} $,\quad $ y''+10y'+24y=0 $ 
+    \item $ \{ \cos{2x}, \sin{2x} \}$, \quad $ y''+4y=0 $
+    \item $ \{ \mathrm{e}^{-x}, \mathrm{e}^{3x}, x\mathrm{e}^{3x} \} $, 
+      \quad $ y'''-5y''+3y'+9y=0 $
+  \end{enumerate}
+
+\item Να λυθούν οι παρακάτω \textbf{ομογενείς}, γραμμικές 2ης τάξης.
+  \begin{enumerate}[i)]
+    \item $y''-y=0$ \hfill Απ: $y=c_1 \mathrm{e}^x+c_2 \mathrm{e}^{-x}$
+    \item $y''+4y'+3y=0$\hfill Απ: $y=c_1 \mathrm{e}^{-x}+c_2 \mathrm{e}^{-3x}$
+    \item $y''+2y'+y=0$\hfill Απ: $y=c_1 \mathrm{e}^{-x}+c_2x \mathrm{e}^{-x}$
+    \item $y''+y=0$ \hfill Απ: $y=c_1\cos x+c_2\sin x$
+    \item $y''+2y'+3y=0$ 
+      \hfill Απ: $y= \mathrm{e}^{-x}(c_1\cos\sqrt{2}x+c_2\sin\sqrt{2}x)$
+  \end{enumerate}
+
+  \section*{Προσδιοριστέοι Συντελεστές}
+
+\item Να λυθούν οι παρακάτω \textbf{μη ομογενείς}, γραμμικές 2ης τάξης.
+  \begin{enumerate}[i)]
+    \item $y''+y=\sin 2x$ \hfill Απ: $y=c_1\cos x+c_2\sin x-\frac{1}{3}\sin 2x$
+    \item $y''+2y'+y=x- \mathrm{e}^{-x}$
+      \hfill Απ: $y=c_1 \mathrm{e}^{-x}+c_2x \mathrm{e}^{-x}+x-2-\frac{1}{2}x^2
+      \mathrm{e}^{-x}$
+     \item $y''+y=2\sin^2 x$ \hfill Απ: $y=c_1\cos x+c_2\sin x+\frac{1}{3}\cos 2x+1$
+    % \item $y''+4y=\sin^2x$
+    %   \hfill Απ: $y=c_1\cos 2x+c_2\sin 2x+\frac{1}{8}-\frac{1}{8}x\sin 2x$
+     \item $y''+4y'+4y=3x \mathrm{e}^{-2x}$ \hfill Απ: $y=(c_1+c_2x+\frac{1}{2}x^3)
+       \mathrm{e}^{-2x}$
+    \item $y''+y=x\cosh x$ 
+      \hfill Απ: $y=c_1\cos x+c_2\sin x +\frac{1}{2}(x\cosh x-\sinh x)$
+    \item $y''-y=2 \mathrm{e}^{-x} - 4x \mathrm{e}^{-x} + 10 \cos{2x}$.
+      \hfill Απ: $ y= c_{1} \mathrm{e}^{x} + c_{2} \mathrm{e}^{-x} + x^{2} 
+      \mathrm{e}^{-x} - 2 \cos{2x}$ 
+  \end{enumerate}
+
+\item Να λυθεί το πρόβλημα αρχικών τιμών (\textbf{ΠΑΤ}) 
+  $
+  y''-y=\sin x, \quad y(0)=0,\; y'(0)=-{1}/{2}
+  $
+  \hfill Απ: $y= -\frac{1}{2}\sin x$
+
+  \section*{Μεταβολή Παραμέτρων}
+
+\item Να λυθούν οι παρακάτω \textbf{μη ομογενείς}, γραμμικές 2ης τάξης.
+  \begin{enumerate}[i)]
+    \item $y''+y=\sec x$ 
+      \hfill Απ: $y=c_1\cos x+c_2\sin x - \cos x\ln\abs{\sec x}+x\sin x$
+    \item $y''+4y=\sin^2x$ 
+      \hfill Απ: $y=c_1\cos 2x+c_2\sin 2x+\frac{1}{6}\cos^22x+\frac{1}{12}\sin^22x$
+    \item $y''+2y+y= \mathrm{e}^{-x}\ln x$ 
+      \hfill Απ: $y=(c_1+c_2x+\frac{x^2}{2}\ln x-\frac{3x^2}{4}) \mathrm{e}^{-x}$
+    \item $y''-2y'+y=\frac{\mathrm{e}^x}{x}$, \quad $x>0$ 
+      \hfill Απ: $y= [c_{1} + c_{2} x + x(\ln x-1)] \mathrm{exp}^{x} $
+    \item $y''+3y'+2y=\cos \mathrm{e}^{x}$ \hfill Απ: $y= c_{1} \mathrm{e}^{-2x} + 
+      c_{2} \mathrm{e}^{-3x} - \mathrm{e}^{-2x}\cos \mathrm{e}^{x}$
+    \item $y''-2y'+y=e^{x}\ln x, \quad x>0$ 
+      \hfill Απ: $y= [c_{1}+ c_{2}x + \frac{x^{2}}{4}(2\ln x-3)] \mathrm{e}^{x}$
+  \end{enumerate}
+
+  \section*{Γραμμικές, με μη-σταθερούς συντελεστές}
+
+\item Αφού δείξετε ότι οι συναρτήσεις $ y_{1} = \mathrm{e}^{\sqrt{t}} $ και $ y_{2}= 
+  \mathrm{e}^{- \sqrt{t}}$ αποτελούν θεμελιώδες σύνολο λύσεων της $ 4ty'' +2y'-y=0 $, 
+  στη συνέχεια να βρεθεί η γενική λύση της 
+  $ 4ty''+2y'-y=4 \sqrt{t} \mathrm{e}^{\sqrt{t}} $
+
+  \hfill Απ: $ y= c_{1}(t- \sqrt{t}) \mathrm{e}^{t} + c_{2} \mathrm{e}^{- \sqrt{t}} $ 
+
+\item Αφού δείξετε ότι οι συναρτήσεις $ y_{1} = \mathrm{e}^{t} $ και $t+1$ αποτελούν 
+  θεμελιώδες σύνολο λύσεων της $ty''-(t+1)y'+y=0$, 
+  στη συνέχεια να βρεθεί η γενική λύση της 
+  $ ty''-(t+1)y'+y=t^{2}$
+
+  \hfill Απ: $y= c_{1} \mathrm{e}^{t} + c_{2}(t+1) - t^{2} $ 
+
+\item Με τη μέθοδο υποβιβασμού τάξης να λυθούν οι παρακάτω σδε.
+  \begin{enumerate}[i)]
+    \item $ 2xy'' - y' + \frac{1}{y'} = 0, \quad x > 0 $
+      \hfill Απ: $ y= \pm \frac{2}{3c} (1+cx)^{\frac{3}{2}} + c_{1} $, \; 
+      $ y= \pm x + c $ 
+  \end{enumerate}
+
+\item Να λυθούν οι παρακάτω σδε, τύπου Euler.
+  \begin{enumerate}[i)]
+    \item $ x^{2}y''-7xy'+16y=0 $ \hfill Απ: $ y= (c_{1}+ c_{2} \ln{x})x^{4} $ 
+    \item $ x^{2}y'' + 2xy' - 12y=0 $ \hfill Απ: $ y= c_{1}x^{3} + c_{2}x^{-4} $  
+    \item $ x^{2}y''-3xy'+3y=0 $ \hfill Απ: $ y=c_{1}x + c_{2}x^{3} $
+    \item $ x^{2}y''-2xy'-4y=0 $,\; $ x \neq 0 $ 
+      \hfill Απ: $ y=c_{1}x^{4}+ c_{2} x^{-1} $ 
+    \item $ 2x^{2}y''+3xy'-15y=0, \quad y(1)=0, \; y'(1)=1 $
+      \hfill Απ: $ y= \frac{2}{11} x^{\frac{5}{2}} - \frac{2}{11} x^{-3} $ 
+    \item $ x^{2}y''-xy'+y=1 $,\; $ x>0 $ 
+      \hfill Απ: $ y=(c_{1}+c_{2} \ln{x})x + 1 $  
+    \item $ x^{2}y''+xy'-y=x^{4} $ 
+      \hfill Απ: $ y=c_{1}x+c_{2}x^{-1}+ x^{4}/{15} $ 
+    \item \label{eul} $ (x+3)^{2}y''+3(x+3)y'+y=0 $,\; $ x>-3 $ 
+      \hfill Απ: $ y=c_{1} (x+3)^{-1} + c_{2}\ln(x+3)(x+3)^{-1} $
+  \end{enumerate}
+
+\end{enumerate}
+\end{document}
