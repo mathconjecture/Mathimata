@@ -27,8 +27,8 @@
       \item $xy'+y^2=0$\hfill Απ: $y=\frac{1}{\ln|x|+c}$ %Argyriou
       \item $y'-2yy'+ \mathrm{e}^x=0$\hfill Απ: $y^2-y- \mathrm{e}^x=c$ %Argyriou
       \item $2xy'+y^2-1=0$\hfill Απ: $y=\frac{x-c}{x+c}$ %Argyriou
-      \item $(1+x^2)y'-2x(1-y^2)=0$
-        \hfill Απ: $y= \frac{(1+x^{2})^{2}-c}{(1+x^{2})^{2}+c}$ %Argyriou
+      \item $(1+x^2)y'-2x(1-y^2)=0$ %Argyriou
+        \hfill Απ: $y= \frac{(1+x^{2})^{2}-c}{(1+x^{2})^{2}+c}$
       \item $y'=1+x+y^2+xy^2$\hfill Απ: $y=\tan{\Bigl(x+\frac{x^2}{2}+c\Bigr)}$ %Argyriou
       \item $y'=xy+x+y+1$
         \hfill Απ: $y=-1+c_2 \mathrm{e}^{\frac{(x+1)^2}{2}}, \; y_{\text{ιδιαζ.}}=-1$
@@ -38,10 +38,10 @@
 
     \begin{enumerate}[i)]
       \item  $y'=\frac{x+y}{x}, \quad x>0, \; y(1)=1$\hfill Απ: $y=x(1+\ln x)$ %Argyriou
-      \item $y'+y\tan x =\frac{1}{\cos x}, \quad y(\pi)=1$
-        \hfill Απ: $y=\sin x-\cos x$ %Arg
-      \item $(x+1)y'-y=x^2+2x, \quad x \geq 0, \; y(1)=-1$
-        \hfill Απ: $y=x^2-x-1$ %Argyriou
+      \item $y'+y\tan x =\frac{1}{\cos x}, \quad y(\pi)=1$ %Argyriou
+        \hfill Απ: $y=\sin x-\cos x$
+      \item $(x+1)y'-y=x^2+2x, \quad x \geq 0, \; y(1)=-1$ %Argyriou
+        \hfill Απ: $y=x^2-x-1$
       \item $y'+y\tan x=\frac{1}{2}\sin 2x, \quad x\in [0,\frac{\pi}{2}]$
         \hfill Απ: $y=-\cos^2 x+c\cos x$
       \item $y'+\frac{1}{x}y=x, \quad x>0$\hfill Απ: $y=\frac{x^2}{3}+\frac{c}{x}$
@@ -112,22 +112,29 @@
 \item Να λυθούν οι παρακάτω σδε με τη βοήθεια κατάλληλων ολοκληρωτικών παραγόντων.
 	
   \begin{enumerate}[i)]
-    \item $ (2x^{2}+y)dx+(x^{2}y-x)dy=0 $ \hfill Απ: $ \mu (x)= \frac{1}{x^{2}}, \; 2x-
-      \frac{y}{x} + \frac{y^{2}}{2} =c$ 
-    \item $ \mathrm{e}^{x}(x+1)dx - (x \mathrm{e}^{x}-y \mathrm{e}^{y})dy = 0 $ 
-      \hfill Απ: $ \mu(y) = \mathrm{e}^{-y} $, $x \mathrm{e}^{x-y} + 
-      \frac{y^{2}}{2} = c $
-    \item $ (x^{2}+y^{2})dx - 2xydy = 0 $ 
-      \hfill Απ: $ \mu(x)= \frac{1}{x^{2}} $, $ - \frac{y^{2}}{x} + x = c $
-    \item $ y' =- \frac{5xy+4y^{2}+1}{x^{2}+2xy} $ 
-      \hfill Απ: $ \mu(x)=x^{3} $, $ x^{5}y+x^{4}y^{2} + \frac{x^{4}}{4} = c $ 
-    \item $ y(2 \mathrm{e}^{x}+4x)dx + 3( \mathrm{e}^{x}+x^{2})dy = 0 $ 
-      \hfill Απ: $ \mu(y)= \sqrt{ y } $, $ 2( \mathrm{e}^{x}+x^{2})y^{\frac{3}{2}}=c $ 
+    \item $ x(x^{3}+y^{3}+4x^{2})dx+ 3y^{2}(x-1)dy=0 $ %Arnos p.64
+      \hfill Απ: $ \mu (x)= \mathrm{e}^{x}, \; x^{4} \mathrm{e}^{x} + y^{3}(x-1)
+      \mathrm{e}^{x} - y^{3}=c $ 
+    \item $ (x+ \sin{x} + \sin{y} )dx + \cos{y} dy=0 $ % Κραββαριτης p.47
+      \hfill Απ: $ \mu (x) = \mathrm{e}^{x} $, \; $ \mathrm{e}^{x} \sin{y} + x
+      \mathrm{e}^{x} - \mathrm{e}^{x} + \frac{\mathrm{e}^{x}}{2} (\sin{x} - \cos{x})=c$
+    \item $ y(4x+y)dx-2(x^{2}-y)dy=0 $ % Κραββαριτης p.48
+      \hfill Απ: $ \mu (y) = \frac{2}{y} $, \; $ 2x^{2}+xy+y \ln{y^{2}} = cy $  
+    \item $ y(2xy+1)dx-xdy=0 $ %Arnos p.37
+      \hfill Απ: $ \mu (y) = \frac{1}{y^{2}}, \; x^{2} + \frac{x}{y} = c $ 
   \end{enumerate}
 
-  \item Να δείξετε ότι η παράσταση $ \mu (x,y) = xy^{2} $ αποτελεί ολοκληρωτικό 
-    παράγοντα της εξίσωσης \[ (2y-6x)dx+\left(3x-4\frac{x^{2}}{y}\right)dy=0 \] 
-    Στη συνέχεια να βρεθεί η γενική λύση. \hfill Απ: $ x^{2}y^{3}-2x^{3}y^{2}=c $ 
+\item Να δείξετε ότι οι παραστάσεις που δίνονται αποτελούν ολοκληρωτικούς παράγοντες για
+  τις αντίστοιχες εξισώσεις και στη συνέχεια να βρείτε τη γενική τους λύση.
+  \begin{enumerate}[i)]
+    \item $ (x^{2}+y^{2})dx - 2xydy = 0 $, \; $ \mu(x)= \frac{1}{x^{2}} $
+      \hfill Απ: $ - \frac{y^{2}}{x} + x = c $
+    \item $ \mathrm{e}^{x}(x+1)dx - (x \mathrm{e}^{x}-y \mathrm{e}^{y})dy = 0 $, \; 
+      $ \mu(y) = \mathrm{e}^{-y} $
+      \hfill Απ: $x \mathrm{e}^{x-y} + \frac{y^{2}}{2} = c $
+    \item $ (2y-6x)dx+\left(3x-4\frac{x^{2}}{y}\right)dy=0 $, \; $ \mu (x,y) = xy^{2} $
+      \hfill Απ: $ x^{2}y^{3}-2x^{3}y^{2}=c $ %Argyriou
+  \end{enumerate}
 
   \item Να λυθούν οι παρακάτω σδε, Riccati
 
