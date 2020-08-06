@@ -1,6 +1,8 @@
 \input{preamble_ask.tex}
 \input{definitions_ask.tex}
 
+\geometry{left=15.63mm,right=15.63mm,top=36.25mm,bottom=36.25mm,
+footskip=24.16mm,headsep=24.16mm}
 \pagestyle{askhseis}
 \everymath{\displaystyle}
 
@@ -67,17 +69,17 @@
     \begin{enumerate}[i)]
       \item $ (1+2xy^{3})dx + 3x^{2}y^{2}dy = 0 $ 
         \hfill Απ: $x+x^{2}y^{3}=c$ 
-      \item $ -2xdy + (3x^{2}-2y)dx=0 $, \quad $ y(1)=0 $ 
-        \hfill Απ: $ y= \frac{x^{3}-1}{2x} $ 
       \item $ y'=- \frac{x^{3}+3xy^{2}}{3x^{2}y+y^{3}} $ 
         \hfill Απ: $ \frac{x^{4}}{4} + \frac{3}{2} x^{2}y^{2} + \frac{y^{4}}{4} = c $ 
       \item $ \frac{xy+1}{y} dx + \frac{2y-x}{y^{2}} dy=0 $ 
         \hfill Απ: $ \frac{x^{2}}{2} + \frac{x}{y} + \ln{y^{2}} =c $ 
-      \item $ x y' = 2x \mathrm{e}^{x} -y+6x^{2} $ 
-        \hfill Απ: $ 2 \mathrm{e}^{x} - 2x \mathrm{e}^{x} - 2x^{3} + xy=c $ 
-      \item $ (\cos{x} + \ln{y})dx + \left(\frac{x}{y} + e^{x}\right)dy=0 $ 
+      % \item $ x y' = 2x \mathrm{e}^{x} -y+6x^{2} $ 
+      %   \hfill Απ: $ 2 \mathrm{e}^{x} - 2x \mathrm{e}^{x} - 2x^{3} + xy=c $ 
+      \item $ (\cos{x} + \ln{y})dx + \Bigl(\frac{x}{y} + e^{x}\Bigr)dy=0 $ 
         \hfill Απ: $ \sin{x} + x \ln{y} + e^{y}=c $ 
-      \item $\left(4x^3y^3+\frac{1}{x}\right)dx+\left(3x^4y^2-\frac{1}{y}\right)dy=0, 
+      \item $ -2xdy + (3x^{2}-2y)dx=0 $, \quad $ y(1)=0 $ 
+        \hfill Απ: $ y= \frac{x^{3}-1}{2x} $ 
+      \item $\Bigl(4x^3y^3+\frac{1}{x}\Bigr)dx+\Bigl(3x^4y^2-\frac{1}{y}\Bigr)dy=0, 
         \quad x(e)=1$\hfill Απ: $x^4y^3+\ln \Bigl|\frac{x}{y}\Bigr|=e^3-1$
     \end{enumerate}
 
@@ -89,20 +91,23 @@
         \frac{y^{2}}{2} - \frac{y}{x} = c $ 
       \item $ (x^{2}+y^{2})dx - 2xydy = 0 $ 
         \hfill Απ: $\mu(x)= \frac{1}{x^{2}}$, $ - \frac{y^{2}}{x} + x = c $
+      \item $ (x + \sin{x} + \sin{y})dx + \cos{y} dy =0 $ 
+        \hfill Απ: $\mu(x)=e^{x} $, $ e^x(\sin{y} + x-1) + \frac{e^{x}}{2} 
+        (\sin{x} - \cos{x})=c $
+      \item $ e^{x}(x+1)dx - (xe^{x}-ye^{y})dy = 0 $
+        \hfill Απ: $\mu(y) = e^{-y}, \; xe^{x-y} + \frac{y^{2}}{2} = c $
       \item $ y(4x+y)dx-2(x^{2}-y)dy=0 $ 
         \hfill Απ: $ \mu(y)= \frac{1}{y^{2}} $, $ 2x^{2}+xy+ y \ln{y^{2}} =cy$ 
       \item $ y(2e^{x}+4x)dx + 3(e^{x}+x^{2})dy = 0 $ 
         \hfill Απ: $ \mu(y)= \sqrt{ y } $, $ 2(e^{x}+x^{2})y^{\frac{3}{2}}=c $ 
-      \item $ (x + \sin{x} + \sin{y})dx + \cos{y} dy =0 $ 
-        \hfill Απ: $\mu(x)=e^{x} $, $ e^x(\sin{y} + x-1) + \frac{e^{x}}{2} 
-        (\sin{x} - \cos{x})=c $
     \end{enumerate}
 
-  \item Να δείξετε ότι οι παραστάσεις που δίνονται αποτελούν ολοκληρωτικούς παράγοντες 
-    για τις αντίστοιχες εξισώσεις και στη συνέχεια να βρείτε τη γενική τους λύση.
+  \item{\bfseries Να δείξετε ότι οι παραστάσεις που δίνονται αποτελούν ολοκληρωτικούς 
+      παράγοντες για τις αντίστοιχες εξισώσεις και στη συνέχεια να βρείτε τη γενική 
+    τους λύση.}
     \begin{enumerate}[i)]
-      \item $ e^{x}(x+1)dx - (xe^{x}-ye^{y})dy = 0, \quad  \mu(y) = e^{-y} $
-        \hfill Απ: $xe^{x-y} + \frac{y^{2}}{2} = c $
+      \item $ (2y-6x)dx+\Bigl(3x-4\frac{x^{2}}{y}\Bigr)dy=0 $, \; $ \mu (x,y) = xy^{2} $
+        \hfill Απ: $ x^{2}y^{3}-2x^{3}y^{2}=c $ %Argyriou
       \item $ y' =- \frac{5xy+4y^{2}+1}{x^{2}+2xy}, \quad \mu(x)=x^{3} $  
         \hfill Απ: $ x^{5}y+x^{4}y^{2} + \frac{x^{4}}{4} = c $ 
       \item $ (2xy^{4} \mathrm{e}^{y} + 2xy^{3}+y)dx + (x^{2}y^{4}\mathrm{e}^{y} -
