@@ -5,7 +5,7 @@
 \everymath{\displaystyle}
 
 
-\geometry{left=15.63mm,right=15.63mm,top=30.25mm,bottom=33.25mm,
+\geometry{left=15.63mm,right=15.63mm,top=36.25mm,bottom=33.25mm,
 footskip=24.16mm,headsep=24.16mm}
 
 \pagestyle{vangelis}
@@ -36,7 +36,7 @@ footskip=24.16mm,headsep=24.16mm}
   \item Να βρεθεί, εφόσον υπάρχει, ο αντίστροφος μετασχηματισμός Laplace των 
     παρακάτω συναρτήσεων:
     \begin{enumerate}[i)]
-      \item $\frac{s^2}{s^2+1}$\hfill Απ: Δεν υπάρχει
+      % \item $\frac{s^2}{s^2+1}$\hfill Απ: Δεν υπάρχει
       \item $\frac{1}{s}+\frac{1}{s^2}$\hfill Απ: $f(t)=1+t$
       \item $ \frac{2}{s+2} - \frac{1}{2s-3} + \frac{6}{s^{4}} $ 
         \hfill Απ: $ f(t) = 2 \mathrm{e}^{-2t}-\frac{1}{2} \mathrm{e}^{\frac{3}{2} t} +
@@ -155,8 +155,18 @@ footskip=24.16mm,headsep=24.16mm}
   \item Με τη βοήθεια της συνέλιξης, να υπολογιστεί ο αντίστροφος μετασχηματισμός 
     Laplace των παρακάτω συναρτήσεων.
     \begin{enumerate}[i)]
+      \item $ F(s) = \frac{1}{s^{2}(s+1)} $ \hfill Απ: $ y(t) = t-1+ \mathrm{e}^{-t} $ 
+      \item $ F(s) = \frac{1}{(s-1)(s-2)} $ \hfill Απ: $ y(t) = - \mathrm{e}^{t} +
+        \mathrm{e}^{2t} $ 
+      \item $ F(s) = \frac{1}{s(s^{2}+4)} $ \hfill Απ: $ y(t) = \frac{1}{4} (1-
+        \cos{2t}) $ 
+      \item $ F(s) = \frac{s}{(s-1)(s^{2}+1)} $ \hfill Απ: $ y(t) = \frac{1}{2}
+        (\sin{t} - \cos{t} + \mathrm{e}^{t}) $  
       \item $ F(s) = \frac{s}{(s^{2}+1)^{2}}$ \hfill Απ: $f(t) = \frac{1}{2}t\sin{t}$ 
-      \item $ F(s) = \frac{2 k s}{(s^{2}+k^{2})^{2}} $ \hfill Απ: $ y(t) = t \sin{kt} $  
+      \item $ F(s) = \frac{2 a s}{(s^{2}+a^{2})^{2}} $ \hfill Απ: $ y(t) = t \sin{at} $  
+      \item\label{it:conv1} 
+        $ F(s) = \frac{1}{(s^{2}+a^{2})^{2}} $ \hfill Απ: $ \frac{1}{2a^{3}} 
+        (\sin{at} - at \cos{at}) $ 
     \end{enumerate}
 \end{enumerate}
 
