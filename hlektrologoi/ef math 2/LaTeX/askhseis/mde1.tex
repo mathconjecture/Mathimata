@@ -1,0 +1,98 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\thispagestyle{askhseis}
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col1}{ΜΔΕ 1ης τάξης}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Να λυθούν οι παρακάτω μδε με απλές μεθόδους των σδε.
+    \begin{enumerate}[i)]
+      %shmeiwseis mou
+      \item $u_{x}+y^{2}u=0,\quad u=u(x,y)$ \hfill Απ: $u(x,y)=c(y)e^{-y^{2}x}$
+      \item $su_{t}+u=1,\quad u=u(s,t)$ \hfill Απ: $u(s,t)=s+c(s)e^{-\frac{t}{s}}$
+      \item $u_{xy}-u_{x}=y,\quad u=u(x,y)$ \hfill Απ: $u(x,y)=F(x)e^{y}-x(y+1)+c(y)$
+      \item $u_{xx}+\omega^{2}u=0,\quad u=u(x,\omega)$ 
+        \hfill Απ: $u(x,\omega)=c_{1}(\omega)\cos(\omega x)+c_{2}(\omega)\sin(\omega x)$
+    \end{enumerate}
+
+  \item Να λυθούν οι παρακάτω γραμμικές, ομογενείς μδε.
+
+    \begin{enumerate}[i)]
+      %vafeas
+      \item $5u_{x}+2u_{y}=0,\quad  u=u(x,y) ,\quad u(0,y)=\sin y$ 
+        \hfill Απ: $u(x,y)=\sin(y-\frac{2}{5}x)$
+      \item $5u_{x}+2xu_{y}=0,\quad  u=u(x,y) ,\quad u(0,y)=\sin y$ 
+        \hfill Απ: $u(x,y)=\sin(y-\frac{1}{5}x^{2})$ 
+        %shmeiwseis mou
+      \item $ yu_{x}-xu_{y}=zyu_{z}, \quad u=u(x,y,z) $ 
+        \hfill Απ: $ u=f(x^{2}+y^{2}, z\mathrm{e}^{x}) $ 
+        %spand p.33 kai shmeiwseis
+      \item $x(y-z)u_{x}+y(z-x)u_{y}+z(x-y)u_{z}=0, \quad u=u(x,y,z) $ 
+        \hfill Απ: $u=f(x+y+z,xyz)$
+    \end{enumerate}
+
+  \item Να λυθούν οι παρακάτω ημιγραμμικές μδε, αν $u=u(x,y)$.
+
+    \begin{enumerate}[i)]
+        %shmeiwseis
+      \item $yu_{x}-xu_{y}=0$ \hfill Απ: $F(x^{2}+y^{2},u)=0$ 
+        %shmeiwseis 
+      \item $yu_{x}+u_{y}=2$ \hfill Απ: $F(2x-y^{2},2y-u)=0$
+        %spand p.31 kai shmeiwseis
+      \item $ x u_{x}-yu_{y}=u $ \hfill Απ: $ F(xy, \frac{x}{z})=0 $
+        %spand p.30
+      \item $ 2x u_{x}+yu_{y}=u^{2} $ 
+        \hfill Απ: $ F(\frac{x}{y^{2}},\mathrm{e}^{\frac{1}{u} u})=0 $ 
+        %eukolh
+      \item $-xyu_{x}+x^{2}u_{y}=yu$ \hfill Απ: $F(x^{2}+y^{2},xu)=0$
+        %shmeiwseis mou
+      \item $ yu_{x}-xu_{y}=2xyu $ 
+        \hfill Απ: $ F(x^{2}+y^{2}, \frac{\mathrm{e}^{x^{2}}}{z})=0 $  
+
+      \item $xu_{x}+yu_{y}=xe^{-u}$ \hfill Απ: $F(\frac{y}{x},x-e^{u})=0$
+        %spand p.76
+      \item $y^{2}u_{x}-xyu_{y}=x(u-2y)$ \hfill Απ: $F(x^{2}+y^{2},yu-y^{2})=0$
+        %spand p.29
+      \item $x^{2}u_{x}+y^{2}u_{y}=(x+y)u$ 
+        \hfill Απ: $F(\frac{1}{y}-\frac{1}{x},\frac{x-y}{u})=0$ 
+        %shmeiwseis
+      \item $(y-u)u_{x}+(u-x)u_{y}=x-y$ \hfill Απ: $F(x+y+u,x^{2}+y^{2}+u^{2})=0 $
+    \end{enumerate}
+  \item Να λυθούν τα παρακάτω προβλήματα Cauchy, αν $u=u(x,y)$.
+
+    \begin{enumerate}[i)]
+      %shmeiwseis
+      \item $uu_{x}+u_{y}=1$,\quad $u(\frac{y^{2}}{2},y)=0$ 
+        \hfill Απ: $(y-u)^{2}=2x-u^{2}$
+        %shmeiwseis
+      \item $ (y-u)u_{x}+(u-x)u_{y}=x-y $, \quad $ u=0 $ για $ xy=1 $
+        \hfill Απ: $ u= \frac{1-xy}{x+y} $  
+
+      \item $2xyu_{x}+(y^{2}-x^{2})u_{y}=0$,\quad $y=0$, για $xu=1$ 
+        \hfill Απ: $ux^{2}+uy^{2}=x$
+      \item $xu_{x}+yu_{y}=2u$,\quad $u=1$, για $x^{2}-y^{2}=2$ 
+        \hfill Απ: $x^{2}-y^{2}=2u$
+      \item $x(y-u)u_{x}-y(x-u)u_{y}=u(x-y)$,\quad $u=1$, για $x^{2}+y^{2}=4$ 
+        \hfill Απ: $(1-x-y-u)^{2}-2xyu=4$
+      \item $4yuu_{x}+9xuu_{y}=2xy$,\quad $u=0$, για $\frac{x^{2}}{4}+\frac{y^{2}}{9}=1$ \hfill Απ: $\frac{x^{2}}{4}+\frac{y^{2}}{9}=1+u^{2}$
+        % \item $x(y^{2}+u)u_{x}-y(x^{2}+u)u_{y}=(x^{2}-y^{2})u$,\quad $u=1$, για $x+y=0$ \hfill Απ: $x^{2}+y^{2}+2xyu-2u+2=0$
+        % \item $(x^{2}-y^{2}-u^{2})u_{x}+2xyu_{y}=2xu$,\quad $u=1$, για $x^{2}+y^{2}=3$ \hfill Απ: $x^{2}+y^{2}+u^{2}-4u=0$
+        % \item $2y(u-3)u_{x}+(2x-u)u_{y}=y(2x-3)$,\quad $u=0$, για  $x^{2}+y^{2}=2x$ \hfill Απ: $x^{2}-u^{2}+y^{2}-2x+4u=0$
+    \end{enumerate}
+
+  \item Να λυθεί η παρακάτω μδε
+    \begin{enumerate}[i)]
+      \item $xu_{x}+yu_{y}+zu_{z}=2u$,\quad $u=u(x,y,z)$ \hfill Απ: $F(\frac{x}{z},\frac{y}{z},\frac{u}{z^{2}})=0$
+
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
