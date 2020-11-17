@@ -1,77 +1,81 @@
-\input{preamble/preamble.tex}
-\input{preamble/definitions.tex}
+\input{preamble.tex}
+\input{definitions.tex}
 
-
+\geometry{top=2.2cm}
+\pagestyle{askhseis}
 \everymath{\displaystyle}
 
+\setcounter{chapter}{1}
 \begin{document}
 
 \begin{center}
-\minibox[frame]{\large\bfseries Ασκήσεις στα Ολοκληρώματα}
+  \minibox{\large\bfseries \textcolor{Col1}{Ασκήσεις στα Ολοκληρώματα}}
 \end{center}
 
 \vspace{\baselineskip}
 
 \begin{enumerate}
-    \item Να υπολογιστούν τα παρακάτω αόριστα ολοκληρώματα.
-        \begin{enumerate}[i)]
-            \item $ \int \frac{1}{x^{5}} \,{dx} $ \hfill Απ: $ \frac{1}{4x^{4}} $ 
-            \item $ \int \frac{1}{\sqrt{x}} \,{dx} $ \hfill Απ: $ 2 \sqrt{x} $
-            \item $ \int \left(2x^{3} + 3 \sqrt{x} -2\right) \,{dx} $ 
-                \hfill Απ: $ \frac{x^{4}}{2} + 2 x^{\frac{3}{2}} -2x $ 
-            \item $ \int \frac{e^{x}+e^{-x}}{2} \,{dx} $ 
-                \hfill Απ: $ \frac{e^{x}-e^{-x}}{2} $ 
-            \item $ \int 2^{5x} \,{dx} $ \hfill Απ: $ \frac{2^{5x}}{5 \ln{2}} $ 
-            \item $ \int \frac{3}{x-1} - \frac{x}{x^{2}+4} \,{dx} $ 
-                \hfill Απ:  $ 3 \ln{\abs{x-1}} - \frac{\ln{(x^{2}+4)}}{2} $
-            \item $ \int \left(\frac{1}{5x} + \frac{3}{2x^{2}} + 
-                \frac{x}{x^{2}-1} \right)  \,{dx} $ 
-                \hfill Απ: $ \frac{\ln{\abs{x}}}{5} - \frac{3}{2x} + 
-                \frac{\ln{\abs{x^{2}-1}}}{2} $ 
-            \item $ \int \frac{(\sqrt{x} -1)^{3}}{2 \sqrt{x}}  \,{dx} $ 
-                \hfill Απ: $ \frac{(\sqrt{x} -1)^{4}}{4} $ 
-        \end{enumerate}
+  \item Να υπολογιστούν τα παρακάτω αόριστα ολοκληρώματα.
+    \begin{enumerate}[i)]
+      \item $ \int \frac{1}{x^{5}} \,{dx} $ \hfill Απ: $ \frac{1}{4x^{4}} $ 
+      \item $ \int \frac{1}{\sqrt{x}} \,{dx} $ \hfill Απ: $ 2 \sqrt{x} $
+      \item $ \int \left(2x^{3} + 3 \sqrt{x} -2\right) \,{dx} $ 
+        \hfill Απ: $ \frac{x^{4}}{2} + 2 x^{\frac{3}{2}} -2x $ 
+      \item $ \int \frac{e^{x}+e^{-x}}{2} \,{dx} $ 
+        \hfill Απ: $ \frac{e^{x}-e^{-x}}{2} $ 
+      \item $ \int 2^{5x} \,{dx} $ \hfill Απ: $ \frac{2^{5x}}{5 \ln{2}} $ 
+      \item $ \int \frac{3}{x-1} - \frac{x}{x^{2}+4} \,{dx} $ 
+        \hfill Απ:  $ 3 \ln{\abs{x-1}} - \frac{\ln{(x^{2}+4)}}{2} $
+      \item $ \int \left(\frac{1}{5x} + \frac{3}{2x^{2}} + 
+        \frac{x}{x^{2}-1} \right)  \,{dx} $ 
+        \hfill Απ: $ \frac{\ln{\abs{x}}}{5} - \frac{3}{2x} + 
+        \frac{\ln{\abs{x^{2}-1}}}{2} $ 
+      \item $ \int \frac{(\sqrt{x} -1)^{3}}{2 \sqrt{x}}  \,{dx} $ 
+        \hfill Απ: $ \frac{(\sqrt{x} -1)^{4}}{4} $ 
+    \end{enumerate}
 
-    \item Να υπολογιστούν τα παρακάτω αόριστα ολοκληρώματα.
-        \begin{enumerate}[i)]
-            \item $ \int x^{\frac{3}{4}} \,{dx} $ 
-                \hfill Απ: $ \frac{4}{7} x^{\frac{7}{4}} $ 
-            \item $ \int \frac{4e^{x}+e^{2x}}{e^{x}} \,{dx} $ \hfill Απ: $ 4x + e^{x} $ 
-            \item $ \int \frac{4x^{2}+5}{\frac{4}{3} x^{2}+5x+25} \,{dx} $ 
-                \hfill Απ: $ \ln{\abs{\frac{4}{3} x^{3} + 5x^{2}+25}} $
-            \item $ \int \frac{x+4}{3x^{2}+24 x} \,{dx}  $
-                \hfill Απ: $ \frac{1}{6} \ln{\abs{3x^{2}+24x}} $ 
-            \item $ \int \left(x^{- \frac{4}{3}} + \frac{5}{x} + 8e^{4x}\right) \,{dx} $
-                \hfill Απ: $ -3 x^{-\frac{1}{3}} + 5 \ln{\abs{x}} +2e^{4x} $ 
-        \end{enumerate}
+  \item Να υπολογιστούν τα παρακάτω αόριστα ολοκληρώματα.
+    \begin{enumerate}[i)]
+      \item $ \int x^{\frac{3}{4}} \,{dx} $ 
+        \hfill Απ: $ \frac{4}{7} x^{\frac{7}{4}} $ 
+      \item $ \int \frac{4e^{x}+e^{2x}}{e^{x}} \,{dx} $ \hfill Απ: $ 4x + e^{x} $ 
+      \item $ \int \frac{4x^{2}+5}{\frac{4}{3} x^{2}+5x+25} \,{dx} $ 
+        \hfill Απ: $ \ln{\abs{\frac{4}{3} x^{3} + 5x^{2}+25}} $
+      \item $ \int \frac{x+4}{3x^{2}+24 x} \,{dx}  $
+        \hfill Απ: $ \frac{1}{6} \ln{\abs{3x^{2}+24x}} $ 
+      \item $ \int \left(x^{- \frac{4}{3}} + \frac{5}{x} + 8e^{4x}\right) \,{dx} $
+        \hfill Απ: $ -3 x^{-\frac{1}{3}} + 5 \ln{\abs{x}} +2e^{4x} $ 
+    \end{enumerate}
 
-    \item Να υπολογιστούν τα παρακάτω ορισμένα ολοκληρωματα.
-        \begin{enumerate}[i)]
-            \item $ \int _{2}^{4} \frac{x^{2}-4}{x^{2}} \,{dx} $ \hfill Απ: $ 1 $
-            \item $ \int _{0}^{3} \left(-x^{3}+x^{2}+6x\right) \,{dx} $ 
-                \hfill Απ: $ 15,75 $ 
-            \item $ \int _{e}^{e^{2}} \frac{1}{x}  \,{dx} $ \hfill Απ: $ 1 $ 
-        \end{enumerate}
+  \item Να υπολογιστούν τα παρακάτω ορισμένα ολοκληρωματα.
+    \begin{enumerate}[i)]
+      \item $ \int _{2}^{4} \frac{x^{2}-4}{x^{2}} \,{dx} $ \hfill Απ: $ 1 $
+      \item $ \int _{0}^{3} \left(-x^{3}+x^{2}+6x\right) \,{dx} $ 
+        \hfill Απ: $ 15,75 $ 
+      \item $ \int _{e}^{e^{2}} \frac{1}{x}  \,{dx} $ \hfill Απ: $ 1 $ 
+    \end{enumerate}
 
-\pagebreak
+  \item Να υπολογιστούν τα παρακάτω γενικευμένα ολοκληρώματα.
 
-    \item Να υπολογιστούν τα παρακάτω γενικευμένα ολοκληρώματα.
+    \twocolumnside{
+    \begin{enumerate}[i)]
+      \item $ \int _{1}^{\infty} \frac{1}{x} \,{dx} $ \hfill Απ: $ \infty $ 
+      \item $ \int _{1}^{\infty} \frac{1}{x^{2}} \,{dx}  $ \hfill Απ: $ 1 $
+      \item $ \int _{- \infty}^{+\infty} xe^{-ax^{2}} \,{dx} $
+        \hfill Απ: $ \infty  $ 
+    \end{enumerate}
+    }{
+    \begin{enumerate}[i),start=4]
+      \item $ \int _{2}^{\infty} \frac{1}{x^{3}} \,{dx} $ 
+        \hfill Απ: $ \frac{1}{8} $ 
+      \item $ \int _{1}^{\infty}\frac{1}{\sqrt{x}} \,{dx} $ \hfill Απ: $ \infty $ 
+      \item $ \int _{-\infty}^{0} e^{3x} \,{dx} $ \hfill Απ: $ \frac{1}{3} $ 
+    \end{enumerate}
+  }
 
-        \begin{enumerate}[i)]
-            \item $ \int _{1}^{\infty} \frac{1}{x} \,{dx} $ \hfill Απ: $ \infty $ 
-            \item $ \int _{1}^{\infty} \frac{1}{x^{2}} \,{dx}  $ \hfill Απ: $ 1 $
-            \item $ \int _{- \infty}^{+\infty} xe^{-ax^{2}} \,{dx} $
-                \hfill Απ: $ \infty  $ 
-            \item $ \int _{2}^{\infty} \frac{1}{x^{3}} \,{dx} $ 
-                \hfill Απ: $ \frac{1}{8} $ 
-            \item $ \int _{1}^{\infty}\frac{1}{\sqrt{x}} \,{dx} $ \hfill Απ: $ \infty $ 
-            \item $ \int _{-\infty}^{0} e^{3x} \,{dx} $ \hfill Απ: $ \frac{1}{3} $ 
-        \end{enumerate}
-
-    \item Να εξεταστεί για ποιες τιμές του $ a $ συγκλίνει το ολοκλήρωμα 
-            $ \int _{1}^{\infty} \frac{1}{x^{a}} \,{dx} $ 
-            
-            \hfill Απ: συγκλίνει $ \Leftrightarrow a > 1 $ 
+  \item Να εξεταστεί για ποιες τιμές του $ a $ συγκλίνει το ολοκλήρωμα 
+    $ \int _{1}^{\infty} \frac{1}{x^{a}} \,{dx} $ 
+    \hfill Απ: συγκλίνει $ \Leftrightarrow a > 1 $ 
 \end{enumerate}
 
 \end{document}

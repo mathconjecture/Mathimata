@@ -1,0 +1,123 @@
+\input{preamble_typ.tex}
+\input{definitions_typ.tex}
+\input{tikz.tex}
+
+
+\pagestyle{vangelis}
+
+\setlist[myitemize]{label={\small$\color{Col1}{\blacktriangleright}$},labelindent=2em}
+
+\begin{document}
+
+\section{Ελαστικότητα}
+(Σημειακή) \textcolor{Col1}{Ελαστικότητα} της μεταβλητής $y$ ως προς $x$: \quad
+$
+\boxed{\varepsilon _{y,x} = \frac{dy/y}{dx/x} = \dv{y}{x} \cdot \frac{x}{y}}
+$ 
+
+\vspace{0.5\baselineskip}
+
+\twocolumnsides{
+  \section{Ελαστικότητα ως προς την τίμη (\textit{P})}
+  \[
+    \boxed{\varepsilon _{d} = \dv{Q}{P} \cdot \frac{P}{Q}} \quad \text{ή} \quad 
+    \varepsilon _{d} = \dv{\ln{Q}}{\ln{P}}
+  \] 
+  \subsection{Χαρακτηρισμός}
+  \begin{myitemize}
+    \item $ \abs{\varepsilon _{d}} > 1 \Leftrightarrow  $ \textcolor{Col1}{ελαστική} 
+      ζήτηση
+    \item $ \abs{\varepsilon _{d}} < 1 \Leftrightarrow  $ \textcolor{Col1}{ανελαστική} 
+      ζήτηση
+    \item $ \abs{\varepsilon _{d}} = 1 \Leftrightarrow  $ \textcolor{Col1}{μοναδιαία} 
+      ζήτηση
+    \item $ \abs{\varepsilon _{d}} = 0 \Leftrightarrow  $ \textcolor{Col1}{τελείως 
+      ανελαστική} ζήτηση
+  \end{myitemize}
+  }{
+  \section{Ελαστικότητα ως προς το εισόδημα (\textit{M})}
+  \[
+    \boxed{\varepsilon _{M} = \dv{Q}{M} \cdot \frac{M}{Q}} \quad \text{ή} \quad 
+    \varepsilon _{d} = \dv{\ln{Q}}{\ln{M}}
+  \]
+  \subsection{Χαρακτηρισμός}
+  \begin{myitemize}
+    \item $ \varepsilon _{M} > 0 \Leftrightarrow  $ \textcolor{Col1}{κανονικά} αγαθά
+    \item $ \varepsilon _{M} < 0 \Leftrightarrow  $ \textcolor{Col1}{κατώτερα} αγαθά
+    \item $ \varepsilon _{M} = 0 \Leftrightarrow  $ \textcolor{Col1}{ουδέτερα} αγαθά
+  \end{myitemize}
+}
+
+\vspace{0.5\baselineskip}
+
+\section{Συναρτήσεις Οικονομικών}
+
+\twocolumnsides{
+  \section{Ζήτηση}
+  \[
+    \boxed{Q=D(P)}, \quad \text{με} \quad Q,P>0 \quad \text{και} \quad \dv{D(P)}{P} < 0
+  \] 
+  }{
+  \section{Προσφορά}
+  \[
+    \boxed{Q=S(P)}, \quad \text{με} \quad Q,P>0 \quad \text{και} \quad \dv{S(P)}{P} > 0
+  \]
+}
+
+\vspace{0.5\baselineskip}
+
+\section{Παραγωγή}
+\[
+  Q=F(L) \; \text{ή} \; Q=F(K) \; \text{ή} \; Q=F(L,K) 
+\] 
+\twocolumnsides{
+  \subsection{Μέση Παραγωγή}
+  \[
+    AP_{L} = \frac{Q}{L} = \frac{F(L)}{L} 
+  \] 
+  }{
+  \subsection{Οριακή Παραγωγή}
+  \[
+    MP_{L} = \dv{Q}{L} = F'(L)
+  \] 
+}
+
+
+
+
+\vspace{0.5\baselineskip}
+
+\twocolumnsides{
+  \section{Έσοδα}
+  \[
+    TR(Q) = P\cdot Q    
+  \]
+  \twocolumnsides{
+    \subsection{Μέσο Έσοδο}
+    \[
+      ATR = \frac{TR}{Q} 
+    \] 
+    }{
+    \subsection{Οριακό Έσοδο}
+    \[
+      MTR = \dv{TR}{Q}
+    \]
+  }
+  }{
+  \section{Κόστος}
+  \[
+    TC(Q) = VC(Q)+FC, \quad \text{με} \quad \dv{FC}{Q} = 0
+  \]
+  \twocolumnsides{
+    \subsection{Μέσο Κόστος}
+    \[
+      AC = \frac{TC}{Q} 
+    \] 
+    }{
+    \subsection{Οριακό Κόστος}
+    \[
+      MC = \dv{TC}{Q}
+    \]
+  }
+}
+\end{document}
