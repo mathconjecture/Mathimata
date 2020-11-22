@@ -1,0 +1,123 @@
+\input{preamble.tex}
+\input{definitions.tex}
+
+
+\everymath{\displaystyle}
+
+\begin{document}
+\begin{center}
+  \minibox{\large\bfseries  \textcolor{Col1}{Ασκήσεις στις Σειρές Fourier}}
+\end{center}
+
+\vspace{\baselineskip}
+
+
+\begin{enumerate}
+  \item 
+    \begin{enumerate}[i)]
+      \item Να υπολογιστεί η σειρά  Fourier  της συνάρτησης  
+        $ f(x)= \begin{cases}
+          ax &, - \pi < x < \pi \\
+          0 &,\quad x = \pi 
+        \end{cases}  $, με $ a>0 $.
+      \item Να υπολογιστεί το άθροισμα της σειράς 
+        $ \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n} $
+    \end{enumerate}
+
+    \hfill Απ: \begin{tabular}{l} 
+      $ \rm i)$  $ x = 2a \sum_{n=1}^{\infty} \frac{(-1)^{n}}{n} \sin{nx} $,\; 
+      $ x \in (- \pi, \pi)$ \\ $ \rm ii)$ $\frac{\pi}{4} $
+    \end{tabular}    
+
+  \item Να υπολογιστεί η σειρά Fourier της συνάρτησης 
+    $ f(x)= \begin{cases} 
+      a &, 0<x< \pi \\
+      0 &, x=0,\; x= \pi \\
+      -a &, - \pi <x < 0 
+    \end{cases} $, με $ a>0 $.
+
+    \hfill Απ: $ f(x) = \sum_{n=1}^{\infty} \frac{4a}{ (2n-1)\pi} \sin{(2n-1)x}  $ ,\; 
+    $ x \in [- \pi, \pi ] $
+
+  \item 
+    \begin{enumerate}[i)]
+      \item Να υπολογιστεί η σειρά Fourier της συνάρτησης $f(x) = \begin{cases} 
+          1 &, -2 \leq x \leq 0 \\
+          x &, \phantom{-}0 < x \leq 2
+        \end{cases} $.
+      \item Να υπολογιστεί το άθροισμα της σειράς $ \sum_{n=1}^{\infty} 
+        \frac{1}{(2n-1)^{2}} $
+    \end{enumerate}
+
+    \hfill Απ: 
+    \begin{tabular}{l}
+      $ \rm i) $ $ f(x) = 1 - \sum_{n=1}^{\infty} \frac{4}{(2n-1)^{2} \pi ^{2}}
+      \cos{\frac{(2n-1) \pi x}{2} + \frac{1}{n \pi} \sin{n \pi x}} $ \\
+      $ \rm ii) $ $ \frac{\pi ^{2}}{8} $
+    \end{tabular}	
+
+  \item
+    \begin{enumerate}[i)]
+      \item Να υπολογιστεί η σειρά Fourier της συνάρτησης $ f(x)=x^{2} $, 
+        $ x \in [- \pi, \pi] $.
+      \item Να υπολογιστούν τα αθροίσματα των σειρών $ \sum_{n=1}^{\infty} 
+        \frac{1}{n^{2}}  $ και $ \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n^{2}}  $.
+
+        \hfill Απ: \begin{tabular}{l} 
+          $ \rm i) $ $ x^{2} = \frac{\pi ^{2}}{3} - \frac{4}{\pi ^{2}}\sum_{n=1}^{\infty}
+          \frac{(-1)^{n}}{n^{2}} \cos{nx}  $, $ x \in [- \pi, \pi] $ \\
+          $ \rm ii) $ $ \frac{\pi ^{2}}{6}  $, $ \frac{\pi ^{2}}{12}  $
+        \end{tabular}
+    \end{enumerate}
+
+  \item Να υπολογιστεί η σειρά Fourier της συνάρτησης $ f(x)=x^{3} $, 
+    $ x \in [- \pi, \pi] $.
+
+    \hfill Απ: $ x^{3} = 2 \sum_{n=1}^{\infty} \frac{1}{n} \left(\frac{6}{n^{2}} - 
+    \pi ^{2}\right) \sin{n \pi x} $ 
+
+  \item 
+    \begin{enumerate}[i)]
+      \item Να υπολογιστεί η σειρά Fourier της συνάρτησης $ f(x)= \abs{x} $, $ x \in
+        [- \pi, \pi] $. 
+      \item Να υπολογιστεί το άθροισμα της σειράς 
+        $ \sum_{n=1}^{\infty} \frac{1}{(2n+1)^{2}} $ 
+    \end{enumerate}
+
+    \hfill Απ: \begin{tabular}{l}
+      $\rm i)$ $ \abs{x} = \frac{\pi}{2} - \frac{4}{\pi} \sum_{n=1}^{\infty} 
+      \frac{1}{(2n+1)^{2}} \cos(2n+1)x  $, $ x \in [- \pi, \pi] $ \\
+      $\rm ii)$ $ \frac{\pi ^{2}}{8}$ 
+    \end{tabular}
+
+  \item Να υπολογιστεί η σειρά Fourier της συνάρτησης $ f(x) = 2-x^{2} $, $ -1<x<1 $.
+
+    \hfill Απ: $ f(x) = \frac{10}{3} - \frac{4}{\pi ^{2}} \sum_{n=1}^{\infty} 
+    \frac{(-1)^{n}}{n^{2}} \cos{n \pi x}  $ 
+
+  \item Να υπολογιστεί η σειρά Fourier της συνάρτησης $ f(x) = \begin{cases} 
+      1 &, -1 \leq x \leq 0 \\
+      1-x &, \phantom{-}0 \leq x <1
+    \end{cases} $.
+
+    \hfill Απ: $ f(x) = \frac{3}{4} + \frac{2}{\pi ^{2}} \sum_{n=1}^{\infty} 
+    \frac{1}{(2n-1)^{2}} \cos{(2n-1) \pi x} + \frac{1}{\pi} \sum_{n=1}^{\infty} 
+    \frac{(-1)^{n}}{n} \sin{n \pi x}   $ 
+
+  \item Δίνεται η συνάρτηση $ f(x) = 2x+1 $, $ x \in [0, \pi] $.
+
+    \begin{enumerate}[i)]
+      \item Να υπολογιστεί η συνημιτονική σειρά Fourier της $f$.
+      \item Να υπολογιστεί η ημιτονική σειρά Fourier της $f$.
+    \end{enumerate}
+
+    \hfill Απ: \begin{tabular}{l}
+      $\rm i)$ $ 2x+1 = 1 + \pi - \frac{4}{\pi} \sum_{n=1}^{\infty}
+      \frac{1}{(2n-1)^{2}}\cos{(2n-1)x} $, $ x \in [0, \pi] $ \\
+      $\rm ii)$ $  2x+1 = \frac{2}{\pi} \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n} 
+      \left((-1)^{n+1}+1+2 \pi\right) \sin{nx} $, $ x \in [0, \pi] $
+    \end{tabular} 
+\end{enumerate}
+
+
+\end{document}

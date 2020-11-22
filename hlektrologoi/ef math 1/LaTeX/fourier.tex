@@ -1,123 +1,120 @@
-\input{preamble.tex}
-\input{definitions.tex}
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
 
+\geometry{top=1.5cm}
 
 \everymath{\displaystyle}
+\pagestyle{askhseis}
 
 \begin{document}
 \begin{center}
-  \minibox{\large\bfseries  \textcolor{Col1}{Ασκήσεις στις Σειρές Fourier}}
+  \minibox{\large\bfseries  \textcolor{Col1}{Σειρές Fourier}}
 \end{center}
 
 \vspace{\baselineskip}
 
-
 \begin{enumerate}
-  \item 
-    \begin{enumerate}[i)]
-      \item Να υπολογιστεί η σειρά  Fourier  της συνάρτησης  
-        $ f(x)= \begin{cases}
-          ax &, - \pi < x < \pi \\
-          0 &,\quad x = \pi 
-        \end{cases}  $, με $ a>0 $.
-      \item Να υπολογιστεί το άθροισμα της σειράς 
-        $ \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n} $
+  \item Να υπολογιστούν οι σειρές Fourier των παρακάτω συναρτήσεων.
+    \begin{enumerate}[i),itemsep=.5\baselineskip]
+      %garoutsos
+      \item $ f(x)=
+        \begin{cases} 
+          1, & 0 \leq x < \pi /2 \\
+          0, & \pi /2 \leq x < \pi
+        \end{cases} $ 
+        \hfill Απ: $ f(x) \sim \frac{1}{2} + \frac{2}{\pi} \sum_{n=1}^{\infty} 
+        \frac{1}{n} \sin{[2(2n-1) \pi x]} $ 
+
+      %garoutsos
+      \item $ f(x) = 
+         \begin{cases}
+           0, & -1 \leq x < 0 \\
+           4, & 0 < x < 1
+         \end{cases}$
+         \hfill Απ: $ f(x) \sim 2 + \frac{8}{\pi} \sum_{n=1}^{\infty} \frac{1}{n} 
+         \sin{[(2n-1) \pi x]} $
+
+         %spandagos
+      \item $ f(x) = 
+         \begin{cases}
+           0, & - \pi \leq x < 0 \\
+           c, & 0 < x < \pi 
+         \end{cases}$
+         \hfill Απ: $ f(x) \sim \frac{c}{2} + \frac{2c}{\pi} \sum_{n=1}^{\infty}
+         \frac{1}{2n-1} \sin{[(2n-1)x]} $ 
+
+         %spandagos
+       \item $ f(x) = \pi + x , - \pi \leq x \leq \pi $ 
+         \hfill Απ: $ f(x) \sim \pi + 2 \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}
+         \sin{(nx)} $ 
+
+         %spandagos
+       \item $ f(x) = \mathrm{e}^{x} , \quad - \pi \leq x \leq \pi $
+         \hfill Απ: $ f(x) \sim \frac{\sinh{\pi}}{\pi} + \frac{2 \sinh{\pi}}{\pi} 
+         \sum_{n=1}^{\infty} \frac{(-1)^{n}}{(1+n)^{2}} \cos{(nx)} - 
+         \frac{n(-1)^{n}}{1+n} \sin{(nx)} $ 
     \end{enumerate}
 
-    \hfill Απ: \begin{tabular}{l} 
-      $ \rm i)$  $ x = 2a \sum_{n=1}^{\infty} \frac{(-1)^{n}}{n} \sin{nx} $,\; 
-      $ x \in (- \pi, \pi)$ \\ $ \rm ii)$ $\frac{\pi}{4} $
-    \end{tabular}    
-
-  \item Να υπολογιστεί η σειρά Fourier της συνάρτησης 
-    $ f(x)= \begin{cases} 
-      a &, 0<x< \pi \\
-      0 &, x=0,\; x= \pi \\
-      -a &, - \pi <x < 0 
-    \end{cases} $, με $ a>0 $.
-
-    \hfill Απ: $ f(x) = \sum_{n=1}^{\infty} \frac{4a}{ (2n-1)\pi} \sin{(2n-1)x}  $ ,\; 
-    $ x \in [- \pi, \pi ] $
-
-  \item 
+  \item Να υπολογιστούν οι σειρές Fourier των παρακάτω συνάρτήσεων καθώς και 
+    τα αθροίσματα:
     \begin{enumerate}[i)]
-      \item Να υπολογιστεί η σειρά Fourier της συνάρτησης $f(x) = \begin{cases} 
-          1 &, -2 \leq x \leq 0 \\
-          x &, \phantom{-}0 < x \leq 2
-        \end{cases} $.
-      \item Να υπολογιστεί το άθροισμα της σειράς $ \sum_{n=1}^{\infty} 
-        \frac{1}{(2n-1)^{2}} $
+      %garoutsos
+      \item $ f(x) = 
+        \begin{cases}
+          2, & -2<x<0 \\
+          x, & 0<x<2
+        \end{cases}, \quad \sum_{n=1}^{\infty} \frac{1}{(2n-1)^{2}} = \frac{\pi ^{2}}{8}
+        , \quad \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{2n-1} = \frac{\pi}{4} $
+
+        \hfill Απ: $ f(x) \sim \frac{3}{2} + 2 \sum_{n=1}^{\infty}
+        \left[\frac{(-1)^{n}-1}{n^{2} \pi ^{2}} \cos{\left(\frac{n \pi x}{2}\right)}  - 
+        \frac{1}{n \pi} \sin{\left(\frac{n \pi x}{2}\right)}\right] $  
+
+        %garoutsos
+      \item $ f(x) = x^{2}, \quad 0 \leq x < 2, \quad \sum_{n=1}^{\infty}
+        \frac{1}{n^{2}} = \frac{\pi^{2}}{6}, \quad \sum_{n=1}^{\infty}
+        \frac{(-1)^{n+1}}{n^{2}} = \frac{\pi ^{2}}{12} $
+
+        \hfill Απ: $ f(x) \sim \frac{4}{3} + 4 \sum_{n=1}^{\infty} 
+        \left[\frac{1}{n^{2} \pi ^{2}} \cos{(n \pi x )} - \frac{1}{n \pi}
+        \sin{(n \pi x)}\right] $ 
+
+        %garoutsos
+      \item $ f(x) = x \sin{x}, \quad - \pi < x < \pi, \quad \sum_{n=2}^{\infty}
+    \frac{(-1)^{n+1}}{(n-1)(n+1)} = - \frac{1}{4} $
+
+    \hfill Απ: $ f(x) \sim 1 - \frac{1}{2} \cos{x} + 2\sum_{n=2}^{\infty}
+    \frac{(-1)^{n+1}}{(n-1)(n+1)} \cos{(nx)} $ 
     \end{enumerate}
 
-    \hfill Απ: 
-    \begin{tabular}{l}
-      $ \rm i) $ $ f(x) = 1 - \sum_{n=1}^{\infty} \frac{4}{(2n-1)^{2} \pi ^{2}}
-      \cos{\frac{(2n-1) \pi x}{2} + \frac{1}{n \pi} \sin{n \pi x}} $ \\
-      $ \rm ii) $ $ \frac{\pi ^{2}}{8} $
-    \end{tabular}	
-
-  \item
+  \item Να υπολογιστεί η \textbf{συνημιτονική} σειρά Fourier των παρακάτω συναρτήσεων.
     \begin{enumerate}[i)]
-      \item Να υπολογιστεί η σειρά Fourier της συνάρτησης $ f(x)=x^{2} $, 
-        $ x \in [- \pi, \pi] $.
-      \item Να υπολογιστούν τα αθροίσματα των σειρών $ \sum_{n=1}^{\infty} 
-        \frac{1}{n^{2}}  $ και $ \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n^{2}}  $.
-
-        \hfill Απ: \begin{tabular}{l} 
-          $ \rm i) $ $ x^{2} = \frac{\pi ^{2}}{3} - \frac{4}{\pi ^{2}}\sum_{n=1}^{\infty}
-          \frac{(-1)^{n}}{n^{2}} \cos{nx}  $, $ x \in [- \pi, \pi] $ \\
-          $ \rm ii) $ $ \frac{\pi ^{2}}{6}  $, $ \frac{\pi ^{2}}{12}  $
-        \end{tabular}
+      \item $ f(x) = \sin{x} , \quad 0 \leq x \leq \pi $ 
+        \hfill Απ: $ f(x) \sim \frac{2}{\pi} - \frac{4}{\pi} \sum_{n=2}^{\infty}
+        \frac{1}{(2n)^{2}-1} \cos{(2nx)} $ 
+       \item $ f(x) = x, \quad 0 \leq x \leq 2 $ 
+         \hfill Απ: $ f(x) \sim 1 - \frac{8}{\pi ^{2}} \sum_{n=1}^{\infty}
+         \frac{1}{(2n-1)^{2}} \cos{\left(\frac{(2n-1) \pi x}{2}\right)} $ 
     \end{enumerate}
 
-  \item Να υπολογιστεί η σειρά Fourier της συνάρτησης $ f(x)=x^{3} $, 
-    $ x \in [- \pi, \pi] $.
-
-    \hfill Απ: $ x^{3} = 2 \sum_{n=1}^{\infty} \frac{1}{n} \left(\frac{6}{n^{2}} - 
-    \pi ^{2}\right) \sin{n \pi x} $ 
-
-  \item 
+  \item Να υπολογιστεί η \textbf{ημιτονική} σειρά Fourier των παρακάτω συναρτήσεων.
     \begin{enumerate}[i)]
-      \item Να υπολογιστεί η σειρά Fourier της συνάρτησης $ f(x)= \abs{x} $, $ x \in
-        [- \pi, \pi] $. 
-      \item Να υπολογιστεί το άθροισμα της σειράς 
-        $ \sum_{n=1}^{\infty} \frac{1}{(2n+1)^{2}} $ 
+      \item $ f(x) = \pi - x, \quad 0 \leq x < \pi $
+        \hfill Απ: $ f(x) \sim 2\sum_{n=1}^{\infty} \frac{1}{n} \sin{(nx)}$ 
+
+      \item $ f(x) = \cos{x} , \quad 0 < x < \frac{\pi}{2} $
+        \hfill Απ: $ f(x) \sim \frac{8}{\pi} \sum_{n=1}^{\infty} \frac{n}{(4n^{2}-1)} 
+        \sin{(2nx)} $ 
     \end{enumerate}
 
-    \hfill Απ: \begin{tabular}{l}
-      $\rm i)$ $ \abs{x} = \frac{\pi}{2} - \frac{4}{\pi} \sum_{n=1}^{\infty} 
-      \frac{1}{(2n+1)^{2}} \cos(2n+1)x  $, $ x \in [- \pi, \pi] $ \\
-      $\rm ii)$ $ \frac{\pi ^{2}}{8}$ 
-    \end{tabular}
+  \item Να υπολογιστεί η \textbf{ημιτονική} και \textbf{συνημιτονική} σειρά της 
+    συνάρτησης $ f(x) = x - \frac{x^{2}}{2}, \quad 0 \leq x \leq 2 $.
+    %spandagos
 
-  \item Να υπολογιστεί η σειρά Fourier της συνάρτησης $ f(x) = 2-x^{2} $, $ -1<x<1 $.
+    \hfill Απ: $ f(x) \sim \frac{1}{ 3} - \frac{8}{\pi ^{2}} \sum_{n=1}^{\infty}
+    \frac{1}{(2n-1)^{2}} \cos{\left[\frac{(2n-1) \pi x}{2}\right]} $  
 
-    \hfill Απ: $ f(x) = \frac{10}{3} - \frac{4}{\pi ^{2}} \sum_{n=1}^{\infty} 
-    \frac{(-1)^{n}}{n^{2}} \cos{n \pi x}  $ 
-
-  \item Να υπολογιστεί η σειρά Fourier της συνάρτησης $ f(x) = \begin{cases} 
-      1 &, -1 \leq x \leq 0 \\
-      1-x &, \phantom{-}0 \leq x <1
-    \end{cases} $.
-
-    \hfill Απ: $ f(x) = \frac{3}{4} + \frac{2}{\pi ^{2}} \sum_{n=1}^{\infty} 
-    \frac{1}{(2n-1)^{2}} \cos{(2n-1) \pi x} + \frac{1}{\pi} \sum_{n=1}^{\infty} 
-    \frac{(-1)^{n}}{n} \sin{n \pi x}   $ 
-
-  \item Δίνεται η συνάρτηση $ f(x) = 2x+1 $, $ x \in [0, \pi] $.
-
-    \begin{enumerate}[i)]
-      \item Να υπολογιστεί η συνημιτονική σειρά Fourier της $f$.
-      \item Να υπολογιστεί η ημιτονική σειρά Fourier της $f$.
-    \end{enumerate}
-
-    \hfill Απ: \begin{tabular}{l}
-      $\rm i)$ $ 2x+1 = 1 + \pi - \frac{4}{\pi} \sum_{n=1}^{\infty}
-      \frac{1}{(2n-1)^{2}}\cos{(2n-1)x} $, $ x \in [0, \pi] $ \\
-      $\rm ii)$ $  2x+1 = \frac{2}{\pi} \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n} 
-      \left((-1)^{n+1}+1+2 \pi\right) \sin{nx} $, $ x \in [0, \pi] $
-    \end{tabular} 
+    \hfill Απ: $ f(x) \sim \frac{16}{\pi ^{3}} \sum_{n=1}^{\infty} \frac{1}{(2n-1)^{3}}
+    \sin{\left[\frac{(2n-1) \pi x}{2}\right]} $  
 \end{enumerate}
-
-
 \end{document}
