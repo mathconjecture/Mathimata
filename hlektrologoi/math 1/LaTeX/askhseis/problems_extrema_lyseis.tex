@@ -31,7 +31,7 @@
         E(x) = x^{2} + 4x\cdot \frac{32}{x^{2}} \Rightarrow x^{2} +	\frac{128}{x}
       \end{align*}
       Αναζητάμε ελάχιστο για αυτή τη συνάρτηση.
-      \begin{itemize}
+      \begin{myitemize}
         \item $ E'(x) = 2x - \frac{128}{x^{2}} $ 
         \item $ E'(x) = 0 \Leftrightarrow 2x - \frac{128}{x^{2}} = 0
           \Leftrightarrow \frac{2x^{3} - 128}{x^{2}} = 0 \Leftrightarrow
@@ -40,7 +40,7 @@
         \item $ E''(x) = 2 + \frac{256}{x^{3}} $
         \item $ E''(4) = 2 + \frac{256}{64} = 6 > 0 $, επομένως πρόκειται για
           ολικό ελάχιστο.
-      \end{itemize}
+      \end{myitemize}
       Με αντικατάσταση της σχέσης~\eqref{eq:sta1} στη σχέση~\eqref{eq:vol1} έχουμε 
       $ y = 2 $.
 
@@ -51,7 +51,8 @@
       $ που περνάει από γνωστό σημείο $ P(a,b) $ και σχηματίζει με τους άξονες
     συντεταγμένων τρίγωνο ελάχιστου εμβαδού $ (a>0,\, b>0) $.}
     \begin{solution}
-    \item {} \twocolumnsidesc{Το εμβαδό του τριγώνου δίνεται από τη σχέση 
+    \item {}
+      \twocolumnsidesc{Το εμβαδό του τριγώνου δίνεται από τη σχέση 
         \inlineequation[eq:sur2]{E = {xy}/{2}}. 
 
         Η εξίσωση ευθείας που διέρχεται από το σημείο $ P(a,b) $ είναι η 
@@ -63,9 +64,9 @@
 
         Για $ y = 0 $ η ίδια σχέση δίνει $ x = a - {b}/{\lambda} $. 
         }{
-        \begin{tikzpicture}[scale=.9]
+        \begin{tikzpicture}[scale=.8]
           \draw[-latex,thick] (0,0) -- (3,0) node[right] {x};
-          \draw[-latex,thick] (0,0) -- (0,3) node[above] {y};
+          \draw[-latex,thick] (0,0) -- (0,3) node[left] {y};
           \draw (0,2) node[label=left:{$b-a \lambda$}] (a) {} -- 
             node[above right,midway] (p) {$ P(a,b)$} 
             (2.4,0) node[label=below:{$a-b/ \lambda$}] (b) {};
@@ -87,7 +88,7 @@
         2E \abs{\lambda} &= (a\lambda - b)^{2} \label{eq:sur2a}
       \end{align}
       Διακρίνουμε τις παρακάτω δύο περιπτώσεις.
-      \begin{itemize}
+      \begin{myitemize}
         \item Αν $ \lambda > 0 $ τότε από τη σχέση~\eqref{eq:sur2a} έχουμε
           \begin{align*}
           &2E\lambda  = (a\lambda - b)^{2} \Leftrightarrow \\
@@ -142,7 +143,7 @@
           \[
             \boxed{y=-\frac{b}{a}x +2b}	
           \]
-      \end{itemize}
+      \end{myitemize}
     \end{solution}
 
 \end{enumerate}

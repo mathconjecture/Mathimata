@@ -1,0 +1,82 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+\input{myboxes.tex}
+
+\geometry{top=1cm}
+
+\pagestyle{vangelis}
+\everymath{\displaystyle}
+\setcounter{chapter}{1}
+
+\begin{document}
+
+\chapter*{ΜΔΕ 1ης τάξης}
+
+\section*{Γραμμικές 1ης τάξης - Ομογενείς}
+
+\subsection*{2 μεταβλητών}
+
+Έστω η εξίσωση
+\begin{equation} \label{eq:linom}
+  \boxed{a(x,y)u_{x} + b(x,y)u_{y} = 0}
+\end{equation} 
+όπου $ a,b \colon T \subseteq \mathbb{R}^{2} \to \mathbb{R}$ συνεχείς συναρτήσεις. 
+Προφανώς η $ u(x,y) = c $ είναι μία (\textbf{τετριμμένη}) λύση της 
+εξίσωσης~\eqref{eq:linom}. Έστω $ u(x,y) $ μια \textcolor{Col1}{μη-τετριμμένη} λύση της 
+εξίσωσης. Τότε για τις ισουψείς καμπύλες της $ u=u(x,y) $, δηλ.  $ x=x(t), y=y(t), u=c $
+(τομή της επιφάνειας $ u=u(x,y) $ με το επίπεδο $ u=c $), έχουμε:
+\begin{equation*}
+  \dv{u}{t} = \pdv{u}{x} \dv{x}{t} + \pdv{u}{y} \dv{y}{t} = 0 \Rightarrow u_{x}x'(t) +
+  u_{y} y'(t) = 0
+\end{equation*}
+όπου καθώς $ u=u(x,y) $ είναι λύση της εξίσωσης~\eqref{eq:linom}, προκύπτουν οι
+εξισώσεις:
+\[
+  \left.
+    \begin{aligned}
+      x'(t)&=a(x(t),y(t)) \\
+      y'(t)&=b(x(t),y(t)) 
+    \end{aligned} 
+  \right\} \Leftrightarrow \frac{dx}{a} = \frac{dy}{b} = \frac{du}{0}
+\]
+οι οποίες ονομάζονται \textcolor{Col1}{χαρακτηριστικές εξισώσεις} 
+της~\eqref{eq:linom}, και οι λύσεις τους, έστω $ x=x(t), y = y(t) $, 
+\textcolor{Col1}{βασικές χαρακτηριστικές} της~\eqref{eq:linom}.
+
+Ισχύει, τότε το θεώρημα:
+\begin{mybox2}
+  \begin{thm}\label{thm:mde1}
+  Αν $ h(x,y)=c $ κατά μήκος κάθε βασικής χαρακτηριστικής της εξίσωσης~\eqref{eq:linom} 
+  και η $h$ έχει συνεχείς μερικές παραγώγους στην περιοχή $T$, τότε η $ u=f(h(x,y)) $, 
+  με $f$ αυθαίρετη συνάρτηση, είναι η γενική λύση της εξίσωσης~\eqref{eq:linom}.
+\end{thm}
+\end{mybox2}
+
+
+\subsection*{3 μεταβλητών}
+
+Το θεώρημα~\ref{thm:mde1} γενικεύεται για τη συνάρτηση 
+\begin{equation}\label{eq:linom2}
+  \boxed{a(x,y,z)u_{x} + b(x,y,z)u_{y} + c(x,y,z)u_{z}=0}
+\end{equation}
+όπου $ a,b,c \colon T \subseteq \mathbb{R}^{3} \to \mathbb{R}$ συνεχείς συναρτήσεις. 
+\begin{mybox2}
+  \begin{thm}\label{thm:mde11}
+    Αν $ u_{1}(x,y,z)=c_{1} $, $ u_{2}(x,y,z)=c_{2} $ κατά μήκος κάθε βασικής
+    χαρακτηριστικής της εξίσωσης~\eqref{eq:linom2} και οι $u_{1}, u_{2} $ έχουν συνεχείς 
+    μερικές παραγώγους στην περιοχή $T$, τότε η $ u=f(u_{1}(x,y,z), u_{2}(x,y,z)) $, 
+  με $f$ αυθαίρετη συνάρτηση, είναι η γενική λύση της εξίσωσης~\eqref{eq:linom2}.
+\end{thm}
+\end{mybox2}
+όπου οι βασικές χαρακτηριστικές $ u_{1}(x,y,z)=c_{1} $ και $ u_{2}(x,y,z)=c_{2} $ είναι 
+οι λύσεις του συστήματος 
+\[
+  \left.
+    \begin{aligned}
+      x'(t)&=a(x(t),y(t),z(t)) \\
+      y'(t)&=b(x(t),y(t),z(t)) \\
+      z'(t)&=c(x(t),y(t),z(t)) 
+    \end{aligned} 
+  \right\} \Leftrightarrow \frac{dx}{a} = \frac{dy}{b} = \frac{dz}{c}
+\]
+\end{document}

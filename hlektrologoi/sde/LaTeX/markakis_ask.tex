@@ -1,0 +1,73 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+\pagestyle{askhseis}
+
+\begin{document}
+
+
+
+\begin{center}
+  \minibox{\large \bfseries \color{Col1} Ασκήσεις (Μαρκάκης)}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Αν ο ρυθμός απορρόφησης της ενέργειας $E$, ακτινοβολίας που πέφτει κάθετα σε 
+    επιφάνεια υγρού (π.χ. θάλασσα) είναι $ \frac{\Delta E}{\Delta s} = -a E(s) $, 
+    όπου $s$ το βάθος και $a$ ο συντελεστής απορρόφησης (π.χ. $ a=0.1 $ : απορρόφηση 
+    $ 10\% ανά μονάδα μήκους $), 
+    \begin{enumerate}
+      \item Βρείτε την ενέργεια ως συνάρτηση του βάθους, $ E(s) $ (Νόμος απορρόφησης
+        Lambert)
+      \item Για $ a=0.5 $ υπολογίστε το βάθος όπου έχει απορροφηθεί το $ 90\% $ της 
+        προσπίπτουσας ακτινοβολίας $ E_{0} $, $(E(0)=E_{0}) $
+      \item Αφού βρείτε μια μαθηματική έκφραση του $a$, υπολογίστε το ποσοστό $ \% $
+        απορρόφησης ανά μονάδα μήκους, για $ a=0.5 $.
+    \end{enumerate}
+    \begin{solution}
+      \begin{enumerate}
+        \item Έχουμε ότι  
+          \[ 
+            \frac{\Delta E}{\Delta s} = - a E(s) \xrightarrow[\Delta t \to 0]{\lim} 
+            \boxed{\dv{E}{s} = -a E(s)} \quad \text{χωριζομένων μεταβλητών} 
+          \]
+          Επομένως
+          \[
+            \frac{dE}{E} = -a ds \Rightarrow \int \frac{1}{E} \,{dE} = -a \int \,{ds} 
+            \Rightarrow \ln{\abs{E}} = -as + c \Rightarrow \abs{E} = \mathrm{e}^{-as+c} 
+            \Rightarrow E = \pm \mathrm{e}^{c} \cdot \mathrm{e}^{-as} 
+          \] 
+          Άρα, αν θέσουμε $ k = \pm \mathrm{e}^{c} $, έχουμε ότι 
+          \[
+            E(s) = k \mathrm{e}^{-as}  
+          \] 
+          Για $ s=0 $, έχουμε ότι 
+          $ E(0)= k \mathrm{e}^{-a\cdot 0} \Rightarrow E_{0} = k $. Άρα 
+          \[
+            E(s) = E_{0} \mathrm{e}^{-as} 
+          \] 
+        \item Αφού έχει απορροφηθεί το $ 90\% $ της προσπίπτουσας ενέργειας, 
+          αυτό σημαίνει ότι ζητάμε το βάθος όπου η ενέργεια που φτάνει είναι μόλις 
+          $ 10\% $ της αρχικής ενέργειας. Άρα
+          \[ 
+            E(s) = 10\% E_{0} \Leftrightarrow E(s) = 0.1E_{0} \Leftrightarrow E_{0}
+            \mathrm{e}^{-0.5s} = 0.1E_{0} \Leftrightarrow \mathrm{e}^{-0.5s} = 0.1
+            \Leftrightarrow -0.5s = \ln{0.1} 
+          \]
+          άρα
+          \[
+            s = - \frac{\ln{0.1}}{0.5} \approx 4,64 \quad\text{μονάδες μήκους}
+          \] 
+        \item Έχουμε 
+          \[
+            E(s) = E_{0} \mathrm{e}^{-as} \Rightarrow \frac{E(s)}{E_{0}} =
+            \mathrm{e}^{-as} \Rightarrow \ln{\frac{E(s)}{E_{0}}} = -as \Rightarrow 
+            a = - \frac{\ln{\frac{E(s)}{E_{0}}}}{s}
+           \] 
+      \end{enumerate}
+    \end{solution}
+\end{enumerate}
+
+\end{document}

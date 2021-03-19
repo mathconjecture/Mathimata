@@ -1,5 +1,7 @@
 \input{preamble.tex}
 \input{definitions.tex}
+\input{tikz.tex}
+\input{myboxes.tex}
 
 
 
@@ -201,7 +203,7 @@
 
 
 \mythm{%
-  \begin{minipage}{0.3\textwidth}
+  \begin{minipage}{0.28\textwidth}
     \begin{enumerate}[i)]
       \item $ \abs{f(x,y)} \leq \abs{g(x,y)} $ \hfill \tikzmark{a}
       \item $ \lim\limits_{(x,y)\to (x_{0}, y_{0})} g(x,y) = 0 $ \hfill \tikzmark{b}
@@ -231,7 +233,7 @@
 \end{example}
 
 \mythm{%
-  \begin{minipage}{0.3\textwidth}
+  \begin{minipage}{0.28\textwidth}
     \begin{enumerate}[i)]
       \item $ \abs{g(x,y)} \leq M \in \mathbb{R} $ \hfill \tikzmark{a}
       \item $ \lim\limits_{(x,y)\to (x_{0}, y_{0})} f(x,y) = 0 $ \hfill \tikzmark{b}
@@ -247,7 +249,7 @@
 
   \begin{solution}
   \item {}
-    \begin{minipage}{0.4\textwidth}
+    \begin{minipage}{0.34\textwidth}
       \begin{enumerate}[i)]
         \item $ \abs{\sin{\frac{1}{y}}} \leq 1 $ \hfill \tikzmark{a}
         \item $ \lim\limits_{(x,y)\to (0, 0)} (x^{2}+y^{2}) = 0+0=0 $ 
@@ -720,8 +722,8 @@ $ \lim\limits_{(x,y)\to (x_{0}, y_{0})} f(x,y) = f(x_{0}, y_{0}) $.}
           \lim\limits_{\substack{x\to 0 \\y \to 0}} \frac{x^{2}+y^{4}}{x^{4}+y^{2}} =
           \lim_{r \to 0} \frac{r^{2} \cos^{2}{\theta} + r^{4} 
           \sin^{4}{\theta}}{r^{4} \cos^{4}{\theta} + r^{2} \sin^{2}{\theta}} =
-          \lim_{r \to 0} \frac{\cos^{2}{\theta} + r^{2} \sin^{2}{\theta}}{r^{2}
-          \cos^{2}{\theta} + \sin^{2}{\theta}} =
+          \lim_{r \to 0} \frac{\cos^{2}{\theta} + r^{2} \sin^{4}{\theta}}{r^{2}
+          \cos^{4}{\theta} + \sin^{2}{\theta}} =
           \frac{\cos^{2}{\theta}}{\sin^{2}{\theta}}
         \] 
         Επομένως δεν υπάρχει το όριο της $f$ στο $ (0,0) $, γιατί εξαρτάται από το

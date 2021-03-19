@@ -26,14 +26,14 @@
 \section{Κανόνας Αλυσίδας}
 
 \begin{enumerate}
-  \item Έστω ότι οι τιμές στο χρόνο κινούνται σύμφωνα με την $ P= A \mathrm{e}^{at} $. 
+  \item {(2017)} Έστω ότι οι τιμές στο χρόνο κινούνται σύμφωνα με την $ P= A \mathrm{e}^{at} $. 
     Επίσης, έστω ότι η ζήτηση δίνεται από την $ Q = Bp^{- \epsilon} $, όπου $ A,B,
     \epsilon > 0 $ και $ 0<a<1 $. 
     \begin{enumerate}[i)]
       \item Χρησιμοποιήστε τον \textbf{αλυσωτό κανόνα} για να υπολογίσετε
         τη μεταβολή της ζήτησης ως προς το χρόνο.
 
-        \hfill Απ: $ \dv{Q}{t} = - \epsilon BA^{- \epsilon} \mathrm{e}^{-a\epsilon t} $ 
+        \hfill Απ: $ \dv{Q}{t} = - \epsilon aBA^{- \epsilon} \mathrm{e}^{-a\epsilon t} $ 
 
         \end{enumerate}
 
@@ -78,5 +78,59 @@
     \end{enumerate}
 \end{enumerate}
 
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col1}{Taylor}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Υπολογίστε την προσέγγιση κατά Taylor 4ης τάξης της συνάρτησης $ f(x) =
+    \frac{1}{1-x} $ γύρω από το σημείο $ x_{0}=0 $. \hfill Απ: $ f(x) \approx
+    1+x+x^{2}+x^{3}+x^{4} $ 
+  \item Για ποιές τιμές του $ x $, γύρω από το $ x_{0}=1 $, είναι το σφάλμα προσέγγισης
+    Taylor 2ης τάξης της συνάρτησης $ f(x)=-2x^{3}+3x^{2}+11x-1 $ μικρότερο από 0.1;
+    \hfill Απ: $ x \in (0.631597,1.368403) $ 
+\end{enumerate}
+
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col1}{Ολοκληρώματα}}
+\end{center}
+
+\begin{enumerate}
+  \item Υπολογίστε το ολοκλήρωμα $ \int _{0.5}^{1} \frac{1}{1-2x} \,{dx} $ 
+    \hfill Απ: $ - \infty $ 
+\end{enumerate}
+
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col1}{Πλεόνασμα Παραγωγού - Καταναλωτή}}
+\end{center}
+
+\begin{enumerate}
+  \item Δίνονται οι συναρτήσεις $ Q = \sqrt{P} $ και $ Q = \frac{1}{\sqrt{P}} $ 
+    με πεδία ορισμού, $ P \in [0, + \infty] $ και $ P \in (0,2] $ αντίστοιχα. 
+    Υπολογίστε το κοινωνικό πλεόνασμα στην τιμή ισορροπίας.
+
+    \hfill Απ: Π.Κ. $= 2(\sqrt{2} -1)$, Π.Π. $= \frac{2}{3} $, Κ.Π.=Π.Κ.+Π.Π $ \approx
+    1.495 $ 
+\end{enumerate}
+
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col1}{Ακρότατα}}
+\end{center}
+
+\begin{enumerate}
+  \item Μια επιχείρηση, σε καθεστώς τέλειου ανταγωνισμού, έχει συνάρτηση κόστους 
+    $ TC(Q)= \mathrm{e}^{\gamma Q} $ με $ \gamma > 0 $ και $ P > \gamma $. Προβείτε σε 
+    βελτιστοποίηση της συνάρτησης κέρδους ως προς την ποσότητα παραγωγής. Χαρακτηρίστε το
+    βέλτιστο σημείο. Δώστε τη συνάρτηση προσφοράς της επιχείρησης.
+
+    \hfill Απ: $ Q^{*}= \frac{\ln{P/ \gamma}}{\gamma} $, ολικό και μοναδικό μέγιστο. 
+    $ S(P)= 
+     \begin{cases}
+       0, & P< \gamma \\
+       \frac{\ln{P/ \gamma}}{\gamma}, & P \geq \gamma
+        \end{cases}$
+\end{enumerate}
 
 \end{document}

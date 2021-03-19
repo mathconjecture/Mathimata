@@ -1,0 +1,122 @@
+\input{preamble.tex}
+\input{definitions_ask.tex}
+
+\pagestyle{askhseis}
+
+\renewcommand{\vec}{\mathbf}
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large \bfseries \textcolor{Col1}{Μερική Παράγωγος - Διαφορικό}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\section*{Κανόνες Παραγώγισης}
+
+\begin{enumerate}
+  % \item Έστω η συνάρτηση $ f(x,y) = x^{y} $. Να δείξετε ότι ισχύει ότι το
+  %   \textbf{θεώρημα Schwartz}, δηλαδή ότι $ f_{xy} = f_{yx} $.
+    %span
+  \item Να δείξετε ότι η συνάρτηση $ f(x,y) = \cos{(x+y)} + \cos{(x-y)} $ 
+    επαληθεύει την διαφορική εξίσωση $ f_{xx} - f_{yy} = 0 $.
+
+  \item Να δείξετε ότι η συνάρτηση $ f(x,y) = x \arctan{\frac{y}{x}} $ 
+    ικανοποιεί την διαφορική εξίσωση $ x^{2} f_{xx} + 2xyf_{xy} + y^{2} f_{yy} = 0 $. 
+
+  \item Να δείξετε ότι η συνάρτηση $ \psi(x,y,z,t) = \sin{(x+y+z- c \sqrt{3}t)} $ 
+    ικανοποιεί την εξίσωση κύματος $ c^{2}(\psi _{xx}+ \psi _{yy} + \psi _{zz}) = \psi
+    _{tt} $.
+
+  % \item Να δείξετε ότι η συνάρτηση $ z = \mathrm{e}^{y} \phi (y
+  %   \mathrm{e}^{\frac{x^{2}}{2y^{2}}}) $ ικανοποιεί τη διαφορική εξίσωση 
+  %   $ (x^{2}-y^{2}) \pdv{z}{x} + xy \pdv{z}{y} = xyz $.
+\end{enumerate}
+
+
+\section*{Διαφορικό}
+
+\begin{enumerate}
+
+  \item Να βρεθεί το ολικό διαφορικό 1ης τάξης, της συνάρτησης 
+    $f(x,y)=\ln(xy)+\cos(y^2)$ 
+
+    \hfill Απ: $df=\frac{dx}{x}+\left(\frac{1}{y}-2y\sin(y^2)\right)dy$
+
+  \item Να βρεθεί το ολικό διαφορικό 1ης τάξης, της συνάρτησης 
+    $ f(x,y) = \arctan(\frac{ x+y }{ x-y }) $, αν $ x>0 $ και $ y>0 $.
+
+    \hfill Απ: $df = \frac{ -ydx + xdy }{ x^{2} + y^{2} } $ 
+
+    % \item Να βρεθεί το ολικό διαφορικό της συνάρτησης $ f(x,y) = x^{y} \cdot y^{x} $, 
+    %   αν $ x>0$ και $ y>0 $.
+
+    %   \hfill Απ: $df =  (x^{y-1}\cdot y^{x+1} + x^{y}\cdot y^{x} \ln{y} )dx 
+    %   + (x^{y}\cdot y^{x} \ln{x} + x^{y+1} \cdot y^{x-1})dy $ 
+
+  \item Για τις παρακάτω παραστάσεις, να αποδείξετε ότι είναι \textbf{τέλεια
+    διαφορικά} και να υπολογίσετε τη συνάρτηση δυναμικού.
+    \begin{enumerate}[i)]
+      \item $ \left(x+e^{x/y}\right)dx + e^{x/y}\left(1- \frac{x}{y}\right)dy $
+        \hfill Απ: $ f(x,y) = \frac{x^{2}}{2} +y e^{x/y} + c $ 
+
+      \item $\left(2e^{x}+\frac{1}{x}-3\sin y\right)dx+3(y^2-x\cos y)dy$ 
+        \hfill  Απ: $ f(x,y,z) = y^{3}-3x \sin{y} + 2e^{x} + \ln{x} +c $.
+        %spand (114)
+
+      \item $(2xy+z)dx+(x^{2}+z^{2})dy+(x+2yz)dz$ 
+        \hfill  Απ: $ f(x,y,z) = x^{2}+z^{2}+xz +c $.
+
+        % \item $ (3x^{2}+3y-1)dx + (z^{2}+3x)dy+(2yz+1)dz $
+        % \hfill Απ: $ f(x,y,z) = x^{3}+3xy-x+yz^{2}+z+c $
+
+      \item $ \cos(x+yz)dx + z\cos(x+yz)dy+y\cos(x+yz)dz $
+        \hfill Απ: $ f(x,y,z) = \sin(x+yz) + c $
+    \end{enumerate}
+
+  \item Να υπολογιστεί το $a$ ώστε η παράσταση $ \frac{ x + ay }{ (x-y)^{3} }dx 
+    + \frac{ ax+y }{ (x-y)^{3} }dy $ να είναι \textbf{τέλειο διαφορικό}.
+    \hfill Απ: $ a=-1 $
+
+  \item \textbf{(παλιό θέμα)} Μια συνάρτηση $ f(x,y) $ στο σημείο $ (2,5) $ παίρνει την 
+    τιμή $ f(2,5) = 7 $ και οι μερικές παράγωγοι τις τιμές $ f_{x}(2,5) = 3 $ και 
+    $ f_{y}(2,5) = 1 $. Να υπολογιστεί κατά προσέγγιση η τιμή της στα σημεία 
+    $ (2.2,5.1) $ και $ (1.9,5.2) $.
+
+  \item Να υπολογιστεί κατά προσέγγιση, με τη βοήθεια του διαφορικού, η τιμή των 
+   παρακάτω  παραστάσεων.
+    \begin{enumerate}[i)]
+      \item $A = (1,02)^{3,01} $ \hfill Απ: $ A \approx 1,06 $ 
+      \item $B =  \sqrt{ 9(1,95)^{2} + (8,1)^{2} } $ 
+        \hfill Απ: $ B \approx 9,99 $ 
+    \end{enumerate}
+\end{enumerate}
+
+
+\section*{Αρμονικές Συναρτήσεις}
+
+\begin{enumerate}
+
+  \item Να δείξετε ότι οι παρακάτω συναρτήσεις είναι αρμονικές:
+    \begin{enumerate}[(i)]
+      \item $ f(x,y) = x^{3}-3xy^{2} $
+      \item $ f(x,y) = \ln(x^{2} + y^{2}) $
+      % \item $ f(x,y) = \ln{(x^{2}+y^{2})} + \arctan(\frac{y}{x}) $
+      % \item $ f(x,y) = \frac{ x }{ 2 } \ln(x^{2} + y^{2}) - y 
+      %   \arctan(\frac{ y }{ x } ) $
+    \end{enumerate}
+\end{enumerate}
+
+\section*{\textcolor{Col1}{Υποδείξεις}}
+
+\begin{myitemize}
+  \item Μια συνάρτηση $ f(x,y) $ είναι \textbf{αρμονική} αν ικανοποιεί την εξίσωση 
+    Laplace, δηλαδή αν $ \Delta f = 0 \Leftrightarrow f_{xx}+f_{yy} = 0 $.
+  \item Συνάρτηση Δυναμικού: 
+    $ f(x,y) = \int_{x_{0}}^{x} P(t,y) \,{dt} + \int_{y_{0}}^{y} Q(x_{0},t) \,{dt} $ 
+  \item Συνάρτηση Δυναμικού: $ f(x,y,z) = \int _{x_{0}}^{x} P(t,y,z) \,{dt} + 
+    \int _{y_{0}}^{y} Q(x_{0},t,z) \,{dt} + \int _{z_{0}}^{z} R(x_{0}, y_{0},t) \,{dt} $
+\end{myitemize}
+
+\end{document}
