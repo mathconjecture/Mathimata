@@ -2,11 +2,15 @@
 \input{definitions.tex}
 \input{tikz.tex}
 
+% \geometry{top=3cm}
+
 \usepackage[cmtip,all]{xy}
 \usepackage{silence}
 \WarningsOff[catoptions]
 \everymath{\displaystyle}
 \pagestyle{vangelis}
+
+\geometry{left=9mm,right=9mm,top=30.00mm,bottom=34.00mm,footskip=24.16mm,headsep=24.16mm}
 
 \begin{document}
 
@@ -323,8 +327,89 @@ $ (x_{0}, y_{0}) $, τότε $ f_{xy}=f_{yx} $ στην περιοχή αυτή.
   όπου $ \grad f (P) $ είναι η κλίση της συνάρτησης $f$ στο σημείο $P$ και 
   $ \mathbf{u} $ είναι το \textbf{μοναδιαίο} διάνυσμα $ \mathbf{u} $.
 \end{dfn}
-
-%todo ασκηση παραγ κατα κατευθυνση
+\begin{example}
+  Έστω η συνάρτηση $ f(x,y) = 100-x^{2}-y^{2} $. 
+  \begin{enumerate}[i)]
+    \item Να βρείτε την παράγωγο της $f$ στο σημείο $ P_{0}(3,4) $ και προς την 
+      κατεύθυνση του \textbf{διανύσματος} $ \mathbf{u} = 3 \mathbf{i}- 4 \mathbf{j} $.
+    \item Να βρείτε την παράγωγο της $f$ στο σημείο $ P_{0}(3,4) $ και προς την 
+      κατεύθυνση του \textbf{σημείου} $P(1,2)$.
+    \item Προς ποιά κατεύθυνση η $f$ αυξάνει με το \textbf{μεγαλύτερο ρυθμό}, 
+      στο σημείο $ P_{0} $; Ποιος είναι ο μέγιστος ρυθμός μεταβολής της $f$;
+    \item Προς ποιά κατεύθυνση η παράγωγος κατά κατεύθυνση γίνεται \textbf{μηδέν}; στο 
+      σημείο $ P_{0} $;
+  \end{enumerate}
+\end{example}
+\begin{solution}
+  \begin{enumerate}[i)]
+    \item Έχουμε ότι $ D_{\mathbf{u}}f(P_{0}) = \grad f(P_{0}) \cdot 
+      \mathbf{\widehat{u}} $
+      \begin{align*}
+        \grad f = (f_{x}, f_{y}) = (-2x, -2y) \Rightarrow \grad f(P_{0}) = (-6,-8) \\
+        \mathbf{\widehat{u}} = \frac{\mathbf{u}}{\norm{\mathbf{u}}} =
+        \frac{1}{\sqrt{3^{2}+(-4)^{2}}} (3,-4) = \left(\frac{3}{5} , - 
+        \frac{4}{5}\right)
+      \end{align*} 
+      Επομένως
+      \[
+        D_{\mathbf{u}}f(P_{0}) = (-6,-8) \cdot \left(\frac{3}{5} , - \frac{4}{5}\right) 
+        = - \frac{18}{5} + \frac{32}{5} = \frac{14}{5} > 0
+      \] 
+    \item Βρίσκουμε το διάνυσμα $ \vec{P_{0}P} = (1-3,2-4) = (-2,-2) $. Τότε το 
+      μοναδιαίο $ \vec{\widehat{P_{0}P}} =
+      \frac{\vec{P_{0}P}}{\norm{\vec{P_{0}P}}} = \frac{1}{\sqrt{8}} (-2,-2) = \left(-
+      \frac{1}{\sqrt{2}} , - \frac{1}{\sqrt{2}}\right) $
+      Άρα 
+      \[
+        D_{\mathbf{P_{0}P}}f(P_{0}) = \grad f(P_{0}) \cdot \vec{P_{0}P} = (-6,-8) 
+        \cdot \left(- \frac{1}{\sqrt{2}} , - \frac{1}{\sqrt{2}}\right) = 
+        \frac{6}{\sqrt{2}} + \frac{8}{\sqrt{2}} = \frac{14}{\sqrt{2}} > 0
+      \] 
+    \item Ζητάμε την κατεύθυνση $ \mathbf{u} $ προς την οποία η $f$ αυξάνει με το 
+      μεγαλύτερο ρυθμό, δηλαδή η παράγωγος κατά κατεύθυνση γίνεται μέγιστη. Έχουμε:
+      \[
+        D_{\mathbf{u}}f(P_{0}) \max \Leftrightarrow \norm{\grad f (P_{0})}
+        \norm{\mathbf{\widehat{u}}} \cos{\theta} \max \Leftrightarrow 
+        \norm{\grad f(P_{0})} \cos{\theta} \max \Leftrightarrow \cos{\theta} \max
+        \Leftrightarrow \theta = 0
+      \]
+      Δηλαδή $ \mathbf{u} $ παράλληλο με $ \grad f(P_{0}) $. Οπότε, η $f$ αυξάνει με 
+      το μεγαλύτερο ρυθμό, προς την κατεύθυνση της κλίσης της. Μάλιστα, ισχύει:
+      \[
+        - \norm{\grad f(P_{0})} \leq D_{\mathbf{u}} f(P_{0}) \leq \norm{\grad f(P_{0})}
+      \]
+      για κάθε κατεύθυνση $ \mathbf{u} $ στο σημείο $ P_{0} $. 
+      Δηλαδή, ο \textbf{μέγιστος ρυθμός} μεταβολής της $f$ στο σημείο $ P_{0} $ είναι $
+      D_{\mathbf{u}}f(P_{0})_{\max} = \norm{\grad f(P_{0})} $ και παρατηρείται προς 
+      την κατεύθυνση που δείχνει η κλίση, και ο \textbf{ελάχιστος ρυθμός} μεταβολής
+      αντίστοιχα, είναι $ D_{\mathbf{u}}f(P_{0})_{\min} = -\norm{\grad f(P_{0})} $ 
+      και παρατηρείται προς την αντίθετη κατεύθυνση από αυτή της κλίσης.
+    \item Έχουμε ότι 
+      \[ 
+        D_{\mathbf{u}}f(P_{0}) = 0 \Leftrightarrow \norm{\grad f (P_{0})}
+        \norm{\mathbf{\widehat{u}}} \cos{\theta} = 0 \Leftrightarrow 
+        \cos{\theta} = 0 \Leftrightarrow \theta = \pi/2 
+      \]
+      Δηλαδή, προς κατεύθυνση \textbf{κάθετη} προς την κατεύθυνση που μας δείχνει η 
+      κλίση της $ f $ στο σημείο $ P_{0} $, ο ρυθμός μεταβολής της συνάρτησης είναι 
+      μηδέν, και επομένως η $f$ είναι σταθερή. Για να προσδιορίσουμε το διάνυσμα $
+      \mathbf{u} $, έχουμε: Έστω $ \mathbf{u} = (u_{1}, u_{2}) $. 
+      \[
+        \mathbf{u} \perp \grad f(P_{0}) \Leftrightarrow \mathbf{u} \cdot 
+        \grad f (P_{0}) = 0 \Leftrightarrow (u_1,u_{2}) \cdot (-6,-8) =
+        0 \Leftrightarrow \inlineequation[eq:perp]{-6u_{1}-8u_{2}=0}
+      \]
+      Επίσης, επειδή $ \mathbf{u} $ είναι μοναδιαίο, έχουμε: 
+      \[
+        \norm{\mathbf{u}} =1 \Leftrightarrow \sqrt{u_{1}^{2}+u_{2}^{2}} = 1
+        \Leftrightarrow \inlineequation[eq:unit]{u_{1}^{2}+u_{2}^{2}=1}
+      \] 
+      Από τις παραπάνω σχέσεις, για τα $ u_{1} $ και $ u_{2} $, εύκολα τα υπολογίζουμε,
+      και βρίσκουμε ότι $ \mathbf{u} = \left(- \frac{4}{5}
+      , \frac{3}{5}\right) $ ή $ \mathbf{u} = 
+      \left( \frac{4}{5} , - \frac{3}{5}\right) $. 
+  \end{enumerate}
+\end{solution}
 
 
 
@@ -418,8 +503,9 @@ $ (x_{0}, y_{0}) $, τότε $ f_{xy}=f_{yx} $ στην περιοχή αυτή.
   Αν η συνάρτηση $ f(x,y) $ είναι ορισμένη στο ανοιχτό σύνολο 
   $ A \subseteq \mathbb{R}^{2} $ και $ x = x(t) $, $ y=y(t) $, με 
   $ t \in [a,b] $ και η $f$ έχει συνεχείς μερικές 
-  παραγώγους στο $A$ και οι $ x(t) $ και $ y(t) $ είναι παραγωγίσιμες στο $ [a,b] $, 
-  τότε η παράγωγος της σύνθετης συνάρτησης $f$ ως προς $t$ δίνεται από τον τύπο:
+  παραγώγους στο $A$ και οι $ x(t) $ και $ y(t) $ είναι παραγωγίσιμες στο 
+  $ [a,b] $, τότε η παράγωγος της σύνθετης συνάρτησης $f$ ως προς $t$ δίνεται από 
+  τον τύπο:
 
   \twocolumnsidel{
     \[\xymatrix{ & f \ar@{-}[dl]_{\mathlarger{\pdv{f}{x}}}
@@ -451,10 +537,11 @@ $ (x_{0}, y_{0}) $, τότε $ f_{xy}=f_{yx} $ στην περιοχή αυτή.
 
 \twocolumnsidel{
   \[
-    \xymatrix@C-10pt{ & & f \ar@{-}[dl]_{\mathlarger{\pdv{f}{x}}}
-      \ar@{-}[dr]^{\mathlarger{\pdv{f}{y}}}
-                      & &  \\
-                      & x \ar@{-}[dl]_{\mathlarger{\pdv{x}{u}}}
+    \xymatrix@C-6pt{ & & f \ar@{-}[dl] 
+      _{\mathlarger{\pdv{f}{x}}}^{\mathlarger{f_{x}}} 
+      \ar@{-}[dr]^{\mathlarger{\pdv{f}{y}}}_{\mathlarger{f_{y}}}
+                     & &  \\
+                     & x \ar@{-}[dl]_{\mathlarger{\pdv{x}{u}}}
       \ar@{-}[d]^{\mathlarger{\pdv{x}{v}}} &  
                                            & y \ar@{-}[d]_{\mathlarger{\pdv{y}{u}}} 
       \ar@{-}[dr]^{\mathlarger{\pdv{y}{v}}} & \\
@@ -470,26 +557,31 @@ $ (x_{0}, y_{0}) $, τότε $ f_{xy}=f_{yx} $ στην περιοχή αυτή.
   \[
     \pdv[2]{f}{u} =  \pdv[2]{f}{x} \left(\pdv{x}{u}\right)^{2} + 
     2 \pdv[2]{f}{x}{y} \pdv{x}{u} \pdv{y}{u} + \pdv[2]{f}{y} 
-    \left(\pdv{y}{u}\right)^{2} + \pdv{f}{x} \pdv[2]{x}{u} + \pdv{f}{y} \pdv[2]{y}{u}
+    \left(\pdv{y}{u}\right)^{2} + \pdv{f}{x} \pdv[2]{x}{u} + \pdv{f}{y} 
+    \pdv[2]{y}{u}
   \]
   \[
     \pdv[2]{f}{v} =  \pdv[2]{f}{x} \left(\pdv{x}{v}\right)^{2} + 
     2 \pdv[2]{f}{x}{y} \pdv{x}{u} \pdv{y}{v} + \pdv[2]{f}{y} 
-    \left(\pdv{y}{v}\right)^{2} + \pdv{f}{x} \pdv[2]{x}{v} + \pdv{f}{y} \pdv[2]{y}{v}
+    \left(\pdv{y}{v}\right)^{2} + \pdv{f}{x} \pdv[2]{x}{v} + \pdv{f}{y} 
+    \pdv[2]{y}{v}
   \]
   \[
-    \pdv[2]{f}{u}{v} = \pdv[2]{f}{x} \pdv{x}{u} \pdv{x}{v} + \pdv[2]{f}{x}{y}
-    \left(\pdv{x}{u} \pdv{y}{v} + \pdv{x}{v} \pdv{y}{u}\right) + \pdv[2]{f}{y}
-    \pdv{y}{u} \pdv{y}{v} + \pdv{f}{x} \pdv{x}{u}{v} + \pdv{f}{y} \pdv{y}{u}{v}
-  \] 
+    \pdv[2]{f}{v}{u} = \pdv[2]{f}{x} \pdv{x}{u} \pdv{x}{v} + \pdv[2]{f}{x}{y}
+    \left(\pdv{x}{u} \pdv{y}{v}+ \pdv{x}{v} \pdv{y}{u} \right) + \pdv[2]{f}{y} 
+    \pdv{y} {u} \pdv{y}{v} + \pdv{f}{x} \pdv[2]{x}{u}{v} + \pdv{f}{y} 
+    \pdv[2]{y}{u}{v} 
+  \]
 }
+
 
 \begin{rem}
   Οι τύποι~\eqref{eq:deriv1} και~\eqref{eq:deriv2} προέκυψαν αθροίζοντας κάθε φορά, 
-  τα μονοπάτια που ξεκινούν από τη μεταβλητή $f$ και καταλήγουν στη μεταβλητή ως προς 
-  την οποία παραγωγίζουμε, όπου κάθε 
-  μονοπάτι αποτελείται από το γινόμενο των παραγώγων που συναντούμε "διασχίζοντάς" το.
+  τα μονοπάτια που ξεκινούν από τη μεταβλητή $f$ και καταλήγουν στη μεταβλητή ως 
+  προς την οποία παραγωγίζουμε, όπου κάθε μονοπάτι αποτελείται από το γινόμενο των 
+  παραγώγων που συναντούμε "διασχίζοντάς" το.
 \end{rem}
+
 
 
 \section{Αποδείξεις των τύπων των μερικών Παραγώγων 2ης τάξης}
@@ -502,22 +594,23 @@ $ (x_{0}, y_{0}) $, τότε $ f_{xy}=f_{yx} $ στην περιοχή αυτή.
 \vspace{\baselineskip}
 
 \twocolumnsidel{
-  \[
-    \xymatrix@C-10pt{ & & \pdv{f}{x} 
+  \[ 
+    \xymatrix@C-6pt{ & & \pdv{f}{x} 
       \ar@{-}[dl]_{\mathlarger{\pdv[2]{f}{x}}} 
-      \ar@{-}[dr]^{\mathlarger{\pdv[2]{f}{x}{y}}} 
-                      & &  \\
-                      & x \ar@{-}[dl]_{\mathlarger{\pdv{x}{u}}}
+      \ar@{-}[dr]^{\mathlarger{\pdv[2]{f}{x}{y}}} & &  \\
+                                                  & x \ar@{-}[dl]
+                                                  _{\mathlarger{\pdv{x}{u}}}
       \ar@{-}[d]^{\mathlarger{\pdv{x}{v}}} &  
                                            & y \ar@{-}[d]_{\mathlarger{\pdv{y}{u}}} 
       \ar@{-}[dr]^{\mathlarger{\pdv{y}{v}}} & \\
       u & v & & u & v \\ 
     } 
   \] 
-  \[\xymatrix@C-10pt{ & & \pdv{f}{y} 
+  \[\xymatrix@C-6pt{ & & \pdv{f}{y} 
       \ar@{-}[dl]_{\mathlarger{\pdv[2]{f}{y}{x}}} 
       \ar@{-}[dr]^{\mathlarger{\pdv[2]{f}{y}}} & &  \\
-                                               & x \ar@{-}[dl]_{\mathlarger{\pdv{x}{u}}}
+                                               & x \ar@{-}[dl]
+                                               _{\mathlarger{\pdv{x}{u}}}
       \ar@{-}[d]^{\mathlarger{\pdv{x}{v}}} &  
                                            & y \ar@{-}[d]_{\mathlarger{\pdv{y}{u}}} 
       \ar@{-}[dr]^{\mathlarger{\pdv{y}{v}}} & \\
@@ -547,65 +640,76 @@ $ (x_{0}, y_{0}) $, τότε $ f_{xy}=f_{yx} $ στην περιοχή αυτή.
   \pdv{f}{y} \pdv[2]{y}{u} \\
     \end{aligned}
   \]
-\end{proof}}
-
-
-
-\subsection{Απόδειξη με το συμβολισμό των δεικτών}
-
-Αποδεικνύουμε τον τύπο για την $ f_{uu} $ και ομοίως προκύπτουν και οι τύποι για τις  
-$ f_{vv} $ και $ f_{uv} $.
-
-\vspace{\baselineskip}
-
-\twocolumnsidel{
-  {
-    \[ 
-      \xymatrix@C-10pt{ & & f_{x}
-        \ar@{-}[dl]_{\mathlarger{f_{xx}}} 
-        \ar@{-}[dr]^{\mathlarger{f_{xy}}} & &  \\
-                                          & x \ar@{-}[dl]_{\mathlarger{x_{u}}}
-        \ar@{-}[d]^{\mathlarger{x_{v}}} &  
-                                        & y \ar@{-}[d]_{\mathlarger{y_{u}}} 
-        \ar@{-}[dr]^{\mathlarger{y_{v}}} & \\
-        u & v & & u & v \\ 
-      } 
-    \] 
-    \[\xymatrix@C-10pt{ & & f_{y}
-        \ar@{-}[dl]_{\mathlarger{f_{yx}}} 
-        \ar@{-}[dr]^{\mathlarger{f_{yy}}} & &  \\
-                                          & x \ar@{-}[dl]_{\mathlarger{x_{u}}}
-        \ar@{-}[d]^{\mathlarger{x_{v}}} &  
-                                        & y \ar@{-}[d]_{\mathlarger{y_{u}}} 
-        \ar@{-}[dr]^{\mathlarger{y_{v}}} & \\
-      u & v & & u & v \\ }
-    \] 
+\end{proof}
   }
-  }{
-  \begin{proof}
+
+
+  \subsection{Απόδειξη με το συμβολισμό των δεικτών}
+
+  Αποδεικνύουμε τον τύπο για την $ f_{uu} $ και ομοίως προκύπτουν και οι τύποι για τις  
+  $ f_{vv} $ και $ f_{uv} $.
+
+  \vspace{\baselineskip}
+
+  \twocolumnsidel{
+    {
+      \[ 
+        \xymatrix@C-6pt{ & & f_{x}
+          \ar@{-}[dl]_{\mathlarger{f_{xx}}} 
+          \ar@{-}[dr]^{\mathlarger{f_{xy}}} & &  \\
+                                            & x \ar@{-}[dl]_{\mathlarger{x_{u}}}
+          \ar@{-}[d]^{\mathlarger{x_{v}}} &  
+                                          & y \ar@{-}[d]_{\mathlarger{y_{u}}} 
+          \ar@{-}[dr]^{\mathlarger{y_{v}}} & \\
+          u & v & & u & v \\ 
+        } 
+      \] 
+      \[\xymatrix@C-6pt{ & & f_{y}
+          \ar@{-}[dl]_{\mathlarger{f_{yx}}} 
+          \ar@{-}[dr]^{\mathlarger{f_{yy}}} & &  \\
+                                            & x \ar@{-}[dl]_{\mathlarger{x_{u}}}
+          \ar@{-}[d]^{\mathlarger{x_{v}}} &  
+                                          & y \ar@{-}[d]_{\mathlarger{y_{u}}} 
+          \ar@{-}[dr]^{\mathlarger{y_{v}}} & \\
+        u & v & & u & v \\ }
+      \] 
+    }
+    }{
+    \begin{proof}
+      \[
+        \begin{aligned}
+          f_{uu} &= (f_{u})_{u} = (f_{x}x_{u}+f_{y}y_{u})_{u} \\
+                 &=(f_{x}x_{u})_{u}+ (f_{y}y_{u})_{u} \\
+                 &=(f_{x})_{u}x_{u} + f_{x}(x_{u})_{u} + (f_{y})_{u}y_{u}+ 
+                 f_{y}(y_{u})_{u} \\
+                 &= (f_{xx}x_{u}+f_{xy}{y_{u}})x_{u} + f_{x} x_{uu} + 
+                 (f_{yx}x_{u}+f_{yy}y_{u})y_{u} + f_{y}y_{uu} \\
+                 &= f_{xx}(x_{u})^{2} + f_{xy}y_{u}x_{u}+ f_{x}x_{uu} + 
+                 f_{yx}x_{u}y_{u}+f_{yy}(y_{u})^{2}+ f_{y}y_{uu} \\
+                 &= f_{xx}(x_{u})^{2}+ 2f_{xy}x_{u}y_{u} + f_{yy}(y_{u})^{2} + 
+                 f_{x}x_{uu} + f_{y}y_{uu}
+        \end{aligned}
+      \] 
+    \end{proof}
+  }
+
+  \begin{rem}
+    Συγκεντρωτικά οι τύποι για τις παραγώγους 2ης ταξής της συνάρτησης 
+
     \[
-      \begin{aligned}
-        f_{uu} &= (f_{u})_{u} = (f_{x}x_{u}+f_{y}y_{u})_{u} \\
-               &=(f_{x}x_{u})_{u}+ (f_{y}y_{u})_{u} \\
-               &=(f_{x})_{u}x_{u} + f_{x}(x_{u})_{u} + 
-               (f_{y})_{u}y_{u}+ f_{y}(y_{u})_{u} \\
-               &= (f_{xx}x_{u}+f_{xy}{y_{u}})x_{u} + f_{x} x_{uu} + 
-               (f_{yx}x_{u}+f_{yy}y_{u})y_{u} + f_{y}y_{uu} \\
-               &= f_{xx}(x_{u})^{2} + f_{xy}y_{u}x_{u}+ f_{x}x_{uu} + 
-               f_{yx}x_{u}y_{u}+f_{yy}(y_{u})^{2}+ f_{y}y_{uu} \\
-               &= f_{xx}(x_{u})^{2}+ 2f_{xy}x_{u}y_{u} + f_{yy}(y_{u})^{2} + 
-               f_{x}x_{uu} + f_{y}y_{uu}
-      \end{aligned}
+      f_{uu}= f_{xx}(x_{u})^{2}+ 2f_{xy}x_{u}y_{u} + f_{yy}(y_{u})^{2} + f_{x}x_{uu} + 
+      f_{y}y_{uu} 
     \] 
-  \end{proof}
-}
-
-
-
-
-
-
-
+    \[
+      f_{vv}= f_{xx}(x_{v})^{2}+ 2f_{xy}x_{v}y_{v} + f_{yy}(y_{v})^{2} + f_{x}x_{vv} + 
+      f_{y}y_{vv} 
+    \]
+    \[
+      f_{uv}= f_{xx}x_{u}x_{v}+ f_{xy}(x_{u}y_{v} + x_{v}y_{u}) + 
+      f_{yy}y_{u}y_{v} + f_{x}x_{uv} + f_{y}y_{v} 
+      f_{y}y_{vv} 
+    \]
+  \end{rem}
 
 
 \end{document}

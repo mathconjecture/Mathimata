@@ -1,8 +1,9 @@
 \input{preamble.tex}
 \input{definitions.tex}
+\input{tikz.tex}
+\input{myboxes.tex}
 
 \usepackage[all]{xy}
-\usepackage{siunitx}
 \everymath{\displaystyle}
 \pagestyle{vangelis}
 
@@ -250,19 +251,36 @@ $ (x_{0}, y_{0}) $, τότε $ f_{xy}=f_{yx} $ στην περιοχή αυτή.
   $ \Delta f $.
 \end{solution}
 
-\begin{example}%todo σχήμα (τρίγωνο) για την άσκηση. Δες λυμένα θέματα ηλεκτρ.
+\begin{example}
   Κατά τη μέτρηση των στοιχείων μιας τριγωνικής επιφάνειας, βρέθηκαν οι πλευρές να 
   έχουν μήκος \SI{100}{cm} και \SI{125}{cm} αντίστοιχα, ενώ η περιεχόμενη γωνία βρέθηκε 
   να είναι \SI{60}{\degree}. Αν το πιθανό σφάλμα κατά την μέτρηση των πλευρών είναι 
   $ \SI{0.2}{cm} $ και για τις γωνίες είναι $ \SI{1}{\degree} $, να υπολογίσετε κατά 
   προσέγγιση το σφάλμα στο εμβαδό της επιφάνειας.
 \end{example}
+
 \begin{solution}
-  Έχουμε ότι $ E = \frac{y \cdot z}{2} $. Όμως από το ορθογώνιο τρίγωνο έχουμε ότι 
-  $ z = x \sin{\phi} $, άρα 
-  \[
-    E(x,y,\phi) = \frac{y \cdot x \cdot \sin{\phi}}{2} 
-  \] 
+\item {}
+
+  \twocolumnsidelc{
+    \begin{tikzpicture}[scale=0.7]
+      \node  (B) at (0, 0) {};
+      \node  (A) at (6, 0) {};
+      \node  (C) at (2, 2) {};
+      \node  (3) at (2, 0) {};
+      \draw (B.center) to node[left=3pt]{$x$} (C.center);
+      \draw (C.center) to (A.center);
+      \draw (B.center) to node[below]{$y$} (A.center) 
+        pic[draw,fill=magenta!25,"$\phi$",angle eccentricity=1.5]{angle} ;
+      \draw [dashed, in=90, out=-90] (C.center) to node[right]{$z$} (3.center);
+    \end{tikzpicture}
+    }{
+    Έχουμε ότι $ E = \frac{y \cdot z}{2} $. Όμως από το ορθογώνιο τρίγωνο έχουμε ότι 
+    $ z = x \sin{\phi} $, άρα 
+    \[
+      E(x,y,\phi) = \frac{y \cdot x \cdot \sin{\phi}}{2} 
+    \] 
+  }
   Παρατηρούμε ότι $ \Delta x = dx = 0.2, \; \Delta y = dy = 0.2 $ και 
   $ \Delta \phi = d\phi = \SI{1}{\degree} \frac{\pi}{180} $. Οπότε,ισχύει ότι
   \begin{equation*}
@@ -284,13 +302,34 @@ $ (x_{0}, y_{0}) $, τότε $ f_{xy}=f_{yx} $ στην περιοχή αυτή.
   $ \SI{74.03}{cm^{2}} $
 \end{solution}
 
-\begin{example}%todo σχήμα
+\begin{example}
   Κατά την εκτίμηση των συντεταγμένων ενός σημείου $ P(x,y) $ γίνονται σφάλματα 
   $ dx $ και $ dy $ αντίστοιχα. Να υπολογίσετε την επίδραση αυτών των σφαλμάτων 
   στη γωνία $ \theta $ και να γίνει αριθμητική εφαρμογή για $ x=1 $, $ y=2 $ και για 
   $ dx = 0.01 $ και $ dy =-0.02 $.
 \end{example}
 \begin{solution}
+\item {}
+
+  \twocolumnsidelc{
+\begin{tikzpicture}[scale=0.7]
+  \node (0) at (0, 0) {};
+  \node (1) at (4.5, 0) {};
+  \node (2) at (0, 4) {};
+  \node (3) at (3, 2) {};
+  \draw [fill] (3,2) node[right] {$P(x,y)$} circle (2pt);
+  \node (4) at (2, 3) {};
+  \draw [fill] (2,3) node[right] {$P'(x+dx, y+dy)$} circle (2pt);
+  \node (5) at (2, 0) {};
+  \node (6) at (3, 0) {};
+  \draw (0.center) to (3.center);
+  \draw (0.center) to (4.center);
+  \draw [dashed] (4.center) to (5.center);
+  \draw [dashed] (3.center) to (6.center);
+  \draw [-stealth] (0.center) to (1.center);
+  \draw [-stealth] (0.center) to (2.center);
+  \draw pic[draw,fill=magenta!25,"$\theta$",angle eccentricity=1.5]{angle=1--0--3};
+\end{tikzpicture}}{
   Έστω οι συντεταγμένες του σημείου $ P'(x+ dx, y + dy) $, όπως φαίνονται στο σχήμα.
   Έχουμε ότι 
   \[
@@ -299,12 +338,12 @@ $ (x_{0}, y_{0}) $, τότε $ f_{xy}=f_{yx} $ στην περιοχή αυτή.
   Αν η γωνία μετά το σφάλμα της εκτίμησης είναι $ \theta'$, έχουμε ότι 
   \[
     \theta ' = \arctan{\frac{y+ dy}{x + dx}} 
-  \] 
+\]} 
   Παρατηρούμε ότι $ \Delta x = dx = 0.01 $, $ \Delta y = dy = -0.02 $. Οπότε ισχύει ότι 
   \[
     \Delta \theta \approx d \theta = \theta _{x} dx + \theta _{y} dy =
     \frac{-y}{x^{2}+y^{2}} dx + \frac{x}{x^{2}+y^{2}} dy = \frac{xdy-ydx}{x^{2}+y^{2}}
-  \] 
+\]
   και μάλιστα υπολογίζουμε την απόλυτη τιμή και έχουμε
   \[
     \abs{\Delta \theta} \approx \frac{\abs{xdy-ydx}}{x^{2}+y^{2}} \leq \frac{\abs{x dy}
@@ -821,7 +860,6 @@ $ D_0 \subseteq \mathbb{R}^{2} $ τέτοια ώστε:
   όπου $ z_{x} = - \frac{2}{4-e^{2}} $ και $ z_{y} = - \frac{2e}{4-e^{2}} $
 \end{solution}
 
-
 \chapter{Παράγωγος Σύνθετων Συναρτήσεων}
 
 \section{1η Περίπτωση: \ensuremath{z=f(x,y),  x=x(t),  y=y(t)}} 
@@ -830,8 +868,9 @@ $ D_0 \subseteq \mathbb{R}^{2} $ τέτοια ώστε:
   Αν η συνάρτηση $ f(x,y) $ είναι ορισμένη στο ανοιχτό σύνολο 
   $ A \subseteq \mathbb{R}^{2} $ και $ x = x(t) $, $ y=y(t) $, με 
   $ t \in [a,b] $ και η $f$ έχει συνεχείς μερικές 
-  παραγώγους στο $A$ και οι $ x(t) $ και $ y(t) $ είναι παραγωγίσιμες στο $ [a,b] $, 
-  τότε η παράγωγος της σύνθετης συνάρτησης $f$ ως προς $t$ δίνεται από τον τύπο:
+  παραγώγους στο $A$ και οι $ x(t) $ και $ y(t) $ είναι παραγωγίσιμες στο 
+  $ [a,b] $, τότε η παράγωγος της σύνθετης συνάρτησης $f$ ως προς $t$ δίνεται από 
+  τον τύπο:
 
   \twocolumnsidel{
     \[\xymatrix{ & f \ar@{-}[dl]_{\mathlarger{\pdv{f}{x}}}
@@ -863,10 +902,11 @@ $ D_0 \subseteq \mathbb{R}^{2} $ τέτοια ώστε:
 
 \twocolumnsidel{
   \[
-    \xymatrix@C-10pt{ & & f \ar@{-}[dl]_{\mathlarger{\pdv{f}{x}}}^{\mathlarger{f_{x}}} 
+    \xymatrix@C-6pt{ & & f \ar@{-}[dl] 
+      _{\mathlarger{\pdv{f}{x}}}^{\mathlarger{f_{x}}} 
       \ar@{-}[dr]^{\mathlarger{\pdv{f}{y}}}_{\mathlarger{f_{y}}}
-                      & &  \\
-                      & x \ar@{-}[dl]_{\mathlarger{\pdv{x}{u}}}
+                     & &  \\
+                     & x \ar@{-}[dl]_{\mathlarger{\pdv{x}{u}}}
       \ar@{-}[d]^{\mathlarger{\pdv{x}{v}}} &  
                                            & y \ar@{-}[d]_{\mathlarger{\pdv{y}{u}}} 
       \ar@{-}[dr]^{\mathlarger{\pdv{y}{v}}} & \\
@@ -882,25 +922,28 @@ $ D_0 \subseteq \mathbb{R}^{2} $ τέτοια ώστε:
   \[
     \pdv[2]{f}{u} =  \pdv[2]{f}{x} \left(\pdv{x}{u}\right)^{2} + 
     2 \pdv[2]{f}{x}{y} \pdv{x}{u} \pdv{y}{u} + \pdv[2]{f}{y} 
-    \left(\pdv{y}{u}\right)^{2} + \pdv{f}{x} \pdv[2]{x}{u} + \pdv{f}{y} \pdv[2]{y}{u}
+    \left(\pdv{y}{u}\right)^{2} + \pdv{f}{x} \pdv[2]{x}{u} + \pdv{f}{y} 
+    \pdv[2]{y}{u}
   \]
   \[
     \pdv[2]{f}{v} =  \pdv[2]{f}{x} \left(\pdv{x}{v}\right)^{2} + 
     2 \pdv[2]{f}{x}{y} \pdv{x}{u} \pdv{y}{v} + \pdv[2]{f}{y} 
-    \left(\pdv{y}{v}\right)^{2} + \pdv{f}{x} \pdv[2]{x}{v} + \pdv{f}{y} \pdv[2]{y}{v}
+    \left(\pdv{y}{v}\right)^{2} + \pdv{f}{x} \pdv[2]{x}{v} + \pdv{f}{y} 
+    \pdv[2]{y}{v}
   \]
   \[
-    \pdv[2]{f}{u}{v} = \pdv[2]{f}{x} \pdv{x}{u} \pdv{x}{v} + \pdv[2]{f}{x}{y}
-    \left(\pdv{x}{u} \pdv{y}{v} + \pdv{x}{v} \pdv{y}{u}\right) + \pdv[2]{f}{y}
-    \pdv{y}{u} \pdv{y}{v} + \pdv{f}{x} \pdv{x}{u}{v} + \pdv{f}{y} \pdv{y}{u}{v}
+    \pdv[2]{f}{v}{u} = \pdv[2]{f}{x} \pdv{x}{u} \pdv{x}{v} + \pdv[2]{f}{x}{y}
+    \left(\pdv{x}{u} \pdv{y}{v}+ \pdv{x}{v} \pdv{y}{u} \right) + \pdv[2]{f}{y} 
+    \pdv{y} {u} \pdv{y}{v} + \pdv{f}{x} \pdv[2]{x}{u}{v} + \pdv{f}{y} 
+    \pdv[2]{y}{u}{v} 
   \]
 }
 
 \begin{rem}
   Οι τύποι~\eqref{eq:deriv1} και~\eqref{eq:deriv2} προέκυψαν αθροίζοντας κάθε φορά, 
-  τα μονοπάτια που ξεκινούν από τη μεταβλητή $f$ και καταλήγουν στη μεταβλητή ως προς 
-  την οποία παραγωγίζουμε, όπου κάθε 
-  μονοπάτι αποτελείται από το γινόμενο των παραγώγων που συναντούμε "διασχίζοντάς" το.
+  τα μονοπάτια που ξεκινούν από τη μεταβλητή $f$ και καταλήγουν στη μεταβλητή ως 
+  προς την οποία παραγωγίζουμε, όπου κάθε μονοπάτι αποτελείται από το γινόμενο των 
+  παραγώγων που συναντούμε "διασχίζοντάς" το.
 \end{rem}
 
 
@@ -915,21 +958,22 @@ $ D_0 \subseteq \mathbb{R}^{2} $ τέτοια ώστε:
 
 \twocolumnsidel{
   \[ 
-    \xymatrix@C-10pt{ & & \pdv{f}{x} 
+    \xymatrix@C-6pt{ & & \pdv{f}{x} 
       \ar@{-}[dl]_{\mathlarger{\pdv[2]{f}{x}}} 
-      \ar@{-}[dr]^{\mathlarger{\pdv[2]{f}{x}{y}}} 
-                      & &  \\
-                      & x \ar@{-}[dl]_{\mathlarger{\pdv{x}{u}}}
+      \ar@{-}[dr]^{\mathlarger{\pdv[2]{f}{x}{y}}} & &  \\
+                                                  & x \ar@{-}[dl]
+                                                  _{\mathlarger{\pdv{x}{u}}}
       \ar@{-}[d]^{\mathlarger{\pdv{x}{v}}} &  
                                            & y \ar@{-}[d]_{\mathlarger{\pdv{y}{u}}} 
       \ar@{-}[dr]^{\mathlarger{\pdv{y}{v}}} & \\
       u & v & & u & v \\ 
     } 
   \] 
-  \[\xymatrix@C-10pt{ & & \pdv{f}{y} 
+  \[\xymatrix@C-6pt{ & & \pdv{f}{y} 
       \ar@{-}[dl]_{\mathlarger{\pdv[2]{f}{y}{x}}} 
       \ar@{-}[dr]^{\mathlarger{\pdv[2]{f}{y}}} & &  \\
-                                               & x \ar@{-}[dl]_{\mathlarger{\pdv{x}{u}}}
+                                               & x \ar@{-}[dl]
+                                               _{\mathlarger{\pdv{x}{u}}}
       \ar@{-}[d]^{\mathlarger{\pdv{x}{v}}} &  
                                            & y \ar@{-}[d]_{\mathlarger{\pdv{y}{u}}} 
       \ar@{-}[dr]^{\mathlarger{\pdv{y}{v}}} & \\
@@ -959,58 +1003,76 @@ $ D_0 \subseteq \mathbb{R}^{2} $ τέτοια ώστε:
   \pdv{f}{y} \pdv[2]{y}{u} \\
     \end{aligned}
   \]
-\end{proof}}
-
-
-\subsection{Απόδειξη με το συμβολισμό των δεικτών}
-
-Αποδεικνύουμε τον τύπο για την $ f_{uu} $ και ομοίως προκύπτουν και οι τύποι για τις  
-$ f_{vv} $ και $ f_{uv} $.
-
-\vspace{\baselineskip}
-
-\twocolumnsidel{
-  {
-    \[ 
-      \xymatrix@C-10pt{ & & f_{x}
-        \ar@{-}[dl]_{\mathlarger{f_{xx}}} 
-        \ar@{-}[dr]^{\mathlarger{f_{xy}}} & &  \\
-                                          & x \ar@{-}[dl]_{\mathlarger{x_{u}}}
-        \ar@{-}[d]^{\mathlarger{x_{v}}} &  
-                                        & y \ar@{-}[d]_{\mathlarger{y_{u}}} 
-        \ar@{-}[dr]^{\mathlarger{y_{v}}} & \\
-        u & v & & u & v \\ 
-      } 
-    \] 
-    \[\xymatrix@C-10pt{ & & f_{y}
-        \ar@{-}[dl]_{\mathlarger{f_{yx}}} 
-        \ar@{-}[dr]^{\mathlarger{f_{yy}}} & &  \\
-                                          & x \ar@{-}[dl]_{\mathlarger{x_{u}}}
-        \ar@{-}[d]^{\mathlarger{x_{v}}} &  
-                                        & y \ar@{-}[d]_{\mathlarger{y_{u}}} 
-        \ar@{-}[dr]^{\mathlarger{y_{v}}} & \\
-      u & v & & u & v \\ }
-    \] 
+\end{proof}
   }
-  }{
-  \begin{proof}
-    \[
-      \begin{aligned}
-        f_{uu} &= (f_{u})_{u} = (f_{x}x_{u}+f_{y}y_{u})_{u} \\
-               &=(f_{x}x_{u})_{u}+ (f_{y}y_{u})_{u} \\
-               &=(f_{x})_{u}x_{u} + f_{x}(x_{u})_{u} + 
-               (f_{y})_{u}y_{u}+ f_{y}(y_{u})_{u} \\
-               &= (f_{xx}x_{u}+f_{xy}{y_{u}})x_{u} + f_{x} x_{uu} + 
-               (f_{yx}x_{u}+f_{yy}y_{u})y_{u} + f_{y}y_{uu} \\
-               &= f_{xx}(x_{u})^{2} + f_{xy}y_{u}x_{u}+ f_{x}x_{uu} + 
-               f_{yx}x_{u}y_{u}+f_{yy}(y_{u})^{2}+ f_{y}y_{uu} \\
-               &= f_{xx}(x_{u})^{2}+ 2f_{xy}x_{u}y_{u} + f_{yy}(y_{u})^{2} 
-               + f_{x}x_{uu} + f_{y}y_{uu}
-      \end{aligned}
-    \] 
-  \end{proof}
-}
 
+
+  \subsection{Απόδειξη με το συμβολισμό των δεικτών}
+
+  Αποδεικνύουμε τον τύπο για την $ f_{uu} $ και ομοίως προκύπτουν και οι τύποι για τις  
+  $ f_{vv} $ και $ f_{uv} $.
+
+  \vspace{\baselineskip}
+
+  \twocolumnsidel{
+    {
+      \[ 
+        \xymatrix@C-6pt{ & & f_{x}
+          \ar@{-}[dl]_{\mathlarger{f_{xx}}} 
+          \ar@{-}[dr]^{\mathlarger{f_{xy}}} & &  \\
+                                            & x \ar@{-}[dl]_{\mathlarger{x_{u}}}
+          \ar@{-}[d]^{\mathlarger{x_{v}}} &  
+                                          & y \ar@{-}[d]_{\mathlarger{y_{u}}} 
+          \ar@{-}[dr]^{\mathlarger{y_{v}}} & \\
+          u & v & & u & v \\ 
+        } 
+      \] 
+      \[\xymatrix@C-6pt{ & & f_{y}
+          \ar@{-}[dl]_{\mathlarger{f_{yx}}} 
+          \ar@{-}[dr]^{\mathlarger{f_{yy}}} & &  \\
+                                            & x \ar@{-}[dl]_{\mathlarger{x_{u}}}
+          \ar@{-}[d]^{\mathlarger{x_{v}}} &  
+                                          & y \ar@{-}[d]_{\mathlarger{y_{u}}} 
+          \ar@{-}[dr]^{\mathlarger{y_{v}}} & \\
+        u & v & & u & v \\ }
+      \] 
+    }
+    }{
+    \begin{proof}
+      \[
+        \begin{aligned}
+          f_{uu} &= (f_{u})_{u} = (f_{x}x_{u}+f_{y}y_{u})_{u} \\
+                 &=(f_{x}x_{u})_{u}+ (f_{y}y_{u})_{u} \\
+                 &=(f_{x})_{u}x_{u} + f_{x}(x_{u})_{u} + (f_{y})_{u}y_{u}+ 
+                 f_{y}(y_{u})_{u} \\
+                 &= (f_{xx}x_{u}+f_{xy}{y_{u}})x_{u} + f_{x} x_{uu} + 
+                 (f_{yx}x_{u}+f_{yy}y_{u})y_{u} + f_{y}y_{uu} \\
+                 &= f_{xx}(x_{u})^{2} + f_{xy}y_{u}x_{u}+ f_{x}x_{uu} + 
+                 f_{yx}x_{u}y_{u}+f_{yy}(y_{u})^{2}+ f_{y}y_{uu} \\
+                 &= f_{xx}(x_{u})^{2}+ 2f_{xy}x_{u}y_{u} + f_{yy}(y_{u})^{2} + 
+                 f_{x}x_{uu} + f_{y}y_{uu}
+        \end{aligned}
+      \] 
+    \end{proof}
+  }
+
+  \begin{rem}
+    Συγκεντρωτικά οι τύποι για τις παραγώγους 2ης ταξής της συνάρτησης 
+
+    \[
+      f_{uu}= f_{xx}(x_{u})^{2}+ 2f_{xy}x_{u}y_{u} + f_{yy}(y_{u})^{2} + f_{x}x_{uu} + 
+      f_{y}y_{uu} 
+    \] 
+    \[
+      f_{vv}= f_{xx}(x_{v})^{2}+ 2f_{xy}x_{v}y_{v} + f_{yy}(y_{v})^{2} + f_{x}x_{vv} + 
+      f_{y}y_{vv} 
+    \]
+    \[
+      f_{uv}= f_{xx}x_{u}x_{v}+ f_{xy}(x_{u}y_{v} + x_{v}y_{u}) + 
+      f_{yy}y_{u}y_{v} + f_{x}x_{uv} + f_{y}y_{v} 
+      f_{y}y_{vv} 
+    \]
+  \end{rem}
 
 
 \end{document}
