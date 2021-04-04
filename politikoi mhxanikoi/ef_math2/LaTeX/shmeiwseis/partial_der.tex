@@ -3,7 +3,7 @@
 \input{tikz.tex}
 \input{myboxes.tex}
 
-% \geometry{margin=1cm}
+\geometry{top=2.5cm,left=1cm,right=1cm,bottom=2.5cm}
 
 \usepackage[all]{xy}
 \everymath{\displaystyle}
@@ -187,7 +187,7 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
 \section{Ολικό Διαφορικό}
 
 \begin{dfn}
-Έστω η συνάρτηση $ f(x,y) $. Τα \textcolor{Col1}{ολικά διαφορικά 1ης και 
+  Έστω η συνάρτηση $ f(x,y) $. Τα \textcolor{Col1}{ολικά διαφορικά 1ης και 
   2ης τάξης} της συνάρτηση $f$ συμβολίζονται με $ df $ και $ d^{2}f $, αντίστοιχα 
   και ισχύει:
   \[
@@ -318,38 +318,38 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
 \item {}
 
   \twocolumnsidelc{
-\begin{tikzpicture}[scale=0.7]
-  \node (0) at (0, 0) {};
-  \node (1) at (4.5, 0) {};
-  \node (2) at (0, 4) {};
-  \node (3) at (3, 2) {};
-  \draw [fill] (3,2) node[right] {$P(x,y)$} circle (2pt);
-  \node (4) at (2, 3) {};
-  \draw [fill] (2,3) node[right] {$P'(x+dx, y+dy)$} circle (2pt);
-  \node (5) at (2, 0) {};
-  \node (6) at (3, 0) {};
-  \draw (0.center) to (3.center);
-  \draw (0.center) to (4.center);
-  \draw [dashed] (4.center) to (5.center);
-  \draw [dashed] (3.center) to (6.center);
-  \draw [-stealth] (0.center) to (1.center);
-  \draw [-stealth] (0.center) to (2.center);
-  \draw pic[draw,fill=magenta!25,"$\theta$",angle eccentricity=1.5]{angle=1--0--3};
-\end{tikzpicture}}{
-  Έστω οι συντεταγμένες του σημείου $ P'(x+ dx, y + dy) $, όπως φαίνονται στο σχήμα.
-  Έχουμε ότι 
-  \[
-    \tan{\theta} = \frac{y}{x} \Rightarrow \theta = \arctan{\frac{y}{x}}
-  \] 
-  Αν η γωνία μετά το σφάλμα της εκτίμησης είναι $ \theta'$, έχουμε ότι 
-  \[
-    \theta ' = \arctan{\frac{y+ dy}{x + dx}} 
-\]} 
+    \begin{tikzpicture}[scale=0.7]
+      \node (0) at (0, 0) {};
+      \node (1) at (4.5, 0) {};
+      \node (2) at (0, 4) {};
+      \node (3) at (3, 2) {};
+      \draw [fill] (3,2) node[right] {$P(x,y)$} circle (2pt);
+      \node (4) at (2, 3) {};
+      \draw [fill] (2,3) node[right] {$P'(x+dx, y+dy)$} circle (2pt);
+      \node (5) at (2, 0) {};
+      \node (6) at (3, 0) {};
+      \draw (0.center) to (3.center);
+      \draw (0.center) to (4.center);
+      \draw [dashed] (4.center) to (5.center);
+      \draw [dashed] (3.center) to (6.center);
+      \draw [-stealth] (0.center) to (1.center);
+      \draw [-stealth] (0.center) to (2.center);
+      \draw pic[draw,fill=magenta!25,"$\theta$",angle eccentricity=1.5]{angle=1--0--3};
+    \end{tikzpicture}}{
+    Έστω οι συντεταγμένες του σημείου $ P'(x+ dx, y + dy) $, όπως φαίνονται στο σχήμα.
+    Έχουμε ότι 
+    \[
+      \tan{\theta} = \frac{y}{x} \Rightarrow \theta = \arctan{\frac{y}{x}}
+    \] 
+    Αν η γωνία μετά το σφάλμα της εκτίμησης είναι $ \theta'$, έχουμε ότι 
+    \[
+      \theta ' = \arctan{\frac{y+ dy}{x + dx}} 
+  \]} 
   Παρατηρούμε ότι $ \Delta x = dx = 0.01 $, $ \Delta y = dy = -0.02 $. Οπότε ισχύει ότι 
   \[
     \Delta \theta \approx d \theta = \theta _{x} dx + \theta _{y} dy =
     \frac{-y}{x^{2}+y^{2}} dx + \frac{x}{x^{2}+y^{2}} dy = \frac{xdy-ydx}{x^{2}+y^{2}}
-\]
+  \]
   και μάλιστα υπολογίζουμε την απόλυτη τιμή και έχουμε
   \[
     \abs{\Delta \theta} \approx \frac{\abs{xdy-ydx}}{x^{2}+y^{2}} \leq \frac{\abs{x dy}
@@ -366,7 +366,7 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
 \section{Τέλειο Διαφορικό}
 
 \begin{dfn}
-Θεωρούμε τις συναρτήσεις $ P(x,y) $ και $ Q(x,y) $ με πεδίο ορισμού $ A \subseteq
+  Θεωρούμε τις συναρτήσεις $ P(x,y) $ και $ Q(x,y) $ με πεδίο ορισμού $ A \subseteq
   \mathbb{R}^{2} $.
   Η παράσταση $ P(x,y) dx + Q(x,y) dy $ λέγεται \textcolor{Col2}{τέλειο 
   διαφορικό} αν υπάρχει συνάρτηση $ f(x,y) $ με πεδίο ορισμού το $A$, ώστε 
@@ -374,7 +374,7 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
     df = P(x,y)dx + Q(x,y)dy \Leftrightarrow \pdv{f}{x} dx + \pdv{f}{y} dy = 
     P(x,y)dx + Q(x,y)dy \Leftrightarrow \\
     \boxed{\pdv{f}{x} = P(x,y) \quad \text{και} \quad \pdv{f}{y} = Q(x,y)}
-\end{gather*}
+  \end{gather*}
 \end{dfn}
 
 
@@ -489,8 +489,7 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
                  &= \int _{0}^{x} (3t^{2}+3y-1) \,{dt} + \int _{0}^{y} z^{2} \,{dt} + 
                  \int _{0}^{z} 1 \,{dt} \\
                  &= \left[t^{3}+3yt-t\right]_{0}^{x} + \left[z^{2}t\right]_{0}^{y} + 
-                 \bigl[t\bigr]_{0}^{z} \\
-                 &= x^{3}+3xy-x + z^{2}y+z
+                 \bigl[t\bigr]_{0}^{z} = x^{3}+3xy-x + z^{2}y+z
       \end{align*}
     \item [B᾽ Τρόπος: (Με Ολοκλήρωση)] Αφού η παράσταση είναι τέλειο διαφορικό,  
       υπάρχει συνάρτηση, $ f(x,y,z) $ τέτοια ώστε: 
@@ -560,14 +559,12 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
 \begin{solution}
   Για να υπολογίσουμε το ανάπτυγμα της συνάρτησης σε δυνάμεις του $(x-1)$ και $(y-2)$ 
   αρκεί ισοδύναμα να υπολογίσουμε το ανάπτυγμα της συνάρτησης γύρω από το 
-  σημείο $(x_0,y_0)=(1,2)$
-
-  Παρατηρώ ότι δεν αναφέρεται στην εκφώνηση μέχρι τους όρους ποιας τάξης 
-  xρειάζεται να βρω το ανάπτυγμα.  Γι' αυτό, μιας και η συνάρτηση είναι πολυωνυμική,
+  σημείο $(x_0,y_0)=(1,2)$.
+  Επειδή στην εκφώνηση δεν αναφέρεται μέχρι τους όρους ποιας τάξης 
+  πρέπει να βρω το ανάπτυγμα, και η συνάρτηση είναι πολυωνυμική,
   βρίσκω μέχρι την τάξη όπου μηδενίζονται οι μερικές παράγωγοι: 
-
-  (Δηλαδή στο συγκεκριμένο παράδειγμα μέχρι $3$ης τάξης, αφού όλες οι παράγωγοι 
-  $4$ης και ανώτερης τάξης, θα είναι όλες μηδέν)
+  (Δηλαδή μέχρι $3$ης τάξης, αφού όλες οι παράγωγοι $4$ης και ανώτερης τάξης, 
+  είναι όλες μηδέν)
 
   \vspace{\baselineskip}
 
@@ -1004,7 +1001,7 @@ $ D_0 \subseteq \mathbb{R}^{2} $ τέτοια ώστε:
   \pdv{f}{y} \pdv[2]{y}{u} \\
   &= \pdv[2]{f}{x} \left(\pdv{x}{u}\right)^{2} + \pdv[2]{f}{x}{y} \pdv{y}{u}
   \pdv{x}{u} + \pdv{f}{x} \pdv[2]{x}{u} + \pdv[2]{f}{y}{x} \pdv{x}{u} \pdv{y}{u} + 
-  \pdv[2]{f}{y} \left(\pdv{y}{u}\right)^{2} +
+  \pdv[2]{f}{y} \left(\pdv{y}{u}\right)^{2} + 
   \pdv{f}{y} \pdv[2]{y}{u} \\
   &= \pdv[2]{f}{x} \left(\pdv{x}{u}\right)^{2} + 2\pdv[2]{f}{x}{y} \pdv{x}{u}
   \pdv{y}{u} + \pdv[2]{f}{y} \left(\pdv{y}{u}\right)^{2} + \pdv{f}{x} \pdv[2]{x}{u} +
@@ -1083,5 +1080,5 @@ $ D_0 \subseteq \mathbb{R}^{2} $ τέτοια ώστε:
   \end{rem}
 
 
-\end{document}
+  \end{document}
 
