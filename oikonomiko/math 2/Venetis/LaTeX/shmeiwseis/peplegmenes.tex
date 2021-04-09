@@ -1,0 +1,122 @@
+\input{preamble.tex}
+\input{definitions.tex}
+
+
+
+\begin{document}
+
+
+\begin{center}
+  \minibox{\large \bfseries \textcolor{Col1}{Θεώρημα Πεπλεγμένων Συναρτήσεων (Σύστημα)}}
+\end{center}
+
+\vspace{\baselineskip}
+
+
+\begin{example}
+  Δίνεται το παρακάτω σύστημα εξισώσεων:
+  \[
+    \begin{rcases*}
+      F^1(x,y,w;z)=0 \\
+      F^2(x,y,w;z)=0 \\
+      F^3(x,y,w;z)=0
+    \end{rcases*}
+    \Leftrightarrow
+    \begin{rcases*}
+      xy-w &=0 \\
+      y-w^3-3z &=0 \\
+      w^3 + z^3 -2zw &=0
+    \end{rcases*}
+  \]
+  οι οποίες ικανοποιούνται στο σημείο $P(x,y,w;z)=(\frac{1}{4},4,1,1)$. 
+  Να βρεθεί η $\dv{x}{z}$.
+\end{example}
+\begin{solution}
+  Αρχικά, εξετάζουμε τις προυποθέσεις του θεωρήματος πεπλεγμένης συνάρτησης.
+  \begin{enumerate}[i)]
+    \item Το σημείο $P(x,y,w;z)=(\frac{1}{4},4,1,1)$ ικανοποιεί το σύστημα των 
+      εξισώσεων.  (από υπόθεση) 
+    \item Οι μερικές παράγωγοι των $F^1, F^2, F^3$ ως προς όλες τις μεταβλητές υπάρχουν 
+      και είναι όλες συνεχείς. (οι $F^1, F^2, F^3$ είναι πολυωνυμικές)
+    \item Βρίσκουμε την Ιακωβιανή Ορίζουσα.
+      \[
+        |J|=
+        \begin{vmatrix}
+          F^1_x & F^1_y & F^1_w \\
+          F^2_x & F^2_y & F^2_w \\
+          F^3_x & F^3_y & F^3_w
+          \end{vmatrix} = \begin{vmatrix}
+          y & x & -1 \\
+          0 & 1 & -3w^2 \\
+          0 & 0 & 3w^2-2z
+        \end{vmatrix}= y(3w^2-2z).
+      \]
+      Στη συνέχεια εξετάζουμε την Ιακωβιανή Ορίζουσα στο σημείο $P$.
+      \[
+        |J|_P=4\cdot(3\cdot 1^2-2\cdot 1)=4\neq 0.
+      \]
+  \end{enumerate}
+
+  Άρα ικανοποιούνται οι συνθήκες του θεωρήματος πεπλεγμένης συνάρτησης:
+  Υπάρχουν συναρτήσεις της μορφής:
+
+  \begin{enumerate}[i)]
+    \item $x=f^1(z)$
+    \item $y=f^2(z)$
+    \item $w=f^3(z)$.
+  \end{enumerate}
+
+  Εμείς ενδιαφερόμαστε για την συνάρτηση $x=f^1(z)$ γιατί ζητάμε την παράγωγο 
+  $\dv{x}{z}$.
+
+  Έτσι εφαρμόζουμε τον κανόνα πεπλεγμένης συνάρτησης:
+
+  \begin{align*}
+    \begin{vmatrix}
+      F^1_x & F^1_y & F^1_w \\[2pt]
+      F^2_x & F^2_y & F^2_w \\[2pt]
+      F^3_x & F^3_y & F^3_w
+    \end{vmatrix}\cdot 
+    \begin{pmatrix}
+      \dv{x}{z} \\[2pt]
+      \dv{y}{z} \\[2pt]
+      \dv{w}{z}
+      \end{pmatrix}&=\begin{pmatrix}
+      -\pdv{F^1}{z} \\[2pt]
+      -\pdv{F^2}{z} \\[2pt]
+      -\pdv{F^3}{z}
+    \end{pmatrix}\Leftrightarrow \\
+    \begin{pmatrix}
+      y & x & -1 \\
+      0 & 1 & -3w^2 \\
+      0 & 0 & 3w^2-2z
+      \end{pmatrix}\cdot \begin{pmatrix}
+      \dv{x}{z} \\[2pt]
+      \dv{y}{z} \\[2pt]
+      \dv{w}{z}
+      \end{pmatrix} &= \begin{pmatrix}
+      0 \\[2pt]
+      3\\[2pt]
+      2w-3z^2
+    \end{pmatrix}
+  \end{align*}
+
+  Χρησιμοποιώντας τον κανόνα του Crammer λύνουμε ως προς $\dv{x}{z}$ και έχουμε:
+  \[
+    \dv{x}{z}=\frac{|J_x|}{|J|}=\frac{\begin{vmatrix}
+        0 & x & -1 \\
+        3 & 1 & -3w^2 \\
+        2w-3z^2 & 0 & 3w^2-2z 
+        \end{vmatrix}}{|J|}=\frac{\begin{vmatrix}
+        0 & \frac{1}{4} & -1 \\
+        3 & 1 & -3 \\
+        -1 & 0 & 1
+    \end{vmatrix}}{4}=-\frac{1}{4}<0.
+  \]
+
+  Επομένως η συνάρτηση $x$ είνα μια φθίνουσα συνάρτηση του $z$ και άρα μια αύξηση του 
+  $z$ κατά 1 μονάδα θα επιφέρει μείωση του $x$ κατά $\frac{1}{4}$ μονάδες.
+    \end{solution}
+
+
+    \end{document}
