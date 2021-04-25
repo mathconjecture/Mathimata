@@ -3,26 +3,29 @@
 \input{tikz.tex}
 \input{myboxes.tex}
 
-\geometry{top=2.5cm,left=1cm,right=1cm,bottom=2.5cm}
+\usepackage[cmtip,all]{xy}
+\usepackage{silence}
+\WarningsOff[catoptions]
+\usepackage{exarrows}
 
-\usepackage[all]{xy}
+\geometry{left=9mm,right=9mm,top=30.00mm,bottom=34.00mm,footskip=24.16mm,headsep=24.16mm}
 \everymath{\displaystyle}
 \pagestyle{vangelis}
 
 \begin{document}
 
 
-\chapter{Μερική Παραγώγιση}
+\chapter{Μερικές Παράγωγοι}
 
 \section{Συναρτήσεις Μερικών Παραγώγων}
 
 Έστω $ f(x,y) $ συνάρτηση δύο μεταβλητών. 
 \begin{myitemize}
   \item Η \textcolor{Col1}{μερική παράγωγος της $f$ ως προς $x$} 
-    υπολογίζεται παραγωγίζοντας την συνάρτηση $ f(x,y) $ ως προς $x$, 
+    υπολογίζεται παραγωγίζοντας την $ f(x,y) $ ως προς $x$, 
     θεωρώντας το $y$ σταθερό. 
-  \item Η \textcolor{Col1}{μερική παράγωγος της $f$} ως προς $y$ 
-    υπολογίζεται παραγωγίζοντας την συνάρτηση $ f(x,y) $ ως προς $y$, 
+  \item Η \textcolor{Col1}{μερική παράγωγος της $f$ ως προς $y$} 
+    υπολογίζεται παραγωγίζοντας την $ f(x,y) $ ως προς $y$, 
     θεωρώντας το $x$ σταθερό. 
 \end{myitemize}
 
@@ -32,9 +35,9 @@
   $ x_{i} $, θεωρώντας \textbf{όλες} τις υπόλοιπες μεταβλητές σταθερές.
 \end{rem}
 
-\section{Συμβολισμός}
+\subsection*{Συμβολισμός}
 
-Συμβολισμοί για τις μερικές παραγώγους της $f(x,y)$ ως 
+Διάφοροι \textbf{συμβολισμοί} για τις μερικές παραγώγους της συνάρτησης $f(x,y)$ ως 
 προς $x$ και ως προς $y$ είναι:
 \begin{align*}
   \eval{\pdv{f}{x} }_{(x_{0}, y_{0})} = \pdv{f(x_{0}, y_{0})}{x} = 
@@ -43,62 +46,64 @@
   f_{y}(x_{0}, y_{0}) = f'_{y}(x_{0}, y_{0} ) 
 \end{align*} 
 
-\section{Κανόνες Παραγώγισης}
 
-Έστω $ f(x,y) $ και $ g(x,y) $ συναρτήσεις δύο μεταβλητών, που ορίζονται στο 
-ανοικτό υποσύνολο $ A $ του $ \mathbb{R}^{2} $, και έστω ότι οι 
-μερικές παράγωγοι 
-$ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \in A $, τότε:
-
-\vspace{\baselineskip}
+\subsection*{Κανόνες Παραγώγισης}
 
 \twocolumnsides{
   \begin{myitemize}
     \item $ \pdv{x}(f+g) = \pdv{f}{x} + \pdv{g}{x} $
     \item $ \pdv{x}(af) = a \pdv{f}{x} $ 
-  \end{myitemize}}{
+  \end{myitemize}
+  }{
   \begin{myitemize}
     \item $ \pdv{x}(f\cdot g) = \pdv{f}{x} \cdot g + f \cdot \pdv{g}{x} $
     \item $ \pdv{x}(\frac{f}{g}) = \frac{\pdv{f}{x} \cdot g - f \cdot 
       \pdv{g}{x}}{g^{2}} $
-\end{myitemize}}
+\end{myitemize}
+}
 
-\begin{examples}
+\subsection*{Παραδείγματα}
+
+\begin{example}
+  Έστω $ f(x,y)=x^{2}y^{3}+4xy^{2}+4y+5 $. Να 
+  υπολογιστούν οι μερικές παράγωγοι $ f_{x} $ και 
+  $ f_{y} $.
+\end{example}
+\begin{solution}
+  \begin{align*}
+    f_{x} &= (x^{2}y^{3}+4xy^{2}+4y+5)_{x} =
+    (x^{2}y^{3})_{x}+(4xy^{2})_{x}+(4y)_{x}+(5)_{x} = 2xy^{3} + 4y^{2}
+    \intertext{και}
+    f_{y}&=(x^{2}y^{3}+4xy^{2}+4y+5)_{y} = 
+    (x^{2}y^{3})_{y}+(4xy^{2})_{y}+(4y)_{y}+(5)_{y} = 3x^{2}y^{2} + 
+    8xy + 4
+  \end{align*} 
+\end{solution}
+
+\begin{example}
+  Έστω $ f(x,y)=2x^{2}y+3 \cos{3y} +1 $. Να υπολογιστούν οι 
+  μερικές παράγωγοι $ f_{x}$ και $ f_{y} $.
+\end{example}
+\begin{solution}
+  \[
+    f_{x}=4xy \quad \text{και} \quad f_{y}=2x^{2}-3 \sin{3y} (3y)_{y} 
+    = 2x^{2}-9 \sin{3y}
+  \] 
+\end{solution}
+
+\begin{example}
+  Έστω $ f(x,y,z)=x^{2}yz - y \cos{(xy)} $. Να υπολογιστούν οι 
+  μερικές παράγωγοι $ f_{x}, f_{y}, f_{z} $. 
+\end{example}
+\begin{solution}
 \item {}
-  \begin{enumerate}
-    \item Έστω $ f(x,y)=x^{2}y^{3}+4xy^{2}+4y+5 $. Να 
-      υπολογιστούν οι μερικές παράγωγοι $ f_{x} $ και 
-      $ f_{y} $.
-      \begin{solution}
-        \begin{align*}
-          f_{x} &= (x^{2}y^{3}+4xy^{2}+4y+5)_{x} =
-          (x^{2}y^{3})_{x}+(4xy^{2})_{x}+(4y)_{x}+(5)_{x} = 2xy^{3} + 4y^{2}
-          \intertext{και}
-          f_{y}&=(x^{2}y^{3}+4xy^{2}+4y+5)_{y} = 
-          (x^{2}y^{3})_{y}+(4xy^{2})_{y}+(4y)_{y}+(5)_{y} = 3x^{2}y^{2} + 
-          8xy + 4
-        \end{align*} 
-      \end{solution}
-    \item Έστω $ f(x,y)=2x^{2}y+3 \cos{3y} +1 $. Να υπολογιστούν οι 
-      μερικές παράγωγοι $ f_{x}$ και $ f_{y} $.
-      \begin{solution}
-        \[
-          f_{x}=4xy \quad \text{και} \quad f_{y}=2x^{2}-3 \sin{3y} (3y)_{y} 
-          = 2x^{2}-9 \sin{3y}
-        \] 
-      \end{solution}
-    \item Έστω $ f(x,y,z)=x^{2}yz - y \cos{(xy)} $. Να υπολογιστούν οι 
-      μερικές παράγωγοι $ f_{x}, f_{y}, f_{z} $. 
-      \begin{solution}
-      \item {}
-        \begin{align*}
-          f_{x}&=2xyz- \cos{(xy)}(xy)_{x} = 2xyz-y \cos{xy} \\
-          f_{y}&=x^{2}z- \cos{xy}(xy)_{y}=x^{2}z - x \cos{xy} \\
-          f_{z}&=x^{2}z
-        \end{align*}
-      \end{solution}
-  \end{enumerate}
-\end{examples}
+  \begin{align*}
+    f_{x}&=2xyz- \cos{(xy)}(xy)_{x} = 2xyz-y \cos{xy} \\
+    f_{y}&=x^{2}z- \cos{xy}(xy)_{y}=x^{2}z - x \cos{xy} \\
+    f_{z}&=x^{2}z
+  \end{align*}
+\end{solution}
+
 
 \section{Μερικές Παράγωγοι Ανώτερης Τάξης}
 
@@ -106,32 +111,31 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
 \item {}
   Έστω $ f(x,y,z) = 3x^{2}y^{2} + xy^{3} + 3x +1 $. 
   Να υπολογιστούν οι μερικές παράγωγοι 1ης και 2ης τάξης.
-  \begin{solution}
-  \item {} 
-    \begin{align*}
-      f_{x} &= 6xy^{2}+y^{3}+3 \quad \text{και} \quad 
-      f_{y} = 6x^{2}y+3xy^{2} \\
-      f_{xx} &= (f_{x})_{x} = (6xy^{2}+y^{3}+3)_{x} =
-      6y^{2} \\
-      f_{yy} &= (f_{y})_{y} = (6x^{2}y+3xy^{2})_{y} = 
-      6x^{2}+6xy \\
-      f_{xy} &= (f_{x})_{y} = (6xy^{2}+y^{3}+3)_{y} = 
-      12xy = 3y^{2} \\
-      f_{yx} &= (f_{y})_{x} = (6x^{2}y+3xy^{2})_{x} = 
-      12xy+3y^{2} \; \; \,
-    \end{align*}
-  \end{solution}
 \end{example}
+\begin{solution}
+  \begin{align*}
+    f_{x} &= 6xy^{2}+y^{3}+3 \quad \text{και} \quad 
+    f_{y} = 6x^{2}y+3xy^{2} \\
+    f_{xx} &= (f_{x})_{x} = (6xy^{2}+y^{3}+3)_{x} =
+    6y^{2} \\
+    f_{yy} &= (f_{y})_{y} = (6x^{2}y+3xy^{2})_{y} = 
+    6x^{2}+6xy \\
+    f_{xy} &= (f_{x})_{y} = (6xy^{2}+y^{3}+3)_{y} = 
+    12xy = 3y^{2} \tikzmark{a} \\
+    f_{yx} &= (f_{y})_{x} = (6x^{2}y+3xy^{2})_{x} = 
+    12xy+3y^{2} \; \; \, \tikzmark{b}
+    \mybrace{a}{b}[\text{Μικτές Παράγωγοι}]
+  \end{align*}
+\end{solution}
 
 \begin{rem}
 \item {}
-  Για τις μικτές παραγώγους $ f_{xy} $ και $ f_{yx} $ 
-  ισχύει:
+  Για τις μικτές παραγώγους $ f_{xy} $ και $ f_{yx} $ ισχύει:
   \begin{align*}
-    \pdv[2]{f}{x}{y} = \pdv{}{x} \left(\pdv{f}{y}\right) = \pdv{x} (f_{y}) 
+    \pdv[2]{f}{x}{y} = \pdv{}{x} \left(\pdv{f}{y}\right) = \pdv{}{x} \left(f_{y}\right) 
     = (f_{y})_{x} = f_{yx}
-    \intertext{και}
-    \pdv[2]{f}{y}{x} = \pdv{}{y} \left(\pdv{f}{x}\right) = \pdv{y} (f_{x}) 
+    \quad \text{και} \quad 
+    \pdv[2]{f}{y}{x} = \pdv{}{y} \left(\pdv{f}{x}\right) = \pdv{}{y} \left(f_{x}\right) 
     = (f_{x})_{y} = f_{xy}
   \end{align*} 
 \end{rem}
@@ -139,11 +143,11 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
 \begin{rem}
 \item {}
   Οι πολυωνυμικές συναρτήσεις δύο (ή περισσότερων) μεταβλητών, 
-  έχουν συνεχείς μερικές παραγώγους σε κάθε σημείο του $ \mathbb{R}^{2} $ 
+  έχουν \textbf{συνεχείς} μερικές παραγώγους σε κάθε σημείο του $ \mathbb{R}^{2} $ 
   (ή $\mathbb{R}^{n}$).
   Οι λοιπές στοιχειώδεις συναρτήσεις $ \sin{f(x,y)}, \cos{f(x,y)}, a^{f(x,y)}, 
-  \ln{f(x,y)} $ κ.λ.π. όπου $ f(x,y) $ πολυωνυμική συνάρτηση, έχουν 
-  συνεχείς μερικές παραγώγους σε κάθε σημείο του πεδίου ορισμού τους.
+  \ln{f(x,y)} $ κ.λ.π.\ όπου $ f(x,y) $ \textbf{πολυωνυμική} συνάρτηση, έχουν 
+  \textbf{συνεχείς} μερικές παραγώγους σε κάθε σημείο του πεδίου ορισμού τους.
   Για αυτές τις συναρτήσεις ισχύει $ f_{xy}=f_{yx} $.
 \end{rem}
 
@@ -152,6 +156,113 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
   $ f_{xy} $ και $ f_{yx} $ και είναι συνεχείς σε μια περιοχή του σημείου 
   $ (x_{0}, y_{0}) $, τότε $ f_{xy}=f_{yx} $ στην περιοχή αυτή.
 \end{thm}
+
+\section{Κλίση - Λαπλασιανή}
+
+\begin{dfn}[Τελεστής Hamilton ή Ανάδελτα]
+  \[ \grad = \pdv{}{x} \mathbf{i} + \pdv{}{y} \mathbf{j} + \pdv{}{z} \mathbf{k} \quad
+  \text{ή} \quad \grad = \left(\pdv{}{x} , \pdv{}{y} , \pdv{}{z}\right)  \]
+\end{dfn}
+
+\begin{dfn}
+  Έστω $ f(x,y,z) $ συνάρτηση. Τότε η διανυσματική συνάρτηση 
+  \[ \grad f = \pdv{f}{x} \mathbf{i}+ \pdv{f}{y} \mathbf{j} + \pdv{f}{z} \mathbf{k} 
+  \quad \text{ή} \quad \grad f = \left(\pdv{f}{x} , \pdv{f}{y} , \pdv{f}{z}\right)\]
+  ονομάζεται \textcolor{Col1}{κλίση} της συνάρτησης $ f(x,y,z) $.
+\end{dfn}
+
+\begin{dfn}[Τελεστής Laplace]
+  \[ \Delta \overset{\text{ή}}{=} \laplacian = \pdv[2]{}{x} + \pdv[2]{}{y}\]
+\end{dfn}
+
+\begin{dfn}
+  Έστω $ f(x,y,z) $ συνάρτηση. Τότε η πραγματική συνάρτηση 
+  \[ 
+    \Delta f \overset{\text{ή}}{=} \laplacian f = \pdv{f}{x} + \pdv{f}{y} + \pdv{f}{z} 
+  \]
+  ονομάζεται \textcolor{Col1}{Λαπλασιανή} της συνάρτησης $ f(x,y,z) $.
+\end{dfn}
+
+
+\section{Αρμονικές Συναρτήσεις}
+
+\begin{dfn}
+  Η συνάρτηση $ f(x,y) $ λέγεται \textcolor{Col1}{αρμονική} αν ικανοποιεί την
+  εξίσωση $ \Delta f = 0 $ ή ισοδύναμα $ \laplacian f = 0 $.  Δηλαδή 
+  \[
+    \pdv[2]{f}{x} + \pdv[2]{f}{y} = 0  
+  \]
+\end{dfn}
+
+\begin{rem}
+\item {}
+  \begin{enumerate}
+    \item Η παραπάνω εξίσωση, ονομάζεται \textcolor{Col1}{εξίσωση Laplace}.
+    \item Η εξίσωση Laplace για συναρτήσεις πολλών μεταβλητών παίρνει τη 
+      μορφή
+      \[
+        \pdv[2]{f}{x_{1}} + \pdv[2]{f}{x_{2}} + \cdots + 
+        \pdv[2]{f}{x_{n}}=0 
+      \] 
+  \end{enumerate}
+\end{rem}
+
+\begin{prop}
+\item {}
+  Αν $ f(x,y) $ συνεχής, έχει συνεχείς μερικές παραγώγους 1ης τάξης 
+  και είναι αρμονική, τότε και οι συναρτήσεις $ f_{x} $ και $ f_{y} $
+  είναι αρμονικές. 
+\end{prop}
+
+\begin{proof}
+\item {}
+  $f$ αρμονική $ \Rightarrow f_{xx}+f_{yy}=0 $.
+
+  Θέτουμε $ g(x,y)=f_{x}(x,y) $. Για να δείξουμε ότι $ f_{x} $ αρμονική, 
+  αρκεί να δείξουμε ότι $ g(x,y) $ είναι αρμονική. Πράγματι:
+  \begin{align*}
+    g_{x} &= f_{xx} \quad \text{και} \quad g_{xx} = (f_{xx})_{x} \\ 
+    g_{y} &= f_{xy} \quad \text{και} \quad g_{yy} = (f_{xy})_{y} =
+    (f_{yx})_{y} = f_{yxy} = f_{yyx} = (f_{yy})_{x}
+  \end{align*}
+  Άρα 
+  \[
+    g_{xx}+g_{yy} = (f_{xx})_{x} + (f_{yy})_{x} = 
+    (f_{xx}+f_{yy})_{x}= (0)_{x} =0
+  \] 
+\end{proof}
+
+\begin{example}
+  Να εξεταστεί αν η συνάρτηση $ f(x,y)= \ln{\sqrt{x^{2}+y^{2}}} $ είναι αρμονική.
+\end{example}
+\begin{solution}
+  \begin{align*}
+    \pdv{f}{x} &= f_{x} = \left(\ln{\sqrt{x^{2}+y^{2}}} \right)_{x} = 
+    \frac{1}{\sqrt{x^{2}+y^{2}}} \cdot 
+    \left(\sqrt{x^{2}+y^{2}}\right)_{x} = 
+    \frac{1}{\sqrt{x^{2}+y^{2}}} \cdot \frac{\cancel{2}x}{\cancel{2} 
+    \sqrt{x^{2}+y^{2}}} = \frac{x}{x^{2}+y^{2}} \\
+    \pdv[2]{f}{x} &= f_{xx} = \left(\frac{x}{x^{2}+y^{2}}\right)_{x} = 
+    \frac{x^{2}+y^{2}-2x^{2}}{(x^{2}+y^{2})^{2}} = 
+    \frac{y^{2}-x^{2}}{(x^{2}+y^{2})^{2}} 
+    \intertext{και}
+    \pdv{f}{y} &= f_{y} = \left(\ln{\sqrt{x^{2}+y^{2}}} \right)_{y} = 
+    \frac{1}{\sqrt{x^{2}+y^{2}}} \cdot 
+    \left(\sqrt{x^{2}+y^{2}}\right)_{y} = 
+    \frac{1}{\sqrt{x^{2}+y^{2}}} \cdot \frac{\cancel{2}y}{\cancel{2} 
+    \sqrt{x^{2}+y^{2}}} = \frac{y}{x^{2}+y^{2}} \\
+    \pdv[2]{f}{y} &= f_{yy} = \left(\frac{y}{x^{2}+y^{2}}\right)_{y} = 
+    \frac{x^{2}+y^{2}-2y^{2}}{(x^{2}+y^{2})^{2}} = 
+    \frac{x^{2}-y^{2}}{(x^{2}+y^{2})^{2}} 
+  \end{align*}  
+  Προφανώς έχουμε ότι
+  \[
+    \pdv[2]{f}{x} + \pdv[2]{f}{y} = f_{xx}+f_{yy} =
+    \frac{y^{2}-x^{2}}{(x^{2}+y^{2})^{2}} + 
+    \frac{x^{2}-y^{2}}{(x^{2}+y^{2})^{2}} = 0  
+  \] 
+\end{solution}
+
 
 \section{Μερική Ολοκλήρωση}
 
@@ -165,7 +276,6 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
 \end{rem}
 
 \begin{example}
-\item {}
   Έστω $ f(x,y)$ με $ f_{x}=e^{x+y} $ και $ f(0,y)=e^{y} $. 
   Να βρεθεί ο τύπος της $f$.
   \begin{solution}
@@ -177,18 +287,18 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
     \mybrace{a}{b}[ $f(x,y) = e^{x+y}$ ]
   \end{solution}
 \end{example}
-
 \begin{rem}
   Όταν ολοκληρώνουμε μια συνάρτηση πολλών μεταβλητών, ως προς κάποια από τις 
-  μεταβλητές, τότε η σταθερά ολοκλήρωσης είναι συνάρτηση των υπολοίπων μεταβλητών, 
-  οι οποίες θεωρούνται σταθερές κατά την ολοκλήρωση.
+  μεταβλητές της, τότε η σταθερά ολοκλήρωσης είναι \textbf{συνάρτηση} των υπολοίπων 
+  μεταβλητών, οι οποίες θεωρούνται σταθερές κατά την ολοκλήρωση.
 \end{rem}
+
 
 \section{Ολικό Διαφορικό}
 
 \begin{dfn}
-  Έστω η συνάρτηση $ f(x,y) $. Τα \textcolor{Col1}{ολικά διαφορικά 1ης και 
-  2ης τάξης} της συνάρτηση $f$ συμβολίζονται με $ df $ και $ d^{2}f $, αντίστοιχα 
+  Έστω η συνάρτηση $ f(x,y) $. Τα \textcolor{Col1}{ολικά διαφορικά} 1ης και 
+  2ης τάξης της συνάρτηση $f$ συμβολίζονται με $ df $ και $ d^{2}f $, αντίστοιχα 
   και ισχύει:
   \[
     \boxed{df = f_{x}dx + f_{y}dy} \quad \text{και} \quad 
@@ -197,29 +307,49 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
   Στην περίπτωση όπου $ f= f(x_{1}, x_{2}, \ldots, x_{n}) $, το ολικό 
   διαφορικό 1ης τάξης γίνεται: 
   \[
-    df = f_{x_{1}}d{x_{1}} + f_{x_{2}}d{x_{2}} + \cdots f_{x_{n}} dx_{n}
+    df = f_{x_{1}}d{x_{1}} + f_{x_{2}}d{x_{2}} + \cdots + f_{x_{n}} dx_{n}
   \]
 \end{dfn}
 
 
 \begin{example}
   Να βρείτε το ολικό διαφορικό της συνάρτησης $ f(x,y) = xye^{x+2y} $ 
-  \begin{solution}
-  \item {}
-    Το ολικό διαφορικό δίνεται από τη σχέση $ df = f_{x} dx + f_{y} dy $.  
-    Για τις μερικές παραγώγους έχουμε ότι: 
-    \[
-      f_{x} = ye^{x+2y}+xye^{x+2y} \quad \text{και} \quad f_{y} = xe^{x+2y} +
-      2xye^{x+2y}
-    \] 
-    Επομένως
-    \[
-      df = y(1+x)e^{x+2y} dx + x(1+2y)e^{x+2y}dy
-    \]
-  \end{solution}
 \end{example}
+\begin{solution}
+\item {}
+  Το ολικό διαφορικό δίνεται από τη σχέση $ df = f_{x} dx + f_{y} dy $.  
+  Για τις μερικές παραγώγους έχουμε ότι: 
+  \[
+    f_{x} = ye^{x+2y}+xye^{x+2y} \quad \text{και} \quad f_{y} = xe^{x+2y} +
+    2xye^{x+2y}
+  \] 
+  Επομένως
+  \[
+    df = y(1+x)e^{x+2y} dx + x(1+2y)e^{x+2y}dy
+  \]
+\end{solution}
 
 \section{Εφαρμογές του Διαφορικού}
+
+%todo σχημα ορισμου διαφορικου
+Αν $ \Delta x $ και $ \Delta y $ είναι \textit{μικρές} μεταβολές του $ x $ και του $y$ 
+αντίστοιχα, τότε θέτουμε $ \Delta x = dx $ και $ \Delta y = dy $ και 
+αποδεικνύεται ότι 
+\[
+  \Delta f(x,y) \approx df (x,y) \Leftrightarrow f(x+\Delta x, y+\Delta y) - f(x,y) 
+  \approx df(x,y)
+\] 
+ή ισοδύναμα 
+\begin{equation}\label{eq:efdiaf}
+  \boxed{f(x+\Delta x, y+\Delta y) \approx f(x,y) + f_{x}(x,y)dx + f_{y}(x,y)dy}
+\end{equation}
+
+\begin{rem}
+  Από τη σχέση σχέση~\eqref{eq:efdiaf}, καταλαβαίνουμε ότι, μπορούμε να υπολογίσουμε 
+  κατά προσέγγιση, την τιμή της συνάρτησης $f$ σε κάποιο σημείο, αν γνωρίζουμε 
+  την τιμή της και τις τιμές των μερικών παραγώγων της, σε κάποιο άλλο
+  \textit{κοντινό} σημείο.
+\end{rem}
 
 \begin{example}
   Να υπολογίσετε το $ \Delta f $ και το $ df $ στο σημείο $ (x,y) = (1,1) $, 
@@ -253,8 +383,8 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
   Παρατηρούμε ότι στην 1η περίπτωση, έχουμε
   $ \Delta f - df \approx 0.04 $, ενώ στη 2η περίπτωση έχουμε $ \Delta f - df \approx 
   0,0004 $, δηλαδή στη 2η περίπτωση, όπου τα $ \Delta x $ και $ \Delta y $ επιλέχθηκαν 
-  να είναι μικρότερα, το διαφορικό προσεγγίζει με μεγαλύτερη ακρίβεια τη διαφορά 
-  $ \Delta f $.
+  να είναι μικρότερα, το διαφορικό προσεγγίζει με \textbf{μεγαλύτερη ακρίβεια} τη 
+  διαφορά $ \Delta f $.
 \end{solution}
 
 \begin{example}
@@ -362,7 +492,6 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
   \]
 \end{solution}
 
-
 \section{Τέλειο Διαφορικό}
 
 \begin{dfn}
@@ -427,8 +556,8 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
 \end{rem}
 
 \begin{example}
-  Να εξετάσετε αν η παράσταση $ \left(1+x- \frac{2}{y}\right)dx + 
-  \left(1+ \frac{2x}{y^{2}} \right)dy $ είναι τέλειο διαφορικό και αν ναι, να 
+  Να εξετάσετε αν η παράσταση $ \left(1+x- {2}/{y}\right)dx + 
+  \left(1+ {2x}/{y^{2}} \right)dy $ είναι τέλειο διαφορικό και αν ναι, να 
   υπολογίσετε τη συνάρτηση δυναμικού.
 \end{example}
 \begin{solution}
@@ -489,7 +618,8 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
                  &= \int _{0}^{x} (3t^{2}+3y-1) \,{dt} + \int _{0}^{y} z^{2} \,{dt} + 
                  \int _{0}^{z} 1 \,{dt} \\
                  &= \left[t^{3}+3yt-t\right]_{0}^{x} + \left[z^{2}t\right]_{0}^{y} + 
-                 \bigl[t\bigr]_{0}^{z} = x^{3}+3xy-x + z^{2}y+z
+                 \bigl[t\bigr]_{0}^{z} \\
+                 &= x^{3}+3xy-x + z^{2}y+z
       \end{align*}
     \item [B᾽ Τρόπος: (Με Ολοκλήρωση)] Αφού η παράσταση είναι τέλειο διαφορικό,  
       υπάρχει συνάρτηση, $ f(x,y,z) $ τέτοια ώστε: 
@@ -549,7 +679,6 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
   \end{description}
 \end{solution}
 
-
 \section{Τύπος Taylor και Maclaurin}
 
 \begin{example}
@@ -557,29 +686,27 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
   σημείο $ (1,2) $ (ή ισοδύναμα σε δυνάμεις του $(x-1)$ και $(y-2)$).
 \end{example}
 \begin{solution}
-  Για να υπολογίσουμε το ανάπτυγμα της συνάρτησης σε δυνάμεις του $(x-1)$ και $(y-2)$ 
-  αρκεί ισοδύναμα να υπολογίσουμε το ανάπτυγμα της συνάρτησης γύρω από το 
-  σημείο $(x_0,y_0)=(1,2)$.
-  Επειδή στην εκφώνηση δεν αναφέρεται μέχρι τους όρους ποιας τάξης 
-  πρέπει να βρω το ανάπτυγμα, και η συνάρτηση είναι πολυωνυμική,
+  Παρατηρούμε ότι δεν αναφέρεται στην εκφώνηση μέχρι τους όρους ποιας τάξης 
+  χρειάζεται να βρω το ανάπτυγμα.  Γι' αυτό, μιας και η συνάρτηση είναι πολυωνυμική,
   βρίσκω μέχρι την τάξη όπου μηδενίζονται οι μερικές παράγωγοι: 
-  (Δηλαδή μέχρι $3$ης τάξης, αφού όλες οι παράγωγοι $4$ης και ανώτερης τάξης, 
-  είναι όλες μηδέν)
+
+  (Δηλαδή στο συγκεκριμένο παράδειγμα μέχρι $3$ης τάξης, αφού οι παράγωγοι 
+  $4$ης και ανώτερης τάξης, θα είναι όλες μηδέν)
 
   \vspace{\baselineskip}
 
-  \twocolumnsides{\begin{itemize}
+  \twocolumnsides{\begin{myitemize}
       \item $f_x=3x^2+y^2\Rightarrow f_x(1,2)=7$
       \item $f_y=3y^2+2xy\Rightarrow f_y(1,2)=16$
       \item $f_{xx}=6x\Rightarrow f_{xx}(1,2)=6$
       \item $f_{xy}=2y\Rightarrow f_{xy}(1,2)=4$
       \item $f_{yy}=6y+2x\Rightarrow f_{yy}(1,2)=14$
-      \end{itemize}}{\begin{itemize}
+      \end{myitemize}}{\begin{myitemize}
       \item $f_{xxx}=6$
       \item $f_{xxy}=f_{xyx}=0$
       \item $f_{xyy}=f_{yxy}=2$
       \item $f_{yyy}=6$ 
-  \end{itemize}}
+  \end{myitemize}}
 
   \vspace{\baselineskip}
 
@@ -596,7 +723,6 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
           &\quad +7(y-2)^2+(x-1)^3+(x-1)(y-2)^2+(y-2)^3.
   \end{align*}
   Δεν κάνουμε άλλες πράξεις.
-
   Έχουμε το ανάπτυγμα της $f(x,y)$ σε δυνάμεις του $(x-1)$ και $(y-2)$ όπως ζητήθηκε.
 \end{solution}
 
@@ -605,8 +731,6 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
 
 
 \section{Θεωρήματα Πεπλεγμένων συναρτήσεων}
-
-\vspace{\baselineskip}
 
 \subsection{Η εξίσωση \ensuremath{F(x,y) = 0}}
 
@@ -620,12 +744,12 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
   \item $ F_x, F_y$ συνεχείς σε περιοχή του σημείου $ (x_0,y_0) $ 
   \item $ F_{\textcolor{Col1}{y}}(x_0,y_0) \neq 0 $
 \end{enumerate}
-τότε υπάρχει μοναδική συνάρτηση $\textcolor{Col1}{y=y(x)} $ ορισμένη στο $ I_0 \subseteq \mathbb{R} $ 
-τέτοια ώστε:
+τότε υπάρχει μοναδική συνάρτηση $\textcolor{Col1}{y=y(x)} $ ορισμένη στο 
+$ I_0 \subseteq \mathbb{R} $ τέτοια ώστε:
 \begin{myitemize}
   \item $y_0 = y(x_0)$
-  \item $F(x,y(x)) = 0 \quad \forall x \in I_0$
-  \item $ \dv{y}{x} = - \frac{F_x}{F_y} \quad \forall x \in I_0  $
+  \item $F(x,y(x)) = 0, \quad \forall x \in I_0$
+  \item $ \dv{y}{x} = - \frac{F_x}{F_y}, \quad \forall x \in I_0  $
 \end{myitemize}
 
 \begin{rem}
@@ -646,12 +770,12 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
   \item $ F_x, F_y$ συνεχείς σε περιοχή του σημείου $ (x_0,y_0) $ 
   \item $ F_{\textcolor{Col1}{x}}(x_0,y_0) \neq 0 $
 \end{enumerate}
-τότε υπάρχει μοναδική συνάρτηση $ \textcolor{Col1}{x=x(y)} $ ορισμένη στο $ I_0 \subseteq \mathbb{R} $ 
-τέτοια ώστε:
+τότε υπάρχει μοναδική συνάρτηση $ \textcolor{Col1}{x=x(y)} $ ορισμένη στο 
+$ I_0 \subseteq \mathbb{R} $ τέτοια ώστε:
 \begin{myitemize}
   \item $x_0 = x(y_0)$
-  \item $F(x(y),y) = 0 \quad \forall y \in I_0$
-  \item $ \dv{x}{y} = - \frac{F_y}{F_x} \quad \forall y \in I_0  $
+  \item $F(x(y),y) = 0, \quad \forall y \in I_0$
+  \item $ \dv{x}{y} = - \frac{F_y}{F_x}, \quad \forall y \in I_0  $
 \end{myitemize}
 
 \begin{rem}
@@ -731,9 +855,9 @@ $ \pdv{f}{x} $ και $ \pdv{g}{x} $ υπάρχουν για κάθε $ (x,y) \i
 $ D_0 \subseteq \mathbb{R}^{2} $ τέτοια ώστε:
 \begin{myitemize}
   \item $ z_0 = z(x_0,y_0) $
-  \item $ F(x,y,z(x,y)) = 0  \quad \forall (x,y)\in  D_0 $
-  \item $ \pdv{z}{x} = - \frac{F_x}{F_z} $, $ \pdv{z}{y} = - \frac{F_y}{F_z}\quad 
-    \forall (x,y) \in D_0$
+  \item $ F(x,y,z(x,y)) = 0,  \quad \forall (x,y)\in  D_0 $
+  \item $ \pdv{z}{x} = - \frac{F_x}{F_z} $ και $ \pdv{z}{y} = - \frac{F_y}{F_z}, 
+    \quad \forall (x,y) \in D_0$
 \end{myitemize}
 
 \begin{rem}
@@ -761,9 +885,9 @@ $ D_0 \subseteq \mathbb{R}^{2} $ τέτοια ώστε:
 $ D_0 \subseteq \mathbb{R}^{2} $ τέτοια ώστε:
 \begin{myitemize}
   \item $ y_0 = y(x_0,z_0) $
-  \item $ F(x,y(x,z),z)) = 0  \quad \forall (x,z) \in  D_0 $
-  \item $ \pdv{y}{x} = - \frac{F_x}{F_y} $, $ \pdv{y}{z} = - \frac{F_z}{F_y}\quad 
-    \forall (x,z) \in D_0$
+  \item $ F(x,y(x,z),z)) = 0,  \quad \forall (x,z) \in  D_0 $
+  \item $ \pdv{y}{x} = - \frac{F_x}{F_y} $ και $ \pdv{y}{z} = - \frac{F_z}{F_y}, 
+    \quad \forall (x,z) \in D_0$
 \end{myitemize}
 
 \begin{rem}
@@ -791,9 +915,9 @@ $ D_0 \subseteq \mathbb{R}^{2} $ τέτοια ώστε:
 $ D_0 \subseteq \mathbb{R}^{2} $ τέτοια ώστε:
 \begin{myitemize}
   \item $ x_0 = x(y_0,z_0) $
-  \item $ F(x(y,z),y,z)) = 0  \quad \forall (y,z) \in  D_0 $
-  \item $ \pdv{x}{y} = - \frac{F_y}{F_x} $, $ \pdv{x}{z} = - \frac{F_z}{F_x}\quad 
-    \forall (y,z) \in D_0$
+  \item $ F(x(y,z),y,z)) = 0,  \quad \forall (y,z) \in  D_0 $
+  \item $ \pdv{x}{y} = - \frac{F_y}{F_x} $ και $ \pdv{x}{z} = - \frac{F_z}{F_x}, 
+    \quad \forall (y,z) \in D_0$
 \end{myitemize}
 
 \begin{rem}
@@ -817,7 +941,8 @@ $ D_0 \subseteq \mathbb{R}^{2} $ τέτοια ώστε:
   \begin{enumerate}[i)]
     \item $ F(0, \mathrm{e}, 2) = \mathrm{e}^{2} + 0\cdot 2 + 2^{2} - 
       \mathrm{e}^{2} - 4 = 0  $ 
-    \item \begin{tabular}{l}
+    \item 
+      \begin{tabular}{l}
         $ F_{x} = z \phantom{\ +2z- \mathrm{e}^{z}} $ \tikzmark{a} \\
         $ F_{y} = 2y $ \\
         $ F_{z} = x+2z- \mathrm{e}^{z} \tikzmark{b} $
@@ -826,7 +951,7 @@ $ D_0 \subseteq \mathbb{R}^{2} $ τέτοια ώστε:
     \item $ F_{z}(0, \mathrm{e},2) = 0+2\cdot 2- \mathrm{e}^{2} 
       = 4- \mathrm{e}^{2} \neq 0 $
   \end{enumerate}
-  Επομένως ικανοποιούνται οι προυποθέσεις του θεωρήματος Πεπλεγμένης συνάρτησης 
+  Επομένως ικανοποιούνται οι προϋποθέσεις του θεωρήματος Πεπλεγμένης συνάρτησης 
   και άρα υπάρχει μοναδική συνάρτηση $ z=z(x,y) $, για την οποία ισχύουν:
   \begin{myitemize}
     \item $ \inlineequation[eq:perplex1]{2=z(0, \mathrm{e})} $
@@ -860,10 +985,12 @@ $ D_0 \subseteq \mathbb{R}^{2} $ τέτοια ώστε:
       \mathrm{e}^{z})^{2}} = \frac{-z_{y}(x+2z+ \mathrm{e}^{z})+z(+2z_{y}+ 
     \mathrm{e}^{z} z_{y})}{(x+2z+ \mathrm{e}^{z})^{2}}  \\ 
   \end{align*} 
-  Για να υπολογίσουμε τις μερικές παραγώγους 2ης τάξης στο σημείο $ (0,e) $ το 
-  μόνο που απομένει είναι να αντικαταστήσουμε όπουμε $ x=0 $, $ y=e $, $ z=2 $ και 
-  όπου $ z_{x} = - \frac{2}{4-e^{2}} $ και $ z_{y} = - \frac{2e}{4-e^{2}} $
 \end{solution}
+
+Με αντικατάσταση, όπου $ (x,y,z)=(0, \mathrm{e}, 2) $ αλλά και όπου $ z_{x}$ και 
+$ z_{y} $ τις τιμές που μόλις βρήκαμε, υπολογίζουμε και τις τιμές των παραγώγων 2ης
+τάξης στο σημείο $ (0, \mathrm{e}) $.
+
 
 \chapter{Παράγωγος Σύνθετων Συναρτήσεων}
 
@@ -943,6 +1070,8 @@ $ D_0 \subseteq \mathbb{R}^{2} $ τέτοια ώστε:
     \pdv[2]{y}{u}{v} 
   \]
 }
+
+\enlargethispage{\baselineskip}
 
 \begin{rem}
   Οι τύποι~\eqref{eq:deriv1} και~\eqref{eq:deriv2} προέκυψαν αθροίζοντας κάθε φορά, 
