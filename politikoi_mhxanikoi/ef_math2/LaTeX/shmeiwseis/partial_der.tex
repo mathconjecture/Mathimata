@@ -6,7 +6,7 @@
 \usepackage[cmtip,all]{xy}
 \usepackage{silence}
 \WarningsOff[catoptions]
-\usepackage{exarrows}
+\usepackage{extarrows}
 
 \geometry{left=9mm,right=9mm,top=30.00mm,bottom=34.00mm,footskip=24.16mm,headsep=24.16mm}
 \everymath{\displaystyle}
@@ -172,13 +172,19 @@
 \end{dfn}
 
 \begin{dfn}[Τελεστής Laplace]
-  \[ \Delta \overset{\text{ή}}{=} \laplacian = \pdv[2]{}{x} + \pdv[2]{}{y}\]
+  \[ 
+    \Delta \overset{\text{ή}}{=} \laplacian = \pdv[2]{}{x} + \pdv[2]{}{y} 
+    \quad \text{ή} \quad 
+    \Delta \overset{\text{ή}}{=} \laplacian = \pdv[2]{}{x} + \pdv[2]{}{y} + 
+    \pdv[2]{}{z} 
+  \]
 \end{dfn}
 
 \begin{dfn}
   Έστω $ f(x,y,z) $ συνάρτηση. Τότε η πραγματική συνάρτηση 
   \[ 
-    \Delta f \overset{\text{ή}}{=} \laplacian f = \pdv{f}{x} + \pdv{f}{y} + \pdv{f}{z} 
+    \Delta f \overset{\text{ή}}{=} \laplacian f = \pdv[2]{f}{x} + \pdv[2]{f}{y} +
+    \pdv[2]{f}{z} 
   \]
   ονομάζεται \textcolor{Col1}{Λαπλασιανή} της συνάρτησης $ f(x,y,z) $.
 \end{dfn}
