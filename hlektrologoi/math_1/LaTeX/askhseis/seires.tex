@@ -2,7 +2,7 @@
 \input{definitions_ask.tex}
 
 
-\geometry{top=2cm}
+\geometry{top=1.6cm}
 \everymath{\displaystyle}
 \pagestyle{askhseis}
 
@@ -16,51 +16,156 @@
 \vspace{\baselineskip}
 
 \begin{enumerate}
-  \item Να εξεταστούν ως προς τη σύγκλιση οι παρακάτω σειρές: 
-    \begin{enumerate}[i)]
-      \item $ \sum_{n=1}^{\infty} \frac{1}{n(n+1)} $ \hfill Απ: συγκλίνει 
-      \item $ \sum_{n=1}^{\infty} \frac{1}{n^{2}+b^{2}}, \quad b \in \mathbb{R} $ 
-        \hfill Απ: συγκλίνει 
-      \item $ \sum_{n=1}^{\infty} \frac{n^{2}+1}{n} $ \hfill Απ: αποκλίνει 
-      \item $ \sum_{n=1}^{\infty} \frac{n^{2}+n+1}{n^{3}} $ \hfill Απ: αποκλίνει 
-      \item $ \sum_{n=1}^{\infty} \frac{\sin{(n^{3}+1)}}{2^{n}} $ \hfill Απ: συγκλίνει 
-      \item $ \sum_{n=1}^{\infty} \frac{1}{\sqrt{n(n+1)}} $ \hfill Απ: αποκλίνει 
-      \item $ \sum_{n=1}^{\infty} \frac{\sqrt{n}}{n^{3}+1} $ \hfill Απ: συγκλίνει 
-      \item $ \sum_{n=1}^{\infty} \frac{\sqrt{n}}{n+5 \sqrt{n}} $ \hfill Απ: αποκλίνει 
-      \item $ \sum_{n=1}^{\infty} \frac{\sin^{4}{n}}{1+ \sqrt{n^{5}}} $ 
-        \hfill Απ: συγκλίνει 
-      \item $ \sum_{n=1}^{\infty} \frac{10n+2020}{n^{2}+1} $ \hfill Απ: αποκλίνει 
-    \end{enumerate}
+  \item Να εξεταστούν ως προς τη σύγκλιση, με το κριτήριο σύγκρισης, οι παρακάτω σειρές: 
 
-  \item Να εξεταστούν ως προς τη σύγκλιση οι παρακάτω σειρές: 
+    \twocolumnside{
+      \begin{enumerate}[i)]
+        \item $ \sum_{n=1}^{\infty} \frac{1}{n^{2}+a^{2}}, \; a \in \mathbb{R} $ 
+          \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{n^{2}+n+1}{n^{3}} $ \hfill Απ: αποκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{1}{2^{n}} 
+          \abs{\sin{\left(\frac{n^{2}+1}{n+2}\right)}} $ \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{n^{2}+1}{n} $ \hfill Απ: αποκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{1}{\sqrt{n(n+1)}} $ \hfill Απ: αποκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{\sqrt{n}}{n^{3}+1} $ \hfill Απ: συγκλίνει 
+      \end{enumerate}
+      }{
+      \begin{enumerate}[i),start=7]
+        \item $ \sum_{n=1}^{\infty} \frac{\sqrt{n}}{n+5 \sqrt{n}} $ \hfill Απ: αποκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{1}{n} \left(\frac{2}{5}\right)^{n} $ 
+          \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{3^{n}+5}{4^{n}+n^{2}} $ \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{n!}{2^{n}+1} $ \hfill Απ: αποκλίνει
+        \item $ \sum_{n=1}^{\infty} \frac{\sin^{4}{n}}{1+ \sqrt{n^{5}}} $ 
+          \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{10n+2021}{n^{2}+1} $ \hfill Απ: αποκλίνει
+      \end{enumerate}
+    }
+
+  \item Να εξεταστούν, με το κριτήριο της Ρίζας, ως προς τη σύγκλιση οι παρακάτω σειρές: 
+
+    \twocolumnside{
+      \begin{enumerate}[i)]
+        \item $ \sum_{n=1}^{\infty} \frac{1}{(\ln{n})^{n}} $ \hfill Απ: συγκλίνει
+        \item $ \sum_{n=1}^{\infty} \left(\frac{3n}{n+1}\right)^{n} $ 
+          \hfill Απ: αποκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{\mathrm{e}^{n}}{5n} $ \hfill Απ: αποκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{2^{n}\cos{(2n+1)}}{n \mathrm{e}^{n+1}} $ 
+          \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} \left(\sqrt[n]{n} -1\right)^{n} $ 
+          \hfill Απ: συγκλίνει 
+      \end{enumerate}
+      }{
+      \begin{enumerate}[i),start=6]
+        \item $ \sum_{n=1}^{\infty} \left(\frac{n+1}{n}\right)^{n^{2}} \frac{1}{3^{n}} $
+          \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{n}{2^{n}} 
+          \cos^{2}{\left(\frac{n \pi}{3}\right)} $ \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} \left(\arctan(\frac{1}{n})\right)^{n} $ 
+          \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} \left(1+ \frac{1}{4n}\right)^{-n^{2}} $ 
+          \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} n^{11} \mathrm{e}^{-n^{2}} $ \hfill Απ: συγκλίνει 
+      \end{enumerate}
+    }
+
+  \item Να εξεταστούν, με το κριτήριο του Λόγου, ως προς τη σύγκλιση οι παρακάτω σειρές: 
+
+    \twocolumnside{
+      \begin{enumerate}[i)]
+        \item $ \sum_{n=1}^{\infty} \frac{a^{n}}{n!}, \; a>0 $ \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{n!}{3^{n}} $ \hfill Απ: αποκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{2^{n}}{n^{2}} $ \hfill Απ: αποκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{2n-1}{(\sqrt{3})^{n}} $ \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{6^{n}}{2n+7} $ \hfill Απ: αποκλίνει 
+      \end{enumerate}
+      }{
+      \begin{enumerate}[i),start=6]
+        \item $ \sum_{n=1}^{\infty} \frac{3^{n}+4^{n}}{4^{n}+5^{n}} $ \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{3^{n}n!}{n^{n}} $ \hfill Απ: αποκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{(n!)^{2}}{(2n)!} $ \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} \frac{n!}{1\cdot 3\cdot 5 \cdots (2n-1)} $ 
+          \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} 2^{n} \sin{\left(\frac{\pi}{3^{n}}\right)} $ 
+          \hfill Απ: συγκλίνει 
+      \end{enumerate}
+    }
+
+  \item Να εξεταστούν, με το κριτήριο Leibniz, ως προς τη σύγκλιση οι παρακάτω σειρές: 
+
+    \twocolumnside{
+      \begin{enumerate}[i)]
+        \item $ \sum_{n=1}^{\infty} (-1)^{n+1} \frac{\ln{n}}{n} $ \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} (-1)^{n-1} \frac{1}{\sqrt{n}} $ \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} (-1)^{n})
+          \left(1- \cos{\left(\frac{1}{n}\right)}\right) $ \hfill Απ: συγκλίνει 
+      \end{enumerate}
+      }{
+      \begin{enumerate}[i)]
+        \item $ \sum_{n=1}^{\infty} \frac{\cos{(n \pi)}}{\sqrt{n}} $ \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} \left(\frac{1}{4^{n}} + \frac{(-1)^{n+1}}{n}\right) $ 
+          \hfill Απ: συγκλίνει 
+        \item $ \sum_{n=1}^{\infty} \left(\sin{(n \pi)+ \frac{\pi}{2n}}\right) $ 
+          \hfill Απ: συγκλίνει 
+      \end{enumerate}
+    }
+
+  \item Να εξεταστούν, ως προς την απόλυτη σύγκλιση, οι παρακάτω σειρές: 
+
     \begin{enumerate}[i)]
-      \item $ \sum_{n=1}^{\infty} (-1)^{n-1} \frac{\ln{n}}{n} $ \hfill Απ: συγκλίνει 
-      \item $ \sum_{n=1}^{\infty} (-1)^{n-1} \frac{1}{\sqrt{n}} $ \hfill Απ: συγκλίνει 
-      \item $ \sum_{n=1}^{\infty} \left(\frac{1}{4^{n}} + \frac{(-1)^{-1}}{n}\right) $ 
+      \item $ \sum_{n=1}^{\infty} (1^{n}) \frac{n \mathrm{e}}{n!} $ 
+        \hfill Απ: συκλίνει
+      \item $ \sum_{n=1}^{\infty} \frac{\sin{(n^{3}+1)}}{2^{n}} $ \hfill Απ: συγκλίνει 
+      \item $ \sum_{n=1}^{\infty} (-1)^{n+1} \frac{\cos{n} + \sin{n}}{5^{n}} $ 
+        \hfill Απ: συγκλίνει 
+      \item $ \sum_{n=1}^{\infty} (-1)^{n+1} \frac{n^{3}n!}{(3n)!} $ 
         \hfill Απ: συγκλίνει 
       \item $ \sum_{n=1}^{\infty} (-1)^{n-1} \frac{n^{2}}{n^{4}+2} $ 
         \hfill Απ: συγκλίνει 
-      \item $ \sum_{n=1}^{\infty} (-1)^{n-1} \frac{\cos{n} + \sin{3n}}{5^{n}} $ 
-        \hfill Απ: συγκλίνει
     \end{enumerate}
 \end{enumerate}
 
 \section*{Χρήσιμες Ανισότητες}
 
-  \twocolumnsides{
-\begin{myitemize}
-  \item $|\sin x|\leq 1, \quad \forall x\in \mathbb{R}$
-  \item $|\cos x|\leq 1, \quad \forall x\in \mathbb{R}$
-  \item $|\sin x|\leq |x|, \quad \forall x\in \mathbb{R}$
-\end{myitemize}
+\twocolumnsides{
+  \begin{myitemize}
+    \item $|\sin x|\leq 1, \quad \forall x\in \mathbb{R}$
+    \item $|\cos x|\leq 1, \quad \forall x\in \mathbb{R}$
+    \item $|\sin x|\leq |x|, \quad \forall x\in \mathbb{R}$
+  \end{myitemize}
   }{
-\begin{myitemize}
-  \item $ \abs{x+y} \leq \abs{x} + \abs{y}, \quad \forall x,y \in \mathbb{R} $
-  \item $n!\leq n^n, \quad \forall n\in \mathbb{N}$
-  \item $n!\geq 2^{n-1}, \quad \forall n\in \mathbb{N}$
-\end{myitemize}
+  \begin{myitemize}
+    \item $ \abs{x+y} \leq \abs{x} + \abs{y}, \quad \forall x,y \in \mathbb{R} $
+    \item $n!\leq n^n, \quad \forall n\in \mathbb{N}$
+    \item $n!\geq 2^{n-1}, \quad \forall n\in \mathbb{N}$
+  \end{myitemize}
 }
 
+
+\section*{Χρήσιμα Όρια ακολουθιών}
+
+\twocolumnside{
+  \begin{myitemize}
+    \item $ \lim_{n\to \infty} \frac{1}{n^{a}} = 0, \quad  a > 0 $ 
+    \item $ \lim_{n\to \infty} a^{n} =
+      \begin{cases} 
+        0, &  \abs{a} < 1 \\
+        +\infty, & a>1 
+      \end{cases}$
+    \item $ \lim_{n\to \infty} \sqrt[n]{a} = 1, \quad  a>0 $
+    \item $ \lim_{n\to \infty} \sqrt[n]{n} = 1 $
+    \item $ \lim_{n\to \infty} \left(1 + \frac{1}{n}\right)^{n} = e $
+  \end{myitemize}
+  }{
+  \begin{myitemize}
+    \item $ \lim_{n\to \infty} \left(1 + \frac{a}{n}\right)^{n} = e^{a}, 
+      \quad a \in \mathbb{R} \setminus \{0\} $
+    \item $ \lim_{n\to \infty} \frac{a^{n}}{n!} = 0, \quad  a \in \mathbb{R} $
+    \item $ \lim_{n\to \infty} \frac{n!}{n^{n}} = 0 $
+    \item $ \lim_{n\to \infty} \sqrt[n]{n!} = + \infty $
+    \item $ \lim_{n\to \infty} \frac{\ln n}{n} = 0 $
+  \end{myitemize}
+}
 
 
 \end{document}

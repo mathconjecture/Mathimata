@@ -26,6 +26,27 @@
       \item $ y'=-2xy+2x $, \quad $ y(0)=2 $ \hfill Απ: $ y=1+e^{-x^{2}} $  
     \end{enumerate}
 
+  \item {\bfseries Να λυθούν τα παρακάτω Π.Α.Τ. (Προβλήματα Αρχικών Τιμών)}
+    \begin{enumerate}
+      \item $y'+y=g(x)$, \quad $ y(0)=3 $, όπου 
+        $g(x)=\begin{cases}1, & 0\leq x\leq 1 \\ 0, & x>1\end{cases}$ 
+
+        \hfill Απ: $y(x)=
+        \begin{cases} 
+          2e^{-x}+1, & 0\leq x\leq 1 \\ 
+          (2+e)e^{-x}, & x>1
+        \end{cases}$
+
+      \item $y'+2y=g(x),\quad y(0)=0$, όπου 
+        $g(x)=\begin{cases}3, & 0\leq x<1 \\ 1, & x\geq 1 \end{cases}$
+
+        \hfill  Απ: $y(x)=
+        \begin{cases}
+          -\frac{3}{2}e^{-2x}+\frac{3}{2}, & 0\leq x<1 \\
+          \left(e^2-\frac{3}{2}\right)e^{-2x}+\frac{1}{2}, &  x\geq 1
+        \end{cases}$
+    \end{enumerate}
+
   \item {\bfseries Να λυθούν οι παρακάτω σδε: (Bernoulli)}
     \begin{enumerate}[i)]
       \item $y'=-xy+xy^2$\hfill Απ: $y=\frac{1}{-e^{\frac{x^2}{2}}+1}$
@@ -71,7 +92,7 @@
       \item $ (3x^{2}+2y^{2})dx+(4xy+6y^{2})dy=0  $ 
         \hfill Απ: $ x^{3}+2xy^{2}+2y^{3}=c $ 
       \item $(3x^2+6xy^2)dx+(6x^2y+4y^3)dy=0$\hfill Απ: $x^3+3x^2y^2+y^4=c$
-      \item $ (\cos{x} + \ln{y})dx + \left(\frac{x}{y} + e^{y}\right)dy=0 $ 
+      \item $ (\cos{x} + \ln{y})dx + \left(\frac{x}{y} + e^{x}\right)dy=0 $ 
         \hfill Απ: $ \sin{x} + x \ln{y} + e^{y}=c $ 
       \item $ y'=- \frac{x^{3}+3xy^{2}}{3x^{2}y+y^{3}} $ 
         \hfill Απ: $ \frac{x^{4}}{4}+\frac{3}{2} x^{2}y^{2}+\frac{y^{4}}{4} = c $ 
@@ -83,6 +104,8 @@
         % \item $ x y' = 2x \mathrm{e}^{x} -y+6x^{2} $ 
         % \hfill Απ: $ 2 \mathrm{e}^{x} - 2x \mathrm{e}^{x} - 2x^{3} + xy=c $ 
     \end{enumerate}
+
+    \pagebreak
 
   \item {\bfseries Να λυθούν οι παρακάτω σδε με τη βοήθεια κατάλληλων ολοκληρωτικών
     παραγόντων.}
@@ -128,25 +151,7 @@
         x^{2}y^{2}-3x)dy=0, \quad \mu (y) = \frac{1}{y^{4}} $ 
         \hfill Απ: $ x^{2}e^{y}+ \frac{x^{2}}{y} + \frac{x}{y^{3}} =c $ 
     \end{enumerate}
-
-  \item {\bfseries Αφού βρείτε τρεις ολοκληρωτικούς παράγοντες για την 
-    παρακάτω διαφορική εξίσωση, να τη λύσετε χρησιμοποιώντας έναν από αυτούς.}
-    \[
-      3x^{2}dy+2xydx=0 
-    \] 
-
-    \hfill Απ:  $ \mu (x) = x^{-\frac{4}{3}}, \; \mu (y) = y^{2}, \; \mu (xy) =
-    \frac{1}{(xy)^{4}}, \; y=cx^{-2/3} $
-
-  \item \textbf{Να λυθούν οι παρακάτω σδε (Clairaut).} 
-    \begin{enumerate}[i)]
-      \item $ y = xy' + \frac{1}{y'} $ \hfill Απ: $ y=cx+ \frac{1}{c}, \; x =
-        \frac{x^{2}}{4} $ 
-      \item $ y = xy' + y' - (y')^{2} $ \hfill Απ: $ y=cx+c(1-c), \; y=
-        \frac{(x+1)^{2}}{4} $ 
-      \item $ y=xy'- \mathrm{e}^{2y'} $ \hfill Απ: $ y=cx- \mathrm{e}^{2c}, \; y =
-        \frac{x}{2} (\ln{\frac{x}{2}} -1), \; x>0 $ 
-    \end{enumerate}
 \end{enumerate}
 
 \end{document}
+

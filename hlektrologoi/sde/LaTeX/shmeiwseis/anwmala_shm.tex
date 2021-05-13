@@ -1,0 +1,123 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+
+\everymath{\displaystyle}
+\thispagestyle{empty}
+
+
+\begin{document}
+
+
+
+% \chapter*{Ανώμαλα Σημεία}
+
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col1}{Ανώμαλα Σημεία}}
+\end{center}
+
+\vspace{\baselineskip} 
+
+Θεωρούμε τη συνάρτηση $f(z)$ που είναι ορισμένη και \textbf{αναλυτική} στο δακτύλιο 
+$0<\abs{z-z_0}<r$, εκτός ίσως από το σημείο $z_0$. 
+
+
+\section*{Απαλείψιμα}
+
+\begin{dfn}
+  Τα σημεία $z\in \mathbb{C}$ στα οποία η $f(z)$ δεν είναι αναλυτική ονομάζονται 
+  \textcolor{Col1}{ανώμαλα σημεία}.
+\end{dfn}
+
+\begin{dfn} 
+  Ένα σημείο $z_0$ καλείται \textcolor{Col1}{απαλείψιμο} ανώμαλο σημείο της $f(z)$, 
+  αν υπάρχει το $\lim\limits_{\smash{z\to z_0}}f(z)$ και είναι πεπερασμένο, 
+  δηλαδή $\lim\limits_{z\to z_0}f(z)=a\in \mathbb{C}$ (ουσιαστικά, τότε η $f$
+  μπορεί να οριστεί στο $z_{0}$, ώστε να είναι αναλυτική σε αυτό).
+
+  \begin{myitemize}
+    \item Ισοδύναμα το ανάπτυγμα Laurent της $f(z)$ \textcolor{Col2}{γύρω από το $z_0$} 
+      δεν περιέχει καθόλου αρνητικές δυνάμεις και επομένως ταυτίζεται με το ανάπτυγμα 
+      Taylor.
+  \end{myitemize} 
+\end{dfn}
+
+\begin{example}
+  Αν $f(z)=\frac{\sin z}{z}$, τότε το $z=0$ είναι απαλείψιμο ανώμαλο σημείο, γιατί:
+  \[
+    \lim\limits_{z\to 0}\frac{\sin z}{z} 
+    \overset{(\frac{0}{0})}{\underset{\text{L.H}}{=}} 
+    \lim\limits_ {z\to 0}\frac{\cos z}{1}=1\in \mathbb{C}.
+  \]
+\end{example}
+
+\section*{Πόλοι, τάξης \ensuremath{ m }}
+
+\begin{dfn} 
+  Αν $\lim\limits_{z\to z_0}f(z)=\infty$ τότε το σημείο $z_0$ καλείται 
+  \textcolor{Col1}{πόλος} της $f(z)$. 
+\end{dfn}
+
+\begin{dfn}
+  Ένα ανώμαλο σημείο $z_0$ λέγεται \textcolor{Col1}{πόλος τάξης} 
+  $\textcolor{Col1}{m}$ αν υπάρχει θετικός ακέραιος αριθμός $m$ τέτοιος ώστε 
+  \[
+    \lim\limits_{z\to z_0}\left[(z-z_0)^mf(z)\right]=a \in \mathbb{C}^{*}
+  \]
+  \begin{myitemize}
+    \item Ισοδύναμα το ανάπτυγμα Laurent της $f(z)$ \textcolor{Col2}{γύρω απ το $z_0$} 
+      περιέχει πεπερασμένο πλήθος αρνητικών δυνάμεων ($m$--το πλήθος αρν.\ δυνάμεις). 
+  \end{myitemize}
+\end{dfn}
+
+\begin{rem}
+  Οι πόλοι μιας συνάρτησης $ f(z) $ ανήκουν σε δύο κατηγορίες:
+  \begin{myitemize}
+    \item Αν $ f(z) = \frac{h(z)}{(z-z_{0})^{m}}$, $m \geq 1 $, και $ h(z_{0}) \neq 0 $ 
+      τότε $ z_{0} $ είναι πόλος τάξης $ m $ της συνάρτησης $f(z)$.
+    \item Αν $ f(z) = \frac{h(z)}{g(z)}, \; h(z_{0}) \neq 0 $ και $ z_{0} $ ρίζα της 
+      $ g(z) = 0 $ πολλαπλότητας $ m $, τότε $ z_{0} $ είναι πόλος τάξης $ m
+      $ της συνάρτησης $f(z)$.
+  \end{myitemize}
+\end{rem}
+
+\begin{rem}
+  \textbf{Θυμάμαι}, ότι ένα σημείο $ z_{0} $ είναι ρίζα \textcolor{Col1}{πολλαπλότητας 
+  $ m $} της συνάρτησης $ g(z) $ αν και μόνον αν 
+  \[
+    g(z_{0}) = g'(z_{0}) = g''(z_{0}) = \cdots = g^{(m-1)}(z_{0}) = 0 \quad \text{και} 
+    \quad g^{(m)}(z_{0}) \neq 0 
+  \] 
+\end{rem}
+
+\begin{example}
+  Αν $f(z)=\frac{2z+1}{(z-i)(z+2)^2(z-1)^3}$, τότε το $z=i$ είναι πόλος πρώτης τάξης, 
+  γιατί: 
+  \[
+    \lim\limits_{z\to i}f(z)=\lim\limits_{z\to i}\frac{2z+1}{(z+2)^2(z-1)^3}\neq 0.
+  \]
+
+  Ομοίως, τα σημεία $z=-2$ και $z=1$ αντιστοίχως είναι πόλοι δεύτερης και τρίτης τάξης.
+\end{example}
+
+\section*{Ουσιώδη}
+
+\begin{dfn}
+  Αν δεν υπάρχει το $\lim\limits_{z\to z_0}f(z)$, τότε το σημείο $z_0$ καλείται 
+  \textbf{ουσιώδες} ανώμαλο σημείο. 
+
+  \begin{myitemize}
+    \item Ισοδύναμα το ανάπτυγμα Laurent της $f(z)$ \textcolor{Col2}{γύρω απ το $z_0$} 
+      περιέχει άπειρο πλήθος αρνητικών δυνάμεων.
+  \end{myitemize}
+\end{dfn}
+
+\begin{rem}
+  Ουσιαστικά, αν το σημείο $z_0$ δεν είναι απαλείψιμο, ούτε πόλος της 
+  $f(z)$ τότε είναι ουσιώδες ανώμαλο σημείο.
+\end{rem}
+
+
+
+\end{document}
