@@ -1,0 +1,163 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\geometry{top=2cm}
+\pagestyle{askhseis}
+\everymath{\displaystyle}
+
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large\bf \textcolor{Col1}{Ασκήσεις Διπλό Ολοκλήρωμα}}
+\end{center}
+
+
+\section*{Ορθογώνια Χωρία}
+
+\begin{enumerate}
+  \item Να υπολογιστούν τα παρακάτω διπλά ολοκληρώματα (ορθογώνια χωρία).
+    \begin{enumerate}[i)]
+      \item $\int\limits_1^2\!\!\!\int\limits_0^ 3xy\,dxdy$ 
+        \hfill Απ: ${27}/{4}$ %spandagos p. 54 ex. 1
+      \item $\iint\limits_{R}y(x^3-12x)\,dxdy,\quad R=[-2,1]\times[0,1]$ 
+        \hfill Απ: ${57}/{8}$
+      \item $ \iint\limits_{R}y\sin(xy)\,dxdy, \quad R=[1,2]\times[0,\pi] $ 
+        \hfill Απ: $ 0 $ 
+    \end{enumerate}
+
+    %Thomas example
+  \item Να υπολογιστεί ο \textbf{όγκος} της στερεάς περιοχής μεταξύ της επιφάνειας 
+    $ z = 100 - 6x^{2}y $ και της ορθογώνιας περιοχής $D$ με 
+    $ 0 \leq x \leq 2 $ και $ -1 \leq y \leq 1 $. \hfill Απ: $400$ 
+
+    %Thomas 15.2 ex 24
+  \item Να υπολογιστεί ο \textbf{όγκος} της στερεάς περιοχής μεταξύ της 
+    επιφάνειας $ z= 16-x^{2}-y^{2} $ και της τετράγωνης περιοχής $D$ με 
+    $ 0 \leq x \leq 2 $ και $ 0 \leq y \leq 2 $. \hfill Απ: $160/3$ 
+
+  \item Να βρείτε τη \textbf{μέση τιμή} της συνάρτησης $ f(x,y)=2x+3y $, στο 
+    ορθογώνιο χωρίο $D= [1,4] \times [0,5]$.
+    \hfill Απ: $ {375}/{30} $ 
+
+    %%Thomas 15.2 ex 27
+    %\item Να υπολογιστεί ο όγκος της στερεάς περιοχής μεταξύ της επιφάνειας 
+    %$ z=2 \sin{x} \cos{y} $ και της ορθογώνιας περιοχής $T$ με 
+    %$ 0 \leq x \leq \pi /2 $ και $ 0 \leq y \leq \pi /4 $. 
+
+
+    \section*{Γενικά Χωρία}
+
+  \item Να υπολογιστούν τα παρακάτω διπλά ολοκληρώματα (γενικά χωρία).
+    \begin{enumerate}[i)]
+      \item $\int\limits_0^1\!\!\int\limits_0^{x^2}e^{\frac{y}{x}}\,dydx$
+        \hfill Απ: ${1}/{2}$ %spandagos p.105 ask.8
+      \item $\iint\limits_{D}xy\,dxdy,\quad D=
+        \left\{(x,y)\in\mathbb{R}^2\mid 0\leq x\leq 2,\; 0\leq y\leq \sqrt{x}\,\right\}$ 
+        \hfill Απ: ${4}/{3}$
+      \item $\iint\limits_{D}(x-1)\,dxdy,\quad D$ περικλείεται από τις καμπύλες 
+        $y=x$ και $y=x^3$. %spandagos p.63 ex 
+        \hfill Απ: $-{1}/{2}$
+      \item $ \iint\limits_{D} y\,dxdy, \quad D $ περικλείεται από τις παραβολές 
+        $ y^2=4x $ και $ x^{2}=4y $ 
+        \hfill Απ: $ {48}/{5} $ %spandagos p.109 ask.14
+      \item $ \iint\limits_{D} (x^{2}+y^{2})\,dxdy, \quad D $ το τρίγωνο με κορυφές τα 
+        σημεία $ (0,0) $, $ (1,0) $, $ (0,1) $ 
+        \hfill Απ: $1/6$  %thomas 15.2 ex.26
+      \item $ \iint\limits_{D} xy\,dxdy, \quad D $ περικλείεται από τις καμπύλες 
+        $ x=y^{2} $, $ x=4-y^{2} $ και $ y=0 $, 1ο τεταρτ.
+        \hfill Απ: $4$ %spandagos p.135 ask.57
+      \item $ \iint\limits_{D} xy\,dxdy, \quad D $ περικλείεται από τις καμπύλες 
+        $y=x$, $y=2x$ και $x+y=2$.
+        \hfill Απ: $ 13/81 $ %Thomas 15.2 ex.56
+    \end{enumerate}
+
+  \item Να υπολογιστούν τα παρακάτω διπλά ολοκληρώματα, επιλέγοντας την
+    \textbf{κατάλληλη σειρά ολοκλήρωσης}.
+    \begin{enumerate}[i)]
+      \item $\iint\limits_{D}\frac{\sin x}{x}\,dxdy,\quad D$ περικλείεται από 
+        τις ευθείες $y=x, y=0$ και $x=\pi$.  
+        \hfill Απ: $2$
+      \item $ \int _{0}^{2} \Biggl[\int_{0}^{\frac{x^2}{2}}
+        \frac{x}{\sqrt{1+x^{2}+y^{2}}}\,dy\Biggr] \,{dx} $
+        \hfill Απ: $-1+\frac{5}{4}\ln 5$ %spandagos p.64 ex.
+    \end{enumerate}
+
+    \section*{Εμβαδό - Όγκος}
+
+  \item Να βρείτε το \textbf{εμβαδόν} του χωρίου $D$ που περικλείεται από τις καμπύλες: 
+    \begin{enumerate}[i)]
+      \item $y=x$ και $y=x^2$ στο $1$ο τεταρτημόριο. \hfill Απ: ${1}/{6}$
+      \item $x+y=2$ και $y=x^2$ \hfill Απ: ${9}/{2}$
+      \item $y=3-2x^2$ και $y=x^4$ \hfill Απ: ${64}/{15}$
+      \item $x={1}/{4}$ και $y^2=4x$ \hfill Απ: ${1}/{3}$ %spand p.168 ask.95
+      \item $y^2=x$ και $y=x^2$ \hfill Απ: ${1}/{3}$ %spandagos p.170 ask.100
+    \end{enumerate}
+
+    %thomas 15.2 ex.57
+  \item Να υπολογιστεί ο \textbf{όγκος} της στερεάς περιοχής μεταξύ της επιφάνειας 
+    $ z=x^{2}+y^{2} $ και της τριγωνίκης περιοχής $T$ του επιπέδου που περικλείεται από 
+    τις καμπύλες $ y= x $, $x=0$ και $ x+y=2 $.
+    \hfill Απ: $ 4/3 $  
+
+    %thomas 15.2 ex.58
+  \item Να υπολογιστεί ο \textbf{όγκος} της στερεάς περιοχής μεταξύ της επιφάνειας 
+    $ z=x^{2} $ και της περιοχής $T$ του επιπέδου που περικλείεται από 
+    τις καμπύλες $ y= 2-x^{2} $  και $y=x$.
+    \hfill Απ: $ 63/20 $ 
+
+  % \item Να υπολογιστεί ο \textbf{όγκος} του τετραέδρου που περικλείεται από το 
+  %   επίπεδο $x+y+z=1$ και τα επίπεδα των συντεταγμένων.  
+  %   \hfill Απ: ${1}/{6}$ %spandagos p.80 ex.2
+\end{enumerate}
+
+\vspace{\baselineskip}
+
+\begin{center}
+  \minibox{\large\bf \textcolor{Col1}{Υποδείξεις}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Ο τύπος του \textbf{εμβαδού} επίπεδου χωρίου $D$ είναι: 
+    \[
+      E_{D}=\iint\limits_{D}\,dxdy
+    \]
+
+  \item Ο τύπος του \textbf{όγκου} του στερεού που περικλείεται \textbf{κάτω} 
+    από τη γραφική παράσταση επιφάνειας $z=f(x,y)$ και \textbf{πάνω} από ένα 
+    χωρίο $D$ του επιπέδου $Oxy$ είναι: 
+    \[
+      V=\iint\limits_{D}f(x,y)\,dxdy
+    \]
+
+  \item Η \textbf{μέση τιμή} μιας συνάρτησης $ f(x,y) $ σε ένα κλειστό και 
+    φραγμένο χωρίο $D\subseteq \mathbb{R}^{2}$ δίνεται από τον τύπο 
+    \[
+      \bar{f}(x, y) = \frac{1}{E_{D}} \iint_{D}f(x,y)\,dxdy
+    \]
+    όπου $ E_{D} $ είναι το εμβαδό του $D$.
+
+  \item Η εξίσωση \textbf{ευθείας} που περνάει από τα σημεία $ A(x_{A},y_{A},z_{A}) $ 
+    και $ B(x_{B},y_{B},z_{B}) $ είναι 
+    \[
+      \varepsilon : y - y_{A} = \frac{y_{B}-y_{A}}{x_{B}-x_{A}} (x-x_{A})
+    \]
+
+  \item Οι εξισώσεις των \textbf{συντεταγμένων} επιπέδων είναι:
+    \begin{itemize}
+      \item $Oxy: \, z=0$
+      \item $Oxz: \, y=0$
+      \item $Oyz: \, x=0$
+    \end{itemize}
+\end{enumerate}
+
+
+
+
+
+\end{document}
+
+
