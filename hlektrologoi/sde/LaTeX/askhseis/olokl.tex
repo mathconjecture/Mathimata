@@ -2,79 +2,88 @@
 \input{definitions.tex}
 
 
+\pagestyle{askhseis}
 \everymath{\displaystyle}
+% \geometry{top=2cm}
 
 \begin{document}
 
 \begin{center}
-\fbox{\large\bfseries Ασκησεις Ολοκληρωματα }
+  \minibox{\large\bfseries \textcolor{Col1}{Ασκήσεις Ολοκληρώματα}}
 \end{center}
 
 \vspace{\baselineskip} 
 
 \begin{enumerate}
 
-\item Να υπολογιστουν τα παρακατω ολοκληρωματα.
+  \item Να υπολογιστούν τα παρακάτω ολοκληρώματα.
 
-\begin{enumerate}[i)]
+    \begin{enumerate}[i)]
+      % spand ex 8 p.151
+      \item $ \int \limits_c\frac{e^{z}}{z-2} \,{dz} $, \quad όπου 
+        \begin{enumerate*}[i),itemjoin=\hspace{\baselineskip}]
+          \item $ c: \abs{z} = 3 $
+          \item $ c: \abs{z} = 1 $. 
+        \end{enumerate*}
+        \hfill Απ: 
+        \begin{enumerate*}[i),itemjoin=\hspace{\baselineskip}]
+          \item $ 2 \pi i e^{2} $ 
+          \item $0$ 
+        \end{enumerate*}
+        % spand ex 8 p.278
+      \item $ \int \limits_{c}\frac{1}{z^{3}(z+4)} \,{dz} $, \quad όπου $c:\abs{z}=2 $ 
+        \hfill Απ: $ \frac{2 \pi i}{4^{3}} $  
+        % spand ex 1 p.145
+      \item $\int\limits_c\frac{5z^2-2}{z(e^z-1)}\,dz$, \quad όπου $c:\abs{z}=2$ 
+        \hfill Απ: $2\pi i$
+        % spand ex 4 p.254 
+      \item $\int\limits_c\tan z\,dz$, \quad όπου $c:\abs{z}=2$ \hfill Απ: $-4\pi i$
+        % χρειάζεται να έχω πει ολοκληρωτικό τύπο Cauchy αλλιως παραγωγίσεις δυσκολες
+        % \item $\int\limits_c\frac{2z-3}{z(z-1)^2(z^2+4)}\,dz$, \quad οπου $c:
+        % \abs{z}=3$   \hfill Απ: 0
+    \end{enumerate}
 
-\item $\int\limits_c\frac{2z-3}{z(z-1)^2(z^2+4)}\,dz$, οπου $c:\abs{z}=3$ \hfill Απ: 0
-\item $\int\limits_c\frac{2z+4}{(z-\frac{1}{2})(z-1)(z-2)}\,dz$, οπου $c:\abs{z}=\frac{3}{2}$ \hfill Απ: $2\pi i\Bigl(\frac{20}{3}-12\Bigr)$
-\item $\int\limits_c\frac{\sinh z}{z^3}\,dz$, οπου $c:\abs{z}=1$ \hfill Απ: $0$
-\item $\int\limits_c\frac{5z^2-2}{z(e^z-1)}\,dz$, οπου $c:\abs{z}=2$ \hfill Απ: $2\pi i$
-\end{enumerate}
+  \item Να υπολογιστούν τα παρακάτω ολοκληρώματα.
 
-\item Να υπολογιστουν τα παρακατω ολοκληρωματα:
+    \begin{enumerate}[i)]
+      % spand ex 1 p.253
+      \item $\int\limits_c\sin \frac{1}{z}\,dz$, \quad όπου $c:\abs{z}=2$ 
+        % spand ex 3 p.254
+        \hfill Απ: $2\pi i$
+      \item $\int\limits_c\frac{\sinh z}{z^3}\,dz$, \quad όπου $c:\abs{z}=1$ 
+        \hfill Απ: $0$
+        % spand ex 3 p.254 (το 0 είναι ομαλό)
+      \item $\int\limits_c\frac{e^z-1}{z^2+z}\,dz$, \quad όπου $c:\abs{z}=4$ 
+        \hfill Απ: $2\pi i(1-e^{-1})$
+        % spand ex 20 p.289 
+      \item $ \int \limits_{c} \frac{\sin{z}}{z^{4}} \,{dz} $, \quad όπου $ \abs{z}
+        =1 $ \hfill Απ: $ - \frac{\pi i}{3} $ 
+      \item $ \int \limits_{c} \frac{\sin{(\pi z)}}{(z^{2}-1)^{2}} \,{dz} $, \quad 
+        όπου $ \abs{z-1} = 1 $
+        \hfill Απ: $ - \frac{\pi ^{2}}{2} i $  
+    \end{enumerate}
 
-\begin{enumerate}[i)]
+  \item Να υπολογιστούν τα παρακάτω ολοκληρώματα.
 
-\item $\int\limits_c\sin \frac{1}{z}\,dz$, οπου $c:\abs{z}=2$ \hfill Απ: $2\pi i$
+    \begin{enumerate}[i)]
+      \item $\int\limits_0^{2\pi}\frac{1}{2+\cos x}\,dx$ \hfill Απ:$\frac{1}{2\sqrt{3}}$
+      \item $\int\limits_0^{2\pi}\frac{1}{(5-\sin x)^2}\,dx$ \hfill Απ: $\frac{5}{32}\pi$
+      \item $\int\limits_0^{2\pi}\frac{\cos 3x}{5-4\cos x}\,dx$ 
+        \hfill Απ: $\frac{\pi}{12}$
+      \item $\int\limits_0^{2\pi}\frac{1}{3-2\cos x+\sin x}\,dx$ \hfill Απ: $\pi$
+      % \item $\int\limits_0^{2\pi}\frac{1}{1-2a\cos x+a^2}\,dx$ 
+      %   \hfill Απ: \begin{tabular}{c}$\abs{a}<1\Rightarrow I=\frac{2\pi}{1-a^2}$ \\ 
+      %   $\abs{a}>1\Rightarrow I=\frac{2\pi}{a^2-1}$\end{tabular}
+    \end{enumerate}
 
-\item $\int\limits_c z^ne^{\frac{2}{z}}\,dz$, οπου $n\in\mathbb{N}^*$ και $c:\abs{z}=1$ \hfill Απ: $2\pi i (\frac{2^{n+1}}{(n+1)!})$
+  \item Να υπολογιστούν τα παρακάτω ολοκληρώματα.
 
-\item $\oint\limits_c\frac{1}{z^4+1}\,dz$, οπου:
-
-$c$ ειναι η κλειστη καμπυλη που αποτελειται απο το πανω ημικυκλιο με κεντρο το $0$ και ακτινα $2$ και απο τη διαμετρο του, που βρισκεται στον πραγματικο αξονα. 
-
-\hfill Απ: $2\pi i(-\frac{1}{4}e^{-\frac{3\pi i}{4}}+\frac{1}{4}e^{\frac{-9\pi i }{4}})$
-
-\item $\int\limits_c\frac{e^z-1}{z^2+z}\,dz$, οπου $c:\abs{z}=4$ \hfill Απ: $2\pi i(1-e^{-1})$
-
-\item $\int\limits_c\tan z\,dz$, οπου $c:\abs{z}=2$ \hfill Απ: $-4\pi i$
-
-\item $\int\limits_c\frac{e^{\frac{1}{z^2}}}{z^2+1}\,dz$, οπου $c:\abs{z-i}=\frac{3}{2}$ \hfill Απ: $\frac{\pi}{e}$
-
-\item $\int\limits_c\frac{1}{z-1}\sin(\frac{1}{z})\,dz$, οπου $c:\abs{z}=2$ \hfill Απ: $0$
-
-\item $\int\limits_c e^{\frac{1}{z}\cos(\frac{1}{z})}\,dz$, οπου $c:\abs{z}=1$ \hfill Απ: $\pi i$
-
-\end{enumerate}
-
-\item Να υπολογιστουν τα παρακατω ολοκληρωματα:
-
-\begin{enumerate}[i)]
-
-\item $I=\int\limits_0^{2\pi}\frac{1}{1-2a\cos x+a^2}\,dx$ \hfill Απ: \begin{tabular}{c}$\abs{a}<1\Rightarrow I=\frac{2\pi}{1-a^2}$ \\ $\abs{a}>1\Rightarrow I=\frac{2\pi}{a^2-1}$\end{tabular}
-
-\item $\int\limits_0^{2\pi}\frac{1}{2+\cos x}\,dx$ \hfill Απ:$\frac{1}{2\sqrt{3}}$
-
-\item $\int\limits_0^{2\pi}\frac{1}{(5-\sin x)^2}\,dx$ \hfill Απ: $\frac{5}{32}\pi$
-
-\item $\int\limits_0^{2\pi}\frac{\cos 3x}{5-4\cos x}\,dx$ \hfill Απ: $\frac{\pi}{12}$
-
-\item $\int\limits_0^{2\pi}\frac{1}{3-2\cos x+\sin x}\,dx$ \hfill Απ: $\pi$
-\end{enumerate}
-
-\item Να υπολογιστουν τα ολοκληρωματα:
-
-\begin{enumerate}[i)]
-
-\item $\int_{-\infty}^{+\infty}\frac{x\sin x}{1+x^2}\,dx$ \hfill  Απ: $\frac{\pi}{e}$
-
-\item $\int_{-\infty}^{+\infty}\frac{\cos 2x}{(1+x^2)^2}\,dx$ \hfill  Απ: $\frac{3\pi}{2e^2}$
-
-\end{enumerate}
-
+    \begin{enumerate}[i)]
+      \item $\int_{-\infty}^{+\infty}\frac{x\sin x}{1+x^2}\,dx$ 
+        \hfill  Απ: $\frac{\pi}{e}$
+      \item $\int_{-\infty}^{+\infty}\frac{\cos 2x}{(1+x^2)^2}\,dx$ 
+        \hfill  Απ: $\frac{3\pi}{2e^2}$
+    \end{enumerate}
 \end{enumerate}
 
 \end{document}
