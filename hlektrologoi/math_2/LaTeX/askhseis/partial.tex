@@ -62,13 +62,8 @@
           $f_y=\sin(xy)+yx\cos(xy)$
         \end{tabular}
 
-      \item $f(x,y)=\ln(x+y)$\hfill Απ: \begin{tabular}{l}
-          $f_x=\frac{y}{x+y}$ \\ 
-          $f_y=\ln(x+y)+\frac{y}{x+y}$
-        \end{tabular}
-
       \item $f(x,y)=\arcsin(\frac{x}{y})$\hfill Απ: \begin{tabular}{l}
-          $f_x=\frac{1}{y^2-x^2}$ \\ 
+          $f_x=\frac{1}{\sqrt{y^2-x^2}}$ \\ 
           $f_y=-\frac{x}{y\sqrt{y^2-x^2}}$
         \end{tabular}
       \item $ f(x,y,z) = (x+y^{2}) \sin{(xz)} $ \hfill Απ: \begin{tabular}{l}
@@ -141,8 +136,8 @@
       \item $ f(x,y) = x^{3}-3xy^{2} $
       \item $ f(x,y) = \ln(x^{2} + y^{2}) $
       \item $ f(x,y) = \ln{(x^{2}+y^{2})} + \arctan(\frac{y}{x}) $
-      \item $ f(x,y) = \frac{ x }{ 2 } \ln(x^{2} + y^{2}) - y 
-        \arctan(\frac{ y }{ x } ) $
+      % \item $ f(x,y) = \frac{ x }{ 2 } \ln(x^{2} + y^{2}) - y 
+      %   \arctan(\frac{ y }{ x } ) $
     \end{enumerate}
 
   \item Να αποδείξετε ότι αν μία συνάρτηση $f(x,y)$, που έχει συνεχείς 
@@ -183,11 +178,11 @@
 
     \hfill Απ: $df = \frac{ -ydx + xdy }{ x^{2} + y^{2} } $ 
 
-  \item Να βρεθεί το ολικό διαφορικό της συνάρτησης $ f(x,y) = x^{y} \cdot y^{x} $, 
-    αν $ x>0$ και $ y>0 $.
+  % \item Να βρεθεί το ολικό διαφορικό της συνάρτησης $ f(x,y) = x^{y} \cdot y^{x} $, 
+  %   αν $ x>0$ και $ y>0 $.
 
-    \hfill Απ: $df =  (x^{y-1}\cdot y^{x+1} + x^{y}\cdot y^{x} \ln{y} )dx 
-    + (x^{y}\cdot y^{x} \ln{x} + x^{y+1} \cdot y^{x-1})dy $ 
+  %   \hfill Απ: $df =  (x^{y-1}\cdot y^{x+1} + x^{y}\cdot y^{x} \ln{y} )dx 
+  %   + (x^{y}\cdot y^{x} \ln{x} + x^{y+1} \cdot y^{x-1})dy $ 
 
   \item Για τις παρακάτω παραστάσεις, να αποδείξετε ότι είναι \textbf{τέλεια
     διαφορικά} και να υπολογίσετε τη συνάρτηση δυναμικού.
@@ -200,7 +195,7 @@
         %spand (114)
 
       \item $(2xy+z)dx+(x^{2}+z^{2})dy+(x+2yz)dz$ 
-        \hfill  Απ: $ f(x,y,z) = x^{2}+z^{2}+xz +c $.
+        \hfill  Απ: $ f(x,y,z) = x^{2}y+z^{2}y+xz +c $.
 
         % \item $ (3x^{2}+3y-1)dx + (z^{2}+3x)dy+(2yz+1)dz $
         % \hfill Απ: $ f(x,y,z) = x^{3}+3xy-x+yz^{2}+z+c $
