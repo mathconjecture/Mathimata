@@ -1,0 +1,334 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+\input{myboxes.tex}
+
+\geometry{top=1cm,margin=1cm}
+
+\pagestyle{vangelis}
+\everymath{\displaystyle}
+\setcounter{chapter}{1}
+
+\begin{document}
+
+\chapter*{Προβλήματα Συνοριακών Τιμών}
+
+\section*{Βασικό Παράδειγμα ομαλού Sturm Liouville}
+
+
+\begin{example}
+  $ y''(x) + \lambda y(x)=0 $ με $ y(0)=y(L)=0 $.
+\end{example}
+\begin{solution}
+  Διακρίνουμε περιπτώσεις για τις διάφορες τιμές του $ \lambda $.
+  \begin{myitemize}
+    \item Αν $ \bm{\lambda = 0} $ τότε η εξίσωση γίνεται 
+      $ y''(x)=0 \Rightarrow y'(x) = c_{1} \Rightarrow y(x) = c_{1}x + c_{2} $. 
+      Εφαρμόζουμε τις συνοριακές συνθήκες και έχουμε:
+      \[
+        y(0)=0 \Leftrightarrow c_{2}=0 \Rightarrow y(x) = c_{1}x 
+      \] 
+      Εφαρμόζουμε και τη 2η συνθήκη και έχουμε:
+      \[
+        y(L)=0 \Leftrightarrow c_{1}L=0 \overset{L>0}{\Leftrightarrow} c_{1}=0 
+      \]
+      Άρα $ y(x)=0 $ απορρίπτεται ως τετριμμένη λύση.
+    \item Αν $ \bm{\lambda < 0} \Rightarrow \lambda = -k^{2} $ με $ k>0 $ και τότε η 
+      εξίσωση γίνεται $ y''(x) -k^{2}y(x)=0$ με λύση 
+      \[ 
+        y(x) = c_{1} \cosh{(kx)} + c_{2} \sinh{(kx)} 
+      \]
+      Εφαρμόζουμε τις συνοριακές συνθήκες και έχουμε:
+      \[
+        y(0)=0 \Leftrightarrow c_{1}=0 \Rightarrow y(x) = c_{2} \sinh{(kx)}  
+      \] 
+      Εφαρμόζουμε και τη 2η συνθήκη και έχουμε:
+      \[
+        y(L)=0 \Leftrightarrow c_{2} \sinh{(kL)} = 0 \overset{kL>0}{\Leftrightarrow} 
+        c_{2}=0 
+      \]
+      Άρα $ y(x)=0 $ απορρίπτεται ως τετριμμένη λύση.
+    \item Αν $ \bm{\lambda > 0} \Rightarrow \lambda = k^{2} $ με $ k>0 $ και τότε η 
+      εξίσωση γίνεται $ y''(x) +k^{2}y(x)=0$ με λύση 
+      \[ 
+        y(x) = c_{1} \cos{(kx)} + c_{2} \sin{(kx)} 
+      \]
+      Εφαρμόζουμε τις συνοριακές συνθήκες και έχουμε:
+      \[
+        y(0)=0 \Leftrightarrow c_{1}=0 \Rightarrow y(x) = c_{2} \sin{(kx)}  
+      \] 
+      Εφαρμόζουμε και τη 2η συνθήκη και έχουμε:
+      \[
+        y(L)=0 \Leftrightarrow c_{2} \sin{(kL)} = 0 \overset{c_{2} 
+        \neq 0}{\Leftrightarrow} \sin{(kL)} =0 \Rightarrow \sin{(kL)} = \sin{(n \pi)}, \;
+        n \in \mathbb{N} 
+      \]
+      οπότε 
+      \[
+        k_{n} = \frac{n \pi}{L} , \; n \in \mathbb{N} \quad \text{άρα} \quad 
+        \lambda _{n} = \frac{n^{2} \pi ^{2}}{L^{2}} 
+      \] 
+      και $ y_{n}(x) = c_{n} \sin{\left(\frac{n \pi x}{L} \right)}  $ 
+  \end{myitemize}
+\end{solution}
+
+\begin{example}
+  $ y''(x) + \lambda y(x)=0 $ με $ y'(0)=y'(L)=0 $.
+\end{example}
+\begin{solution}
+  Διακρίνουμε περιπτώσεις για τις διάφορες τιμές του $ \lambda $.
+\begin{myitemize}
+  \item Αν $ \bm{\lambda = 0} $ τότε η εξίσωση γίνεται 
+    $ y''(x)=0 \Rightarrow y'(x) = c_{1} \Rightarrow y(x) = c_{1}x + c_{2} $. 
+      Εφαρμόζουμε τις συνοριακές συνθήκες και έχουμε:
+      \[
+        y'(0)=0 \Leftrightarrow c_{1}=0 \Rightarrow y(x) = c_{2} 
+      \] 
+      Εφαρμόζουμε και τη 2η συνθήκη και έχουμε:
+      \[
+        y'(L)=0 \Leftrightarrow c_{1}=0 
+      \]
+      Άρα $ \lambda_{0}=0 $ είναι ιδιοτιμή και έστω $ y_{0}(x)=c_{0} $ η αποδεκτή, 
+      μη τετριμμένη λύση. 
+    \item Αν $ \bm{\lambda < 0} \Rightarrow \lambda = -k^{2} $ με $ k>0 $ και τότε η 
+      εξίσωση γίνεται $ y''(x) -k^{2}y(x)=0$ με λύση 
+      \begin{align*} 
+        y(x) &= c_{1} \cosh{(kx)} + c_{2} \sinh{(kx)} \\
+        y'(x) &= c_{1}k \sinh{(kx)} + c_{2}k \cosh{(kx)}
+      \end{align*}
+      Εφαρμόζουμε τις συνοριακές συνθήκες και έχουμε:
+      \[
+        y'(0)=0 \Leftrightarrow c_{2}k=0 \overset{k>0}{\Leftrightarrow} c_{2} = 0
+      \] 
+      Άρα $ y(x)= c_{1} \cosh{(kx)} $ και $ y'(x) = c_{1}k \sinh{(kx)} $. 
+      Εφαρμόζουμε και τη 2η συνθήκη και έχουμε:
+      \[
+        y'(L)=0 \Leftrightarrow c_{1}k \sinh{(kL)} = 0 \overset{kL>0}{\Leftrightarrow} 
+        c_{1}k=0 \overset{k>0}{\Leftrightarrow} c_{1}=0  
+      \]
+      Άρα $ y(x)=0 $ απορρίπτεται ως τετριμμένη λύση.
+    \item Αν $ \bm{\lambda > 0} \Rightarrow \lambda = k^{2} $ με $ k>0 $ και τότε η 
+      εξίσωση γίνεται $ y''(x) +k^{2}y(x)=0$ με λύση 
+      \begin{align*} 
+        y(x) &= c_{1} \cos{(kx)} + c_{2} \sin{(kx)} \\
+        y'(x) &= -c_{1}k \sin{(kx)} + c_{2}k \cos{(kx)} 
+      \end{align*}
+      Εφαρμόζουμε τις συνοριακές συνθήκες και έχουμε:
+      \[
+        y'(0)=0 \Leftrightarrow c_{2}k=0 \overset{k>0}{\Leftrightarrow} c_{2}=0 
+      \] 
+      Άρα $ y(x)= c_{1} \cos{(kx)} $ και $ y'(x) = -c_{1}k \sin{(kx)} $. 
+      Εφαρμόζουμε και τη 2η συνθήκη και έχουμε:
+      \[
+        y'(L)=0 \Leftrightarrow -c_{1}k \sin{(kL)} = 0 \overset{c_{1} 
+        \neq 0}{\Leftrightarrow} \sin{(kL)} =0 \Rightarrow \sin{(kL)} = \sin{(n \pi)}, \;
+        n \in \mathbb{N} 
+      \]
+      οπότε 
+      \[
+        k_{n} = \frac{n \pi}{L} , \; n \in \mathbb{N} \quad \text{άρα} \quad 
+        \lambda _{n} = \frac{n^{2} \pi ^{2}}{L^{2}} 
+      \] 
+      και $ y_{n}(x) = c_{n} \cos{\left(\frac{n \pi x}{L} \right)}  $ 
+  \end{myitemize}
+\end{solution}
+
+\begin{example}
+  $ y''(x) + \lambda y(x)=0 $ με $ y(0)=y'(L)=0 $.
+\end{example}
+\begin{solution}
+  Διακρίνουμε περιπτώσεις για τις διάφορες τιμές του $ \lambda $.
+  \begin{myitemize}
+    \item Αν $ \bm{\lambda = 0} $ τότε η εξίσωση γίνεται 
+      $ y''(x)=0 \Rightarrow y'(x) = c_{1} \Rightarrow y(x) = c_{1}x + c_{2} $. 
+      Εφαρμόζουμε τις συνοριακές συνθήκες και έχουμε:
+      \[
+        y(0)=0 \Leftrightarrow c_{2}=0 \Rightarrow y(x) = c_{1}x 
+      \] 
+      Εφαρμόζουμε και τη 2η συνθήκη και έχουμε:
+      \[
+        y'(L)=0 \Leftrightarrow c_{1}=0 
+      \]
+      Άρα $ y(x)=0 $ απορρίπτεται ως τετριμμένη λύση.
+    \item Αν $ \bm{\lambda < 0} \Rightarrow \lambda = -k^{2} $ με $ k>0 $ και τότε η 
+      εξίσωση γίνεται $ y''(x) -k^{2}y(x)=0$ με λύση 
+      \begin{align*} 
+        y(x) = c_{1} \cosh{(kx)} + c_{2} \sinh{(kx)} \\
+        y'(x) = c_{1}k \sinh{(kx)} + c_{2}k \cosh{(kx)} 
+      \end{align*}
+      Εφαρμόζουμε τις συνοριακές συνθήκες και έχουμε:
+      \[
+        y(0)=0 \Leftrightarrow c_{1}=0 
+      \] 
+      Άρα $ y(x) = c_{2} \sinh{(kx)} $ και $ y'(x) = c_{2}k \cosh{(kx)} $ 
+      Εφαρμόζουμε και τη 2η συνθήκη και έχουμε:
+      \[
+        y'(L)=0 \Leftrightarrow c_{2}k \sinh{(kL)} = 0 \overset{kL>0}{\Leftrightarrow} 
+        c_{2}k=0 \overset{k>0}{\Leftrightarrow} c_{2}=0
+      \]
+      Άρα $ y(x)=0 $ απορρίπτεται ως τετριμμένη λύση.
+    \item Αν $ \bm{\lambda > 0} \Rightarrow \lambda = k^{2} $ με $ k>0 $ και τότε η 
+      εξίσωση γίνεται $ y''(x) +k^{2}y(x)=0$ με λύση 
+      \begin{align*} 
+        y(x) &= c_{1} \cos{(kx)} + c_{2} \sin{(kx)} \\
+        y'(x) &= -c_{1} \sin{(kx)} + c_{2} \cos{(kx)} 
+      \end{align*}
+      Εφαρμόζουμε τις συνοριακές συνθήκες και έχουμε:
+      \[
+        y(0)=0 \Leftrightarrow c_{1}=0 
+      \] 
+      Άρα $ y(x)= c_{2} \sin{(kx)} $ και $ y'(x) = c_{2} \cos{(kx)} $
+      Εφαρμόζουμε και τη 2η συνθήκη και έχουμε:
+      \[
+        y'(L)=0 \Leftrightarrow c_{2} \cos{(kL)} = 0 \overset{c_{2} 
+          \neq 0}{\Leftrightarrow} \cos{(kL)} =0 \Rightarrow \cos{(kL)} = 
+          \cos{\left(\frac{(2n-1) \pi}{2}\right)}, \; n \in \mathbb{N} 
+      \]
+      οπότε 
+      \[
+        k_{n} = \frac{(2n-1) \pi}{2L} , \; n \in \mathbb{N} \quad \text{άρα} \quad 
+        \lambda _{n} = \frac{(2n-1)^{2} \pi ^{2}}{4L^{2}} 
+      \] 
+      και $ y_{n}(x) = c_{n} \sin{\left(\frac{(2n-1) \pi x}{2L} \right)}  $ 
+  \end{myitemize}
+\end{solution}
+
+\begin{example}
+  $ y''(x) + \lambda y(x)=0 $ με $ y'(0)=y(L)=0 $.
+\end{example}
+\begin{solution}
+  Διακρίνουμε περιπτώσεις για τις διάφορες τιμές του $ \lambda $.
+  \begin{myitemize}
+    \item Αν $ \bm{\lambda = 0} $ τότε η εξίσωση γίνεται 
+      $ y''(x)=0 \Rightarrow y'(x) = c_{1} \Rightarrow y(x) = c_{1}x + c_{2} $. 
+      Εφαρμόζουμε τις συνοριακές συνθήκες και έχουμε:
+      \[
+        y'(0)=0 \Leftrightarrow c_{1}=0 \Rightarrow y(x) = c_{2} 
+      \] 
+      Εφαρμόζουμε και τη 2η συνθήκη και έχουμε:
+      \[
+        y(L)=0 \Leftrightarrow c_{2}=0 
+      \]
+      Άρα $ y(x)=0 $ απορρίπτεται ως τετριμμένη λύση.
+    \item Αν $ \bm{\lambda < 0} \Rightarrow \lambda = -k^{2} $ με $ k>0 $ και τότε η 
+      εξίσωση γίνεται $ y''(x) -k^{2}y(x)=0$ με λύση 
+      \begin{align*} 
+        y(x) = c_{1} \cosh{(kx)} + c_{2} \sinh{(kx)} \\
+        y'(x) = c_{1}k \sinh{(kx)} + c_{2}k \cosh{(kx)} 
+      \end{align*}
+      Εφαρμόζουμε τις συνοριακές συνθήκες και έχουμε:
+      \[
+        y'(0)=0 \Leftrightarrow c_{2}k=0 \overset{k>0}{\Leftrightarrow} c_{2}=0
+      \] 
+      Άρα $ y(x) = c_{1} \cosh{(kx)} $ και $ y'(x) = c_{1}k \sinh{(kx)} $ 
+      Εφαρμόζουμε και τη 2η συνθήκη και έχουμε:
+      \[
+        y(L)=0 \Leftrightarrow c_{1}k \cosh{(kL)} = 0 \Leftrightarrow c_{1}k=0 
+        \overset{k>0}{\Leftrightarrow} c_{1}=0
+      \]
+      Άρα $ y(x)=0 $ απορρίπτεται ως τετριμμένη λύση.
+    \item Αν $ \bm{\lambda > 0} \Rightarrow \lambda = k^{2} $ με $ k>0 $ και τότε η 
+      εξίσωση γίνεται $ y''(x) +k^{2}y(x)=0$ με λύση 
+      \begin{align*} 
+        y(x) &= c_{1} \cos{(kx)} + c_{2} \sin{(kx)} \\
+        y'(x) &= -c_{1} \sin{(kx)} + c_{2} \cos{(kx)} 
+      \end{align*}
+      Εφαρμόζουμε τις συνοριακές συνθήκες και έχουμε:
+      \[
+        y'(0)=0 \Leftrightarrow c_{2}k =0 \overset{k>0}{\Leftrightarrow} c_{2}=0
+      \] 
+      Άρα $ y(x)= c_{1} \cos{(kx)} $ και $ y'(x) = -c_{1}k \sin{(kx)} $
+      Εφαρμόζουμε και τη 2η συνθήκη και έχουμε:
+      \[
+        y(L)=0 \Leftrightarrow c_{1} \cos{(kL)} = 0 \overset{c_{1} 
+          \neq 0}{\Leftrightarrow} \cos{(kL)} =0 \Rightarrow \cos{(kL)} = 
+          \cos{\left(\frac{(2n-1) \pi}{2}\right)}, \; n \in \mathbb{N} 
+      \]
+      οπότε 
+      \[
+        k_{n} = \frac{(2n-1) \pi}{2L} , \; n \in \mathbb{N} \quad \text{άρα} \quad 
+        \lambda _{n} = \frac{(2n-1)^{2} \pi ^{2}}{4L^{2}} 
+      \] 
+      και $ y_{n}(x) = c_{n} \cos{\left(\frac{(2n-1) \pi x}{2L} \right)}  $ 
+  \end{myitemize}
+\end{solution}
+
+\begin{example}
+  $ y''(x) + \lambda y(x)=0 $ με $ y(-L)=y(L) $ και $ y'(-L)=y'(L) $.
+\end{example}
+\begin{solution}
+  Διακρίνουμε περιπτώσεις για τις διάφορες τιμές του $ \lambda $.
+  \begin{myitemize}
+    \item Αν $ \bm{\lambda = 0} $ τότε η εξίσωση γίνεται 
+      $ y''(x)=0 \Rightarrow y'(x) = c_{1} \Rightarrow y(x) = c_{1}x + c_{2} $. 
+      Εφαρμόζουμε τις συνοριακές συνθήκες και έχουμε:
+      \[
+        y(-L)=y(L) \Leftrightarrow -c_{1}L+c2= c_{1}L + c_{2} \Rightarrow 2c_{1}L=0
+        \overset{L>0}{\Leftrightarrow} c_{1} = 0
+      \] 
+      Εφαρμόζουμε και τη 2η συνθήκη και έχουμε:
+      \[
+        y'(-L)=y'(L) \Leftrightarrow c_{2} = c_{2}
+      \]
+      Άρα $ \lambda_{0}=0 $ είναι ιδιοτιμή και έστω $ y_{0}(x)=c_{0} $ η αποδεκτή, 
+      μη τετριμμένη λύση. 
+    \item Αν $ \bm{\lambda < 0} \Rightarrow \lambda = -k^{2} $ με $ k>0 $ και τότε η 
+      εξίσωση γίνεται $ y''(x) -k^{2}y(x)=0$ με λύση 
+      \begin{align*} 
+        y(x) = c_{1} \cosh{(kx)} + c_{2} \sinh{(kx)} \\
+        y'(x) = c_{1}k \sinh{(kx)} + c_{2}k \cosh{(kx)} 
+      \end{align*}
+      Εφαρμόζουμε τις συνοριακές συνθήκες και έχουμε:
+      \[
+        y(-L)=y(L) \Leftrightarrow  c_{1} \cosh{(k(-L))} + c_{2} \sinh{(k(-L))} = 
+        c_{1} \cosh{(kL)} + c_{2} \sinh{(kL)} \Leftrightarrow 2 c_{2} \sinh{(kL)} = 0 
+        \overset{kL>0}{\Leftrightarrow} c_{2} = 0
+      \] 
+      Άρα $ y(x) = c_{1} \cosh{(kL)} $ και $ y'(x) = c_{1}k \sinh{(kL)} $.  
+      Εφαρμόζουμε και τη 2η συνθήκη και έχουμε:
+      \[
+        y'(-L)=y'(L) \Leftrightarrow c_{1}k \sinh{(kL)} = c_{1}k \sinh{(k(-L))}
+        \Leftrightarrow 2 c_{1}k \sinh{(kL)} = 0 \overset{k>0}{\Leftrightarrow} c_{1}=0
+      \]
+      Άρα $ y(x)=0 $ απορρίπτεται ως τετριμμένη λύση.
+    \item Αν $ \bm{\lambda > 0} \Rightarrow \lambda = k^{2} $ με $ k>0 $ και τότε η 
+      εξίσωση γίνεται $ y''(x) +k^{2}y(x)=0$ με λύση 
+      \begin{align*} 
+        y(x) &= c_{1} \cos{(kx)} + c_{2} \sin{(kx)} \\
+        y'(x) &= -c_{1}k \sin{(kx)} + c_{2}k \cos{(kx)} 
+      \end{align*}
+      Εφαρμόζουμε τις συνοριακές συνθήκες και έχουμε:
+      \[
+        \left.
+          \begin{matrix}
+            y(-L)=y(L) \\
+            y'(-L)=y'(L)
+          \end{matrix} 
+        \right\} \Leftrightarrow 
+        \left.
+          \begin{matrix}
+            c_{1} \cos{(k(-L))} + c_{2} \sin{(k(-L))} = c_{1} \cos{(kL)} + 
+            c_{2} \sin{(kL)} \\
+            - c_{1} k \sin{(k(-L))} + c_{2} k \cos{(k(-L))} = - c_{1}k \sin{(kL)} + 
+            c_{2} \cos{(kL)}
+          \end{matrix} 
+        \right\} \Leftrightarrow 
+      \]
+      \[
+        \left.
+          \begin{matrix}
+            c_{1} \cos{(-(kL))} + c_{2} \sin{(-(kL))} = c_{1} \cos{(kL)} + c_{2} \sin{(kL)}
+            \\
+            - c_{1} k \sin{(-kL)} + c_{2} k \cos{(-kL)} = - c_{1}k \sin{(kL)} + 
+            c_{2} \cos{(kL)}
+          \end{matrix} 
+        \right\}
+      \]
+  \end{myitemize}
+\end{solution}
+
+
+
+
+
+\end{document}
+

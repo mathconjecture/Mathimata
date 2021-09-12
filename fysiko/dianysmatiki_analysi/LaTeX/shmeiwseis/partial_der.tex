@@ -727,236 +727,6 @@ $ (x_{0}, y_{0}) $ είναι :
 \end{rem}
 
 
-\chapter{Διαφορισιμότητα}
-
-\section{Ορισμός}
-\begin{dfn}
-\item {}
-  Μια συνάρτηση $ f(x,y) $ λέγεται \textcolor{Col1}{διαφορίσιμη} στο σημείο 
-  $ P_{0}(x_{0}, y_{0}) $ αν ισχύει η παρακάτω \textbf{συνθήκη διαφορισιμότητας}: 
-  \[
-    \eval{\Delta f(x,y)}_{P_{0}} \!\!= f(x,y)-f(x_{0}, y_{0}) 
-    \xlongequal[k=\underbrace{y- y_{0}}_{\Delta y=dy}]{h=\overbrace{x-
-    x_{0}}^{\Delta x=dx}}  f(x_{0}+h, y_{0}+k)-f(x_{0}, y_{0}) =
-    \!\!\! \underbrace{\eval{\pdv{f}{x}} _{P_{0}}\!\!\!\cdot h + 
-    \eval{\pdv{f}{y} }_{P_{0}}\!\!\!\cdot k}_
-    {\minibox[c]{$\eval{df(x,y)}_{P_{0}}$ \\ Πρωτεύον
-    μέρος: \\ Γραμμικό ως προς $h,k$}} + \!\!\!\!  
-    \underbrace{\varepsilon _{1}(h,k)h+ 
-      \varepsilon _{2}(h,k)k}_{\minibox[c]{$G(h,k)$ : (πολύ μικρό) 
-    \\ Δευτερεύον μέρος: \\ Μη γραμμικό ως προς $h,k$}}                 
-  \]
-\end{dfn}
-
-\begin{rem}
-\item {}
-  Η συνάρτηση $ G(h,k) = \eval{\Delta f(x,y)}_{P_{0}} - \eval{df(x,y)}_{P_{0}} $
-\end{rem}
-
-\begin{dfn}[Επαναδιατύπωση]
-\item {}
-  Μια συνάρτηση $ f(x,y) $ είναι \textcolor{Col1}{διαφορίσιμη} σε ένα σημείο 
-  $ P_{0}(x_{0}, y_{0}) $ αν και μόνον αν
-  \begin{enumerate}[i)]
-    \item Υπάρχουν οι μερικές παράγωγοι $ \eval{\pdv{f}{x}}_{P_{0}},
-      \eval{\pdv{f}{y}}_{P_{0}} $
-    \item $ \lim\limits_{\substack{h\to 0 \\k \to 0}} \varepsilon _{1}(h,k) = 
-      0 \quad \text{και} \quad \lim\limits_{\substack{h\to 0 \\k \to 0}} 
-      \varepsilon _{2}(h,k)=0 \overset{\text{ή}}{\Leftrightarrow} 
-      \lim\limits_{\substack{h\to 0 \\k \to 0}} 
-      \frac{G(h,k)}{\sqrt{h^{2}+k^{2}}} = 0 $.
-  \end{enumerate}
-\end{dfn}
-
-\begin{prop}
-  Κάθε διαφορίσιμη συνάρτηση είναι και συνεχής.
-\end{prop}
-
-\begin{rem}
-\item {}
-  \begin{enumerate}[i)]
-    \item Το αντίστροφο της παραπάνω πρότασης δεν ισχύει.
-    \item Το αντιθετοαντίστροφο της πρότασης μας λέει, ότι αν μια συνάρτηση, 
-      δεν είναι συνεχής, τότε δεν είναι διαφορίσιμη.
-  \end{enumerate}
-\end{rem}
-
-\begin{thm}
-\item {}
-  Μια συνάρτηση $ f(x,y) $ είναι διαφορίσιμη στο $ P_{0}(x_{0}, y_{0}) $ 
-  αν υπάρχουν οι μερικές παράγωγοι και είναι συνεχείς στο $ P_{0} $.
-\end{thm}
-
-\begin{example}
-  Να εξεταστεί ως προς τη διαφορισιμότητα στο σημείο $(0,0)$ 
-  η συνάρτηση 
-  \[ 
-    f(x,y) = 
-    \begin{cases} 
-      \frac{xy}{x^{2}+y^{2}}, &(x,y) \neq (0,0) \\ 0, & (x,y) = (0,0) 
-    \end{cases} 
-  \]
-\end{example}
-\begin{solution}
-\item {}
-  Εξετάζουμε τη συνέχεια της συνάρτησης στο $ (0,0) $. Έχουμε
-  \[ \lim\limits_{\substack{x\to 0 \\y \to 0}} f(x,y) =
-    \lim\limits_{\substack{x\to 0 \\y \to 0}} \frac{xy}{x^{2}+y^{2}} =
-    \lim_{r \to 0} \frac{r^{2} \cos{\theta} \sin{\theta}}{r^{2}} =
-  \cos{\theta} \sin{\theta} \] άρα δεν υπάρχει το όριο, γιατί εξαρτάται από το 
-  $\theta$, επομένως η συνάρτηση δεν είναι συνεχής, άρα ούτε κ παραγωγίσιμη στο 
-  $ (0,0) $.
-\end{solution}
-
-\begin{example}
-\item Να εξεταστεί ως προς τη διαφορισιμότητα στο σημείο $(0,0)$ 
-  η συνάρτηση 
-  \[
-    f(x,y) = 
-    \begin{cases} 
-      x \frac{x^{2}-y^{2}}{x^{2}+y^{2}}, &(x,y) \neq (0,0) \\ 0, & (x,y) = (0,0)  
-    \end{cases} 
-  \] 
-\end{example}
-\begin{solution}
-\item {}
-  \begin{description}
-    \item [Α΄ Τρόπος: (Με το θεώρημα)]
-    \item {}
-      Εξετάζουμε την ύπαρξη των μερικών παραγώγων της $f$ στο $ (0,0) $.
-      \begin{myitemize}
-        \item Αν $ (x,y) \neq (0,0) $ έχουμε:
-          \[
-            f_{x} = \left(x \frac{x^{2}-y^{2}}{x^{2}+y^{2}}\right)_
-            {x} = \cdots = \frac{x^{4}+4x^{2}y^{2}-y^{4}}{(x^{2}+
-            y^{2})^{2}} \quad \text{και} \quad f_{y} = 
-            \left(x\frac{x^{2}-y^{2}}{x^{2}+y^{2}}\right)_{y} = 
-            \cdots = - \frac{4x^{3}y}{(x^{2}+y^{2})^{2}} 
-          \] 
-
-        \item Αν $ (x,y) = (0,0) $ έχουμε:
-          \begin{align*}
-            f_{x}(0,0) = \lim_{x \to 0} \frac{f(x,0)-f(0,0)}{x-0} = 
-            \lim_{x \to 0} = \lim_{x \to 0} \frac{x}{x} = 1
-            \quad \text{και} \quad
-            f_{y}(0,0) = \lim_{y \to 0} \frac{f(0,y)-f(0,0)}{y-0} = 
-            \lim_{y \to 0} 0 = 0
-          \end{align*} 
-          Επομένως υπάρχουν οι μερικές παράγωγοι της $f$ στο $ (0,0) $
-          και έχουμε:
-          \[
-            f_{x}(x,y) = 
-            \begin{cases}
-              \frac{x^{4}+4x^{2}y^{2}-y^{4}}{(x^{2}+y^{2})^{2}}, 
-                                    & (x,y) \neq (0,0) \\ 1, & (x,y) = (0,0) 
-            \end{cases} \quad \text{και} \quad
-            f_{y}(x,y) = \begin{cases} - 
-              \frac{4x^{3}y}{(x^{2}+y^{2})^{2}}, &(x,y)
-            \neq (0,0) \\ 0, & (x,y) = (0,0) \end{cases} 
-          \]
-      \end{myitemize}
-      Εξετάζουμε ως προς τη συνέχεια τις μερικές παραγώγους.
-      \begin{myitemize}
-        \item Για την $ f_{x} $
-          \begin{align*}
-            L_{1} = \lim_{x \to 0} 
-            \left(\lim_{y \to 0}
-              \frac{x^{4}+4x^{2}y^{2}-y^{4}}{(x^{2}+y^{2})^{2}}
-            \right) = 
-            \lim_{x \to 0} 1 = 1
-            \intertext{και}
-            L_{2}= \lim_{y \to 0} \left(\lim_{x \to 0}
-            \frac{x^{4}+4x^{2}y^{2}-y^{4}}{(x^{2}+y^{2})^{2}}\right) = 
-            \lim_{y \to 0} (-1) = -1
-          \end{align*}
-        \item Για την $ f_{y} $
-          \begin{align*}
-            \lim\limits_{\substack{x\to 0 \\y \to 0}} -
-            \frac{4x^{3}y}{(x^{2}+y^{2})^{2}} = \lim_{r \to 0} -
-            \frac{4r^{4} \cos^{3}{\theta} \sin{\theta}}{(r^{2})^{2}} = 
-            \lim_{r \to 0} (-4 \cos^{3}{\theta} \sin{\theta}) = 
-            -4 \cos^{3}{\theta} \sin{\theta} \quad \text{(δεν υπάρχει)}
-          \end{align*}
-      \end{myitemize}
-
-      Επομένως καμία από τις μερικές παραγώγους της $f$ δεν είναι συνεχής στο
-      $(0,0)$, άρα η $f$ δεν είναι διαφορίσιμη σύμφωνα με το θεώρημα.
-    \item [Β᾽ Τρόπος: (Με ορισμό)]
-    \item {}
-      Εξετάζουμε με τον ορισμός την ύπαρξη των μερικών παραγώγων της $f$
-      και αν η $ G(h,k) $ είναι πολύ μικρή.
-      \begin{enumerate}[i)]
-        \item Υπάρχουν οι μερικές παράγωγοι της $f$ στο $ (0,0) $.
-        \item Εύρεση της $ G(h,k) $.
-          \[
-            G(h,k) = \Delta f(0,0) - df(0,0) 
-          \] 
-      \end{enumerate}
-      \begin{myitemize}
-        \item $ \Delta f(0,0) = f(0+h,0+k) - f(0,0) = 
-          h \frac{h^{2}-k^{2}}{h^{2}+k^{2}} - 0 = h
-          \frac{h^{2}-k^{2}}{h^{2}+k^{2}} $
-        \item $ df(0,0) = f_{x}(0,0)h+f_{y}(0,0)k = 1h+0k= h $
-      \end{myitemize}
-      Επομένως $ G(h,k) = h \frac{h^{2}-k^{2}}{h^{2}+k^{2}} - h =
-      - \frac{2hk^{2}}{h^{2}+k^{2}}$
-      \[
-        \lim\limits_{\substack{h\to 0 \\k \to 0}} 
-        \frac{G(h,k)}{\sqrt{h^{2}+k^{2}}} =
-        \lim\limits_{\substack{h\to 0 \\k \to 0}} 
-        \frac{-\frac{2hk^{2}}{h^{2}+k^{2}}}{\sqrt{h^{2}+k^{2}}}
-        = \lim\limits_{\substack{h\to 0 \\k \to 0}}-
-        \frac{2hk^{2}}{(h^{2}+k^{2})^{\frac{3}{2}}} =
-        -2 \lim_{r \to 0} \frac{4r^{3} \cos{\theta}
-        \sin^{2}{\theta}}{(r^{2})^{\frac{3}{2}}} =
-        -2 \cos{\theta} \sin^{2}{\theta}  
-      \]
-      Επομένως η $f$ δεν είναι διαφορίσιμη στο $ (0,0) $.  
-  \end{description}
-\end{solution}
-
-\begin{example}
-  Να εξετάσετε ως προς τη διαφορισιμότητα τη συνάρτηση:
-  \[
-    f(x,y) = 
-    \begin{cases}
-      y^{2} \sin{\frac{x}{y}}, &y \neq 0 \\0, &y=0 
-    \end{cases}
-  \]
-\end{example}
-\begin{solution}
-  Ελέγχουμε την ύπαρξη των μερικών παραγώγων της $f$.
-  \begin{myitemize}
-    \item Για $ y \neq 0 $ η $f$ είναι διαφορίσιμη ως σύνθεση διαφορίσιμων
-      συναρτήσεων και έχουμε: 
-      \[
-        f_{x} = y \cos{\frac{x}{y}}  \quad \text{και} \quad  f_{y} = 2y
-        \sin{\frac{x}{y}} - x \cos{\frac{x}{y}} 
-      \]
-    \item Για $ y = 0 $, έχουμε
-      \begin{align*}
-        f_{x}(x,0) = \lim_{h \to 0} \frac{f(x+h,0)-f(x,0)}{h} = 
-        \lim_{h \to 0} \frac{0 - 0}{h} = \lim_{h \to 0} 0 = 0
-        \intertext{και}
-        f_{y}(x,0) = \lim_{k \to 0} \frac{f(x,0+k)-f(x,0)}{k} = \lim_{k \to
-        0} \frac{k^{2} \sin{\frac{x}{k}} - 0}{k} = \lim_{k \to 0}
-        k \sin{\frac{x}{k}} = 0
-      \end{align*}
-  \end{myitemize}
-  Επομένως υπάρχουν οι μερικές παράγωγοι της $ f $.  
-
-  Ελέγχουμε τη συνέχεια της $ f_{x} $ στο $ y=0 $. Παρατηρούμε:
-  \[
-    f_{x}(x,y) = 
-    \begin{cases}
-      y \cos{\frac{x}{y}}, & y \neq 0 \\ 0, & y=0 
-    \end{cases}
-  \] 
-  είναι συνεχής στο $ y=0 $, γιατί 
-  $ \lim_{y \to 0} y \cos{\frac{x}{y}} = 0 = f_{x}(0,0) $. 
-  Άρα η $f$ είναι διαφορίσιμη.
-\end{solution}
-
 
 \chapter{Διαφορικά}
 
@@ -1053,109 +823,110 @@ $ (x_{0}, y_{0}) $ είναι :
   διαφορά $ \Delta f $.
 \end{solution}
 
-% \begin{example}
-%   Κατά τη μέτρηση των στοιχείων μιας τριγωνικής επιφάνειας, βρέθηκαν οι πλευρές να 
-%   έχουν μήκος \SI{100}{cm} και \SI{125}{cm} αντίστοιχα, ενώ η περιεχόμενη γωνία βρέθηκε 
-%   να είναι \SI{60}{\degree}. Αν το πιθανό σφάλμα κατά την μέτρηση των πλευρών είναι 
-%   $ \SI{0.2}{cm} $ και για τις γωνίες είναι $ \SI{1}{\degree} $, να υπολογίσετε κατά 
-%   προσέγγιση το σφάλμα στο εμβαδό της επιφάνειας.
-% \end{example}
-% \begin{solution}
-% \item {}
+\begin{example}
+  Κατά τη μέτρηση των στοιχείων μιας τριγωνικής επιφάνειας, βρέθηκαν οι πλευρές να 
+  έχουν μήκος \SI{100}{cm} και \SI{125}{cm} αντίστοιχα, ενώ η περιεχόμενη γωνία βρέθηκε 
+  να είναι \SI{60}{\degree}. Αν το πιθανό σφάλμα κατά την μέτρηση των πλευρών είναι 
+  $ \SI{0.2}{cm} $ και για τις γωνίες είναι $ \SI{1}{\degree} $, να υπολογίσετε κατά 
+  προσέγγιση το σφάλμα στο εμβαδό της επιφάνειας.
+\end{example}
 
-%   \twocolumnsidelc{
-%     \begin{tikzpicture}[scale=0.7]
-%       \node  (B) at (0, 0) {};
-%       \node  (A) at (6, 0) {};
-%       \node  (C) at (2, 2) {};
-%       \node  (3) at (2, 0) {};
-%       \draw (B.center) to node[left=3pt]{$x$} (C.center);
-%       \draw (C.center) to (A.center);
-%       \draw (B.center) to node[below]{$y$} (A.center) 
-%         pic[draw,fill=magenta!25,"$\phi$",angle eccentricity=1.5]{angle} ;
-%       \draw [dashed, in=90, out=-90] (C.center) to node[right]{$z$} (3.center);
-%     \end{tikzpicture}
-%     }{
-%     Έχουμε ότι $ E = \frac{y \cdot z}{2} $. Όμως από το ορθογώνιο τρίγωνο έχουμε ότι 
-%     $ z = x \sin{\phi} $, άρα 
-%     \[
-%       E(x,y,\phi) = \frac{y \cdot x \cdot \sin{\phi}}{2} 
-%     \] 
-%   }
-%   Παρατηρούμε ότι $ \Delta x = dx = 0.2, \; \Delta y = dy = 0.2 $ και 
-%   $ \Delta \phi = d\phi = \SI{1}{\degree} = \frac{\pi}{180} $. Οπότε,ισχύει ότι
-%   \begin{equation*}
-%     \Delta E \approx dE = E_{x} dx + E_{y} dy + E_{\phi} d\phi = \frac{y \cdot
-%     \sin{\phi}}{2} dx + \frac{x \cdot \sin{\phi}}{2} dy + 
-%     \frac{y \cdot x \cdot \cos{\phi}}{2} d\phi
-%   \end{equation*} 
-%   και πιο συγκεκριμένα ισχύει ότι 
-%   \begin{align*}
-%     \Delta E(100,125,60) \approx dE(100,125,60) 
-%   &= E_{x} dx + E_{y} dy + E_{\phi} d\phi \\
-%   &= E_{x}(100,125,60) dx + E_{y}(100,125,60) dy + E_{\phi}(100,125,60) d\phi \\
-%   &= \frac{1}{2} \left(125 \cdot \sin{\frac{\pi}{3}} \cdot 0.2 + 100 \cdot
-%     \sin{\frac{\pi}{3}} \cdot 0.2 + 100 \cdot 125 \cdot \cos{\frac{\pi}{3}} \cdot
-%   \frac{\pi}{180}\right) \\
-%   &= \SI{74.03}{cm^{2}}
-%   \end{align*}
-%   Άρα το σφάλμα μέτρησης του εμβαδού της τριγωνικής επιφάνειας είναι 
-%   $ \SI{74.03}{cm^{2}} $
-% \end{solution}
+\begin{solution}
+\item {}
 
-% \begin{example}
-%   Κατά την εκτίμηση των συντεταγμένων ενός σημείου $ P(x,y) $ γίνονται σφάλματα 
-%   $ dx $ και $ dy $ αντίστοιχα. Να υπολογίσετε την επίδραση αυτών των σφαλμάτων 
-%   στη γωνία $ \theta $ και να γίνει αριθμητική εφαρμογή για $ x=1 $, $ y=2 $ και για 
-%   $ dx = 0.01 $ και $ dy =-0.02 $.
-% \end{example}
-% \begin{solution}
-% \item {}
+  \twocolumnsidelc{
+    \begin{tikzpicture}[scale=0.7]
+      \node  (B) at (0, 0) {};
+      \node  (A) at (6, 0) {};
+      \node  (C) at (2, 2) {};
+      \node  (3) at (2, 0) {};
+      \draw (B.center) to node[left=3pt]{$x$} (C.center);
+      \draw (C.center) to (A.center);
+      \draw (B.center) to node[below]{$y$} (A.center) 
+        pic[draw,fill=magenta!25,"$\phi$",angle eccentricity=1.5]{angle} ;
+      \draw [dashed, in=90, out=-90] (C.center) to node[right]{$z$} (3.center);
+    \end{tikzpicture}
+    }{
+    Έχουμε ότι $ E = \frac{y \cdot z}{2} $. Όμως από το ορθογώνιο τρίγωνο έχουμε ότι 
+    $ z = x \sin{\phi} $, άρα 
+    \[
+      E(x,y,\phi) = \frac{y \cdot x \cdot \sin{\phi}}{2} 
+    \] 
+  }
+  Παρατηρούμε ότι $ \Delta x = dx = 0.2, \; \Delta y = dy = 0.2 $ και 
+  $ \Delta \phi = d\phi = \SI{1}{\degree} = \frac{\pi}{180} $. Οπότε,ισχύει ότι
+  \begin{equation*}
+    \Delta E \approx dE = E_{x} dx + E_{y} dy + E_{\phi} d\phi = \frac{y \cdot
+    \sin{\phi}}{2} dx + \frac{x \cdot \sin{\phi}}{2} dy + 
+    \frac{y \cdot x \cdot \cos{\phi}}{2} d\phi
+  \end{equation*} 
+  και πιο συγκεκριμένα ισχύει ότι 
+  \begin{align*}
+    \Delta E(100,125,60) \approx dE(100,125,60) 
+  &= E_{x} dx + E_{y} dy + E_{\phi} d\phi \\
+  &= E_{x}(100,125,60) dx + E_{y}(100,125,60) dy + E_{\phi}(100,125,60) d\phi \\
+  &= \frac{1}{2} \left(125 \cdot \sin{\frac{\pi}{3}} \cdot 0.2 + 100 \cdot
+    \sin{\frac{\pi}{3}} \cdot 0.2 + 100 \cdot 125 \cdot \cos{\frac{\pi}{3}} \cdot
+  \frac{\pi}{180}\right) \\
+  &= \SI{74.03}{cm^{2}}
+  \end{align*}
+  Άρα το σφάλμα μέτρησης του εμβαδού της τριγωνικής επιφάνειας είναι 
+  $ \SI{74.03}{cm^{2}} $
+\end{solution}
 
-%   \twocolumnsidelc{
-%     \begin{tikzpicture}[scale=0.7]
-%       \node (0) at (0, 0) {};
-%       \node (1) at (4.5, 0) {};
-%       \node (2) at (0, 4) {};
-%       \node (3) at (3, 2) {};
-%       \draw [fill] (3,2) node[right] {$P(x,y)$} circle (2pt);
-%       \node (4) at (2, 3) {};
-%       \draw [fill] (2,3) node[right] {$P'(x+dx, y+dy)$} circle (2pt);
-%       \node (5) at (2, 0) {};
-%       \node (6) at (3, 0) {};
-%       \draw (0.center) to (3.center);
-%       \draw (0.center) to (4.center);
-%       \draw [dashed] (4.center) to (5.center);
-%       \draw [dashed] (3.center) to (6.center);
-%       \draw [-stealth] (0.center) to (1.center);
-%       \draw [-stealth] (0.center) to (2.center);
-%       \draw pic[draw,fill=magenta!25,"$\theta$",angle eccentricity=1.5]{angle=1--0--3};
-%     \end{tikzpicture}}{
-%     Έστω οι συντεταγμένες του σημείου $ P'(x+ dx, y + dy) $, όπως φαίνονται στο σχήμα.
-%     Έχουμε ότι 
-%     \[
-%       \tan{\theta} = \frac{y}{x} \Rightarrow \theta = \arctan{\frac{y}{x}}
-%     \] 
-%     Αν η γωνία μετά το σφάλμα της εκτίμησης είναι $ \theta'$, έχουμε ότι 
-%     \[
-%       \theta ' = \arctan{\frac{y+ dy}{x + dx}} 
-%   \]} 
-%   Παρατηρούμε ότι $ \Delta x = dx = 0.01 $, $ \Delta y = dy = -0.02 $. Οπότε ισχύει ότι 
-%   \[
-%     \Delta \theta \approx d \theta = \theta _{x} dx + \theta _{y} dy =
-%     \frac{-y}{x^{2}+y^{2}} dx + \frac{x}{x^{2}+y^{2}} dy = \frac{xdy-ydx}{x^{2}+y^{2}}
-%   \]
-%   και μάλιστα υπολογίζουμε την απόλυτη τιμή και έχουμε
-%   \[
-%     \abs{\Delta \theta} \approx \frac{\abs{xdy-ydx}}{x^{2}+y^{2}} \leq \frac{\abs{x dy}
-%     + \abs{y dx}}{x^{2}+y^{2}} 
-%   \]
-%   και πιο συγκεκριμένα, για το σημείο $ P(1,2) $ έχουμε
-%   \[
-%     \abs{\Delta \theta(1,2)} \leq \frac{\abs{1(-0.02)}+\abs{2\cdot 0.01}}{1^{2}+2^{2}} =
-%     \frac{0.04}{5} = 0.008
-%   \]
-% \end{solution}
+\begin{example}
+  Κατά την εκτίμηση των συντεταγμένων ενός σημείου $ P(x,y) $ γίνονται σφάλματα 
+  $ dx $ και $ dy $ αντίστοιχα. Να υπολογίσετε την επίδραση αυτών των σφαλμάτων 
+  στη γωνία $ \theta $ και να γίνει αριθμητική εφαρμογή για $ x=1 $, $ y=2 $ και για 
+  $ dx = 0.01 $ και $ dy =-0.02 $.
+\end{example}
+\begin{solution}
+\item {}
+
+  \twocolumnsidelc{
+    \begin{tikzpicture}[scale=0.7]
+      \node (0) at (0, 0) {};
+      \node (1) at (4.5, 0) {};
+      \node (2) at (0, 4) {};
+      \node (3) at (3, 2) {};
+      \draw [fill] (3,2) node[right] {$P(x,y)$} circle (2pt);
+      \node (4) at (2, 3) {};
+      \draw [fill] (2,3) node[right] {$P'(x+dx, y+dy)$} circle (2pt);
+      \node (5) at (2, 0) {};
+      \node (6) at (3, 0) {};
+      \draw (0.center) to (3.center);
+      \draw (0.center) to (4.center);
+      \draw [dashed] (4.center) to (5.center);
+      \draw [dashed] (3.center) to (6.center);
+      \draw [-stealth] (0.center) to (1.center);
+      \draw [-stealth] (0.center) to (2.center);
+      \draw pic[draw,fill=magenta!25,"$\theta$",angle eccentricity=1.5]{angle=1--0--3};
+    \end{tikzpicture}}{
+    Έστω οι συντεταγμένες του σημείου $ P'(x+ dx, y + dy) $, όπως φαίνονται στο σχήμα.
+    Έχουμε ότι 
+    \[
+      \tan{\theta} = \frac{y}{x} \Rightarrow \theta = \arctan{\frac{y}{x}}
+    \] 
+    Αν η γωνία μετά το σφάλμα της εκτίμησης είναι $ \theta'$, έχουμε ότι 
+    \[
+      \theta ' = \arctan{\frac{y+ dy}{x + dx}} 
+  \]} 
+  Παρατηρούμε ότι $ \Delta x = dx = 0.01 $, $ \Delta y = dy = -0.02 $. Οπότε ισχύει ότι 
+  \[
+    \Delta \theta \approx d \theta = \theta _{x} dx + \theta _{y} dy =
+    \frac{-y}{x^{2}+y^{2}} dx + \frac{x}{x^{2}+y^{2}} dy = \frac{xdy-ydx}{x^{2}+y^{2}}
+  \]
+  και μάλιστα υπολογίζουμε την απόλυτη τιμή και έχουμε
+  \[
+    \abs{\Delta \theta} \approx \frac{\abs{xdy-ydx}}{x^{2}+y^{2}} \leq \frac{\abs{x dy}
+    + \abs{y dx}}{x^{2}+y^{2}} 
+  \]
+  και πιο συγκεκριμένα, για το σημείο $ P(1,2) $ έχουμε
+  \[
+    \abs{\Delta \theta(1,2)} \leq \frac{\abs{1(-0.02)}+\abs{2\cdot 0.01}}{1^{2}+2^{2}} =
+    \frac{0.04}{5} = 0.008
+  \]
+\end{solution}
 
 \section{Τέλειο Διαφορικό}
 
@@ -1561,146 +1332,5 @@ $ f_{vv} $ και $ f_{uv} $.
 \end{rem}
 
 
-\chapter{Ομογενείς Συναρτήσεις}
-
-\section{Ορισμός}
-
-\begin{dfn}
-\item {}
-  \begin{enumerate}[i)]
-    \item $ f(x,y) $ \textcolor{Col1}{ομογενής βαθμού} $ \textcolor{Col1}{\rho} 
-      \Leftrightarrow f(\lambda x, \lambda y), \; \forall \lambda \in \mathbb{R} $ 
-    \item $ f(x,y,z) $ \textcolor{Col1}{ομογενής βαθμού} $ \textcolor{Col1}{\rho} 
-      \Leftrightarrow f(\lambda x, \lambda y, \lambda z), \; \forall \lambda \in 
-      \mathbb{R} $ 
-  \end{enumerate}
-\end{dfn}
-
-\begin{thm}[Euler]
-  Αν $ f(x,y) $ είναι ομογενής βαθμού $ \rho $ τότε $x f_{x} + y f_{y} = \rho f $.
-\end{thm}
-\begin{prop}
-  Αν $ f(x,y) $ είναι ομογενής βαθμού $ \rho $ τότε οι συναρτήσεις 
-  $f_{x}, f_{y} $ είναι ομογενείς βαθμού $ \rho -1 $.
-\end{prop}
-\begin{proof}
-\item {}
-  $ f $ ομογενής βαθμού $ \rho \overset{\text{(Euler)}}{\Rightarrow} xf_{x}+yf_{y}= 
-  \rho f \xRightarrow[\text{ως προς $x$}]{\text{παρ/ζω}} f_{x} + x f_{xx} + y f_{yx} =
-  \rho f_{x} \Rightarrow xf_{xx} + yf_{xy} = (\rho -1)f_{x} $
-
-  $ f $ ομογενής βαθμού $ \rho \overset{\text{(Euler)}}{\Rightarrow} xf_{x}+yf_{y}= 
-  \rho f \xRightarrow[\text{ως προς $y$}]{\text{παρ/ζω}} xf_{xy} + f_{y} + y f_{yy} =
-  \rho f_{y} \Rightarrow xf_{yx} + yf_{yy} = (\rho -1)f_{y} $
-\end{proof}
-
-\begin{exercise}
-  Έστω $ f(x,y) $, συνεχής, με συνεχείς μερικές παραγώγους 2ης τάξης, 
-  ομογενής βαθμού $\rho$. Να δείξετε ότι ισχύει \[ x^{2}f_{xx}+2xyf_{xy}+y^{2}f_{yy} =
-  \rho (\rho -1)f \]
-\end{exercise}
-\begin{solution}
-\item {}
-  $f$ ομογενής βαθμού $\rho \Rightarrow f_{x}, f_{y} $ ομογενείς βαθμού $\rho -1$.
-  Οπότε ισχύει το θεώρημα Euler για αυτές, άρα:
-  \begin{align*}
-    \sysdelim.\}\systeme{x f_{xx}+yf_{xy}=(\rho -1)f_{x}, x f_{yx}+yf_{yy}=
-(\rho -1)f_{y}} \Rightarrow \sysdelim.\}
-\systeme*{x^{2} f_{xx} \+ xyf_{xy}=(\rho-1)xf_{x},yxf_{yx} \+ y^{2}f_{yy}=
-(\rho -1)yf_{y}} \xRightarrow{(+)} x^{2}f_{xx}+2xyf_{xy}+y^{2}f_{yy}=
-(\rho -1)(xf_{x}+yf_{y})
-\end{align*} 
-Όμως επειδή $f$ ομογενής έχουμε ότι $ xf_{x}+yf_{y}= \rho f $. Οπότε
-\[
-  x^{2}f_{xx}+2xyf_{xy}+y^{2}f_{yy} = \rho (\rho -1)f
-\] 
-\end{solution}
-
-
-\begin{exercise}
-  Αν $ u = u(x,y) $ και $ v=v(x,y) $ ομογενείς βαθμού $ \rho $, 
-  τότε να δείξετε ότι $ \forall f(u,v) $ με συνεχείς μερικές παραγώγους 1ης τάξης
-  ισχύει 
-  \[
-    xf_{x}+yf_{y}= \rho (u f_{u}+vf_{v}) 
-  \] 
-\end{exercise}
-\begin{solution}
-\item {}
-  Έχουμε ότι για τις συναρτήσεις $u(x,y) $ και $v(x,y)$ είναι ομογενείς 
-  βαθμού $\rho$, οπότε:
-  \[
-  \sysdelim.\}\systeme{xu_{x}+yu_{y}= \rho u, xv_{x}+yv_{y}= \rho v} 
-\] 
-Για την συνάρτηση $f$ έχουμε ότι είναι σύνθετη με $ f=f(u,v) $ και 
-$ u = u(x,y) $ και $ v=v(x,y) $, οπότε οι μερικές παράγωγοί της δίνονται από
-το δέντρο της και είναι:
-\[
-  \left.
-    \begin{tabular}{l}
-      $f_{x}=f_{u}u_{x}+f_{v}v_{x}$ \\
-      $f_{y}=f_{u}u_{y}+f_{v}v_{y}$
-    \end{tabular}
-  \right\}
-  \Rightarrow xf_{x}+yf_{y} = \underbrace{(xu_{x}+yu_{y})}_{\rho
-  u}f_{u}+\underbrace{(xv_{x}+yv_{y})}_{\rho v}f_{v}
-\] 
-Άρα 
-\[
-  xf_{x}+yf_{y} = \rho (uf_{u}+vf_{v}) 
-\] 
-\end{solution}
-
-\begin{exercise}
-  Έστω $ u = u(x,y) $ και $ v = v(x,y) $, ομογενείς βαθμού $\rho$, με 
-  $ u(x,y) \neq 0, v(x,y) \neq 0, \; \forall (x,y) \in \mathbb{R}^{2} $. 
-  Να δείξετε ότι 
-  \[
-    udv -v du = \frac{1}{\rho} \pdv{(u,v)}{(x,y)} (xdy-ydx) 
-    \quad \text{όπου} \quad  \pdv{(u,v)}{(x,y)} = 
-    \begin{vmatrix}
-      u_{x} & u_{y} \\ v_{x} & v_{y} 
-    \end{vmatrix} 
-  \] 
-\end{exercise}
-\begin{solution}
-  \[
-    \left.
-      \begin{matrix}
-        du=u_{x}dx+u_{y}dy \\
-        dv=v_{x}dx+v_{y}dy
-      \end{matrix} 
-    \right\} \Rightarrow 
-    \left.
-      \begin{matrix}
-        vdu=vu_{x}dx+vu_{y}dy \\ 
-        udv=uv_{x}dx+uv_{y}dy
-      \end{matrix} 
-    \right\} \overset{(-)}{\Rightarrow} 
-    udv -vdu = (uv_{x}-vu_{x})dx+(uv_{y}-vu_{y})dy 
-  \] 
-
-  \begin{align*}
-    u \quad \text{ομογενής βαθμού $\rho$} \Rightarrow xu_{x}+yu_{y}= 
-    \rho u \Rightarrow u &= \frac{1}{\rho} (xu_{x}+yu_{y})   \\
-    v \quad \text{ομογενής βαθμού $\rho$} \Rightarrow xv_{x}+yv_{y}= 
-    \rho v \Rightarrow u &= \frac{1}{\rho} (xv_{x}+yv_{y})   
-  \end{align*} 
-  Οπότε με αντικατάσταση, έχουμε:
-  \begin{align*}
-    udv - vdu &= \frac{1}{\rho} (u_{y}v_{x}-u_{x}v_{y})ydx+ \frac{1}{\rho}
-    (u_{x}v_{y}-u_{y}v_{x})xdy \\ 
-              &=- \frac{1}{\rho} (u_{x}v_{y}-u_{y}v_{x})ydx+ \frac{1}{\rho}
-              (u_{x}v_{y}-u_{y}v_{x})xdy \\
-              &= \frac{1}{\rho} (u_{x}v_{y}-u_{y}v_{x})(xdy-ydx) \\
-              &= \frac{1}{\rho} \cdot \pdv{(u,v)}{(x,y)} (xdy-ydx)
-  \end{align*}
-\end{solution}
-
-
-
-
-
 
 \end{document}
-
