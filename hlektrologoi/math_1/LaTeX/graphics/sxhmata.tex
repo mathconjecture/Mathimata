@@ -7,7 +7,59 @@
 \begin{document}
 
 
+\begin{tikzpicture}[tangent/.style=
+  {decoration=
+    {markings,
+      mark=at position #1 with
+      {\coordinate (tangent point-\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}) at (0pt,0pt);
+        \coordinate (tangent unit vector-\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}) at (1,0pt);
+        \coordinate (tangent orthogonal unit vector-\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}) at (0pt,1);
+      }
+    },
+  postaction=decorate},
+  use tangent/.style={shift=(tangent point-#1),
+    x=(tangent unit vector-#1),
+  y=(tangent orthogonal unit vector-#1)},
+  use tangent/.default=1]
 
+  \draw[stealth-stealth] (0,5) -- (0,0) node (O) {} -- (5,0) ;
+  \path[tangent=0.4,blue!50] (0.8,0.8) to[out=90, in=180] (3.5,3.5) node[above
+    right]{$f(x)$} ;
+  \filldraw[use tangent] (0,0) node (p){} circle (1pt);
+  \draw[thick,use tangent,Col1!50] (-2,0) node (a) {} -- (3,0) node (d) {} ;
+  \draw[dashed] (O|-p) node[left]{$f(x)$} -- (p) -- (O-|p) node[below]{$x$};
+  \node[left]  at (3.5,4.5) {};
+  \path[tangent=0.4] (0.8,0.8) to[out=90, in=180] node[pos=0.7] (p1) {} 
+    (3.5,3.5) ;
+  \filldraw (p1) circle (1pt);
+  \draw[dashed] (O|-p1) node[left]{$f(x+\Delta x)$} -- (p1) -- (O-|p1) 
+    node[below]{$x+\Delta x$};
+  \path [name path=vert] (p1.center) -- ($(p1)+(0,2)$) ;
+  \node[use tangent,circle,inner sep=0pt,minimum size=0pt] (c) at (0,0) {} ;
+  \path[name path=tang] (a) -- (tangent cs:node=c,point={(a)},solution=2) -- (d.center) ;
+  \fill [name intersections={of=tang and vert,by=b}] (b) circle (1pt);
+  \draw[ultra thick,Col1] (p1.center) -- node[pos=0.6,right] {$\varepsilon$} (b.center) ;
+  \path[name path=vert1] (p1.center) -- (O-|p1) ;
+  \path[name path=hor] (p.center) -- ($(p)+(3,0)$) ;
+  \fill[name intersections={of=hor and vert1,by=x}] (x)  ;
+  \draw[dashed] (p) -- (x) ;
+  \draw[decorate,decoration={brace,amplitude=3pt,raise=4pt,mirror}] (p.center) -- (x)
+    node[midway,below=5pt] {\smaller{$\Delta x$}} ;
+  \draw[decorate,decoration={brace,amplitude=3pt,raise=4pt}] (p1.center) -- (x)
+    node[midway,right=5pt,Col1] {\smaller{$\Delta y$}} ;
+  \draw[decorate,decoration={brace,amplitude=3pt,raise=28pt}] (b.center) -- (x)
+    node[midway,right=29pt,Col1] {\smaller{$dy$}} ;
+  \fill (b)++(0.9,0) coordinate (b1)  ;
+  \fill (x)++(0.9,0) coordinate (x1)  ;
+  \draw pic[angle radius=10pt,fill,Col2!45,angle eccentricity=1.5]{angle=x--p--b};
+  \path pic["\smaller$\phi$",angle radius=10pt,Col1!75,angle eccentricity=1.5]
+    {angle=x--p--b};
+  \draw[dashed] (b) -- (b1) ;
+  \draw[dashed] (b) -- (b1) ;
+  \draw[dashed] (x) -- (x1) ;
+  \draw[thick,tangent=0.4,blue!50] (0.8,0.8) to[out=90, in=180] (3.5,3.5) node[above
+    right]{$f(x)$} ;
+\end{tikzpicture}
 
 
 

@@ -17,6 +17,11 @@
         \end{minipage}\hfill\begin{minipage}[c]{0.67\linewidth}\raggedright
         #2
     \end{minipage}}
+\newcommand{\twocolumnsidesccd}[2]{\begin{minipage}[c]{0.25\linewidth}\raggedright
+        #1
+        \end{minipage}\hfill\begin{minipage}[c]{0.67\linewidth}\raggedright
+        #2
+    \end{minipage}}
 
 \begin{document}
 
@@ -254,7 +259,6 @@
 οπότε, το ορθογώνιο με διαστάσεις $ x=a/2 $ και $ y=h/2 $ έχει μέγιστο εμβαδό: 
 $ E_{\max} = {ah}/{4}  $.
 \end{solution}
-%todo να γραψω τις υπολοιπες ασκησεις
 
 \begin{exercise}
   {\bfseries \boldmath Να εγγραφεί ορθογώνιο παραλληλόγραμμο με μέγιστο εμβαδό στην
@@ -402,7 +406,7 @@ $ E_{\max} = {ah}/{4}  $.
 
 \begin{exercise}
   {\bfseries\boldmath Δυο πόλεις Α και Β βρίσκονται προς το ίδιο μέρος της όχθης ενός
-		ποταμού και απέχουν απ᾽ αυτήν 10 και 15 χιλιόμετρα αντίστοιχα. Οι
+		ποταμού και απέχουν από αυτήν 10 και 15 χιλιόμετρα αντίστοιχα. Οι
 		κάθετες προβολές των δύο πόλεων στην όχθη απέχουν 20 χιλιόμετρα. Οι δύο
 		πόλεις πρέπει να εφοδιαστούν με νερό από ένα εργοστάσιο που θα
 		κατασκευαστεί στην όχθη του ποταμού. Σε ποιο σημείο της όχθης πρέπει να
@@ -487,6 +491,107 @@ $ E_{\max} = {ah}/{4}  $.
   \end{align*}
   άρα ελάχιστο.
 \end{solution}
+
+\begin{exercise}
+  Να εγγραφεί σε κύκλο διαμέτρου $d$, ορθογώνιο με βάση $b$ και ύψος $h$
+  ώστε το γινόμενο $ b h^{2} $ να είναι μέγιστο.
+\end{exercise}
+\begin{solution}
+\item {}
+  \twocolumnsidesccd{
+    \begin{tikzpicture}[scale=0.6]
+      \draw[very thick,name path=circ] (0,0) circle (3cm) ;
+      \path[name path=rect] (-3.5,-1.5) rectangle (3.5,1.5) ;
+      \fill [name intersections={of=rect and circ,name=tom}] (tom-1) circle (1pt);
+      \fill (tom-2) circle (1pt) ;
+      \fill (tom-3) circle (1pt) ;
+      \fill (tom-4) circle (1pt) ;
+      \draw[thin,Col1] (tom-1) -- (tom-2) -- (tom-3) -- (tom-4) -- cycle ;
+      \draw[thin,decorate,decoration={brace,amplitude=5pt,raise=4pt}] 
+        ([xshift=3pt]tom-3) -- ([xshift=-3pt]tom-4) node[midway,above=8pt] {$b$} ;
+      \draw[thin,decorate,decoration={brace,amplitude=5pt,raise=4pt}] 
+        ([yshift=-3pt]tom-2) -- ([yshift=3pt]tom-3) node[midway,right=8pt] {$h$} ;
+      \draw[dashed] (tom-3) -- coordinate[midway] (c) node [pos=0.6,above] {d} (tom-1) ;
+      \fill (c) node[above left] {O} circle (2pt) ;
+    \end{tikzpicture}
+    }{
+    Από το πυθαγόρειο θεώρημα έχουμε ότι $ d^{2}=b^{2}+h^{2} \Rightarrow
+    h^{2}=d^{2}-b^{2} $ οπότε η ποσότητα $ bh^{2} $ γίνεται $ bh^{2}=b(d^{2}-b^{2}) =
+    d^{2}b-b^{3} $. Άρα ζητάμε μέγιστο για τη συνάρτηση $ f(b) = d^{2}b-b^{3} $.
+    \begin{gather*}
+      f'(b) = d^{2}-3b^{2} \quad \text{και} \quad f''(b)=-6b \\
+      f'(b)=0 \Leftrightarrow d^{2}-3b^{2}=0 \Leftrightarrow  b^{2} = \frac{d^{2}}{3}
+      \overset{b>0}{\Rightarrow} b= \frac{\sqrt{3}}{3} d 
+    \end{gather*}
+    Τότε $ h^{2} = d^{2}- \frac{d^{2}}{3} = \frac{2d^{2}}{3}
+    \overset{h>0}{\Rightarrow} h = \sqrt{\frac{2}{3}} d $.
+  }
+
+    Ελέγχουμε ότι πρόκειται για μέγιστο.
+    $ f''\left(\frac{\sqrt{3}}{3} d\right) = -6 \frac{\sqrt{3}}{3} d = 
+    -2 \sqrt{3} d < 0 $, άρα μέγιστο.
+\end{solution}
+
+\begin{exercise} 
+  Να προσδιοριστεί ο λόγος της ακτίνας προς το ύψος ενός κλειστού
+  κυκλικού ορθού κυλινδρικού δοχείου χωρητικότητας $c$ μονάδων όγκου, αν
+  θέλουμε η επιφάνεια του δοχείου να είναι ελάχιστη.
+\end{exercise}
+\begin{solution}
+\item {}
+  \twocolumnsidesccd{
+    \begin{tikzpicture}[scale=0.7]
+      \node (0) at (-2, 0) {};
+      \node (1) at (2, 0) {};
+      \node (2) at (-2, 0) {};
+      \node (3) at (2, 0) {};
+      \node (4) at (-2, 4) {};
+      \node (5) at (2, 4) {};
+      \node (6) at (-2, 4) {};
+      \node (7) at (2, 4) {};
+      \node (8) at (-2, 4) {};
+      \node (9) at (2, 4) {};
+      \node (10) at (-2, 4) {};
+      \node (11) at (2, 4) {};
+      \node (12) at (0, 4) {};
+      \draw (2.center) to [bend right=90] (3.center);
+      \draw (3.center) to [bend right=90] (2.center);
+      \draw (10.center) to [bend left=90] (11.center);
+      \draw (11.center) to [bend left=90] (10.center);
+      \draw (11.center) to node[midway,right] {h} (3.center);
+      \draw (10.center) to (2.center);
+      \draw (12.center) to node[midway,above] {r} (11.center);
+    \end{tikzpicture}
+    }{
+    Ο όγκος του δοχείου είναι $ V= \pi r^{2}h \Leftrightarrow c = \pi r^{2}h
+    \Leftrightarrow h = \frac{c}{\pi r^{2}} $. 
+
+    Το εμβαδό του δοχείου είναι $ S=2 \pi r^{2}+2 \pi r h = 2 \pi r^{2} + 
+    2 \pi r \frac{c}{\pi r^{2}}$ 
+
+    Επομένως $ S(r) = 2 \pi r^2 + \frac{2c}{r} $. Ζητάμε ελάχιστο.
+    \begin{gather*}
+      S'(r) = 4 \pi r - \frac{2c}{r^2} \quad \text{και} \quad S''(r) = 4 \pi +
+      \frac{4c}{r^{3}} \\
+      S'(r)=0 \Leftrightarrow 4 \pi r - \frac{2c}{r^{2}} = 0 \Leftrightarrow 4 \pi r^{3} =
+      2c \Leftrightarrow r^{3} = \frac{c}{2 \pi} \Leftrightarrow r =
+      \sqrt[3]{\frac{c}{2} \pi}
+    \end{gather*}
+  }
+  Βρίσκουμε και το $h$. Έχουμε $ h = \frac{c}{\pi \cdot (\frac{c}{2 \pi} )^{2/3}} =
+  \frac{2^{2/3} \cdot \pi ^{2/3} c}{\pi \cdot c^{2/3}} = 
+  \frac{4^{1/3} c^{1/3}}{\pi ^{1/3}} = \left(\frac{4c}{\pi} \right)^{1/3} $  
+
+  Ελέγχουμε ότι πρόκειται για μέγιστο.
+  \[
+    S''\left(\Bigl(\frac{c}{2 \pi} \Bigr)^{1/3}\right) = 4 \pi + \frac{4c}{\frac{c}{2 \pi}} = 12 \pi >0
+  \] 
+  Τελικά ο λόγος $ \frac{r}{h} $ θα είναι 
+  \[ \frac{r}{h} = \frac{(\frac{c}{2 \pi})^{1/3} }{(\frac{4c}{\pi} )^{1/3}}
+  = \frac{1}{2} \].
+\end{solution}
+
+
 
 
 
