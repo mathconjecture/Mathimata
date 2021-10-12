@@ -15,9 +15,11 @@
 \section*{Βασικό Παράδειγμα ομαλού Sturm Liouville}
 
 
+\begin{mybox3}
 \begin{example}
   $ y''(x) + \lambda y(x)=0 $ με $ y(0)=y(L)=0 $.
 \end{example}
+\end{mybox3}
 \begin{solution}
   Διακρίνουμε περιπτώσεις για τις διάφορες τιμές του $ \lambda $.
   \begin{myitemize}
@@ -71,9 +73,11 @@
   \end{myitemize}
 \end{solution}
 
+\begin{mybox3}
 \begin{example}
   $ y''(x) + \lambda y(x)=0 $ με $ y'(0)=y'(L)=0 $.
 \end{example}
+\end{mybox3}
 \begin{solution}
   Διακρίνουμε περιπτώσεις για τις διάφορες τιμές του $ \lambda $.
 \begin{myitemize}
@@ -132,9 +136,11 @@
   \end{myitemize}
 \end{solution}
 
+\begin{mybox3}
 \begin{example}
   $ y''(x) + \lambda y(x)=0 $ με $ y(0)=y'(L)=0 $.
 \end{example}
+\end{mybox3}
 \begin{solution}
   Διακρίνουμε περιπτώσεις για τις διάφορες τιμές του $ \lambda $.
   \begin{myitemize}
@@ -192,9 +198,11 @@
   \end{myitemize}
 \end{solution}
 
+\begin{mybox3}
 \begin{example}
   $ y''(x) + \lambda y(x)=0 $ με $ y'(0)=y(L)=0 $.
 \end{example}
+\end{mybox3}
 \begin{solution}
   Διακρίνουμε περιπτώσεις για τις διάφορες τιμές του $ \lambda $.
   \begin{myitemize}
@@ -252,9 +260,14 @@
   \end{myitemize}
 \end{solution}
 
+\section*{Περιοδικές Συνοριακές Συνθήκες}
+
+
+\begin{mybox3}
 \begin{example}
   $ y''(x) + \lambda y(x)=0 $ με $ y(-L)=y(L) $ και $ y'(-L)=y'(L) $.
 \end{example}
+\end{mybox3}
 \begin{solution}
   Διακρίνουμε περιπτώσεις για τις διάφορες τιμές του $ \lambda $.
   \begin{myitemize}
@@ -270,7 +283,7 @@
         y'(-L)=y'(L) \Leftrightarrow c_{2} = c_{2}
       \]
       Άρα $ \lambda_{0}=0 $ είναι ιδιοτιμή και έστω $ y_{0}(x)=c_{0} $ η αποδεκτή, 
-      μη τετριμμένη λύση. 
+      μη τετριμμένη λύση, με αντίστοιχη ιδιοσύναρτηση την $y_{0}=1 $. 
     \item Αν $ \bm{\lambda < 0} \Rightarrow \lambda = -k^{2} $ με $ k>0 $ και τότε η 
       εξίσωση γίνεται $ y''(x) -k^{2}y(x)=0$ με λύση 
       \begin{align*} 
@@ -309,23 +322,97 @@
             c_{1} \cos{(k(-L))} + c_{2} \sin{(k(-L))} = c_{1} \cos{(kL)} + 
             c_{2} \sin{(kL)} \\
             - c_{1} k \sin{(k(-L))} + c_{2} k \cos{(k(-L))} = - c_{1}k \sin{(kL)} + 
-            c_{2} \cos{(kL)}
+            c_{2} k\cos{(kL)}
           \end{matrix} 
         \right\} \Leftrightarrow 
       \]
       \[
         \left.
           \begin{matrix}
-            c_{1} \cos{(-(kL))} + c_{2} \sin{(-(kL))} = c_{1} \cos{(kL)} + c_{2} \sin{(kL)}
-            \\
+            c_{1} \cos{(-kL)} + c_{2} \sin{(-kL)} = c_{1} \cos{(kL)} + c_{2} 
+            \sin{(kL)} \\
             - c_{1} k \sin{(-kL)} + c_{2} k \cos{(-kL)} = - c_{1}k \sin{(kL)} + 
-            c_{2} \cos{(kL)}
+            c_{2} k\cos{(kL)}
           \end{matrix} 
-        \right\}
+        \right\} \Leftrightarrow 
       \]
+      \[
+        \left.
+          \begin{matrix}
+            c_{1} \cos{(kL)} - c_{2} \sin{(kL)} = c_{1} \cos{(kL)} + c_{2} \sin{(kL)} \\
+            c_{1} k \sin{kL} + c_{2} k \cos{kL} = - c_{1}k \sin{(kL)} + c_{2} k\cos{(kL)}
+          \end{matrix}
+        \right\} \Leftrightarrow 
+      \]
+      \[
+        \left.
+          \begin{matrix}
+            2 c_{2} \sin{(kL)} = 0 \\
+            2 c_{1} k \sin{(kL)} = 0
+          \end{matrix} 
+        \right\} \Leftrightarrow 
+        \left.
+          \begin{matrix}
+            c_{2} = 0 \quad \text{ή} \quad \sin{(kL)} = 0 \\
+            c_{1} = 0 \quad \text{ή} \quad \sin{(kL)} = 0
+          \end{matrix} 
+        \right\} \Leftrightarrow 
+      \]
+      \[
+        \left.
+          \begin{matrix}
+            c_{2} = 0 \\
+            c_{1} = 0
+          \end{matrix} 
+        \right\} \; \text{ή} \; 
+        \left.
+          \begin{matrix}
+            c_{2} = 0 \\
+            \sin{(kL)} = 0 
+          \end{matrix} 
+        \right\} \; \text{ή} \; 
+        \left.
+          \begin{matrix}
+            \sin{(kL)} = 0 \\
+            c_{1} = 0 
+          \end{matrix} 
+        \right\} \; \text{ή} \; 
+        \left.
+          \begin{matrix}
+            \sin{(kL)} = 0 \\
+            \sin{(kL)} = 0 
+          \end{matrix} 
+        \right\} \Leftrightarrow 
+      \]
+      \[
+        \text{απορ.} \; \text{ή} \; 
+        \left.
+          \begin{matrix}
+            k_{n} = \frac{n \pi}{L} \\
+            y_{n}(x) = c_{n} \cos{\left(\frac{n \pi}{L}\right)} 
+          \end{matrix} 
+        \right\} \; \text{ή} \; 
+        \left.
+          \begin{matrix}
+            k_{n} = \frac{n \pi}{L} \\
+            y_{n}(x) = c_{n} \sin{\left(\frac{n \pi}{L}\right)} 
+          \end{matrix} 
+        \right\} \; \text{ή} \;
+        \left.
+          \begin{matrix}
+            k_{n} = \frac{n \pi}{L} \\
+            y_{n}(x) = c_{1} \cos{\left(\frac{n \pi}{L} x\right)} + c_{2} 
+            \sin{\left(\frac{n \pi}{L} x\right)} 
+          \end{matrix}
+        \right\} 
+      \]
+      οπότε, το πρόβλημα έχει ιδιοτιμές $ \lambda _{n} = \frac{n^{2} \pi ^{2}}{L^{2}} $
+      και ιδιοσυναρτήσεις τις 
+      $ y_{n}(x) = c_{1} \cos{\left(\frac{n \pi}{L} x\right)} + c_{2} 
+      \sin{\left(\frac{n \pi}{L} x\right)} $ για κάθε $ c_{1}, c_{2} \in \mathbb{R} $ 
+      και για κάθε $ n = 1,2,3,\ldots$.
   \end{myitemize}
 \end{solution}
-
 
 
 
