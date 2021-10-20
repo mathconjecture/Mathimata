@@ -1,0 +1,47 @@
+\input{preamble/preamble.tex}
+\input{preamble/definitions.tex}
+
+\thispagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+    \minibox[frame]{\large\bfseries Ασκήσεις στο Άθροισμα Διανυσματικών Χώρων} 
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+    \item Έστω $ V = \mathbb{R}^{3} $ και $ W_{1} = \{(x_{1},0,x_{2})\in 
+        \mathbb{R}^{3} \mid x_{1}, x_{2} \in \mathbb{R}\}  $ και 
+        $ W_{2} = \{(0,y_{1},y_{2}) \in \mathbb{R}^{3} \mid y_{1}, y_{2} \in
+        \mathbb{R}  \}  $. Να δείξετε ότι 
+        \begin{enumerate}[i)]
+            \item $ W_{1} \leq \mathbb{R}^{3} $
+            \item $ W_{2} \leq \mathbb{R}^{3} $
+            \item $ \mathbb{R}^{3} = W_{1}+W_{2} $
+        \end{enumerate}
+
+    \item Έστω $ V = \mathbb{R}^{3} $ και οι υπόχωροί του $ W_{1} = 
+        \{ (x,0,0) \in \mathbb{R}^{3} \mid x \in \mathbb{R}\} $, $ W_{2} = 
+        \{ (0,0,z) \mid z \in \mathbb{R} \} $ και 
+        $ W_{3} = \{ (x,y,x) \mid x,y \in \mathbb{R} \} $. Να δείξετε ότι 
+        \begin{enumerate}[i)]
+            \item $ W_{1} \cap W_{2} = W_{2} \cap W_{3} = W_{3} \cap W_{1} = 
+                \{ \mathbf{0} \} $
+            \item $ \mathbb{R}^{3} = W_{1}+W_{2}+W_{3} $
+            \item Να εξετάσετε αν $ \mathbb{R}^{3} = W_{1} \oplus W_{2} \oplus W_{3} $
+        \end{enumerate}
+
+    \item Έστω διανυσματικός χώρος $V$ και $ W_{1}, W_{2} $ υπόχωροί του, τέτοιοι ώστε 
+        $ V = W_{1} \oplus W_{2} $. Αν $ W_{1} \leq W \leq V $, να δείξετε ότι 
+        $ W = W_{1} \oplus (W_{2} \cap W_{3}) $.
+
+        \hfill \textbf{Υπόδειξη:} Για να δείξετε ότι $ W = W_{1} + (W_{2}\cap W_{3}) $, 
+        δείξτε ότι $ W \leq W_{1} + (W_{2} \cap W_{3}) $ και 
+        $ W_{1} + (W_{2} \cap W_{3}) \leq W $
+\end{enumerate}
+
+\end{document}
+
+

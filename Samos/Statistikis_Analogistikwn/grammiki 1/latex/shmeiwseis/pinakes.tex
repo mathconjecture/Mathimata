@@ -1,0 +1,209 @@
+\input{preamble_ask.tex}
+\input{definitions.tex}
+
+
+% \DeclareMathOperator{\r}{r}
+
+\begin{document}
+
+\chapter*{Πίνακες}
+
+\section*{Αντιστρέψιμοι Πίνακες}
+
+\begin{dfn}
+  Έστω $ A \in \textbf{M}_{n}(\mathbb{R}) $. Ο πίνακας $ A $ λέγεται
+  \textcolor{Col1}{αντιστρέψιμος} (ή μη ιδιάζων) αν υπάρχει πίνακας 
+  $ B \in \textbf{M}_{n}(\mathbb{R}) $ τέτοιος ώστε 
+  \[
+    A\cdot B = B \cdot A = I_{n} 
+  \] 
+  Στην περίπτωση αυτή, ο πίνακας $ B $ καλείται \textcolor{Col1}{αντίστροφος} του $A$. 
+  Αν ο Α δεν έχει αντίστροφο, τότε λέγεται μη αντιστρέψιμος (ή ιδιάζων).
+\end{dfn}
+
+\begin{prop}
+  Έστω $ A \in \textbf{M}_{n}(\mathbb{R}) $. Αν ο $A$ έχει αντίστροφο, τότε αυτός είναι 
+  \textbf{μοναδικός}. 
+\end{prop}
+
+\begin{rem}
+  Για αυτό, αν $ A \in \textbf{M}_{n}(\mathbb{R}) $ αντιστρέψιμος, τότε τον μοναδικό 
+  αντίστροφο του $ A $ τον συμβολίζουμε με $ A^{-1} $.
+\end{rem}
+
+\begin{dfn}
+  Έστω $ A \in \textbf{M}_{n}(\mathbb{R}) $ αντιστρέψιμος πίνακας και έστω $ k \in
+  \mathbb{N} $. Ορίζουμε $ A^{-k} = (A^{-1})^{k} $ 
+\end{dfn}
+
+\begin{prop}
+  Ισχύουν τα ακόλουθα:
+  \begin{myitemize}
+    \item Έστω $ A \in \textbf{M}_{n}(\mathbb{R}) $ αντιστρέψιμος πίνακας. Τότε ο 
+      $ A^{-1} $ είναι αντιστρέψιμος και $ (A^{-1})^{-1} = A $
+    \item Για κάθε $ n \in \mathbb{N} $, ο $ I_{n} $ είναι αντιστρέψιμος και 
+      $ (I_{n})^{-1}=I_{n} $.
+  \end{myitemize}
+\end{prop}
+
+\begin{prop}
+  Έστω $ A, B \in \textbf{M}_{n}(\mathbb{R}) $ δύο αντιστρέψιμοι πίνακες. Τότε το 
+  γινόμενο $ AB $ είναι αντιστρέψιμος πίνακας και 
+  \[ 
+    (AB)^{-1}=B^{-1}\cdot A^{-1} 
+  \]
+\end{prop}
+
+\begin{cor}
+  Αν $ A_{1}, A_{2}, \ldots, A_{k} \in \textbf{M}_{n}(\mathbb{R}) $ είναι 
+  αντιστρέψιμοι πίνακες, τότε το γινόμενο $ A_{1}\cdot A_{2}\cdots A_{k} $ είναι 
+  αντιστρέψιμος πίνακας και 
+  \[
+    (A_{1}\cdot A_{2}\cdots A_{k})^{-1} = (A_{k})^{-1}\cdots (A_{2})^{-1}\cdot (A_{1})^{-1}
+  \] 
+\end{cor}
+
+\begin{prop}
+  Έστω $ A \in \textbf{M}_{n}(\mathbb{R}) $ αντιστρέψιμος και έστω $ k \in \mathbb{R}- \{
+  0 \}$. Τότε ο πίνακας $ kA $ είναι αντιστρέψιμος και 
+  \[
+    (kA)^{-1} = k A^{-1} 
+  \] 
+\end{prop}
+
+\begin{rem}
+  Προσοχή! Αν $ A, B \in \textbf{M}_{n}(\mathbb{R}) $ αντιστρέψιμοι πίνακες, τότε 
+  δεν ισχύει απαραίτητα ότι το άθροισμα $ A+B $ είναι αντιστρέψιμος πίνακας. Πράγματι, 
+  οι πίνακες $ A=I_{2} $ και $ B=-I_{2} $, είναι αντιστρέψιμοι, όμως $ A+B= O_{2} $ μη 
+  αντιστρέψιμος, αφού για κάθε $ C \in \textbf{M}_{2}(\mathbb{R}) $ έχουμε ότι 
+  $ O_{2}\cdot C=O_{2} $.
+\end{rem}
+
+\section*{Ικανές και Αναγκαίες Συνθήκες για να είναι ένας Πίνακας Αντιστρέψιμος}
+
+\begin{thm}
+  Έστω $ A \in \textbf{M}_{n}(\mathbb{R}) $. Τότε ο $A$ είναι αντιστρέψιμος αν και 
+  μόνον αν $ R_{A}=I_{n} $.
+\end{thm}
+
+\begin{cor}
+  Έστω $ A \in \textbf{M}_{n}(\mathbb{R}) $. Τότε ο $A$ είναι αντιστρέψιμος αν και 
+  μόνον αν $ r(A)=n $, όπου $ r(A) $ ο βαθμός του $A$.
+\end{cor}
+
+\begin{thm}
+  Έστω $ A \in \textbf{M}_{n}(\mathbb{R}) $. Τότε ο $A$ είναι αντιστρέψιμος αν και 
+  μόνον αν ο $A$ είναι γινόμενο στοιχειωδών πινάκων.
+\end{thm}
+
+\begin{thm}
+  Έστω $ A \in \textbf{M}_{n}(\mathbb{R}) $. Τότε ο $A$ είναι αντιστρέψιμος αν και 
+  μόνον αν το ομογενές σύστημα $ AX=Ο_{n\times 1} $ έχει μοναδική λύση τη μηδενική 
+  (τετριμμένη).
+\end{thm}
+
+\begin{thm}
+  Έστω $ A \in \textbf{M}_{n}(\mathbb{R}) $. Τότε ο $A$ είναι αντιστρέψιμος αν και 
+  μόνον αν για κάθε $ B \in \textbf{M}_{n\times 1}(\mathbb{R}) $ το σύστημα 
+  $ AX=B $ είναι συμβιβαστό.
+\end{thm}
+
+\begin{thm}
+  Έστω $ A \in \textbf{M}_{n}(\mathbb{R}) $. Τότε ο $A$ είναι αντιστρέψιμος αν και 
+  μόνον αν για κάθε $ B \in \textbf{M}_{n\times 1}(\mathbb{R}) $ το σύστημα 
+  $ AX=B $ έχει μοναδική λύση.
+\end{thm}
+
+\section*{Ανάστροφος - Συμμετρικός - Ορθογώνιος}
+
+\begin{dfn}
+  Έστω $ A = (a_{ij}) \in \textbf{M}_{m \times n}(\mathbb{R}) $. Ο ανάστροφος του $A$, 
+  συμβολικά $ A^{T} $, είναι ο $ n \times m $ πίνακας που προκύπτει δια εναλλαγής των
+  γραμμών και στηλών του $A$. Συνεπώς, $ A^{T}=(a_{ji}), \; \forall i=1,2,\ldots, n $ 
+  και $ j=1,2,\ldots, m $. 
+\end{dfn}
+
+\begin{rem}
+  Αν $ A \in \textbf{M}_{n}(\mathbb{R}) $ είναι διαγώνιος, τότε $ A^{T}=A $. 
+  Συγκεκριμένα, $ I_{n}^{T}=I_{n} $, για κάθε $ n \in \mathbb{N} $. 
+\end{rem}
+
+\begin{thm}[Ιδιότητες Ανάστροφου Πίνακα]
+\item {}
+  \begin{enumerate}[i)]
+    \item $ (A^{T})^{T} = A, \; \forall A \in \textbf{M}_{m \times n}(\mathbb{R}) $ 
+    \item $ (kA)^{T} = kA^{T}, \; \forall A \in \textbf{M}_{m \times n}(\mathbb{R}), \;
+      \forall k \in \mathbb{R} $ 
+    \item $ (A+B)^{T} = A^{T}+B^{T}, \; \forall A,B \in \textbf{M}_{m \times
+      n}(\mathbb{R}) $ 
+    \item $ (AB)^{T} = B^{T}\cdot A^{T}, \; \forall A \in \textbf{M}_{m \times
+      n}(\mathbb{R}) $ και $ B \in \textbf{M}_{n \times p}(\mathbb{R}) $
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}
+  Έστω $ A \in \textbf{M}_{n}(\mathbb{R}) $. Τότε ο $ A^{T} $ είναι αντιστρέψιμος 
+  αν και μόνον αν ο $A$ είναι αντιστρέψιμος. Επιπλέον, $ (A^{T})^{-1}=(A^{-1})^{T} $.
+\end{thm}
+
+\begin{dfn}
+  Ένας $ n \times n $ πίνακας $A$, είναι:
+  \begin{myitemize}
+    \item συμμετρικός αν $ A^{T}=A  $
+    \item αντισυμμετρικός αν $ A^{T}=-A  $
+    \item ορθογώνιος αν $ AA^{T}=A^{T}A = I_{n} $ ισοδύναμα αν $ A^{T}=A^{-1} $.
+  \end{myitemize}
+\end{dfn}
+
+\begin{rem}
+\item {}
+  \begin{myitemize}
+    \item $ A=(a_{i}) \in \textbf{M}_{n}(\mathbb{R}) $ συμμετρικός, αν $ a_{ij} = a_{ji},
+      \; \forall i,j=1,2,\ldots, n $ 
+    \item $ A=(a_{i}) \in \textbf{M}_{n}(\mathbb{R}) $ αντισυμμετρικός, αν $ a_{ij} =
+      -a_{ji}, \; \forall i,j=1,2,\ldots, n $ 
+  \end{myitemize}
+\end{rem}
+
+\begin{prop}
+\item {}
+  \begin{myitemize}
+    \item  Κάθε τετραγωνικός πίνακας γράφεται ως άθροισμα ενός συμμετρικού και ενός 
+      αντισυμμετρικού πίνακα. Πράγματι, αν $ A \in \textbf{M}_{n}(\mathbb{R}) $, τότε
+  \[
+    A = \underbrace{\frac{1}{2} \left(A+A^{T}\right)}_{\text{συμμετρικός}} +
+  \underbrace{\frac{1}{2} \left(A-A^{T}\right)}_{\text{αντισυμμετρικός}} 
+\]
+\end{myitemize}
+\end{prop}
+
+\section*{Ισοδύναμοι}
+ 
+\begin{dfn}
+  Έστω $ A,B \in \textbf{M}_{m \times n}(\mathbb{R}) $. Τότε οι $ A $ και $ B $ 
+  λέγονται \textcolor{Col1}{ισοδύναμοι}, αν υπάρχουν \textbf{αντιστρέψιμοι} πίνακες 
+  $ P \in \textbf{M}_{m}(\mathbb{R}) $ και $ Q \in \textbf{M}_{n}(\mathbb{R}) $ τέτοιοι 
+  ώστε
+  \[
+     B = PAQ 
+   \] 
+\end{dfn}
+
+\begin{rem}
+\item {}
+  \begin{myitemize}
+    \item Για κάθε $ A \in \textbf{M}_{m \times n}(\mathbb{R}) $, ο $A$ είναι ισοδύναμος 
+      με τον εαυτό του. Πράγματι, $ A = I_{m}AI_{n} $, όπου $ I_{n}, I_{m} $ 
+      αντιστρέψιμοι.
+    \item Για κάθε $ A,B \in \textbf{M}_{m \times n}(\mathbb{R}) $ αν $ B=PAQ $ για 
+      κάποιους αντιστρέψιμους πίνακες $ P $ και $Q$, τότε $ A=P^{-1}BQ^{-1} $ 
+      (με $ P^{-1}, Q^{-1} $ αντιστρέψιμοι).
+    \item Για κάθε $ A,B, \Gamma \in \textbf{M}_{m \times n}(\mathbb{R}) $, αν οι 
+      $ A,B $ είναι ισοδύναμοι και οι $ B, \Gamma $ είναι ισοδύναμοι, τότε και οι 
+      $ A, \Gamma $ είναι ισοδύναμοι. Αν $ B=PAQ $ για κάποιους αντιστρέψιμους πίνακες 
+      $ P $ και $ Q $, και αν $ \Gamma = P'BQ' $ για κάποιους ισοδύναμους πίνακες 
+      $ P' $ και $ Q' $, τότε $ \Gamma = (P'P)A(QQ') $ και $ P'P, QQ'$ είναι
+      αντιστρέψιμοι. Άρα $ A,\Gamma $ είναι ισοδύναμοι).
+  \end{myitemize}
+\end{rem}
+\end{document}

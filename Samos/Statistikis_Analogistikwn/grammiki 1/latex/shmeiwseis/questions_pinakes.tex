@@ -1,0 +1,56 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+\input{tikz}
+
+\pagestyle{askhseis}
+
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col2}{Πίνακες}}
+\end{center}
+
+% \section*{Ακολουθίες}
+
+\vspace{\baselineskip}
+
+\hfill \textcolor{Col1}{\textbf{Σωστό}} \quad \textcolor{Col1}{\textbf{Λάθος}}
+\begin{enumerate}[itemsep=.5\baselineskip]
+  \item \textcolor{Col1}{Αν $ A \in \textbf{M}_{n}(\mathbb{R}) $ και $
+      A^{2}=I_{n} $, τότε $ A=I_{n} $ ή $ A=-I_{n} $}. 
+    \hfill $\textcolor{Col1}{\square} \qquad \qquad \textcolor{Col1}{\blacksquare}$
+
+    Απ: Λάθος. Αν $ A= 
+    \begin{pmatrix}
+      0 & 1 \\
+      1 & 0
+    \end{pmatrix} $, τότε $ A^{2}=I_{2} $, όμως $ A \neq I_{2} $ και $ A \neq -I_{2} $.
+
+  \item \textcolor{Col1}{Αν $ A \in \textbf{M}_{n}(\mathbb{R}) $ και $
+      A^{2}=I_{n}
+    $, τότε $ A^{k}=I_{n}, \; \forall k \geq 2 $}.
+    \hfill $\textcolor{Col1}{\square} \qquad \qquad \textcolor{Col1}{\blacksquare}$
+
+    Απ: Λάθος. Αν $ A= 
+    \begin{pmatrix}
+      0 & 1 \\
+      1 & 0
+    \end{pmatrix} $, τότε $ A^{3}= A^{2}\cdot A = I_{2} \cdot A = A $, 
+    όμως $ A \neq I_{2} $.
+
+  \item \textcolor{Col1}{Αν $ A \in \textbf{M}_{n}(\mathbb{R}) $ και $ A^{2}=I_{n} $, 
+    τότε $ A^{k}=I_{n} $ για όλους τους άρτιους φυσικούς αριθμούς $k$}.
+    \hfill $\textcolor{Col1}{\blacksquare} \qquad \qquad \textcolor{Col1}{\square}$
+
+    Απ: Σωστό. Αποδεικνύεται με Μαθηματική Επαγωγή
+    %todo να γράψω την απόδειξη οπως και την άσκηση 3 με τις ταυτότητες πινάκων
+       
+
+\end{enumerate}
+
+
+
+\end{document}
+
+

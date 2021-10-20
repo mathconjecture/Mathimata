@@ -1,0 +1,120 @@
+\input{preamble/preamble.tex}
+\input{preamble/definitions.tex}
+
+\renewcommand{\twocolumnside}[2]{\begin{minipage}[t]{0.45\linewidth}\raggedright
+        #1
+        \end{minipage}\hfill{\color{Col2}{\vrule width 1pt}}
+        \hfill\begin{minipage}[t]{0.48\linewidth}\raggedright
+        #2
+    \end{minipage}
+}
+
+
+
+\pagestyle{askhseis}
+
+
+
+\begin{document}
+
+\begin{center}
+    \minibox[frame]{\large \bfseries Ασκήσεις στους Διανυσματικούς Χώρους}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+    \item Να αποδείξετε ότι τα παρακάτω σύνολα είναι διανυσματικοί χώροι. Να 
+        επαληθευτούν όλα τα αξιώματα.
+        \begin{enumerate}[i)]
+            \item $ \mathbb{R}^{2} = \{(x,y)\in \mathbb{R}^{2} 
+                \; : \; x,y \in \mathbb{R} \} $ με τις συνήθεις πράξεις:
+                \begin{gather*}
+                    (x_{1}, y_{1}) + (x_{2}, y_{2}) = (x_{1}+ x_{2}, y_{1}+ y_{2}) \\
+                    \lambda \cdot (x,y) = (\lambda x, \lambda y)
+                \end{gather*}
+
+            \item $ \mathbf{F}(A, \mathbb{R}) = \{ f \colon A \to \mathbb{R} 
+                \; : \; f \; \text{συνάρτηση} \} $ με τις συνήθεις πράξεις:
+                \begin{gather*}
+                    (f+g)(x) = f(x)+g(x), \quad \forall x \in A \\
+                    (\lambda  \cdot f)(x) = \lambda f(x), \quad \forall x \in A
+                \end{gather*} 
+        \end{enumerate}
+
+    \item Να εξετάσετε αν τα παρακάτω σύνολα είναι διανυσματικοί χώροι επί του 
+        $\mathbb{R}$.
+        \begin{enumerate}[i)]
+            \item $ V = \{ (a,x) \in \mathbb{R}^{2} \; : \; x \in \mathbb{R} \} $, 
+                για δοσμένο $ a \in \mathbb{R} $, και με πράξεις: 
+                \begin{gather*}
+                    (a,x) + (a,y) = (a,x+y) \\
+                    \lambda \cdot (a,x) = (a, \lambda x)
+                \end{gather*}
+                Είναι το παραπάνω σύνολο υπόχωρος του $ \mathbb{R}^{2} $;
+                \hfill Απ: ναι, όχι 
+            \item $ V = \{(x,y) \; : \; x,y \in \mathbb{R} \} $ με πράξεις: 
+                \begin{gather*}
+                    (x_{1}, y_{1}) + (x_{2}, y_{2}) = (x_{1}+ y_{1}, x_{2}+ y_{2}) \\
+                    \lambda \cdot (x,y) = (\lambda x, 0) 
+                \end{gather*} 
+                \hfill Απ: όχι 
+            \item $ V = \{ f \colon \mathbb{R} \to \mathbb{R} \; : \; f(a) = 0 \} $, 
+                για δοσμένο $ a \in \mathbb{R} $ και με τις συνήθεις πράξεις. 
+                \hfill Απ: ναι 
+        \end{enumerate}
+
+    \item \begin{enumerate}[i)]
+        \item Να δείξετε ότι $ - ( \mathbf{u}+ \mathbf{v} ) = - \mathbf{u} - 
+            \mathbf{v} $.
+        \item Αν $ \lambda \in \mathbb{K}, \; \lambda \neq 0 $ και 
+            $ \lambda \cdot \mathbf{u}= \lambda \cdot \mathbf{v}$, τότε να 
+            δείξετε ότι $ \mathbf{u} = \mathbf{v} $.
+        \item Αν $ \lambda_{1}, \; \lambda _{2} \in \mathbb{K} $ και 
+            $ \mathbf{u} \in V, \; \mathbf{u} \neq \mathbf{0} $ με 
+            $ \lambda _{1}\cdot \mathbf{u} = \lambda _{2} \cdot \mathbf{u}$, 
+            τότε να δείξετε ότι $ \lambda _{1} = \lambda _{2} $.
+    \end{enumerate}
+
+\item Να εξετάσετε αν τα παρακάτω υποσύνολα είναι υπόχωροι. 
+
+    \twocolumnside{
+        \begin{enumerate}[(i)]
+            \item $ W = \{(x,y)\in \mathbb{R}^{2} \; \mid \; x,y \geq 0 \} $ 
+                \hfill Απ: όχι 
+            \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid x\geq 0 \} $ \hfill Απ:  όχι
+            \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid x = 3y \} $ \hfill Απ: ναι
+            \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x+y=1 \} $ 
+                \hfill Απ: όχι 
+            \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid x + y + z = 0 \} $ 
+                \hfill Απ: ναι
+            \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid x + y + z = 1 \} $ 
+                \hfill Απ: όχι
+        \end{enumerate}
+        }{
+        \begin{enumerate}[(i)]
+            \setcounter{enumii}{7}
+        \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid y = x^{2} \} $ 
+            \hfill Απ: όχι 
+        \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid x^{2} + y^{2} + z^{2} 
+            \leq 1  \} $ \hfill Απ: όχι
+        \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid x = y = z \} $ \hfill Απ: ναι
+            % \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid x \leq y \leq q \} $ 
+            % \hfill Απ: όχι
+        \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid x = 2y = 3z \} $ 
+            \hfill Απ: ναι 
+        \item $ W = \{ A \in M_{2}(\mathbb{R}) \; \mid \; \det{A}=1 \} $ 
+            \hfill Απ: όχι 
+        \item $ W = \{ A \in M_{2}(\mathbb{R}) \; \mid \; \det{A}=0 \} $ 
+            \hfill Απ: όχι 
+    \end{enumerate}
+}
+
+    \item Να δείξετε ότι τα παρακάτω υποσύνολα είναι υπόχωροι
+        \begin{enumerate}[(i)]
+            \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid y = 3x \} $ 
+            \item $ W = \{(x,y,z)\in \mathbb{R}^{3} \; : \; 2x-3y+z=0 \} $
+        \end{enumerate}
+\end{enumerate}
+\end{document}
+

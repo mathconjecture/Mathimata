@@ -1,0 +1,194 @@
+\input{preamble/preamble.tex}
+\input{preamble/definitions.tex}
+
+\begin{document}
+
+
+
+
+
+\begin{enumerate}
+    \item Έστω τα διανύσματα $ \mathbf{u_{1}} = (1,2), \mathbf{u_{2}} = (0,1) $ και 
+        $ \mathbf{u_{3}} = (-1,0) $ του $ \mathbb{R}^{2} $.
+        \begin{enumerate}[i)]
+            \item Να γραφεί το $ \mathbf{u_{1}} $ ως γραμμικός συνδυασμός των $
+                \mathbf{u_{2}} $ και $ \mathbf{u_{3}} $.
+            \item Να δείξετε ότι τα $ \mathbf{u_{2}} $ και $ \mathbf{u_{3}} $ παράγουν 
+                τον $ \mathbb{R}^{2} $.
+
+                \hfill Απ: 
+                \begin{tabular}{l}
+                    $ \mathrm{i)} \quad \mathbf{u_{1}} = 2 \mathbf{u_{2}} - 
+                    \mathbf{u_{3}} $ \\
+                    $ \mathrm{ii)} \quad (x,y) = y(0,1) - x(-1,0) $
+                \end{tabular} 
+        \end{enumerate}
+
+
+    \item Έστω $ W_{1} = \{(x,y,z,w)\in \mathbb{R}^{4} \; : \; y+z+w=0 \} $ και 
+        $ W_{2} = \{(x,y,z,w)\in \mathbb{R}^{4} \; : \; x+y=0 \; 
+        \text{και} \; z=2w \} $. Να βρεθούν βάσεις των υπόχωρων $ W_{1}, W_{2} $ και 
+        $ W_{1} \cap W_{2} $. 
+
+        \hfill Απ: 
+        \begin{tabular}{l}
+            $ B_{W_{1}} = \{ \begin{pmatrix} 1 & 0 & 0 & 0  \end{pmatrix}^{T}, 
+                \begin{pmatrix} 0 & -1 & 1 & 0 \end{pmatrix}^{T}, 
+            \begin{pmatrix} 0 & -1 & 0 & 1 \end{pmatrix}^{T} \} $ \\
+            $ B_{W_{2}} = \{ 
+                \begin{pmatrix}-1 & 1 & 0 & 0\end{pmatrix}^{T}, 
+            \begin{pmatrix}0 & 0 & 2 & 1\end{pmatrix}^{T} \} $ \\
+            $ B_{W_{1} \cap W_{2}} = \{ 
+            \begin{pmatrix}3 & -3 & 2 & 1\end{pmatrix}^{T} \} $
+        \end{tabular}
+
+    \item Έστω $ \mathbf{u}_{1} = 
+            \begin{pmatrix}1 & 2 & -2 & 1\end{pmatrix}^{T}, \mathbf{u_{2}} = 
+            \begin{pmatrix}1 & 3 & -1 &4\end{pmatrix}^{T}, \mathbf{u_{3}} = 
+            \begin{pmatrix}2 & 1 & -7 & -7\end{pmatrix}^{T} $, 
+            διανύσματα του $ \mathbb{R}^{4} $. Να δείξετε ότι είναι 
+            γραμμικώς εξαρτημένα και να βρεθεί μια σχέση που τα συνδέει.
+
+            \hfill Απ: $ -5 \mathbf{u_{1}}+ 3 \mathbf{u_{2}} + \mathbf{u_{3}}=0 $ 
+
+        \item Έστω $ W_{1} = < 
+            \begin{pmatrix}1 & 2 & 3\end{pmatrix}^{T}, 
+            \begin{pmatrix}2 & -1 & 1\end{pmatrix}^{T} > $ και $ W_{2} = < 
+            \begin{pmatrix}1 & 0 & 1\end{pmatrix}^{T}, 
+            \begin{pmatrix}0 & 1 & 1\end{pmatrix}^{T}> $ υπόχωροι του 
+            $ \mathbb{R}^{3} $.  Να δείξετε ότι $ W_{1} = W_{2} $.
+
+        \item Έστω $ W_{1} = < 
+            \begin{pmatrix}1 & 2 & 5\end{pmatrix}^{T}, 
+            \begin{pmatrix}1 & 3 & 7\end{pmatrix}^{T} > $ και $ W_{2} = < 
+            \begin{pmatrix}1 & 0 & 1\end{pmatrix}^{T}, 
+            \begin{pmatrix}0 & 1 & 2\end{pmatrix}^{T}> $ υπόχωροι του 
+            $ \mathbb{R}^{3} $.  Να δείξετε ότι $ W_{1} = W_{2} $.
+
+        \item Να βρεθεί μια βάση του $ \mathbb{R}^{4} $ που να 
+            περιέχει το διάνυσμα $ \mathbf{u} = 
+            \begin{pmatrix}1 & 1 & 2 & 3\end{pmatrix}^{T} $.
+
+            \hfill Απ: $ B = 
+            \{ 
+                \mathbf{u}, \mathbf{e_{2}}, \mathbf{e_{3}}, 
+                \mathbf{e_{4}} 
+            \} $  
+
+        \item 
+            \begin{enumerate}[i)]
+                \item Να βρεθεί μια βάση, καθώς και η διάσταση του υπόχωρου $W$ του 
+                    $ \mathbb{R}^{4} $ που παράγεται από τα διανύσματα 
+                    $ \mathbf{u_{1}} = \begin{pmatrix}1 & 2 & -2 & 3\end{pmatrix}^{T} $,
+                    $ \mathbf{u_{2}} = \begin{pmatrix}5 & 6 & -4 & 13\end{pmatrix}^{T}, 
+                    \mathbf{u_{3}} = \begin{pmatrix}2 & 0 & 2 & 4\end{pmatrix}^{T} $.
+                \item Να επεκτείνετε τη βάση αυτή σε μια βάση του $\mathbb{R}^{4} $ 
+            \end{enumerate}
+
+            \hfill Απ: \begin{tabular}{l}
+                $ \mathrm{i)} \quad B_{W} = 
+                \{ 
+                    \begin{pmatrix}1 & 2 & -2 & 3\end{pmatrix}^{T}, 
+                    \begin{pmatrix}0 & -4 & 6 & -2\end{pmatrix}^{T} 
+                \} $ \\
+                $ \mathrm{ii)} \quad B_{\mathbb{R}^{4}} = 
+                \{ 
+                    \begin{pmatrix}1 & 2 & -2 & 3\end{pmatrix}^{T}, 
+                    \begin{pmatrix}0 & -4 & 6 & -2 \end{pmatrix}^{T}, 
+                    \begin{pmatrix}0 & 0 & 1 & 0\end{pmatrix}^{T}, 
+                    \begin{pmatrix}0 & 0 & 0 & 1\end{pmatrix}^{T} 
+                \} $ 
+            \end{tabular}
+
+        \item Να εξετάσετε αν τα διανύσματα $ 
+                    \begin{pmatrix}1 & 2 & 3\end{pmatrix}^{T}, 
+                    \begin{pmatrix}0 & 1 & 2\end{pmatrix}^{T} , 
+                    \begin{pmatrix}0 & 0 & 1\end{pmatrix}^{T}$ 
+                    \begin{enumerate}[i)]
+                        \item είναι γραμμικώς ανεξάρτητα 
+                        \item παράγουν τον $ \mathbb{R}^{3} $.
+                    \end{enumerate}
+
+                \item Να βρεθεί μια βάση του υπόχωρου που παράγουν τα $ 
+                    \begin{pmatrix}1 & 3 & -1\end{pmatrix}^{T} , 
+                    \begin{pmatrix}0 & 3 & -3\end{pmatrix}^{T} , 
+                    \begin{pmatrix}-1 & -4 & 2\end{pmatrix}^{T}$.
+
+                    \hfill Απ: $ B_{W} = 
+                    \{ 
+                        \begin{pmatrix}1 & 3 & -1\end{pmatrix}^{T} , 
+                        \begin{pmatrix}0 & 3 & -3 \end{pmatrix}^{T}
+                    \} $. 
+
+                \item Έστω $ V $ ένας διανυσματικός χώρος επί του $\mathbb{R}$ και έστω 
+                    $ \mathbf{u}, \mathbf{v} \in V $. Να δείξετε ότι 
+                    $ < \mathbf{u}, \mathbf{v} > = < \mathbf{u} - \mathbf{v}, 
+                    \mathbf{u} + \mathbf{v} > $
+
+                \item Να εξετάσετε αν τα παρακάτω υποσύνολα είναι βάσεις του 
+                    $ \mathbb{R}^{3} $.
+                    \begin{enumerate}[i)]
+                        \item $ B_{1} = 
+                            \{ 
+                                \begin{pmatrix}1 & 0 & 0\end{pmatrix}^{T} , 
+                                \begin{pmatrix}0 & 1 & 0\end{pmatrix}^{T} , 
+                                \begin{pmatrix}0 & 0 & 0\end{pmatrix}^{T}
+                            \} $ \hfill Απ: όχι 
+                        \item $ B_{2} = 
+                            \{ 
+                                \begin{pmatrix}1 & 1 & 1\end{pmatrix}^{T}, 
+                                \begin{pmatrix}1 & 2 & 1\end{pmatrix}^{T} , 
+                                \begin{pmatrix}2 & 1 & 1\end{pmatrix}^{T}
+                            \} $ \hfill Απ:  
+                    \end{enumerate}
+                        \end{enumerate}
+
+
+
+
+
+                        %%%%%%%%%%%%%%%%%%%%% Γραμμική Ανεξαρτησία %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                        \begin{enumerate}
+                            \item Να εξετάσετε αν το διάνυσμα $ \mathbf{b}= 
+                                \begin{pmatrix}0 & 1 & 1\end{pmatrix}^{T}$ γράφεται ως γραμμικός 
+                                συνδυασμός των $ 
+                                \begin{pmatrix}1 & 1 & 0\end{pmatrix}^{T}$ και $ 
+                                \begin{pmatrix}1 & -1 & -1\end{pmatrix}^{T} $.
+
+                                \hfill Απ: όχι 
+
+                            \item Αν τα διανύσματα $ \mathbf{u}, \mathbf{v}, \mathbf{w} $ είναι 
+                                γραμμικώς ανεξάρτητα, τότε να δείξετε ότι και τα διανύσματα 
+                                $ \mathbf{u}+ \mathbf{v} $, $ \mathbf{u}- \mathbf{v} $ και 
+                                $ \mathbf{u}- 2 \mathbf{v}+ \mathbf{w} $ είναι επίσης γραμμικώς ανεξάρτητα.
+
+                            \item Δινονται τα διανύσματα $ \mathbf{u_{1}} = 
+                                \begin{pmatrix}2 & 0 & 1 & 3\end{pmatrix}^{T} , 
+                                \mathbf{u_{2}} = \begin{pmatrix}0 & 1 & 2 & 3\end{pmatrix}^{T} , 
+                                \mathbf{u_{3}} = \begin{pmatrix}1 & -1 & 0 & 0\end{pmatrix}^{T}, 
+                                \mathbf{u_{4}} = \begin{pmatrix}0 & -2 & 1 & 0\end{pmatrix}^{T}$ και 
+                                $ \mathbf{b} = \begin{pmatrix}0 & 5 & 2 & 6\end{pmatrix}^{T}$.
+                                \begin{enumerate}[i)]
+                                    \item Να δείξετε ότι τα διανύσματα $ \mathbf{u_{1}}, \mathbf{u_{2}}, 
+                                        \mathbf{u_{3}}, \mathbf{u_{4}} $ είναι γραμμικώς ανεξάρτητα.
+                                    \item Να εκφράσετε το $ \mathbf{b} $ ως γραμμικό συνδυασμό των 
+                                        $ \mathbf{u_{1}}, \mathbf{u_{2}}, \mathbf{u_{3}}, \mathbf{u_{4}} $.
+                                \end{enumerate}
+
+                            \item Αν $ \mathbf{u} = 
+                                \begin{pmatrix}1 & 0 & 1\end{pmatrix}^{T} , \mathbf{v} = 
+                                \begin{pmatrix}0 & 1 & -1\end{pmatrix}^{T}$ διανύσματα του 
+                                $ \mathbb{R}^{3} $, τότε ποια σχέση πρέπει να ικανοποιούν τα 
+                                $ a,b,c \in \mathbb{R} $, ώστε $ 
+                                \begin{pmatrix}a & b & c\end{pmatrix}^{T} \in < \mathbf{u}, \mathbf{v} > $;
+
+                                \hfill Απ: $ a-b=c $ 
+                        \end{enumerate}
+
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                        
+
+
+
+\end{document}

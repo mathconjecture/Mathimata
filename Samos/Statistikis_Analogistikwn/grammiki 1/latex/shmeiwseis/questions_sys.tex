@@ -1,0 +1,107 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+\input{tikz}
+
+\pagestyle{askhseis}
+
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col2}{Συστήματα Γραμμικών Εξισώσεων}}
+\end{center}
+
+% \section*{Ακολουθίες}
+
+\vspace{\baselineskip}
+
+\hfill \textcolor{Col1}{\textbf{Σωστό}} \quad \textcolor{Col1}{\textbf{Λάθος}}
+\begin{enumerate}[itemsep=.5\baselineskip]
+  \item \textcolor{Col1}{Κάθε γραμμικό σύστημα $n$ εξισώσεων με $n$ αγνώστους έχει 
+    \textbf{μοναδική} λύση}. 
+    \hfill $\textcolor{Col1}{\square} \qquad \qquad \textcolor{Col1}{\blacksquare}$
+
+    Απ: Λάθος. Αν $ |A| \neq 0 $, τότε έχει άπειρες λύσεις ή αδύνατο (Crammer).
+
+  \item \textcolor{Col1}{Κάθε γραμμικό σύστημα $n$ εξισώσεων με $n$ αγνώστους, 
+    είναι \textbf{συμβιβαστό}}.
+    \hfill $\textcolor{Col1}{\square} \qquad \qquad \textcolor{Col1}{\blacksquare}$
+
+    Λάθος. Για παράδειγμα το σύστημα $ \left.
+      \begin{matrix}
+        x+y=1 \\
+        x+y=2
+      \end{matrix} 
+    \right\}$ είναι αδύνατο.
+
+  \item \textcolor{Col1}{Ένα γραμμικό σύστημα $m$ εξισώσεων με $n$ αγνώστους, όπου 
+    $ m>n $, μπορεί να έχει \\ \textbf{άπειρο} πλήθος λύσεων}.
+    \hfill $\textcolor{Col1}{\blacksquare} \qquad \qquad \textcolor{Col1}{\square}$
+
+    Απ: Σωστό. Για παράδειγμα το σύστημα $ \left.
+      \begin{matrix}
+        x+y=1 \\
+        2x+2y=2 \\
+        3x+3y=3
+      \end{matrix} 
+    \right\} $ έχει άπειρο πλήθος λύσεων.
+
+  \item \textcolor{Col1}{Ένα γραμμικό σύστημα $m$ εξισώσεων με $n$ αγνώστους, όπου 
+    $ m<n $, μπορεί να είναι \textbf{αδύνατο}}.
+    \hfill $\textcolor{Col1}{\blacksquare} \qquad \qquad \textcolor{Col1}{\square}$
+
+    Απ: Σωστό. Για παράδειγμα το σύστημα $ \left.
+      \begin{matrix}
+        x+y+z=0 \\
+        x+y+z=1
+      \end{matrix} 
+    \right\} $ είναι αδύνατο.
+
+  \item \textcolor{Col1}{Ένα γραμμικό σύστημα με πίνακα συντελεστών $ A $ έχει 
+      άπειρο πλήθος λύσεων αν και μόνον αν \\ ο $A$ είναι γραμμοϊσοδύναμος με κλιμακωτό 
+    πίνακα που περιέχει στήλη χωρίς ηγετική μονάδα}.
+    \hfill $\textcolor{Col1}{\square} \qquad \qquad \textcolor{Col1}{\blacksquare}$
+
+    Απ: Λάθος. Το σύστημα $ \left.
+      \begin{matrix}
+        x+y=0 \\
+        x+y=1
+      \end{matrix} 
+    \right\}$ είναι αδύνατο αλλά η 2η στήλη του $R_{A}$ δεν περιέχει ηγετικό.
+
+  \item \textcolor{Col1}{Αν ο $A$ είναι αντιστρέψιμος, τότε ο $ A+A^{T} $ είναι
+    αντιστρέψιμος}.
+    \hfill $\textcolor{Col1}{\square} \qquad \qquad \textcolor{Col1}{\blacksquare}$
+
+    Απ: Λάθος. Είναι δυνατόν $ A + A^{T} = O \Leftrightarrow A^{T}=-A $. π.χ. $ A = 
+    \begin{pmatrix*}[r]
+      0 & 1 \\
+      -1 & 0
+    \end{pmatrix*} $
+
+  \item \textcolor{Col1}{Αν ο $A$ και $ B $ αντιστρέψιμοι πίνακες, τότε ο $ A+Β $ 
+      είναι αντιστρέψιμος}.
+    \hfill $\textcolor{Col1}{\square} \qquad \qquad \textcolor{Col1}{\blacksquare}$
+
+    Απ: Λάθος. π.χ. $ A=I_{2} $ και $ B=-I_{2} $ αντιστρέψιμοι, όμως $ A+B=O_{2} $ 
+    μη αντιστρέψιμος.
+
+  \item \textcolor{Col1}{Αν $ A+B $ αντιστρέψιμος, τότε $ A $ και $ B $ είναι 
+    αντιστρέψιμοι}.
+    \hfill $\textcolor{Col1}{\square} \qquad \qquad \textcolor{Col1}{\blacksquare}$
+
+    Απ: Λάθος. π.χ. $ A= 
+    \begin{pmatrix}
+      1 & 0 \\
+      0 & 0
+    \end{pmatrix} $ και $ B = 
+    \begin{pmatrix}
+      0 & 0 \\
+      0 & 1
+    \end{pmatrix} $ μη αντιστρέψιμοι, όμως $ A+B=I_{2} $ αντιστρέψιμος.
+\end{enumerate}
+
+
+
+\end{document}
+
