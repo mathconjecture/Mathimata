@@ -1,0 +1,95 @@
+\input{preamble_ask.tex}
+\input{definitions.tex}
+
+
+% \DeclareMathOperator{\r}{r}
+
+\begin{document}
+
+\chapter*{Ιδιοτιμές - Ιδιοδιανύσματα}
+
+\begin{dfn}
+  Έστω $ A \in \textbf{M}_{n}(\mathbb{K}) $. Ένας αριθμός $ \lambda \in \mathbb{K} $, 
+  λέγεται \textcolor{Col1}{ιδιοτιμή} (ή χαρακτηριστική τιμή) του πίνκα $A$, 
+  αν υπάρχει ένα \textbf{μη-μηδενικό} διάνυσμα $ \mathbf{u} \in \mathbb{K}^{n} $, 
+  τέτοιο ώστε 
+  \[
+    A \mathbf{u} = \lambda \mathbf{u}  
+  \] 
+  Στην περίπτωση αυτή το διάνυσμα $ \mathbf{u} $ λέγεται \textcolor{Col1}{ιδιοδιάνυσμα} 
+  (ή χαρακτηριστικό διάνυσμα) του $A$ που αντιστοιχεί στην ιδιοτιμή $\lambda$.
+\end{dfn}
+
+\begin{dfn}
+  Το σύνολο $ V(\lambda) = \{ \mathbf{u} \in \mathbb{K}^{n} \; : \; A \mathbf{u}= \lambda
+  \mathbf{u} \} $, των ιδιοδιανυσμάτων του $A$ που αντιστοιχούν στην ιδιοτιμή 
+  $\lambda$, λέγεται \textcolor{Col1}{ιδιόχωρος} του $A$ που αντιστοιχεί στην ιδιοτιμή 
+  $ \lambda $. 
+\end{dfn}
+
+\begin{thm}\label{thm:char}
+  Έστω $ A \in \textbf{M}_{n}(\mathbb{K}) $ και $ \lambda \in \mathbb{K} $. Τότε το 
+  $ \lambda $ είναι ιδιοτιμή του $A$ αν και μόνον αν $ \det(A- \lambda I_{n}) = 0 $.
+\end{thm}
+
+\begin{rem}
+  Έστω $ A = (a_{ij}) \in \textbf{M}_{n}(\mathbb{K}) $. 
+  \begin{myitemize}
+    \item Από το θεώρημα~\ref{thm:char} βλέπουμε ότι οι ιδιοτιμές του $A$ είναι 
+      ακριβώς οι λύσεις της εξίσωσης $ \det(A-xI_{n}) = 0 $, η οποία λέγεται 
+      \textcolor{Col1}{χαρακτηριστική εξίσωση} του $A$, και πιο αναλυστικά είναι η
+      \[
+        \begin{vmatrix*}[c]
+          a_{11}-x & a_{12} & \cdots & a_{1n} \\
+          a_{21} & a_{22}-x & \cdots & a_{2n} \\
+          \vdots & \vdots & \ddots & \vdots \\
+          a_{n1} & a_{n2} & \cdots & a_{nn} - x
+        \end{vmatrix*} = 0
+      \] 
+    \item Αν $\lambda$ είναι μια ιδιοτιμή του πίνακα $A$, τότε τα ιδιοδιασνύσματα 
+      του $A$ που αντιστοιχούν στην ιδιοτιμή $\lambda$ είναι ακριβώς οι
+      \textcolor{Col1}{μη-μηδενικές} λύσεις του ομογενούς συστήματος 
+      $ (A- \lambda I_{n}) = \mathbf{0} $, δηλασή του συστήματος 
+      \[
+        \begin{pmatrix*}[c]
+          a_{11}-x & a_{12} & \cdots & a_{1n} \\
+          a_{21} & a_{22}-x & \cdots & a_{2n} \\
+          \vdots & \vdots & \ddots & \vdots \\
+          a_{n1} & a_{n2} & \cdots & a_{nn} - x
+        \end{pmatrix*} \cdot 
+        \begin{pmatrix*}[c]
+          x_{1} \\
+          x_{2} \\
+          \vdots \\
+          x_{n}
+        \end{pmatrix*} = 
+        \begin{pmatrix*}[r]
+          0 \\ 0 \\ \vdots \\ 0
+        \end{pmatrix*}
+      \]
+    \item Η ορίζουσα $ \det(A-xI_{n}) $ είναι ένα πολυώνυμο μιας μεταβλητής, της $x$, 
+      βαθμού $n$, (με συντελεστές από $ \mathbb{K} $). Το πολυώνυμο αυτό λέγεται 
+      \textcolor{Col1}{χαρακτηριστικό πολυώνυμο} του πίνακα $A$ και συμβολίζεται με 
+      $ \mathcal{\chi}_{A} (x) $. 
+      \[
+        \mathcal{\chi}_{A} (x) = \det(A-xI_{n})
+      \] 
+      Η μορφή του χαρακτηριστικού πολυωνύμου του $A$ είναι η εξής:
+      \[
+        \mathcal{\chi}_{A} (x) = (-1)^{n}x^{n} + a_{n-1}x^{n-1} + \cdots + a_{1}x +
+        a_{0}  
+      \] 
+      Από τα παραπάνω βλέπουμε ότι οι ιδιοτιμές του $A$ είναι ακριβώς οι ρίζες του 
+      χαρακτηριστικού πολυωνύμου $ \mathcal{\chi}_{A} (x) $ του πίνακα $A$.
+    \item Ένας πίνακας $ A \in \smash{\textbf{M}_{n}(\mathbb{K})} $, όπου $ \mathbb{K} =
+      \mathbb{R} \; \text{ή} \; \mathbb{C} $  έχει πάντοτε ιδιοτιμές στο $ \mathbb{C} $.
+      Αυτό προκύπτει από το θεμελιώδες θεώρημα της Άλγεβρας που λέει ότι κάθε πολυώνυμο 
+      βαθμού $n$ με συντελεστές μιγαδικούς αριθμούς έχει ακριβώς $n$ ρίζες στο 
+      $ \mathbb{C} $ (όχι απαραίτητα όλες διάφορες ανά δύο). Έτσι ένας πίνακας 
+      $ A \in \textbf{M}_{n}(\mathbb{K}) $ όπου $ \mathbb{K}= \mathbb{R} $ ή 
+      $ \mathbb{C} $, έχει $n$ ακριβώς ιδιοτιμές στο $ \mathbb{C} $.
+  \end{myitemize}
+
+\end{rem}
+
+\end{document}
