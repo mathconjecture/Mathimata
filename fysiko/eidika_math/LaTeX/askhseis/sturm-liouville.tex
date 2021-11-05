@@ -1,0 +1,53 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+\input{tikz.tex}
+
+\geometry{left=1.5cm, right=1.5cm}
+
+\everymath{\displaystyle}
+\thispagestyle{askhseis}
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large \bfseries \textcolor{Col1}{Προβλήματα Sturm Liouville}}
+\end{center}
+
+\vspace{2\baselineskip}
+
+
+\section*{Βασικό ομαλό πρόβλημα Sturm Liouville}
+
+
+\begin{enumerate}
+  \item Να βρεθούν οι ιδιοτιμές και οι ιδιοσυναρτήσεις, των παρακάτω 
+    \textbf{ομαλών} προβλημάτων Sturm-Liouville.
+    \begin{enumerate}[i)]
+      \item $ y''(x)+ \lambda y(x) = 0, \quad y(0)=y(L)=0 $.  \hfill Απ: $ \lambda 
+        _{n} = \frac{n^{2} \pi ^{2}}{L^{2}}, \; y_{n}(x) = \sin{\frac{n \pi x}{L}}, \; 
+        n=1,2,3,\ldots $
+      \item $ y''(x)+ \lambda y(x) = 0, \quad y'(0)=y'(L)=0 $.  \hfill Απ: $ \lambda 
+        _{0} = 0, \; y_{0}= 1 \; \text{και} \; \lambda _{n}= \frac{n^{2} 
+        \pi ^{2}}{L^{2}}, \; y_{n}(x) = \cos{\frac{n \pi x}{L}}, \; n=1,2,3,\ldots $
+      \item $ y''(x)+ \lambda y(x) = 0, \quad y'(0)=y(L)=0 $.  \hfill Απ: $ \lambda 
+        _{n} = \frac{(2n-1)^{2} \pi ^{2}}{4L^{2}}, \; y_{n}(x) = \cos{\frac{(2n-1) \pi
+        x}{2L}}, \; n=1,2,3,\ldots $
+      \item $ y''(x)+ \lambda y(x) = 0, \quad y(0)=y'(L)=0 $.  \hfill Απ: $ \lambda 
+        _{n} = \frac{(2n-1)^{2} \pi ^{2}}{4L^{2}}, \; y_{n}(x) = \sin{\frac{(2n-1) \pi
+        x}{2L}}, \; n=1,2,3,\ldots $
+    \end{enumerate}
+\end{enumerate}
+
+\vspace{2\baselineskip}
+
+\section*{Υποδείξεις}
+
+\begin{myitemize}
+  \item $ \sin{(kL)} = 0 \overset{k,L>0}{\Rightarrow} \sin{(kL)} = \sin{(n \pi)}, \;
+    n=1,2,3,\ldots $
+  \item $ \cos{(kL)} = 0 \overset{k,L>0}{\Rightarrow} \cos{(kL)} =
+    \cos{\left(\frac{(2n-1) \pi}{2}\right)}, \;
+    n=1,2,3,\ldots $
+\end{myitemize}
+
+\end{document}
