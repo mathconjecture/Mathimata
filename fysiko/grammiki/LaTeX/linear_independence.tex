@@ -1,0 +1,86 @@
+\input{preamble.tex}
+\input{definitions_ask.tex}
+\input{tikz.tex}
+
+\usepackage{anyfontsize}
+\pagestyle{vangelis}
+\setcounter{chapter}{1}
+
+\linespread{1.1}
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large \bfseries \textcolor{Col1}{Ασκήσεις στους Διανυσματικούς Χώρους}}
+\end{center}
+
+\vspace{\baselineskip}
+
+
+
+\section*{Γραμμική Ανεξαρτησία}
+
+
+\begin{enumerate}
+
+  \item\label{ask:lineks} Να εξετάσετε αν τα παρακάτω διανύσματα είναι γραμμικώς 
+    ανεξάρτητα.
+    \begin{enumerate}[(i)]
+      \item $ \mathbf{u} = (1,2) $, $ \mathbf{v} = (3,-5) $ \hfill Απ: ναι
+      \item $ \mathbf{u} = (1,2,-3) $ $ \mathbf{v} = (4,5,-6) $ \hfill Απ: ναι
+      \item $ \mathbf{u} = (1,1,0)$, $ \mathbf{v} = (1,3,2)$, $ \mathbf{w} = (4,9,5) $ 
+        \hfill Απ: όχι 
+      \item $ \mathbf{u} = (1,2,3)$, $ \mathbf{v} = (2,5,7)$, $ \mathbf{w} = (1,3,5) $ 
+        \hfill Απ: ναι 
+      \item $ \mathbf{u} = (1,2,-3,1) $, $ \mathbf{v} = (3,7,1,-2) $, $ \mathbf{w} =
+        (1,3,7,-4) $ \hfill Απ: όχι
+      \item $ \mathbf{u} = (1,3,1,-2) $, $ \mathbf{v} = (2,5,-1,3) $, $ \mathbf{w} =
+        (1,3,7,-2) $ \hfill Απ: ναι
+    \end{enumerate}
+
+  \item Αν $ \mathbf{u} $, $ \mathbf{v} $, $ \mathbf{w} $ είναι γραμμικώς 
+    ανεξάρτητα διανύσματα τότε να εξετάσετε αν τα παρακάτω σύνολα διανυσμάτων 
+    είναι επίσης γραμμικώς ανεξάρτητα.
+    \begin{enumerate}[(i)]
+      \item $ S = \{ \mathbf{u} + \mathbf{v} - 2 \mathbf{w}, \mathbf{u} - \mathbf{v} -
+        \mathbf{w}, \mathbf{u} + \mathbf{w} \} $ \hfill Απ: ναι 
+      \item $ S = \{ \mathbf{u} + \mathbf{v} - 3 \mathbf{w}, \mathbf{u} + 3 \mathbf{v} -
+        \mathbf{w}, \mathbf{v} + \mathbf{w}\}  $ \hfill Απ: όχι 
+    \end{enumerate}
+
+  \item\label{ask:eksart} Να εκφράσετε το διάνυσμα $ \mathbf{b} = (1,-2,5) $ ως γραμμικό 
+    συνδυασμό των διανυσμάτων $ \mathbf{u} = (1,1,1)$, $ \mathbf{v} = (1,2,3)$, 
+    $ \mathbf{w} = (2,-1,1) $.
+    \hfill Απ: $ \mathbf{b} = -6 \mathbf{u} + 3 \mathbf{v} +2 \mathbf{w} $ 	
+
+  \item\label{ask:eksart2} Να εξετάσετε αν το διάνυσμα $ \mathbf{b} = (2,5,-3) $ 
+    γράφεται ως γραμμικός συνδυασμός των διανυσμάτων $ \mathbf{u} = (1,-3,2)$, 
+    $ \mathbf{v} = (2,4,1)$, $ \mathbf{w} = (1,-5,7) $.
+    \hfill Απ: ναι 
+
+  \item Να εξετάσετε αν το διάνυσμα $ \mathbf{b} = (-3,0,12,15) $ μπορεί να γραφεί 
+    ως γραμμικός συνδυασμός των διανυσμάτων $ \mathbf{u}_{1} = (1,2,-2,1) $, 
+    $ \mathbf{u}_{2} = (1,3,-1,4) $ και $ \mathbf{u}_{3} = (2,1,-7,-7) $. 
+    Αν ναι, τότε να βρεθεί ένας τέτοιος γραμμικός συνδυασμός.
+
+    \hfill Απ: $ \mathbf{b} = -9 \mathbf{u}_{1} + 6 \mathbf{u}_{2} $ 
+
+  \item\label{ask:eksart3} Έστω τα διανύσματα $ \mathbf{u}_{1} = (1,2,0) $, 
+    $ \mathbf{u}_{2} = (-1,1,2) $ 
+    και $ \mathbf{u}_{3} = (3,0,-4) $. Να βρείτε ποια συνθήκη πρέπει να ικανοποιούν τα 
+    $a$, $b$, $c$, ώστε το διάνυσμα $ \mathbf{b} = (a,b,c) $ να ανήκει στον υπόχωρο 
+    $ \Span \{ \mathbf{u}_{1}, \mathbf{u}_{2}, \mathbf{u}_{3} \} $.
+
+    \hfill Απ: $ 4a -2b + 3c = 0 $ 
+
+  \item\label{ask:synd} Να δείξετε ότι τα διανύσματα $ \mathbf{u}_{1} = (1,3,0,5) $, 
+    $ \mathbf{u}_{2} = (1,2,1,4) $, $ \mathbf{u}_{3} = (1,1,2,3)$, 
+    $ \mathbf{u}_{4} = (1,1,2,3) $, $ \mathbf{u}_{5} = (1,-3,6,-1) $ 
+    είναι γραμμικώς εξαρτημένα και να βρεθεί μια σχέση που τα συνδέει. 
+    \hfill Απ: $ \mathbf{u}_{1} - 2 \mathbf{u}_{2} + \mathbf{u}_{3} = 0 $ 
+
+\end{enumerate}
+
+
+\end{document}
+

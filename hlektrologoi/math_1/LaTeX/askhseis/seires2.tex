@@ -1,0 +1,47 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\geometry{top=1.6cm}
+\everymath{\displaystyle}
+\pagestyle{askhseis}
+
+\begin{document}
+
+
+\begin{center}
+  \minibox{\large \bfseries \textcolor{Col1}{Ασκήσεις στις Σειρές}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Να εξεταστούν ως προς τη σύγκλιση, με το γενικευμένο κριτήριο σύγκρισης, 
+    οι παρακάτω σειρές.
+    \begin{enumerate}[i)]
+      \item $ \sum_{n=1}^{\infty} \frac{n^{4}+n^{2}}{3n^{6}+n} $ \hfill Απ: συγκλίνει 
+      \item $ \sum_{n=1}^{\infty} \left(\frac{1}{n} + \frac{1}{n^{2}}\right) $ 
+        \hfill Απ: αποκλίνει 
+      \item $ \sum_{n=1}^{\infty} \frac{3^{n}+4^{n}}{4^{n}+5^{n}} $ \hfill Απ: συγκλίνει 
+    \end{enumerate}
+
+  \item Να βρεθεί το υπόλοιπο $ R_{n} $ για τη σειρά 
+    $ \sum_{n=1}^{\infty} \frac{n!}{n^{n}} $. 
+    \hfill Απ: $ R_{n} = \frac{2(n+1)!}{(n+1)^{n+1}} $  
+
+  \item Πόσους όρους των παρακάτω σειρών, πρέπει να αθροίσουμε ώστε να προσεγγίσουμε 
+    το άθροισμά τους με τη ζητούμενη ακρίβεια δεκαδικών ψηφίων; 
+    \begin{enumerate}[i)]
+      \item $ \sum_{n=1}^{\infty} \frac{1}{n^{2}} $ \quad 
+        \textcolor{Col1}{ακρίβεια:} 2 δεκαδικά ψηφία \hfill Απ: $ n>200 $  
+      \item $ \sum_{n=1}^{\infty} (-1)^{n} \frac{1}{n^{4}} $ \quad
+        \textcolor{Col1}{ακρίβεια:} 5 δεκαδικά ψηφία \hfill Απ: $ n>20 $ 
+    \end{enumerate}
+
+  \item Να εξεταστεί ως προς τη σύγκλιση, με το γενικευμένο κριτήριο λόγου, η σειρά 
+    $ \sum_{n=1}^{\infty} \frac{(2n)!}{4^{n} (n!)^{2}}$ 
+
+    \hfill Απ: $ \lambda ' = 1/2 < 1 $ αποκλίνει
+
+\end{enumerate}
+  \end{document}

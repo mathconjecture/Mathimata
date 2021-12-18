@@ -1,0 +1,84 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\pagestyle{askhseis}
+
+\begin{document}
+
+
+\begin{center}
+  \minibox{\large \bfseries \textcolor{Col1}{Συναρτήσεις Πολλών Μεταβλητών}}
+\end{center}
+
+\vspace{\baselineskip}
+
+%todo να συνεχισω να φτιαξω αυτες τις ασκησεις
+
+\section*{Κανόνες Παραγώγισης}
+
+\begin{enumerate}
+  \item Με τη βοήθεια των κανόνων παραγώγισης να υπολογιστούν οι μερικές 
+    παράγωγοι 1ης τάξης των παρακάτω συναρτήσεων:
+
+    \begin{enumerate}[i)]
+      \item $f(x,y)=y\sin (xy)$ \hfill Απ: \begin{tabular}{l}
+          $f_x=y^2\cos(xy)$ \\ 
+          $f_y=\sin(xy)+yx\cos(xy)$
+        \end{tabular}
+
+      \item $f(x,y)=\arcsin(\frac{x}{y})$\hfill Απ: \begin{tabular}{l}
+          $f_x=\frac{1}{\sqrt{y^2-x^2}}$ \\ 
+          $f_y=-\frac{x}{y\sqrt{y^2-x^2}}$
+        \end{tabular}
+      \item $ f(x,y,z) = (x+y^{2}) \sin{(xz)} $ \hfill Απ: \begin{tabular}{l}
+          $ f_{x} = \sin{(xz)} + z(x+y^{2}) \sin{(xz)} $ \\
+          $ f_{y} = 2y \sin{(xz)} $ \\
+          $ f_{z} = x(x+y^{2}) \sin{(xz)} $
+        \end{tabular} 
+    \end{enumerate}
+
+  \item Έστω η συνάρτηση $f(x,y)=\ln\left(\cos y+x\cos x\right)$.  Να υπολογισθεί 
+    η $ f_{xy} $ στο σημείο $\left(\pi,-\frac{\pi}{2}\right)$.
+    \hfill Απ: $\frac{1}{\pi^2}$
+
+  \item Να δείξετε ότι η συνάρτηση $ f(x,y) = \cos{(x+y)} + \cos{(x-y)} $ 
+    επαληθεύει την εξίσωση $ f_{xx} - f_{yy} = 0 $.
+
+  \item (θέμα) Να βρεθεί το άθροισμα $ \pdv[2]{f}{x} + \pdv[2]{f}{y} $, αν 
+    $ f(x,y) = cot^{-1}(xy) $ \hfill Απ: %τοσο να βρω την απαντηση 
+
+  \item (θέμα) Να βρεθεί η διαφορά $ \pdv[2]{f}{x} - \pdv[2]{f}{y} $, αν 
+    $ f(x,y) = \mathrm{e}^{ax} \cos{(ay)} $.
+    \hfill Απ: %τοσο να βρω την απαντηση 
+\end{enumerate}
+
+
+\section*{Διαφορικό}
+
+\begin{enumerate}
+
+  \item Να βρεθεί το ολικό διαφορικό 1ης τάξης, της συνάρτησης 
+    $f(x,y)=\ln(xy)+\cos(y^2)$ 
+
+    \hfill Απ: $df=\frac{dx}{x}+\left(\frac{1}{y}-2y\sin(y^2)\right)dy$
+
+  \item Για τις παρακάτω παραστάσεις, να αποδείξετε ότι είναι \textbf{τέλεια
+    διαφορικά} και να υπολογίσετε τη συνάρτηση δυναμικού.
+    \begin{enumerate}[i)]
+      \item $ \left(x+e^{x/y}\right)dx + e^{x/y}\left(1- \frac{x}{y}\right)dy $
+        \hfill Απ: $ f(x,y) = \frac{x^{2}}{2} +y e^{x/y} + c $ 
+
+      \item $\left(2e^{x}+\frac{1}{x}-3\sin y\right)dx+3(y^2-x\cos y)dy$ 
+        \hfill  Απ: $ f(x,y,z) = y^{3}-3x \sin{y} + 2e^{x} + \ln{x} +c $.
+        %spand (114)
+    \end{enumerate}
+
+  \item Να υπολογιστεί το $a$ ώστε η παράσταση $ \frac{ x + ay }{ (x-y)^{3} }dx 
+    + \frac{ ax+y }{ (x-y)^{3} }dy $ να είναι \textbf{τέλειο διαφορικό}.
+
+    \hfill Απ: $ a=-1 $
+\end{enumerate}
+
+\end{document}
+

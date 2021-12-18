@@ -1,0 +1,104 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\pagestyle{askhseis}
+
+\begin{document}
+
+%να βάλω καλύτερες και πιο ευκολες ασκησεις στις παραγωγους
+
+\begin{center}
+  \minibox{\large \bfseries \textcolor{Col1}{Ασκήσεις στις Παραγώγους}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+
+  \item Να υπολογιστούν οι παράγωγοι των παρακάτω συναρτήσεων
+    \begin{enumerate}[(i)]
+      \item $ f(x) = \ln{(\sqrt[5]{1+3x^{2}})} $ \hfill Απ: $
+        \frac{6x}{5(1+3x^{2})} $
+      \item $ f(x) = \ln({\sin({\cos{x}})}) $ \hfill Απ: $
+        \frac{1}{\sin{(\cos{x})}} [\cos{(\cos{x})}] (- \sin{x}) $ 
+      \item $ f(x) = \arctan (\frac{x}{\sqrt{1 + x^{2}}}) $ \hfill Απ: $
+        \frac{1}{(1+2x^{2})\sqrt{1 + x^{2}}} $
+      \item $ f(x) = \ln{(e^{\sin{x}})} + \sqrt{x^{2} - 25x} $ \hfill Απ: $
+        \cos{x} + \frac{2x - 25}{2 \sqrt{x^{2} - 25x}}  $  
+    \end{enumerate}
+
+  \item  Να υπολογιστούν οι παράγωγοι των παρακάτω συναρτήσεων
+
+    \begin{enumerate}[(i)]
+      \item $ f(x) = (\cos{x})^{\sin{2x}} $ \hfill Απ: $
+        (\cos{x})^{\sin{2x}} 2(\cos{2x} \ln{(\cos{x})} - \sin^{2}{x}) $
+      \item $ f(x) = \left(1 + \frac{1}{x} \right)^{x} $ \hfill Απ: $
+        \left(1 + \frac{1}{x}\right)^{x}\left[\ln{(1 + \frac{1}{x})} -
+        \frac{1}{x+1}\right] $
+      \item $ f(x)=(\sin{x})^{x} $ \hfill Απ: $ (\sin{x})^{x}[\ln{(\sin{x}
+        )} + x \cot{x}] $ 
+      \item $ f(x)=\cos{x}^{x} $ \hfill Απ: $ (- \sin{x^{x}})x^{x} (1 +
+        \ln{x}) $
+    \end{enumerate}
+
+  \item Να βρεθούν οι παράγωγοι των αντίστροφων, των παρακάτω συναρτήσεων.
+    \begin{enumerate}[(i)]
+      \item $ y = \cos{x} $ \hfill Απ: $ \frac{-1}{\sqrt{1 - y^{2}}} $
+      \item $ y = \tan{x} $ \hfill Απ: $ \frac{1}{1 + y^{2}} $
+    \end{enumerate}
+
+  \item Δίνεται η σχέση $ x^{2} - xy + y^{2} = 3 $, $ y=y(x) $. Να βρεθεί η 1η
+    και η 2η παράγωγος της $y$ ως προς $x$ στο σημείο $ (1,-1) $.
+
+    \hfill Απ: $ y' = 1$, $ y'' = \frac{2}{3} $
+
+  \item Δίνεται η σχέση $ 4x^{3} - 3xy^{2} + 6x^{2} - 5xy - 8 y^{2} + 9x + 14
+    = 0$. Να βρείτε τις εξισώσεις της εφαπτομένης και της κάθετης ευθείας
+    της καμπύλης στο σημείο $ (-2,3) $.
+
+    \hfill Απ: $\varepsilon\colon y = \frac{9}{2} x - 6 $, 
+    $\kappa\colon y = \frac{2}{9} x + \frac{31}{9} $.
+
+  \item Να υπολογιστεί το προσεγγιστικό πολυώνυμο Maclaurin 3ης τάξης, των 
+    παρακάτω συναρτήσεων.
+    \begin{enumerate}[i)]
+      \item $ y= \mathrm{e}^{-x} $ 
+        \hfill Απ: $ \mathrm{e}^{-x} \approx 1-x+ \frac{1}{2} x^{2} - \frac{1}{6} x^{3} $ 
+      \item $ y= \ln{(x+2)} $ 
+        \hfill Απ: $ \ln{(x+2)} \approx \ln{2} + \frac{1}{2} x - \frac{1}{8} x^{2} +
+        \frac{1}{24} x^{3} $ 
+      \item $ y= \frac{1}{x-1} $ \hfill Απ: $ \frac{1}{x-1} \approx -1 -x -x^{2} - x^{3} $ 
+      \item $ y= \sqrt{x+1} $ \hfill Απ: $ \sqrt{x+1} \approx 1 + \frac{1}{2} x -
+        \frac{1}{8} x^{2} + \frac{1}{16} x^{3} $ 
+    \end{enumerate}
+
+  \item  Να υπολογιστεί το προσεγγιστικό πολυώνυμο Taylor 3ης τάξης, γύρω από 
+    το σημείο $ x_{0}=1 $, των παρακάτω συναρτήσεων.
+    \begin{enumerate}[i)]
+      \item $ y= \ln{(x+1)} $ 
+        \hfill Απ: $ \ln{(x+1)} \approx \ln{2} + \frac{1}{2} (x-1) - \frac{1}{8}
+        (x-1)^{2} + \frac{1}{24} (x-1)^{3} $ 
+      \item $ y= \frac{1}{x+1} $ \hfill Απ: $ \frac{1}{x+1} \approx \frac{1}{2} -
+        \frac{1}{4} (x-1) + \frac{1}{3} (x-1)^{2} - \frac{1}{16} (x-1)^{3} $ 
+    \end{enumerate}
+
+  \item Να βρείτε τα $ a, b \in \mathbb{R} $ έτσι ώστε η ευθεία $ y = 2x + 5
+    $ να είναι εφαπτομένη της συνάρτησης $ f(x) = x^{2} + ax + b $ στο
+    σημείο $ x_{0} = -1 $. 
+
+    \hfill Απ: $ a = 4, b = 6 $
+
+  \item Να βρείτε μια πολυωνυμική προσέγγιση μέχρι και 
+    όρους 3ης τάξης της συνάρτησης που ορίζεται πεπλεγμένα από την εξίσωση 
+    $ x^{2} - xy + y^{2} = 3$ στο σημείο $ (1,-1) $.
+
+    \hfill Απ: $f(x) \cong -1 + (x-1) + \frac{(x-1)^{2}}{3} +
+    \frac{(x-1){3}}{9}$
+
+
+\end{enumerate}
+
+
+\end{document}
+

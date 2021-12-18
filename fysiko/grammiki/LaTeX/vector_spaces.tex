@@ -1,0 +1,69 @@
+\input{preamble.tex}
+\input{definitions_ask.tex}
+\input{tikz.tex}
+
+\usepackage{anyfontsize}
+\pagestyle{vangelis}
+\setcounter{chapter}{1}
+
+\linespread{1.1}
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large \bfseries \textcolor{Col1}{Ασκήσεις στους Διανυσματικούς Χώρους}}
+\end{center}
+
+\vspace{\baselineskip}
+
+
+\section*{Διανυσματικοί Χώροι}
+
+
+\begin{enumerate}
+
+  \item Να αποδείξετε ότι τα παρακάτω σύνολα είναι διανυσματικοί χώροι. Να 
+    επαληθευτούν όλα τα αξιώματα.
+    \begin{enumerate}[i)]
+      \item $ \mathbb{R}^{2} = \{(x,y)\in \mathbb{R}^{2} 
+        \; : \; x,y \in \mathbb{R} \} $ με τις συνήθεις πράξεις:
+        \begin{gather*}
+          (x_{1}, y_{1}) + (x_{2}, y_{2}) = (x_{1}+ x_{2}, y_{1}+ y_{2}) \\
+          \lambda \cdot (x,y) = (\lambda x, \lambda y)
+        \end{gather*}
+
+      \item $ \mathbf{F}(A, \mathbb{R}) = \{ f \colon A \to \mathbb{R} 
+        \; : \; f \; \text{συνάρτηση} \} $ με τις συνήθεις πράξεις:
+        \begin{gather*}
+          (f+g)(x) = f(x)+g(x), \quad \forall x \in A \\
+          (\lambda  \cdot f)(x) = \lambda f(x), \quad \forall x \in A
+        \end{gather*} 
+    \end{enumerate}
+
+  \item Να εξετάσετε αν τα παρακάτω σύνολα είναι διανυσματικοί χώροι επί του 
+    $\mathbb{R}$.
+    \begin{enumerate}[i)]
+      \item $ V = \{ (a,x) \in \mathbb{R}^{2} \; : \; x \in \mathbb{R} \} $, 
+        για δοσμένο $ a \in \mathbb{R} $, και με πράξεις: 
+        \begin{gather*}
+          (a,x) + (a,y) = (a,x+y) \\
+          \lambda \cdot (a,x) = (a, \lambda x)
+        \end{gather*}
+        Είναι το παραπάνω σύνολο υπόχωρος του $ \mathbb{R}^{2} $;
+        \hfill Απ: ναι, όχι 
+      \item $ V = \{(x,y) \; : \; x,y \in \mathbb{R} \} $ με πράξεις: 
+        \begin{gather*}
+          (x_{1}, y_{1}) + (x_{2}, y_{2}) = (x_{1}+ y_{1}, x_{2}+ y_{2}) \\
+          \lambda \cdot (x,y) = (\lambda x, 0) 
+        \end{gather*} 
+        \hfill Απ: όχι 
+      \item $ V = \{ f \colon \mathbb{R} \to \mathbb{R} \; : \; f(a) = 0 \} $, 
+        για δοσμένο $ a \in \mathbb{R} $ και με τις συνήθεις πράξεις. 
+        \hfill Απ: ναι 
+    \end{enumerate}
+
+\end{enumerate}
+
+
+
+\end{document}
