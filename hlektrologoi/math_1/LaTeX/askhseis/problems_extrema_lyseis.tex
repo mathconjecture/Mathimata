@@ -1,6 +1,7 @@
 \input{preamble_ask.tex}
 \input{definitions_ask.tex}
 \input{tikz.tex}
+\input{myboxes.tex}
 
 \input{insbox}
 \pagestyle{askhseis}
@@ -31,11 +32,13 @@
 
 \vspace{\baselineskip}
 
+\begin{mybox3}
 \begin{exercise}
   {\bfseries \boldmath Να προσδιοριστούν οι διαστάσεις μιας πισίνας 
     $ \SI{32}{m^3} $ με τετραγωνική βάση έτσι ώστε η επιφάνεια των εσωτερικών 
   τοίχων και του πυθμένα να είναι ελάχιστη.}
 \end{exercise}
+\end{mybox3}
 \begin{solution}
 \item {}
   \InsertBoxR{2}{\parbox[b][\baselineskip][c]{0.30\textwidth}
@@ -92,11 +95,13 @@
   Επομένως οι διαστάσεις της πισίνας πρέπει να είναι $ x = 4 $ και $ y = 2 $.
 \end{solution}
 
+\begin{mybox3}
 \begin{exercise}
   {\bfseries \boldmath Να βρεθεί η εξίσωση της ευθείας $ (\varepsilon)
     $ που περνάει από γνωστό σημείο $ P(a,b) $ και σχηματίζει με τους άξονες
   συντεταγμένων τρίγωνο ελάχιστου εμβαδού $ (a>0,\, b>0) $.}
 \end{exercise}
+\end{mybox3}
 \begin{solution}
 \item {}
   \InsertBoxR{3}{\parbox[b][\baselineskip][c]{0.30\textwidth}
@@ -193,11 +198,13 @@
   \end{myitemize}
 \end{solution}
 
+\begin{mybox3}
 \begin{exercise}
   {\bfseries \boldmath Θεωρούμε τρίγωνο ΑΒΓ με  ΒΓ$=a $ και ύψος ΑΔ$=h$. Επίσης 
     θεωρούμε τα εγγεγραμένα σε αυτό ορθογώνια των οποίων η μία πλευρά βρίσκεται πάνω στη
   ΒΓ. Να βρεθεί εκείνο το παραλληλόγραμμο που έχει μέγιστο εμβαδό.}
 \end{exercise}
+\end{mybox3}
 \begin{solution}
   Το εμβαδό του ορθογωνίου δίνεται από τη σχέση $ E=xy $. Αρκεί να βρούμε μια σχέση που 
   να συνδέει τις πλευρές του ορθογωνίου $x$ και $y$ με τα γνωστά μεγέθη της άσκησης, 
@@ -260,10 +267,12 @@
 $ E_{\max} = {ah}/{4}  $.
 \end{solution}
 
+\begin{mybox3}
 \begin{exercise}
   {\bfseries \boldmath Να εγγραφεί ορθογώνιο παραλληλόγραμμο με μέγιστο εμβαδό στην
     έλλειψη $ \frac{x^{2}}{a^{2}} + \frac{y^{2}}{b^{2}} = 1 $.}
 \end{exercise}
+\end{mybox3}
 \begin{solution}
 \item {}
   \twocolumnsidescc{
@@ -341,6 +350,7 @@ $ E_{\max} = {ah}/{4}  $.
   \frac{\sqrt{2}}{2} b $, έχει μέγιστο εμβαδό, $ E=4E_{1} = 2ab $.
 \end{solution}
 
+\begin{mybox3}
 \begin{exercise}
   {\bfseries \boldmath Ένα φύλλο ειδικού χαρτιού για μεγάλο μηχανολογικό σχέδιο, έχει
     επιφάνεια \SI{2}{m^{2}}. Στο σχέδιο που θα γίνει πρέπει να αφεθούν
@@ -348,6 +358,7 @@ $ E_{\max} = {ah}/{4}  $.
     στις πλαϊνές πλευρές \SI{14}{cm}. Ποιες πρέπει να είναι οι διαστάσεις
   τούτου φύλλου ώστε το καθαρό εμβαδό για σχεδίαση να είναι μέγιστο?}
 \end{exercise}
+\end{mybox3}
 \begin{solution}
 \item {}
   \twocolumnsidesccc{
@@ -404,6 +415,7 @@ $ E_{\max} = {ah}/{4}  $.
     $ y= \sqrt{3} $ έχει μέγιστο εμβαδό.
 \end{solution}
 
+\begin{mybox3}
 \begin{exercise}
   {\bfseries\boldmath Δυο πόλεις Α και Β βρίσκονται προς το ίδιο μέρος της όχθης ενός
 		ποταμού και απέχουν από αυτήν 10 και 15 χιλιόμετρα αντίστοιχα. Οι
@@ -413,6 +425,7 @@ $ E_{\max} = {ah}/{4}  $.
 		κατασκευαστεί το εργοστάσιο ώστε για τους αγωγούς που θα συνδέσουν αυτό
   με τις πόλεις να έχουμε το ελάχιστο κόστος?}
 \end{exercise}
+\end{mybox3}
 \begin{solution}
 \item {}
   \twocolumnsidescc{
@@ -492,10 +505,12 @@ $ E_{\max} = {ah}/{4}  $.
   άρα ελάχιστο.
 \end{solution}
 
+\begin{mybox3}
 \begin{exercise}
-  Να εγγραφεί σε κύκλο διαμέτρου $d$, ορθογώνιο με βάση $b$ και ύψος $h$
-  ώστε το γινόμενο $ b h^{2} $ να είναι μέγιστο.
+ {\bfseries\boldmath Να εγγραφεί σε κύκλο διαμέτρου $d$, ορθογώνιο με βάση $b$ και ύψος 
+   $h$ ώστε το γινόμενο $ b h^{2} $ να είναι μέγιστο.}
 \end{exercise}
+\end{mybox3}
 \begin{solution}
 \item {}
   \twocolumnsidesccd{
@@ -532,11 +547,13 @@ $ E_{\max} = {ah}/{4}  $.
     -2 \sqrt{3} d < 0 $, άρα μέγιστο.
 \end{solution}
 
+\begin{mybox3}
 \begin{exercise} 
-  Να προσδιοριστεί ο λόγος της ακτίνας προς το ύψος ενός κλειστού
+ {\bfseries\boldmath Να προσδιοριστεί ο λόγος της ακτίνας προς το ύψος ενός κλειστού
   κυκλικού ορθού κυλινδρικού δοχείου χωρητικότητας $c$ μονάδων όγκου, αν
-  θέλουμε η επιφάνεια του δοχείου να είναι ελάχιστη.
+  θέλουμε η επιφάνεια του δοχείου να είναι ελάχιστη.}
 \end{exercise}
+\end{mybox3}
 \begin{solution}
 \item {}
   \twocolumnsidesccd{

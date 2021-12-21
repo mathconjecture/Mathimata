@@ -1,0 +1,127 @@
+\input{preamble.tex}
+\input{definitions.tex}
+\input{tikz.tex}
+
+\usepackage{anyfontsize}
+\pagestyle{vangelis}
+\setcounter{chapter}{1}
+
+\linespread{1.1}
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large \bfseries \textcolor{Col1}{Ασκήσεις στους Διανυσματικούς Χώρους}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Να εξετάσετε αν τα παρακάτω υποσύνολα είναι υπόχωροι. 
+
+    \twocolumnsidee{
+      \begin{enumerate}[(i)]
+        \item $ W = \{(x,y)\in \mathbb{R}^{2} \; \mid \; x,y \geq 0 \} $ 
+          \hfill Απ: όχι 
+        \item $ W = \{ (x,y) \in \mathbb{R}^{2} \; \mid \; x = 3y \} $ \hfill Απ: ναι
+        \item $ W = \{ (x,y) \in \mathbb{R}^{2} \; \mid \; x+y=1 \} $ 
+          \hfill Απ: όχι 
+        \item $ W = \{ (x,y) \in \mathbb{R}^{2} \; \mid \; y = x^{2} \} $ 
+          \hfill Απ: όχι 
+        \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x\geq 0 \} $ \hfill Απ:  όχι
+        \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x + y + z = 0 \} $ 
+          \hfill Απ: ναι
+      \end{enumerate}
+      }{
+      \begin{enumerate}[(i),start=7]
+        \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x + y + z = 1 \} $ 
+          \hfill Απ: όχι
+        \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x^{2} + y^{2} + z^{2} 
+          \leq 1  \} $ \hfill Απ: όχι
+        \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x = y = z \} $ 
+          \hfill Απ: ναι
+          % \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid x \leq y \leq q \} $ 
+          % \hfill Απ: όχι
+        \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x = 2y = 3z \} $ 
+          \hfill Απ: ναι 
+        \item $ W = \{ A \in M_{2}(\mathbb{R}) \; \mid \; \det{A}=1 \} $ 
+          \hfill Απ: όχι 
+        \item $ W = \{ A \in M_{2}(\mathbb{R}) \; \mid \; \det{A}=0 \} $ 
+          \hfill Απ: όχι 
+      \end{enumerate}
+    }
+
+  \item Να δείξετε ότι τα παρακάτω υποσύνολα είναι υπόχωροι
+    \begin{enumerate}[(i)]
+      \item $ W = \{ (x,y) \in \mathbb{R}^{2} \mid y = 3x \} $ 
+      \item $ W = \{(x,y,z)\in \mathbb{R}^{3} \; : \; 2x-3y+z=0 \} $
+    \end{enumerate}
+
+  \item\label{ask:eksart3} Έστω τα διανύσματα $ \mathbf{u}_{1} = (1,2,0) $, 
+    $ \mathbf{u}_{2} = (-1,1,2) $ 
+    και $ \mathbf{u}_{3} = (3,0,-4) $. Να βρείτε ποια συνθήκη πρέπει να ικανοποιούν τα 
+    $a$, $b$, $c$, ώστε το διάνυσμα $ \mathbf{b} = (a,b,c) $ να ανήκει στον υπόχωρο 
+    $ \langle \mathbf{u}_{1}, \mathbf{u}_{2}, \mathbf{u}_{3} \rangle $.
+
+    \hfill Απ: $ 4a -2b + 3c = 0 $ 
+
+  \item\label{ask:baseeks} Να εξετάσετε αν τα διανύσματα $ \mathbf{u} = (1,1,1)$, 
+    $ \mathbf{v} = (1,2,3)$, $ \mathbf{w} = (1,5,3) $ είναι βάση του $\mathbb{R}^{3}$. 
+    \hfill Απ: ναι 
+
+  \item\label{ask:parag} Να εξετάσετε αν τα διανύσματα $ \mathbf{u_{1}} = (1,1,3), 
+    \mathbf{u_{2}} = (1,0,2), \mathbf{u_{3}}= (1,-2,0)$ παράγουν τον $ \mathbb{R}^{3} $.
+    \hfill Απ: όχι 
+
+  \item\label{ask:isoi} Έστω τα διανύσματα $ \mathbf{u}_{1} = (1,2,-1,3)$, 
+    $\mathbf{u}_{2} = (2,4,1,-2)$, $ \mathbf{u} _{3} = (3,6,3,-7) $ και 
+    $ \mathbf{w}_{1} = (1,2,-4,11)$, $ \mathbf{w}_{2} = (2,4,-5,14) $. 
+    Αν $ U = \Span \{ \mathbf{u}_{1}, \mathbf{u}_{2}, \mathbf{u}_{3} \} $ και 
+    $ W = \Span \{ \mathbf{w}_{1}, \mathbf{w}_{2} \} $, τότε να δείξετε ότι $ U=W $.
+
+  \item\label{ask:parag2} Για τα παρακάτω διανύσματα να βρεθεί μια βάση και η διάσταση 
+    του χώρου που παράγουν.
+    \begin{enumerate}[(i)]
+      \item $ \mathbf{u}_{1} = (1,1,1,2,3) $, $ \mathbf{u}_{2} = (1,2,-1,-2,1) $, 
+        $ \mathbf{u} _{3} = (3,5,-1,-2,5) $, $ \mathbf{u}_{4} = (1,2,1,-1,4) $
+
+        \hfill Απ: $ B = \{ \mathbf{u}_{1}, \mathbf{u}_{2}, \mathbf{u}_{3}\} $ 
+
+      \item $ \mathbf{u}_{1} = (1,-2,1,3,-1) $, $ \mathbf{u}_{2} = (-2,4,-2,-6,2) $, $
+        \mathbf{u}_{3} = (1,-3,1,2,1) $, $ \mathbf{u}_{4} = (3,-7,3,8,-1) $
+
+        \hfill Απ: $ B = \{ \mathbf{u}_{1}, \mathbf{u}_{2}, \mathbf{u}_{3} \} $ 
+
+      \item $ \mathbf{u}_{1} = (1,0,1,0,1) $, $ \mathbf{u}_{2} = (1,1,2,1,0) $, 
+        $ \mathbf{u} _{3} = (1,2,3,1,1,) $, $ \mathbf{u}_{4} = (1,2,1,1,1) $
+        \hfill Απ: $ B = \{ \mathbf{u}_{1}, \mathbf{u}_{2}, \mathbf{u}_{3}, 
+        \mathbf{u}_{4} \} $ 
+
+      \item $ \mathbf{u}_{1} = (1,0,1,1,1) $, $ \mathbf{u}_{2} = (2,1,2,0,1) $, 
+        $ \mathbf{u} _{3} = (1,1,2,3,4) $, $ \mathbf{u}_{4} = (4,2,5,4,6) $
+        \hfill Απ: $ B = \{ \mathbf{u}_{1}, \mathbf{u}_{2}, \mathbf{u}_{3} \} $ 
+    \end{enumerate}
+
+  \item Θεωρήστε τους υποχώρους 
+    $ U = \{ (x,y,z,w) \in \mathbb{R}^{3} \mid y - 2z + w = 0 \} $ και 
+    $ W = \{ (x,y,z,w) \in \mathbb{R}^{3} \mid x = w, y = 2z \} $ του 
+    $\mathbb{R}^{4}$. Να βρείτε μια βάση και τη διάσταση των υποχώρων:
+    \begin{enumerate}[(i)]
+      \item $ U $ \hfill Απ: $ B_{U} = \{ (1,0,0,0), (0,2,1,0), (0,-1,0,1) \} $ 
+      \item $ W $ \hfill Απ: $ B_{W} = \{ (0,2,1,0), (1,0,0,1) \} $ 
+      \item $ U \cap W $ \hfill Απ: $ B_{U\cap W} = \{ (0,2,1,0) \} $ 
+    \end{enumerate}	
+
+  \item Έστω $ W $ ο υπόχωρος του $\mathbb{R}^{4}$ που παράγεται από τα διανύσματα 
+    $ \mathbf{u} _{1} = (1,-2,5,-3), \mathbf{u}_{2} = (2,3,1,-4) $, 
+    $ \mathbf{u}_{3} = (3,8,-3,-5) $.
+      Να βρείτε μια βάση και τη διάσταση του $ W $.
+
+    \hfill Απ:  \begin{tabular}{l}
+      $B = \{ (1,-2,5,-3), (0,7,-9,2) \}$ \\
+    \end{tabular} 
+\end{enumerate}
+
+
+\end{document}
+
