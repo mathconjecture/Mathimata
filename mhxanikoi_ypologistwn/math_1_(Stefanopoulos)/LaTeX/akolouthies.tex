@@ -1,0 +1,83 @@
+\input{preamble.tex}
+\input{definitions.tex}
+
+\geometry{top=2.5cm}
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+
+\begin{document}
+
+\begin{center}
+  \minibox[c]{\large \bfseries \textcolor{Col1}{Ακολουθίες}\\ \large 
+  \textcolor{Col1}{Ασκήσεις}}
+\end{center}
+
+\vspace{\baselineskip}
+
+
+\setcounter{chapter}{1}
+\section*{Φραγμένες Ακολουθίες}
+
+\begin{enumerate}
+  \item Να δείξετε ότι η ακολουθία $ a_{n} = \frac{1}{n^{2}} $ είναι 
+    φραγμένη.
+  \item Να δείξετε ότι η ακολουθία $ a_{n} = (-1)^{n}\frac{1}{2n} $ είναι 
+    φραγμένη.
+    \hfill Απ: $ \abs{a_{n}} \leq \frac{1}{2} $ 
+  \item Να δείξετε ότι η ακολουθία $ a_{n} = \frac{5 \cos^{3}{n}}{n+2} $ 
+    είναι φραγμένη.
+    \hfill Απ: $ \abs{a_{n}} < \frac{5}{2}  $ 
+  \item Να δείξετε ότι η ακολουθία $ a_{n} = \frac{\cos{n} + n \sin{n}}{n^{2}} $ 
+    είναι φραγμένη. 
+    \hfill Απ: $ \abs{a_{n}} \leq 2 $ 
+  \item Να δείξετε ότι η ακολουθία $ a_{n} = \frac{n}{3^{n}} $ είναι 
+    φραγμένη. 
+    \hfill Απ: $ \abs{a_{n}}< \frac{1}{2} $
+  \item Να δείξετε ότι η ακολουθία $ a_{n} = 3n-2 $ δεν είναι άνω φραγμένη.
+\end{enumerate}
+
+\section*{Μονότονες Ακολουθίες}
+
+\begin{enumerate}
+  \item Να δείξετε ότι ακολουθία $ a_{n} = \frac{n}{5n-1} $ είναι 
+    γνησίως φθίνουσα.
+  \item Να δείξετε ότι ακολουθία $ a_{n} = \frac{n}{3^{n}} $ είναι 
+    γνησίως φθίνουσα.
+  \item Να δείξετε ότι ακολουθία $ a_{n} = \frac{2^{n}}{n!} $ είναι 
+    γνησίως φθίνουσα.
+  \item Να δείξετε ότι ακολουθία $ a_{n} = \frac{2n^{2}-1}{n} $ είναι γνησίως 
+    αύξουσα.
+\end{enumerate}
+
+
+
+\section*{Άλγεβρα και θεωρήματα Ορίων}
+
+\begin{enumerate}
+
+  \item Να υπολογιστούν τα παρακάτω όρια.
+    \begin{enumerate}[i)]
+      \item $ \lim_{n \to \infty} \frac{2n+1}{3n-1} $ \hfill Απ: 2/3 
+      \item $ \lim_{n \to \infty} \frac{n^{2}+3n}{n^{2}+2n+1} $ \hfill Απ: 1 
+      \item $ \lim_{n \to \infty} \frac{n+1}{n^{2}+1} $ \hfill Απ: $ \infty $ 
+      \item $ \lim_{n \to \infty} \frac{n^2+n+1}{2n-1} $ \hfill Απ: $0$ 
+      \item $ \lim_{n \to \infty} \sqrt[3]{\frac{n^{3}+n}{n^{3}+2n}} $ 
+        \hfill Απ: 1 
+    \end{enumerate}
+
+  \item Να υπολογιστούν τα παρακάτω όρια με τη βοήθεια του Κριτηρίου 
+    Παρεμβολής.
+
+    \begin{enumerate}[i)]
+      \item $ \lim_{n \to \infty} \frac{(-1)^{n}}{n^{2}+2n}  $ \hfill Απ: 0  
+      % \item $ \lim_{n \to \infty} (\sqrt{n+2} - \sqrt{n})  $ \hfill Απ:0
+      \item $ \lim_{n \to \infty} \frac{4 \sin^{3}{n}}{n^{2}} $ 
+        \hfill Απ:0
+      \item $ \lim_{n \to \infty} \frac{\cos{n} + 3 \sin{4n}}{ 2 n^2} $ \hfill Απ: 0  
+    \end{enumerate}
+\end{enumerate}
+
+
+\end{document}
+
+

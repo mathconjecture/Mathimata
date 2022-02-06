@@ -1,6 +1,7 @@
 \input{preamble_ask.tex}
 \input{definitions_ask.tex}
 
+\geometry{top=2cm}
 \pagestyle{askhseis}
 \everymath{\displaystyle}
 
@@ -20,15 +21,11 @@
     \begin{enumerate}[i)]
       \item $\frac{f(x)}{g(x)}=\frac{x^2+4x+7}{(x+2)(x+3)^2}$ 
         \hfill Απ: $A_1=3, A_2=-2, A_3=-4$
-      \item $\frac{f(x)}{g(x)}=\frac{x^5+1}{(x^2-x+1)^3}$ 
-        \hfill Απ: \begin{tabular}{l} $A_1=\phantom{-}1, B_1=\phantom{-}2$ \\ 
-          $A_2=\phantom{-}1, B_2=-3$ \\ $A_3=-1, B_3=\phantom{-}2$
-        \end{tabular}
       \item $\frac{f(x)}{g(x)}=\frac{x^3-3x}{(x+1)^2(x^2+x+2)}$ 
         \hfill Απ: $A_1=\frac{1}{2}, A_2=1, A_3=\frac{1}{2}, B_3=-3$
     \end{enumerate}
 
-  \item \label{ask:rhtes} Να υπολογιστούν τα παρακάτω ολοκληρώματα ρητών συναρτήσεων.
+  \item \label{ask:rhtes} Να υπολογιστούν τα ολοκληρώματα των παρακάτω ρητών συναρτήσεων.
     \begin{enumerate}[i)]
       \item $\int\frac{dx}{x^2-4}$\hfill Απ: $\frac{1}{4}\ln\abs{\frac{x-2}{x+2}}+c$
       \item $\int\frac{x^2+x-1}{(x-2)(x^2+1)}\,dx$ \hfill Απ: $\ln\abs{x-2}+\arctan x+c$
@@ -45,23 +42,24 @@
         \hfill Απ: $-\frac{2}{9}x+\frac{1}{9}\ln\abs{e^x-3}+c$
     \end{enumerate}
 
-  \item \label{ask:rizes} Να υπολογιστούν τα παρακάτω αόριστα ολοκληρώματα (με ριζικά).
+  \item \label{ask:rizes} Να υπολογιστούν τα παρακάτω αόριστα ολοκληρώματα.
     \begin{enumerate}[i)]
       \item $\int\frac{\sqrt{x+4}}{x}dx$
         \hfill Απ: $2\sqrt{x+4}+2\ln\left|\frac{\sqrt{x+4}-2}{\sqrt{x+4}+2}\right|+c$
-      \item $\int\frac{1}{\sqrt{x^2+3x+2}}dx$
-        \hfill Απ: $\ln\left|\frac{t+1}{t-1}\right|+c$, όπου 
-        $t=\frac{\sqrt{x^2+3x+2}}{x+1}$
       \item $\int\sqrt[3]{\frac{x-1}{x}}\frac{1}{x(x-1)}dx$
         \hfill Απ: $3^3\sqrt[3]{\frac{x-1}{x}} +c$
-      \item  $\int\frac{1}{\sqrt{2x-1}-\sqrt[4]{2x-1}}dx$\hfill Απ: $(t+1)^2
-        +2\ln|t-1|+c$, όπου $t=\sqrt[4]{2x-1} \label{four} $
+      \item $\int\frac{1}{\sqrt{x^2+3x+2}}dx$
+        \hfill Απ: $\ln\left|\frac{u+1}{u-1}\right|+c$, όπου 
+        $u=\frac{\sqrt{x^2+3x+2}}{x+1}$
       \item  $\int\frac{1}{x\sqrt{x^2+x+1}}dx$
-        \hfill Απ: $\ln\left|\frac{t+1}{t-1}+c\right|$, όπου $t=x-\sqrt{x^2+x+1}$
-      \item $ \int \frac{1}{\sqrt{x} + \sqrt{x-1} + 1} \, dx$ \hfill Απ: $
-        \scriptstyle{\frac{1}{2} \left(\frac{(\sqrt{x} - \sqrt{x-1})^{2}}{2} -
-            \sqrt{x} - \sqrt{x-1} + \ln{\abs{\sqrt{x} - \sqrt{x-1}}} + \frac{1}{\sqrt{x}
-        - \sqrt{x-1}} \right)} $
+        \hfill Απ: $\ln\left|\frac{u+1}{u-1}+c\right|$, 
+        όπου $u=x-\sqrt{x^2+x+1}$ 
+      \item  $\int\frac{1}{\sqrt{2x-1}-\sqrt[4]{2x-1}}dx$\hfill Απ: $(u+1)^2
+        +2\ln|u-1|+c$, όπου $u=\sqrt[4]{2x-1} \label{four} $
+      % \item $ \int \frac{1}{\sqrt{x} + \sqrt{x-1} + 1} \, dx$ \hfill Απ: $
+      %   \scriptstyle{\frac{1}{2} \left(\frac{(\sqrt{x} - \sqrt{x-1})^{2}}{2} -
+      %       \sqrt{x} - \sqrt{x-1} + \ln{\abs{\sqrt{x} - \sqrt{x-1}}} + \frac{1}{\sqrt{x}
+      %   - \sqrt{x-1}} \right)} $
     \end{enumerate}
 
   \item\label{ask:trig} Να υπολογιστούν τα παρακάτω αόριστα ολοκληρώματα 
@@ -91,7 +89,7 @@
 
 \begin{enumerate}
   \item Για το \ref{ex:seven} της άσκησης~\eqref{ask:rhtes} αρχικά θέτουμε $
-    t = e^{x} $ και στη συνέχεια προκύπτει ολοκλήρωμα ρητής.
+    u = e^{x} $ και στη συνέχεια προκύπτει ολοκλήρωμα ρητής.
   \item Για το \ref{four} της άσκησης~\eqref{ask:rizes}, παρατηρούμε ότι τα ριζικά 
     έχουν την ίδια υπόρριζη ποσότητα, αλλά είναι διαφορετικής τάξεως ριζικά. 
     Σε αυτήν την περίπτωση θέτουμε ίσο με $t$ το ριζικό τάξης ίσης με το Ελάχιστο Κοινό
@@ -99,13 +97,13 @@
     = 2 $, επομένως θέτουμε $t=\sqrt{2x-1}$. 
   \item Για τα τριγωνομετρικά ολοκληρώματα, θυμάμαι τη γενική περίπτωση αντικατάστασης: 
     \begin{center}
-      Θέτουμε $ t = \tan{\frac{x}{2}} \Rightarrow \frac{x}{2} = \arctan{t} 
-      \Rightarrow x = 2 \arctan {t} $ οπότε $ dx = \frac{2}{1 + t^{2}} dt $ 
+      Θέτουμε $ u = \tan{\frac{x}{2}} \Rightarrow \frac{x}{2} = \arctan{u} 
+      \Rightarrow x = 2 \arctan {u} $ οπότε $ dx = \frac{2}{1 + u^{2}} du $ 
       και ισχύουν οι τύποι:
     \end{center}
     \[
-      \boxed{\sin x=\frac{2t}{1+t^2}} \quad \text{και} \quad \boxed{\cos x
-      =\frac{1-t^2}{1+t^2}}
+      \boxed{\sin x=\frac{2u}{1+u^2}} \quad \text{και} \quad \boxed{\cos x
+      =\frac{1-u^2}{1+u^2}}
     \] 
 \end{enumerate}
 
