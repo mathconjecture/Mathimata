@@ -125,7 +125,7 @@ $ (x_{0}, y_{0}) $ είναι :
     \item $ \pdv{x}(f+g) = \pdv{f}{x} + \pdv{g}{x} $
     \item $ \pdv{x}(af) = a \pdv{f}{x} $ 
   \end{myitemize}
-  }{
+}{
   \begin{myitemize}
     \item $ \pdv{x}(f\cdot g) = \pdv{f}{x} \cdot g + f \cdot \pdv{g}{x} $
     \item $ \pdv{x}(\frac{f}{g}) = \frac{\pdv{f}{x} \cdot g - f \cdot 
@@ -742,9 +742,9 @@ $ (x_{0}, y_{0}) $ είναι :
     {\minibox[c]{$\eval{df(x,y)}_{P_{0}}$ \\ Πρωτεύον
     μέρος: \\ Γραμμικό ως προς $h,k$}} + \!\!\!\!  
     \underbrace{\varepsilon _{1}(h,k)h+ 
-      \varepsilon _{2}(h,k)k}_{\minibox[c]{$G(h,k)$ : (πολύ μικρό) 
-    \\ Δευτερεύον μέρος: \\ Μη γραμμικό ως προς $h,k$}}                 
-  \]
+    \varepsilon _{2}(h,k)k}_{\minibox[c]{$G(h,k)$ : (πολύ μικρό) 
+  \\ Δευτερεύον μέρος: \\ Μη γραμμικό ως προς $h,k$}}                 
+\]
 \end{dfn}
 
 \begin{rem}
@@ -1073,7 +1073,7 @@ $ (x_{0}, y_{0}) $ είναι :
         pic[draw,fill=magenta!25,"$\phi$",angle eccentricity=1.5]{angle} ;
       \draw [dashed, in=90, out=-90] (C.center) to node[right]{$z$} (3.center);
     \end{tikzpicture}
-    }{
+  }{
     Έχουμε ότι $ E = \frac{y \cdot z}{2} $. Όμως από το ορθογώνιο τρίγωνο έχουμε ότι 
     $ z = x \sin{\phi} $, άρα 
     \[
@@ -1128,31 +1128,31 @@ $ (x_{0}, y_{0}) $ είναι :
       \draw [-stealth] (0.center) to (1.center);
       \draw [-stealth] (0.center) to (2.center);
       \draw pic[draw,fill=magenta!25,"$\theta$",angle eccentricity=1.5]{angle=1--0--3};
-    \end{tikzpicture}}{
-    Έστω οι συντεταγμένες του σημείου $ P'(x+ dx, y + dy) $, όπως φαίνονται στο σχήμα.
-    Έχουμε ότι 
-    \[
-      \tan{\theta} = \frac{y}{x} \Rightarrow \theta = \arctan{\frac{y}{x}}
-    \] 
-    Αν η γωνία μετά το σφάλμα της εκτίμησης είναι $ \theta'$, έχουμε ότι 
-    \[
-      \theta ' = \arctan{\frac{y+ dy}{x + dx}} 
-  \]} 
-  Παρατηρούμε ότι $ \Delta x = dx = 0.01 $, $ \Delta y = dy = -0.02 $. Οπότε ισχύει ότι 
+  \end{tikzpicture}}{
+  Έστω οι συντεταγμένες του σημείου $ P'(x+ dx, y + dy) $, όπως φαίνονται στο σχήμα.
+  Έχουμε ότι 
   \[
-    \Delta \theta \approx d \theta = \theta _{x} dx + \theta _{y} dy =
-    \frac{-y}{x^{2}+y^{2}} dx + \frac{x}{x^{2}+y^{2}} dy = \frac{xdy-ydx}{x^{2}+y^{2}}
-  \]
-  και μάλιστα υπολογίζουμε την απόλυτη τιμή και έχουμε
+    \tan{\theta} = \frac{y}{x} \Rightarrow \theta = \arctan{\frac{y}{x}}
+  \] 
+  Αν η γωνία μετά το σφάλμα της εκτίμησης είναι $ \theta'$, έχουμε ότι 
   \[
-    \abs{\Delta \theta} \approx \frac{\abs{xdy-ydx}}{x^{2}+y^{2}} \leq \frac{\abs{x dy}
-    + \abs{y dx}}{x^{2}+y^{2}} 
-  \]
-  και πιο συγκεκριμένα, για το σημείο $ P(1,2) $ έχουμε
-  \[
-    \abs{\Delta \theta(1,2)} \leq \frac{\abs{1(-0.02)}+\abs{2\cdot 0.01}}{1^{2}+2^{2}} =
-    \frac{0.04}{5} = 0.008
-  \]
+    \theta ' = \arctan{\frac{y+ dy}{x + dx}} 
+\]} 
+Παρατηρούμε ότι $ \Delta x = dx = 0.01 $, $ \Delta y = dy = -0.02 $. Οπότε ισχύει ότι 
+\[
+  \Delta \theta \approx d \theta = \theta _{x} dx + \theta _{y} dy =
+  \frac{-y}{x^{2}+y^{2}} dx + \frac{x}{x^{2}+y^{2}} dy = \frac{xdy-ydx}{x^{2}+y^{2}}
+\]
+και μάλιστα υπολογίζουμε την απόλυτη τιμή και έχουμε
+\[
+  \abs{\Delta \theta} \approx \frac{\abs{xdy-ydx}}{x^{2}+y^{2}} \leq \frac{\abs{x dy}
+  + \abs{y dx}}{x^{2}+y^{2}} 
+\]
+και πιο συγκεκριμένα, για το σημείο $ P(1,2) $ έχουμε
+\[
+  \abs{\Delta \theta(1,2)} \leq \frac{\abs{1(-0.02)}+\abs{2\cdot 0.01}}{1^{2}+2^{2}} =
+  \frac{0.04}{5} = 0.008
+\]
 \end{solution}
 
 \section{Τέλειο Διαφορικό}
@@ -1351,13 +1351,22 @@ $ (x_{0}, y_{0}) $ είναι :
   $ [a,b] $, τότε η παράγωγος της σύνθετης συνάρτησης $f$ ως προς $t$ δίνεται από 
   τον τύπο:
 
-  \twocolumnsidel{
-    \[\xymatrix{ & \textcolor{Col1}{f} \ar@{-}[dl]_{\mathlarger{\pdv{f}{x}}}
-        \ar@{-}[dr]^{\mathlarger{\pdv{f}{y}}} &  \\
-        \textcolor{Col1}{x} \ar@{-}[dr]_{\mathlarger{\dv{x}{t}}} & & 
-        \textcolor{Col1}{y} 
-    \ar@{-}[dl]^{\mathlarger{\dv{y}{t}}} \\ & \textcolor{Col1}{t} & }\]
-    }{
+  \vspace{\baselineskip}
+
+  \twocolumnsideslc{
+    \begin{center}
+      \begin{tikzpicture}
+        \node (f) at (0,0) {$f$};  
+        \node (x) at (-1.5,-1.5) {$x$};  
+        \node (y) at (1.5,-1.5) {$y$};  
+        \node (t) at (0,-3) {$t$};  
+        \draw (f) edge node[midway,above left] {$\pdv{f}{x}$} (x) ;
+        \draw (f) edge node[midway,above right] {$\pdv{f}{y}$} (y) ;
+        \draw (x) edge node[midway,below left] {$\dv{x}{t}$} (t) ;
+        \draw (y) edge node[midway,below right] {$\dv{y}{t}$} (t) ;
+      \end{tikzpicture}
+    \end{center}
+  }{
     \begin{equation}\label{eq:deriv1}
       \dv{f}{t} = \pdv{f}{x} \dv{x}{t} + \pdv{f}{y} \dv{y}{t} 
     \end{equation}
@@ -1380,22 +1389,25 @@ $ (x_{0}, y_{0}) $ είναι :
   τότε οι μερικές παράγωγοι της $f$, υπάρχουν και δίνονται από τους τύπους:
 \end{thm}
 
-\twocolumnsidel{ 
-  \[
-    \xymatrix@C-6pt{ & & \textcolor{Col1}{f} \ar@{-}[dl] 
-      _{\mathlarger{\pdv{f}{x}}}^{\mathlarger{f_{x}}} 
-      \ar@{-}[dr]^{\mathlarger{\pdv{f}{y}}}_{\mathlarger{f_{y}}}
-                     & &  \\
-                     & \textcolor{Col1}{x} \ar@{-}[dl]_{\mathlarger{\pdv{x}{u}}}
-                     \ar@{-}[d]^{\mathlarger{\pdv{x}{v}}} 
-                     &  
-                     & \textcolor{Col1}{y} \ar@{-}[d]_{\mathlarger{\pdv{y}{u}}} 
-      \ar@{-}[dr]^{\mathlarger{\pdv{y}{v}}} & \\
-      \textcolor{Col1}{u} & \textcolor{Col1}{v} & & \textcolor{Col1}{u} &
-      \textcolor{Col1}{v}
-    } 
-  \]
-  }{
+\twocolumnsideslc{ 
+  \begin{center}
+    \begin{tikzpicture}
+      \node (f) at (0,0) {$f$};  
+      \node (x) at (-1,-1.5) {$x$};  
+      \node (y) at (1,-1.5) {$y$};  
+      \node (ux) at (-2,-3) {$u$};  
+      \node (vx) at (-0.5,-3) {$v$};  
+      \node (uy) at (0.5,-3) {$u$};  
+      \node (vy) at (2,-3) {$v$};  
+      \draw (f) edge node[midway,above left] {$ \pdv{f}{x}$} (x) ;
+      \draw (f) edge node[midway,above right] {$ \pdv{f}{y}$} (y) ;
+      \draw (x) edge node[midway,above left] {$ \pdv{x}{u}$} (ux) ;
+      \draw (x) edge node[midway,above right] {$ \pdv{x}{v}$} (vx) ;
+      \draw (y) edge node[midway,above left] {$ \pdv{y}{u}$} (uy) ;
+      \draw (y) edge node[midway,above right] {$ \pdv{y}{v}$} (vy) ;
+    \end{tikzpicture}  
+  \end{center}
+}{
   \begin{equation}
     \label{eq:deriv2}
     \pdv{f}{u} = \pdv{f}{x} \pdv{x}{u} + \pdv{f}{y} \pdv{y}{u} 
@@ -1424,7 +1436,7 @@ $ (x_{0}, y_{0}) $ είναι :
 }
 
 
-% \enlargethispage{\baselineskip}
+\enlargethispage{\baselineskip}
 
 \begin{rem}
   Οι τύποι~\eqref{eq:deriv1} και~\eqref{eq:deriv2} προέκυψαν αθροίζοντας κάθε φορά, 
@@ -1443,39 +1455,44 @@ $ (x_{0}, y_{0}) $ είναι :
 
 \vspace{\baselineskip}
 
-\twocolumnsidel
+\twocolumnsideslc
 {
-  \[ 
-    \xymatrix@C-6pt{ & & \textcolor{Col1}{\pdv{f}{x}} 
-      \ar@{-}[dl]_{\mathlarger{\pdv[2]{f}{x}}} 
-      \ar@{-}[dr]^{\mathlarger{\pdv[2]{f}{x}{y}}} 
-                     & &  \\
-                     & \textcolor{Col1}{x} \ar@{-}[dl]
-                     _{\mathlarger{\pdv{x}{u}}}
-                     \ar@{-}[d]^{\mathlarger{\pdv{x}{v}}} 
-                     &  
-                     & \textcolor{Col1}{y} \ar@{-}[d]_{\mathlarger{\pdv{y}{u}}} 
-      \ar@{-}[dr]^{\mathlarger{\pdv{y}{v}}} & \\
-      \textcolor{Col1}{u} & \textcolor{Col1}{v} & & \textcolor{Col1}{u} &
-      \textcolor{Col1}{v} \\ 
-    } 
-  \] 
-  \[
-    \xymatrix@C-6pt{ & & \textcolor{Col1}{\pdv{f}{y}}
-      \ar@{-}[dl]_{\mathlarger{\pdv[2]{f}{y}{x}}} 
-      \ar@{-}[dr]^{\mathlarger{\pdv[2]{f}{y}}} 
-                     & &  \\
-                     & \textcolor{Col1}{x} \ar@{-}[dl]
-                     _{\mathlarger{\pdv{x}{u}}}
-                     \ar@{-}[d]^{\mathlarger{\pdv{x}{v}}} 
-                     &  
-                     & \textcolor{Col1}{y} \ar@{-}[d]_{\mathlarger{\pdv{y}{u}}} 
-      \ar@{-}[dr]^{\mathlarger{\pdv{y}{v}}} & \\
-      \textcolor{Col1}{u} & \textcolor{Col1}{v} & & \textcolor{Col1}{u} &
-      \textcolor{Col1}{v}
-    }
-  \] 
-  }{
+  \begin{center}
+    \begin{tikzpicture}
+      \node (f) at (0,0) {$ \pdv{f}{x} $};  
+      \node (x) at (-1,-1.5) {$x$};  
+      \node (y) at (1,-1.5) {$y$};  
+      \node (ux) at (-2,-3) {$u$};  
+      \node (vx) at (-0.5,-3) {$v$};  
+      \node (uy) at (0.5,-3) {$u$};  
+      \node (vy) at (2,-3) {$v$};  
+      \draw (f) edge node[midway,above left] {$ \pdv[2]{f}{x}$} (x) ;
+      \draw (f) edge node[midway,above right] {$ \pdv[2]{f}{y}{x}$} (y) ;
+      \draw (x) edge node[midway,above left] {$ \pdv{x}{u}$} (ux) ;
+      \draw (x) edge node[midway,above right] {$ \pdv{x}{v}$} (vx) ;
+      \draw (y) edge node[midway,above left] {$ \pdv{y}{u}$} (uy) ;
+      \draw (y) edge node[midway,above right] {$ \pdv{y}{v}$} (vy) ;
+    \end{tikzpicture}  
+  \end{center}
+
+  \begin{center}
+    \begin{tikzpicture}
+      \node (f) at (0,0) {$ \pdv{f}{y} $};  
+      \node (x) at (-1,-1.5) {$x$};  
+      \node (y) at (1,-1.5) {$y$};  
+      \node (ux) at (-2,-3) {$u$};  
+      \node (vx) at (-0.5,-3) {$v$};  
+      \node (uy) at (0.5,-3) {$u$};  
+      \node (vy) at (2,-3) {$v$};  
+      \draw (f) edge node[midway,above left] {$ \pdv[2]{f}{y}$} (x) ;
+      \draw (f) edge node[midway,above right] {$ \pdv[2]{f}{x}{y}$} (y) ;
+      \draw (x) edge node[midway,above left] {$ \pdv{x}{u}$} (ux) ;
+      \draw (x) edge node[midway,above right] {$ \pdv{x}{v}$} (vx) ;
+      \draw (y) edge node[midway,above left] {$ \pdv{y}{u}$} (uy) ;
+      \draw (y) edge node[midway,above right] {$ \pdv{y}{v}$} (vy) ;
+    \end{tikzpicture}  
+  \end{center}
+}{
   \begin{proof}
     \[
       \begin{aligned}
@@ -1511,36 +1528,43 @@ $ f_{vv} $ και $ f_{uv} $.
 
 \vspace{\baselineskip}
 
-\twocolumnsidel{
-  \[ 
-    \xymatrix@C-6pt{ & & \textcolor{Col1}{f_{x}}
-      \ar@{-}[dl]_{\mathlarger{f_{xx}}} 
-      \ar@{-}[dr]^{\mathlarger{f_{xy}}} 
-                     & &  \\
-                     & \textcolor{Col1}{x} \ar@{-}[dl]_{\mathlarger{x_{u}}}
-                     \ar@{-}[d]^{\mathlarger{x_{v}}} 
-                     &  
-                     & \textcolor{Col1}{y} \ar@{-}[d]_{\mathlarger{y_{u}}} 
-      \ar@{-}[dr]^{\mathlarger{y_{v}}} & \\
-      \textcolor{Col1}{u} & \textcolor{Col1}{v} & & \textcolor{Col1}{u} &
-      \textcolor{Col1}{v} 
-    } 
-  \] 
-  \[
-    \xymatrix@C-6pt{ & & \textcolor{Col1}{f_{y}}
-      \ar@{-}[dl]_{\mathlarger{f_{yx}}} 
-      \ar@{-}[dr]^{\mathlarger{f_{yy}}} 
-                     & &  \\
-                     & \textcolor{Col1}{x} \ar@{-}[dl]_{\mathlarger{x_{u}}}
-                     \ar@{-}[d]^{\mathlarger{x_{v}}} 
-                     &  
-                     & \textcolor{Col1}{y} \ar@{-}[d]_{\mathlarger{y_{u}}} 
-      \ar@{-}[dr]^{\mathlarger{y_{v}}} & \\
-      \textcolor{Col1}{u} & \textcolor{Col1}{v} & & \textcolor{Col1}{u} &
-      \textcolor{Col1}{v} 
-    }
-  \] 
-  }{
+\twocolumnsideslc{
+\begin{center}
+\begin{tikzpicture}
+  \node (f) at (0,0) {$f_{x}$};  
+  \node (x) at (-1,-1.5) {$x$};  
+  \node (y) at (1,-1.5) {$y$};  
+  \node (ux) at (-2,-3) {$u$};  
+  \node (vx) at (-0.5,-3) {$v$};  
+  \node (uy) at (0.5,-3) {$u$};  
+  \node (vy) at (2,-3) {$v$};  
+  \draw (f) edge node[midway,above left] {$f_{xx}$} (x) ;
+  \draw (f) edge node[midway,above right] {$f_{xy}$} (y) ;
+  \draw (x) edge node[midway,above left] {$x_{u}$} (ux) ;
+  \draw (x) edge node[midway,above right] {$x_{v}$} (vx) ;
+  \draw (y) edge node[midway,above left] {$y_{u}$} (uy) ;
+  \draw (y) edge node[midway,above right] {$y_{v}$} (vy) ;
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}
+  \node (f) at (0,0) {$f_{y}$};  
+  \node (x) at (-1,-1.5) {$x$};  
+  \node (y) at (1,-1.5) {$y$};  
+  \node (ux) at (-2,-3) {$u$};  
+  \node (vx) at (-0.5,-3) {$v$};  
+  \node (uy) at (0.5,-3) {$u$};  
+  \node (vy) at (2,-3) {$v$};  
+  \draw (f) edge node[midway,above left] {$f_{yx}$} (x) ;
+  \draw (f) edge node[midway,above right] {$f_{yy}$} (y) ;
+  \draw (x) edge node[midway,above left] {$x_{u}$} (ux) ;
+  \draw (x) edge node[midway,above right] {$x_{v}$} (vx) ;
+  \draw (y) edge node[midway,above left] {$y_{u}$} (uy) ;
+  \draw (y) edge node[midway,above right] {$y_{v}$} (vy) ;
+\end{tikzpicture}
+\end{center}
+}{
   \begin{proof}
     \[
       \begin{aligned}
@@ -1621,10 +1645,10 @@ $ f_{vv} $ και $ f_{uv} $.
   Οπότε ισχύει το θεώρημα Euler για αυτές, άρα:
   \begin{align*}
     \sysdelim.\}\systeme{x f_{xx}+yf_{xy}=(\rho -1)f_{x}, x f_{yx}+yf_{yy}=
-(\rho -1)f_{y}} \Rightarrow \sysdelim.\}
-\systeme*{x^{2} f_{xx} \+ xyf_{xy}=(\rho-1)xf_{x},yxf_{yx} \+ y^{2}f_{yy}=
-(\rho -1)yf_{y}} \xRightarrow{(+)} x^{2}f_{xx}+2xyf_{xy}+y^{2}f_{yy}=
-(\rho -1)(xf_{x}+yf_{y})
+  (\rho -1)f_{y}} \Rightarrow \sysdelim.\}
+  \systeme*{x^{2} f_{xx} \+ xyf_{xy}=(\rho-1)xf_{x},yxf_{yx} \+ y^{2}f_{yy}=
+  (\rho -1)yf_{y}} \xRightarrow{(+)} x^{2}f_{xx}+2xyf_{xy}+y^{2}f_{yy}=
+  (\rho -1)(xf_{x}+yf_{y})
 \end{align*} 
 Όμως επειδή $f$ ομογενής έχουμε ότι $ xf_{x}+yf_{y}= \rho f $. Οπότε
 \[

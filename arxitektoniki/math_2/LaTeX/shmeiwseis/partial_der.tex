@@ -1,0 +1,678 @@
+\input{preamble2.tex}
+\input{definitions2.tex}
+\input{tikz.tex}
+\input{myboxes.tex}
+
+\usepackage[cmtip,all]{xy}
+\usepackage{silence}
+\WarningsOff[catoptions]
+\usepackage{extarrows}
+
+\geometry{left=9mm,right=9mm,top=30.00mm,bottom=34.00mm,footskip=24.16mm,headsep=24.16mm}
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+
+\begin{document}
+
+
+\chapter{Μερικές Παράγωγοι}
+
+\section{Συναρτήσεις Μερικών Παραγώγων}
+
+Έστω $ f(x,y) $ συνάρτηση δύο μεταβλητών. 
+\begin{myitemize}
+  \item Η \textcolor{Col1}{μερική παράγωγος της $f$ ως προς $x$} 
+    υπολογίζεται παραγωγίζοντας την $ f(x,y) $ ως προς $x$, 
+    θεωρώντας το $y$ σταθερό. 
+  \item Η \textcolor{Col1}{μερική παράγωγος της $f$ ως προς $y$} 
+    υπολογίζεται παραγωγίζοντας την $ f(x,y) $ ως προς $y$, 
+    θεωρώντας το $x$ σταθερό. 
+\end{myitemize}
+
+\begin{rem}
+  Γενικότερα η \textcolor{Col1}{μερική παράγωγος της $f$ ως προς $ x_{i} $} 
+  υπολογίζεται παραγωγίζοντας τη συνάρτηση $ f(x_{1}, \ldots, x_{n}) $ ως προς 
+  $ x_{i} $, θεωρώντας \textbf{όλες} τις υπόλοιπες μεταβλητές σταθερές.
+\end{rem}
+
+\subsection*{Συμβολισμός}
+
+Διάφοροι \textbf{συμβολισμοί} για τις μερικές παραγώγους της συνάρτησης $f(x,y)$ ως 
+προς $x$ και ως προς $y$ είναι:
+\begin{align*}
+  \eval{\pdv{f}{x} }_{(x_{0}, y_{0})} = \pdv{f(x_{0}, y_{0})}{x} = 
+  f_{x}(x_{0}, y_{0}) = f'_{x}(x_{0}, y_{0} ) \quad \text{και} \quad
+  \eval{\pdv{f}{y} }_{(x_{0}, y_{0})} = \pdv{f(x_{0}, y_{0})}{y} = 
+  f_{y}(x_{0}, y_{0}) = f'_{y}(x_{0}, y_{0} ) 
+\end{align*} 
+
+
+\subsection*{Κανόνες Παραγώγισης}
+
+\twocolumnsides{
+  \begin{myitemize}
+    \item $ \pdv{x}(f+g) = \pdv{f}{x} + \pdv{g}{x} $
+    \item $ \pdv{x}(af) = a \pdv{f}{x} $ 
+  \end{myitemize}
+  }{
+  \begin{myitemize}
+    \item $ \pdv{x}(f\cdot g) = \pdv{f}{x} \cdot g + f \cdot \pdv{g}{x} $
+    \item $ \pdv{x}(\frac{f}{g}) = \frac{\pdv{f}{x} \cdot g - f \cdot 
+      \pdv{g}{x}}{g^{2}} $
+\end{myitemize}
+}
+
+\subsection*{Παραδείγματα}
+
+\begin{example}
+  Έστω $ f(x,y)=x^{2}y^{3}+4xy^{2}+4y+5 $. Να 
+  υπολογιστούν οι μερικές παράγωγοι $ f_{x} $ και 
+  $ f_{y} $.
+\end{example}
+\begin{solution}
+  \begin{align*}
+    f_{x} &= (x^{2}y^{3}+4xy^{2}+4y+5)_{x} =
+    (x^{2}y^{3})_{x}+(4xy^{2})_{x}+(4y)_{x}+(5)_{x} = 2xy^{3} + 4y^{2}
+    \intertext{και}
+    f_{y}&=(x^{2}y^{3}+4xy^{2}+4y+5)_{y} = 
+    (x^{2}y^{3})_{y}+(4xy^{2})_{y}+(4y)_{y}+(5)_{y} = 3x^{2}y^{2} + 
+    8xy + 4
+  \end{align*} 
+\end{solution}
+
+\begin{example}
+  Έστω $ f(x,y)=2x^{2}y+3 \cos{3y} +1 $. Να υπολογιστούν οι 
+  μερικές παράγωγοι $ f_{x}$ και $ f_{y} $.
+\end{example}
+\begin{solution}
+  \[
+    f_{x}=4xy \quad \text{και} \quad f_{y}=2x^{2}-3 \sin{3y} (3y)_{y} 
+    = 2x^{2}-9 \sin{3y}
+  \] 
+\end{solution}
+
+\begin{example}
+  Έστω $ f(x,y,z)=x^{2}yz - y \cos{(xy)} $. Να υπολογιστούν οι 
+  μερικές παράγωγοι $ f_{x}, f_{y}, f_{z} $. 
+\end{example}
+\begin{solution}
+\item {}
+  \begin{align*}
+    f_{x}&=2xyz- \cos{(xy)}(xy)_{x} = 2xyz-y \cos{xy} \\
+    f_{y}&=x^{2}z- \cos{xy}(xy)_{y}=x^{2}z - x \cos{xy} \\
+    f_{z}&=x^{2}z
+  \end{align*}
+\end{solution}
+
+
+\section{Μερικές Παράγωγοι Ανώτερης Τάξης}
+
+\begin{example}
+\item {}
+  Έστω $ f(x,y,z) = 3x^{2}y^{2} + xy^{3} + 3x +1 $. 
+  Να υπολογιστούν οι μερικές παράγωγοι 1ης και 2ης τάξης.
+\end{example}
+\begin{solution}
+  \begin{align*}
+    f_{x} &= 6xy^{2}+y^{3}+3 \quad \text{και} \quad 
+    f_{y} = 6x^{2}y+3xy^{2} \\
+    f_{xx} &= (f_{x})_{x} = (6xy^{2}+y^{3}+3)_{x} =
+    6y^{2} \\
+    f_{yy} &= (f_{y})_{y} = (6x^{2}y+3xy^{2})_{y} = 
+    6x^{2}+6xy \\
+    f_{xy} &= (f_{x})_{y} = (6xy^{2}+y^{3}+3)_{y} = 
+    12xy = 3y^{2} \tikzmark{a} \\
+    f_{yx} &= (f_{y})_{x} = (6x^{2}y+3xy^{2})_{x} = 
+    12xy+3y^{2} \; \; \, \tikzmark{b}
+    \mybrace{a}{b}[\text{Μικτές Παράγωγοι}]
+  \end{align*}
+\end{solution}
+
+\begin{rem}
+\item {}
+  Για τις μικτές παραγώγους $ f_{xy} $ και $ f_{yx} $ ισχύει:
+  \begin{align*}
+    \pdv[2]{f}{x}{y} = \pdv{}{x} \left(\pdv{f}{y}\right) = \pdv{}{x} \left(f_{y}\right) 
+    = (f_{y})_{x} = f_{yx}
+    \quad \text{και} \quad 
+    \pdv[2]{f}{y}{x} = \pdv{}{y} \left(\pdv{f}{x}\right) = \pdv{}{y} \left(f_{x}\right) 
+    = (f_{x})_{y} = f_{xy}
+  \end{align*} 
+\end{rem}
+
+\begin{rem}
+\item {}
+  Οι πολυωνυμικές συναρτήσεις δύο (ή περισσότερων) μεταβλητών, 
+  έχουν \textbf{συνεχείς} μερικές παραγώγους σε κάθε σημείο του $ \mathbb{R}^{2} $ 
+  (ή $\mathbb{R}^{n}$).
+  Οι λοιπές στοιχειώδεις συναρτήσεις $ \sin{f(x,y)}, \cos{f(x,y)}, a^{f(x,y)}, 
+  \ln{f(x,y)} $ κ.λ.π.\ όπου $ f(x,y) $ \textbf{πολυωνυμική} συνάρτηση, έχουν 
+  \textbf{συνεχείς} μερικές παραγώγους σε κάθε σημείο του πεδίου ορισμού τους.
+  Για αυτές τις συναρτήσεις ισχύει $ f_{xy}=f_{yx} $.
+\end{rem}
+
+\begin{thm}[Schwartz]
+  Αν για τη συνάρτηση $ f(x,y) $ υπάρχουν οι μερικές παράγωγοι 
+  $ f_{xy} $ και $ f_{yx} $ και είναι συνεχείς σε μια περιοχή του σημείου 
+  $ (x_{0}, y_{0}) $, τότε $ f_{xy}=f_{yx} $ στην περιοχή αυτή.
+\end{thm}
+
+\section{Μερική Ολοκλήρωση}
+
+\begin{rem}
+\item {}
+  Αν $ f_{x}(x,y) = g(x,y)$ και $ f_{y}(x,y)=h(x,y) $ τότε ισχύει:
+  \begin{align*}
+    f(x,y) = \int g(x,y) \,{dx} + c(y) \quad \text{και} \quad f(x,y) = 
+    \int h(x,y) \,{dy} + c(x) 
+  \end{align*} 
+\end{rem}
+
+\begin{example}
+  Έστω $ f(x,y)$ με $ f_{x}=e^{x+y} $ και $ f(0,y)=e^{y} $. 
+  Να βρεθεί ο τύπος της $f$.
+  \begin{solution}
+    \begin{align*}
+      f(x,y) = \int e^{x+y} \,{dx} = e^{x+y} + c(y) \; \tikzmark{a} \\ 
+      f(0,y) = e^{y} \Leftrightarrow e^{y}+ c(y) = e^{y} \Rightarrow c(y) = 0 
+      \; \tikzmark{b}
+    \end{align*}
+    \mybrace{a}{b}[ $f(x,y) = e^{x+y}$ ]
+  \end{solution}
+\end{example}
+\begin{rem}
+  Όταν ολοκληρώνουμε μια συνάρτηση πολλών μεταβλητών, ως προς κάποια από τις 
+  μεταβλητές της, τότε η σταθερά ολοκλήρωσης είναι \textbf{συνάρτηση} των υπολοίπων 
+  μεταβλητών, οι οποίες θεωρούνται σταθερές κατά την ολοκλήρωση.
+\end{rem}
+
+
+\section{Ολικό Διαφορικό}
+
+\begin{dfn}
+  Έστω η συνάρτηση $ f(x,y) $. Τα \textcolor{Col1}{ολικά διαφορικά} 1ης και 
+  2ης τάξης της συνάρτηση $f$ συμβολίζονται με $ df $ και $ d^{2}f $, αντίστοιχα 
+  και ισχύει:
+  \[
+    \boxed{df = f_{x}dx + f_{y}dy} \quad \text{και} \quad 
+    \boxed{d^{2}f = f_{xx}dx^{2}+2f_{xy}dxdy+f_{yy}dy^{2}}
+  \] 
+  Στην περίπτωση όπου $ f= f(x_{1}, x_{2}, \ldots, x_{n}) $, το ολικό 
+  διαφορικό 1ης τάξης γίνεται: 
+  \[
+    df = f_{x_{1}}d{x_{1}} + f_{x_{2}}d{x_{2}} + \cdots + f_{x_{n}} dx_{n}
+  \]
+\end{dfn}
+
+
+\begin{example}
+  Να βρείτε το ολικό διαφορικό της συνάρτησης $ f(x,y) = xye^{x+2y} $ 
+\end{example}
+\begin{solution}
+\item {}
+  Το ολικό διαφορικό δίνεται από τη σχέση $ df = f_{x} dx + f_{y} dy $.  
+  Για τις μερικές παραγώγους έχουμε ότι: 
+  \[
+    f_{x} = ye^{x+2y}+xye^{x+2y} \quad \text{και} \quad f_{y} = xe^{x+2y} +
+    2xye^{x+2y}
+  \] 
+  Επομένως
+  \[
+    df = y(1+x)e^{x+2y} dx + x(1+2y)e^{x+2y}dy
+  \]
+\end{solution}
+
+\section{Τέλειο Διαφορικό}
+
+\begin{dfn}
+  Θεωρούμε τις συναρτήσεις $ P(x,y) $ και $ Q(x,y) $ με πεδίο ορισμού $ A \subseteq
+  \mathbb{R}^{2} $.
+  Η παράσταση $ P(x,y) dx + Q(x,y) dy $ λέγεται \textcolor{Col2}{τέλειο 
+  διαφορικό} αν υπάρχει συνάρτηση $ f(x,y) $ με πεδίο ορισμού το $A$, ώστε 
+  \begin{gather*}
+    df = P(x,y)dx + Q(x,y)dy \Leftrightarrow \pdv{f}{x} dx + \pdv{f}{y} dy = 
+    P(x,y)dx + Q(x,y)dy \Leftrightarrow \\
+    \boxed{\pdv{f}{x} = P(x,y) \quad \text{και} \quad \pdv{f}{y} = Q(x,y)}
+  \end{gather*}
+\end{dfn}
+
+
+\begin{prop}
+  Αν οι  $ P(x,y) $  και  $ Q(x,y) $  είναι συνεχείς συναρτήσεις και έχουν συνεχείς 
+  παραγώγους πρώτης τάξης, σε μια ορθογώνια περιοχή $A$ του $ \mathbb{R}^{2} $,  
+  τότε η  παράσταση  $ P(x,y)dx + Q(x,y)dy $ είναι τέλειο διαφορικό αν 
+  \[
+    \boxed{\pdv{p}{y} = \pdv{q}{x}} \quad \forall (x,y) \in A
+  \]
+\end{prop}
+
+\begin{dfn}
+  Η παράσταση  $ P(x,y,z)dx + Q(x,y,z)dy + R(x,y,z)dz $ είναι τέλειο διαφορικό 
+  αν υπάρχει συνάρτηση  $ f(x,y,z) $  τέτοια ώστε  $ df = P(x,y,z)dx + Q(x,y,z)dy 
+  + R(x,y,z)dz $.  Τότε ισχύουν οι παρακάτω σχέσεις:
+  \[
+    \boxed{\pdv{f}{x} = P(x,y,z) \quad \text{και} \quad \pdv{f}{y} = Q(x,y,z) 
+    \quad \text{και} \quad \pdv{f}{z} = R(x,y,z)} 
+  \] 
+\end{dfn}
+
+\begin{prop}
+  Αν οι  $ P(x,y,z) $, $ Q(x,y,z) $  και  $ R(x,y,z) $ είναι συνεχείς συναρτήσεις 
+  και έχουν συνεχείς παραγώγους πρώτης τάξης, σε μια ορθογώνια περιοχή Α του 
+  $ \mathbb{R}^{3} $ τότε η  παράσταση 
+  $ P(x,y,z)dx + Q(x,y,z)dy + R(x,y,z)dz $   είναι τέλειο διαφορικό αν 
+  \[
+    \boxed{\pdv{P}{y} = \pdv{Q}{x}} \quad \text{και} \quad \boxed{\pdv{Q}{z} = 
+    \pdv{R}{y}} \quad \text{και} \quad  \boxed{\pdv{P}{z} = \pdv{R}{x}} 
+    \quad \forall (x,y,z) \in A 
+  \] 
+\end{prop}
+
+\begin{rem}\label{olokl}
+  Οι συναρτήσεις  $ f(x,y) $  και  $ f(x,y,z) $ υπολογίζονται επίσης από τις 
+  παρακάτω σχέσεις:
+  \begin{align*}
+    f(x,y) &= \int_{x_{0}}^{x} P(t,y) \,{dt} + \int_{y_{0}}^{y} Q(x_{0},t) \,{dt} \\
+    f(x,y,z) &= \int_{x_{0}}^{x} P(t,y,z) \,{dt} + \int_{y_{0}}^{y} Q(x_{0},t,z) 
+    \,{dt} + \int _{z_{0}}^{z} R(x_{0},y_{0},t) \,{dt}  
+  \end{align*}
+  όπου τα $ x_{0} $, $ y_{0} $  και  $ z_{0} $ επιλέγονται \textbf{αυθαίρετα} στο πεδίο 
+  ορισμού των  $ P $, $ Q $  και  $ R $.
+\end{rem}
+
+\begin{rem}
+  Η συνάρτηση $ f(x,y) $ ή η συνάρτηση $ f(x,y,z) $ του ορισμού του τέλειου διαφορικού
+  λέγεται \textcolor{Col2}{συνάρτηση δυναμικού}.
+\end{rem}
+
+\begin{example}
+  Να εξετάσετε αν η παράσταση $ \left(1+x- {2}/{y}\right)dx + 
+  \left(1+ {2x}/{y^{2}} \right)dy $ είναι τέλειο διαφορικό και αν ναι, να 
+  υπολογίσετε τη συνάρτηση δυναμικού.
+\end{example}
+\begin{solution}
+  Ελέγχουμε με το κριτήριο:
+  \[ 
+    \pdv{P}{y} = \frac{2}{y^{2}} = \pdv{Q}{x} 
+  \]
+  Άρα η παράσταση είναι τέλειο διαφορικό. Επομένως υπάρχει 
+  συνάρτηση, $ f(x,y) $ τέτοια ώστε: 
+  \begin{align}
+    \pdv{f}{x} &= 1 + x - \frac{2}{y} \label{fx1} \\
+    \pdv{f}{y} &= 1+ \frac{2x}{y^{2}} \label{fy1}
+  \end{align}
+  Ολοκληρώνουμε μερικώς ως προς $x$ την~\eqref{fx1} και έχουμε
+  \[
+    f(x,y) = \int \left(1+x- \frac{2}{y}\right) \,{dx} = x + 
+    \frac{x^{2}}{2} - \frac{2x}{y} + c(y) 
+  \] 
+  Άρα  
+  \begin{equation}
+    f(x,y) = x + \frac{x^{2}}{2} - \frac{2x}{y} + c(y) \label{fxy}
+  \end{equation}
+  Στη συνέχεια παραγωγίζουμε μερικώς ως προς $y$ τη συνάρτηση $ f(x,y) $ που μόλις 
+  βρήκαμε και έχουμε:
+  \begin{equation}
+    \pdv{f}{y} = \frac{2x}{y^{2}} + c'(y) \label{ffy}
+  \end{equation} 
+  Στη συνέχεια εξισώνουμε την~\eqref{ffy} με την~\eqref{fy1} και προκύπτει
+  \[
+    c'(y) = 1 \Rightarrow c(y) = y + k 
+  \] 
+  Άρα, τελικά η συνάρτηση δυναμικού είναι 
+  \[
+    f(x,y) = x + \frac{x^{2}}{2} - \frac{2x}{y} + y + k 
+  \] 
+\end{solution}
+
+\begin{example}
+  Να εξετάσετε αν η παράσταση $ (3x^{2}+3y-1)dx + (z^{2}+3x)dy + (2yz+1)dz $ είναι 
+  τέλειο διαφορικό και αν ναι, να υπολογίσετε τη συνάρτηση δυναμικού.
+\end{example}
+\begin{solution}
+  Ελέγχουμε με το κριτήριο:
+  \[
+    \pdv{P}{y} = 3 = \pdv{Q}{x} \quad \text{και} \quad \pdv{Q}{z} = 2z = \pdv{R}{y}
+    \quad \text{και} \quad \pdv{P}{z} = 0 = \pdv{R}{x}
+  \] 
+  Άρα η παράσταση είναι τέλειο διαφορικό. Για να βρούμε τη συνάρτηση δυναμικού, έχουμε
+  \begin{description}
+    \item [A᾽ Τρόπος: (Με Τύπο)]
+      Θα χρησιμοποιήσουμε τον τύπο της παρατήρησης~\ref{olokl} για να υπολογίσουμε 
+      τη συνάρτηση δυναμικού. 
+      \begin{align*}
+        f(x,y,z) &= \int _{x_{0}}^{x} P(t,y,z) \,{dt} + \int _{y_{0}}^{y} Q(x_{0},t,z) 
+        \,{dt} + \int _{z_{0}}^{z} R(x_{0}, y_{0}, t) \,{dt} \\
+                 &= \int _{0}^{x} (3t^{2}+3y-1) \,{dt} + \int _{0}^{y} (z^{2}+3\cdot 0) 
+                 \,{dt} + \int _{0}^{z} (2\cdot 0\cdot t + 1) \,{dt} \\ 
+                 &= \int _{0}^{x} (3t^{2}+3y-1) \,{dt} + \int _{0}^{y} z^{2} \,{dt} + 
+                 \int _{0}^{z} 1 \,{dt} \\
+                 &= \left[t^{3}+3yt-t\right]_{0}^{x} + \left[z^{2}t\right]_{0}^{y} + 
+                 \bigl[t\bigr]_{0}^{z} \\
+                 &= x^{3}+3xy-x + z^{2}y+z
+      \end{align*}
+    \item [B᾽ Τρόπος: (Με Ολοκλήρωση)] Αφού η παράσταση είναι τέλειο διαφορικό,  
+      υπάρχει συνάρτηση, $ f(x,y,z) $ τέτοια ώστε: 
+      \begin{align}
+        \pdv{f}{x} &= 3x^{2}+3y-1 \label{fx11} \\
+        \pdv{f}{y} &= z^{2}+3x \label{fy11} \\
+        \pdv{f}{z} &= 2yz+1 \label{fz11}
+      \end{align} 
+      Ολοκληρώνουμε μερικώς την~\eqref{fx11} και έχουμε
+      \begin{equation*}
+        f(x,y,z) = \int (3x^{2}+3y-1) \,{dx} = x^{3} + 3xy -x + c(y,z) 
+      \end{equation*} 
+      Άρα 
+      \begin{equation}
+        f(x,y,z) =  x^{3} + 3xy -x + c(y,z) \label{fxyz}
+      \end{equation}
+      Στη συνέχεια παραγωγίζουμε μερικώς ως προς $y$ και ως προς $z$  
+      τη συνάρτηση $f(x,y,z)$ που μόλις βρήκαμε και έχουμε:
+      \begin{align}
+        \pdv{f}{y} &= 3x + \pdv{c}{y} \label{cy} \\
+        \pdv{f}{z} &= \pdv{c}{z} \label{cz}
+      \end{align}
+      Στη συνέχεια εξισώνοντας την~\eqref{cy} με την~\eqref{fy11} προκύπτει 
+      \begin{equation}
+        \pdv{c}{y} = z^{2} \label{last1}
+      \end{equation}
+      και εξισώνοντας την~\eqref{cz} με την~\eqref{fz11} προκύπτει
+      \begin{equation}
+        \pdv{c}{z} = 2yz+1 \label{last2}
+      \end{equation}
+      Από τις σχέσεις~\eqref{last1} και~\eqref{last2} μπορούμε να βρούμε τη συνάρτηση 
+      $ c(y,z) $ ακολουθώντας τη διαδικασία του προηγούμενου παραδείγματος, αφού 
+      ουσιαστικά έχουμε τις μερικές παραγώγους της συνάρτησης και ζητάμε 
+      να βρούμε την ίδια τη συνάρτηση. Οπότε ολοκληρώνουμε μερικώς ως προς 
+      $y$ την~\eqref{last1} και έχουμε
+      \begin{equation}
+        c(y,z) = \int z^{2} \,{dy} = z^{2}y + k(z) \label{kz} 
+      \end{equation} 
+      Στη συνέχεια παραγωγίζουμε ως προς $z$ τη συνάρτηση $ c(y,z) $ που μόλις βρήκαμε 
+      και έχουμε
+      \begin{equation}
+        \pdv{c}{z} = 2yz + k'(z) \label{kz1}
+      \end{equation} 
+      Έπειτα εξισώνουμε τις σχέσεις~\eqref{last2} και~\eqref{kz1} και προκύπτει 
+      \[
+        k'(z) = 1 \Rightarrow k(z) = z + c_{1} \label{finally}
+      \] 
+      Οπότε με αντικατάσταση της~\eqref{finally} στην~\eqref{kz} βρίσκουμε 
+      \begin{equation}
+        c(y,z) = z^{2}y+z + c_{1} \label{cyz}
+      \end{equation}
+      Τέλος με αντικατάσταση της~\eqref{cyz} στη συνάρτηση $ f(x,y,z) $ από τη 
+      σχέση~\eqref{fxyz} βρίσκουμε
+      \[
+        f(x,y,z) = x^{3}+3xy-x+z^{2}y+z+ c_{1} 
+      \] 
+  \end{description}
+\end{solution}
+
+\section{Τύπος Taylor και Maclaurin}
+
+\begin{example}
+  Να υπολογιστεί το ανάπτυγμα της συνάρτησης $f(x,y)=x^3+y^3+xy^2$ γύρω από το 
+  σημείο $ (1,2) $ (ή ισοδύναμα σε δυνάμεις του $(x-1)$ και $(y-2)$).
+\end{example}
+\begin{solution}
+  Παρατηρούμε ότι δεν αναφέρεται στην εκφώνηση μέχρι τους όρους ποιας τάξης 
+  χρειάζεται να βρω το ανάπτυγμα.  Γι' αυτό, μιας και η συνάρτηση είναι πολυωνυμική,
+  βρίσκω μέχρι την τάξη όπου μηδενίζονται οι μερικές παράγωγοι: 
+
+  (Δηλαδή στο συγκεκριμένο παράδειγμα μέχρι $3$ης τάξης, αφού οι παράγωγοι 
+  $4$ης και ανώτερης τάξης, θα είναι όλες μηδέν)
+
+  \vspace{\baselineskip}
+
+  \twocolumnsides{\begin{myitemize}
+      \item $f_x=3x^2+y^2\Rightarrow f_x(1,2)=7$
+      \item $f_y=3y^2+2xy\Rightarrow f_y(1,2)=16$
+      \item $f_{xx}=6x\Rightarrow f_{xx}(1,2)=6$
+      \item $f_{xy}=2y\Rightarrow f_{xy}(1,2)=4$
+      \item $f_{yy}=6y+2x\Rightarrow f_{yy}(1,2)=14$
+      \end{myitemize}}{\begin{myitemize}
+      \item $f_{xxx}=6$
+      \item $f_{xxy}=f_{xyx}=0$
+      \item $f_{xyy}=f_{yxy}=2$
+      \item $f_{yyy}=6$ 
+  \end{myitemize}}
+
+  \vspace{\baselineskip}
+
+  Με αντικατάσταση των μερικών παραγώγων στον τύπο Taylor, έχουμε:
+  \begin{align*}
+    f(x,y)&=13+\Bigl(7(x-1)+16(y-2)\Bigr)+ \\ 
+          &\quad +\frac{1}{2!}\Bigl(6(x-1)^2 +2\cdot 4(x-1)(y-2)+14(y-2)^2\Bigr)+ \\
+          &\quad +\frac{1}{3!}\Bigl(6(x-1)^3+3\cdot 0(x-1)^2(y-2)+3
+          \cdot 2(x-1)(y-2)^2+6(y-2)^3\Bigr).
+  \end{align*}
+  Και μετά τις πράξεις, έχουμε: 
+  \begin{align*}
+    f(x,y)&=13+7(x-1)(y-2)+16(y-2)+3(x-1)^2+4(x-1)(y-2) \\
+          &\quad +7(y-2)^2+(x-1)^3+(x-1)(y-2)^2+(y-2)^3.
+  \end{align*}
+  Δεν κάνουμε άλλες πράξεις.
+  Έχουμε το ανάπτυγμα της $f(x,y)$ σε δυνάμεις του $(x-1)$ και $(y-2)$ όπως ζητήθηκε.
+\end{solution}
+
+
+\section{Παράγωγος Σύνθετων Συναρτήσεων}
+
+\subsection{1η Περίπτωση: \ensuremath{z=f(x,y),  x=x(t),  y=y(t)}} 
+
+\begin{thm}
+  Αν η συνάρτηση $ f(x,y) $ είναι ορισμένη στο ανοιχτό σύνολο 
+  $ A \subseteq \mathbb{R}^{2} $ και $ x = x(t) $, $ y=y(t) $, με 
+  $ t \in [a,b] $ και η $f$ έχει συνεχείς μερικές 
+  παραγώγους στο $A$ και οι $ x(t) $ και $ y(t) $ είναι παραγωγίσιμες στο 
+  $ [a,b] $, τότε η παράγωγος της σύνθετης συνάρτησης $f$ ως προς $t$ δίνεται από 
+  τον τύπο:
+
+  \twocolumnsidel{
+    \[\xymatrix{ & f \ar@{-}[dl]_{\mathlarger{\pdv{f}{x}}}
+        \ar@{-}[dr]^{\mathlarger{\pdv{f}{y}}} &  \\
+        x \ar@{-}[dr]_{\mathlarger{\dv{x}{t}}} & & y 
+    \ar@{-}[dl]^{\mathlarger{\dv{y}{t}}} \\ & t & }\]
+    }{
+    \begin{equation}\label{eq:deriv1}
+      \dv{f}{t} = \pdv{f}{x} \dv{x}{t} + \pdv{f}{y} \dv{y}{t} 
+    \end{equation}
+    Ενώ η 2η παράγωγος από τον τύπο:
+    \[
+      \dv[2]{f}{t} =  \pdv[2]{f}{x} \left(\dv{x}{t}\right)^{2} + 
+      2 \pdv[2]{f}{x}{y} \dv{x}{t} \dv{y}{t} + \pdv[2]{f}{y} 
+      \left(\dv{y}{t}\right)^{2} + \pdv{f}{x} \dv[2]{x}{t} + \pdv{f}{y} \dv[2]{y}{t}
+    \]
+  }
+\end{thm}
+
+\subsection{2η Περίπτωση: \ensuremath{z=f(x,y),  x=x(u,v),  y=y(u,v)}} 
+
+\begin{thm}
+  Αν η συνάρτηση $ f(x,y) $ είναι ορισμένη στο ανοιχτό σύνολο 
+  $ A \subseteq \mathbb{R}^{2} $ και $ x = x(u,v) $, $ y=y(u,v) $, με 
+  και η $f$ έχει συνεχείς μερικές παραγώγους στο $A$ και οι $ x $ και $ y $, έχουν 
+  συνεχείς μερικές παραγώγους στο $ E \subseteq \mathbb{R}^{2} $,
+  τότε οι μερικές παράγωγοι της $f$, υπάρχουν και δίνονται από τους τύπους:
+\end{thm}
+
+\twocolumnsidel{
+  \[
+    \xymatrix@C-6pt{ & & f \ar@{-}[dl] 
+      _{\mathlarger{\pdv{f}{x}}}^{\mathlarger{f_{x}}} 
+      \ar@{-}[dr]^{\mathlarger{\pdv{f}{y}}}_{\mathlarger{f_{y}}}
+                     & &  \\
+                     & x \ar@{-}[dl]_{\mathlarger{\pdv{x}{u}}}
+      \ar@{-}[d]^{\mathlarger{\pdv{x}{v}}} &  
+                                           & y \ar@{-}[d]_{\mathlarger{\pdv{y}{u}}} 
+      \ar@{-}[dr]^{\mathlarger{\pdv{y}{v}}} & \\
+    u & v & & u & v \\ } 
+  \]
+  }{
+  \begin{equation}\label{eq:deriv2}
+    \pdv{f}{u} = \pdv{f}{x} \pdv{x}{u} + \pdv{f}{y} \pdv{y}{u} 
+    \quad \text{και} \quad
+    \pdv{f}{v} = \pdv{f}{x} \pdv{x}{v} + \pdv{f}{y} \pdv{y}{v} 
+  \end{equation}
+  Ενώ οι μερικές παράγωγοι 2ης τάξης, δίνονται από τους τύπους:
+  \[
+    \pdv[2]{f}{u} =  \pdv[2]{f}{x} \left(\pdv{x}{u}\right)^{2} + 
+    2 \pdv[2]{f}{x}{y} \pdv{x}{u} \pdv{y}{u} + \pdv[2]{f}{y} 
+    \left(\pdv{y}{u}\right)^{2} + \pdv{f}{x} \pdv[2]{x}{u} + \pdv{f}{y} 
+    \pdv[2]{y}{u}
+  \]
+  \[
+    \pdv[2]{f}{v} =  \pdv[2]{f}{x} \left(\pdv{x}{v}\right)^{2} + 
+    2 \pdv[2]{f}{x}{y} \pdv{x}{u} \pdv{y}{v} + \pdv[2]{f}{y} 
+    \left(\pdv{y}{v}\right)^{2} + \pdv{f}{x} \pdv[2]{x}{v} + \pdv{f}{y} 
+    \pdv[2]{y}{v}
+  \]
+  \[
+    \pdv[2]{f}{v}{u} = \pdv[2]{f}{x} \pdv{x}{u} \pdv{x}{v} + \pdv[2]{f}{x}{y}
+    \left(\pdv{x}{u} \pdv{y}{v}+ \pdv{x}{v} \pdv{y}{u} \right) + \pdv[2]{f}{y} 
+    \pdv{y} {u} \pdv{y}{v} + \pdv{f}{x} \pdv[2]{x}{u}{v} + \pdv{f}{y} 
+    \pdv[2]{y}{u}{v} 
+  \]
+}
+
+
+\begin{rem}
+  Οι τύποι~\eqref{eq:deriv1} και~\eqref{eq:deriv2} προέκυψαν αθροίζοντας κάθε φορά, 
+  τα μονοπάτια που ξεκινούν από τη μεταβλητή $f$ και καταλήγουν στη μεταβλητή ως 
+  προς την οποία παραγωγίζουμε, όπου κάθε μονοπάτι αποτελείται από το γινόμενο των 
+  παραγώγων που συναντούμε "διασχίζοντάς" το.
+\end{rem}
+
+
+\section{Αποδείξεις των τύπων των μερικών Παραγώγων 2ης τάξης}
+
+\subsection{Απόδειξη με το συμβολισμό του Leibnitz}
+
+Αποδεικνύουμε τον τύπο για την $ \pdv[2]{f}{u} $ και ομοίως προκύπτουν και οι τύποι 
+για τις $ \pdv[2]{f}{v}  $ και $ \pdv[2]{f}{u}{v} $.
+
+\vspace{\baselineskip}
+
+\twocolumnsidel{
+  \[ 
+    \xymatrix@C-6pt{ & & \pdv{f}{x} 
+      \ar@{-}[dl]_{\mathlarger{\pdv[2]{f}{x}}} 
+      \ar@{-}[dr]^{\mathlarger{\pdv[2]{f}{x}{y}}} & &  \\
+                                                  & x \ar@{-}[dl]
+                                                  _{\mathlarger{\pdv{x}{u}}}
+      \ar@{-}[d]^{\mathlarger{\pdv{x}{v}}} &  
+                                           & y \ar@{-}[d]_{\mathlarger{\pdv{y}{u}}} 
+      \ar@{-}[dr]^{\mathlarger{\pdv{y}{v}}} & \\
+      u & v & & u & v \\ 
+    } 
+  \] 
+  \[\xymatrix@C-6pt{ & & \pdv{f}{y} 
+      \ar@{-}[dl]_{\mathlarger{\pdv[2]{f}{y}{x}}} 
+      \ar@{-}[dr]^{\mathlarger{\pdv[2]{f}{y}}} & &  \\
+                                               & x \ar@{-}[dl]
+                                               _{\mathlarger{\pdv{x}{u}}}
+      \ar@{-}[d]^{\mathlarger{\pdv{x}{v}}} &  
+                                           & y \ar@{-}[d]_{\mathlarger{\pdv{y}{u}}} 
+      \ar@{-}[dr]^{\mathlarger{\pdv{y}{v}}} & \\
+    u & v & & u & v \\ }
+  \] 
+  }{
+  \begin{proof}
+    \[\begin{aligned}
+      \pdv[2]{f}{u} 
+  &= \pdv{}{u}\left(\pdv{f}{u}\right) = \pdv{}{u} 
+  \left( \pdv{f}{x} \pdv{x}{u} + \pdv{f}{y} \pdv{y}{u}\right) = 
+  \pdv{}{u} \left(\pdv{f}{x} \pdv{x}{u}\right) + \pdv{}{u} 
+  \left(\pdv{f}{y} \pdv{y}{u}\right) \\
+  &= \pdv{}{u} \left( \pdv{f}{x}\right) \pdv{x}{u} + \pdv{f}{x} \pdv{}{u} \left(
+  \pdv{x}{u} \right) + \pdv{}{u} \left(\pdv{f}{y} \right) \pdv{y}{u} + \pdv{f}{y} 
+  \pdv{}{u} \left(\pdv{y}{u}\right) \\
+  &=\left[ \pdv[2]{f}{x} \pdv{x}{u} + \pdv[2]{f}{x}{y} \pdv{y}{u} \right] \pdv{x}{u} +
+  \pdv{f}{x} \pdv[2]{x}{u} + 
+  \left[ \pdv[2]{f}{y}{x} \pdv{x}{u} + \pdv[2]{f}{y} \pdv{y}{u} \right] \pdv{y}{u} +
+  \pdv{f}{y} \pdv[2]{y}{u} \\
+  &= \pdv[2]{f}{x} \left(\pdv{x}{u}\right)^{2} + \pdv[2]{f}{x}{y} \pdv{y}{u}
+  \pdv{x}{u} + \pdv{f}{x} \pdv[2]{x}{u} + \pdv[2]{f}{y}{x} \pdv{x}{u} \pdv{y}{u} + 
+  \pdv[2]{f}{y} \left(\pdv{y}{u}\right)^{2} + 
+  \pdv{f}{y} \pdv[2]{y}{u} \\
+  &= \pdv[2]{f}{x} \left(\pdv{x}{u}\right)^{2} + 2\pdv[2]{f}{x}{y} \pdv{x}{u}
+  \pdv{y}{u} + \pdv[2]{f}{y} \left(\pdv{y}{u}\right)^{2} + \pdv{f}{x} \pdv[2]{x}{u} +
+  \pdv{f}{y} \pdv[2]{y}{u} \\
+    \end{aligned}
+  \]
+\end{proof}
+  }
+
+
+  \subsection{Απόδειξη με το συμβολισμό των δεικτών}
+
+  Αποδεικνύουμε τον τύπο για την $ f_{uu} $ και ομοίως προκύπτουν και οι τύποι για τις  
+  $ f_{vv} $ και $ f_{uv} $.
+
+  \vspace{\baselineskip}
+
+  \twocolumnsidel{
+    {
+      \[ 
+        \xymatrix@C-6pt{ & & f_{x}
+          \ar@{-}[dl]_{\mathlarger{f_{xx}}} 
+          \ar@{-}[dr]^{\mathlarger{f_{xy}}} & &  \\
+                                            & x \ar@{-}[dl]_{\mathlarger{x_{u}}}
+          \ar@{-}[d]^{\mathlarger{x_{v}}} &  
+                                          & y \ar@{-}[d]_{\mathlarger{y_{u}}} 
+          \ar@{-}[dr]^{\mathlarger{y_{v}}} & \\
+          u & v & & u & v \\ 
+        } 
+      \] 
+      \[\xymatrix@C-6pt{ & & f_{y}
+          \ar@{-}[dl]_{\mathlarger{f_{yx}}} 
+          \ar@{-}[dr]^{\mathlarger{f_{yy}}} & &  \\
+                                            & x \ar@{-}[dl]_{\mathlarger{x_{u}}}
+          \ar@{-}[d]^{\mathlarger{x_{v}}} &  
+                                          & y \ar@{-}[d]_{\mathlarger{y_{u}}} 
+          \ar@{-}[dr]^{\mathlarger{y_{v}}} & \\
+        u & v & & u & v \\ }
+      \] 
+    }
+    }{
+    \begin{proof}
+      \[
+        \begin{aligned}
+          f_{uu} &= (f_{u})_{u} = (f_{x}x_{u}+f_{y}y_{u})_{u} \\
+                 &=(f_{x}x_{u})_{u}+ (f_{y}y_{u})_{u} \\
+                 &=(f_{x})_{u}x_{u} + f_{x}(x_{u})_{u} + (f_{y})_{u}y_{u}+ 
+                 f_{y}(y_{u})_{u} \\
+                 &= (f_{xx}x_{u}+f_{xy}{y_{u}})x_{u} + f_{x} x_{uu} + 
+                 (f_{yx}x_{u}+f_{yy}y_{u})y_{u} + f_{y}y_{uu} \\
+                 &= f_{xx}(x_{u})^{2} + f_{xy}y_{u}x_{u}+ f_{x}x_{uu} + 
+                 f_{yx}x_{u}y_{u}+f_{yy}(y_{u})^{2}+ f_{y}y_{uu} \\
+                 &= f_{xx}(x_{u})^{2}+ 2f_{xy}x_{u}y_{u} + f_{yy}(y_{u})^{2} + 
+                 f_{x}x_{uu} + f_{y}y_{uu}
+        \end{aligned}
+      \] 
+    \end{proof}
+  }
+
+  \begin{rem}
+    Συγκεντρωτικά οι τύποι για τις παραγώγους 2ης ταξής της συνάρτησης 
+
+    \[
+      f_{uu}= f_{xx}(x_{u})^{2}+ 2f_{xy}x_{u}y_{u} + f_{yy}(y_{u})^{2} + f_{x}x_{uu} + 
+      f_{y}y_{uu} 
+    \] 
+    \[
+      f_{vv}= f_{xx}(x_{v})^{2}+ 2f_{xy}x_{v}y_{v} + f_{yy}(y_{v})^{2} + f_{x}x_{vv} + 
+      f_{y}y_{vv} 
+    \]
+    \[
+      f_{uv}= f_{xx}x_{u}x_{v}+ f_{xy}(x_{u}y_{v} + x_{v}y_{u}) + 
+      f_{yy}y_{u}y_{v} + f_{x}x_{uv} + f_{y}y_{v} 
+      f_{y}y_{vv} 
+    \]
+  \end{rem}
+
+
+  \end{document}
+
+
