@@ -130,7 +130,7 @@ $ (x_{0}, y_{0}) $ είναι :
     \item $ \pdv{x}(f\cdot g) = \pdv{f}{x} \cdot g + f \cdot \pdv{g}{x} $
     \item $ \pdv{x}(\frac{f}{g}) = \frac{\pdv{f}{x} \cdot g - f \cdot 
       \pdv{g}{x}}{g^{2}} $
-  \end{myitemize}
+\end{myitemize}
 }
 
 \subsection*{Παραδείγματα}
@@ -465,7 +465,7 @@ $ (x_{0}, y_{0}) $ είναι :
 \begin{dfn}
   Έστω $ f(x,y,z) $ συνάρτηση. Τότε η πραγματική συνάρτηση 
   \[ 
-    \Delta f \overset{\text{ή}}{=} \laplacian f = \pdv{f}{x} + \pdv{f}{y} + \pdv{f}{z} 
+    \Delta f \overset{\text{ή}}{=} \laplacian f = \pdv[2]{f}{x} + \pdv[2]{f}{y} + \pdv[2]{f}{z} 
   \]
   ονομάζεται \textcolor{Col1}{Λαπλασιανή} της συνάρτησης $ f(x,y,z) $.
 \end{dfn}
@@ -1484,8 +1484,8 @@ $ (x_{0}, y_{0}) $ είναι :
       \node (vx) at (-0.5,-3) {$v$};  
       \node (uy) at (0.5,-3) {$u$};  
       \node (vy) at (2,-3) {$v$};  
-      \draw (f) edge node[midway,above left] {$ \pdv[2]{f}{y}$} (x) ;
-      \draw (f) edge node[midway,above right] {$ \pdv[2]{f}{x}{y}$} (y) ;
+      \draw (f) edge node[midway,above left] {$ \pdv[2]{f}{x}{y}$} (x) ;
+      \draw (f) edge node[midway,above right] {$ \pdv[2]{f}{y}$} (y) ;
       \draw (x) edge node[midway,above left] {$ \pdv{x}{u}$} (ux) ;
       \draw (x) edge node[midway,above right] {$ \pdv{x}{v}$} (vx) ;
       \draw (y) edge node[midway,above left] {$ \pdv{y}{u}$} (uy) ;

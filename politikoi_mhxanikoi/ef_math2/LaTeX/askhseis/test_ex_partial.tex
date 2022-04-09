@@ -1,0 +1,131 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\pagestyle{askhseis}
+
+% \everymath{\displaystyle}
+
+
+
+
+\begin{document}
+
+\begin{center}
+  {\color{Col1}\bfseries\large Μερικές Παράγωγοι}
+\end{center} 
+
+
+\section*{Σύνθετη Παράγωγος}
+
+\begin{enumerate}
+  \item Να βρεθεί η παράγωγος $\dv{f}{t}$ της συνάρτησης 
+    $f(x,y)=\ln(y^2-x^2)$, όταν $x=\sin t, y=\cos t$, για $t=\frac{\pi}{8}$.
+
+    \hfill Απ: $-2$
+
+  \item Να βρεθεί η παράγωγος $\dv{w}{t}$ της συνάρτησης 
+    $ w = xy+z $, όταν $ x = \cos{t}, y = \sin{t}$ και $ z = t $, για 
+    $ t = \frac{ \pi }{ 4 } $.
+
+    \hfill Απ: 1
+
+  \item Έστω η συνάρτηση  $ f(x,y) = x^{2} + xy $, όπου $ x=r \cos{\theta} $ και 
+    $ y= r \sin{\theta} $. 
+    Να υπολογίσετε τις μερικές παραγώγους $ \pdv{f}{r} $ και $ \pdv{f}{\theta} $.  
+
+    \hfill Απ: \begin{tabular}{l}
+      $ \pdv{f}{r} = 2r(\cos{\theta} )(\cos{\theta} + \sin{\theta}) $ \\[10pt]
+      $ \pdv{f}{\theta}=r^{2}(\cos{2\theta} - \sin{2 \theta}) $
+    \end{tabular}
+
+  \item Έστω $ f(x,y) = \sin{(x-y)} $ με $ x = uv $ και $ y = u-v $. Να 
+    υπολογιστούν οι $ \pdv[2]{f}{u} $, $ \pdv[2]{f}{v} $ και $ \pdv[2]{f}{u}{v} $.
+
+    \hfill Απ: \begin{tabular}{l}
+      $ \pdv[2]{f}{u} = -(v-1)^{2} \sin{(x-y)} $ \\
+      $ \pdv[2]{f}{v} = -(u-1)^{2} \sin{(x-y)} $ \\
+      $ \pdv[2]{f}{u}{v} = -(u+1)(v-1) \sin{(x-y)} + \cos{(x-y)} $
+    \end{tabular}
+
+  \item Να υπολογιστούν οι μερικές παράγωγοι, ως προς $u$ και $v$, 
+    της συνάρτησης $ f(x,y,z) = x + 2y + z^{2}$, όπου $ x = \frac{ u }{ v } $, 
+    $y = u^{2} + \ln{v} $ και $ z = 2u $.
+    \hfill Απ: $ \pdv{f}{u} = \frac{1}{ v } + 12u $, 
+    $\pdv{f}{v} = -\frac{ u }{ v^{2} } + \frac{ 2 }{ v } $
+\end{enumerate}
+
+
+\section*{Παράγωγος Σύνθετων Συναρτήσεων} 
+
+\begin{enumerate}
+  \item Αν $ f(x,y) = \arctan{\frac{y}{x}} $ με $ x=u+v $ και $ y = u-v $ 
+    να δείξετε ότι $ f_{u} + f_{v} = \frac{u-v}{u^{2}+v^{2}} $.
+
+  \item  Αν $ z=z(u,v) $ με $ u=x \cos{a} - y \sin{a} $ και $ v= x \sin{a} + y \cos{a} $
+    να δείξετε ότι $ (z_{x})^{2} + (z_{y})^{2} = (z_{u})^{2} + (z_{v})^{2} $.
+
+  \item Αν $ z=f(x,y) $, με $ x=u+v $ και $ y = u-v $ να δείξετε ότι 
+    $ (z_{x})^{2} - (z_{y})^{2} = z_{u}\cdot z_{v} $ 
+
+  \item Έστω $ z=z(x,y) $ συνάρτηση δύο μεταβλητών, με $ x+y= \ln{u+v} $ και 
+    $ x-y = \ln{(u-v)} $. Να δείξετε ότι 
+    \[
+      z_{xx}+z_{yy} = (u^{2}-v^{2})(z_{uu}-z_{vv}) 
+    \]
+  \item Δίνεται η συνάρτηση δύο μεταβλητών, με τύπο
+    $ z = f(u) + g(v) $, όπου $ u = ax + by $ και $ v = ax - by $, όπου 
+    $ a,b \in \mathbb{R} $. Να αποδείξετε ότι 
+    \[
+      a^{2} z_{yy} - b^{2}z_{xx} = 0 
+    \] 
+  \item Αν $ z = f(x,y) $, με $ x=r \cos{\theta} $ και $ y = r \sin{\theta} $, 
+    τότε να δείξετε ότι
+    \[
+      \left(\pdv{f}{x}\right)^{2} + \left(\pdv{f}{y}\right)^{2} = 
+      \left(\pdv{f}{r}\right)^{2} + \frac{1}{ r^{2}} 
+      \left(\pdv{f}{\theta}\right)^{2} 
+    \] 
+  \item Έστω $ g(x,y) = f(x^{2} - y^{2}, y^{2} - x^{2}) $, όπου η συνάρτηση 
+    $f$ είναι διαφορίσιμη. Να αποδείξετε ότι η συνάρτηση $g$ ικανοποιεί 
+    την διαφορική εξίσωση με μερικές παραγώγους
+    \[
+      x\pdv{g}{y} + y\pdv{g}{x} = 0
+    \] 
+  \item Να δείξετε ότι η συνάρτηση $ z(x,y) = xyf\left(\frac{ x-y }{ xy }\right) $
+    ικανοποιεί τη σχέση $ x^{4} z_{xx} = y^{4} z_{yy} $.
+\end{enumerate}
+
+
+
+\section*{Τέλειο Διαφορικό}
+
+\begin{enumerate}
+  \item Για τις παρακάτω παραστάσεις, να αποδείξετε ότι είναι τέλεια διαφορικά και 
+    να υπολογίσετε τη συνάρτηση δυναμικού.
+    \begin{enumerate}[i)]
+      \item $ \left(x+e^{x/y}\right)dx + e^{x/y}\left(1- \frac{x}{y}\right)dy $
+        \hfill Απ: $ f(x,y) = \frac{x^{2}}{2} +y e^{x/y} + c $ 
+
+      \item $\left(2e^{x}+{1}/{x}-3\sin y\right)dx+3(y^2-x\cos y)dy$ 
+        \hfill  Απ: $ f(x,y,z) = y^{3}-3x \sin{y} + 2e^{x} + \ln{x} +c $.
+        %spand (114)
+      \item $ (3x^{2}+3y-1)dx + (z^{2}+3x)dy+(2yz+1)dz $
+        \hfill Απ: $ f(x,y,z) = x^{3}+3xy-x+yz^{2}+z+c $
+
+      \item $(2xy+z)dx+(x^{2}+z^{2})dy+(x+2yz)dz$ 
+        \hfill  Απ: $ f(x,y,z) = x^{2}y+z^{2}y+xz +c $.
+
+      \item $ \cos(x+yz)dx + z\cos(x+yz)dy+y\cos(x+yz)dz $
+        \hfill Απ: $ f(x,y,z) = \sin(x+yz) + c $
+
+    \end{enumerate}
+
+  \item Να υπολογιστεί το $a$ ώστε η παράσταση $ \frac{ x + ay }{ (x-y)^{3} }dx 
+    + \frac{ ax+y }{ (x-y)^{3} }dy $ να είναι τέλειο διαφορικό.
+    \hfill Απ: $ a=-1 $
+
+\end{enumerate}
+
+
+\end{document}
