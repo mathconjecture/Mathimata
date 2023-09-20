@@ -1,0 +1,101 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_themata}
+\input{definitions.tex}
+\input{myboxes}
+
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+\geometry{top=2cm}
+
+
+\begin{document}
+
+\begin{mybox3}
+  \begin{thema}
+    Ένα σωμάτιο κινείται σε τροχιά με παραμετρικές εξισώσεις:
+    \[
+      x(t)=t \sin{t} + \cos{t}, \quad y(t)= -t \cos{t} + \sin{t}, \quad t \in \mathbb{R} 
+    \] 
+    \begin{enumerate}[i)]
+      \item Να βρεθεί το μήκος της τροχιάς που διανύει το κινητό για $t \in [0, \pi] $.
+      \item Να βρεθεί η εφαπτομενική και η κάθετη συνιστώσα της επιτάχυνσης, καθώς και ο 
+        κύκλος καμπυλότητας στη θέση που αντιστοιχεί στη χρονική στιγμή $ t= \pi $.
+
+        \hfill \textcolor{Col1}{\textbf{Δίνεται ο τύπος:}} $ \mathbf{a}(t) = \dv[2]{s}{t}
+        \mathbf{T}+\kappa\Bigl(\dv{s}{t}\Bigr)^{2} \mathbf{N} $
+    \end{enumerate}
+  \end{thema}
+\end{mybox3}
+\begin{solution}
+\item {}
+  \begin{enumerate}[i)]
+    \item Σχηματίζουμε την διανυσματική παραμετρική εξίσωση της καμπύλης, από τις 
+      δοθείσες παραμετρικές εξισώσεις:
+      \[
+        \mathbf{r}(t) = (t \sin{t} + \cos{t}) \, \mathbf{i} + (-t \cos{t} + \sin{t} )
+        \, \mathbf{j} 
+      \] 
+      Οπότε, έχουμε:
+      \begin{align*}
+        \mathbf{r'}(t) &= (\cancel{\sin{t}} + t \cos{t} - \cancel{\sin{t}\,}) 
+        \mathbf{i} + (- \cancel{\cos{t}} + t \sin{t} + \cancel{\cos{t})\,} \mathbf{j} = 
+        t \cos{t} \, \mathbf{i} + t \sin{t} \, \mathbf{j} \\
+        \norm{\mathbf{r'}(t)} &= \sqrt{t^2 \cos^{2}{t} + t^2 \sin^{2}{t}} = \sqrt{t^2}
+        \overset{t>0}{=} t
+      \end{align*} 
+      Άρα το μήκος της καμπύλης, είναι:
+      \[
+        \int _{0}^{ \pi} t \,{dt} = \left[ \frac{t^2}{2} \right]_{0}^{\pi} = \frac{\pi
+        ^{2}}{2}
+      \]
+    \item Για να βρούμε την εφαπτομενική (επιτρόχιο) και κάθετη (κεντρομόλο) συνιστώσα 
+      της επιτάχυνσης, βρίσκουμε:
+      \begin{align*}
+        \dv{s}{t} &= \norm{\mathbf{r'}(t)} = t \\
+        \dv[2]{s}{t} &= 1
+      \end{align*}
+      καθώς και τα μοναδιαία διανύσματα $ \mathbf{T} $ και $ \mathbf{N} $
+      \begin{align*}
+        \mathbf{T} &= \frac{\mathbf{r'}(t)}{\norm{\mathbf{r'}(t)}} = \frac{t \cos{t}}{t} \,
+        \mathbf{i} + \frac{t \sin{t}}{t} \, \mathbf{j} = \cos{t} \, \mathbf{i} +
+        \sin{t} \, \mathbf{j} \\
+        \dv{T}{t} &= - \sin{t} \, \mathbf{i} + \cos{t} \, \mathbf{j} \\
+        \norm{\dv{T}{t}} &= \sqrt{\sin^{2}{t} + \cos^{2}{t}} = 1 \\
+        \mathbf{N} &= \frac{\dv{T}{t}}{\norm{\dv{T}{t}}} = - \sin{t} \, \mathbf{i} + \cos{t}
+        \, \mathbf{j} 
+      \end{align*}
+      Επίσης, βρίσκουμε και την καμπυλότητα
+      \[
+        \kappa = \frac{\norm{\dv{T}{t}}}{\norm{\mathbf{r'}(t)}} = \frac{1}{t} 
+      \] 
+      Άρα, σύμφωνα με τον τύπο της επιτάχυνσης, η εφαπτομενική συνιστώσα της
+      (\textbf{επιτρόχιος} επιτάχυνση), στο τυχαίο σημείο $t$ θα είναι:
+      \[
+        \mathbf{a_{\varepsilon}} = \Bigl(\dv[2]{s}{t}\Bigr)T = 1 (\cos{t} \, \mathbf{i}+
+        \sin{t} \, \mathbf{j}) = \cos{t} \, \mathbf{i} + \sin{t} \, \mathbf{j}
+      \] 
+      και η κάθετη συνιστώσα της (\textbf{κεντρομόλος} επιτάχυνση), στο τυχαίο σημείο 
+      $t$, θα είναι:
+      \[
+        \mathbf{a_{\kappa}} = \kappa \Bigl(\dv{s}{t} \Bigr)^2 N = \frac{1}{\cancel{t}}
+        t^{\cancel{2}}
+        (- \sin{t} \, \mathbf{i} + \cos{t} \, \mathbf{j}) = t (- \sin{t} \, \mathbf{i} + \cos{t} \, \mathbf{j})
+      \] 
+      Στο σημείο $ t= \pi $ οι συνιστώσες αυτές, γίνονται:
+      \[
+        \mathbf{a_{\varepsilon}(\pi)} = \cos{\pi} \, \mathbf{i} + \sin{\pi} \, \mathbf{j}
+        = - \, \mathbf{i}
+      \] 
+      και 
+      \[
+        \mathbf{a_{\kappa}(\pi)} = \pi (- \sin{\pi} \, \mathbf{i} + \cos{\pi} \,
+        \mathbf{j}) = - \pi \, \mathbf{j}
+      \] 
+      και γενική η επιτάχυνση στο σημείο $ t = \pi $, γίνεται:
+      \[
+        \mathbf{a}(t) = - \, \mathbf{i} - \pi \, \mathbf{j}  
+      \] 
+  \end{enumerate}
+\end{solution}
+
+\end{document}

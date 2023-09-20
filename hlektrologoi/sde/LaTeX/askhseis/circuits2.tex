@@ -4,8 +4,6 @@
 \usepackage[RPvoltages]{circuitikz}
 
 
-\geometry{left=15.63mm,right=15.63mm,top=30.25mm,bottom=33.25mm,footskip=24.16mm,headsep=24.16mm}
-
 \pagestyle{vangelis}
 % \everymath{\displaystyle}
 
@@ -20,24 +18,24 @@
 \vspace{\baselineskip}
 
 %xatzikonstantinou p.214
-\begin{problem}
-  Να υπολογιστεί το ρεύμα $ i(t) $ σε ένα κύκλωμα $ RLC $, όπως στο παρακάτω σχήμα, 
-  με ωμική αντίσταση $ R= \SI{100}{\ohm} $, συντελεστή αυτεπαγωγής $ L= \SI{0,1}{\henry}
-  $ και πυκνωτή χωρητικότητας $ C= \SI{d-3}{\farad} $ τα οποία συνδέονται σε σειρά με 
-  μια πηγή τάσης $ E(t) = 155 \sin{377t} $ 
-  (ουσιαστικά συχνότητας $ \nu = \omega / 2 \pi = 377/2 \pi = \SI{60}{\hertz} $). 
-  Η αρχική συνθήκη είναι ότι τα φορτία και τα ρεύματα για $ t=0 $ είναι μηδέν, δηλαδή  
-  $ i(0)=0, \; i'(0)=0 $.
-\end{problem}
-\begin{center}
-  \begin{circuitikz}[american,cute inductors]
-    \draw (0,0) to[short,i=$i$,battery1,l=$E$] (0,3) to[L=$L$]  (4,3) to[C=$C$]
-    (4,0) to[R=$R$]  (0,0) ;
-  \end{circuitikz}
-\end{center}
 
-\hfill Απ: $ i(t) = -0,043 \mathrm{e}^{-10t} + 0,526 \mathrm{e}^{-990t} - 0,483
-\cos{(377t)} + 1,381 \sin{(377t)} $ 
+% \begin{problem}
+%   Να υπολογιστεί το ρεύμα $ i(t) $ σε ένα κύκλωμα $ RLC $, όπως στο παρακάτω σχήμα, 
+%   με ωμική αντίσταση $ R= \SI{100}{\ohm} $, συντελεστή αυτεπαγωγής $ L= \SI{0,1}{\henry}
+%   $ και πυκνωτή χωρητικότητας $ C= \SI{d-3}{\farad} $ τα οποία συνδέονται σε σειρά με 
+%   μια πηγή τάσης $ E(t) = 155 \sin{377t} $ 
+%   (ουσιαστικά συχνότητας $ \nu = \omega / 2 \pi = 377/2 \pi = \SI{60}{\hertz} $). 
+%   Η αρχική συνθήκη είναι ότι τα φορτία και τα ρεύματα για $ t=0 $ είναι μηδέν, δηλαδή  
+%   $ i(0)=0, \; i'(0)=0 $.
+% \end{problem}
+% \begin{center}
+%   \begin{circuitikz}[american,cute inductors]
+%     \draw (0,0) to[short,i=$i$,battery1,l=$E$] (0,3) to[L=$L$]  (4,3) to[C=$C$]
+%     (4,0) to[R=$R$]  (0,0) ;
+%   \end{circuitikz}
+% \end{center}
+% \hfill Απ: $ i(t) = -0,043 \mathrm{e}^{-10t} + 0,526 \mathrm{e}^{-990t} - 0,483
+% \cos{(377t)} + 1,381 \sin{(377t)} $ 
 
 \begin{problem}
   Έστω ένα κύκλωμα $ RLC $, όπως στο παρακάτω σχήμα, 
@@ -91,4 +89,8 @@
   $ i_{1}(t) = - \frac{5}{6} (1- \mathrm{e}^{-60t}) $ \\
   $ i_{2}(t) = \frac{100}{3} t - \frac{5}{9} (\mathrm{e}^{-60t} -1) $ 
 \end{tabular} 
+
+
+%todo να προσθέσω μερικές ασκήσεις με κυκλωματα RLC
+
 \end{document}

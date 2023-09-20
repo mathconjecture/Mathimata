@@ -1,0 +1,63 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_themata}
+\input{definitions.tex}
+\input{myboxes}
+
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+
+
+\begin{document}
+\begin{mybox3}
+  \begin{thema}
+    Θεωρούμε μεταλλικό κώνο ύψους $h$, ακτίνας βάσεως $a$ και γωνία κορυφής ίση με 
+    $ 2 \theta $. Η κωνική επιφάνεια περιγράφεται από την εξίσωση 
+    \[
+      z = \frac{h}{a} \Bigl(a - \sqrt{x^{2}+y^{2}}\Bigr) 
+    \] 
+    Ο κώνος βρίσκεται μέσα σε ρεύμα θερμού αέρα και η θερμοκρασία $T$ στο περιβάλλον 
+    του, ακολουθεί την κατανομή
+    \[
+      T(x,y,z) = \frac{T_{0}}{1+z^{3}} \, \mathrm{e}^{a^{2}-(x^{2}+y^{2})}
+    \]
+    όπου $ T_{0} $ είναι η σταθερή θερμοκρασία στην 
+    περιφέρεια της βάσης. Να υπολογιστεί η παράγωγος της θερμοκρασίας ως προς τη 
+    διεύθυνση του κάθετου διανύσματος στην επιφάνεια του κώνου.
+  \end{thema}
+\end{mybox3}
+\begin{solution}
+  Θεωρούμε την εξίσωση της επιφάνειας του κώνου:
+  \[
+    F(x,y,z) = az - h\Bigl(a- \sqrt{x^{2}+y^{2}}\Bigr) = 0
+  \] 
+  Ενα διάνυσμα κάθετο στην επιφάνεια του κώνου δίνεται απο διάνυσμα:
+  \begin{align*}
+    \grad F &= \dv{F}{x} \, \mathbf{i} + \dv{F}{y} \, \mathbf{j} + \dv{F}{z} \, \mathbf{k}
+    = \frac{xh}{\sqrt{x^{2}+y^{2}}} \. \mathbf{i} + \frac{yh}{\sqrt{x^{2}+y^{2}}} \,
+    \mathbf{j} + a \, \mathbf{k} \\
+    \norm{\grad F} &= \sqrt{\frac{x^{2}h^{2}}{x^{2}+y^{2}} +
+    \frac{y^{2}h^{2}}{x^{2}+y^{2}} + a^{2}} = \sqrt{h^{2}+a^{2}}
+    \end{align*} 
+    Επομένως 
+    \[
+      \widehat{\mathbf{n}} = \frac{\grad F}{\norm{\grad F}} = \frac{1}{\sqrt{a^{2}+h^{2}}}
+      \biggl(\frac{xh}{\sqrt{x^{2}+y^{2}}} \, \mathbf{i} + \frac{yh}{\sqrt{x^{2}+y^{2}}} \,
+      \mathbf{j} + a \, \mathbf{k}\biggr)
+    \] 
+    Βρίσκουμε επίσης την κλίση της θερμοκρασίας:
+    \begin{align*}
+      \grad T &= \dv{T}{x} \, \mathbf{i} + \dv{T}{y} \, \mathbf{j} + \dv{T}{z} \, \mathbf{k}
+      = \frac{-2x T_{0}}{1+z^{3}} \, \mathrm{e}^{a^{2}-(x^{2}+y^{2})} \, \mathbf{i} + 
+      \frac{-2y T_{0}}{1+z^{3}} \, \mathrm{e}^{a^{2}-(x^{2}+y^{2})} \, \mathbf{j} + 
+      \frac{-3z^{2} T_{0}}{(1+z^{3})^{2}} \, \mathrm{e}^{a^{2}-(x^{2}+y^{2})} \,
+      \mathbf{k} \\
+              &= \frac{T_{0}}{1+z^{3}} \mathrm{e}^{a^{2}-(x^{2}+y^{2})}
+              (-2x,-2y,\frac{-3z^{2}}{1+z^{3}})
+    \end{align*}
+    Άρα 
+    \[
+      \dv{T}{\mathbf{n}} = \grad T \cdot \widehat{\mathbf{n}} = 
+    \] 
+    %να το συνεχισω και ισως να το διορθωσω (ισως η παραγωγος του Τ ειναι συνθετη)
+  \end{solution}
+\end{document}

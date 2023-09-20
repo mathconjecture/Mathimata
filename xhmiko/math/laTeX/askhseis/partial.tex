@@ -1,0 +1,105 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\pagestyle{askhseis}
+
+\begin{document}
+
+
+\begin{center}
+  \minibox{\large \bfseries \textcolor{Col1}{Ασκήσεις στις Μερικές Παραγώγους}}
+\end{center}
+
+\vspace{\baselineskip}
+
+
+\section*{Μερική Παράγωγος}
+
+\begin{enumerate}
+  \item Με τη βοήθεια των κανόνων παραγώγισης να υπολογιστούν οι μερικές 
+    παράγωγοι 1ης και 2ης  τάξης των παρακάτω συναρτήσεων:
+    \begin{enumerate}[i)]
+      \item $f(x,y)=y^2\cos (x)$ \hfill Απ: \begin{tabular}{l}
+          $f_x=-y^2\sin(x)$ \\ 
+          $f_y=2y\cos(x)$ \\
+          $f_{xx}=_-y^2\cos(x)$ \\
+          $f_{yy}=2\cos(x)$ \\
+          $f_{xy}=-2y\sin(x)$ 
+        \end{tabular}
+
+      \item $f(x,y)= \mathrm{e}^{xy}$ \hfill Απ: \begin{tabular}{l}
+          $f_x= y \mathrm{e}^{xy} $ \\ 
+          $f_y= x \mathrm{e}^{xy} $ \\ 
+          $f_{xx}=_y^2 \mathrm{e}^{xy} $ \\
+          $f_{yy}=_x^2 \mathrm{e}^{xy} $ \\
+          $f_{xy}= \mathrm{e}^{xy} (1+xy) $
+        \end{tabular}
+    \end{enumerate}
+
+
+  \item Με τη βοήθεια των κανόνων παραγώγισης να υπολογιστούν οι μερικές 
+    παράγωγοι 1ης τάξης των παρακάτω συναρτήσεων:
+
+    \begin{enumerate}[i)]
+      \item $f(x,y)=y\sin (xy)$ \hfill Απ: \begin{tabular}{l}
+          $f_x=y^2\cos(xy)$ \\ 
+          $f_y=\sin(xy)+yx\cos(xy)$
+        \end{tabular}
+
+      \item $f(x,y)=\arccos(\frac{y}{x})$\hfill Απ: \begin{tabular}{l}
+          $f_x=\frac{y}{x\sqrt{x^2-y^2}}$ \\ 
+          $f_y=-\frac{1}{\sqrt{x^2-y^2}}$
+        \end{tabular}
+
+      \item $f(x,y)=\arcsin(\frac{x}{y})$\hfill Απ: \begin{tabular}{l}
+          $f_x=\frac{1}{\sqrt{y^2-x^2}}$ \\ 
+          $f_y=-\frac{x}{y\sqrt{y^2-x^2}}$
+        \end{tabular}
+
+      \item $ f(x,y,z) = (x+y^{2}) \sin{(xz)} $ \hfill Απ: \begin{tabular}{l}
+          $ f_{x} = \sin{(xz)} + z(x+y^{2}) \cos{(xz)} $ \\
+          $ f_{y} = 2y \sin{(xz)} $ \\
+          $ f_{z} = x(x+y^{2}) \cos{(xz)} $
+        \end{tabular} 
+    \end{enumerate}
+
+  \item Να δείξετε ότι η συνάρτηση $ f(x,y) = (y+3x)^{1/2} - 
+    (y-3x)^{1/2} $ ικανοποιεί τη σχέση $ f_{xx} - 9 f_{yy} = 0 $.
+    %span
+  \item Να δείξετε ότι η συνάρτηση $ f(x,y) = \cos{(x+y)} + \cos{(x-y)} $ 
+    επαληθεύει την διαφορική εξίσωση $ f_{xx} - f_{yy} = 0 $.
+\end{enumerate}
+
+
+\section*{Διαφορικό}
+
+\begin{enumerate}
+
+  \item Να βρεθεί το ολικό διαφορικό 1ης τάξης, της συνάρτησης 
+    $f(x,y)=\ln(xy)+\cos(y^2)$ 
+
+    \hfill Απ: $df=\frac{dx}{x}+\left(\frac{1}{y}-2y\sin(y^2)\right)dy$
+
+  \item Για τις παρακάτω παραστάσεις, να αποδείξετε ότι είναι \textbf{τέλεια
+    διαφορικά} και να υπολογίσετε τη συνάρτηση δυναμικού.
+    \begin{enumerate}[i)]
+      \item $ \left(x+e^{x/y}\right)dx + e^{x/y}\left(1- \frac{x}{y}\right)dy $
+        \hfill Απ: $ f(x,y) = \frac{x^{2}}{2} +y e^{x/y} + c $ 
+
+      \item $ (6x^{3}- \sin{x})dx + (9x^{2}y^{2}+ \cos{y})dy $ 
+        \hfill Απ: $ f(x,y) = 3x^{2}y^{3}+ \cos{x} + \sin{y} + c $  
+
+      \item $\left(2e^{x}+\frac{1}{x}-3\sin y\right)dx+3(y^2-x\cos y)dy$ 
+        \hfill  Απ: $ f(x,y,z) = y^{3}-3x \sin{y} + 2e^{x} + \ln{x} +c $.
+        %spand (114)
+    \end{enumerate}
+
+  \item Να υπολογιστεί το $a$ ώστε η παράσταση, να είναι \textbf{τέλειο διαφορικό}.
+    \[ \frac{ x + ay }{ (x-y)^{3} }dx + \frac{ ax+y }{ (x-y)^{3} }dy \]
+    \hfill Απ: $ a=-1 $
+\end{enumerate}
+
+
+\end{document}

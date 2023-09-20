@@ -1,0 +1,384 @@
+\chapter{Διαφορικά}
+
+\section{Ολικό Διαφορικό}
+
+\begin{dfn}
+  Έστω η συνάρτηση $ f(x,y) $. Τα \textcolor{Col1}{ολικά διαφορικά} 1ης και 
+  2ης τάξης της συνάρτηση $f$ συμβολίζονται με $ df $ και $ d^{2}f $, αντίστοιχα 
+  και ισχύει:
+  \[
+    \boxed{df = f_{x}dx + f_{y}dy} \quad \text{και} \quad 
+    \boxed{d^{2}f = f_{xx}dx^{2}+2f_{xy}dxdy+f_{yy}dy^{2}}
+  \] 
+  Στην περίπτωση όπου $ f= f(x_{1}, x_{2}, \ldots, x_{n}) $, το ολικό 
+  διαφορικό 1ης τάξης γίνεται: 
+  \[
+    df = f_{x_{1}}d{x_{1}} + f_{x_{2}}d{x_{2}} + \cdots + f_{x_{n}} dx_{n}
+  \]
+\end{dfn}
+
+
+\begin{example}
+  Να βρείτε το ολικό διαφορικό της συνάρτησης $ f(x,y) = xye^{x+2y} $ 
+\end{example}
+\begin{solution}
+\item {}
+  Το ολικό διαφορικό δίνεται από τη σχέση $ df = f_{x} dx + f_{y} dy $.  
+  Για τις μερικές παραγώγους έχουμε ότι: 
+  \[
+    f_{x} = ye^{x+2y}+xye^{x+2y} \quad \text{και} \quad f_{y} = xe^{x+2y} +
+    2xye^{x+2y}
+  \] 
+  Επομένως
+  \[
+    df = y(1+x)e^{x+2y} dx + x(1+2y)e^{x+2y}dy
+  \]
+\end{solution}
+
+\section{Εφαρμογές του Διαφορικού}
+
+Αν $ \Delta x $ και $ \Delta y $ είναι \textit{μικρές} μεταβολές του $ x $ και του $y$ 
+αντίστοιχα, τότε θέτουμε $ \Delta x = dx $ και $ \Delta y = dy $ και 
+αποδεικνύεται ότι 
+\[
+  \Delta f(x,y) \approx df (x,y) \Leftrightarrow f(x+\Delta x, y+\Delta y) - f(x,y) 
+  \approx df(x,y)
+\] 
+ή ισοδύναμα 
+\begin{equation}\label{eq:efdiaf}
+  \boxed{f(x+\Delta x, y+\Delta y) \approx f(x,y) + f_{x}(x,y)dx + f_{y}(x,y)dy}
+\end{equation}
+
+\begin{rem}
+  Από τη σχέση σχέση~\eqref{eq:efdiaf}, καταλαβαίνουμε ότι, μπορούμε να υπολογίσουμε 
+  κατά προσέγγιση, την τιμή της συνάρτησης $f$ σε κάποιο σημείο, αν γνωρίζουμε 
+  την τιμή της και τις τιμές των μερικών παραγώγων της, σε κάποιο άλλο
+  \textit{κοντινό} σημείο.
+\end{rem}
+
+\begin{example}
+  Να υπολογίσετε το $ \Delta f $ και το $ df $ στο σημείο $ (x,y) = (1,1) $, 
+  για τη συνάρτηση $ f(x,y) = x^{3}+y^{2} $ και για 
+  \begin{enumerate}[i)]
+    \item $ \Delta x = 0,1, \; \Delta y = 0,1 $
+    \item $ \Delta x = 0,01, \; \Delta y = 0,01 $
+  \end{enumerate}
+  Τι παρατηρείτε?
+\end{example}
+\begin{solution}
+\item {}
+  \begin{enumerate}[i)]
+    \item 
+      \begin{align*} 
+        \Delta f &= f(x+ \Delta x, y + \Delta y) - f(x,y) = f(1+0.1,1+0.1) - 
+        f(1,1) = f(1.1,1.1) - f(1,1) \\ 
+                 &= [(1.1)^{3}+(1.1)^{2}] - (1^{3}+1^{2}) = 0.541 \\
+        df &= f_{x}dx + f_{y}dy  = 3x^{2} dx + 2y dy \Rightarrow df (1,1) = 
+        3\cdot 1^{2} \cdot 0.1 + 2 \cdot 1 \cdot 0.1 = 0.5 
+      \end{align*}
+    \item 
+      \begin{align*} 
+        \Delta f &= f(x+ \Delta x, y + \Delta y) - f(x,y) = f(1+0.01,1+0.01) - 
+        f(1,1) = f(1.01,1.01) - f(1,1) \\ 
+                 &= [(1.01)^{3}+(1.01)^{2}] - (1^{3}+1^{2}) = 0.0504 \\
+        df &= f_{x}dx + f_{y}dy  = 3x^{2} dx + 2y dy \Rightarrow df (1,1) = 
+        3\cdot 1^{2} \cdot 0.01 + 2 \cdot 1 \cdot 0.01 = 0.05 
+      \end{align*}
+  \end{enumerate}
+  Παρατηρούμε ότι στην 1η περίπτωση, έχουμε
+  $ \Delta f - df \approx 0.04 $, ενώ στη 2η περίπτωση έχουμε $ \Delta f - df \approx 
+  0,0004 $, δηλαδή στη 2η περίπτωση, όπου τα $ \Delta x $ και $ \Delta y $ επιλέχθηκαν 
+  να είναι μικρότερα, το διαφορικό προσεγγίζει με \textbf{μεγαλύτερη ακρίβεια} τη 
+  διαφορά $ \Delta f $.
+\end{solution}
+
+\begin{example}
+  Κατά τη μέτρηση των στοιχείων μιας τριγωνικής επιφάνειας, βρέθηκαν οι πλευρές να 
+  έχουν μήκος \SI{100}{cm} και \SI{125}{cm} αντίστοιχα, ενώ η περιεχόμενη γωνία βρέθηκε 
+  να είναι \SI{60}{\degree}. Αν το πιθανό σφάλμα κατά την μέτρηση των πλευρών είναι 
+  $ \SI{0.2}{cm} $ και για τις γωνίες είναι $ \SI{1}{\degree} $, να υπολογίσετε κατά 
+  προσέγγιση το σφάλμα στο εμβαδό της επιφάνειας.
+\end{example}
+
+\begin{solution}
+\item {}
+
+  \twocolumnsidelc{
+    \begin{tikzpicture}[scale=0.7]
+      \node  (B) at (0, 0) {};
+      \node  (A) at (6, 0) {};
+      \node  (C) at (2, 2) {};
+      \node  (3) at (2, 0) {};
+      \draw (B.center) to node[left=3pt]{$x$} (C.center);
+      \draw (C.center) to (A.center);
+      \draw (B.center) to node[below]{$y$} (A.center) 
+        pic[draw,fill=magenta!25,"$\phi$",angle eccentricity=1.5]{angle} ;
+      \draw [dashed, in=90, out=-90] (C.center) to node[right]{$z$} (3.center);
+    \end{tikzpicture}
+  }{
+    Έχουμε ότι $ E = \frac{y \cdot z}{2} $. Όμως από το ορθογώνιο τρίγωνο έχουμε ότι 
+    $ z = x \sin{\phi} $, άρα 
+    \[
+      E(x,y,\phi) = \frac{y \cdot x \cdot \sin{\phi}}{2} 
+    \] 
+  }
+  Παρατηρούμε ότι $ \Delta x = dx = 0.2, \; \Delta y = dy = 0.2 $ και 
+  $ \Delta \phi = d\phi = \SI{1}{\degree} = \frac{\pi}{180} $. Οπότε,ισχύει ότι
+  \begin{equation*}
+    \Delta E \approx dE = E_{x} dx + E_{y} dy + E_{\phi} d\phi = \frac{y \cdot
+    \sin{\phi}}{2} dx + \frac{x \cdot \sin{\phi}}{2} dy + 
+    \frac{y \cdot x \cdot \cos{\phi}}{2} d\phi
+  \end{equation*} 
+  και πιο συγκεκριμένα ισχύει ότι 
+  \begin{align*}
+    \Delta E(100,125,60) \approx dE(100,125,60) 
+  &= E_{x} dx + E_{y} dy + E_{\phi} d\phi \\
+  &= E_{x}(100,125,60) dx + E_{y}(100,125,60) dy + E_{\phi}(100,125,60) d\phi \\
+  &= \frac{1}{2} \left(125 \cdot \sin{\frac{\pi}{3}} \cdot 0.2 + 100 \cdot
+    \sin{\frac{\pi}{3}} \cdot 0.2 + 100 \cdot 125 \cdot \cos{\frac{\pi}{3}} \cdot
+  \frac{\pi}{180}\right) \\
+  &= \SI{74.03}{cm^{2}}
+  \end{align*}
+  Άρα το σφάλμα μέτρησης του εμβαδού της τριγωνικής επιφάνειας είναι 
+  $ \SI{74.03}{cm^{2}} $
+\end{solution}
+
+\begin{example}
+  Κατά την εκτίμηση των συντεταγμένων ενός σημείου $ P(x,y) $ γίνονται σφάλματα 
+  $ dx $ και $ dy $ αντίστοιχα. Να υπολογίσετε την επίδραση αυτών των σφαλμάτων 
+  στη γωνία $ \theta $ και να γίνει αριθμητική εφαρμογή για $ x=1 $, $ y=2 $ και για 
+  $ dx = 0.01 $ και $ dy =-0.02 $.
+\end{example}
+\begin{solution}
+\item {}
+
+  \twocolumnsidelc{
+    \begin{tikzpicture}[scale=0.7]
+      \node (0) at (0, 0) {};
+      \node (1) at (4.5, 0) {};
+      \node (2) at (0, 4) {};
+      \node (3) at (3, 2) {};
+      \draw [fill] (3,2) node[right] {$P(x,y)$} circle (2pt);
+      \node (4) at (2, 3) {};
+      \draw [fill] (2,3) node[right] {$P'(x+dx, y+dy)$} circle (2pt);
+      \node (5) at (2, 0) {};
+      \node (6) at (3, 0) {};
+      \draw (0.center) to (3.center);
+      \draw (0.center) to (4.center);
+      \draw [dashed] (4.center) to (5.center);
+      \draw [dashed] (3.center) to (6.center);
+      \draw [-stealth] (0.center) to (1.center);
+      \draw [-stealth] (0.center) to (2.center);
+      \draw pic[draw,fill=magenta!25,"$\theta$",angle eccentricity=1.5]{angle=1--0--3};
+  \end{tikzpicture}}{
+  Έστω οι συντεταγμένες του σημείου $ P'(x+ dx, y + dy) $, όπως φαίνονται στο σχήμα.
+  Έχουμε ότι 
+  \[
+    \tan{\theta} = \frac{y}{x} \Rightarrow \theta = \arctan{\frac{y}{x}}
+  \] 
+  Αν η γωνία μετά το σφάλμα της εκτίμησης είναι $ \theta'$, έχουμε ότι 
+  \[
+    \theta ' = \arctan{\frac{y+ dy}{x + dx}} 
+\]} 
+Παρατηρούμε ότι $ \Delta x = dx = 0.01 $, $ \Delta y = dy = -0.02 $. Οπότε ισχύει ότι 
+\[
+  \Delta \theta \approx d \theta = \theta _{x} dx + \theta _{y} dy =
+  \frac{-y}{x^{2}+y^{2}} dx + \frac{x}{x^{2}+y^{2}} dy = \frac{xdy-ydx}{x^{2}+y^{2}}
+\]
+και μάλιστα υπολογίζουμε την απόλυτη τιμή και έχουμε
+\[
+  \abs{\Delta \theta} \approx \frac{\abs{xdy-ydx}}{x^{2}+y^{2}} \leq \frac{\abs{x dy}
+  + \abs{y dx}}{x^{2}+y^{2}} 
+\]
+και πιο συγκεκριμένα, για το σημείο $ P(1,2) $ έχουμε
+\[
+  \abs{\Delta \theta(1,2)} \leq \frac{\abs{1(-0.02)}+\abs{2\cdot 0.01}}{1^{2}+2^{2}} =
+  \frac{0.04}{5} = 0.008
+\]
+\end{solution}
+
+\section{Τέλειο Διαφορικό}
+
+\dfn{Θεωρούμε τις συναρτήσεις $ P(x,y) $ και $ Q(x,y) $ με πεδίο ορισμού $ A \subseteq
+  \mathbb{R}^{2} $.
+  Η παράσταση $ P(x,y) dx + Q(x,y) dy $ λέγεται \textcolor{Col2}{τέλειο 
+  διαφορικό} αν υπάρχει συνάρτηση $ f(x,y) $ με πεδίο ορισμού το $A$, ώστε 
+  \begin{gather*}
+    df = P(x,y)dx + Q(x,y)dy \Leftrightarrow \pdv{f}{x} dx + \pdv{f}{y} dy = 
+    P(x,y)dx + Q(x,y)dy \Leftrightarrow \\
+    \boxed{\pdv{f}{x} = P(x,y) \quad \text{και} \quad \pdv{f}{y} = Q(x,y)}
+\end{gather*}}
+
+\begin{prop}
+  Αν οι  $ P(x,y) $  και  $ Q(x,y) $  είναι συνεχείς συναρτήσεις και έχουν συνεχείς 
+  παραγώγους πρώτης τάξης, σε μια ορθογώνια περιοχή $A$ του $ \mathbb{R}^{2} $,  
+  τότε η  παράσταση  $ P(x,y)dx + Q(x,y)dy $ είναι τέλειο διαφορικό αν 
+  \[
+    \boxed{\pdv{p}{y} = \pdv{q}{x}} \quad \forall (x,y) \in A
+  \]
+\end{prop}
+
+\begin{dfn}
+  Η παράσταση  $ P(x,y,z)dx + Q(x,y,z)dy + R(x,y,z)dz $ είναι τέλειο διαφορικό 
+  αν υπάρχει συνάρτηση  $ f(x,y,z) $  τέτοια ώστε  $ df = P(x,y,z)dx + Q(x,y,z)dy 
+  + R(x,y,z)dz $.  Τότε ισχύουν οι παρακάτω σχέσεις:
+  \[
+    \boxed{\pdv{f}{x} = P(x,y,z) \quad \text{και} \quad \pdv{f}{y} = Q(x,y,z) 
+    \quad \text{και} \quad \pdv{f}{z} = R(x,y,z)} 
+  \] 
+\end{dfn}
+
+\begin{prop}
+  Αν οι  $ P(x,y,z) $, $ Q(x,y,z) $  και  $ R(x,y,z) $ είναι συνεχείς συναρτήσεις 
+  και έχουν συνεχείς παραγώγους πρώτης τάξης, σε μια ορθογώνια περιοχή Α του 
+  $ \mathbb{R}^{3} $ τότε η  παράσταση 
+  $ P(x,y,z)dx + Q(x,y,z)dy + R(x,y,z)dz $   είναι τέλειο διαφορικό αν 
+  \[
+    \boxed{\pdv{P}{y} = \pdv{Q}{x}} \quad \text{και} \quad \boxed{\pdv{Q}{z} = 
+    \pdv{R}{y}} \quad \text{και} \quad  \boxed{\pdv{P}{z} = \pdv{R}{x}} 
+    \quad \forall (x,y,z) \in A 
+  \] 
+\end{prop}
+
+\begin{rem}\label{olokl}
+  Οι συναρτήσεις  $ f(x,y) $  και  $ f(x,y,z) $ υπολογίζονται επίσης από τις 
+  παρακάτω σχέσεις:
+  \begin{align*}
+    f(x,y) &= \int_{x_{0}}^{x} P(t,y) \,{dt} + \int_{y_{0}}^{y} Q(x_{0},t) \,{dt} \\
+    f(x,y,z) &= \int_{x_{0}}^{x} P(t,y,z) \,{dt} + \int_{y_{0}}^{y} Q(x_{0},t,z) 
+    \,{dt} + \int _{z_{0}}^{z} R(x_{0},y_{0},t) \,{dt}  
+  \end{align*}
+  όπου τα $ x_{0} $, $ y_{0} $  και  $ z_{0} $ επιλέγονται \textbf{αυθαίρετα} στο πεδίο 
+  ορισμού των  $ P $, $ Q $  και  $ R $.
+\end{rem}
+
+\begin{rem}
+  Η συνάρτηση $ f(x,y) $ ή η συνάρτηση $ f(x,y,z) $ του ορισμού του τέλειου διαφορικού
+  λέγεται \textcolor{Col2}{συνάρτηση δυναμικού}.
+\end{rem}
+
+\begin{example}
+  Να εξετάσετε αν η παράσταση $ \left(1+x- {2}/{y}\right)dx + 
+  \left(1+ {2x}/{y^{2}} \right)dy $ είναι τέλειο διαφορικό και αν ναι, να 
+  υπολογίσετε τη συνάρτηση δυναμικού.
+\end{example}
+\begin{solution}
+  Ελέγχουμε με το κριτήριο:
+  \[ 
+    \pdv{P}{y} = \frac{2}{y^{2}} = \pdv{Q}{x} 
+  \]
+  Άρα η παράσταση είναι τέλειο διαφορικό. Επομένως υπάρχει 
+  συνάρτηση, $ f(x,y) $ τέτοια ώστε: 
+  \begin{align}
+    \pdv{f}{x} &= 1 + x - \frac{2}{y} \label{fx1} \\
+    \pdv{f}{y} &= 1+ \frac{2x}{y^{2}} \label{fy1}
+  \end{align}
+  Ολοκληρώνουμε μερικώς ως προς $x$ την~\eqref{fx1} και έχουμε
+  \[
+    f(x,y) = \int \left(1+x- \frac{2}{y}\right) \,{dx} = x + 
+    \frac{x^{2}}{2} - \frac{2x}{y} + c(y) 
+  \] 
+  Άρα  
+  \begin{equation}
+    f(x,y) = x + \frac{x^{2}}{2} - \frac{2x}{y} + c(y) \label{fxy}
+  \end{equation}
+  Στη συνέχεια παραγωγίζουμε μερικώς ως προς $y$ τη συνάρτηση $ f(x,y) $ που μόλις 
+  βρήκαμε και έχουμε:
+  \begin{equation}
+    \pdv{f}{y} = \frac{2x}{y^{2}} + c'(y) \label{ffy}
+  \end{equation} 
+  Στη συνέχεια εξισώνουμε την~\eqref{ffy} με την~\eqref{fy1} και προκύπτει
+  \[
+    c'(y) = 1 \Rightarrow c(y) = y + k 
+  \] 
+  Άρα, τελικά η συνάρτηση δυναμικού είναι 
+  \[
+    f(x,y) = x + \frac{x^{2}}{2} - \frac{2x}{y} + y + k 
+  \] 
+\end{solution}
+
+\begin{example}
+  Να εξετάσετε αν η παράσταση $ (3x^{2}+3y-1)dx + (z^{2}+3x)dy + (2yz+1)dz $ είναι 
+  τέλειο διαφορικό και αν ναι, να υπολογίσετε τη συνάρτηση δυναμικού.
+\end{example}
+\begin{solution}
+  Ελέγχουμε με το κριτήριο:
+  \[
+    \pdv{P}{y} = 3 = \pdv{Q}{x} \quad \text{και} \quad \pdv{Q}{z} = 2z = \pdv{R}{y}
+    \quad \text{και} \quad \pdv{P}{z} = 0 = \pdv{R}{x}
+  \] 
+  Άρα η παράσταση είναι τέλειο διαφορικό. Για να βρούμε τη συνάρτηση δυναμικού, έχουμε
+  \begin{description}
+    \item [A᾽ Τρόπος: (Με Τύπο)]
+      Θα χρησιμοποιήσουμε τον τύπο της παρατήρησης~\ref{olokl} για να υπολογίσουμε 
+      τη συνάρτηση δυναμικού. 
+      \begin{align*}
+        f(x,y,z) &= \int _{x_{0}}^{x} P(t,y,z) \,{dt} + \int _{y_{0}}^{y} Q(x_{0},t,z) 
+        \,{dt} + \int _{z_{0}}^{z} R(x_{0}, y_{0}, t) \,{dt} \\
+                 &= \int _{0}^{x} (3t^{2}+3y-1) \,{dt} + \int _{0}^{y} (z^{2}+3\cdot 0) 
+                 \,{dt} + \int _{0}^{z} (2\cdot 0\cdot t + 1) \,{dt} \\ 
+                 &= \int _{0}^{x} (3t^{2}+3y-1) \,{dt} + \int _{0}^{y} z^{2} \,{dt} + 
+                 \int _{0}^{z} 1 \,{dt} \\
+                 &= \left[t^{3}+3yt-t\right]_{0}^{x} + \left[z^{2}t\right]_{0}^{y} + 
+                 \bigl[t\bigr]_{0}^{z} \\
+                 &= x^{3}+3xy-x + z^{2}y+z
+      \end{align*}
+    \item [B᾽ Τρόπος: (Με Ολοκλήρωση)] Αφού η παράσταση είναι τέλειο διαφορικό,  
+      υπάρχει συνάρτηση, $ f(x,y,z) $ τέτοια ώστε: 
+      \begin{align}
+        \pdv{f}{x} &= 3x^{2}+3y-1 \label{fx11} \\
+        \pdv{f}{y} &= z^{2}+3x \label{fy11} \\
+        \pdv{f}{z} &= 2yz+1 \label{fz11}
+      \end{align} 
+      Ολοκληρώνουμε μερικώς την~\eqref{fx11} και έχουμε
+      \begin{equation*}
+        f(x,y,z) = \int (3x^{2}+3y-1) \,{dx} = x^{3} + 3xy -x + c(y,z) 
+      \end{equation*} 
+      Άρα 
+      \begin{equation}
+        f(x,y,z) =  x^{3} + 3xy -x + c(y,z) \label{fxyz}
+      \end{equation}
+      Στη συνέχεια παραγωγίζουμε μερικώς ως προς $y$ και ως προς $z$  
+      τη συνάρτηση $f(x,y,z)$ που μόλις βρήκαμε και έχουμε:
+      \begin{align}
+        \pdv{f}{y} &= 3x + \pdv{c}{y} \label{cy} \\
+        \pdv{f}{z} &= \pdv{c}{z} \label{cz}
+      \end{align}
+      Στη συνέχεια εξισώνοντας την~\eqref{cy} με την~\eqref{fy11} προκύπτει 
+      \begin{equation}
+        \pdv{c}{y} = z^{2} \label{last1}
+      \end{equation}
+      και εξισώνοντας την~\eqref{cz} με την~\eqref{fz11} προκύπτει
+      \begin{equation}
+        \pdv{c}{z} = 2yz+1 \label{last2}
+      \end{equation}
+      Από τις σχέσεις~\eqref{last1} και~\eqref{last2} μπορούμε να βρούμε τη συνάρτηση 
+      $ c(y,z) $ ακολουθώντας τη διαδικασία του προηγούμενου παραδείγματος, αφού 
+      ουσιαστικά έχουμε τις μερικές παραγώγους της συνάρτησης και ζητάμε 
+      να βρούμε την ίδια τη συνάρτηση. Οπότε ολοκληρώνουμε μερικώς ως προς 
+      $y$ την~\eqref{last1} και έχουμε
+      \begin{equation}
+        c(y,z) = \int z^{2} \,{dy} = z^{2}y + k(z) \label{kz} 
+      \end{equation} 
+      Στη συνέχεια παραγωγίζουμε ως προς $z$ τη συνάρτηση $ c(y,z) $ που μόλις βρήκαμε 
+      και έχουμε
+      \begin{equation}
+        \pdv{c}{z} = 2yz + k'(z) \label{kz1}
+      \end{equation} 
+      Έπειτα εξισώνουμε τις σχέσεις~\eqref{last2} και~\eqref{kz1} και προκύπτει 
+      \[
+        k'(z) = 1 \Rightarrow k(z) = z + c_{1} \label{finally}
+      \] 
+      Οπότε με αντικατάσταση της~\eqref{finally} στην~\eqref{kz} βρίσκουμε 
+      \begin{equation}
+        c(y,z) = z^{2}y+z + c_{1} \label{cyz}
+      \end{equation}
+      Τέλος με αντικατάσταση της~\eqref{cyz} στη συνάρτηση $ f(x,y,z) $ από τη 
+      σχέση~\eqref{fxyz} βρίσκουμε
+      \[
+        f(x,y,z) = x^{3}+3xy-x+z^{2}y+z+ c_{1} 
+      \] 
+  \end{description}
+\end{solution}
+
+

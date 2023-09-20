@@ -1,0 +1,252 @@
+\documentclass[a4paper,table]{report}
+
+\input{preamble.tex}
+\input{definitions.tex}
+\input{tikz.tex}
+\input{myboxes.tex}
+
+\usepackage[cmtip,all]{xy}
+\usepackage{silence}
+\WarningsOff[catoptions]
+\usepackage{extarrows}
+
+\geometry{left=9mm,right=9mm,top=30.00mm,bottom=34.00mm,footskip=24.16mm,headsep=24.16mm}
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+
+\begin{document}
+
+
+
+\chapter{Διαφορισιμότητα}
+
+\section{Ορισμός}
+\begin{dfn}
+\item {}
+  Μια συνάρτηση $ f(x,y) $ λέγεται \textcolor{Col1}{διαφορίσιμη} στο σημείο 
+  $ P_{0}(x_{0}, y_{0}) $ αν ισχύει η παρακάτω \textbf{συνθήκη διαφορισιμότητας}: 
+  \[
+    \eval{\Delta f(x,y)}_{P_{0}} \!\!= f(x,y)-f(x_{0}, y_{0}) 
+    \xlongequal[k=\underbrace{y- y_{0}}_{\Delta y=dy}]{h=\overbrace{x-
+    x_{0}}^{\Delta x=dx}}  f(x_{0}+h, y_{0}+k)-f(x_{0}, y_{0}) =
+    \!\!\! \underbrace{\eval{\pdv{f}{x}} _{P_{0}}\!\!\!\cdot h + 
+    \eval{\pdv{f}{y} }_{P_{0}}\!\!\!\cdot k}_
+    {\minibox[c]{$\eval{df(x,y)}_{P_{0}}$ \\ Πρωτεύον
+    μέρος: \\ Γραμμικό ως προς $h,k$}} + \!\!\!\!  
+    \underbrace{\varepsilon _{1}(h,k)h+ 
+    \varepsilon _{2}(h,k)k}_{\minibox[c]{$G(h,k)$ : (πολύ μικρό) 
+  \\ Δευτερεύον μέρος: \\ Μη γραμμικό ως προς $h,k$}}                 
+\]
+\end{dfn}
+
+\begin{rem}
+\item {}
+  Η συνάρτηση $ G(h,k) = \eval{\Delta f(x,y)}_{P_{0}} - \eval{df(x,y)}_{P_{0}} $
+\end{rem}
+
+\begin{dfn}[Επαναδιατύπωση]
+\item {}
+  Μια συνάρτηση $ f(x,y) $ είναι \textcolor{Col1}{διαφορίσιμη} σε ένα σημείο 
+  $ P_{0}(x_{0}, y_{0}) $ αν και μόνον αν
+  \begin{enumerate}[i)]
+    \item Υπάρχουν οι μερικές παράγωγοι $ \eval{\pdv{f}{x}}_{P_{0}},
+      \eval{\pdv{f}{y}}_{P_{0}} $
+    \item $ \lim\limits_{\substack{h\to 0 \\k \to 0}} \varepsilon _{1}(h,k) = 
+      0 \quad \text{και} \quad \lim\limits_{\substack{h\to 0 \\k \to 0}} 
+      \varepsilon _{2}(h,k)=0 \overset{\text{ή}}{\Leftrightarrow} 
+      \lim\limits_{\substack{h\to 0 \\k \to 0}} 
+      \frac{G(h,k)}{\sqrt{h^{2}+k^{2}}} = 0 $.
+  \end{enumerate}
+\end{dfn}
+
+\begin{prop}
+  Κάθε διαφορίσιμη συνάρτηση είναι και συνεχής.
+\end{prop}
+
+\begin{rem}
+\item {}
+  \begin{enumerate}[i)]
+    \item Το αντίστροφο της παραπάνω πρότασης δεν ισχύει.
+    \item Το αντιθετοαντίστροφο της πρότασης μας λέει, ότι αν μια συνάρτηση, 
+      δεν είναι συνεχής, τότε δεν είναι διαφορίσιμη.
+  \end{enumerate}
+\end{rem}
+
+\begin{thm}
+\item {}
+  Μια συνάρτηση $ f(x,y) $ είναι διαφορίσιμη στο $ P_{0}(x_{0}, y_{0}) $ 
+  αν υπάρχουν οι μερικές παράγωγοι και είναι συνεχείς στο $ P_{0} $.
+\end{thm}
+
+\begin{example}
+  Να εξεταστεί ως προς τη διαφορισιμότητα στο σημείο $(0,0)$ 
+  η συνάρτηση 
+  \[ 
+    f(x,y) = 
+    \begin{cases} 
+      \frac{xy}{x^{2}+y^{2}}, &(x,y) \neq (0,0) \\ 0, & (x,y) = (0,0) 
+    \end{cases} 
+  \]
+\end{example}
+\begin{solution}
+\item {}
+  Εξετάζουμε τη συνέχεια της συνάρτησης στο $ (0,0) $. Έχουμε
+  \[ \lim\limits_{\substack{x\to 0 \\y \to 0}} f(x,y) =
+    \lim\limits_{\substack{x\to 0 \\y \to 0}} \frac{xy}{x^{2}+y^{2}} =
+    \lim_{r \to 0} \frac{r^{2} \cos{\theta} \sin{\theta}}{r^{2}} =
+  \cos{\theta} \sin{\theta} \] άρα δεν υπάρχει το όριο, γιατί εξαρτάται από το 
+  $\theta$, επομένως η συνάρτηση δεν είναι συνεχής, άρα ούτε κ παραγωγίσιμη στο 
+  $ (0,0) $.
+\end{solution}
+
+\begin{example}
+\item Να εξεταστεί ως προς τη διαφορισιμότητα στο σημείο $(0,0)$ 
+  η συνάρτηση 
+  \[
+    f(x,y) = 
+    \begin{cases} 
+      x \frac{x^{2}-y^{2}}{x^{2}+y^{2}}, &(x,y) \neq (0,0) \\ 0, & (x,y) = (0,0)  
+    \end{cases} 
+  \] 
+\end{example}
+\begin{solution}
+  \begin{description}
+    \item [Α΄ Τρόπος: (Με το θεώρημα)]
+    \item {}
+      Εξετάζουμε την ύπαρξη των μερικών παραγώγων της $f$ στο $ (0,0) $.
+      \begin{myitemize}
+        \item Αν $ (x,y) \neq (0,0) $ έχουμε:
+          \[
+            f_{x} = \left(x \frac{x^{2}-y^{2}}{x^{2}+y^{2}}\right)_
+            {x} = \cdots = \frac{x^{4}+4x^{2}y^{2}-y^{4}}{(x^{2}+
+            y^{2})^{2}} \quad \text{και} \quad f_{y} = 
+            \left(x\frac{x^{2}-y^{2}}{x^{2}+y^{2}}\right)_{y} = 
+            \cdots = - \frac{4x^{3}y}{(x^{2}+y^{2})^{2}} 
+          \] 
+
+        \item Αν $ (x,y) = (0,0) $ έχουμε:
+          \begin{align*}
+            f_{x}(0,0) = \lim_{x \to 0} \frac{f(x,0)-f(0,0)}{x-0} = 
+            \lim_{x \to 0} = \lim_{x \to 0} \frac{x}{x} = 1
+            \quad \text{και} \quad
+            f_{y}(0,0) = \lim_{y \to 0} \frac{f(0,y)-f(0,0)}{y-0} = 
+            \lim_{y \to 0} 0 = 0
+          \end{align*} 
+          Επομένως υπάρχουν οι μερικές παράγωγοι της $f$ στο $ (0,0) $
+          και έχουμε:
+          \[
+            f_{x}(x,y) = 
+            \begin{cases}
+              \frac{x^{4}+4x^{2}y^{2}-y^{4}}{(x^{2}+y^{2})^{2}}, 
+                                    & (x,y) \neq (0,0) \\ 1, & (x,y) = (0,0) 
+            \end{cases} \quad \text{και} \quad
+            f_{y}(x,y) = \begin{cases} - 
+              \frac{4x^{3}y}{(x^{2}+y^{2})^{2}}, &(x,y)
+            \neq (0,0) \\ 0, & (x,y) = (0,0) \end{cases} 
+          \]
+      \end{myitemize}
+      Εξετάζουμε ως προς τη συνέχεια τις μερικές παραγώγους.
+      \begin{myitemize}
+        \item Για την $ f_{x} $
+          \begin{align*}
+            L_{1} = \lim_{x \to 0} 
+            \left(\lim_{y \to 0}
+              \frac{x^{4}+4x^{2}y^{2}-y^{4}}{(x^{2}+y^{2})^{2}}
+            \right) = 
+            \lim_{x \to 0} 1 = 1
+            \intertext{και}
+            L_{2}= \lim_{y \to 0} \left(\lim_{x \to 0}
+            \frac{x^{4}+4x^{2}y^{2}-y^{4}}{(x^{2}+y^{2})^{2}}\right) = 
+            \lim_{y \to 0} (-1) = -1
+          \end{align*}
+        \item Για την $ f_{y} $
+          \begin{align*}
+            \lim\limits_{\substack{x\to 0 \\y \to 0}} -
+            \frac{4x^{3}y}{(x^{2}+y^{2})^{2}} = \lim_{r \to 0} -
+            \frac{4r^{4} \cos^{3}{\theta} \sin{\theta}}{(r^{2})^{2}} = 
+            \lim_{r \to 0} (-4 \cos^{3}{\theta} \sin{\theta}) = 
+            -4 \cos^{3}{\theta} \sin{\theta} \quad \text{(δεν υπάρχει)}
+          \end{align*}
+      \end{myitemize}
+
+      Επομένως καμία από τις μερικές παραγώγους της $f$ δεν είναι συνεχής στο
+      $(0,0)$, άρα η $f$ δεν είναι διαφορίσιμη σύμφωνα με το θεώρημα.
+    \item [Β᾽ Τρόπος: (Με ορισμό)]
+    \item {}
+      Εξετάζουμε με τον ορισμός την ύπαρξη των μερικών παραγώγων της $f$
+      και αν η $ G(h,k) $ είναι πολύ μικρή.
+      \begin{enumerate}[i)]
+        \item Υπάρχουν οι μερικές παράγωγοι της $f$ στο $ (0,0) $.
+        \item Εύρεση της $ G(h,k) $.
+          \[
+            G(h,k) = \Delta f(0,0) - df(0,0) 
+          \] 
+      \end{enumerate}
+      \begin{myitemize}
+        \item $ \Delta f(0,0) = f(0+h,0+k) - f(0,0) = 
+          h \frac{h^{2}-k^{2}}{h^{2}+k^{2}} - 0 = h
+          \frac{h^{2}-k^{2}}{h^{2}+k^{2}} $
+        \item $ df(0,0) = f_{x}(0,0)h+f_{y}(0,0)k = 1h+0k= h $
+      \end{myitemize}
+      Επομένως $ G(h,k) = h \frac{h^{2}-k^{2}}{h^{2}+k^{2}} - h =
+      - \frac{2hk^{2}}{h^{2}+k^{2}}$
+      \[
+        \lim\limits_{\substack{h\to 0 \\k \to 0}} 
+        \frac{G(h,k)}{\sqrt{h^{2}+k^{2}}} =
+        \lim\limits_{\substack{h\to 0 \\k \to 0}} 
+        \frac{-\frac{2hk^{2}}{h^{2}+k^{2}}}{\sqrt{h^{2}+k^{2}}}
+        = \lim\limits_{\substack{h\to 0 \\k \to 0}}-
+        \frac{2hk^{2}}{(h^{2}+k^{2})^{\frac{3}{2}}} =
+        -2 \lim_{r \to 0} \frac{4r^{3} \cos{\theta}
+        \sin^{2}{\theta}}{(r^{2})^{\frac{3}{2}}} =
+        -2 \cos{\theta} \sin^{2}{\theta}  
+      \]
+      Επομένως η $f$ δεν είναι διαφορίσιμη στο $ (0,0) $.  
+  \end{description}
+\end{solution}
+
+\begin{example}
+  Να εξετάσετε ως προς τη διαφορισιμότητα τη συνάρτηση:
+  \[
+    f(x,y) = 
+    \begin{cases}
+      y^{2} \sin{\frac{x}{y}}, &y \neq 0 \\0, &y=0 
+    \end{cases}
+  \]
+\end{example}
+\begin{solution}
+  Ελέγχουμε την ύπαρξη των μερικών παραγώγων της $f$.
+  \begin{myitemize}
+    \item Για $ y \neq 0 $ η $f$ είναι διαφορίσιμη ως σύνθεση διαφορίσιμων
+      συναρτήσεων και έχουμε: 
+      \[
+        f_{x} = y \cos{\frac{x}{y}}  \quad \text{και} \quad  f_{y} = 2y
+        \sin{\frac{x}{y}} - x \cos{\frac{x}{y}} 
+      \]
+    \item Για $ y = 0 $, έχουμε
+      \begin{align*}
+        f_{x}(x,0) = \lim_{h \to 0} \frac{f(x+h,0)-f(x,0)}{h} = 
+        \lim_{h \to 0} \frac{0 - 0}{h} = \lim_{h \to 0} 0 = 0
+        \intertext{και}
+        f_{y}(x,0) = \lim_{k \to 0} \frac{f(x,0+k)-f(x,0)}{k} = \lim_{k \to
+        0} \frac{k^{2} \sin{\frac{x}{k}} - 0}{k} = \lim_{k \to 0}
+        k \sin{\frac{x}{k}} = 0
+      \end{align*}
+  \end{myitemize}
+  Επομένως υπάρχουν οι μερικές παράγωγοι της $ f $.  
+
+  Ελέγχουμε τη συνέχεια της $ f_{x} $ στο $ y=0 $. Παρατηρούμε:
+  \[
+    f_{x}(x,y) = 
+    \begin{cases}
+      y \cos{\frac{x}{y}}, & y \neq 0 \\ 0, & y=0 
+    \end{cases}
+  \] 
+  είναι συνεχής στο $ y=0 $, γιατί 
+  $ \lim_{y \to 0} y \cos{\frac{x}{y}} = 0 = f_{x}(0,0) $. 
+  Άρα η $f$ είναι διαφορίσιμη.
+\end{solution}
+
+
+
+\end{document}

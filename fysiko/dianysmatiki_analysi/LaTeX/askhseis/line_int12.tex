@@ -1,5 +1,6 @@
 \input{preamble_ask.tex}
 \input{definitions_ask.tex}
+\input{tikz.tex}
 
 
 \pagestyle{askhseis}
@@ -18,11 +19,13 @@
   \item Να υπολογιστούν τα παρακάτω επικαμπύλια ολοκληρώματα κατά μήκος των 
     δοσμένων καμπυλών:
     \begin{enumerate}[i)]
-      %thomas ex.11 p. 906
-      \item $ \int _{c} (xy+y+z) \,{ds} $, όπου $ c \colon $ καμπύλη 
-        $ \mathbf{r}(t)=2t\, \mathbf{i} + t\, \mathbf{j} + (2-2t) \, \mathbf{k} $, 
-        με $ 0 \leq t \leq 1 $.  
-        \hfill Απ: $13/2$ 
+
+      %%thomas ex.11 p. 906
+      %\item $ \int _{c} (xy+y+z) \,{ds} $, όπου $ c \colon $ καμπύλη 
+      %  $ \mathbf{r}(t)=2t\, \mathbf{i} + t\, \mathbf{j} + (2-2t) \, \mathbf{k} $, 
+      %  με $ 0 \leq t \leq 1 $.  
+      %  \hfill Απ: $13/2$ 
+
       %thomas ex.12 p. 906
       \item $ \int _{c} \sqrt{x^{2}+y^{2}} \,{ds} $, όπου $ c \colon $ έλικα με 
         $ \mathbf{r}(t)=(4 \cos{t} )\, \mathbf{i} + (4 \sin{t})\, \mathbf{j} + 3t \, 
@@ -32,19 +35,21 @@
       \item $ \int _{c} (x-y+z-2) \,{ds} $, όπου $ c \colon $ το ευθύγραμμο τμήμα 
         από το σημείο $ A(0,1,1) $ έως $ B(1,0,1) $.
         \hfill Απ: $ -\sqrt{2} $ 
-      %thomas ex.14 p. 906
-      \item $ \int _{c} \frac{\sqrt{3}}{x^{2}+y^{2}+z^{2}}\,{ds} $, όπου $ c \colon $ 
-        $ \mathbf{r}(t)= t\, \mathbf{i} + t\, \mathbf{j} + t\, 
-        \mathbf{k} $, με $1 \leq t \leq \infty$.  
-        \hfill Απ: $1$ 
-      %thomas ex.27 p. 906
-      \item $ \int _{c} x^{3}/y \,{ds} $, όπου $ c \colon y=x^{2}/2 $ με 
-        $0 \leq x \leq 2$.  
-        \hfill Απ: $ \frac{10 \sqrt{5} -2}{3} $ 
+
+      %%thomas ex.14 p. 906
+      %\item $ \int _{c} \frac{\sqrt{3}}{x^{2}+y^{2}+z^{2}}\,{ds} $, όπου $ c \colon $ 
+      %  $ \mathbf{r}(t)= t\, \mathbf{i} + t\, \mathbf{j} + t\, 
+      %  \mathbf{k} $, με $1 \leq t \leq \infty$.  
+      %  \hfill Απ: $1$ 
+
       %thomas ex.29 p. 906
       \item $ \int _{c} (x+y) \,{ds} $, όπου $ c \colon x^{2}+y^{2}=4 $ στο 1ο
         τεταρτημόριο.  \hfill Απ: $8$ 
         %spand
+      %thomas ex.27 p. 906
+      \item $ \int _{c} x^{3}/y \,{ds} $, όπου $ c \colon y=x^{2}/2 $ με 
+        $0 \leq x \leq 2$.  
+        \hfill Απ: $ \frac{10 \sqrt{5} -2}{3} $ 
       \item $ \int _{c} (x+y) \,{ds} $, όπου $ c \colon $ η περίμετρος τριγώνου 
         με κορυφές $ A(1,0) $, $ B(0,1) $, $ O(0,0) $.
         \hfill Απ: $ \sqrt{2} +1 $ 
@@ -55,7 +60,21 @@
     όπου $ c $ η καμπύλη του σχήματος.
         \hfill Απ: $ \frac{5}{6} \sqrt{5} + \frac{3}{2} $ 
 
-        \includegraphics[scale=0.5]{int2.png}
+\begin{tikzpicture}[scale=0.8]
+  \node (0) at (0, 0) {};
+  \node (1) at (3, 0) {};
+  \node (2) at (0, 3) {};
+  \coordinate [point,Col2] (3) at (45:3) ;
+  \node[right] at (3) {$(1,1)$} ;
+  \draw[-latex] (0.center) to (1.center) node[below]{$x$};
+  \draw[-latex] (0.center) to (2.center) node[left]{$y$};
+  \draw [graph] (3.center) to node[pos=0.3,left,graph label] {\small$y=x$} 
+    pic[pos=0.5,rotate=225]{arrow} (0.center);
+  \draw [graph,bend right] (0.center) to node[right,graph label] {\small$y=x^{2}$} 
+    pic[pos=0.5,rotate=45]{arrow} (3.center);
+\end{tikzpicture}
+
+
 \end{enumerate}
 
 \begin{center}
@@ -74,7 +93,7 @@
       \item $ c_{3} \colon $ η ένωση των ευθυγράμμων τμημάτων από 
         $ A(0,0,0) $ έως $ B(1,1,0) $ και από $ B(1,1,0) $ έως $ C(1,1,1) $.
     \end{enumerate}
-    \begin{enumerate}[a)]
+    \begin{myitemize}
       \item $ \mathbf{F}(x,y,z) = 3y \mathbf{i} + x \mathbf{j} + 4z \mathbf{k}
         $ \hfill Απ: 
         \begin{enumerate*}[i),itemjoin=\hspace{5pt}] 
@@ -89,7 +108,7 @@
           \item 3
           \item 3
         \end{enumerate*}
-    \end{enumerate}
+    \end{myitemize}
 
 \end{enumerate}
 
@@ -126,9 +145,10 @@
 \section*{Ροή κατά μήκος, Κυκλοφορία, Ροή δια μέσου}
 
 \begin{enumerate}
-  \item Να βρείτε την \textbf{κυκλοφορία} και τη \textbf{ροή} των πεδίων 
+  \item Για τα διανυσματικά πεδία, 
     $ \mathbf{F_{1}}(x,y) = x \mathbf{i} + y \mathbf{j} $ και $ \mathbf{F_{2}}(x,y) = 
-    -y\mathbf{i} + x \mathbf{j} $, κατά μήκος και δια μέσου των παρακάτω καμπυλών:
+    -y\mathbf{i} + x \mathbf{j} $, να βρείτε την \textbf{κυκλοφορία} και τη
+    \textbf{ροή} δια μέσου των παρακάτω καμπυλών: 
     \begin{enumerate}[i)]
       \item κύκλος $ \mathbf{r}(t)= \cos{t}\, \mathbf{i} + \sin{t}\, \mathbf{j}$, με 
         $ 0 \leq t \leq 2 \pi $ 
@@ -155,7 +175,7 @@
 
   \item Να βρείτε τη \textbf{ροή} του διανυσματικού πεδίου $ \mathbf{F}(x,y) = (x+y) 
     \mathbf{i} - (x^{2}+y^{2}) \mathbf{j} $ από το σημείο $ (1,0) $ προς το $ (-1,0) $ 
-    κάτα μήκος των παρακάτω καμπυλών:
+    κατά μήκος των παρακάτω καμπυλών:
     \begin{enumerate}[i)]
       \item το πάνω ημικύκλιο του κύκλου $ x^{2}+y^{2}=1 $.
       \item το ευθύγραμμο τμήμα από το $ (1,0) $ έως το $ (-1,0) $.

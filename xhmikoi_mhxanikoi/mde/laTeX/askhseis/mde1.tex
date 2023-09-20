@@ -1,0 +1,82 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\thispagestyle{askhseis}
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col1}{ΜΔΕ 1ης τάξης}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Να λυθούν οι παρακάτω μδε με \textbf{απλές} μεθόδους των σδε.
+    \begin{enumerate}[i)]
+      %shmeiwseis mou
+      \item $u_{x}+y^{2}u=0,\quad u=u(x,y)$ \hfill Απ: $u(x,y)=c(y)e^{-y^{2}x}$
+      \item $su_{t}+u=1,\quad u=u(s,t)$ \hfill Απ: $u(s,t)=s+c(s)e^{-\frac{t}{s}}$
+      \item $u_{xy}-u_{x}=y,\quad u=u(x,y)$ \quad \textcolor{Col1}{\textbf{Υπόδειξη:}} 
+        Θέτουμε $ u_{x}=v $ \hfill Απ: $u(x,y)=F(x)e^{y}-x(y+1)+c(y)$ 
+      % \item $u_{xx}+\omega^{2}u=0,\quad u=u(x,\omega)$ 
+      % \hfill Απ: $u(x,\omega)=c_{1}(\omega)\cos(\omega x)+c_{2}(\omega)\sin(\omega x)$
+    \end{enumerate}
+
+  \item Να βρεθεί η γενική λύση των παρακάτω \textbf{γραμμικών} μδε με τη μέθοδο των
+    χαρακτηριστικών.
+
+    \begin{enumerate}[i)]
+        %shmeiwseis
+      \item $yu_{x}-xu_{y}=0, \quad u=u(x,y)$ \hfill Απ: $u=f(x^{2}+y^{2})$ 
+        %shmeiwseis mou
+      \item $ yu_{x}-xu_{y}-zyu_{z}=0, \quad u=u(x,y,z) $ 
+        \hfill Απ: $ u=f(x^{2}+y^{2}, z\mathrm{e}^{x}) $ 
+        %spand p.33 kai shmeiwseis
+    \end{enumerate}
+
+  %\item Να λυθούν οι παρακάτω ημιγραμμικές μδε, αν $u=u(x,y)$.
+
+  %  \begin{enumerate}[i)]
+  %      %shmeiwseis 
+  %    \item $yu_{x}+u_{y}=2$ \hfill Απ: $F(2x-y^{2},2y-u)=0$
+  %      %spand p.31 kai shmeiwseis
+  %    \item $ x u_{x}-yu_{y}=u $ \hfill Απ: $ F(xy, \frac{x}{z})=0 $
+  %      %spand p.30
+  %    \item $ 2x u_{x}+yu_{y}=u^{2} $ 
+  %      \hfill Απ: $ F(\frac{x}{y^{2}},\mathrm{e}^{\frac{1}{u} u})=0 $ 
+  %      %eukolh
+  %    \item $-xyu_{x}+x^{2}u_{y}=yu$ \hfill Απ: $F(x^{2}+y^{2},xu)=0$
+  %      %shmeiwseis mou
+  %    \item $ yu_{x}-xu_{y}=2xyu $ 
+  %      \hfill Απ: $ F(x^{2}+y^{2}, \frac{\mathrm{e}^{x^{2}}}{z})=0 $  
+  %  \end{enumerate}
+
+  \item Να λυθούν τα παρακάτω προβλήματα \textlatin{\textbf{Cauchy}}, με τη μέθοδο των
+    χαρακτηριστικών,  αν $u=u(x,y)$.
+
+    \begin{enumerate}[i)]
+      %vafeas
+      \item $5u_{x}+2u_{y}=0, \quad u(0,y)=\sin y$ 
+        \hfill Απ: $u(x,y)=\sin(y-\frac{2}{5}x)$
+      \item $5u_{x}+2xu_{y}=0, \quad u(0,y)=\sin y$ 
+        \hfill Απ: $u(x,y)=\sin(y-\frac{1}{5}x^{2})$ 
+      %shmeiwseis
+      \item $uu_{x}+u_{y}=1, \quad u(\frac{y^{2}}{2},y)=0$ 
+        \hfill Απ: $(y-u)^{2}=2x-u^{2}$
+        %shmeiwseis
+      \item $ xu_{x}+yu_{y}=x \mathrm{e}^{-u}, \quad  u(x,x^{2})=0 $
+        \hfill Απ: $ u= \ln{(x+1 - \frac{y}{x})} $ 
+      \item $xu_{x}+yu_{y}=2u,\quad u=1$, για $x^{2}-y^{2}=2$ 
+        \hfill Απ: $x^{2}-y^{2}=2u$
+      \item $ (y-u)u_{x}+(u-x)u_{y}=x-y , \quad  u=0 $ για $ xy=1 $
+        \hfill Απ: $ u= \frac{1-xy}{x+y} $  
+      \item $2xyu_{x}+(y^{2}-x^{2})u_{y}=0, \quad y=0$ για $xu=1$ 
+        \hfill Απ: $ux^{2}+uy^{2}=x$
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
+

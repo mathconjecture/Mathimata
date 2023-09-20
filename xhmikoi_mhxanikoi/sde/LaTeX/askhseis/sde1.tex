@@ -1,3 +1,4 @@
+\documentclass[a4paper,table]{report}
 \input{preamble_ask.tex}
 \input{definitions_ask.tex}
 
@@ -35,7 +36,8 @@ footskip=24.16mm,headsep=24.16mm}
       \item $ y'+y \tan{x} = \frac{1}{\cos{x}} $, \; $ y(\pi) = 1 $
         \hfill Απ: $ y= \sin{x} - \cos{x} $  
       \item $y'=\frac{y}{x}+x\cos x$\hfill Απ: $y=x[c+\sin x]$
-      \item $y'=\frac{1}{x+e^{2y}}$\hfill Απ: $x=ce^y+e^{2y}$
+      \item $y'=\frac{1}{x+e^{2y}}$ \quad\textcolor{Col1}{Υπόδειξη:} Θεωρήστε $x=x(y)$ 
+        \hfill Απ: $x=ce^y+e^{2y}$
     \end{enumerate}
 
   \item {\bfseries Να λυθουν οι παρακατω σδε: (Bernoulli)}
@@ -102,27 +104,26 @@ footskip=24.16mm,headsep=24.16mm}
         \hfill Απ: $ \mu(y)= \sqrt{ y } $, $ 2(e^{x}+x^{2})y^{\frac{3}{2}}=c $ 
     \end{enumerate}
 
-  \item{\bfseries Να δείξετε ότι οι παραστάσεις που δίνονται αποτελούν ολοκληρωτικούς 
-      παράγοντες για τις αντίστοιχες εξισώσεις και στη συνέχεια να βρείτε τη γενική 
-    τους λύση.}
-    \begin{enumerate}[i)]
-      \item $ (2y-6x)dx+\Bigl(3x-4\frac{x^{2}}{y}\Bigr)dy=0 $, \; $ \mu (x,y) = xy^{2} $
-        \hfill Απ: $ x^{2}y^{3}-2x^{3}y^{2}=c $ %Argyriou
-      \item $ y' =- \frac{5xy+4y^{2}+1}{x^{2}+2xy}, \quad \mu(x)=x^{3} $  
-        \hfill Απ: $ x^{5}y+x^{4}y^{2} + \frac{x^{4}}{4} = c $ 
-      \item $ (2xy^{4} \mathrm{e}^{y} + 2xy^{3}+y)dx + (x^{2}y^{4}\mathrm{e}^{y} -
-        x^{2}y^{2}-3x)dy=0, \quad \mu (y) = \frac{1}{y^{4}} $ 
-        \hfill Απ: $ x^{2}e^{y}+ \frac{x^{2}}{y} + \frac{x}{y^{3}} =c $ 
-    \end{enumerate}
+  % \item{\bfseries Να δείξετε ότι οι παραστάσεις που δίνονται αποτελούν ολοκληρωτικούς 
+  %     παράγοντες για τις αντίστοιχες εξισώσεις και στη συνέχεια να βρείτε τη γενική 
+  %   τους λύση.}
+  %   \begin{enumerate}[i)]
+  %     \item $ (2y-6x)dx+\Bigl(3x-4\frac{x^{2}}{y}\Bigr)dy=0 $, \; $ \mu (x,y) = xy^{2} $
+  %       \hfill Απ: $ x^{2}y^{3}-2x^{3}y^{2}=c $ %Argyriou
+  %     \item $ y' =- \frac{5xy+4y^{2}+1}{x^{2}+2xy}, \quad \mu(x)=x^{3} $  
+  %       \hfill Απ: $ x^{5}y+x^{4}y^{2} + \frac{x^{4}}{4} = c $ 
+  %     \item $ (2xy^{4} \mathrm{e}^{y} + 2xy^{3}+y)dx + (x^{2}y^{4}\mathrm{e}^{y} -
+  %       x^{2}y^{2}-3x)dy=0, \quad \mu (y) = \frac{1}{y^{4}} $ 
+  %       \hfill Απ: $ x^{2}e^{y}+ \frac{x^{2}}{y} + \frac{x}{y^{3}} =c $ 
+  %   \end{enumerate}
 
-  \item {\bfseries Αφού βρείτε τρεις ολοκληρωτικούς παράγοντες για την 
-    παρακάτω διαφορική εξίσωση, να τη λύσετε χρησιμοποιώντας έναν από αυτούς.}
-    \[
-      3x^{2}dy+2xydx=0 
-    \] 
-
-    \hfill Απ:  $ \mu (x) = x^{-\frac{4}{3}}, \; \mu (y) = y^{2}, \; \mu (xy) =
-    \frac{1}{(xy)^{4}}, \; y=cx^{-2/3} $
+  % \item {\bfseries Αφού βρείτε τρεις ολοκληρωτικούς παράγοντες για την 
+  %   παρακάτω διαφορική εξίσωση, να τη λύσετε χρησιμοποιώντας έναν από αυτούς.}
+  %   \[
+  %     3x^{2}dy+2xydx=0 
+  %   \] 
+  %   \hfill Απ:  $ \mu (x) = x^{-\frac{4}{3}}, \; \mu (y) = y^{2}, \; \mu (xy) =
+  %   \frac{1}{(xy)^{4}}, \; y=cx^{-2/3} $
 
   \item {\bfseries Να λυθούν οι παρακάτω σδε ειδικής μορφής 
     (που ανάγονται σε χωρ.  μεταβλ.)}

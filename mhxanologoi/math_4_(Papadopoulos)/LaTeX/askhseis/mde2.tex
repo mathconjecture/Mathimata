@@ -1,0 +1,111 @@
+\documentclass[a4paper,11pt]{report}
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+\pagestyle{vangelis}
+\everymath{\displaystyle}
+
+\begin{document}
+
+\begin{center}
+  \textcolor{Col1}{\minibox[c]{\large \textbf{Ασκήσεις ΜΔΕ 2ης τάξης} \\ \textbf{Ομογενή
+  προβλήματα}}}
+\end{center}
+
+
+\section*{Εξίσωση Κύματος}%
+
+\begin{enumerate}
+
+  \item $ u_{tt}=c^{2}u_{xx}, \quad u=u(x,t), $ \quad 
+    \begin{tabular}{c} $ 0<x<L $ \\ $ t>0 $ \end{tabular} 
+    με Σ.Σ.: \begin{tabular}{l} $ u_{x}(0,t)=0 $ \\ $ u_{x}(L,t)=0 $ \end{tabular}, 
+    $ t>0 $  και Α.Σ.: \begin{tabular}{l} $ u(x,0) = \phi(x) $ \\ $ u_{t}(x,0)= \psi(x) $
+    \end{tabular}
+
+  \item $ u_{tt}=c^{2}u_{xx}, \quad u=u(x,t), $ \quad 
+    \begin{tabular}{c} $ 0<x<L $ \\ $ t>0 $ \end{tabular} 
+    με Σ.Σ.: \begin{tabular}{l} $ u_{x}(0,t)=0 $ \\ $ u(L,t)=0 $ \end{tabular}, 
+    $ t>0 $  και Α.Σ.: \begin{tabular}{l} $ u(x,0) = \phi(x) $ \\ $ u_{t}(x,0)= \psi(x) $
+    \end{tabular}
+
+\end{enumerate}
+
+
+\section*{Εξίσωση Διάχυσης}%
+
+\begin{enumerate}
+
+  \item $ u_{t}=au_{xx}, \quad u=u(x,t), $ \quad 
+    \begin{tabular}{c} $ 0<x<L $ \\ $ t>0 $ \end{tabular} 
+    με Σ.Σ.: \begin{tabular}{l} $ u(0,t)=0 $ \\ $ u(L,t)=0 $ \end{tabular}, 
+    $ t>0 $  και Α.Σ.:  $ u(x,0) = \phi(x) $.
+
+  \item $ u_{t}=au_{xx}, \quad u=u(x,t), $ \quad 
+    \begin{tabular}{c} $ 0<x<L $ \\ $ t>0 $ \end{tabular} 
+    με Σ.Σ.: \begin{tabular}{l} $ u(0,t)=0 $ \\ $ u_{x}(L,t)=0 $ \end{tabular}, 
+    $ t>0 $  και Α.Σ.:  $ u(x,0) = \phi(x) $.
+
+\end{enumerate}
+
+
+\section*{Εξίσωση Laplace}%
+
+\begin{enumerate}
+
+  \item $ u_{xx}+u_{yy}=0, \quad u=u(x,y), $ 
+    \begin{tabular}{c} $ 0<x<a $ \\ $ 0<y<b $ \end{tabular} 
+    με Σ.Σ.: 
+    \begin{tikzpicture}[scale=0.8,baseline=0pt]
+      \coordinate (o) at (0,0) node[below left] {$0$} ;
+      \draw[-latex] (-0.5,0) -- (3,0) node[below] {$x$} ;
+      \draw[-latex] (0,-0.5) -- (0,2) node[left] {$y$} ;
+      \draw[Col2,very thick] rectangle (0,0) -- node[midway,below] {$u=0$} (2,0) 
+        node[below,color=black] {$a$} -- (2,1) -- node[midway,above] {$u=0$} (0,1)
+        node[left,color=black] {$b$} -- node[midway,left] {$u=0$} cycle ;
+      \draw[Col1, very thick] (2,0) -- node[midway,right] {$u=f(y)$} (2,1) ; 
+    \end{tikzpicture}
+    \quad\text{ή}\quad
+    \begin{tabular}{l} $ \textcolor{Col2}{u(x,0)=0} $ \\ $ \textcolor{Col2}{u(x,b)=0} $ 
+      \\ $ \textcolor{Col2}{u(0,y)=0} $ \\ 
+    $ \textcolor{Col1}{u(a,y)=f(y)} $ \end{tabular}. 
+
+  \item $ u_{xx}+u_{yy}=0, \quad u=u(x,y), $ 
+    \begin{tabular}{c} $ 0<x<a $ \\ $ 0<y<b $ \end{tabular} 
+    με Σ.Σ.: 
+    \begin{tikzpicture}[scale=0.8,baseline=0pt]
+      \coordinate (o) at (0,0) node[below left] {$0$} ;
+      \draw[-latex] (-0.5,0) -- (3,0) node[below] {$x$} ;
+      \draw[-latex] (0,-0.5) -- (0,2) node[left] {$y$} ;
+      \draw[Col2,very thick] rectangle (0,0) -- node[midway,below] {$u=0$} (2,0) 
+        node[below,color=black] {$a$} -- node[midway,right] {$u=0$} (2,1) -- node[above]
+        {$u=0$} (0,1) node[left,color=black] {$b$} --  cycle ;
+      \draw[Col1, very thick] (0,1) -- node[midway,left] {$u=g(y)$} (0,0) ; 
+    \end{tikzpicture}
+    \quad\text{ή}\quad
+    \begin{tabular}{l} $ \textcolor{Col2}{u(x,0)=0} $ \\ $ \textcolor{Col2}{u(x,b)=0} $ 
+      \\ $ \textcolor{Col2}{u(a,y)=0} $ \\ 
+    $ \textcolor{Col1}{u(0,y)=g(y)} $ \end{tabular}. 
+
+  \item $ u_{xx}+u_{yy}=0, \quad u=u(x,y), $ 
+    \begin{tabular}{c} $ 0<x<1 $ \\ $ 0<y<1 $ \end{tabular} 
+    με Σ.Σ.: 
+    \begin{tikzpicture}[scale=0.8,baseline=0pt]
+      \coordinate (o) at (0,0) node[below left] {$0$} ;
+      \draw[-latex] (-0.5,0) -- (3,0) node[below] {$x$} ;
+      \draw[-latex] (0,-0.5) -- (0,2) node[left] {$y$} ;
+      \draw[Col2,very thick] rectangle (0,0) -- node[midway,below] {$u=0$} (2,0) 
+        node[below,color=black] {$a$} -- node[midway,right] {$u=0$} (2,1) -- (0,1) 
+        node[left,color=black] {$b$} --  cycle ;
+      \draw[Col2, very thick] (0,1) -- node[midway,left] {$u=0$} (0,0) ; 
+    \end{tikzpicture}
+    \quad\text{ή}\quad
+    \begin{tabular}{l} $ \textcolor{Col2}{u_{y}(x,0)=f(x)} $ \\ $ 
+      \textcolor{Col2}{u_{y}(x,1)=0} $ \\ $ \textcolor{Col2}{u_{x}(0,y)=0} $ \\ 
+    $ \textcolor{Col1}{u_{x}(1,y)=0} $ \end{tabular}. 
+
+\end{enumerate}
+
+
+\end{document}
+

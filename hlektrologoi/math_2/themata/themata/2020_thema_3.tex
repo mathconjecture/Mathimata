@@ -1,0 +1,98 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_themata}
+\input{definitions.tex}
+\input{myboxes}
+
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+
+
+\begin{document}
+
+\begin{mybox3}
+  \begin{thema}
+    Δίνεται η ακόλουθη συνάρτηση: 
+    \[
+      f(x,y) = Ax^{2}+2Bxy+Cy^2+2Dx+2Ey+F 
+    \] 
+    όπου $ A>0 $ και $ B^{2}-AC <0 $. Να βρεθούν ακρότατα.
+  \end{thema}
+\end{mybox3}
+\begin{solution}
+  \item {}
+  \begin{enumerate}
+    \item Βρίσκουμε τις μερικές παραγώγους 1ης και 2ης τάξης, της συνάρτησης.
+
+      \vspace{0.5\baselineskip}
+      \twocolumnsidesl{
+        \begin{myitemize}
+          \item $ f_{x} = 2Ax+2By+2D $
+          \item $ f_{y} = 2Bx+2Cy+2E $
+        \end{myitemize}
+      }{
+        \begin{myitemize}
+          \item $ f_{xx} = 2A $
+          \item $ f_{yy} = 2C $
+          \item $ f_{xy} = f_{yx} = 2B $
+        \end{myitemize}
+      }
+    \item Βρίσκουμε τα κρίσιμα σημεία της συνάρτησης.
+
+      Επειδή η συνάρτηση $ f(x,y) $ είναι συνεχής και διαφορίσιμη σε κάθε σημείο 
+      του $ \mathbb{R}^{2} $, αναζητούμε τα κρίσιμα σημεία της στις λύσεις του
+      συστήματος:
+      \[
+        \left.
+          \begin{matrix}
+            f_{x}=0 \\
+            f_{y}=0
+          \end{matrix} 
+        \right\} \Leftrightarrow 
+        \left.
+          \begin{matrix}
+            Ax+By=-D \\
+            Bx+Cy=-E
+          \end{matrix} 
+        \right\} \Leftrightarrow 
+        \begin{pmatrix*}[r] A & B \\ B & C \end{pmatrix*} \cdot 
+        \begin{pmatrix*}[r] x \\ y \end{pmatrix*} = 
+        \begin{pmatrix*}[r] -D \\ -E \end{pmatrix*}
+      \] 
+      με ορίζουσα 
+      \[
+        \begin{vmatrix*}[r]
+          A & B \\
+          B & C
+        \end{vmatrix*} = AC-B^{2}>0
+      \] 
+      Άρα το σύστημα έχει μοναδική λύση. Δηλαδή η συνάρτηση $ f(x,y) $ έχει μοναδικό 
+      κρίσιμο σημείο, έστω $ (x_{0}, y_{0}) $.
+
+    \item Υπολογίζουμε τις Εσσιανές ορίζουσες στο σημείο $ (x_{0}, y_{0}) $ και έχουμε:
+      \[
+        \abs{H_{2}} = 
+        \begin{vmatrix*}[r]
+          f_{xx} & f_{xy} \\
+          f_{yx} & f_{yy}
+        \end{vmatrix*}_{(x_{0}, y_{0})} = 
+        \begin{vmatrix*}[r]
+          2A & 2B \\
+          2B & 2C 
+        \end{vmatrix*} = 
+        4AC-4B^{2} = 4(AC-B^{2}) > 0
+      \]
+      \[
+        \abs{H_{1}} = f_{xx}(x_{0}, y_{0}) = 2A >0
+      \] 
+      Άρα στο σημείο $ (x_{0}, y_{0}) $ η συνάρτηση $ f $ παρουσιάζει τοπικό
+      \textbf{ελάχιστο}.
+
+
+
+  \end{enumerate}
+\end{solution}
+
+
+
+
+\end{document}

@@ -1,0 +1,73 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_themata}
+\input{definitions.tex}
+\input{myboxes}
+
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+
+
+\begin{document}
+
+\begin{mybox3}
+  \begin{thema}
+    Δίνεται η καμπύλη $ c: \mathbf{r}(t)= \cos{t}\, \mathbf{i} + \sin{t}\, \mathbf{j} + t
+    \, \mathbf{k}$. Να βρεθεί η εξίσωση του \textbf{κάθετου} επιπέδου (ορίζεται από τα 
+    διανύσματα $ \mathbf{N} $ και $ \mathbf{B} $) στο σημείο της $ P_{0} $ που 
+    αντιστοιχεί στην τιμή της παραμέτρου $ t= {\pi}/{2} $.
+  \end{thema}
+\end{mybox3}
+\begin{solution}
+  \item {}
+    \begin{mybox1}
+    \item {}
+      \textcolor{Col1}{Θυμάμαι:} Η εξίσωση του επιπέδου $ \Pi $, που διέρχεται από ένα 
+      σημείο $ P_{0}(x_{0}, y_{0}, z_{0}) $ και είναι κάθετο στο διάνυσμα 
+      $ \mathbf{n} = (a,b,c) $ είναι:
+      \[
+        \Pi: a(x- x_{0}) + b(y- y_{0}) + c(z- z_{0}) = 0. 
+      \] 
+    \end{mybox1}
+    Τα διανύσματα $ \mathbf{T}, \mathbf{N} $ και $ \mathbf{B} $ που σχηματίζουν το τρίεδρο
+    Frenet είναι ανά δύο κάθετα. Επομένως ένα διάνυσμα κάθετο στο ζητούμενο επίπεδο που 
+    ορίζουν τα διανύσματα $ \mathbf{N} $ και $ \mathbf{B} $ είναι το $ \mathbf{T} $. Άρα 
+    υπολογίζουμε το διάνυσμα $ \mathbf{T} $ 
+    \begin{myitemize}
+      \item $ \mathbf{r'}(t)=- \sin{t}\, \mathbf{i} + \cos{t}\, \mathbf{j} + 1 \, \mathbf{k} $
+      \item $ \norm{\mathbf{r'}(t)} = \sqrt{(- \sin{t} )^{2} + (\cos{t} )^{2} + 1^{2}} =
+        \sqrt{\sin^{2}{t} + \cos^{2}{t} + 1} = \sqrt{2} $ 
+      \item $ \mathbf{T}= \frac{\mathbf{r'}(t)}{\norm{\mathbf{r'}(t)}} =
+        \frac{- \sin{t}}{\sqrt{2}}\,\mathbf{i}
+        + \frac{\cos{t}}{\sqrt{2}}\,\mathbf{j} + \frac{1}{\sqrt{2}}\,\mathbf{k} $
+    \end{myitemize}
+    Υπολογίζουμε το διάνυσμα $ \mathbf{T} $ στο σημείο $ t = \pi /2 $ και έχουμε:
+    \[
+      \mathbf{T}\Bigl(\frac{\pi}{2}\Bigr) =  \frac{- \sin{\frac{\pi}{2}
+      }}{\sqrt{2}}\,\mathbf{i} +
+      \frac{\cos{\frac{\pi}{2}}}{\sqrt{2}}\,\mathbf{j} + \frac{1}{\sqrt{2}}\,\mathbf{k} = 
+      - \frac{1}{\sqrt{2}}\,\mathbf{i} + 0\,\mathbf{j} + \frac{1}{\sqrt{2}}\,\mathbf{k}
+    \]
+    Για να βρούμε τις συντεταγμένες του σημείου $ P_{0} $ της καμπύλης, βρίσκουμε το 
+    διάνυσμα θέσης στο σημείο $ t = \pi /2 $
+    \[
+      \mathbf{r}\Bigl(\frac{\pi}{2}\Bigr)= \cos{\frac{\pi}{2}}\, \mathbf{i} +
+      \sin{\frac{\pi}{2}} \,
+      \mathbf{j} + \frac{\pi}{2}\, \mathbf{k} =  0\,\mathbf{i} + 1\,\mathbf{j} +
+      \pi /2\,\mathbf{k} = \Bigl(0,1, \frac{\pi}{2}\Bigr)
+    \] 
+    Άρα η εξίσωση του κάθετου επιπέδου, θα είναι:
+    \begin{gather*}
+      \Pi: - \frac{1}{\sqrt{2}} (x- 0)  + 0(y-1) + \frac{1}{\sqrt{2}} (z-
+      \frac{\pi}{2}) = 0 \\ 
+      \Pi: - \frac{1}{\sqrt{2}} x + \frac{1}{\sqrt{2}} z - \frac{\pi}{2
+      \sqrt{2}} = \\ 
+      \Pi: - x + z = \frac{\pi}{2}
+    \end{gather*}  
+
+
+
+
+  \end{solution}
+
+
+\end{document}

@@ -1,0 +1,88 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_themata}
+\input{definitions.tex}
+\input{myboxes}
+
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+
+
+\begin{document}
+
+\begin{mybox3}
+  \begin{thema}
+    Να βρεθεί η παράγωγος κατά κατεύθυνση της συνάρτησης $ f(x,y,z) = x^{2}
+    \mathrm{e}^{xyz} $ στο σημείο $ P(1,1,1) $ προς την κατεύθυνση του 
+    \textbf{εφαπτόμενου} διανύσματος της καμπύλης που είναι η τομή των επιφανειών 
+    \[
+      \left.
+        \begin{matrix}
+      x^{2}+y^{2}-z^{2}=1 \\
+      xyz=1
+        \end{matrix} 
+      \right\} 
+    \]
+  \end{thema}
+\end{mybox3}
+\begin{solution}
+  Θέτουμε 
+  \[
+    \left.
+      \begin{matrix}
+        F(x,y,z) = x^{2}+y^{2}+z^{2} - 1 = 0 \\
+        G(x,y,z) = xyz -1 =0
+      \end{matrix} 
+    \right\} 
+  \]
+  \begin{mybox1}
+    \vspace{0.5\baselineskip}
+    \textcolor{Col1}{\textbf{Θυμάμαι:}} ένα διάνυσμα κάθετο σε μία επιφάνεια 
+    $ F(x,y,z)=0 $ σε ένα σημείο $ P $ είναι το διάνυσμα $ \grad{F(P)} $, της κλίσης 
+    της σε αυτό το σημείο. 
+  \end{mybox1}
+  Οπότε, θα έχουμε:
+  \begin{gather*}
+    \grad F(P) \; \text{\textbf{κάθετο} στην επιφάνεια} \; F(x,y,z)=0 \; \text{στο 
+    σημείο} \; P \\
+    \grad G(P) \; \text{\textbf{κάθετο} στην επιφάνεια} \; G(x,y,z)=0 \; \text{στο 
+    σημείο} \; P  
+  \end{gather*} 
+  Επομένως, το διάνυσμα $ \grad F(P) \times \grad G(P) $ θα είναι \textbf{παράλληλο}, 
+  δηλαδή \textcolor{Col1}{εφαπτόμενο,} στην καμπύλη που είναι η τομή των δύο 
+  επιφανειών, στο σημείο $ P $.
+  \begin{gather*}
+    \grad F = \Bigl(\pdv{F}{x}, \pdv{F}{y} , \pdv{F}{z} \Bigr) = (2x,2y,-2z) 
+    \Rightarrow \grad F(P) = (2,2,-2) \\
+    \grad G = \Bigl(\pdv{G}{x}, \pdv{G}{y} , \pdv{G}{z} \Bigr) = (yz,xz,xy) 
+    \Rightarrow \grad G(P) = (1,1,1)
+  \end{gather*} 
+  \[
+    \grad F(P) \times \grad G(P) = 
+    \begin{vmatrix*}[r]
+      \mathbf{i} & \mathbf{j} & \mathbf{k} \\
+      2 & 2 & -2 \\
+      1 & 1 & 1
+    \end{vmatrix*} = 
+    4 \mathbf{i} -4 \mathbf{j} + 0 \mathbf{k} = (4,-4,0)
+  \] 
+  Βρίσκουμε το μοναδιαίο διάνυσμα $ \hat{\mathbf{u}} $ και την κλίση της συνάρτησης 
+  $ f(x,y,z) $ στο σημείο $P$
+  \begin{gather*}
+    \hat{\mathbf{u}} = \frac{1}{\norm{\mathbf{u}}} \mathbf{u} =
+    \frac{1}{\sqrt{4^{2}+(-4)^{2}+0^{2}}} (4,-4,0) = \frac{1}{\sqrt{32}} (4,-4,0) =
+  \frac{1}{4 \sqrt{2}} (4,-4,0) = \Bigl(\frac{1}{\sqrt{2}} , - \frac{1}{\sqrt{2}},0\Bigr)
+  \\
+  \grad f = \Bigl(\pdv{f}{x} , \pdv{f}{y} , \pdv{f}{z}\Bigr) = 
+  (2x \mathrm{e}^{xyz} + x^{2}yz \mathrm{e}^{xyz}, x^{3}z \mathrm{e}^{xyz}, x^{3}y 
+  \mathrm{e}^{xyz}) \Rightarrow \grad f (P) = (3 \mathrm{e}, \mathrm{e}, \mathrm{e}) 
+   \end{gather*} 
+   Άρα η παράγωγος κατά κατεύθυνση θα είναι
+   \[
+     \dv{f}{\mathbf{u}}\eval_{P} = \grad f(P) \cdot \hat{\mathbf{u}} = (3 \mathrm{e},
+   \mathrm{e}, \mathrm{e}) \cdot \Bigl(\frac{1}{\sqrt{2}} , - \frac{1}{\sqrt{2}} , 0\Bigr) = 
+     \frac{3 \mathrm{e}}{\sqrt{2}} - \frac{\mathrm{e}}{\sqrt{2}} = \frac{2
+     \mathrm{e}}{\sqrt{2}}.
+    \] 
+\end{solution}
+
+\end{document}

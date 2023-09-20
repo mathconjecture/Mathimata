@@ -1,0 +1,295 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_themata}
+\input{definitions.tex}
+\input{myboxes}
+
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+\geometry{left=1.5cm,right=1.5cm}
+
+\begin{document}
+
+\begin{mybox3}
+  \begin{thema}
+    Δίνεται η συνάρτηση $ f(x,y,z)=x^{3}+y^{3}+z^{3}+3xy+3yz+3xz $. Να βρεθούν τα 
+    τοπικά ακρότατα της συνάρτησης.
+  \end{thema}
+\end{mybox3}
+\begin{solution}
+  \item []
+  \begin{enumerate}
+    \item Βρίσκουμε τις μερικές παραγώγους 1ης και 2ης τάξης.
+
+      \twocolumnsidesl{
+        \begin{myitemize}
+          \item $ f_{x}=3x^{2}+3y+3z $
+          \item $ f_{x}= 3y^{2} +3x+3z $
+          \item $ f_{z}= 3z^{2} +3y+3x $
+        \end{myitemize}
+      }{
+        \twocolumnsidesl{
+          \begin{myitemize}
+            \item $ f_{xx}=6x $
+            \item $ f_{yy}=6y $
+            \item $ f_{zz}=6z $
+          \end{myitemize}
+        }{
+          \begin{myitemize}
+            \item $ f_{xy}=f_{yx}=3 $
+            \item $ f_{xz}=f_{zx}=3 $
+            \item $ f_{yz}=f_{zy}=3 $
+          \end{myitemize}
+        }
+      }
+
+    \item Βρίσκουμε τα κρίσιμα σημεία της συνάρτησης.
+
+      Επειδή η συνάρτηση $ f(x,y) $ είναι συνεχής και διαφορίσιμη σε κάθε σημείο 
+      του $ \mathbb{R}^{2} $, αναζητούμε τα κρίσιμα σημεία της στις λύσεις του
+      συστήματος:
+      \[
+        \left.
+          \begin{matrix}
+            f_{x}=0 \\
+            f_{y}=0 \\
+            f_{z}=0
+          \end{matrix} 
+        \right\} \Leftrightarrow 
+        \left.
+          \begin{matrix}
+            3x^2+3y+3z=0 \\
+            3y^{2} +3x+3z =0 \\
+            3z^{2} +3y+3x =0 
+          \end{matrix} 
+        \right\} \Leftrightarrow 
+        \left.
+          \begin{matrix}
+            x^2+y+z=0 \\
+            y^{2} +x+z =0 \\
+            z^{2} +y+x =0 
+          \end{matrix} 
+        \right\}
+      \]
+      Αφαιρούμε από την 2η εξίσωση την 3η και έχουμε:
+      \[
+        \left.
+          \begin{matrix}
+            x^2+y+z=0 \\
+            y^2-z^2+z-y=0 \\
+            z^{2} +y+x =0 
+          \end{matrix} 
+        \right\} \Leftrightarrow 
+        \left.
+          \begin{matrix}
+            x^2+y+z=0 \\
+            (y-z)(y+z)-(y-z)=0 \\
+            z^{2} +y+x =0 
+          \end{matrix} 
+        \right\} \Leftrightarrow 
+        \left.
+          \begin{matrix}
+            x^2+y+z=0 \\
+            (y-z)(y+z-1)=0 \\
+            z^{2} +y+x =0 
+          \end{matrix} 
+        \right\} \Leftrightarrow 
+        \left.
+          \begin{matrix}
+            x^2+y+z=0 \\
+            \textcolor{Col2}{y=z} \quad \text{ή} \quad 
+            \textcolor{Col1}{y+z=1} \\
+            z^{2} +y+x =0 
+          \end{matrix} 
+        \right\}
+      \]
+      Όπου τώρα προκύπτουν δύο συστήματα:
+      \[
+        \Sigma_1 : \left.
+          \begin{matrix}
+            x^2+y+z=0 \\
+            \textcolor{Col2}{y=z} \\
+            z^{2} +y+x =0 
+          \end{matrix} 
+        \right\} \quad \text{και} \quad 
+        \Sigma_2 : \left.
+          \begin{matrix}
+            x^2+y+z=0 \\
+            \textcolor{Col1}{y+z=1} \\
+            z^{2} +y+x =0 
+          \end{matrix} 
+        \right\} \Leftrightarrow 
+        \left.
+          \begin{matrix}
+            x^2+1=0 \\
+            y+z=1 \\
+            z^{2} +y+x =0 
+          \end{matrix} 
+          \right\} \quad \text{\begin{tabular}{c} \textcolor{Col1}{αδύνατο,} λόγω \\ 
+              της 1ης εξίσωσης
+          \end{tabular}}
+        \] 
+        Λύνουμε το $ \Sigma _1 $. Με αντικατάσταση της 2ης εξίσωσης στην 1η και 3η  
+        έχουμε:
+        \[
+          \left.
+            \begin{matrix}
+              x^2+2y=0 \\
+              z=y \\
+              y^{2}+y+x=0
+            \end{matrix} 
+          \right\} \Leftrightarrow 
+          \left.
+            \begin{matrix}
+              x^{2}+2y=0 \\
+              z=y \\
+              x=-y^2-y
+            \end{matrix} 
+          \right\} \Leftrightarrow 
+          \left.
+            \begin{matrix}
+              (-y^2-y)^2+2y=0 \\
+              z=y \\
+              x=-y^2-y
+            \end{matrix} 
+          \right\} \Leftrightarrow 
+          \left.
+            \begin{matrix}
+              y^4+2y^3+y^2+2y=0 \\
+              z=y \\
+              x=-y^2-y
+            \end{matrix} 
+          \right\} \Leftrightarrow 
+        \] 
+        \[
+          \left.
+            \begin{matrix}
+              y(y^3+2y^2+y+2)=0 \\
+              z=y \\
+              x=-y^2-y
+            \end{matrix} 
+          \right\} \Leftrightarrow 
+          \left.
+            \begin{matrix}
+              y=0 \quad \text{η} \quad y^3+2y^2+y+2=0 \\
+              z=y \\
+              x=-y^2-y
+            \end{matrix} 
+          \right\}
+        \]
+        Οπότε προκύπτουν δύο συστήματα:
+        \[
+          \Sigma_3 :\left.
+            \begin{matrix}
+              y^3+2y^2+y+2=0 \\
+              z=y \\
+              x=-y^2-y
+            \end{matrix} 
+          \right\}\quad \text{και} \quad 
+          \Sigma_4 :\left.
+            \begin{matrix}
+              y=0 \\
+              z=y \\
+              x=-y^2-y
+            \end{matrix} 
+          \right\} \Leftrightarrow 
+          \begin{tabular}{c} x=y=z=0 \\ \text{άρα } (0,0,0) \end{tabular}
+        \]
+        Λύνουμε το $ \Sigma _3 $
+        \[
+          \left.
+            \begin{matrix}
+              y^2(y+2) + y+2=0 \\
+              z=y \\
+              x=-y^2-y
+            \end{matrix} 
+          \right\} \Leftrightarrow 
+          \left.
+            \begin{matrix}
+              (y+2)(y^2+1)=0 \\
+              z=y \\
+              x=-y^2-y
+            \end{matrix} 
+          \right\} \Leftrightarrow 
+          \left.
+            \begin{matrix}
+              y=-2 \quad \text{ή} \quad y^2+1=0 \\
+              z=y \\
+              x=-y^2-y
+            \end{matrix} 
+          \right\} \Leftrightarrow 
+          \left.
+            \begin{matrix}
+              y=-2 \\
+              z=y \\
+              x=-y^2-y
+            \end{matrix} 
+          \right\} \Leftrightarrow \!\! \begin{tabular}{c} x=y=z=-2 \\ 
+          \text{άρα } (-2,-2,-2) \end{tabular}
+        \]
+        Επομένως η συνάρτηση έχει δύο στάσιμα σημεία. Το $ (0,0,0) $ και το $
+        (-2,-2,-2) $.
+
+      \item Βρίσκουμε τις Εσσιανές ορίζουσες.
+        \begin{myitemize}
+          \item Για το $ (-2,-2,-2) $, έχουμε:
+            \begin{gather*}
+              \abs{H_3} = \begin{vmatrix*}[r]
+                f_{xx} & f_{xy} & f_{xz} \\
+                f_{yx} & f_{yy} & f_{yz} \\
+                f_{zx} & f_{zy} & f_{zz}
+              \end{vmatrix*} = 
+              \begin{vmatrix*}[r]
+                -12 & 3 & 3 \\
+                3 & -12 & 3 \\
+                3 & 3 & -12
+              \end{vmatrix*} = -1350 < 0 \\[\baselineskip]
+              \abs{H_2} = \begin{vmatrix*}[r]
+                f_{xx} & f_{xy} \\
+                f_{yx} & f_{yy}
+              \end{vmatrix*} = 
+              \begin{vmatrix*}[r]
+                -12 & 3 \\
+                3 & -12
+              \end{vmatrix*} = 135 > 0 
+            \end{gather*}
+            \[
+              \abs{H_1} = f_{xx} = -12 < 0
+            \] 
+            Άρα στο σημείο $ (-2,-2,-2) $ η $f$ παρουσιάζει τοπικό μέγιστο.
+          \item Για το $ (0,0,0) $, έχουμε:
+            \[
+              f_{xx} = 0 
+            \]
+            Οπότε δεν γνωρίζουμε αν η συνάρτηση έχει ακρότατο. 
+            Γι᾽ αυτό εφαρμόζουμε τον ορισμό των τοπικών ακροτάτων. 
+            Εξετάζουμε το πρόσημο της παραστασης $ f(x,y,z)-f(0,0,0) $. 
+            Πράγματι:
+            \[
+              f(x,y,z)-f(0,0,0) = x^3+y^3+z^3+3xy+3yz+3xz 
+            \] 
+            Παρατηρούμε ότι
+            \begin{myitemize}
+              \item Για όλα τα σημεία $ (a,0,0) $ με $ a>0 $ και $ a $ μικρό,
+                (δηλαδή για όλα τα σημεία $ (a,0,0) $ του άξονα $x$,  κοντά στο 
+                $(0,0,0)$), έχουμε ότι 
+                \[
+                  f(x,y,z)-f(0,0,0)=a^{3}>0 
+                \] 
+              \item Για όλα τα σημεία $ (0,b,0) $ με $ b<0 $ και $ b $ μικρό,
+                (δηλαδή για όλα τα σημεία $ (0,b,0) $ του άξονα $y$,  κοντά στο 
+                $(0,0,0)$), έχουμε ότι 
+                \[
+                  f(x,y,z)-f(0,0,0)=b^{3}<0 
+                \] 
+                Επομένως η παράσταση $ f(x,y,z)-f(0,0,0) $ \textbf{δεν} διατηρεί 
+                σταθερό πρόσημο σε κάθε σημείο κοντά στο $ (0,0,0) $ και γι᾽ αυτό η 
+                συνάρτηση δεν παρουσιάζει σε αυτό τοπικό ακρότατο, αλλά
+                \textbf{σαγματικό} σημείο.
+            \end{myitemize}
+        \end{myitemize}
+    \end{enumerate}
+  \end{solution}
+
+
+
+  \end{document}

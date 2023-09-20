@@ -1,0 +1,78 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+\input{myboxes.tex}
+
+
+\usepackage[RPvoltages]{circuitikz}
+
+\everymath{\displaystyle}
+\thispagestyle{empty}
+
+
+\begin{document}
+
+
+
+% \chapter*{Ανώμαλα Σημεία}
+
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col1}{Κύκλωμα $ RLC $}}
+\end{center}
+
+\vspace{\baselineskip} 
+
+
+Θεωρούμε ένα ηλεκτρικό κύκλωμα σε σειρά $RLC$, το οποίο περιλαμβάνει μια ωμική αντίσταση 
+$R$, ένα πηνίο με αυτεπαγωγή $ L $ και έναν πυκνωτή με χωρητικότητα $ C $ καθώς και μια 
+ηλεκτρεγερτική δύναμη τάσης $ E(t) $. Όταν το κύκλωμα είναι κλειστό, διαρρέεται από 
+ρεύμα $ i(t) $ όπου $t$ ο χρόνος. Η εξίσωση που διέπει το ρεύμα προκύπτει λαμβάνοντας 
+υπόψη τις πτώσεις τάσης οι οποίες οφείλονται στα επί μέρους στοιχεία του κυκλώματος και 
+είναι αντίστοιχα:
+
+\twocolumnsidesc{
+\begin{myitemize}
+  \item $ V_{L} = L \dv{i}{t} $
+  \item $ V_{R} = iR $
+  \item $ V_{C} = \frac{q}{C} = \frac{1}{C} \int i(t) \,{dt}  $
+\end{myitemize}
+}{
+\begin{center}
+  \begin{circuitikz}[american,cute inductors,scale=0.8]
+    \draw (0,0) to[short,i=$i$,battery1,l=$E$] (0,3) to[L=$L$]  (4,3) to[C=$C$]
+    (4,0) to[R=$R$]  (0,0) ;
+  \end{circuitikz}
+\end{center}
+}
+όπου $ q $ είναι το ηλεκτρικό φορτίο του πυκνωτή και $ i(t) = \dv{q}{t} $.  
+Σύμφωνα με το νόμο του Kirchhoff, και αν υποθέσουμε ότι $ E(t) = E_{0}
+\sin{\omega t} $, όπου $ E_{0} = $ σταθ.\ έχουμε ότι 
+\begin{equation}\label{eq:eq1}
+  V_{L} + V_{R} + V_{C} = E(t) \Leftrightarrow L \dv{i}{t} + Ri + \frac{1}{C}
+  \int i(t) \,{dt} = E_{0} \sin{\omega t}
+\end{equation}
+όπου $ R,L $ και $ C $ είναι γνωστές σταθερές.
+Παραγωγίζουμε την~\eqref{eq:eq1} ως προς $t$ και προκύπτει
+\begin{equation}\label{eq:eq2}
+  L \dv[2]{i}{t} + R \dv{i}{t} + \frac{1}{C} i = E_{0} \omega \cos{\omega t} 
+  \Leftrightarrow \boxed{L i'' + R i' + \frac{1}{C} i = E_{0} \omega \cos{\omega t}}
+\end{equation} 
+\begin{rem}
+\item {}
+  \begin{myitemize}
+    \item Παρατηρούμε ότι το $R$ παίζει το ρόλο του συντελεστή απόσβεσης.
+    \item Λάμβάνοντας υπόψη τις σχέσεις $ \int i(t) \,{dt} = q $, $ i= q' $ και 
+      $ i' = q'' $ η εξίσωση~\eqref{eq:eq1} μπορεί να εκφρασθεί και σε 
+      όρους φορτίου $ q(t) $, έτσι ώστε
+      \begin{equation}\label{eq:eq3}
+        \boxed{L q'' + Rq' + \frac{1}{C} q = E_{0} \sin{\omega t}}
+      \end{equation}
+  \end{myitemize}
+\end{rem}
+
+Οι εξισώσεις~\eqref{eq:eq2}, και~\eqref{eq:eq3} είναι Γραμμικές, 2ης τάξης, με σταθερούς
+συντελεστές. 
+ 
+%todo να συνεχίσω τη θεωρία στα κυκλώματα
+
+\end{document}

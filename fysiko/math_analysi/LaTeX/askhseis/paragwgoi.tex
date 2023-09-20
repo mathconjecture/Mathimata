@@ -1,0 +1,169 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\geometry{top=1.8cm}
+\pagestyle{askhseis}
+
+\begin{document}
+
+
+\begin{center}
+  \minibox{\large \bfseries \textcolor{Col1}{Ασκήσεις στις Παραγώγους}}
+\end{center}
+
+% \vspace{\baselineskip}
+
+\begin{enumerate}
+
+  \subsection*{Παράγωγος}
+
+  % \item Να βρείτε τα $ a, b \in \mathbb{R} $ έτσι ώστε η ευθεία $ y = 2x + 5
+  %   $ να είναι εφαπτομένη της συνάρτησης $ f(x) = x^{2} + ax + b $ στο
+  %   σημείο $ x_{0} = -1 $. 
+  %   \hfill Απ: $ a = 4, b = 6 $
+
+  % \item Να εξεταστεί πλήρως ως προς τη συνέχεια και την παραγωγισιμότητα η
+  %   συνάρτηση $ f(x) = e^{\abs{x}} $.
+  %   \hfill Απ: συνεχής, όχι παραγωγίσιμη 
+
+  \item Να βρεθούν τα $ a, b \in \mathbb{R} $ έτσι ώστε η συνάρτηση 
+    $
+    f(x) = \begin{cases}
+      x^{2}, & x\geq 2 \\
+      ax+b , & x<2
+    \end{cases}
+    $
+    να είναι παραγωγίσιμη στο $ x_{0} = 2 $.
+
+    \hfill Απ: $ a=4, b=-4 $
+
+  \item Να υπολογιστούν οι παράγωγοι των παρακάτω συναρτήσεων
+    \begin{enumerate}[(i)]
+      \item $ f(x) = \ln{\left(\sqrt[5]{1+3x^{2}}\right)} $ 
+        \; \textcolor{Col1}{Υπόδειξη:} Με δύο τρόπους  
+        \hfill Απ: $ \frac{6x}{5(1+3x^{2})} $
+      \item $ f(x) = \ln({\sin({\cos{x}})}) $ 
+      \; \textcolor{Col1}{Υπόδειξη:} Με δύο τρόπους
+        \hfill Απ: $ \frac{1}{\sin{(\cos{x})}} [\cos{(\cos{x})}] (- \sin{x}) $ 
+      \item $ f(x)= \arcsin(\frac{1}{x}) $ \hfill Απ: $ - \frac{1}{x \sqrt{x^{2}-1}} $ 
+      \item $ f(x) = \arctan \left(\frac{x}{\sqrt{1 + x^{2}}}\right) $ \hfill Απ: $
+        \frac{1}{(1+2x^{2})\sqrt{1 + x^{2}}} $
+    \end{enumerate}
+
+  \item  Να υπολογιστούν οι παράγωγοι των παρακάτω συναρτήσεων
+
+    \begin{enumerate}[(i)]
+      \item $ f(x) = (\cos{x})^{\sin{2x}} $ \hfill Απ: $
+        (\cos{x})^{\sin{2x}} 2(\cos{2x} \ln{(\cos{x})} - \sin^{2}{x}) $
+      \item $ f(x) = \left(1 + \frac{1}{x} \right)^{x} $ \hfill Απ: $
+        \left(1 + \frac{1}{x}\right)^{x}\left[\ln{(1 + \frac{1}{x})} -
+        \frac{1}{x+1}\right] $
+      \item $ f(x)=(\sin{x})^{x} $ \hfill Απ: $ (\sin{x})^{x}[\ln{(\sin{x}
+        )} + x \cot{x}] $ 
+      \item $ f(x)=\cos{x}^{x} $ \hfill Απ: $ (- \sin{x^{x}})x^{x} (1 +
+        \ln{x}) $
+    \end{enumerate}
+
+    % \item Δίνεται η σχέση $ x^{2} - xy + y^{2} = 3 $, $ y=y(x) $. Να βρεθεί η 1η
+    %   και η 2η παράγωγος της $y$ ως προς $x$ στο σημείο $ (1,-1) $.
+    %   \hfill Απ: $ y' = 1$, $ y'' = \frac{2}{3} $
+
+    % \item Δίνεται η σχέση $ 4x^{3} - 3xy^{2} + 6x^{2} - 5xy - 8 y^{2} + 9x + 14
+    %   = 0$. Να βρείτε τις εξισώσεις της εφαπτομένης και της κάθετης ευθείας
+    %   της καμπύλης στο σημείο $ (-2,3) $.
+    %   \hfill Απ: $\varepsilon\colon y = \frac{9}{2} x - 6 $, 
+    %   $\kappa\colon y = \frac{2}{9} x + \frac{31}{9} $.
+
+  \item Να βρεθούν οι παράγωγοι των αντίστροφων, των παρακάτω συναρτήσεων.
+
+    \textcolor{Col1}{Υπόδειξη:} 
+      $ \cosh^{2}{x} - \sinh^{2}{x} = 1 $, \;
+      $ \tanh{x} = \frac{\sinh{x}}{\cosh{x}} $ 
+    \begin{enumerate}[(i)]
+      \twocolumnside{
+        \item $ y = \cos{x} $ \hfill Απ: $ \frac{-1}{\sqrt{1 - y^{2}}} $
+        \item $ y = \tan{x} $ \hfill Απ: $ \frac{1}{1 + y^{2}} $
+          }{
+        \item $ y = \cosh{x} $  \hfill Απ: $ \frac{1}{\sqrt{y^{2} - 1}} $
+        \item $ y = \tanh{x} $ \hfill Απ: $ \frac{1}{x^{2} - 1} $
+        }
+    \end{enumerate}
+
+      \subsection*{Εξίσωση Εφαπτομένης - Κάθετης ευθείας}
+
+    \item Δίνεται η συνάρτηση $ f(x) = x^{2}-5x+4 $. Να βρεθεί η εξίσωση της 
+      εφαπτομένης της γραφικής παράστασης της συνάρτησης, η οποία 
+      \begin{enumerate}[i)]
+        \item έχει κλίση ίση με 3 \hfill Απ: $ \varepsilon: y=3x-12 $ 
+        \item είναι παράλληλη στην ευθεία $ y=5x-7 $ \hfill Απ: $ \varepsilon: y=5x-21 $ 
+        \item είναι κάθετη στην ευθεία $ y= \frac{1}{7} x + \frac{13}{7} $
+          \hfill Απ: $ \varepsilon: y=-7x+3 $ 
+        \item είναι παράλληλη στον άξονα $x$. \hfill Απ: $ y=- \frac{9}{4} $ 
+        \item σχηματίζει γωνία \SI{45}{\degree} με τον άξονα $x$. 
+          \hfill Απ: $ y=x-5
+          $  
+      \end{enumerate}
+      % \subsection*{L' Hospital}
+
+    %\item Να υπολογιστούν τα παρακάτω όρια.
+    %  \begin{enumerate}[i)]
+    %    \twocolumnside{
+    %      %A Desmi p.217
+    %      \item $ \lim_{x \to 0} \frac{\mathrm{e}^{x} - x -1}{x^{2}} $ \hfill Απ: $1/2$  
+    %      \item $ \lim_{x \to \infty} x \ln{(1+ \frac{1}{x})} $ \hfill Απ: $1$ 
+    %      \item $ \lim_{x \to \infty} (x - \ln{x}) $ \hfill Απ: $ \infty $  
+    %      \item $ \lim_{x \to \infty} (1+2x)^{1/x} $ \hfill Απ: $ 1 $ 
+    %      \item $ \lim_{x \to 0^{+}} (1+x)^{\cot{x}} $ \hfill Απ: $ \mathrm{e} $ 
+    %        }{
+    %      \item $ \lim_{x\to 1} \left(\frac{1}{\ln{x}} - \frac{1}{x-1}\right) $ \hfill
+    %        Απ: $ \frac{1}{2} $
+    %      \item $ \lim_{x\to +\infty} \left(1 + \frac{1}{x} +
+    %        \frac{2}{x^{2}}\right)^{x} $ \hfill Απ: $ e $ 
+    %      \item $ \lim_{x\to 0^{+}} \left(\frac{1}{x}\right)^{\sin{x}} $ \hfill $ 1 $
+    %      \item $ \lim_{x\to 0} \left(\cos{2x}\right)^{\frac{3}{x^{2}}}  $ \hfill Απ:
+    %        $ e^{-6} $
+    %      }
+    %  \end{enumerate}
+
+
+      \subsection*{Θεώρημα Taylor}
+
+    \item Να υπολογιστεί το προσεγγιστικό πολυώνυμο Maclaurin 3ης τάξης, των 
+      παρακάτω συναρτήσεων.
+      \begin{enumerate}[i)]
+        \item $ y= \mathrm{e}^{-x} $ 
+          \hfill Απ: $ \mathrm{e}^{-x} \approx 1-x+ \frac{1}{2} x^{2} - 
+          \frac{1}{6} x^{3} $ 
+        \item $ y= \frac{1}{x-1} $ \hfill Απ: $ \frac{1}{x-1} 
+          \approx -1 -x -x^{2} - x^{3} $ 
+        \item $ y= \sqrt{x+1} $ \hfill Απ: $ \sqrt{x+1} \approx 1 + \frac{1}{2} x -
+          \frac{1}{8} x^{2} + \frac{1}{16} x^{3} $ 
+      \end{enumerate}
+
+    \item Να υπολογιστεί το προσεγγιστικό πολυώνυμο Taylor 3ης τάξης, γύρω από 
+      το σημείο $ x_{0}=1 $, των παρακάτω συναρτήσεων.
+      \begin{enumerate}[i)]
+        \item $ y= \ln{(x+1)} $ 
+          \hfill Απ: $ \ln{(x+1)} \approx \ln{2} + \frac{1}{2} (x-1) - \frac{1}{8}
+          (x-1)^{2} + \frac{1}{24} (x-1)^{3} $ 
+        \item $ y= \frac{1}{x+1} $ \hfill Απ: $ \frac{1}{x+1} \approx \frac{1}{2} -
+          \frac{1}{4} (x-1) + \frac{1}{8} (x-1)^{2} - \frac{1}{16} (x-1)^{3} $ 
+      \end{enumerate}
+
+      \enlargethispage{1\baselineskip}
+
+    \item Έστω $ f(x) = \ln{(1+x)} $, $ x>-1 $. Να υπολογιστεί το ανάπτυγμα
+      Maclaurin μέχρι και όρους 4ης τάξης και στη συνέχεια να
+      υπολογιστεί το αντίστοιχο σφάλμα για $ x = 0,1 $.
+
+      \hfill Απ: \begin{tabular}{l}
+        $ \ln(1+x) \cong x - \frac{1}{2} x^{2} + \frac{1}{3}x^{3} - 
+        \frac{1}{4} x^{4} $ \\ 
+        $ \abs{R_{4}(0,1)} < 0,000002$	
+      \end{tabular}
+  \end{enumerate}
+
+
+  \end{document}

@@ -1,0 +1,82 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_themata}
+\input{definitions.tex}
+\input{myboxes}
+
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+
+
+\begin{document}
+
+\begin{mybox3}
+  \begin{thema}
+    Να δείξετε ότι κάθε ακμή του συνοδεύοντος τριέδρου της καμπύλης
+    \[
+      (c)\colon
+      \mathbf{r}(t)=(\mathrm{e}^{t} \sin{t})\, \mathbf{i} + (\mathrm{e}^{t} \cos{t}
+      )\, \mathbf{j} + \mathrm{e}^{t} \, \mathbf{k}
+    \]
+    στο τυχαίο σημείο της, σχηματίζει
+    σταθερή γωνία με τον άξονα $ z $.
+  \end{thema}
+\end{mybox3}
+\begin{solution}
+  Θα βρούμε τα διανύσματα $ \mathbf{T}, \mathbf{N} $ και $ \mathbf{B} $ του συνοδεύοντος
+  τριέδρου και θα βρούμε τη γωνία που σχηματίζουν με τον άξονα $ z $:
+  \begin{align*}
+    \mathbf{r'}(t)
+    &= \mathrm{e}^{t} (\sin{t} + \cos{t})\, \mathbf{i} +
+    \mathrm{e}^{t} (\cos{t} - \sin{t})\, \mathbf{j} + \mathrm{e}^{t} \, \mathbf{k} \\
+    \norm{\mathbf{r'}(t)} 
+    &= \sqrt{[\mathrm{e}^{t} (\sin{t} + \cos{t})]^{2}+ [\mathrm{e}^{t} (\cos{t} - \sin{t})]^{2}+ \mathrm{e}^{2t}} \\
+    &= \sqrt{\mathrm{e}^{2t} (\sin^{2}{t} + 2 \cancel{\sin{t} \cos{t}} + \cos^{2}{t} + \cos^{2}{t} - 2 \cancel{\sin{t} \cos{t}} + \sin^{2}{t} +1)} = \sqrt{3} \,
+    \mathrm{e}^{t} \\
+    \mathbf{T} 
+    &= \frac{\mathbf{r'}(t)}{\norm{\mathbf{r'}(t)}} = \frac{\sin{t} +
+    \cos{t}}{\sqrt{3}} \, \mathbf{i} + \frac{\cos{t} - \sin{t}}{\sqrt{3}} \, \mathbf{j} +
+    \frac{1}{\sqrt{3}} \, \mathbf{k}
+  \end{align*}
+  Η γωνία που σχηματίζει το διάνυσμα $ \mathbf{T} $ με τον άξονα $z$ είναι: $\cos{\theta} = \mathbf{T}\cdot \mathbf{k} = \frac{1}{\sqrt{3}} = \;\text{σταθ.}
+    \Rightarrow \theta = \; \text{σταθ.}$ \begin{align*}
+    \dv{\mathbf{T}}{t} 
+     &= \frac{\cos{t} - \sin{t}}{\sqrt{3}} \, \mathbf{i} +
+     \frac{- \sin{t} - \cos{t}}{\sqrt{3}} \, \mathbf{j} + 0 \mathbf{k} \\
+     \norm{\dv{\mathbf{T}}{t}} 
+     &= \sqrt{\Bigl[\frac{\cos{t} - \sin{t}}{\sqrt{3}} \Bigr]^{2}+
+     \Bigl[\frac{- \sin{t} - \cos{t}}{\sqrt{3}}\Bigr]^{2} +0^{2}} \\
+     &= \sqrt{\frac{\cos^{2}{t} - 2 \cancel{\sin{t} \cos{t}} + \sin^{2}{t} + \sin^{2}{t} + 2
+     \cancel{\sin{t} \cos{t}} + \cos^{2}{t}}{3}} = \frac{\sqrt{2}}{\sqrt{3}} \\
+     \mathbf{N} 
+     &= \frac{d \mathbf{T}/dt}{\norm{d \mathbf{T}/dt}} = \frac{\cos{t} - \sin{t}
+     }{\sqrt{2}} \, \mathbf{i} - \frac{\sin{t} + \cos{t}}{\sqrt{2}} \, \mathbf{j} +0
+     \mathbf{k}
+   \end{align*}
+   Η γωνία που σχηματίζει το διάνυσμα $ \mathbf{N} $ με τον άξονα $z$ είναι: $\cos{\phi} = \mathbf{N}\cdot \mathbf{k} = 0 =\;\text{σταθ.} \Rightarrow \phi =
+     \; \text{σταθ.}$ \begin{align*}
+     \mathbf{B} = \mathbf{T} \times \mathbf{N} 
+     &= \begin{vmatrix*}[c]
+       \mathbf{i} & \mathbf{j} & \mathbf{k} \\[10pt]
+        \frac{\sin{t} + \cos{t}}{\sqrt{3}} & \frac{\cos{t} - \sin{t}}{\sqrt{3}} &
+        \frac{1}{\sqrt{3}} \\[10pt]
+        \frac{\cos{t} - \sin{t}}{\sqrt{2}} & - \frac{\sin{t} + \cos{t}}{\sqrt{2}} & 0
+      \end{vmatrix*} 
+    = \frac{1}{\sqrt{3}} \cdot \frac{1}{\sqrt{2}} \cdot 
+    \begin{vmatrix*}[c]
+      \mathbf{i} & \mathbf{j} & \mathbf{k} \\[5pt]
+      \sin{t} + \cos{t} & \cos{t} - \sin{t} & 1 \\[5pt]
+       \cos{t} - \sin{t} & - (\sin{t} + \cos{t}) & 0
+     \end{vmatrix*} \\
+     &= \frac{1}{\sqrt{6}} \Bigl[(\sin{t} + \cos{t}) \, \mathbf{i} + (\cos{t}-
+     \sin{t}) \, \mathbf{j} + \bigl[-(\sin{t} + \cos{t} )^{2}-(\cos{t} - \sin{t} )^{2}\bigr]\,
+     \mathbf{k}\Bigr] \\
+     &= \frac{1}{\sqrt{6}} \Bigl[(\sin{t} + \cos{t}) \, \mathbf{i} + (\cos{t} - \sin{t}) \,
+     \mathbf{j} - 2 \, \mathbf{k}\Bigr] \\
+     &= \frac{\sin{t} + \cos{t}}{\sqrt{6}} \, \mathbf{i} + \frac{\cos{t} -
+     \sin{t}}{\sqrt{6}} \, \mathbf{j} - \frac{2}{\sqrt{6}} \, \mathbf{k}  
+   \end{align*}
+   Η γωνία που σχηματίζει το διάνυσμα $ \mathbf{B} $ με τον άξονα $z$ είναι: $\cos{\omega} = \mathbf{B}\cdot \mathbf{k} = - \frac{2}{\sqrt{6}} =\;\text{σταθ.} \Rightarrow \omega =
+     \; \text{σταθ.}$ \end{solution}
+
+
+\end{document}

@@ -1,0 +1,94 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\pagestyle{askhseis}
+
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col1}{Εφαρμογές των συνήθων διαφορικών εξισώσεων}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\textcolor{Col1}{\textbf{Πρόβλημα 2}}
+
+Έστω $ T_{\pi } $ η θερμοκρασία περιβάλλοντος. Από το νόμο του Νεύτωνα, έχουμε: 
+\[
+  - \dv{T}{t} =  k (T - T_{\pi}) \quad \text{με λύση προκύπτει} \quad λύση 
+  T(t) = T_{\pi} + c \mathrm{e}^{-kt} 
+\]
+\[
+  T(0) = 21 \Rightarrow T_{\pi} + c = 21 \Rightarrow c = 21 - T_{\pi} 
+  \quad \text{άρα} \quad  T(t) = T_{\pi} + (21-T_{\pi }) \mathrm{e}^{-kt} 
+\] 
+\[
+  T(5) = 16 \Rightarrow
+  T_{\pi} + (21-T_{pi}) \mathrm{e}^{-5k} = 16 \Rightarrow \mathrm{e}^{-5k} =
+  \frac{16-T_{\pi}}{21 - T_{\pi}} 
+\] 
+\[
+  T(0) = 13 \Rightarrow T_{\pi} + c \mathrm{e}^{-10k} = 13 \Rightarrow T_{\pi} +
+  (21-T_{\pi}) (\mathrm{e}^{-5k} )^{2} = 13 \overset{}{\Rightarrow} 
+  T_{\pi} + (21-T_{\pi}) \left(\frac{16-T_{\pi}}{21-T_{\pi}} \right)^{2} = 13
+\] 
+Από όπου μπορούμε να λύσουμε ως προς $ T_{\pi} $ και προκύπτει 
+\[
+  T_{\pi} + \frac{256 - 32 T_{\pi } + T_{\pi }^{2}}{21-T_{\pi}} = 13 \Rightarrow 2
+  T_{\pi } = 17 \Rightarrow T_{\pi } 8.5
+\] 
+
+\textcolor{Col1}{\textbf{Πρόβλημα 3}}
+
+Έστω $ T_{\pi } $ η θερμοκρασία περιβάλλοντος. Από το νόμο του Νεύτωνα, έχουμε: 
+\[
+  - \dv{T}{t} =  k (T - 30) \quad \text{με λύση προκύπτει} \quad λύση 
+  T(t) = 30 + c \mathrm{e}^{-kt} 
+\]
+\[
+  T(0) = 100 \Rightarrow 30 + c = 100 \Rightarrow c = 70
+  \quad \text{άρα} \quad  T(t) = 30 + 70 \mathrm{e}^{-kt} 
+  Τ(15) = 80 \Rightarrow \mathrm{e}^{-15k} = \frac{5}{7} \Rightarrow \mathrm{e}^{-k}
+  = \Bigl(\frac{5}{7}\Bigr)^{1/15}
+\] 
+Άρα
+\[
+  T(t) = 30 + 70 \Bigl(\frac{5}{7} \Bigr)^{t/15}
+\]
+Ο ζητούμενος χρόνος προκύπτει από τη λύση της εξίσωσης 
+\[
+  T(t) = 50 \Leftrightarrow 30 + 70 \Bigl(\frac{5}{7} \Bigr)^{t/15} = 50 
+  \Leftrightarrow 
+  \Bigl(\frac{5}{7}\Bigr)^{t/15} = \frac{2}{7} \Rightarrow t = 
+  \frac{15 \ln{(2/7)}}{\ln{(5/7)}} 
+  \approx 56
+\] 
+Μετά από 20 λεπτά στο δωμάτιο, η θερμοκρασία του τσαγιού είναι
+\[
+  T(20) = 30 + 70 \Bigl(\frac{5}{7} \Bigr)^{20/15} \approx 75
+\] 
+Η θερμοκρασία μέσα στο ψυγείο είναι $ \SI{15}{\celsius} $, οπότε το νέο πρόβλημα αρχικών
+τιμών είναι 
+\begin{align*}
+  \dv{T}{t} = - k (T-15) \quad \text{με Α.Σ.} \quad T(0) = 75
+\end{align*}
+με λύση, όπως προηγουμένως 
+\[
+  T(t) = 15 + 60 \mathrm{e}^{-kt} 
+\] 
+Επιπλέον, ισχύει ότι 
+\[
+  T(10) = 60 \Rightarrow \cdots \Rightarrow \mathrm{e}^{-k} = 
+  \Bigl(\frac{3}{4}\Bigr)^{1/10} 
+\] 
+Άρα 
+\[
+  T(t) = 15 + 60 \Bigl(\frac{3}{4} \Bigr)^{t/10} 
+\]
+και άρα η θερμοκρασία του τσαγιού μετά από 60 λεπτά θα είναι
+\[
+  T(60) = 15 + 60 \Bigl(\frac{3}{4}\Bigr)^{60/10} \approx 26
+\]
+\end{document}

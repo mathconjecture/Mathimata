@@ -1,0 +1,125 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_themata}
+\input{definitions.tex}
+\input{myboxes}
+
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+\geometry{left=1.5cm,right=1.5cm}
+
+\begin{document}
+
+\begin{mybox3}
+  \begin{thema}
+    Θεωρούμε τις $ u= \sigma (x,y) $ και $ v=h(x,y) $ οι οποίες ορίζονται από τις σχέσεις
+    $ v = \textstyle{\pdv{f(x,u)}{u}} $ και $ y= -\textstyle{\pdv{f(x,u)}{x}} $, 
+    όπου $ f $ συνάρτηση των μεταβλητών $x$ και $u$. Να δείξετε ότι 
+    \[
+      \frac{D(u,v)}{D(x,y)} \overset{\text{ή}}{=} \pdv{(u,v)}{(x,y)} = 1 
+    \] 
+  \end{thema}
+\end{mybox3}
+\begin{solution}
+  Σχηματίζουμε το σύστημα των πεπλεγμένων εξισώσεων, 4 μεταβλητών 
+  \begin{align*}
+    F(x,y,u,v) &= v - \pdv{f(x,u)}{u} = 0 \Leftrightarrow v - f_{u}(x,u) = 0\\
+    G(x,y,u,v) &= y + \pdv{f(x,u)}{x} = 0 \Leftrightarrow y + f_{x}(x,u) = 0   
+  \end{align*} 
+  Για να υπολογίσουμε την ορίζουσα $ \pdv{(u,v)}{(x,y)} = 
+  \begin{vmatrix*}
+    u_{x} & u_{y} \\
+    v_{x} & v_{y}
+  \end{vmatrix*} $ 
+  αρκεί να υπολογίσουμε τις μερ. παραγώγους $ u_{x},u_{y},v_{x} $ και $ v_{y} $. 
+  \begin{align*}
+    \pdv{(F,G)}{(u,v)} = 
+    \begin{vmatrix*}
+      F_u & F_v \\
+      G_u & G_v
+    \end{vmatrix*} = 
+    \begin{vmatrix*}
+      -f_{uu} & 1 \\
+      f_{xu} & 0
+    \end{vmatrix*} = 
+    -f_{xu} \\
+    \intertext{Επίσης}
+    u_x = 
+    -\frac{\pdv{(F,G)}{(x,v)}}{\pdv{(F,G)}{(u,v)}} = 
+    -\frac{
+      \begin{vmatrix*}
+        F_x & F_v \\
+        G_x & G_v
+    \end{vmatrix*}}{-f_{xu}} = 
+    \frac{
+      \begin{vmatrix*}
+        -f_{ux}  && 1 \\
+        f_{xx} && 0
+    \end{vmatrix*}}{f_{xu}} = 
+    -\frac{f_{xx}}{f_{xu}} 
+  \end{align*}
+  \begin{align*}
+    u_y = 
+    -\frac{\pdv{(F,G)}{(y,v)}}{\pdv{(F,G)}{(u,v)}} = 
+    -\frac{
+      \begin{vmatrix*}
+        F_y & F_v \\
+        G_y & G_v
+    \end{vmatrix*}}{-f_{xu}} = 
+    \frac{
+      \begin{vmatrix*}
+        0 && 1 \\
+        1 && 0
+    \end{vmatrix*}}{f_{xu}} = 
+    -\frac{1}{f_{xu}} 
+  \end{align*}
+  \begin{align*}
+    v_x = 
+    -\frac{\pdv{(F,G)}{(u,x)}}{\pdv{(F,G)}{(u,v)}} = 
+    -\frac{
+      \begin{vmatrix*}
+        F_u & F_x \\
+        G_u & G_x
+    \end{vmatrix*}}{-f_{xu}} = 
+    \frac{
+      \begin{vmatrix*}
+        -f_{uu} && -f_{ux} \\
+        f_{xu} && f_{xx}            
+    \end{vmatrix*}}{f_{xu}} = 
+    \frac{-f_{uu}f_{xx}+ f^{2}_{xu}}{f_{xu}} 
+  \end{align*}
+  \begin{align*}
+    v_y = 
+    -\frac{\pdv{(F,G)}{(u,y)}}{\pdv{(F,G)}{(u,v)}} = 
+    -\frac{
+      \begin{vmatrix*}
+        F_u & F_y \\
+        G_u & G_y
+    \end{vmatrix*}}{-f_{xu}} = 
+    \frac{
+      \begin{vmatrix*}
+        -f_{uu} && 0 \\
+        f_{xu} && 1
+    \end{vmatrix*}}{f_{xu}} = -\frac{f_{uu}}{f_{xu}} 
+  \end{align*}
+  Άρα 
+  \begin{align*} 
+    \pdv{(u,v)}{(x,y)} &= 
+    \begin{vmatrix*}
+      u_{x} & u_{y} \\
+      v_{x} & v_{y}
+    \end{vmatrix*} = u_{x}v_{y}-u_{y}v_{x} = 
+    \left( -\frac{f_{xx}}{f_{xu}} \right) \cdot 
+    \left( -\frac{f_{uu}}{f_{xu}} \right)- 
+    \left( - \frac{1}{f_{xu}} \right) \cdot 
+    \left( \frac{-f_{uu}f_{xx}+ f^{2}_{xu}}{f_{xu}} \right) \\ 
+                       &= \frac{f_{xx}f_{uu}}{f^{2}_{xu}} -
+                       \frac{f_{uu}f_{xx} -
+                       f^2_{xu}}{f^{2}_{xu}}=1
+  \end{align*}
+\end{solution}
+
+
+
+
+
+\end{document}

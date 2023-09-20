@@ -1,3 +1,4 @@
+\documentclass[a4paper,table]{report}
 \input{preamble_ask.tex}
 \input{definitions_ask.tex}
 
@@ -14,7 +15,7 @@
 \section*{Παράγωγος Σύνθετων Συναρτήσεων}
 
 \begin{enumerate}
-    \item Έστω $ f(x,y) = x^{2}+y^{2} $ με $ x = t \sin{t} $ και $ y = \cos{t} $. 
+    \item Έστω $ f(x,y) = x^{2}+y $ με $ x = t \sin{t} $ και $ y = \cos{t} $. 
         Να υπολογιστεί η $ \dv{f}{t} $. 
 
         \hfill Απ: $ \dv{f}{t} = 2t \sin^{2}{t} + 2t^{2} \sin{t} \cos{t} - \sin{t} $ 
@@ -23,7 +24,7 @@
         $ y = r \sin{\theta} $. Να υπολογιστούν οι $ \pdv{f}{r} $ και 
         $ \pdv{f}{\theta} $
         \hfill Απ: $ \pdv{f}{r} = 2r $, $ \pdv{f}{\theta} = 0 $  
-    \item Έστω $ f(x,y) = \sin{(x-y)} $ με $ x = uv $ και $ y = u=v $. Να 
+    \item Έστω $ f(x,y) = \sin{(x-y)} $ με $ x = uv $ και $ y = u-v $. Να 
         υπολογιστούν οι $ \pdv[2]{f}{u} $ και $ \pdv[2]{f}{v} $.
 
         \hfill Απ: \begin{tabular}{l}
@@ -43,7 +44,7 @@
 \section*{Παράγωγος Σύνθετων Συναρτήσεων} 
 
 \begin{enumerate}
-  \item Αν $ f(x,y) = \arctan{\frac{y}{x}} $ με $ x=u+v $ και $ y = u-v $ 
+  \item Αν $ f(x,y) = \arctan{\frac{x}{y}} $ με $ x=u+v $ και $ y = u-v $ 
     να δείξετε ότι $ f_{u} + f_{v} = \frac{u-v}{u^{2}+v^{2}} $.
 
   \item  Αν $ z=z(u,v) $ με $ u=x \cos{a} - y \sin{a} $ και $ v= x \sin{a} + y \cos{a} $

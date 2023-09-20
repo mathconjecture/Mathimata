@@ -1,3 +1,4 @@
+\documentclass[a4paper,table]{report}
 \input{preamble_ask.tex}
 \input{definitions_ask.tex}
 
@@ -67,9 +68,9 @@
           $f_y=-\frac{x}{y\sqrt{y^2-x^2}}$
         \end{tabular}
       \item $ f(x,y,z) = (x+y^{2}) \sin{(xz)} $ \hfill Απ: \begin{tabular}{l}
-          $ f_{x} = \sin{(xz)} + z(x+y^{2}) \sin{(xz)} $ \\
+          $ f_{x} = \sin{(xz)} + z(x+y^{2}) \cos{(xz)} $ \\
           $ f_{y} = 2y \sin{(xz)} $ \\
-          $ f_{z} = x(x+y^{2}) \sin{(xz)} $
+          $ f_{z} = x(x+y^{2}) \cos{(xz)} $
         \end{tabular} 
     \end{enumerate}
 
@@ -81,7 +82,7 @@
     \textbf{θεώρημα Schwartz}, δηλαδή ότι $ f_{xy} = f_{yx} $.
     %hlektr
   \item Να δείξετε ότι η συνάρτηση $ f(x,y) = (y+3x)^{1/2} - 
-    (y-3x)^{2} $ ικανοποιεί τη σχέση $ f_{xx} - 9 f_{yy} = 0 $.
+    (y-3x)^{1/2} $ ικανοποιεί τη σχέση $ f_{xx} - 9 f_{yy} = 0 $.
     %span
   \item Να δείξετε ότι η συνάρτηση $ f(x,y) = \cos{(x+y)} + \cos{(x-y)} $ 
     επαληθεύει την διαφορική εξίσωση $ f_{xx} - f_{yy} = 0 $.

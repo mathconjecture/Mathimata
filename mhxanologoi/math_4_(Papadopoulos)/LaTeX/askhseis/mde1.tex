@@ -1,0 +1,56 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\thispagestyle{askhseis}
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col1}{ΜΔΕ 1ης τάξης}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+
+  \item Να βρεθεί η γενική λύση των παρακάτω \textbf{γραμμικών} μδε με τη μέθοδο των
+    χαρακτηριστικών.
+
+    \begin{enumerate}[i)]
+      %shmeiwseis
+      \item $yu_{x}-xu_{y}=0, \quad u=u(x,y)$ \hfill Απ: $u=f(x^{2}+y^{2})$ 
+        %shmeiwseis mou
+      \item $ u_{t}+(2t+1)u_{x}=u , \quad u=u(x,y), \; x \in \mathbb{R}, \; t>0$ 
+        με $ u(x,0)=x $
+      \item $ u_{t}+tu_{x}=u , \quad u=u(x,y), \; x \in \mathbb{R}, \; t>0$ 
+        με $ u(x,0)=x $
+    \end{enumerate}
+
+    \item Να λυθούν τα παρακάτω προβλήματα \textlatin{\textbf{Cauchy}}, με τη μέθοδο των
+        χαρακτηριστικών,  αν $u=u(x,y)$.
+
+        \begin{enumerate}[i)]
+          %vafeas
+          \item $5u_{x}+2u_{y}=0, \quad u(0,y)=\sin y$ 
+            \hfill Απ: $u(x,y)=\sin(y-\frac{2}{5}x)$
+          \item $5u_{x}+2xu_{y}=0, \quad u(0,y)=\sin y$ 
+            \hfill Απ: $u(x,y)=\sin(y-\frac{1}{5}x^{2})$ 
+            %shmeiwseis
+          \item $uu_{x}+u_{y}=1, \quad u(\frac{y^{2}}{2},y)=0$ 
+            \hfill Απ: $(y-u)^{2}=2x-u^{2}$
+            %shmeiwseis
+          \item $ xu_{x}+yu_{y}=x \mathrm{e}^{-u}, \quad  u(x,x^{2})=0 $
+            \hfill Απ: $ u= \ln{(x+1 - \frac{y}{x})} $ 
+          \item $xu_{x}+yu_{y}=2u,\quad u=1$, για $x^{2}-y^{2}=2$ 
+            \hfill Απ: $x^{2}-y^{2}=2u$
+          % \item $ (y-u)u_{x}+(u-x)u_{y}=x-y , \quad  u=0 $ για $ xy=1 $
+          %   \hfill Απ: $ u= \frac{1-xy}{x+y} $  
+          % \item $2xyu_{x}+(y^{2}-x^{2})u_{y}=0, \quad y=0$ για $xu=1$ 
+          %   \hfill Απ: $ux^{2}+uy^{2}=x$
+        \end{enumerate}
+    \end{enumerate}
+
+
+\end{document}

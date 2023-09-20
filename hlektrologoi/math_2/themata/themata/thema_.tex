@@ -1,0 +1,41 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_themata}
+\input{definitions.tex}
+\input{myboxes}
+
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+
+
+\begin{document}
+
+\begin{mybox3}
+  \begin{thema}
+    Έστω $ F(x,y,z) = -36(x^{2}+z^{2}) + (x^{2}+y^{2}+z^{2}+5)^2 $.
+    \begin{enumerate}[i)]
+      \item Να βρεθούν τα τοπικά ακρότατα της συνάρτησης $ z=f(x,y) $ η οποία ορίζεται σε
+        πεπλεγμένη μορφή από την εξίσωση $ F(x,y,z)=0 $.
+      \item Θεωρούμε το σημείο $ A(1,0,2 \sqrt{6}) $.
+        \begin{enumerate}
+          \item Να δείξετε ότι υπάρχει μοναδική $ C^{1} $ τάξης συνάρτηση $ z=f(x,y) $ 
+            κοντά στο $ (1,0) $, η οποία ορίζεται σε πεπλεγμένη μορφή από την εξίσωση $
+            F(x,y,z)=0 $, τέτοια ώστε $ f(1,0) = 2 \sqrt{6} $.
+          \item Εφαρμόζοντας το ανάπτυγμα Taylor, να προσεγγίσετε κοντά στο $ (1,0) $ 
+            τη συνάρτηση $f$ με ένα πολυώνυμο πρώτου βαθμού.
+        \end{enumerate}
+      \item Θεωρούμε την καμπύλη του $ \mathbb{R}^{3} $ που δίνεται από τις παραμετρικές
+        εξισώσεις:
+        \[
+          (c): \begin{rcases}
+            x = \sqrt{t} \\
+            y= \sqrt{4-t} \\
+            z= \sqrt{9-t}
+          \end{rcases}
+        \] 
+        Αν $B$ είναι το σημείο τομής της επιφάνειας $ F(x,y,z)=0 $ με την καμπύλη $ (c)
+        $, να βρείτε το εφαπτόμενο επίπεδο αυτής της επιφάνειας στο σημείο $ B $.
+    \end{enumerate}
+  \end{thema}
+\end{mybox3}
+
+\end{document}

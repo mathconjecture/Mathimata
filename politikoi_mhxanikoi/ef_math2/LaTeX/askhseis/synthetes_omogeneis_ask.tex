@@ -1,0 +1,100 @@
+\documentclass[a4paper,table]{report}
+
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+\pagestyle{askhseis}
+
+
+\begin{document}
+
+\begin{center}
+    \minibox{\bfseries\large\color{Col1} Σύνθετη Παράγωγος - Ομογενείς Συναρτήσεις}
+\end{center} 
+
+
+\section*{Παράγωγος Σύνθετων Συναρτήσεων}
+
+\begin{enumerate}
+    \item Έστω $ f(x,y) = x^{2}+y $ με $ x = t \sin{t} $ και $ y = \cos{t} $. 
+        Να υπολογιστεί η $ \dv{f}{t} $. 
+
+        \hfill Απ: $ \dv{f}{t} = 2t \sin^{2}{t} + 2t^{2} \sin{t} \cos{t} - \sin{t} $ 
+
+    \item  Έστω $ f(x,y) = x^{2}+y^{2} $ με $ x = r \cos{\theta} $ και 
+        $ y = r \sin{\theta} $. Να υπολογιστούν οι $ \pdv{f}{r} $ και 
+        $ \pdv{f}{\theta} $
+        \hfill Απ: $ \pdv{f}{r} = 2r $, $ \pdv{f}{\theta} = 0 $  
+
+    \item Έστω $ f(x,y) = \sin{(x-y)} $ με $ x = uv $ και $ y = u=v $. Να 
+        υπολογιστούν οι $ \pdv[2]{f}{u} $ και $ \pdv[2]{f}{v} $.
+
+        \hfill Απ: \begin{tabular}{l}
+            $ \pdv[2]{f}{u} = -(v-1)^{2} \sin{(x-y)} $ \\
+            $ \pdv[2]{f}{v} = -(u+1)(v-1) \sin{(x-y)} + \cos{(x-y)} $
+        \end{tabular}
+
+    \item Έστω $ z = e^{uv} $ με $ u = \ln{(x+y)} $ και $ v = \arctan{\frac{x}{y}
+        } $. Να υπολογιστούν οι $ \pdv{z}{x} $ και $ \pdv{z}{y} $. 
+        \hfill Απ: \begin{tabular}{l}
+            $ z_{x} = \frac{ve^{uv}}{x+y} + \frac{yue^{uv}}{x^{2}+y^{2}} $ \\
+            $ z_{y} = \frac{ve^{uv}}{x+y} - \frac{xe^{uv}}{x^{2}+y^{2}} $
+        \end{tabular}
+\end{enumerate}
+
+
+\section*{Παράγωγος Σύνθετων Συναρτήσεων} 
+
+\begin{enumerate}
+  \item Αν $ f(x,y) = \arctan{\frac{x}{y}} $ με $ x=u+v $ και $ y = u-v $ 
+    να δείξετε ότι $ f_{u} + f_{v} = \frac{u-v}{u^{2}+v^{2}} $.
+
+  \item  Αν $ z=z(u,v) $ με $ u=x \cos{a} - y \sin{a} $ και $ v= x \sin{a} + y \cos{a} $
+    να δείξετε ότι $ (z_{x})^{2} + (z_{y})^{2} = (z_{u})^{2} + (z_{v})^{2} $.
+
+  \item Αν $ z=f(x,y) $, με $ x=u+v $ και $ y = u-v $ να δείξετε ότι 
+    $ (z_{x})^{2} - (z_{y})^{2} = z_{u}\cdot z_{v} $ 
+
+  \item Έστω $ z=z(x,y) $ συνάρτηση δύο μεταβλητών, με $ x+y= \ln{u+v} $ και 
+    $ x-y = \ln{(u-v)} $. Να δείξετε ότι 
+    \[
+      z_{xx}+z_{yy} = (u^{2}-v^{2})(z_{uu}-z_{vv}) 
+    \]
+  \item Δίνεται η συνάρτηση δύο μεταβλητών, με τύπο
+    $ z = f(u) + g(v) $, όπου $ u = ax + by $ και $ v = ax - by $, όπου 
+    $ a,b \in \mathbb{R} $. Να αποδείξετε ότι 
+    \[
+      a^{2} z_{yy} - b^{2}z_{xx} = 0 
+    \] 
+  \item Αν $ z = f(x,y) $, με $ x=r \cos{\theta} $ και $ y = r \sin{\theta} $, 
+    τότε να δείξετε ότι
+    \[
+      \left(\pdv{f}{x}\right)^{2} + \left(\pdv{f}{y}\right)^{2} = 
+      \left(\pdv{f}{r}\right)^{2} + \frac{1}{ r^{2}} 
+      \left(\pdv{f}{\theta}\right)^{2} 
+    \] 
+  \item Έστω $ g(x,y) = f(x^{2} - y^{2}, y^{2} - x^{2}) $, όπου η συνάρτηση 
+    $f$ είναι διαφορίσιμη. Να αποδείξετε ότι η συνάρτηση $g$ ικανοποιεί 
+    την διαφορική εξίσωση με μερικές παραγώγους
+    \[
+      x\pdv{g}{y} + y\pdv{g}{x} = 0
+    \] 
+  \item Να δείξετε ότι η συνάρτηση $ z(x,y) = xyf\left(\frac{ x-y }{ xy }\right) $
+    ικανοποιεί τη σχέση $ x^{4} z_{xx} = y^{4} z_{yy} $.
+\end{enumerate}
+
+
+\section*{Ομογενείς Συναρτήσεις}
+
+\begin{enumerate}
+  \item Αν $ u = u(x,y) $ και $ v=v(x,y) $ ομογενείς βαθμού $ \rho $, 
+    τότε να δείξετε ότι $ \forall f(u,v) $ με συνεχείς μερικές παραγώγους 1ης τάξης
+    ισχύει 
+    \[
+      xf_{x}+yf_{y}= \rho (u f_{u}+vf_{v}) 
+    \] 
+  \item Να αποδείξετε ότι αν $f(x,y)$ είναι ομογενής συνάρτηση, βαθμού $ \rho $, τότε 
+    οι συναρτήσεις $ f_{x}, f_{y} $ είναι επίσης ομογενείς, βαθμού $ \rho -1 $.
+\end{enumerate}
+
+\end{document}

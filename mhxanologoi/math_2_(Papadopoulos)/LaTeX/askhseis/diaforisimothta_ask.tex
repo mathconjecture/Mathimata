@@ -1,0 +1,92 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+\geometry{top=1.5cm}
+\pagestyle{askhseis}
+
+\begin{document}
+
+\begin{center}
+  \minibox{\bfseries\large\color{Col1} Μερική Παράγωγος}
+\end{center} 
+
+\vspace{\baselineskip} 
+
+\section*{Ορισμός}
+
+\begin{enumerate}
+  \item Έστω η συνάρτηση $ f(x,y) = xy $. Να υπολογιστούν με τη 
+    βοήθεια του ορισμού οι $ f_{x}(1,1) $ και η $ f_{y}(1,1) $. 
+
+    \hfill Απ: 
+    \begin{tabular}{l}
+      $f_{x}(1,1) = 1$ \\
+      $f_{y}(1,1) = 1$
+    \end{tabular} 
+
+  \item Να υπολογιστούν οι μερικές παράγωγοι 1ης τάξης της συνάρτησης
+    $
+    f(x,y) = 
+    \begin{cases}
+      x^{2} \sin{\frac{y}{x}}, & x \neq 0 \\
+      0, & x = 0 
+    \end{cases}
+    $ 
+
+    \hfill Απ: 
+    $  f_{x} = 
+    \begin{cases}
+      2x \sin{\frac{y}{x}} - y \cos{\frac{y}{x}}, & 
+      x \neq 0  \\ 
+      0, & x = 0 
+    \end{cases} $ \quad 
+    και \quad
+    $ f_{y} = 
+    \begin{cases}
+      x \cos{\frac{y}{x}}, & x \neq 0 \\
+      0, & x = 0 
+    \end{cases} $    
+
+\end{enumerate}
+
+
+\section*{Διαφορισιμότητα}
+
+\begin{enumerate}
+  \item Να εξεταστεί αν οι παρακάτω συναρτήσεις είναι διαφορίσιμες στο σημείο 
+    $ (0,0) $.
+
+    \begin{enumerate*}[i),itemjoin=\hspace{1.5cm}]
+      \item  $ f(x,y) = 
+        \begin{cases} 
+          \frac{xy}{\sqrt{x^{2}+y^{2}}}, & (x,y) \neq (0,0) \\
+          0, & (x,y) = (0,0)
+        \end{cases} $ 
+      \item $ g(x,y) = 
+        \begin{cases} 
+          \frac{(x+y)^{2}}{x^{2}+y^{2}}, & (x,y) \neq (0,0) \\
+          0, & (x,y) = (0,0)
+        \end{cases} $
+    \end{enumerate*}
+    \hfill Απ: 
+    \begin{enumerate*}[i),itemjoin=\hspace{10pt}]
+      \item όχι
+      \item όχι
+    \end{enumerate*}
+
+  \item Να εξετάσετε αν η συνάρτηση 
+    $
+    f(x,y) = 
+    \begin{cases} 
+      xy \frac{x^{2}-y^{2}}{x^{2}+y^{2}}, & (x,y) 
+      \neq (0,0) \\ 
+      0, & (x,y) = (0,0)
+    \end{cases}
+    $ 
+    είναι διαφορίσιμη στο σημείο $ (0,0) $. 
+    \hfill Απ: ναι 
+\end{enumerate}
+
+
+\end{document}

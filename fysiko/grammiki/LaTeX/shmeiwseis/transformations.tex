@@ -1,0 +1,58 @@
+\documentclass[a4paper]{report}
+
+
+\input{preamble_ask.tex}
+\input{definitions.tex}
+
+
+
+\begin{document}
+
+\begin{example}
+  Έστω τελεστής $ T \colon \mathbb{R}^{2} \to \mathbb{R}^{2} $ με 
+  $ T(x,y) = (x+y,-x-2y) $. 
+  \begin{enumerate}[i)]
+    \item Να βρεθεί η παράσταση του τελεστή $ T $ ως προς τη συνήθη βάση, 
+      $\beta = \{ (1,0), (0,1) \} $.
+    \item Να βρεθεί η παράσταση του τελεστή ως προς τη βάση 
+      $ \gamma = \{ (1,1), (1,2) \} $.
+  \end{enumerate}
+\end{example}
+\begin{solution}
+\item {}
+  \begin{enumerate}[i)]
+    \item 
+      \begin{myitemize}
+        \item $ T(1,0) = (1+0,-1-2\cdot0) = (1,-1) $
+        \item $ T(0,1) = (0+1,-0-2\cdot1) = (1,-2) $
+      \end{myitemize}
+      Άρα 
+      \[
+        [T]_{\beta} 
+        \begin{pmatrix*}[r]
+          1 & 1 \\
+          -1 & -2
+        \end{pmatrix*}
+      \] 
+    \item 
+      \begin{myitemize}
+        \item $ T(1,1) = (1+1,-1-2\cdot1) = (2,-3) $
+        \item $ T(1,2) = (1+2,-1-2\cdot2) = (3,-5) $
+      \end{myitemize}
+      Όμως τα διανύσματα $ (2,-3) $ και $ (3,-5) $ είναι εκφρασμένα ως προς τη συνήθη 
+      βάση. Πρέπει να τα εκφράσουμε ως προς τη βάση $ \gamma $. Γι᾽ αυτό έχουμε:
+      \[
+        T(1,1)=(2,-3) = a(1,1)+b(1,2) = (a,a)+(b,2b)=(a+b,a+2b) \Leftrightarrow 
+        \left.
+          \begin{matrix}
+            a+b=2 \\
+            a+2b=-3
+          \end{matrix} 
+        \right\} 
+      \] 
+      άρα $ a=7 \quad \text{και} \quad b=-5 $.
+
+  \end{enumerate}
+\end{solution}
+
+\end{document}

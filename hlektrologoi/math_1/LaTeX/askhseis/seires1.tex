@@ -1,5 +1,9 @@
+\documentclass[a4paper,table]{report}
 \input{preamble_ask.tex}
 \input{definitions_ask.tex}
+
+\geometry{left=20.63mm,right=20.63mm,top=20.25mm,bottom=30.25mm,footskip=24.16mm,headsep=24.16mm}
+
 
 \everymath{\displaystyle}
 \pagestyle{askhseis}
@@ -76,7 +80,7 @@
         \item $ \sum_{n=1}^{\infty} \frac{2^{n}}{n^{2}} $ \hfill Απ: αποκλίνει
         \item $ \sum_{n=1}^{\infty} \frac{3^{n}\cdot n!}{n^{n}} $ \hfill Απ: 
           αποκλίνει
-        \item $ \sum_{n=1}^{\infty} \frac{6^{n}}{2n+7} $ \hfill Απ: αποκλίνει 
+        % \item $ \sum_{n=1}^{\infty} \frac{6^{n}}{2n+7} $ \hfill Απ: αποκλίνει 
       \end{enumerate}
       }{
       \begin{enumerate}[i),start=5]
@@ -88,7 +92,7 @@
       \end{enumerate}
     }
 
-    \pagebreak
+    % \enlargethispage{2\baselineskip}
 
   \item Να εξεταστούν ως προς τη σύγκλιση οι παρακάτω σειρές (Κριτήριο Ρίζας)
 
@@ -183,6 +187,47 @@
 \end{enumerate}
 
 
+\section*{Χρήσιμες Ανισότητες}
+
+\twocolumnsides{
+  \begin{myitemize}
+    \item $|\sin x|\leq 1, \quad \forall x\in \mathbb{R}$
+    \item $|\cos x|\leq 1, \quad \forall x\in \mathbb{R}$
+    \item $|\sin x|\leq |x|, \quad \forall x\in \mathbb{R}$
+  \end{myitemize}
+  }{
+  \begin{myitemize}
+    \item $ \abs{x+y} \leq \abs{x} + \abs{y}, \quad \forall x,y \in \mathbb{R} $
+    \item $n!\leq n^n, \quad \forall n\in \mathbb{N}$
+    \item $n!\geq 2^{n-1}, \quad \forall n\in \mathbb{N}$
+  \end{myitemize}
+}
+
+
+\section*{Χρήσιμα Όρια ακολουθιών}
+
+\twocolumnside{
+  \begin{myitemize}
+    \item $ \lim_{n\to \infty} \frac{1}{n^{a}} = 0, \quad  a > 0 $ 
+    \item $ \lim_{n\to \infty} a^{n} =
+      \begin{cases} 
+        0, &  \abs{a} < 1 \\
+        +\infty, & a>1 
+      \end{cases}$
+    \item $ \lim_{n\to \infty} \sqrt[n]{a} = 1, \quad  a>0 $
+    \item $ \lim_{n\to \infty} \sqrt[n]{n} = 1 $
+    \item $ \lim_{n\to \infty} \left(1 + \frac{1}{n}\right)^{n} = e $
+  \end{myitemize}
+  }{
+  \begin{myitemize}
+    \item $ \lim_{n\to \infty} \left(1 + \frac{a}{n}\right)^{n} = e^{a}, 
+      \quad a \in \mathbb{R} \setminus \{0\} $
+    \item $ \lim_{n\to \infty} \frac{a^{n}}{n!} = 0, \quad  a \in \mathbb{R} $
+    \item $ \lim_{n\to \infty} \frac{n!}{n^{n}} = 0 $
+    \item $ \lim_{n\to \infty} \sqrt[n]{n!} = + \infty $
+    \item $ \lim_{n\to \infty} \frac{\ln n}{n} = 0 $
+  \end{myitemize}
+}
+
+
 \end{document}
-
-

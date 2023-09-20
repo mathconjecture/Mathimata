@@ -1,0 +1,56 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\pagestyle{askhseis}
+
+\begin{document}
+
+\begin{center}
+\textcolor{Col1}{\minibox{\large\bfseries{Αλγεβρικές Δομές}}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\subsection*{Ομάδες}
+
+\begin{enumerate}
+   \item Αν $ "+" $ και $ "\cdot" $ είναι οι συνήθεις πράξεις πρόσθεσης και
+     πολλαπλασιασμού να εξετάσετε αν τα παρακάτω σύνολα είναι ή όχι \textbf{ομάδες}.
+     \begin{enumerate}[i)]
+       \item $ (\{ x \in \mathbb{Z} \; : \; x<0 \},+) $ \hfill Απ: Όχι γιατί $ \nexists
+         $ ουδέτερο 
+       \item $ (\{ 3x \; : \; x \in \mathbb{Z}\},+) $ \hfill Απ: Ναι 
+       \item $ (\{ x \in \mathbb{Z} \; : \; x \; \text{περιττός}\},\cdot) $ \hfill Απ:
+         Όχι, γιατί $ \nexists $ συμμετρικό 
+     \end{enumerate}
+
+  \item Να δείξετε ότι το σύνολο 
+    $G = \{ 2^{m}\cdot 3^{n} \; : \; m,n \in \mathbb{Z} \}$ αποτελεί \textbf{ομάδα} 
+    ως προς τον συνήθη πολλαπλασιασμό πραγματικών αριθμών.
+
+  \item Στο σύνολο $ G = \{ (a,b) \; : \; a \in \mathbb{R} \; \text{και} \; b \in
+    \mathbb{R} - \{ 0 \} \} $ ορίζουμε την πράξη 
+    \[
+      (a_{1}, b_{1}) * (a_{2}, b_{2}) = (a_{1}+ a_{2}, b_{1} \cdot b_{2}), \quad \forall
+      (a_{1}, b_{1}), \; (a_{2}, b_{2}) \in G
+     \] 
+     όπου $ "+" $ και $ "\cdot" $ είναι οι συνήθεις πράξεις στο $ \mathbb{R} $. 
+     Να δείξετε ότι η δομή $ (G, *) $ είναι \textbf{αβελιανή ομάδα}.
+\end{enumerate}
+
+\subsection*{Δακτύλιοι}
+
+\begin{enumerate}
+  \item Στο σύνολο των ακεραίων $ \mathbb{Z} $ ορίζουμε τις ακόλουθες πράξεις: 
+    \begin{gather*}
+      a \oplus b = a+b+1, \quad \forall a,b \in \mathbb{Z} \\
+      a \odot b = a+b+ab, \quad \forall a,b \in \mathbb{Z}
+    \end{gather*} 
+    όπου $ "+" $ και $ "\cdot" $ οι συνήθεις πράξεις στο $ \mathbb{Z} $. Να δείξετε ότι 
+    η δομή $ (Z, \oplus , \odot) $ είναι δακτύλιος.
+\end{enumerate}
+
+
+\end{document}

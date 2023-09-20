@@ -1,0 +1,82 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_themata}
+\input{definitions.tex}
+\input{myboxes}
+
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+
+
+\begin{document}
+
+\begin{mybox3}
+  \begin{thema}
+
+    Αν η συνάρτηση $ z=f(x,y) $ ορίζεται πεπλεγμένα μέσω της εξίσωσης 
+    \[
+      G(x,y,z) = F\Bigl(\frac{x}{z} , \frac{y}{z}\Bigr) = 0 
+    \] 
+    να δείξετε ότι ισχύει:
+    \[
+      x \pdv{z}{x} + y \pdv{z}{y} = z 
+    \]
+  \end{thema}
+\end{mybox3}
+\begin{solution}
+  Θέτουμε $ u = \frac{x}{z} $ και $ v = \frac{y}{z} $, και τότε η εξίσωση γίνεται 
+  \[
+    F(u,v) = 0
+  \] 
+  όπου $ F(u,v) $ είναι η σύνθετη συνάρτηση 
+
+  \twocolumnsidesc{
+    \[
+      \begin{rcases}
+        F(u,v) \\[2pt]
+        u = \frac{x}{z} \\[2pt]
+        v = \frac{y}{z}
+      \end{rcases} \quad \text{με διάγραμμα ροής} 
+    \]
+  }{
+    \begin{tikzpicture}[scale=0.7]
+      \node[Col1] (f) at (0,0) {$F$};  
+      \node[Col1] (x) at (-1,-1.5) {$u$};  
+      \node[Col1] (y) at (1,-1.5) {$v$};  
+      \node[Col1] (ux) at (-2,-3) {$x$};  
+      \node[Col1] (vx) at (-0.5,-3) {$z$};  
+      \node[Col1] (uy) at (0.5,-3) {$y$};  
+      \node[Col1] (vy) at (2,-3) {$z$};  
+      \draw (f) edge node[midway,above left] {$F_{u}$} (x) ;
+      \draw (f) edge node[midway,above right] {$F_{v}$} (y) ;
+      \draw (x) edge node[midway,above left] {$u_{x}$} (ux) ;
+      \draw (x) edge node[midway,above right] {$u_{z}$} (vx) ;
+      \draw (y) edge node[midway,above left] {$u_{\smash{y}}$} (uy) ;
+      \draw (y) edge node[midway,above right] {$u_{z}$} (vy) ;
+    \end{tikzpicture}   
+  }
+
+  Για την πεπλεγμένη συνάρτηση $ z=z(x,y) $ ισχύουν οι τύποι 
+  $ z_{x} = - \frac{F_{x}}{F_{z}} $ και $ z_{y} = -\frac{F_{y}}{F_{z}} $ 
+  όπου
+  \begin{gather*}
+    F_{x}=F_{u}u_{x} = F_{u} \frac{1}{z} \\
+    F_{y}=F_{v}v_{y} = F_{v} \frac{1}{z} \\
+    F_{z} = F_{u}u_{z}+F_{v}v_{z} = F_{u} (- \frac{x}{z^{2}}) + F_{v} (-
+    \frac{y}{z^{2}})
+  \end{gather*}
+  Άρα 
+  \begin{gather*}
+    z_{x} = - \frac{F_{x}}{F_{z}} = - \frac{F_{u} \frac{1}{z}}{-\frac{1}{z^{2}}
+    (F_{u}x+F_{v}y)} = \frac{zF_{u}}{xF_{u}+yF_{v}}   \\
+    z_{y} = - \frac{F_{y}}{F_{z}} = - \frac{F_{v} \frac{1}{z}}{-\frac{1}{z^{2}}
+    (F_{u}x+F_{v}y)} = \frac{zF_{v}}{xF_{u}+yF_{v}}   \\
+  \end{gather*}  
+  Άρα 
+  \[
+    xz_{x}+yz_{y} = \frac{xzF_{u}}{xF_{u}+yF_{v}}+ \frac{yzF_{v}}{xF_{u}+yF_{v}} = z
+    \frac{xF_{u}+yF_{v}}{xF_{u}+yF_{v}} = z
+  \]
+\end{solution}
+
+
+\end{document}

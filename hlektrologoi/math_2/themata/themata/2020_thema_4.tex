@@ -1,0 +1,67 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_themata}
+\input{definitions.tex}
+\input{myboxes}
+
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+
+
+\begin{document}
+
+\begin{mybox3}
+  \begin{thema}
+    Έστω η επιφάνεια $ S \colon F(x,y,z)=0 $ και έστω ότι η γενική εξίσωση του 
+    εφαπτόμενου επιπέδου στο τυχαίο σημείο $ (x_{0}, y_{0}, z_{0}) $ της επιφάνειας έχει 
+    τη μορφή:
+    \[
+      (x_{0}+ z_{0})(x- x_{0}) - (y_{0}+ z_{0})(y- y_{0}) + (x_{0}- y_{0})(z- z_{0})=0 
+    \] 
+    Αν η επιφάνεια διέρχεται από τη σημείο $ \textcolor{Col1}{(1,2,3)} $, τότε η εξίσωσή 
+    της είναι:
+  \end{thema}
+\end{mybox3}
+\begin{solution}
+  \item []
+    \begin{mybox1}
+      \vspace{0.5\baselineskip}
+      \textcolor{Col1}{\textbf{Θυμάμαι:}} 
+      Αν $ F(x,y,z)=c $ είναι επιφάνεια, τότε η εξίσωση του εφαπτόμενου επιπέδου 
+      στο σημείο $ (\textcolor{Col1}{x_{0}},
+      \textcolor{Col1}{y_{0}}, \textcolor{Col1}{z_{0}}) $ της επιφάνειας είναι: 
+      $ {F_{x}(x_{0}, y_{0}, z_{0})}(x- \textcolor{Col1}{x_{0}}) +
+      {F_{y}(x_{0}, y_{0}, z_{0})}(y- \textcolor{Col1}{y_{0}}) + 
+      {F_{z}(x_{0}, y_{0}, z_{0})}(z- \textcolor{Col1}{z_{0}}) = 0 $.
+    \end{mybox1}
+    Από την εξίσωση του εφαπτόμενου επιπέδου που μας δίνεται και από την προηγούμενη
+    παρατήρηση, συμπεραίνουμε ότι:
+    \begin{align*}
+      F_{x}(x,y,z) &= x+z = P(x,y,z) \\
+      F_{y}(x,y,z) &= -y-z = Q(x,y,z) \\
+      F_{z}(x,y,z) &= x-y = R(x,y,z)
+    \end{align*} 
+    Οι συναρτήσεις, $ P,Q $ και $ R $ είναι συνεχείς με συνεχείς μερικές παραγώγους, ως
+    πολυωνυμικές συναρτήσεις και επίσης ισχύει:
+    \[
+      P_{y} = 0 = Q_{x} \quad \text{και} \quad Q_{z}=-1=R_{y} \quad \text{και} \quad
+      P_{z} = 1 = R_{x}
+     \] 
+    Οπότε μπορούμε να υπολογίσουμε τη συνάρτηση $ F(x,y,z) $ από τον γνωστό τύπο:
+    \begin{align*}
+      F(x,y,z) &= \int _{x_{0}}^{x} P(t,y,z) \,{dt} + \int _{y_{0}}^{y} Q(x_{0},t,z) 
+      \,{dt} + \int _{z_{0}}^{z} R(x_{0}, y_{0}, t) \,{dt} \\
+               &= \int _{\textcolor{Col1}{1}}^{x} (t+z) \,{dt} + \int
+               _{\textcolor{Col1}{2}}^{y} (-t-z) \,{dt} + 
+               \int _{\textcolor{Col1}{3}}^{z} (1-2) \,{dt} \\
+               &= \left[\frac{t^2}{2} + zt\right]_{1}^{x} + \left[- \frac{t^2}{2} -zt\right]_{2}^{y} +
+               \left[-t\right]_{3}^{z} \\
+               &= \frac{x^{2}}{2} + zx - \frac{1}{2} -\cancel{z} - \frac{y^{2}}{2} - zy +
+               2 + \cancel{2z}
+               -\cancel{z} +3 \\
+               &= \frac{x^{2}}{2} +zx - \frac{y^{2}}{2} - zy + \frac{9}{2}
+    \end{align*} 
+  \end{solution}
+
+
+
+\end{document}

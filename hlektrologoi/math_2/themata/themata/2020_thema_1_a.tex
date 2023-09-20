@@ -1,0 +1,181 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_themata}
+\input{definitions.tex}
+\input{myboxes}
+
+\setcounter{chapter}{1}
+
+\newcommand{\twocolumnsiden}[2]{\vspace{0.5\baselineskip}\begin{minipage}[t]{0.30\linewidth}
+    #1
+    \end{minipage}\begin{minipage}[t]{0.30\linewidth}
+    #2
+  \end{minipage}
+  \vspace{0.5\baselineskip}
+}
+
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+
+
+\begin{document}
+
+\begin{mybox3}
+  \begin{thema}
+    Έστω ότι $u$ και $v$ είναι συναρτήσεις των $x$ και $y$, οι οποίες ορίζονται μέσω των 
+    σχέσεων 
+    \[
+      \begin{rcases}  
+        u \cos{v} = x+1 \\
+        u \sin{v} = x+y
+      \end{rcases}
+    \]
+    Να δείξετε ότι η Ιακωβιανή ορίζουσα $ \pdv{(u,v)}{(x,y)} = \frac{1}{u} $.
+  \end{thema}
+\end{mybox3}
+\begin{solution}
+  \begin{description}
+    \item [Α τρόπος:] Θεωρούμε το σύστημα των πεπλεγμένων εξισώσεων
+      \[
+        \begin{rcases}
+          F(x,y,u,v) = u \cos{v} - x- 1 = 0 \\
+          G(x,y,u,v) = u \sin{v} - x - y = 0 
+        \end{rcases}
+      \]
+      Έχουμε δύο εξισώσεις με τέσσερις μεταβλητές. Ζητάμε να υπολογίσουμε την ορίζουσα
+      \[
+        \pdv{(u,v)}{(x,y)} = \begin{vmatrix*}[r]
+          u_{x} & u_{y} \\
+          v_{x} & v_{y}
+        \end{vmatrix*}
+      \]
+      επομένως, αρκεί να υπολογίσουμε τις μερικές παραγώγους $ u_{x}, u_{y}, v_{x} $ και
+      $ v_{y} $. Γι᾽ αυτό θεωρούμε ως εξαρτημένες μεταβλητές τις $ u,v $. Άρα οι μεταβλητές 
+      $ x $ και $ y $ είναι οι ανεξάρτητες.
+      Έχουμε ότι οι συναρτήσεις 
+
+      \twocolumnsiden{
+        \begin{myitemize}
+          \item $ F_{x} = -1 $
+          \item $ F_{y} = 0 $
+          \item $ F_{u} = \cos{v} $
+          \item $ F_{v} = -u\sin{v} $
+        \end{myitemize}
+      }{
+        \begin{myitemize}
+          \item $ G_{x} = -1 $
+          \item $ G_{y} = -1 $
+          \item $ G_{u} = \sin{v} $
+          \item $ G_{v} = u\cos{v} $
+        \end{myitemize}
+      }
+
+      είναι συνεχείς. Επίσης η ορίζουσα 
+      \[
+        J = \pdv{(F,G)}{(u,v)} = \begin{vmatrix*}[r]
+          F_{u} & F_{v} \\
+          G_{u} & G_{v} 
+          \end{vmatrix*} = \begin{vmatrix*}[r]
+          cosv & - u \sin{v} \\
+          \sin{v} & u \cos{v}
+        \end{vmatrix*} = 
+        u \cos^{2}{v} + u \sin^{2}{v} = u( \cos^{2}{v} + \sin^{2}{v}) = u 
+        \neq 0 \Leftrightarrow u \neq 0
+      \]
+      Οπότε σε αυτήν την περίπτωση ισχύουν οι τύποι του θεωρήματος πεπλεγμένης συνάρτησης 
+      για τις συναρτήσεις $ u(x,y) $ και $ v(x,y) $, δηλαδή:
+      \begin{align*}
+        u_{x} &= - \frac{\pdv{(F,G)}{(x,v)}}{J} = - \frac{\begin{vmatrix*}[r]
+            F_{x} & F_{v} \\
+            G_{x} & G_{v}
+          \end{vmatrix*}
+          }{J} = - \frac{\begin{vmatrix*}[r]
+            -1 & -u \sin{v} \\
+            -1 & u \cos{v}
+          \end{vmatrix*}
+        }{u} = - \frac{-u \cos{v} - u \sin{v}}{u} = 
+        \cos{v} + \sin{v} \\[0.5\baselineskip]
+        u_{y} &= - \frac{\pdv{(F,G)}{(y,v)}}{J} = - \frac{\begin{vmatrix*}[r]
+            F_{y} & F_{v} \\
+            G_{y} & G_{v}
+          \end{vmatrix*}
+          }{J} = - \frac{\begin{vmatrix*}[r]
+            0 & -u \sin{v} \\
+            -1 & u \cos{v}
+          \end{vmatrix*}
+        }{u} = - \frac{-u \sin{v}}{u} = \sin{v} \\[0.5\baselineskip]
+        v_{x} &= - \frac{\pdv{(F,G)}{(u,x)}}{J} = - \frac{\begin{vmatrix*}[r]
+            F_{u} & F_{x} \\
+            G_{u} & G_{x}
+          \end{vmatrix*}
+          }{J} = - \frac{\begin{vmatrix*}[r]
+            \cos{v} & -1 \\
+            \sin{v} & -1
+          \end{vmatrix*}
+        }{u} = - \frac{- \cos{v} + \sin{v}}{u} = \frac{\cos{v} - \sin{v}}{u}
+        \\[0.5\baselineskip]
+        v_{y} &= - \frac{\pdv{(F,G)}{(u,y)}}{J} = - \frac{\begin{vmatrix*}[r]
+            F_{u} & F_{y} \\
+            G_{u} & G_{y}
+          \end{vmatrix*}
+          }{J} = - \frac{\begin{vmatrix*}[r]
+            \cos{v} & 0 \\
+            \sin{v} & -1
+          \end{vmatrix*}
+        }{u} = - \frac{- \cos{v}}{u} = \frac{\cos{v}}{u}
+      \end{align*} 
+      Άρα, έχουμε
+      \[
+        \pdv{(u,v)}{(x,y)} = 
+        \begin{vmatrix*}[r]
+          u_{x} & u_{y} \\
+          v_{x} & v_{y}
+        \end{vmatrix*} = 
+        \begin{vmatrix*}[r]
+          \cos{v} + \sin{v} & \sin{v} \\[5pt]
+          \frac{\cos{v} - \sin{v}}{u} & \frac{\cos{v}}{u}
+        \end{vmatrix*} = \frac{\cos^{2}{v} + \sin{v} \cos{v}}{u} - \frac{\sin{v}
+        \cos{v} - \sin^{2}{v}}{u} = \frac{1}{u}
+      \]
+
+    \item [Β τρόπος:]
+
+      Λύνουμε τον δοσμένο μετασχηματισμό, ως προς $x$ και $y$
+      \[
+        \begin{rcases}  
+          u \cos{v} = x+1 \\
+          u \sin{v} = x+y
+        \end{rcases} \Leftrightarrow 
+        \begin{rcases}
+          x = 1 - u \cos{v} \\
+          y = u \sin{v} - x
+        \end{rcases} \Leftrightarrow 
+        \begin{rcases}
+          x = 1 - u \cos{v} \\
+          y = u \sin{v} - 1 + u \cos{v}
+        \end{rcases}
+      \]
+      Η Ιακωβιανή ορίζουσα του μετασχηματισμού, αυτού είναι:
+      \[
+        \pdv{(x,y)}{(u,v)} = 
+        \begin{vmatrix*}[r]
+          x_{u} & x_{v} \\
+          y_{u} & y_{v}
+        \end{vmatrix*} = 
+        \begin{vmatrix*}[c]
+          \cos{v} & u \sin{v} \\
+          \sin{v} + \cos{v} & u \cos{v} - u \sin{v}
+        \end{vmatrix*} = u \cos^{2}{v} - u \sin{v} \cos{v} + u \sin^{2}{v}
+        + u \sin{v} \cos{v} = u
+      \]
+      Αν $ u \neq 0 $ τότε ο μετασχηματισμός είναι ομαλός, άρα αντιστρέψιμος και
+      τότε, για την ορίζουσα του αντίστροφου μετασχηματισμού, ισχύει:
+      \[
+        \pdv{(u,v)}{(x,y)} = \frac{1}{\pdv{(x,y)}{(u,v)}} =
+        \frac{1}{u}
+      \] 
+  \end{description}
+\end{solution}
+
+
+\end{document}
+

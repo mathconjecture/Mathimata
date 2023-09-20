@@ -1,3 +1,4 @@
+\documentclass[a4paper,table]{report}
 \input{preamble_ask.tex}
 \input{definitions_ask.tex}
 
@@ -20,7 +21,7 @@
 
     \twocolumnside{
       \begin{enumerate}[(i)]
-        \item $ \lim_{(x,y)\to (0,0)}xy \sin{\left(\frac{1}{ y }\right)} $ 
+        \item $ \lim_{(x,y)\to (0,0)}xy \sin{\Bigl(\frac{1}{ y }\Bigr)} $ 
           \hfill Απ: $ 0 $
         \item $ \lim_{(x,y)\to (0,0)}\sqrt{ x^{2} +y^{2} }\cos{\frac{1}{\sqrt{xy} }} $ 
           \hfill Απ: $ 0 $
@@ -37,6 +38,8 @@
       \item $ \lim_{(x,y)\to (0,0)} \frac{ x^{2}y^{3} }{ x^{2} + y^{2} } $\hfill Απ: $0$ 
         % \item $ \lim_{(x,y)\to (0,0)} \frac{ x^{2}y^{3} }{ x^{2} +y^{4} } $
         % \hfill Απ: $0 $ 
+    % \item $ \lim_{(x,y)\to (0,0)}  \frac{ \sin{(x^{3}+y^{3})} }{ x^{2}+y^{2} }  $
+    %   \hfill Απ: $ 0 $
   \end{enumerate}}
 
 \item Να υπολογιστούν τα παρακάτω όρια:
@@ -53,8 +56,6 @@
       \hfill Απ: $ 0 $   
     \item $ \lim_{(x,y)\to (0,0)} \frac{ \sin{(x^{2} + y^{2})} }{ x^{2} + y^{2} } $
       \hfill Απ: $ 1 $
-    \item $ \lim_{(x,y)\to (0,0)}  \frac{ \sin{(x^{3}+y^{3})} }{ x^{2}+y^{2} }  $
-      \hfill Απ: $ 0 $
   \end{enumerate}
 }
 
@@ -84,7 +85,19 @@
     \text{και} \quad \lim\limits_{(x,y)\to (0, 0)} (1+xy)^{\frac{1}{x^{2}+y^{2}}}
   \] 
   \hfill Απ: δεν υπάρχουν 
-\end{enumerate}
+
+% \item Να δείξετε ότι δεν υπάρχει το όριο
+%   \[
+%     \lim_{\substack{x \to 0 \\ y \to 0}} \abs{x} ^{y} 
+%   \]
+%   \hfill Απ: $ \lim\limits_{\substack{x\to 0 \\y \to 0}} \abs{x} ^{y} = 
+%   \begin{cases}
+%     \infty &, \theta \to \pi /2, 3 \pi /2 \\
+%     \text{δεν ορίζεται} &, \theta = \pi /2 , 3 \pi /2 \\
+%     1 &, \text{αλλιώς}
+%   \end{cases}$ 
+
+ \end{enumerate}
 
 
 \pagebreak
@@ -93,7 +106,7 @@
 \section*{Συνέχεια}
 
 \begin{enumerate}
-  \item Να εξεταστούν πλήρως ως προς τη συνέχεια οι συνάρτησεις:
+  \item Να εξεταστούν πλήρως ως προς τη συνέχεια οι συναρτήσεις:
     \begin{enumerate}[(i)]
       \item $ f(x,y) = 
         \begin{cases}
@@ -121,9 +134,9 @@
     να είναι συνεχείς.
     \begin{enumerate}[(i)]
       \item $ f(x,y) = \sqrt{x^{2}+y^{2}} \ln{(x^{2}+y^{2})} $ 
-        \hfill Απ: $ f(0,0)=0 $ 
+        \hfill Απ: ορίζουμε $ f(0,0)=0 $ 
       \item $ f(x,y,z) = \frac{1-\cos{\sqrt{x^{2}+y^{2}+z^{2}}}}{x^{2}+y^{2}+z^{2}}$ 
-        \hfill Απ: $ f(0,0,0) = \frac{1}{2} $ 
+        \hfill Απ: ορίζουμε $ f(0,0,0) = \frac{1}{2} $ 
     \end{enumerate}
 
   \item Να δείξετε ότι η συνάρτηση 

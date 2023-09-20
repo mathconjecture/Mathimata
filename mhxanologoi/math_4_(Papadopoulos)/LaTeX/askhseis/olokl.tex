@@ -1,0 +1,74 @@
+\documentclass[a4paper,table]{report}
+\input{preamble.tex}
+\input{definitions.tex}
+
+
+\pagestyle{askhseis}
+\everymath{\displaystyle}
+% \geometry{top=2cm}
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col1}{Ασκήσεις Ολοκληρώματα}}
+\end{center}
+
+\vspace{\baselineskip} 
+
+\begin{enumerate}
+
+  \item Να υπολογιστούν τα παρακάτω ολοκληρώματα.
+
+    \begin{enumerate}[i)]
+      % spand ex 8 p.151
+      \item $ \int \limits_c\frac{\mathrm{e}^{z}}{z-2} \,{dz} $, \quad όπου 
+        \begin{enumerate*}[i),itemjoin=\hspace{\baselineskip}]
+          \item $ c: \abs{z} = 3 $
+          \item $ c: \abs{z} = 1 $. 
+        \end{enumerate*}
+        \hfill Απ: 
+        \begin{enumerate*}[i),itemjoin=\hspace{\baselineskip}]
+          \item $ 2 \pi i \mathrm{e}^{2} $ 
+          \item $0$ 
+        \end{enumerate*}
+        %shmeiwseis mou
+      \item $ \int \limits_c \frac{\mathrm{e}^{z}}{z^3} \,{dz} $, \quad όπου $ c\colon
+        \abs{z} = 1 $.
+        \hfill Απ: $ \pi i $  
+        % spand ex 8 p.278
+      \item $ \int \limits_{c}\frac{1}{z^{3}(z+4)} \,{dz} $, \quad όπου $c:\abs{z}=2 $ 
+        \hfill Απ: $ \frac{2 \pi i}{4^{3}} $  
+        % spand ex 1 p.145
+      \item $\int\limits_c\frac{5z^2-2}{z(\mathrm{e}^{z}-1)}\,dz$, \quad όπου $c:\abs{z}=2$ 
+        \hfill Απ: $2\pi i$
+        % spand ex 4 p.254 
+      \item $\int\limits_c\tan z\,dz$, \quad όπου $c:\abs{z}=2$ \hfill Απ: $-4\pi i$
+        % χρειάζεται να έχω πει ολοκληρωτικό τύπο Cauchy αλλιως παραγωγίσεις δυσκολες
+        % \item $\int\limits_c\frac{2z-3}{z(z-1)^2(z^2+4)}\,dz$, \quad οπου $c:
+        % \abs{z}=3$   \hfill Απ: 0
+    \end{enumerate}
+
+  \item Να υπολογιστούν τα παρακάτω ολοκληρώματα.
+
+    \begin{enumerate}[i)]
+      % spand ex 1 p.253
+      \item $\int\limits_c\sin \frac{1}{z}\,dz$, \quad όπου $c:\abs{z}=2$ 
+        % spand ex 3 p.254
+        \hfill Απ: $2\pi i$
+      \item $\int\limits_c\frac{\sinh z}{z^3}\,dz$, \quad όπου $c:\abs{z}=1$ 
+        \hfill Απ: $0$
+        % spand ex 3 p.254 (το 0 είναι ομαλό)
+      \item $\int\limits_c\frac{\mathrm{e}^{z}-1}{z^2+z}\,dz$, \quad όπου $c:\abs{z}=4$ 
+        \hfill Απ: $2\pi i(1- \mathrm{e}^{-1})$
+        % spand ex 20 p.289 
+      \item $ \int \limits_{c} \frac{\sin{z}}{z^{4}} \,{dz} $, \quad όπου $ \abs{z}
+        =1 $ \hfill Απ: $ - \frac{\pi i}{3} $ 
+      \item $ \int \limits_{c} \frac{\sin{(\pi z)}}{(z^{2}-1)^{2}} \,{dz} $, \quad 
+        όπου $ \abs{z-1} = 1 $
+        \hfill Απ: $ - \frac{\pi ^{2}}{2} i $  
+    \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
+

@@ -1,0 +1,633 @@
+\documentclass[a4paper,table]{report}
+\input{preamble.tex}
+\input{definitions.tex}
+\input{tikz.tex}
+
+\usepackage{xspace}
+\pagestyle{vangelis}
+
+\begin{document}
+
+
+
+\chapter{Διανυσματικοί Χώροι}
+
+
+\section{Ορισμός}
+
+\begin{dfn}
+\item {}
+  Έστω $V \neq \emptyset $, σύνολο και $\mathbb{F}$ ένα \textbf{σώμα}
+  \textit{αντιμεταθετικό} (συνήθως θεωρούμε ότι $ \mathbb{F} = \mathbb{R} $ 
+  ή $\mathbb{C}$). Το σύνολο $V$ μαζί με τις πράξεις:
+  \begin{alignat*}{2}
+    \textcolor{Col1}{+} \colon V \times V &\to V & \qquad \text{και} \qquad
+    \textcolor{Col1}{\cdot} \colon \mathbb{F} 
+    \times V &\to V \\ ( \mathbf{u}, \mathbf{v} ) &\mapsto \mathbf{u} + \mathbf{v} 
+             & ( \lambda, \mathbf{u} ) &\mapsto \lambda \mathbf{u} 
+  \end{alignat*}
+  \vspace{\baselineskip}
+  που ικανοποιούν τα παρακάτω αξιώματα:
+
+  \twocolumnside{%
+    \textbf{Το $V$ είναι ομάδα αντιμεταθετική}
+    \begin{enumerate}
+      \item $ \mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u}, \quad \forall 
+        \mathbf{u}, \mathbf{v} \in V $ 
+      \item $ ( \mathbf{u} + \mathbf{v} ) + \mathbf{w} = \mathbf{u} + 
+        ( \mathbf{v} + \mathbf{w}),
+        \quad \forall \mathbf{u}, \mathbf{v}, \mathbf{w} \in V $ 
+      \item $ \exists \mathbf{0} \in V, \; \forall \mathbf{u} \in V \quad 
+        \mathbf{u} + \mathbf{0} = \mathbf{0} + \mathbf{u} = \mathbf{u} $ 
+      \item $ \forall \mathbf{u} \in V, \; \exists \mathbf{v} \in V \quad  
+        \mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u} = \mathbf{0} $ 
+    \end{enumerate}
+    }{%
+    \textbf{και επίσης ισχύει}
+    \begin{enumerate}[resume]
+      \setcounter{enumi}{4}
+    \item $ ( \lambda + \mu ) \mathbf{u} = \lambda \mathbf{u} + \mu \mathbf{u}, \quad 
+      \forall \mathbf{u} \in V \; \text{και} \; \forall \lambda, \mu \in 
+      \mathbb{F} $ 
+    \item $ ( \lambda \mu ) \mathbf{u} = \lambda ( \mu \mathbf{u}), \quad  
+      \forall \mathbf{u} \in V \; \text{και} \; \forall \lambda, \mu \in 
+      \mathbb{F} $ 
+    \item $ \lambda ( \mathbf{u} + \mathbf{v} ) = \lambda \mathbf{u} + \lambda 
+      \mathbf{v}, \quad \forall \mathbf{u}, \mathbf{v} \in V \; \text{και} \; \forall  
+      \lambda \in \mathbb{F} $ 
+    \item $ 1 \mathbf{u} = \mathbf{u}, \quad \forall \mathbf{u} \in V $ 
+  \end{enumerate}
+}
+
+\vspace{\baselineskip}
+
+ονομάζεται \textcolor{Col1}{διανυσματικός χώρος} επί του $\mathbb{F}$, 
+(ή απλά $ \mathbb{F}-$ χώρος).  Τα 
+στοιχεία του συνόλου $V$ καλούνται \textcolor{Col1}{διανύσματα}.
+\end{dfn}
+
+\begin{rem}
+\item {}
+  \begin{enumerate}
+    \item Συνήθως για έναν διανυσματικό χώρο $V$ γράφουμε 
+      $V = (V(\mathbb{F}), +, \cdot) $.
+    \item Το διάνυσμα $ \mathbf{v} $ στο αξίωμα 4, λέγεται 
+      \textcolor{Col1}{αντίθετο} του $ \mathbf{u} $ και συμβολίζεται με 
+      $ \mathbf{v} = - \mathbf{u} $.
+    \item Είναι σημαντικό να προσέξουμε ότι στον ορισμό του διανυσματικού χώρου 
+      ορίσαμε τις πράξεις έτσι ώστε να ικανοποιούνται οι συνθήκες \textbf{κλειστότητας:}
+      \begin{myitemize}
+        \item $ \forall \mathbf{u}, \mathbf{v} \in V \quad \mathbf{u} + 
+          \mathbf{v} \in V \quad \text{(κλειστότητα πρόσθεσης)} $ 
+        \item $ \forall \mathbf{u} \in V \; \text{και} \; \lambda \in \mathbb{F} 
+          \quad \lambda \mathbf{u} \in V \quad 
+          \text{(κλειστότητα βαθμωτού πολ/σμού)} $
+      \end{myitemize}
+  \end{enumerate}
+\end{rem}
+
+\begin{rem}
+  Αν $ \mathbf{u}, \mathbf{v} \in V $ τότε θα γράφουμε ότι 
+  $ \mathbf{u} - \mathbf{v} = \mathbf{u} + (- \mathbf{v}) $, 
+  όπου $ - \mathbf{v} $ είναι το \textcolor{Col2}{αντίθετο} του $ \mathbf{v} $.
+\end{rem}
+
+
+\section{Παραδείγματα}
+
+\begin{example}\label{ex:Rn}
+  \textcolor{Col2}{Ο διανυσματικός χώρος $ \mathbb{F}^{n} $ 
+  επί του $ \mathbb{F} \quad (n \geq 1) $}
+
+  Αν $ \mathbb{F} $ ένα σώμα, τότε το σύνολο $ \mathbb{F}^{n} = 
+  \{ \mathbf{u} = (x_{1},\ldots,x_{n}) \; : \; x_{i} \in \mathbb{F}\} $ 
+  μαζί με τις πράξεις 
+  \[
+    \mathbf{u}+ \mathbf{v} = (x_{1}+ y_{1}, \ldots , x_{n}+y_{n}) 
+    \quad \text{και} \quad \lambda \mathbf{u} = 
+    ( \lambda x_{1}, \ldots, \lambda x_{n})
+  \]
+  είναι ένας διανυσματικός χώρος επί του $ \mathbb{F} $. 
+
+  Το μηδέν του χώρου 
+  είναι $ \mathbf{0} = (0,\ldots,0) $, όπου $0$ είναι το μηδέν του σώματος 
+  $ \mathbb{F} $ και το αντίθετο του $ \mathbf{u} $ είναι το $ - \mathbf{u} =
+  (- x_{1}, \ldots, - x_{n}) $.
+  Άρα ως ειδικές περιπτώσεις παίρνουμε για, $ \mathbb{F} = \mathbb{R} $ και $ n=1 $ 
+  ότι το \textcolor{Col2}{$ \mathbb{R} $ είναι διανυσματικός χώρος επί του $ \mathbb{R}
+  $}, όπως επίσης και για $ \mathbb{F} = \mathbb{C} $ και $ n=1 $ ότι το 
+  \textcolor{Col2}{$ \mathbb{C} $ είναι διανυσματικός χώρος επί του 
+  $ \mathbb{C} $}.
+\end{example} 
+
+\begin{example}\label{ex:funs} 
+  \textcolor{Col2}{Ο χώρος των πραγματικών συναρτήσεων 
+  $\mathbf{F}(A, \mathbb{R})$ ή $\mathbb{R} ^{A}$}
+
+  Αν $ A \subseteq \mathbb{R} $, τότε το σύνολο 
+  $ \mathbf{F}{(A, \mathbb{R})} = 
+  \{ f \colon A \to \mathbb{R} \; : \; f \; \text{συνάρτηση} \} $, μαζί με 
+  τις πράξεις
+  \[
+    (f+g)(x) = f(x) +g(x), \; \forall x \in A \quad \text{και} 
+    \quad (\lambda f)(x)= \lambda f(x), \; \forall x \in A
+  \] 
+  είναι ένας διανυσματικός χώρος επί του $ \mathbb{R} $.
+
+  Το μηδέν του χώρου είναι η μηδενική συνάρτηση $ \mathbf{0} $, με τιμή 
+  $ \mathbf{0}(x)=0, \; \forall x \in A $ και το αντίθετο της $f$ είναι 
+  η συνάρτηση $ -f $ με τιμή $ (-f)(x) = - f(x), \; \forall x \in A $.
+\end{example}
+
+\begin{example}
+  \textcolor{Col2}{Ο χώρος $\mathbf{P_{n}(\mathbb{F})}$ των 
+  πολυωνύμων βαθμού $ \leq n $}.
+
+  Έστω $ V = \mathbf{P_{n}}(\mathbb{F}) $ το σύνολο των πολυωνύμων βαθμού 
+  $ \leq n, \; n \in \mathbb{N}  $ με συντελεστές από ένα σώμα 
+  $ \mathbb{F} $. Δηλαδή 
+  \[
+    \mathbf{P_{n}}(\mathbb{F}) = \{ a_{n}x^{n}+a_{n-1}x^{n-1}+\cdots +
+    a_{0} \; : \; a_{i} \in \mathbb{F} \}  
+  \]
+  Τότε αν 
+  \begin{gather*}
+    p \in \mathbf{P_{n}}(\mathbb{F}) \Rightarrow p(x)
+    = a_{n}x^{n}+a_{n-1}x^{n-1}+\cdots + a_{0} \quad \text{και} 
+    \quad q \in \mathbf{P_{n}}(\mathbb{F}) \Rightarrow 
+    q(x) = b_{n}x^{n}+b_{n-1}x^{n-1}+\cdots + b_{0} 
+  \end{gather*} 
+  έχουμε, ότι το σύνολο $ V $ μαζί με τις πράξεις 
+  \begin{gather*}
+    (p+q)(x) = (a_{n}+ b_{n})x^{n} + 
+    (a_{n-1}+b_{n-1})x^{n-1}+ \cdots + (a_{0}+ b_{0}) \\
+    (\lambda p)(x) = (\lambda a_{n})x^{n}+
+    ( \lambda a_{n-1})x^{n-1}+ \cdots + ( \lambda a_{0})
+  \end{gather*} 
+  είναι ένας διανυσματικός χώρος επί του $ \mathbb{F} $.
+
+  Το μηδέν του χώρου είναι το μηδενικό πολυώνυμο $ \mathbf{0} $, 
+  με τιμή $ \mathbf{0}(x)=0+0x+\cdots +0x^{n} $ και το αντίθετο του 
+  $p$ είναι το $ - p $ με τιμή $ (- p)(x) = 
+  (-a_{n})x^{n}+(-a_{n-1})x^{n-1}+\cdots + (-a_{0}), \; \forall x \in A $.  
+\end{example}
+
+\begin{example}\label{ex:mat} 
+  \textcolor{Col2}{Το σύνολο $ M_{m \times n}(\mathbb{F}) $ 
+  των $ m \times n $ πινάκων με στοιχεία από το σώμα $ \mathbb{F} $}
+
+  Το σύνολο $ M_{m \times n}(\mathbb{F}) $ των $ m \times n $ πινάκων 
+  με στοιχεία από το σώμα $ \mathbb{F} $ είναι διανυσματικός χώρος 
+  με πράξεις τη γνωστή πρόσθεση πινάκων και τον πολλαπλασιασμό 
+  αριθμού επί πίνακα.
+
+  Το μηδέν του χώρου είναι ο μηδενικός πίνακας, $ \mathbf{0} $ όπου 
+  όλα του τα στοιχεία είναι μηδέν και αντίθετο του πίνακα $A$ είναι 
+  ο πίνακας $ -A $.
+\end{example}
+
+\begin{example}
+  \textcolor{Col2}{Το σύνολο  των τετραγωνικά ολοκληρώσιμων συναρτήσεων 
+  $ L^{2}_{[a,b]} $} 
+
+  Αν $ [a,b] \subseteq \mathbb{R} $, τότε το σύνολο 
+    $ L=\{f \colon [a,b] \to \mathbb{R} \; : \; \int _{a}^{b}
+  \abs{f(x)}^{2} \,{dx} < \infty\} $ των τετραγωνικά ολοκληρώσιμων συναρτήσεων, μαζί με 
+  τις πράξεις
+  \[
+    (f+g)(x) = f(x) +g(x), \; \forall x \in A \quad \text{και} 
+    \quad (\lambda f)(x)= \lambda f(x), \; \forall x \in A
+  \] 
+  είναι ένας διανυσματικός χώρος επί του $ \mathbb{R} $.
+
+  Το μηδέν του χώρου είναι η μηδενική συνάρτηση $ \mathbf{0} $, με τιμή 
+  $ \mathbf{0}(x)=0, \; \forall x \in A $ και το αντίθετο της $f$ είναι 
+  η συνάρτηση $ -f $ με τιμή $ (-f)(x) = - f(x), \; \forall x \in A $.
+\end{example}
+
+\begin{exercise}
+  Έστω $ V = \mathbb{R}_{+} $, το σύνολο των θετικών πραγματικών αριθμών, με 
+  πράξεις
+  \begin{gather*}
+    x \oplus y = xy \\
+    \lambda \odot x = x^{\lambda}
+  \end{gather*} 
+  Να εξετάσετε αν ο $V$ με τις πράξεις αυτές είναι διανυσματικός χώρος επί του 
+  $ \mathbb{R} $.
+\end{exercise}
+
+\begin{solution}
+\item {}
+  \begin{enumerate}[i)]
+    \item $ x \oplus y = xy = yx = y \oplus x $
+    \item $ (x \oplus y) \oplus z = (xy) \oplus z = (xy)z = x(yz) = x \oplus (yz) 
+      = x \oplus (y \oplus z) $
+    \item Έχουμε $x \oplus 1 = x\cdot 1= 1 \cdot x = 1 \oplus x = x, \; 
+      \forall x \in V $, άρα το μηδενικό στοιχείο του $V$ είναι το 1.
+    \item Έχουμε $ x \in V $ τότε $ x \oplus \frac{1}{x} = x \cdot \frac{1}{x} = 
+      \frac{1}{x} \cdot x = \frac{1}{x} \oplus x = 1, \; \forall x \in V $, άρα 
+      το αντίθετο του $x$ είναι το $ \frac{1}{x} $.
+    \item Αν $ x,y \in V $ και $ \lambda \in \mathbb{R} $ τότε $ \lambda \odot 
+      (x \oplus y) = \lambda \odot (xy) = {(xy)}^{\lambda} = 
+      x^{\lambda } y^{\lambda} = x^{\lambda } \oplus y^{\lambda } = 
+      (\lambda \odot x) \oplus (\lambda \odot y ) $
+    \item Αν $ \lambda , \mu \in \mathbb{R} $ και $ x \in V $, τότε 
+      $ (\lambda + \mu ) \odot x = x^{\lambda + \mu } = 
+      x^{\lambda } x^{\mu} = x^{\lambda} \oplus x^{\mu } = 
+      (\lambda \odot x) \oplus (\mu \odot x)  $ 
+    \item Αν $ \lambda , \mu \in \mathbb{R} $ και $ x \in V $, τότε 
+      $ (\lambda \mu ) \odot x = x^{\lambda \mu } = {(x^{\mu })}^{\lambda } = 
+      (\mu \odot x)^{\lambda } = \lambda \odot (\mu \odot x)  $
+    \item Αν $ x \in V $, τότε $ 1 \odot x = x^{1} = x $
+  \end{enumerate}
+\end{solution}
+
+\begin{prop}
+\item {}
+  \begin{enumerate}[i)]
+    \item Το ουδέτερο στοιχείο ενός διανυσματικού χώρου είναι μοναδικό.
+      \begin{proof}
+      \item {}
+        Έστω ότι υπάρχουν δύο ουδέτερα $ \mathbf{0} $ και $ \mathbf{0}' $. 
+        Τότε από το αξίωμα 3 έχουμε:
+        \begin{align*}
+          \mathbf{0}+ \mathbf{0}' = \mathbf{0} \quad 
+          \text{αφού $ \mathbf{0}'$ 
+          είναι ουδέτερο} \hfill\tikzmark{a} \\
+          \mathbf{0}'+ \mathbf{0} = \mathbf{0}' \quad 
+          \text{αφού $ \mathbf{0} $ είναι ουδέτερο}\hfill\tikzmark{b} 
+        \end{align*} 
+        \mybrace{a}{b}[$ \mathbf{0} = \mathbf{0}' $]
+      \end{proof}
+    \item Το αντίθετο στοιχείο ενός διανυσματικού χώρου είναι μοναδικό.
+      \begin{proof}
+      \item {}
+        Έστω ότι υπάρχουν δύο αντίθετα $ \mathbf{u}' $ και $ \mathbf{u}''$. 
+        Τότε από το αξίωμα 4 έχουμε:
+        \begin{align*}
+          \mathbf{u} + \mathbf{u}' = \mathbf{0} \quad 
+          \text{αφού $ \mathbf{u}'$ είναι αντίθετο} \\
+          \mathbf{u} +  \mathbf{u}''= \mathbf{0} \quad 
+          \text{αφού $ \mathbf{u}'' $ είναι αντίθετο}
+        \end{align*} 
+        Άρα
+        \[
+          \mathbf{u}' = \mathbf{u}' + \mathbf{0}= \mathbf{u}' + (\mathbf{u} 
+          + \mathbf{u}'') = (\mathbf{u}' + \mathbf{u}) + \mathbf{u}'' = 
+          \mathbf{0} + \mathbf{u}'' = \mathbf{u}'' 
+        \] 
+      \end{proof}
+  \end{enumerate}
+\end{prop}
+
+\begin{thm}
+\item {}
+  \begin{enumerate}[i)]
+    \item $ \mathbf{u} + \mathbf{v} = \mathbf{w} + \mathbf{v} 
+      \Rightarrow \mathbf{u} = \mathbf{w}, \quad \forall \mathbf{u}, 
+      \mathbf{v}, \mathbf{w} \in V $ \quad (νόμος διαγραφής)
+    \item $ 0 \cdot \mathbf{u} = \mathbf{0}, \quad \forall \mathbf{u} \in V $
+    \item $ \lambda \cdot \mathbf{0} = \mathbf{0}, \quad \forall \lambda \in 
+      \mathbb{F} $
+    \item $ (-1)\cdot \mathbf{u} = - \mathbf{u}, \quad \forall \mathbf{u} \in V $ 
+    \item $ \lambda \cdot (\mathbf{u} - \mathbf{v}) = 
+      \lambda \mathbf{u} - \lambda \mathbf{v}, \quad \forall \mathbf{u}, 
+      \mathbf{v} \in V $ και $ \lambda \in \mathbb{F} $
+    \item $ (\lambda - \mu ) \cdot \mathbf{u} = \lambda \mathbf{u} - 
+      \mu \mathbf{u}, \quad \forall \mathbf{u} \in V $ και $ \lambda, 
+      \mu \in \mathbb{F} $
+    \item $ -(- \lambda ) \cdot \mathbf{u} = \lambda \mathbf{u}, 
+      \quad \forall \mathbf{u} \in V $ και $ \lambda \in \mathbb{F} $
+  \end{enumerate}
+\end{thm}
+
+
+\begin{prop} \label{prop:prod}
+\item {}
+  Αν $ \lambda \in \mathbb{F}, \; \mathbf{u} \in V $ και $ \lambda \cdot \mathbf{u} =
+  \mathbf{0} $ τότε $ \lambda = 0 $ ή $ \mathbf{u} = \mathbf{0} $. 
+\end{prop}
+
+\begin{proof}
+\item {}
+  Έστω $ \lambda \neq 0 $. Θα δείξουμε ότι αναγκαστικά $ \mathbf{u} = \mathbf{0} $. 
+
+  Πράγματι, αφού $ \lambda \neq 0 \Rightarrow \exists \lambda ^{-1} \in \mathbb{F} $, 
+  όπου ισχύει ότι $ \lambda \cdot \lambda ^{-1} = 1 $. Οπότε 
+  \begin{gather*}
+    \lambda \cdot \mathbf{u} = \mathbf{0} \Leftrightarrow 
+    \lambda ^{-1}\cdot (\lambda \cdot \mathbf{u}) = \lambda ^{-1} \cdot \mathbf{0}
+    \Leftrightarrow 
+    (\lambda \cdot \lambda ^{-1}) \cdot \mathbf{u} = \mathbf{0} \Leftrightarrow 
+    1 \cdot \mathbf{u} = \mathbf{0} \Leftrightarrow 
+    \mathbf{u} = \mathbf{0} 
+  \end{gather*} 
+\end{proof}
+
+
+\section{Υπόχωροι}
+
+\begin{dfn}
+\item {}
+  Έστω $V(\mathbb{F}) $ διανυσματικός χώρος. Ένα υποσύνολο $W$ του $V$ λέγεται 
+  \textcolor{Col2}{υπόχωρος} του $ V $, αν είναι διανυσματικός χώρος επί του 
+  $ \mathbb{F} $, ως προς τις πράξεις του $V$ και το συμβολίζουμε με $ W \leq V $.
+\end{dfn}
+
+\begin{prop}
+  \label{prop:subsp}
+\item {}
+  Έστω $ (V(\mathbb{F}),+,\cdot) $ ένας διανυσματικός χώρος και $ W \subseteq V $.  
+  Τότε το $ W $ είναι υπόχωρος του $V$ αν και μόνον αν ικανοποιούνται οι 
+  παρακάτω συνθήκες:
+  \begin{enumerate}[i)]
+    \item $ \mathbf{0}_{V} \in W $
+    \item $ \mathbf{u}+ \mathbf{v} \in W, \quad \forall \mathbf{u}, 
+      \mathbf{v} \in W $ \quad ( $W$ κλειστό ως προς $ + $)
+    \item $ \lambda \mathbf{u} \in W, \quad \forall \mathbf{u} \in W \; 
+      \text{και} \; \lambda \in \mathbb{F} $ \quad ( $W$ κλειστό ως προς 
+      $ \cdot $)
+  \end{enumerate}
+\end{prop}
+
+
+\section{Παραδείγματα}
+
+\begin{example}
+  Το σύνολο $ \{ \mathbf{0}_{V} \} $ είναι υπόχωρος του $V$, 
+  για κάθε $V$ διανυσματικό χώρο.
+\end{example}
+
+\begin{example}\label{ex:linesplanes} 
+  \textcolor{Col2}{Ευθείες και επίπεδα}
+
+  \begin{myitemize}
+    \item Δοθέντων $ a,b \in \mathbb{R} $ το  σύνολο 
+      $ W = \{(x,y)\in \mathbb{R}^{2} \; : \; ax+by=0 \} $
+      των \textbf{ευθειών} του $ \mathbb{R}^{2} $ που διέρχονται από την αρχή των 
+      αξόνων είναι διανυσματικός χώρος, υπόχωρος τους $ \mathbb{R}^{2} $.
+    \item Επίσης, δοθέντων $ a,b,c \in \mathbb{R}^{3} $, τα σύνολα  
+      \begin{align*}
+        W &= 
+        \{
+          (x,y,z) \in \mathbb{R}^{3} \, : \, ax+by+cz=0 
+        \} 
+        \; (\text{\textbf{επίπεδα} του $ \mathbb{R}^{3}$ που διέρχονται από 
+        $(0,0,0)$}) \\
+        W &= 
+        \{
+          (x,y,z) \in \mathbb{R}^{3} \, : \, ax+by+cz=0, 
+          \; \text{και} \; a'x+b'y+c'z=0 
+        \} 
+        \; (\text{\textbf{ευθείες} του $ \mathbb{R}^{3}$ που διέρχονται από 
+        $(0,0,0)$}) 
+      \end{align*}
+      είναι διανυσματικοί χώροι, υπόχωροι του $ \mathbb{R}^{3} $.
+  \end{myitemize}
+\end{example}
+
+\begin{exercise}
+    Να δείξετε ότι το υποσύνολο $ W = \{(x,y,z)\in \mathbb{R}^{3} \; : 
+    \; 2x-3y+z=0 \} $ είναι υπόχωρος του $ \mathbb{R}^{3} $.
+\end{exercise}
+\begin{solution}
+\item {}
+  Εξετάζουμε την κλειστότητα της πρόσθεσης. Έστω 
+  \begin{align*}
+    \mathbf{w}_{1} = (x_{1}, y_{1}, z_{1}) \in W 
+    \Rightarrow  2 x_{1} - 3 y_{1} + z_{1} = 0 \\
+    \mathbf{w_{2}} = (x_{2}, y_{2}, z_{2}) \in W 
+    \Rightarrow 2 x_{2} - 3 y_{2} + z_{2} = 0
+  \end{align*} 
+  Άρα 
+  \[
+    \mathbf{w_{1}} + \mathbf{w_{2}} = (x_{1}, y_{1}, z_{1}) + 
+    (x_{2}, y_{2}, z_{2}) = (x_{1}+ y_{1}, x_{2}+ y_{2}+ z_{1} + z_{2})
+  \] 
+  Εξετάζουμε αν $ \mathbf{w_{1}}+ \mathbf{w_{2}} \in W $. Έχουμε:
+  \[
+    2 (x_{1}+ y_{1}) -3 (x_{2}+ y_{2}) + (z_{1}+ z_{2}) = 
+    \underbrace{2 x_{1} - 3 y_{1} + z_{1}}_{=0} + 
+    \underbrace{2 x_{2}- 3 y_{2} + z_{2}}_{=0} = 0 + 0 = 0 
+  \] 
+  Εξετάζουμε την κλειστότητα του βαθμωτού πολλαπλασιασμού. Έστω 
+  \[
+    \mathbf{w} = (x, y, z) \in W \Rightarrow  2 x - 3 y + z = 0 \quad \text{και} \quad
+    \lambda \in \mathbb{R}
+  \]
+  Άρα 
+  \[
+    \lambda \mathbf{w} = \lambda (x,y,z) = (\lambda x, \lambda y, \lambda z) 
+  \] 
+  Εξετάζουμε αν $ \mathbf{\lambda w} \in W $. Έχουμε:
+  \[
+    2(\lambda x) -3 (\lambda y) + \lambda z = \lambda (2x-3y+z) = 2\cdot 0 = 0 
+  \] 
+\end{solution}
+
+\begin{example}
+  \textcolor{Col2}{Ο χώρος των συνεχών πραγματικών συναρτήσεων 
+  $ \mathbf{C}[a,b] $} 
+
+  Έστω $ W = \mathbf{C}{[a,b]} = \{ f \colon [a,b] \to \mathbb{R} \; 
+  : \; f \; \text{συνεχής συνάρτηση} \} \subseteq 
+  \mathbf{F}(A, \mathbb{R}) $. 
+
+  Τότε ως προς τις πράξεις του 
+  παραδείγματος~\ref{ex:funs}, των διανυσματικών χώρων ο $W$ 
+  είναι ένας διανυσματικός χώρος επί του $ \mathbb{R} $, υπόχωρος του 
+  $\mathbf{F}(A, \mathbb{R})$,
+  γιατί το άθροισμα $ f+g $ δύο συνεχών συναρτήσεων $ f,g $ είναι 
+  συνεχής συνάρτηση καθώς και το βαθμωτό γινόμενο 
+  $ \lambda f, \; \lambda \in \mathbb{R} $, μιας συνεχούς συνάρτησης 
+  $f$ είναι επίσης συνεχής συνάρτηση. 
+\end{example}
+
+\begin{example}\label{ex:c1} 
+  \textcolor{Col2}{Ο χώρος των διαφορίσιμων με 
+  συνεχή παράγωγο πραγματικών συναρτήσεων $ \mathbf{C^{1}}[a,b] $} 
+
+  Έστω $ W = \mathbf{C^{1}}{[a,b]} = \{ f \colon [a,b] \to \mathbb{R} \; 
+  : \; f \; \text{διαφορίσιμη με συνεχή παράγωγο} \} \subseteq 
+  \mathbf{C}[a,b] $. 
+
+  Τότε ως προς τις πράξεις του 
+  παραδείγματος~\ref{ex:funs}, των διανυσματικών χώρων ο $W$ 
+  είναι ένας διανυσματικός χώρος επί του $ \mathbb{R} $, υπόχωρος του 
+  $ \mathbf{C}[a,b] $.
+\end{example}
+
+% \begin{example}
+%   \textcolor{Col2}{Ο χώρος των λύσεων μιας γραμμικής, ομογενούς 
+%   διαφορικής εξίσωσης}
+%   Έστω μια γραμμική, ομογενής διαφορική εξίσωση $ f''(x)+5f'(x)+6f(x)=0 $ 
+%   και έστω 
+%   \[
+%     W = \{ f \in \mathbf{C^{2}}(\mathbb{R}) \; : \; 
+%     \text{$f$ λύση της διαφ. εξίσωσης} \} \subseteq \mathbf{C}[a,b]
+%   \] 
+%   Τότε, ως προς τις πράξεις του παραδείγματος~\ref{ex:funs}, των 
+%   διανυσματικών χώρων, το 
+%   σύνολο $ W $ των λύσεων είναι ένας διανυσματικός χώρος επί του
+%   $ \mathbb{R} $, υπόχωρος του $ \mathbf{C}[a,b] $. 
+%   Πράγματι, αν $ f,g $ λύσεις της διαφ. εξίσωσης δηλαδή αν 
+%   $ f,g \in V $, έχουμε:
+%   \begin{gather*}
+%     (f+g)''(x)+5(f+g)'(x)+6(f+g)(x) = [f''(x)+5f'(x)+6f(x)] 
+%     + [g''(x)+5g'(x)+6g(x)] = 0+0=0 \\
+%     (\lambda f)''(x) + 5(\lambda f)'(x)+6(\lambda f)(x)= \lambda
+%     [f''(x)+5f'(x)+6f(x)] = \lambda \cdot 0=0
+%   \end{gather*}
+%   Συνεπώς $ f+g \in V $ και $ \lambda f \in V $. 
+% \end{example}
+
+\begin{example}
+  \textcolor{Col2}{Το σύνολο των συμμετρικών πινάκων}
+
+  Έστω $ V = M_{n}(\mathbb{F}) $ και $ W = \{ A \in M_{n}(\mathbb{F}) \;
+  : \; A^{T}=A \}  $. Τότε $ W \leq V $.
+  \begin{proof}
+  \item {}
+    \begin{enumerate}[i)]
+      \item  $ \mathbf{0} \in W $, αφού $ \mathbf{0}^{T}= 
+        \mathbf{0} $
+      \item Αν $ A, B \in W \Rightarrow A^{T}=A $ και $ B^{T}=B $, 
+        οπότε $ (A+B)^{T}= A^{T}+B^{T}=A+B $, άρα $A+B \in W$
+      \item Αν $ A \in W $ και $ \lambda \in \mathbb{F} $, τότε 
+        $A^{T}=A$, οπότε $(\lambda A)^{T} = \lambda A^{T} = 
+        \lambda A  $ , άρα $ \lambda A \in W $
+    \end{enumerate}
+  \end{proof}
+\end{example}
+
+\begin{example}
+  \textcolor{Col2}{Το σύνολο των αντι-συμμετρικών πινάκων}
+
+  Έστω $ V = M_{n}(\mathbb{F}) $ και $ W = \{ A \in M_{n}(\mathbb{F}) \;
+  : \; A^{T}=-A \}  $. Τότε $ W \leq V $.
+  \begin{proof}
+  \item {}
+    \begin{enumerate}[i)]
+      \item  $ \mathbf{0} \in W $, αφού $ \mathbf{0}^{T}= 
+        \mathbf{0} = - \mathbf{0} $
+      \item 
+        Αν $ A, B \in W \Rightarrow A^{T}=-A $ και $ B^{T}=-B $, οπότε
+        $ (A+B)^{T}= A^{T}+B^{T}=-A-B = - (A+B) $, άρα $A+B \in W$
+      \item Αν $ A \in W $ και $ \lambda \in \mathbb{F} $, τότε 
+        $A^{T}=-A$, οπότε $(\lambda A)^{T} = \lambda A^{T} =
+        -\lambda A  $, άρα $ \lambda A \in W $
+    \end{enumerate}
+  \end{proof}
+\end{example}
+
+\begin{example}
+  \textcolor{Col2}{Το σύνολο των άνω τριγωνικών πινάκων}
+
+  Έστω $ V = M_{n}(\mathbb{F}) $ και $ W = \{ A \in M_{n}(\mathbb{F}) \;
+  : \; \; a_{ij} = 0, \; i>j \}  $. Τότε $ W \leq V $.
+
+  \begin{proof}
+  \item {}
+    \begin{enumerate}[i)]
+      \item  $ \mathbf{0} \in W $, αφού $ \mathbf{0} $ 
+        προφανώς είναι άνω τριγωνικός.
+      \item  Αν $ A, B \in W \Rightarrow a_{ij} = b_{ij} = 0, 
+        \; i>j$, οπότε $a_{ij} + b_{ij} = 0, \; i>j$, άρα $A+B \in W$
+      \item Αν $ A \in W $ και $ \lambda \in \mathbb{F} $, τότε 
+        $a_{ij} = 0, \; i>j$, οπότε $ \lambda a_{ij} = 0, \; i>j$, 
+        άρα $ \lambda A \in W $
+    \end{enumerate}
+  \end{proof}
+\end{example}
+
+\begin{example}
+  \textcolor{Col2}{Το σύνολο των κάτω τριγωνικών πινάκων}
+  \begin{proof}
+    Ομοίως
+  \end{proof}
+\end{example}
+
+\begin{example}
+  \textcolor{Col2}{Το σύνολο των διαγώνιων πινάκων}
+
+  \begin{proof}
+    Ομοίως
+  \end{proof}
+\end{example}
+
+\begin{prop}
+  Ισχύουν οι ιδιότητες:
+  \begin{enumerate}[i)]
+    \item $ V \leq V $
+    \item Αν $ W \leq V $ και $ V \leq W $, τότε $ V = W $.
+    \item Αν $ U \leq W $ και $ W \leq V $, τότε $ U \leq V $.
+  \end{enumerate}
+\end{prop}
+
+\begin{rem}
+  Οι υπόχωροι $ \{ \mathbf{0}_{V} \} $ και $V$, ενός διανυσματικού χώρου $V$, 
+  λέγονται \textcolor{Col2}{τετριμμένοι υπόχωροι}.
+\end{rem}
+
+
+\begin{prop}[Τομή 2 υποχώρων] \item {}
+  Αν $ W_{1}, W_{2} $ υπόχωροι του $V$, τότε και $ W_{1} \cap W_{2} $ είναι 
+  επίσης υπόχωρος του $V$.
+\end{prop}
+\begin{proof}
+\item {}
+  Έχουμε ότι $ W_{1} \cap W_{2} \neq \emptyset $, γιατί 
+  $ \mathbf{0} \in W_{1} \cap W_{2} $.  Πράγματι:
+  \begin{align*}
+    W_{1} \leq V \Rightarrow \mathbf{0} \in W_{1} \tikzmark{a} \\
+    W_{2} \leq V \Rightarrow \mathbf{0} \in W_{2} \tikzmark{b}
+  \end{align*} 
+  \mybrace{a}{b}[$ \mathbf{0} \in W_{1} \cap W_{2}$] 
+  \begin{description}
+    \item [i)] Έχουμε
+      \begin{align*}
+        \mathbf{w}_{1} \in W_{1} \cap W_{2} \Rightarrow 
+        \mathbf{w}_{1} \in W_{1} \; 
+        \text{και} \; \mathbf{w}_{1} \in W_{2} \tikzmark{a} \\
+        \mathbf{w}_{2} \in W_{1} \cap W_{2} \Rightarrow 
+        \mathbf{w}_{2} \in W_{1} \; 
+        \text{και} \; \mathbf{w}_{2} \in W_{2} \tikzmark{b} 
+        \mybrace{a}{b}[$ \mathbf{w}_{1}+ \mathbf{w}_{2} \in W_{1} 
+        \; \text{και} \; \mathbf{w}_{1}+ \mathbf{w}_{2} \in W_{2} $] 
+      \end{align*}
+      άρα $ \mathbf{w}_{1}+ \mathbf{w}_{2} \in W_{1} \cap W_{2}$ 
+    \item [ii)]
+      Αν $ \mathbf{w} \in W_{1} \cap W_{2} $ και $ \lambda \in \mathbb{F} $, 
+      τότε 
+      $ \mathbf{w} \in W_{1} $ και $ \mathbf{w} \in W_{2} $, 
+      οπότε $ \lambda \mathbf{w} \in W_{1} $ και 
+      $ \lambda \mathbf{w} \in W_{2} $, άρα $ \lambda \mathbf{w} \in W_{1} 
+      \cap W_{2} $
+  \end{description}
+\end{proof}
+
+\begin{prop}[Τομή οποιουδήποτε πλήθους υποχώρων]
+\item {}
+  Έστω $ I $ σύνολο και $ \{ W_{i} \; : \; i \in I \}$ οικογένεια υποχώρων του $V$. 
+  Τότε το σύνολο $ W = \smash{\bigcap\limits_{i \in I}} W_{i} = 
+  \{ \mathbf{v} \in V \; : \; \mathbf{v} \in W_{i}, \; \forall i \in I \} $ 
+  είναι υπόχωρος του $V$.
+\end{prop}
+
+\begin{rem}
+  Η ένωση 2 υποχώρων $ W_{1} $ και $ W_{2} $ ενός διανυσματικού χώρου $V$ δεν είναι 
+  απαραίτητα υπόχωρος του $V$. Πράγματι, αν $ W_{1} $ είναι ο άξονας $x$ και 
+  $ W_{2} $ ο άξονας $y$, υπόχωροι του $ \mathbb{R}^{2} $ 
+  (ως ευθείες που διέρχονται από το (0,0)), τότε έχουμε
+  \begin{align*}
+    \mathbf{w}_{1} = (2,0) \in W_{1} \tikzmark{a} \\
+    \mathbf{w}_{2} = (0,3) \in W_{2} \tikzmark{b} 
+  \end{align*} 
+  \mybrace{a}{b}[$ \mathbf{w}_{1}+ \mathbf{w}_{2} = (2,3) \not \in W_{1} 
+  \cup W_{2} $]
+\end{rem}
+
+
+\end{document}
+
+

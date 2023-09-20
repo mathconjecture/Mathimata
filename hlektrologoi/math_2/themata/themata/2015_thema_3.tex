@@ -1,0 +1,269 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_themata}
+\input{definitions.tex}
+\input{myboxes}
+\input{tikz}
+
+\geometry{left=12.5mm,right=12.5mm,top=30.25mm,bottom=30.25mm,footskip=24.16mm,headsep=24.16mm}
+
+\newcommand{\twocolumnsidelcc}[2]{\begin{minipage}[c]{0.35\linewidth}\raggedright
+        #1
+        \end{minipage}\hfill\begin{minipage}[c]{0.60\linewidth}\raggedright
+        #2
+    \end{minipage}
+}
+
+\mdfdefinestyle{myboxstyle1}{linecolor=Col1!75,linewidth=0pt,
+  backgroundcolor=Col1!25, %background color of the box
+  shadow=false,shadowcolor=Col1,shadowsize=5pt,% shadows
+}
+
+
+\newcommand{\twocolumnsiden}[2]{\vspace{0.5\baselineskip}\begin{minipage}[t]{0.30\linewidth}
+    #1
+    \end{minipage}\begin{minipage}[t]{0.30\linewidth}
+    #2
+  \end{minipage}
+  \vspace{0.5\baselineskip}
+}
+
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+
+
+\begin{document}
+
+\begin{mybox3}
+  \begin{thema}
+        Θεωρούμε το επίπεδο σύστημα συντεταγμένων $ Ox'y' $, το οποίο προκύπτει από την 
+        αριστερόστροφη περιστροφή του συστήματος $ Oxy $ κατά γωνία $\theta$. 
+        Έστω επίσης $ \mathbf{r} $ το διάνυσμα θέσης του σημείου $ P(x,y) $. 
+    \begin{enumerate}[i)]
+      \item Να βρείτε τη σχέση που συνδέει τις συντεταγμένες στα δύο αυτά συστήματα.
+      \item Με κατάλληλη περιστροφή και μεταφορά των αξόνων, να βρεθεί σε κανονική μορφή 
+        η έλλειψη:
+        \[
+          5x^{2} + 5y^{2} + 8xy - 18x - 18y +9 = 0
+        \] 
+    \end{enumerate}
+  \end{thema}
+\end{mybox3}
+\begin{solution}
+\item {}
+  \twocolumnsidelcc{
+    \includegraphics[]{coordinates.pdf}
+  }{
+    \begin{enumerate}[i)]
+      \item Από τα ορθογώνια τρίγωνα $ OxP $ και $ Ox'P $ έχουμε αντίστοιχα:
+    \end{enumerate}
+    \[
+      \begin{matrix}
+        x = r \cos{\omega} \\
+        y = r \sin{\omega}
+      \end{matrix} 
+      \quad \text{και} \quad 
+      \begin{matrix}
+        x' = r \cos{(\omega - \theta)} = \overbrace{r \cos{\omega}}^{x} \cos{\theta} +
+        \overbrace{r \sin{\omega}}^{y}
+        \sin{\theta} \\
+        y' = r \sin{(\omega - \theta)} = \underbrace{r \sin{\omega}}_{y} \cos{\theta} -
+        \underbrace{r \cos{\omega}}_{x}
+        \sin{\theta}
+      \end{matrix} 
+    \]
+    όπου χρησιμοποιήσαμε τις γνωστές τριγωνομετρικές ταυτότητες
+    \begin{mybox1}
+      \[
+        \begin{aligned}
+          \cos{(a-b)} = \cos{a} \cos{b} + \sin{a} \sin{b} \\
+          \sin{(a-b)} = \sin{a} \cos{b} - \cos{a} \sin{b}
+        \end{aligned}
+      \]
+    \end{mybox1}
+  }
+
+  Επομένως
+  \[
+    \left.
+      \begin{matrix}
+        x' = x \cos{\theta} + y \sin{\theta} \\
+        y' = y \cos{\theta} - x \sin{\theta}
+      \end{matrix} 
+    \right\} 
+    \Leftrightarrow 
+    \begin{pmatrix*}[r] x' \\ y' \end{pmatrix*} = 
+    \begin{pmatrix*}[r]
+      \cos{\theta} & \sin{\theta} \\
+      - \sin{\theta} & \cos{\theta}
+    \end{pmatrix*}
+    \cdot 
+    \begin{pmatrix*}[r] x \\ y \end{pmatrix*} 
+    \Leftrightarrow 
+    X' = A\cdot X
+  \] 
+  Όμως ισχύει ότι $ X = A^{-1} \cdot X' $ όπου $ A^{-1} = 
+  \begin{pmatrix*}[r]
+    \cos{\theta} & - \sin{\theta} \\
+    \sin{\theta} & \cos{\theta}
+  \end{pmatrix*} $ 
+  είναι ο αντίστροφος πίνακας του $A$.
+  \begin{mybox1}
+    Θυμάμαι, αν $ A=  
+    \begin{pmatrix*}[r]
+      a & b \\
+      c & d
+    \end{pmatrix*}
+    $ με $ \abs{A} = 
+    \begin{vmatrix*}[r]
+      a & b \\
+      c & d
+    \end{vmatrix*} = ad - bc \neq 0
+    $, τότε $ A^{-1} = \frac{1}{\abs{A}}
+    \begin{pmatrix*}[r]
+      d & - b \\
+      -c & a
+    \end{pmatrix*}
+    $ είναι ο αντίστροφος του $A$.
+  \end{mybox1}
+
+  Άρα 
+  \[
+    \begin{pmatrix*}[r] x \\ y \end{pmatrix*} = 
+    \begin{pmatrix*}[r]
+      \cos{\theta} & - \sin{\theta} \\
+      \sin{\theta} & \cos{\theta}
+    \end{pmatrix*}
+    \cdot 
+    \begin{pmatrix*}[r] x' \\ y' \end{pmatrix*} 
+    \Leftrightarrow 
+        \left.
+          \begin{matrix}
+            x = x' \cos{\theta} - y' \sin{\theta} \\
+            y = x' \sin{\theta} + y' \cos{\theta}
+          \end{matrix}
+      \right\}
+  \] 
+  Επομένως οι σχέσεις που συνδέουν τις συντεταγμένες του τυχαίου σημείου $ P(x,y) $ 
+  στα δύο αυτά συστήματα, είναι:
+  \begin{empheq}[box=\mathboxg]{equation*}
+    \left.
+      \begin{matrix}
+        x' = x \cos{\theta} + y \sin{\theta} \\
+        y' = y \cos{\theta} - x \sin{\theta}
+      \end{matrix} 
+    \right\} 
+    \quad \text{ή} \quad 
+    \left.
+      \begin{matrix}
+        x = x' \cos{\theta} - y' \sin{\theta} \\
+        y = x' \sin{\theta} + y' \cos{\theta}
+      \end{matrix} 
+    \right\} 
+  \end{empheq}
+  ή ισοδύναμα με τη βοήθεια πινάκων
+  \begin{empheq}[box=\mathboxg]{equation*}
+    \begin{pmatrix*}[r] x' \\ y' \end{pmatrix*} = 
+    \begin{pmatrix*}[r]
+      \cos{\theta} & \sin{\theta} \\
+      - \sin{\theta} & \cos{\theta}
+    \end{pmatrix*}
+    \cdot 
+    \begin{pmatrix*}[r] x \\ y \end{pmatrix*} 
+    \quad \text{ή} \quad 
+    \begin{pmatrix*}[r] x \\ y \end{pmatrix*} = 
+    \begin{pmatrix*}[r]
+      \cos{\theta} & - \sin{\theta} \\
+      \sin{\theta} & \cos{\theta}
+    \end{pmatrix*}
+    \cdot 
+    \begin{pmatrix*}[r] x' \\ y' \end{pmatrix*} 
+  \end{empheq}
+
+  \begin{enumerate}[i),start=2]
+    \item Η εξίσωση της έλλειψης $ 5x^2+5y^2+8xy-18x-18y+9=0 $, γίνεται:
+      \begin{equation*}
+        \begin{split}
+          5(x' \cos{\theta} &- y' \sin{\theta} )^2+5(x' \sin{\theta +y' \cos{\theta} } )^2+
+          8(x' \cos{\theta} -y' \sin{\theta} )(x' \sin{\theta} +y' \cos{\theta}) - 18
+          (x' \cos{\theta -y' \sin{\theta}} ) \\
+                            &-18(x' \sin{\theta} +y' \cos{\theta} ) +9=0 \Leftrightarrow 
+        \end{split}
+      \end{equation*}
+      \begin{equation*}
+        \begin{split}
+          5({x'}^2 \cos^{2}{\theta} &+ {y'}^2 \sin^{2}{\theta} -2x'y' \sin{\theta \cos{\theta}
+          } )+5({x'}^2 \sin^{2}{\theta} +{y'}^2 \cos^{2}{\theta} + 2x'y' \sin{\theta}
+          \cos{\theta} ) + 8{x'}^2 \sin{\theta} \cos{\theta} \\ 
+          &-8{y'}^2 \sin{\theta} \cos{\theta}+8x'y' \cos^{2}{\theta} -8x'y' \sin^{2}{\theta} - 18x' \cos{\theta}
+          +18y' \sin{\theta} -18x' \sin{\theta} -18y' \cos{\theta} +9 = 0 \Leftrightarrow 
+      \end{split}
+    \end{equation*}
+    \begin{equation*}
+      {x'}^2(5+8 \sin{\theta} \cos{\theta} )+{y'}^2(5-8 \sin{\theta}
+      \cos{\theta})+8x'y'\underbrace{(\cos^{2}{\theta} - \sin^{2}{\theta}
+      )}_{\text{θέλω } 0}-18x'(\cos{\theta} +
+      \sin{\theta})+18y'(- \cos{\theta} + \sin{\theta} )+9=0 
+    \end{equation*}
+    Θέτουμε $ \cos^{2}{\theta} = \sin^{2}{\theta} \overset{\theta \in
+    [0, \pi /2]}{\Leftrightarrow}
+    \cos{\theta} = \sin{\theta} \Leftrightarrow \theta = \frac{\pi}{4} $. Άρα 
+    για $ \theta = \frac{\pi}{4} $, έχουμε ότι $ \cos{\theta} = \sin{\theta} =
+    \frac{\sqrt{2}}{2} $ και η εξίσωση, μετά τη στροφή του συστήματος συντεταγμένων,
+    κατά γωνία $ \theta $, γίνεται: 
+    \begin{equation*}
+      9{x'}^2+{y'}^2-18 \sqrt{2} x'+9=0 
+    \end{equation*}
+    Κάνουμε μεταφορά της αρχής του συστήματος συντεταγμένων, θέτοντας:
+    \[
+      \left.
+        \begin{matrix}
+          x''=x'- x_{0} \\
+          y''=y'- y_{0}
+        \end{matrix} 
+      \right\} \Leftrightarrow 
+      \left.
+        \begin{matrix}
+          x'= x_{0}+ x'' \\
+          y'= y_{0}+ y''
+        \end{matrix} 
+      \right\}
+    \]
+    και προκύπτει:
+    \begin{align*}
+      9(x_{0}+x'')^2+(y_{0}+y'')^2-18 \sqrt{2} (x_{0}+x'')+9=0 \Leftrightarrow \\
+      9 x_{0}^2+ 18 x_{0}x'' +9{x''}^2+ y_{0}^2+2 y_{0}y''+{y''}^2- 18 \sqrt{2} x_{0}- 18
+      \sqrt{2} x''+9=0 \Leftrightarrow \\
+      9{x''}^2+{y''}^2+x''\underbrace{(18 x_{0}-18 \sqrt{2})}_{\text{θέλω }0}+
+      y''\underbrace{2y_{0}}_{\text{θέλω }0}+9 x_{0}^2-18 \sqrt{2} x_{0}+ y_{0}^2+9=0
+      \Leftrightarrow \\
+    \end{align*}
+    Οπότε, θέτουμε:
+    \[
+      \left.
+        \begin{matrix}
+          18 x_{0}= 18 \sqrt{2} \\
+          2 y_{0}= 0 
+        \end{matrix} 
+      \right\} \Leftrightarrow 
+      \left.
+        \begin{matrix}
+          x_{0} = \sqrt{2} \\
+          y_{0}=0
+        \end{matrix} 
+      \right\} 
+    \]
+    Οπότε η εξίσωση της έλλειψης, γίνεται:
+    \[
+      9{x''}^2+{y''}^2 + 9 (\sqrt{2} )^2 - 18 \sqrt{2} \sqrt{2} + 9 = 0 \Leftrightarrow 
+      9{x''}^2+{y''}^2=9 \Leftrightarrow 
+      {x''}^2+ \frac{{y''}^2}{3^2} = 1
+    \]
+    Άρα η κανονική μορφή της εξίσωσης της έλλειψης, είναι:
+    \begin{empheq}[box=\mathboxg]{equation*}
+      {x''}^2+ \frac{{y''}^2}{3^2} = 1
+    \end{empheq}
+\end{enumerate}
+\end{solution}
+
+
+\end{document}

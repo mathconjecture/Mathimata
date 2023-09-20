@@ -1,0 +1,91 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_themata}
+\input{definitions.tex}
+\input{myboxes}
+
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+
+
+\begin{document}
+
+\begin{mybox3}
+  \begin{thema}
+    Έστω η εξίσωση $ F(x,y,z)=z+x \mathrm{e}^{z} - y = 0 $. Να εξετάσετε αν μέσω της
+    εξίσωσης αυτής ορίζεται 
+    πεπλεγμένα η συνάρτηση $ z=z(x,y) $ σε μια περιοχή του σημείου $ P(0,0,0) $ και αν 
+    ορίζεται να την προσεγγίσετε με το ανάπτυγμα \textbf{Maclaurin} μέχρι και όρους 2ης 
+    τάξης.
+  \end{thema}
+\end{mybox3}
+\begin{solution}
+  \item {}
+    Ελέγχουμε αν ικανοποιούνται οι προϋποθέσεις του θεωρήματος πεπλεγμένης 
+    συνάρτησης για το σημείο $ P(0,0,0) $, 
+    \begin{enumerate}[i)]
+      \item $ F(0,0,0) = 0+0 \mathrm{e}^{0}-0 = 0 $
+      \item $ F_{x} = \mathrm{e}^{z}, \; F_{y} = -1, \; F_{z} = 1+ x \mathrm{e}^{z}
+        $ είναι συνεχείς στο σημείο $ P(0,0,0) $ 
+      \item $ F_{z}(0,0,0) = 1 + 0 \mathrm{e}^{0} = 1 \neq 0 $
+    \end{enumerate}
+    Επομένως ικανοποιούνται οι προϋποθέσεις του θεωρήματος πεπλεγμένης συνάρτησης και 
+    άρα υπάρχει μοναδική συνάρτηση $ z=z(x,y) $ με συνεχείς μερικές παραγώγους, για την 
+    οποία ισχύουν:
+    \begin{myitemize}
+      \item \inlineequation[eq:zzero]{0 = z(0,0)} 
+      \item $ z_{x} = - \frac{F_{x}}{F_{z}} = - \frac{\mathrm{e}^{z}}{1+x 
+        \mathrm{e}^{z} } \Rightarrow \inlineequation[eq:zxzero]
+        {z_{x}(0,0) \overset{\eqref{eq:zzero}}{=} - 
+        \frac{\mathrm{e}^{0}}{1+ 0 \mathrm{e}^{0}} = \textcolor{Col1}{-1}} $
+      \item $ z_{y} = - \frac{F_{y}}{F_{z}} = - \frac{-1}{1+x \mathrm{e}^{z}} =
+        \frac{1}{1+x \mathrm{e}^{z}} \Rightarrow 
+        \inlineequation[eq:zyzero]{z_{y}(0,0) \overset{\eqref{eq:zzero}}{=} 
+        \frac{1}{1+0 \mathrm{e}^{0}} = \textcolor{Col1}{1}} $ 
+    \end{myitemize}
+    Για να βρούμε τις μερικές παραγώγους 2ης τάξης, ξαναπαραγωγίζουμε τις μερικές
+    παραγώγους 1ης τάξης. Όμως, \textcolor{Col1}{προσοχή}, γιατί $ z=z(x,y) $, 
+    είναι συνάρτηση και πρέπει να το λάβουμε υπόψη μας κατά την παραγώγιση.
+    \begin{myitemize}
+      \item $ z_{xx} = \Bigl(- \frac{\mathrm{e}^{z}}{1+ x \mathrm{e}^{z}}\Bigr)_{x} = - 
+        \frac{(\mathrm{e}^{z})_{x} (1+x \mathrm{e}^{z}) - \mathrm{e}^{z}(1+x 
+        \mathrm{e}^{z})_{x}}{(1+x \mathrm{e}^{z} )^{2}} = - 
+        \frac{\mathrm{e}^{z}z_{x}(1+x \mathrm{e}^{z}) - 
+        \mathrm{e}^{z}(\mathrm{e}^{z} + x \mathrm{e}^{z} z_{x})}{(1+x
+      \mathrm{e}^{z})^{2}} \Rightarrow $
+
+      $ z_{xx}(0,0) \overset{\eqref{eq:zzero}, \eqref{eq:zxzero}}{=} -
+      \frac{\mathrm{e}^{0} (-1) (1+0 \mathrm{e}^{0}) - \mathrm{e}^{0} (\mathrm{e}^{0} + 0
+      \mathrm{e}^{0})}{(1+ 0 \mathrm{e}^{0})^{2}} = - \frac{-1-1}{1} =
+      \textcolor{Col1}{2}  $
+
+    \item $ z_{yy} = \Bigl(\frac{1}{1+ x \mathrm{e}^{z}}\Bigr)_{y} = - \frac{1}{(1+x
+        \mathrm{e}^{z} )^{2}} (1+x \mathrm{e}^{z} )_{y} = - \frac{x \mathrm{e}^{z}
+      z_{y}}{(1+x \mathrm{e}^{z} )^{2}} \Rightarrow $
+
+      $ z_{yy}(0,0) \overset{\eqref{eq:zzero}, \eqref{eq:zyzero}}{=} - \frac{0
+      \mathrm{e}^{0} 1}{(1+0 \mathrm{e}^{0})^{2}} = \textcolor{Col1}{0} $
+
+    \item $ z_{xy} = z_{yx} = \Bigl(\frac{1}{1+ x \mathrm{e}^{z}}\Bigr)_{x} = 
+      - \frac{1}{(1+x \mathrm{e}^{z} )^{2}} (1+x \mathrm{e}^{z} )_{x} = -
+      \frac{\mathrm{e}^{z} + x \mathrm{e}^{z} z_{x}}{(1+x \mathrm{e}^{z} )^{2}}
+      \Rightarrow $ 
+
+      $ z_{xy}(0,0) = z_{yx}(0,0)  \overset{\eqref{eq:zzero}, \eqref{eq:zxzero}}{=} 
+      - \frac{\mathrm{e}^{0} + 0 \mathrm{e}^{0}(-1)}{(1+ 0 
+      \mathrm{e}^{0})^{2}} = \textcolor{Col1}{-1} $
+  \end{myitemize}
+
+  Άρα το ανάπτυγμα Maclaurin της $ z(x,y) $ θα είναι:
+  \begin{align*}
+    z(x,y) &= z(0,0) + \frac{1}{1!} [ z_x(0,0)x+z_{y}(0,0)y ] + 
+    \frac{1}{2!} [ z_{xx}(0,0)x^{2}+2z_{xy}(0,0)xy+z_{yy}(0,0)y^{2} ] \\
+           &= 0 + \frac{1}{1!} [(-1)x+1y] + \frac{1}{2} [2x^{2}+2(-1)xy+0y^{2}] \\ 
+           &= -x+y + x^{2}-xy
+  \end{align*}
+
+  Άρα $ z(x,y) = -x+y+z^{2}-xy $
+
+\end{solution}
+
+
+\end{document}

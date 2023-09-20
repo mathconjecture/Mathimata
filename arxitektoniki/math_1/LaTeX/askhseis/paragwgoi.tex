@@ -1,0 +1,187 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+\input{tikz.tex}
+
+\geometry{top=2.5cm}
+
+\newcommand{\twocolumnsidescc}[2]{\begin{minipage}[t]{0.72\linewidth}
+        #1
+        \end{minipage}\hfill\begin{minipage}[t]{0.23\linewidth}
+        #2
+    \end{minipage}
+}
+
+
+\pagestyle{askhseis}
+
+\begin{document}
+
+
+\begin{center}
+  \minibox{\large \bfseries \textcolor{Col1}{Ασκήσεις στις Παραγώγους}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+
+  % \item  Να υπολογιστούν οι \textbf{παράγωγοι} των παρακάτω συναρτήσεων
+
+  %   \begin{enumerate}[(i)]
+  %     \item $ f(x) = (\cos{x})^{\sin{2x}} $ \hfill Απ: $
+  %       (\cos{x})^{\sin{2x}} 2(\cos{2x} \ln{(\cos{x})} - \sin^{2}{x}) $
+  %     \item $ f(x) = \left(1 + \frac{1}{x} \right)^{x} $ \hfill Απ: $
+  %       \left(1 + \frac{1}{x}\right)^{x}\left[\ln{(1 + \frac{1}{x})} -
+  %       \frac{1}{x+1}\right] $
+  %     \item $ f(x)=(\sin{x})^{x} $ \hfill Απ: $ (\sin{x})^{x}[\ln{(\sin{x}
+  %       )} + x \cot{x}] $ 
+  %     \item $ f(x)=\cos{x}^{x} $ \hfill Απ: $ (- \sin{x^{x}})x^{x} (1 +
+  %       \ln{x}) $
+  %   \end{enumerate}
+
+  % \item Να βρεθούν οι παράγωγοι των αντίστροφων, των παρακάτω συναρτήσεων.
+
+  %   \begin{enumerate}[(i)]
+  %     \item $ y = \cos{x} $ \hfill Απ: $ \frac{-1}{\sqrt{1 - y^{2}}} $
+  %     \item $ y = \tan{x} $ \hfill Απ: $ \frac{1}{1 + y^{2}} $
+  %   \end{enumerate}
+
+  \item Δίνεται η σχέση $ x^{2} - xy + y^{2} = 3 $, $ y=y(x) $. Να βρεθεί η 1η
+    και η 2η παράγωγος της $y$ ως προς $x$ στο σημείο $ (1,-1) $.
+
+    \hfill Απ: $ y' = 1$, $ y'' = \frac{2}{3} $
+
+  \item Να βρεθεί, αν υπάρχει, σημείο (ή σημεία) στο οποίο η καμπύλη 
+    $ y= x+ \sin{x}, \;  0 \leq x \leq 2 \pi $ έχει οριζόντια εφαπτομένη. Αν 
+    υπάρχει, ποια είναι η εξίσωση της εφαπτομένης σε αυτό το σημείο? 
+    \hfill Απ: $ (\pi , \pi), \; \varepsilon: y= \pi $  
+
+  \item Να βρεθεί η κλίση της εφαπτομένης της καμπύλης $ (x^{2}+y^{2})^{2} = 4x^{2}y $, 
+    στο σημείο $ (-1,1) $.
+    \hfill Απ: 0 
+
+  \item Να βρεθεί η εξίσωση της εφαπτομένης της καμπύλης $x^{3} + y^{3}=9xy$, στο 
+    σημείο $ (2,4) $.
+    \hfill Απ: $ \varepsilon: 4x-5y=-12 $
+
+  \item Δίνεται η σχέση $ 4x^{3} - 3xy^{2} + 6x^{2} - 5xy - 8 y^{2} + 9x + 14
+    = 0$. Να βρείτε τις εξισώσεις της \textbf{εφαπτομένης (\varepsilon)} και της
+    \textbf{κάθετης (\kappa)} 
+    ευθείας της καμπύλης στο σημείο $ (-2,3) $.
+
+    \textcolor{Col1}{Υπόδειξη:} 
+    $ \varepsilon: y-y(x_{0}) = y'(x_{0})(x- x_{0}) $, \;
+    $ \kappa: y-y(x_{0}) = -\frac{1}{y'(x_{0})}(x- x_{0}) $, \;
+
+    \hfill Απ: $\varepsilon\colon y = \frac{9}{2} x - 6 $, 
+    $\kappa\colon y = \frac{2}{9} x + \frac{31}{9} $.
+
+  \item Να υπολογισθεί η κλίση της καμπύλης $ x= 2 \sqrt{2} \cos{t} $ και $ y=
+    \sqrt{2} \sin{t} $ στο σημείο $ (2,1) $ και να βρεθεί η εξίσωση της εφαπτομένης 
+    σε αυτό το σημείο.
+
+    \hfill Απ: $ \eval{\dv{y}{x}} _{t= \frac{\pi}{4}} = - \frac{1}{2}, \; 
+    \varepsilon: 2y+x=4 $  
+
+  \item Να υπολογιστούν τα τοπικά ακρότατα των παρακάτω συναρτήσεων.
+
+    \begin{enumerate}[i)]
+      \renewcommand{\itemsep}{15pt}
+      \item $ f(x) = 3x^{2}-2x+1 $ 
+        \hfill Απ: $ f_{\rm_{min}}\left(\frac{1}{3} \right) = \frac{2}{3} $ 
+      \item $ f(x) = x^{3}+3x^{2}-5 $ 
+        \hfill Απ: $ f_{\rm min}(0) = -5 $, $ f_{\rm max}(-2) = -1 $ 
+      \item $ f(x) = x^{3} - x $ 
+        \hfill Απ: $ f_{\rm min}\left(\frac{1}{\sqrt{3}} \right) 
+        = - \frac{2}{3 \sqrt{3}} $, $ f_{\rm max} \left(-\frac{1}{\sqrt{3}} 
+        \right) = \frac{2}{3 \sqrt{3}} $
+      % \item $ f(x) = 3x^{4} -16x^{3}+18x^{2} $ 
+      %   \hfill Απ: $ f_{\rm min}(0)=0 $, $ f_{\rm min}(3)
+      %   =-27 $, $ f_{\rm max}(1) = 5 $ 
+      \item $ f(x) = \frac{x^{2}}{e^{x}} $
+        \hfill Απ: $ f_{\rm min}(0) = 0 $, $f_{\rm max}(2) = \frac{4}{e^{2}} $ 
+    \end{enumerate}
+
+  \item Να βρεθούν τα ακρότατα της συνάρτησης $ x^{2}-xy+y^{2}=4 $, όπου $ y=y(x) $.
+
+    \hfill Απ: \textlatin{max}: $ y(1,2) $ και \textlatin{min}: $ y(-1,-2) $
+
+  \item  \twocolumnsidescc{
+  Σε μία άκρη του κήπου μας θέλουμε να φτιάξουμε ένα παρτέρι για λουλούδια 
+    σχήματος ορθογωνίου παραλληλεπιπέδου, το οποίο να εφάπτεται στον τοίχο. 
+    Χρειάζεται να επενδυθεί με ασφαλτόπανο για μόνωση. Διαθέτουμε ένα ασφαλτόπανο 
+    μήκους $ s=\SI{10}{m} $ και πλάτους $ s/2 \; \SI{}{m} $. Θα κόψουμε το ασφαλτόπανο
+    στις δύο γωνίες του κατά μήκος $x$, όπως φαίνεται στο σχήμα, έτσι ώστε λυγίζοντας
+    τις πλευρές προς τα πάνω να δημιουργηθεί ένα παραλληλεπίπεδο κουτί για να βάλουμε
+    μέσα το χώμα. Πόσο πρέπει να είναι το μήκος $x$ του τετραγώνου που θα κόψουμε 
+    από κάθε γωνία, ώστε το παρτέρι να δέχεται τον μεγαλύτερο όγκο χώματος;
+
+    \hfill Απ: $ x= 5/3, \; V_{\text{\textlatin{max}}} = 1000/27 $ 
+    }{
+\begin{tikzpicture}[scale=0.6,baseline={100pt}]
+		\node  (0) at (0, -0.5) {};
+		\node  (1) at (0, 0) {};
+		\node  (2) at (0, 6) {};
+		\node  (3) at (0, 6.5) {};
+		\node  (4) at (3, 6) {};
+		\node  (5) at (3, 0) {};
+		\node  (6) at (3, 1) {};
+		\node  (7) at (4, 1) {};
+		\node  (8) at (3, 5) {};
+		\node  (9) at (4, 5) {};
+    \coordinate (0c) at ($(0)-(0.5,0)$) ;
+    \coordinate (3c) at ($(3)-(0.5,0)$) ;
+    \draw[pattern=north west lines] (0.center) -- (1.center) -- (2.center) -- 
+      (3.center) -- (3c.center) -- (0c.center) -- (0.center) ;
+    \fill[Col2!10] (1.center) -- (2.center) -- (4.center) -- (8.center) --
+      (9.center) -- (7.center) -- (6.center) -- (5.center) -- (1.center) ;
+    \begin{scope}[graph,Col2]
+		\draw (0.center) to (1.center);
+		\draw (1.center) to (2.center);
+		\draw (2.center) to (3.center);
+		\draw (2.center) to (4.center);
+		\draw (4.center) to (8.center);
+		\draw (8.center) to (9.center);
+		\draw (9.center) to (7.center);
+		\draw (7.center) to (6.center);
+		\draw (6.center) to (5.center);
+		\draw (5.center) to (1.center);
+  \end{scope}
+    \draw[dotted] (5) -| (7) ;
+    \draw[dotted] (4) -| (9) ;
+    \coordinate (1a) at ($(1)-(0,0.9)$) ;
+    \coordinate (5a) at ($(5)+(1,0)-(0,0.9)$) ;
+    \coordinate (5b) at ($(5-|7)+(0.8,0)$) ;
+    \coordinate (4b) at ($(4-|9)+(0.8,0)$) ;
+    \node at (4) [above right,xshift=4pt] {$x$} ;
+    \node at (9) [above right,yshift=4pt] {$x$} ;
+    \draw[{Stealth}-{Stealth}] (1a) node {$|$} -- node[fill=white]{$ s/2 $}
+      (5a) node {$|$} ;
+    \draw[{Stealth}-{Stealth}] (4b) node[rotate=90] {$|$} -- node[fill=white]{$ s $}
+      (5b) node[rotate=90] {$|$} ;
+\end{tikzpicture}
+    }
+
+  \item Έστω $ f(x) = \ln{(1+x)} $, $ x>-1 $. Να υπολογιστεί το ανάπτυγμα
+    \textlatin{\textbf{Maclaurin}} 4ης τάξης και στη συνέχεια να υπολογιστεί το 
+    αντίστοιχο σφάλμα για $ x = 0,1 $.
+
+    \hfill Απ: \begin{tabular}{l}
+      $ \ln(1+x) \cong x - \frac{1}{2} x^{2} + \frac{1}{3}x^{3} - 
+      \frac{1}{4} x^{4} $ \\ 
+      $ \abs{R_{4}(0,1)} < 0,000002$	
+    \end{tabular}
+
+  \item Να βρείτε μια \textbf{πολυωνυμική προσέγγιση} 3ης τάξης 
+    της συνάρτησης που ορίζεται πεπλεγμένα από την εξίσωση 
+    $ x^{2} - xy + y^{2} = 3$ στο σημείο $ (1,-1) $.
+
+    \hfill Απ: $f(x) \cong -1 + (x-1) + \frac{(x-1)^{2}}{3} +
+    \frac{(x-1){3}}{9}$
+
+\end{enumerate}
+
+
+
+\end{document}
+

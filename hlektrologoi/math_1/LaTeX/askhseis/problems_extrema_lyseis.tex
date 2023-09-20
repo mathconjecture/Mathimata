@@ -1,8 +1,10 @@
+\documentclass[a4paper,table]{report}
 \input{preamble_ask.tex}
 \input{definitions_ask.tex}
 \input{tikz.tex}
 \input{myboxes.tex}
 
+\geometry{left=1.9cm,right=1.9cm}
 \input{insbox}
 \pagestyle{askhseis}
 \everymath{\displaystyle}
@@ -33,11 +35,11 @@
 \vspace{\baselineskip}
 
 \begin{mybox3}
-\begin{exercise}
+\begin{problem}
   {\bfseries \boldmath Να προσδιοριστούν οι διαστάσεις μιας πισίνας 
     $ \SI{32}{m^3} $ με τετραγωνική βάση έτσι ώστε η επιφάνεια των εσωτερικών 
   τοίχων και του πυθμένα να είναι ελάχιστη.}
-\end{exercise}
+\end{problem}
 \end{mybox3}
 \begin{solution}
 \item {}
@@ -96,11 +98,11 @@
 \end{solution}
 
 \begin{mybox3}
-\begin{exercise}
+\begin{problem}
   {\bfseries \boldmath Να βρεθεί η εξίσωση της ευθείας $ (\varepsilon)
     $ που περνάει από γνωστό σημείο $ P(a,b) $ και σχηματίζει με τους άξονες
   συντεταγμένων τρίγωνο ελάχιστου εμβαδού $ (a>0,\, b>0) $.}
-\end{exercise}
+\end{problem}
 \end{mybox3}
 \begin{solution}
 \item {}
@@ -199,11 +201,11 @@
 \end{solution}
 
 \begin{mybox3}
-\begin{exercise}
+\begin{problem}
   {\bfseries \boldmath Θεωρούμε τρίγωνο ΑΒΓ με  ΒΓ$=a $ και ύψος ΑΔ$=h$. Επίσης 
     θεωρούμε τα εγγεγραμένα σε αυτό ορθογώνια των οποίων η μία πλευρά βρίσκεται πάνω στη
   ΒΓ. Να βρεθεί εκείνο το παραλληλόγραμμο που έχει μέγιστο εμβαδό.}
-\end{exercise}
+\end{problem}
 \end{mybox3}
 \begin{solution}
   Το εμβαδό του ορθογωνίου δίνεται από τη σχέση $ E=xy $. Αρκεί να βρούμε μια σχέση που 
@@ -224,7 +226,8 @@
       \draw (0.center) to (1.center);
       \draw[name=ab] (0.center) to (2.center);
       \draw[name path=ac] (2.center) to (1.center);
-      \draw[dashed] (2.center) -- (3.center) node[midway,right] {$h$};
+      \draw[dashed] (2.center) -- (3.center)
+        node[midway,right,yshift=-4pt] {$h$};
       \node at ($(0)!.65!(2)$) [left=3pt] {Z};
       \fill ($(0)!.65!(2)$) coordinate (z) circle[radius=1.5pt];
       \path[name path=zh] ($(0)!.65!(2)$) -- ([xshift=2pt]$(0)!.65!(2)$) 
@@ -237,7 +240,7 @@
       \fill (z|-3) coordinate (r) circle[radius=1.5pt];
       \fill (h|-3) coordinate (k) circle[radius=1.5pt];
       \fill (2|-z) coordinate (e) circle[radius=1.5pt];
-      \node at (e) [above right] {$E$};
+      \node at (e) [above right,xshift=-1pt,yshift=-1pt] {$E$};
       \path (h)--(h|-3) node[midway,left]{y};
       \path (z|-3)--(h|-3) node[pos=.65,below]{x};
       \tkzMarkRightAngle(2,3,1);
@@ -268,10 +271,10 @@ $ E_{\max} = {ah}/{4}  $.
 \end{solution}
 
 \begin{mybox3}
-\begin{exercise}
+\begin{problem}
   {\bfseries \boldmath Να εγγραφεί ορθογώνιο παραλληλόγραμμο με μέγιστο εμβαδό στην
     έλλειψη $ \frac{x^{2}}{a^{2}} + \frac{y^{2}}{b^{2}} = 1 $.}
-\end{exercise}
+\end{problem}
 \end{mybox3}
 \begin{solution}
 \item {}
@@ -351,13 +354,13 @@ $ E_{\max} = {ah}/{4}  $.
 \end{solution}
 
 \begin{mybox3}
-\begin{exercise}
+\begin{problem}
   {\bfseries \boldmath Ένα φύλλο ειδικού χαρτιού για μεγάλο μηχανολογικό σχέδιο, έχει
     επιφάνεια \SI{2}{m^{2}}. Στο σχέδιο που θα γίνει πρέπει να αφεθούν
     περιθώρια στην πάνω και στην κάτω πλευρά του σχεδίου, \SI{21}{cm}, ενώ
     στις πλαϊνές πλευρές \SI{14}{cm}. Ποιες πρέπει να είναι οι διαστάσεις
   τούτου φύλλου ώστε το καθαρό εμβαδό για σχεδίαση να είναι μέγιστο?}
-\end{exercise}
+\end{problem}
 \end{mybox3}
 \begin{solution}
 \item {}
@@ -416,7 +419,7 @@ $ E_{\max} = {ah}/{4}  $.
 \end{solution}
 
 \begin{mybox3}
-\begin{exercise}
+\begin{problem}
   {\bfseries\boldmath Δυο πόλεις Α και Β βρίσκονται προς το ίδιο μέρος της όχθης ενός
 		ποταμού και απέχουν από αυτήν 10 και 15 χιλιόμετρα αντίστοιχα. Οι
 		κάθετες προβολές των δύο πόλεων στην όχθη απέχουν 20 χιλιόμετρα. Οι δύο
@@ -424,7 +427,7 @@ $ E_{\max} = {ah}/{4}  $.
 		κατασκευαστεί στην όχθη του ποταμού. Σε ποιο σημείο της όχθης πρέπει να
 		κατασκευαστεί το εργοστάσιο ώστε για τους αγωγούς που θα συνδέσουν αυτό
   με τις πόλεις να έχουμε το ελάχιστο κόστος?}
-\end{exercise}
+\end{problem}
 \end{mybox3}
 \begin{solution}
 \item {}
@@ -506,10 +509,10 @@ $ E_{\max} = {ah}/{4}  $.
 \end{solution}
 
 \begin{mybox3}
-\begin{exercise}
+\begin{problem}
  {\bfseries\boldmath Να εγγραφεί σε κύκλο διαμέτρου $d$, ορθογώνιο με βάση $b$ και ύψος 
    $h$ ώστε το γινόμενο $ b h^{2} $ να είναι μέγιστο.}
-\end{exercise}
+\end{problem}
 \end{mybox3}
 \begin{solution}
 \item {}
@@ -521,7 +524,7 @@ $ E_{\max} = {ah}/{4}  $.
       \fill (tom-2) circle (1pt) ;
       \fill (tom-3) circle (1pt) ;
       \fill (tom-4) circle (1pt) ;
-      \draw[thin,Col1] (tom-1) -- (tom-2) -- (tom-3) -- (tom-4) -- cycle ;
+      \draw[thick,Col1] (tom-1) -- (tom-2) -- (tom-3) -- (tom-4) -- cycle ;
       \draw[thin,decorate,decoration={brace,amplitude=5pt,raise=4pt}] 
         ([xshift=3pt]tom-3) -- ([xshift=-3pt]tom-4) node[midway,above=8pt] {$b$} ;
       \draw[thin,decorate,decoration={brace,amplitude=5pt,raise=4pt}] 
@@ -548,11 +551,11 @@ $ E_{\max} = {ah}/{4}  $.
 \end{solution}
 
 \begin{mybox3}
-\begin{exercise} 
+\begin{problem} 
  {\bfseries\boldmath Να προσδιοριστεί ο λόγος της ακτίνας προς το ύψος ενός κλειστού
   κυκλικού ορθού κυλινδρικού δοχείου χωρητικότητας $c$ μονάδων όγκου, αν
   θέλουμε η επιφάνεια του δοχείου να είναι ελάχιστη.}
-\end{exercise}
+\end{problem}
 \end{mybox3}
 \begin{solution}
 \item {}

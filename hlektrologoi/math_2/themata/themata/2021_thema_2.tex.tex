@@ -1,0 +1,140 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_themata}
+\input{definitions.tex}
+\input{myboxes}
+
+\everymath{\displaystyle}
+\pagestyle{vangelis}
+
+
+
+\begin{document}
+
+\begin{mybox3}
+  \setcounter{thm}{1}
+  \begin{thema}
+    Θεωρούμε την καμπύλη του $ \mathbb{R}^{3} $
+    \[
+      (c) \colon \mathbf{r}(t)= \cos{t}
+      \,
+      \mathbf{i} + t \, \mathbf{j} +  \sin{t} \, \mathbf{k}, \; t \in [0, 2 \pi]
+    \]
+  \begin{enumerate}[i)]
+    \item Να βρείτε για κάθε $ t \in [0,2 \pi] $, την οξεία γωνία που σχηματίζει το
+      εφαπτόμενο διάνυσμα $ \mathbf{r'}(t) $ της $ (c) $ με τον άξονα $ y'y $. 
+    \item Να βρείτε τα σημεία της $ (c) $, στα οποία το πρώτο κάθετο διάνυσμα 
+      $ \mathbf{N} $ της $ (c) $ είναι κάθετο με τον άξονα $ x'x $.
+    \item Να βρείτε την ακτίνα του εφαπτόμενου κύκλου της $ (c) $ σε κάθε σημείο της.
+    \item Θεωρούμε επίσης την καμπύλη του $ \mathbb{R}^{3} $
+      \[
+        (\gamma) \colon
+        \mathbf{\phi}(t)= \sin{t} \, \mathbf{i} + t \, \mathbf{j} + \cos{t} \, \mathbf{k},
+        \; t \in [0,2 \pi]
+      \]
+      Έστω ακόμη $ (s) $ μια επιφάνεια του $ \mathbb{R}^{3} $, η 
+      οποία περιέχει τις καμπύλες $ (c), (\gamma) $ και ορίζεται από την εξίσωση $ z=f(x,y)
+      $ με $f$ διαφορίσιμη συνάρτηση. Αν $ A\Bigl(\frac{\sqrt{2}}{2} , \frac{\pi}{4} ,
+      \frac{\sqrt{2}}{2}\Bigr) $, τότε:
+      \begin{enumerate}[i)]
+        \item Να δείξετε ότι το $A$ ανήκει στην $ (s) $.
+        \item Να βρείτε την εξίσωση της κάθετης ευθείας της $ (s) $ στο σημείο $A$.
+      \end{enumerate}
+  \end{enumerate}
+  \end{thema}
+\end{mybox3}
+\begin{solution}
+  \begin{enumerate}[i)]
+    \item 
+      Βρίσκουμε:
+      \begin{align*}
+        \mathbf{r'}(t)&=- \sin{t}\, \mathbf{i} +\, \mathbf{j} + \cos{t} \, \mathbf{k} \\
+        \norm{\mathbf{r'}(t)} &= \sqrt{\sin^{2}{t} + 1^{2} + \cos^{2}{t}} = \sqrt{2}
+      \end{align*} 
+      Η γωνία $\theta$ που σχηματίζει το εφαπτόμενο διάνυσμα τον άξονα $ y'y $, 
+      δίνεται από: 
+      \[
+        \cos{\theta} = \frac{\mathbf{r'}(t) \cdot \mathbf{j}}{\norm{\mathbf{r'}(t)}} =
+        \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2} \Rightarrow \theta = \frac{\pi}{4}
+      \]
+    \item Θα βρούμε το πρώτο κάθετο διάνυσμα $ \mathbf{N} $.
+      \begin{align*}
+        \mathbf{T} &= \frac{\mathbf{r'}(t)}{\norm{\mathbf{r'}(t)}} =  -
+        \frac{\sin{t}}{\sqrt{2}}\,\mathbf{i} +
+        \frac{1}{\sqrt{2}}\,\mathbf{j} + \frac{\cos{t}}{\sqrt{2}}\,\mathbf{k} \\
+        \dv{\mathbf{T}}{t} &=  - \frac{\cos{t}}{\sqrt{2}}\,\mathbf{i} + 0
+        \,\mathbf{j} - \frac{\sin{t}}{\sqrt{2}}\,\mathbf{k} \\
+        \norm{\dv{\mathbf{T}}{t}} &= \sqrt{\frac{\cos^{2}{t}}{2} + 0^{2} +
+        \frac{\sin^{2}{t}}{2}} = \sqrt{\frac{1}{2}} = \frac{\sqrt{2}}{2} \\
+          \mathbf{N} &= \frac{{d\mathbf{T}}/{dt}}{\norm{{d\mathbf{T}}/{dt}}} =
+          \frac{- \frac{\cos{t}}{\sqrt{2}}}{\frac{\sqrt{2}}{2}} \, \mathbf{i} + 0 \,
+          \mathbf{j} + \frac{- \frac{\sin{t}}{\sqrt{2}}}{\frac{\sqrt{2}}{2}} \, \mathbf{k}
+          = - \cos{t} \, \mathbf{i} + 0 \, \mathbf{j} - \sin{t} \, \mathbf{k} 
+        \end{align*}
+        Το διάνυσμα $ \mathbf{N} $ θα είναι κάθετο προς τον άξονα $ x'x $ ανν 
+        \[
+          \mathbf{N}\cdot \mathbf{i} = 0 \Leftrightarrow - \cos{t} = 0 \Leftrightarrow
+          \cos{t} = 0 \Leftrightarrow t= \frac{\pi}{2} \; \text{ή} \; t= 
+          \frac{3\pi}{2} 
+        \]
+      \item Γνωρίζουμε, ότι ο κύκλος που εφάπτεται στην καμπύλη, σε κάθε σημείο της,
+        είναι ο κύκλος καμπυλότητας. Άρα, ζητάμε την ακτίνα καμπυλότητας.
+        \[
+          k = \frac{\norm{d \mathbf{T}/dt}}{\norm{\mathbf{r'}(t)}} =
+          \frac{\frac{\sqrt{2}}{2}}{\sqrt{2}} = \frac{1}{2}
+        \] 
+        Επομένως, η ακτίνα καμπυλότητας, είναι
+        \[
+          \rho = \frac{1}{k} = 2 
+        \] 
+      \item Το σημείο $ A\Bigl(\frac{\sqrt{2}}{2} , \frac{\pi}{4} ,
+        \frac{\sqrt{2}}{2}\Bigr) $ ανήκει στην $ (s) $ αφού ανήκει στις δύο καμπύλες 
+        που περιέχονται σε αυτήν. Πράγματι:
+        \begin{myitemize}
+          \item Για $ t= \frac{\pi}{4} $: \quad
+            $\mathbf{r}\Bigl(\frac{\pi}{4}\Bigr)= \cos{\frac{\pi}{4}}\, \mathbf{i} +
+            \frac{\pi}{4}\, \mathbf{j} + \sin{\frac{\pi}{4}}  \, \mathbf{k} =
+            \mathbf{r}(t)= \frac{\sqrt{2}}{2}\, \mathbf{i} + \frac{\pi}{4}\, \mathbf{j} +
+            \frac{\sqrt{2}}{2} \, \mathbf{k} = \Bigl(\frac{\sqrt{2}}{2} , \frac{\pi}{4} ,
+            \frac{\sqrt{2}}{2}\Bigr) = A$
+          \item Για $ t= \frac{\pi}{4} $: \quad
+            $\mathbf{\phi}\Bigl(\frac{\pi}{4}\Bigr)= \sin{\frac{\pi}{4}}\, \mathbf{i} +
+            \frac{\pi}{4}\, \mathbf{j} + \cos{\frac{\pi}{4}}  \, \mathbf{k} =
+            \mathbf{r}(t)= \frac{\sqrt{2}}{2}\, \mathbf{i} + \frac{\pi}{4}\, \mathbf{j} +
+            \frac{\sqrt{2}}{2} \, \mathbf{k} = \Bigl(\frac{\sqrt{2}}{2} , \frac{\pi}{4} ,
+            \frac{\sqrt{2}}{2}\Bigr) = A$
+        \end{myitemize}  
+        Για την κάθετη ευθεία στην επιφάνεια $ (s) $ στο σημείο $ A $, χρειαζόμαστε 
+        ένα κάθετο διάνυσμα της $ (s) $, στο $A$. Έχουμε:
+        \[
+          \mathbf{\phi'}(t) =  \cos{t}\,\mathbf{i} + 0\,\mathbf{j} - \sin{t} \,\mathbf{k}
+        \] 
+        \begin{myitemize}
+          \item Το διάνυσμα $ \mathbf{r'}\Bigl(\frac{\pi}{4}\Bigr) =  - \frac{\sqrt{2}}{2}\,\mathbf{i} +
+            \,\mathbf{j} + \frac{\sqrt{2}}{2} \,\mathbf{k} $ είναι
+            εφαπτόμενο στη $ (c) $ και άρα στην $ (s) $ στο $A$.
+          \item Το διάνυσμα $ \mathbf{\phi'}\Bigl(\frac{\pi}{4}\Bigr) =  \frac{\sqrt{2}}{2}\,\mathbf{i} +
+            \,\mathbf{j} - \frac{\sqrt{2}}{2} \,\mathbf{k} $ είναι
+            εφαπτόμενο στη $ (\gamma) $ και άρα στην $ (s) $ στο $A$.
+        \end{myitemize}
+        Επομένως το διάνυσμα 
+        \[
+          \mathbf{r'}\Bigl(\frac{\pi}{4}\Bigr) \times \mathbf{\phi'}\Bigl(\frac{\pi}{4}\Bigr) = 
+          \begin{vmatrix*}[c]
+            \mathbf{i} & \mathbf{j} & \mathbf{k} \\[8pt]
+            - \frac{\sqrt{2}}{2} & 1 & \frac{\sqrt{2}}{2} \\[8pt]
+            \frac{\sqrt{2}}{2} & 1 & - \frac{\sqrt{2}}{2} 
+          \end{vmatrix*} = - \sqrt{2} \, \mathbf{i} - 0 \, \mathbf{j} - \sqrt{2} \,
+          \mathbf{k}
+         \] 
+         είναι κάθετο στην $ (s) $, και άρα η εξίσωση της κάθετης ευθείας, είναι:
+         \[
+           k: \begin{rcases} 
+             x(t) = \frac{\sqrt{2}}{2} - \sqrt{2} t \\
+             y(t) = \frac{\pi}{4} \\
+             z(t) = \frac{\sqrt{2}}{2} - \sqrt{2} t
+           \end{rcases}
+          \] 
+    \end{enumerate} 
+\end{solution}
+
+\end{document}
