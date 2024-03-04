@@ -1,0 +1,137 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+\geometry{top=1.5cm}
+
+\everymath{\displaystyle}
+\pagestyle{askhseis}
+
+\begin{document}
+\begin{center}
+  \minibox{\large\bfseries  \textcolor{Col1}{Σειρές \textlatin{Fourier}}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Να υπολογιστούν οι σειρές \textlatin{Fourier} των παρακάτω συναρτήσεων.
+    \begin{enumerate}[i),itemsep=.5\baselineskip]
+      %kravaritis
+      \item $ f(x) = 
+        \begin{cases}
+          -c, & - \pi < x < 0\\
+          c, &  0 < x < \pi
+        \end{cases}$
+        \hfill Απ: $ f(x) \sim \frac{4c}{\pi} \sum_{n=1}^{\infty}
+        \frac{1}{2n-1} \sin{[(2n-1)x]}$ 
+
+        %garoutsos
+      \item $ f(x)=
+        \begin{cases} 
+          1, & 0 \leq x < \pi /2 \\
+          0, & \pi /2 \leq x < \pi
+        \end{cases} $ 
+        \hfill Απ: $ f(x) \sim \frac{1}{2} + \frac{2}{\pi} \sum_{n=1}^{\infty} 
+        \frac{1}{2n-1} \sin{[2(2n-1) \pi x]} $ 
+
+        %garoutsos
+      \item $ f(x)=
+        \begin{cases} 
+          x-1, & 0 \leq x < 2 \\
+          3-x, & 2 \leq x < 4
+        \end{cases} $ 
+        \hfill Απ: $ f(x) \sim \frac{-8}{\pi} \sum_{n=1}^{\infty} 
+        \frac{1}{2n-1} \cos{\left[\frac{(2n-1) \pi x}{2}\right]} $ 
+
+        %spandagos
+      \item $ f(x) = \pi + x , \quad - \pi \leq x \leq \pi $ 
+        \hfill Απ: $ f(x) \sim \pi + 2 \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}
+        \sin{(nx)} $ 
+
+      \item $ f(x) = 1 - x^{2}, \quad - 1 < x < 1 $
+        \hfill Απ: $ f(x) \sim \frac{2}{3} + \frac{4}{\pi^{2}} \sum_{n=1}^{\infty}
+        \frac{(-1)^{n+1}}{n^{2}} \cos{(n \pi x)} $ 
+    \end{enumerate}
+
+  \item Να υπολογιστούν οι σειρές \textlatin{Fourier} των παρακάτω συνάρτήσεων και 
+    να δειχθούν τα αθροίσματα:
+    \begin{enumerate}[i)]
+      %garoutsos
+      \item $ f(x) = 
+        \begin{cases}
+          2, & -2<x<0 \\
+          x, & 0<x<2
+        \end{cases}, \quad \sum_{n=1}^{\infty} \frac{1}{(2n-1)^{2}} = \frac{\pi ^{2}}{8}$
+        %\quad \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{2n-1} = \frac{\pi}{4} $
+
+        \hfill Απ: $ f(x) \sim \frac{3}{2} + 2 \sum_{n=1}^{\infty}
+        \left[\frac{(-1)^{n}-1}{n^{2} \pi ^{2}} \cos{\left(\frac{n \pi x}{2}\right)}  - 
+        \frac{1}{n \pi} \sin{\left(\frac{n \pi x}{2}\right)}\right] $  
+
+        %garoutsos
+      \item $ f(x) = x^{2}, \quad 0 \leq x < 2, \quad \sum_{n=1}^{\infty}
+        \frac{1}{n^{2}} = \frac{\pi^{2}}{6}, \quad \sum_{n=1}^{\infty}
+        \frac{(-1)^{n+1}}{n^{2}} = \frac{\pi ^{2}}{12} $
+
+        \hfill Απ: $ f(x) \sim \frac{4}{3} + 4 \sum_{n=1}^{\infty} 
+        \left[\frac{1}{n^{2} \pi ^{2}} \cos{(n \pi x )} - \frac{1}{n \pi}
+        \sin{(n \pi x)}\right] $ 
+
+        %garoutsos
+      \item $ f(x) = x \sin{x}, \quad - \pi < x < \pi, \quad \sum_{n=2}^{\infty}
+        \frac{(-1)^{n+1}}{(n-1)(n+1)} = - \frac{1}{4} $
+
+        \hfill Απ: $ f(x) \sim 1 - \frac{1}{2} \cos{x} + 2\sum_{n=2}^{\infty}
+        \frac{(-1)^{n+1}}{(n-1)(n+1)} \cos{(nx)} $ 
+    \end{enumerate}
+
+  \item Να υπολογιστεί η \textbf{συνημιτονική} σειρά \textlatin{Fourier} των παρακάτω 
+    συναρτήσεων.
+    \begin{enumerate}[i)]
+      \item $ f(x) = \sin{x} , \quad 0 \leq x \leq \pi $ 
+        \hfill Απ: $ f(x) \sim \frac{2}{\pi} - \frac{4}{\pi} \sum_{n=2}^{\infty}
+        \frac{1}{(2n)^{2}-1} \cos{(2nx)} $ 
+      \item $ f(x) = x, \quad 0 \leq x \leq 2 $ 
+        \hfill Απ: $ f(x) \sim 1 - \frac{8}{\pi ^{2}} \sum_{n=1}^{\infty}
+        \frac{1}{(2n-1)^{2}} \cos{\left(\frac{(2n-1) \pi x}{2}\right)} $ 
+    \end{enumerate}
+
+  \item Να υπολογιστεί η \textbf{ημιτονική} σειρά \textlatin{Fourier} των παρακάτω 
+    συναρτήσεων.
+    \begin{enumerate}[i)]
+      \item $ f(x) = \pi - x, \quad 0 \leq x < \pi $
+        \hfill Απ: $ f(x) \sim 2\sum_{n=1}^{\infty} \frac{1}{n} \sin{(nx)}$ 
+
+      \item $ f(x) = \cos{x} , \quad 0 < x < \frac{\pi}{2} $
+        \hfill Απ: $ f(x) \sim \frac{8}{\pi} \sum_{n=1}^{\infty} \frac{n}{(4n^{2}-1)} 
+        \sin{(2nx)} $ 
+    \end{enumerate}
+
+    %spandagos
+  \item Να υπολογιστεί η \textbf{ημιτονική} και \textbf{συνημιτονική} σειρά της 
+    συνάρτησης $ f(x) = x - \frac{x^{2}}{2}, \quad 0 \leq x \leq 2 $.
+
+    \twocolumnsidesc{
+      \textcolor{Col1}{\textbf{Υπόδειξη:}}
+
+      \begin{tikzpicture}
+        \coordinate (o) (0,0);
+        \node[Col1!75] at (o) [below left] {$0$};
+        \draw[-stealth,blue!50] (-0.3,0) -- (2.5,0) node[right] {};
+        \draw[-stealth,blue!50] (0,-0.3) -- (0,1.5) node[above] {};
+        \draw[domain=0:2,smooth,variable=\x,Col1!75,very thick] 
+          plot ({\x},{\x-(\x^2)/2}) 
+          node[below] {$2$} 
+          node[above=15pt]{\small $f(x)=x- \frac{x^{2}}{2}$};
+      \end{tikzpicture}
+    }{
+      \hfill Απ: $ f(x) \sim \frac{1}{ 3} - \frac{8}{\pi ^{2}} \sum_{n=1}^{\infty}
+      \frac{1}{(2n-1)^{2}} \cos{\left[\frac{(2n-1) \pi x}{2}\right]} $  
+
+      \hfill Απ: $ f(x) \sim \frac{16}{\pi ^{3}} \sum_{n=1}^{\infty} \frac{1}{(2n-1)^{3}}
+      \sin{\left[\frac{(2n-1) \pi x}{2}\right]} $  
+    }
+
+\end{enumerate}
+\end{document}

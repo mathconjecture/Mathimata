@@ -1,0 +1,98 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+% \everymath{\displaystyle}
+\pagestyle{askhseis}
+
+\geometry{left=1.5cm,right=1.5cm}
+
+\begin{document}
+
+
+\begin{center}
+  \minibox{\large \bfseries \textcolor{Col1}{Συνήθεις Διαφορικές Εξισώσεις - 2ης τάξης}}
+\end{center}
+
+\vspace{\baselineskip}
+
+
+\begin{enumerate}
+  \item Να βρεθεί η \textbf{γενική λύση} των παρακάτω σδε ανώτερης τάξης.
+    \begin{enumerate}[i)]
+      \item \textcolor{Col1}{[θεμα: Ιουλ - 2014, Ιαν - 2016]} 
+        $ y^{(4)} - 6y''' +8y'' +6y' -9y=2x+ \mathrm{e}^{-ix} - \mathrm{e}^{-x} $, 
+        αν $ p=3 $ μια ρίζα του χαρακτηριστικού πολυωνύμου.
+      \item \textcolor{Col1}{[θεμα: Ιουν - 2015]} 
+        $ y^{(4)} - 5y''' +2y'' +10y'-8y=2x+ \mathrm{e}^{-ix} - \mathrm{e}^{-x} $, 
+        αν $ p=1 $ μια ρίζα του χαρακτηριστικού πολυωνύμου.
+      \item \textcolor{Col1}{[θεμα: Σεπ - 2015]} 
+        $ y''' -2y''-4y'+8y= \cos{2x} - \cosh{2x} + x^{2}-1 $
+      \item \textcolor{Col1}{[θεμα: Φεβ - 2017]}
+        $ y'''-3y''-4y'+12y=12x^{2}+ \mathrm{e}^{ix} - \mathrm{e}^{3x} $
+      \item \textcolor{Col1}{[θεμα: Σεπ - 2017]} 
+        $ y''' -2y''-4y'+8y= \cos{2x} - \cosh{2x} + x^{2} $
+      \item \textcolor{Col1}{[θεμα: Ιουν - 2016]} 
+        $ y''' -2y'' -4y' +8y= 2i \sin{2x} + \sinh{2x} + x^{2}-x-1 $ 
+      \item \textcolor{Col1}{[θεμα: Ιαν - 2018]} 
+        $ y''' -2y'' -4y' +8y= 2i \sin{2x} -2 \sinh{2x} + x^{2}+x-1 $
+
+        \hfill Απ: $ y(x) = c_{1} \mathrm{e}^{-2x} + c_{2} \mathrm{e}^{2x} + c_{3} x
+        \mathrm{e}^{2x} + \frac{1}{16} [\frac{\mathrm{e}^{2ix}}{1-i} -
+        \frac{\mathrm{e}^{-2ix}}{1+i} - 2x^{2} \mathrm{e}^{2x} + x \mathrm{e}^{-2x}] + 
+        \frac{1}{16} (2x^{2} + 4x+1) $ 
+      \item \textcolor{Col1}{[θεμα: Ιαν - 2021]} 
+        $ y''' -y'' -y'+y=5+ \sinh{x} $
+    \end{enumerate}
+
+  \item Να βρεθεί η \textbf{γενική λύση} των παρακάτω σδε τύπου \textlatin{Euler}.
+    \begin{enumerate}[i)]
+      \item $ 4x^{2}y'' + 5y= \ln{x} $ με τον μετασχηματισμό $ x= \mathrm{e}^{t} $ 
+      \item \textcolor{Col1}{[θεμα: Φεβ - 2019]} 
+        $ x^{2}y''+4xy'-4y=28x^{3}+12x^{2}+4 $ με $ y(1)=1, \, y'(0)=10 $ 
+        \hfill Απ: $ y(x) = - \frac{2}{5x^{4}} - \frac{8x}{5} + 2x^{3}+2x^{2}-1 $ 
+      \item \textcolor{Col1}{[θεμα: Ιαν - 2020]} $ x^{2}y''-3xy'+4y=0 $ 
+        \hfill Απ: $ x^{2}(A \ln{\abs{x} +B} ) $
+    \end{enumerate}
+
+  \item Να λυθούν οι παρακάτω σδε τύπου \textlatin{\textbf{Euler}.}
+    \begin{enumerate}[i)]
+      \item $ x^{2}y''(x)-3xy'(x)+3y(x)=0 $ \hfill Απ: $ y(x)=c_{1}x + c_{2}x^{3} $
+      \item $ x^{2}y''(x)-2xy'(x)-4y(x)=0 $,\; $ x \neq 0 $ \hfill Απ: $
+        y(x)=c_{1}x^{4}+ c_{2} x^{-1} $ 
+      \item $ x^{2}y''(x)-xy'(x)+y(x)=1 $,\; $ x>0 $ \hfill Απ: $ y(x)=(c_{1}+c_{2}
+        \ln{x})x + 1 $  
+      \item $ x^{2}y''(x)-3xy'(x)-5y(x)=x^{3} $ \hfill Απ: $ y(x)=c_{1}x^{5}+ c_{2}
+        x^{-1}- \frac{x^{3}}{8} $ 
+      \item $ x^{2}y''(x)+xy'(x)-y(x)=x^{4} $ \hfill Απ: $ y(x)=c_{1}x+c_{2}x^{-1}+
+        \frac{x^{4}}{15} $ 
+      \item $ x^{3}y'''(x)+4x^{2}y''(x)-8xy'(x)+8y(x)=0 $,\; $ x \neq 0 $ \hfill Απ:
+        $y(x)=c_{1}x+c_{2}x^{2}+c_{3}x^{-4}$ 
+      % \item \label{eul} $ (x+3)^{2}y''(x)+3(x+3)y'(x)+y(x)=0 $,\; $ x>-3 $ \hfill Απ:
+      %   $ c_{1}
+      %   (x+3)^{-1} + c_{2}\ln(x+3)(x+3)^{-1} $
+    \end{enumerate}
+
+  \item Να βρεθεί η \textbf{γενική λύση} των παρακάτω γραμμικών σδε με \textbf{μη
+    σταθερούς συντελεστές}, με τη βοήθεια της ορίζουσας \textlatin{\textbf{Wronski}}.
+
+    \begin{enumerate}[i)] %Μαρκάκης (Σημειώσεις)
+      \item $ xy''-(x+1)y'+y=x \mathrm{e}^{2x} $, όπου $ y_{1}(x)= x+1 $
+        \hfill Απ: $ y_{2}(x) = \mathrm{e}^{x} , \; y_{p}(x)= \frac{x-1}{2}
+        \mathrm{e}^{2x} $ 
+
+      \item $ x^{2}y''-2xy'+2y=x $, όπου $ y_{1}(x) = x $. 
+        \hfill Απ: $ y_{2}(x) = x^{2}, \; y_{p}(x) = -x(\ln{\abs{x}} +1) $ 
+
+      \item $ x^{2}y''-2xy'-(x^{2}-2)y=3x^{4} $, όπου $ y_{1}(x)=x \mathrm{e}^{x} $.
+        \hfill Απ: $ y_{2}(x)=x \mathrm{e}^{-x} , \; y_{p}(x)=-3 x^{2} $ 
+
+      \item $ x^{2}y''-xy'-3y=x^{3/2} $, όπου $ y_{1}= {1}/{x} $. 
+        \hfill Απ: $ y_{2}(x)=x^{3}, \; y_{p}(x) = - \frac{4x^{3/2}}{15} $ 
+
+      % \item $ x^{2}y''-(2a-1)xy'+a^{2}y=x^{a+1} $, όπου $ y_{1}(x)=x^{a} $.
+      %   \hfill Απ: $ y_{2}(x)=x^{a} \ln{\abs{x}} , \; y_{p}(x) = x^{a+1} $ 
+    \end{enumerate}
+
+\end{enumerate}
+
+\end{document}

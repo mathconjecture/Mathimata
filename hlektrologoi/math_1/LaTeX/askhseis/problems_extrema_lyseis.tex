@@ -241,8 +241,8 @@
       \fill (h|-3) coordinate (k) circle[radius=1.5pt];
       \fill (2|-z) coordinate (e) circle[radius=1.5pt];
       \node at (e) [above right,xshift=-1pt,yshift=-1pt] {$E$};
-      \path (h)--(h|-3) node[midway,left]{y};
-      \path (z|-3)--(h|-3) node[pos=.65,below]{x};
+      \path (h)--(h|-3) node[midway,left]{$y$};
+      \path (z|-3)--(h|-3) node[pos=.65,below]{$x$};
       \tkzMarkRightAngle(2,3,1);
   \end{tikzpicture}
   }{
@@ -307,9 +307,9 @@ $ E_{\max} = {ah}/{4}  $.
       \coordinate[red,name intersections={of=km and yy,by=a}];
       \coordinate[red,name intersections={of=ml and xx,by=b}];
       \draw [decorate,shorten=0.5,decoration={brace,amplitude=3pt,raise=3pt}] (o) -- (a) 
-        node[midway,left=6pt] {y} ; 
+        node[midway,left=6pt] {$y$} ; 
       \draw [decorate,decoration={brace,amplitude=3pt,raise=3pt}] (b) -- (o) 
-        node[midway,below=6pt] {x} ; 
+        node[midway,below=6pt] {$x$} ; 
       \draw[fill,blue!20,draw=black] (0,0) rectangle (m);
       \node at (.7,.5) {$E_{1}$};
     \end{tikzpicture}
@@ -349,8 +349,8 @@ $ E_{\max} = {ah}/{4}  $.
   \[
     f''\left(\frac{\sqrt{2}}{2} a\right) = 2a^{2}-12 \frac{2a^{2}}{4} = - 4a^{2}<0
   \] 
-  Επομένως το ορθογώνιο με πλευρές $ x= \frac{\sqrt{2}}{2} a $ και $ y =
-  \frac{\sqrt{2}}{2} b $, έχει μέγιστο εμβαδό, $ E=4E_{1} = 2ab $.
+  Επομένως το ορθογώνιο με πλευρές $ x= 2 \frac{\sqrt{2}}{2} a = \sqrt{2} a $ και 
+  $ y = 2 \frac{\sqrt{2}}{2} b = \sqrt{2} b $, έχει μέγιστο εμβαδό, $ E=4E_{1} = 2ab $.
 \end{solution}
 
 \begin{mybox3}
@@ -529,7 +529,8 @@ $ E_{\max} = {ah}/{4}  $.
         ([xshift=3pt]tom-3) -- ([xshift=-3pt]tom-4) node[midway,above=8pt] {$b$} ;
       \draw[thin,decorate,decoration={brace,amplitude=5pt,raise=4pt}] 
         ([yshift=-3pt]tom-2) -- ([yshift=3pt]tom-3) node[midway,right=8pt] {$h$} ;
-      \draw[dashed] (tom-3) -- coordinate[midway] (c) node [pos=0.6,above] {d} (tom-1) ;
+      \draw[dashed] (tom-3) -- coordinate[midway] (c) node [pos=0.6,above] {$d$} 
+        (tom-1) ;
       \fill (c) node[above left] {O} circle (2pt) ;
     \end{tikzpicture}
     }{
@@ -578,9 +579,9 @@ $ E_{\max} = {ah}/{4}  $.
       \draw (3.center) to [bend right=90] (2.center);
       \draw (10.center) to [bend left=90] (11.center);
       \draw (11.center) to [bend left=90] (10.center);
-      \draw (11.center) to node[midway,right] {h} (3.center);
+      \draw (11.center) to node[midway,right] {$h$} (3.center);
       \draw (10.center) to (2.center);
-      \draw (12.center) to node[midway,above] {r} (11.center);
+      \draw (12.center) to node[midway,above] {$r$} (11.center);
     \end{tikzpicture}
     }{
     Ο όγκος του δοχείου είναι $ V= \pi r^{2}h \Leftrightarrow c = \pi r^{2}h

@@ -1,0 +1,127 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\pagestyle{askhseis}
+\everymath{\displaystyle}
+
+\begin{document}
+
+
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col1}{Ασκήσεις ΣΔΕ 2ης ταξης}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Να δειχθεί ότι τα  παρακάτω σύνολα, αποτελούν \textbf{θεμελιώδη σύνολα} 
+    λύσεων των αντίστοιχων διαφορικών εξισώσεων.
+    \begin{enumerate}[i)]
+      \item $ \{ e^{-6x}, e^{-4x} \} $,\quad $ y''(x)+10y'(x)+24y(x)=0 $ 
+      \item $ \{ \cos{2x}, \sin{2x} \}$, \quad $ y''(x)+4y(x)=0 $
+      \item $ \{ e^{-x}, e^{3x}, xe^{3x} \} $, \quad $ y'''(x)-5y''(x)+3y'(x)+9y(x)=0 $
+    \end{enumerate}
+
+  \item Να βρεθεί η \textbf{γενική λύση} των παρακάτω σδε με τη μέθοδο των 
+    \textbf{προσδιοριστέων συντελεστών}.
+    \begin{enumerate}[i)]
+      \item $y''(x)+y(x)=3\sin 2x + x\cos 2x$ 
+        \hfill Απ: $c_{1}\cos x+c_{2}\sin x-\frac{1}{3}x\cos 2x-\frac{5}{9}\sin 2x $
+      \item $y''(x)-2y'(x)+y(x)=xe^{x}$ 
+        \hfill Απ:  $y(x)=(c_{1}+c_{2}x+\frac{x^{3}}{6})e^{x}$
+      \item $y''(x)-y'(x)=\cos^{2}x$ 
+        \hfill Απ: $y(x) =c_{1}+c_{2}e^{x}-\frac{1}{2}x-\frac{1}{10}\cos 2x- 
+        \frac{1}{20}\sin 2x$
+    \end{enumerate}
+
+  \item Με χρήση της μεθόδου των \textbf{προσδιοριστέων συντελεστών}, να βρεθεί 
+    \textbf{μερική λύση} των διαφορικών εξισώσεων:
+    \begin{enumerate}[i)]
+      \item $y''(x)-2y'(x)-3y(x)=x$ \hfill Απ: $y(x)=\frac{2-3x}{9}$
+      \item $9y''(x)-12y'(x)+4y(x)=e^{-3x}$ \hfill Απ: $y(x)=\frac{e^{-3x}}{121}$
+      \item $y''(x)+4y'(x)-5y(x)=-3e^{x}$ \hfill Απ: $y(x)=-x\frac{e^{x}}{2}$
+      \item $y''(x)-4y'(x)-5y(x)=-648x^{2}e^{5x}$ 
+        \hfill Απ: $ y(x)=-6(x-3x^{2}+6x^{3})e^{5x}$
+      \item $y'''(x)+10y''(x)+34y'(x)+40y(x)=2e^{-3x}\cos x$ 
+        \hfill Απ: $y(x)= \frac{xe^{-3x}}{2}(\sin x - \cos x)$
+      \item $y^{(4)}(x)-8y'''(x)+25y''(x)-36y'(x)+20y(x)=e^{2x}\cos x$ 
+        \hfill Απ: $y(x) =\frac{-x}{2}e^{2x}\sin x$
+      \item $y^{(4)}(x)-18y''(x)+81y(x)=e^{3x}$ \hfill Απ: $y(x)=\frac{x^{2}}{72}e^{3x}$
+    \end{enumerate}
+
+  \item Να βρεθεί η \textbf{γενική λύση} των παρακάτω σδε με τη μέθοδο 
+    \textbf{μεταβολής των παραμέτρων}.
+    \begin{enumerate}[i)]
+      \item $y''(x)-2y'(x)+y(x)=xe^{x}$ 
+        \hfill Απ: $y(x)=c_{1}e^{x}+c_{2}xe^{x}+\frac{x^{3}}{6}e^{x}$
+      \item $y'''(x)+y'(x)=\frac{1}{\sin x}$, $x\in [0,\frac{\pi}{2}]$
+
+        \hfill Απ: $y(x)=c_{1}+c_2\cos x+c_3 \sin x+\ln \tan \frac{x}{2}-
+        \cos x\cdot\ln\sin x-x\sin x$
+    \end{enumerate}
+
+  \item Με χρήση της μεθόδου \textbf{μεταβολής των παραμέτρων}, να βρεθεί 
+    \textbf{μερική λύση} των διαφορικών εξισώσεων:
+    \begin{enumerate}[i)]
+      \item $y''(x)-2y'(x)+y(x)=e^{x}\ln x$, $x>0$ 
+        \hfill Απ: $y(x)=\frac{x^{2}e^{x}}{4}(2\ln x-3)$
+      \item $y''(x)-9y(x)=\frac{1}{1+e^{3x}}$ 
+        \hfill Απ: $y(x)=\frac{-1}{18}+\frac{e^{3x}}{18}\ln (1+e^{-3x})-
+        \frac{e^{-3x}}{18}\ln(1+e^{3x})$
+      \item $y''(x)-2y'(x)+y(x)=\frac{e^x}{x}$, $x>0$ \hfill Απ: $y(x)=xe^{x}(\ln x-1)$
+      \item $y''(x)-4y'(x)+4y(x)=\frac{e^{2x}}{x^{2}}$, $x>0$ 
+        \hfill Απ: $y(x)=-e^{2x}(\ln x +1)$
+      \item $y''(x)+3y'(x)+2y(x)=\cos e^{x}$ \hfill Απ: $y(x)=-e^{-2x}\cos e^{x}$
+      \item $y'''(x)-2y''(x)=-\frac{1+2x}{x^{2}}$, $x>0$ 
+        \hfill Απ: $y(x)=x\ln x-x -\frac{1}{2}$
+      \item $y'''(x)-3y''(x)+3y'(x)-y(x)=\frac{e^{x}}{x}$, $x>0$ 
+        \hfill Απ: $y(x)=\frac{x^{2}}{4}e^{x}(2\ln x-3)$
+    \end{enumerate}
+
+  \item Να λυθούν οι παρακάτω σδε τύπου \textlatin{\textbf{Euler}.}
+    \begin{enumerate}[i)]
+      \item $ x^{2}y''(x)-3xy'(x)+3y(x)=0 $ \hfill Απ: $ y(x)=c_{1}x + c_{2}x^{3} $
+      \item $ x^{2}y''(x)-2xy'(x)-4y(x)=0 $,\; $ x \neq 0 $ \hfill Απ: $
+        y(x)=c_{1}x^{4}+ c_{2} x^{-1} $ 
+      \item $ x^{2}y''(x)-xy'(x)+y(x)=1 $,\; $ x>0 $ \hfill Απ: $ y(x)=(c_{1}+c_{2}
+        \ln{x})x + 1 $  
+      \item $ x^{2}y''(x)-3xy'(x)-5y(x)=x^{3} $ \hfill Απ: $ y(x)=c_{1}x^{5}+ c_{2}
+        x^{-1}- \frac{x^{3}}{8} $ 
+      \item $ x^{2}y''(x)+xy'(x)-y(x)=x^{4} $ \hfill Απ: $ y(x)=c_{1}x+c_{2}x^{-1}+
+        \frac{x^{4}}{15} $ 
+      \item $ x^{3}y'''(x)+4x^{2}y''(x)-8xy'(x)+8y(x)=0 $,\; $ x \neq 0 $ \hfill Απ:
+        $y(x)=c_{1}x+c_{2}x^{2}+c_{3}x^{-4}$ 
+      \item \label{eul} $ (x+3)^{2}y''(x)+3(x+3)y'(x)+y(x)=0 $,\; $ x>-3 $ \hfill Απ:
+        $ c_{1}
+        (x+3)^{-1} + c_{2}\ln(x+3)(x+3)^{-1} $
+    \end{enumerate}
+
+  % \item Να βρεθεί η \textbf{γενική λύση} των παρακάτω γραμμικών σδε με \textbf{μη
+  %   σταθερούς συντελεστές}.
+
+    % \begin{enumerate}[i)] %Μαρκάκης (Σημειώσεις)
+    %   \item $ xy''-(x+1)y'+y=x \mathrm{e}^{2x} $, όπου $ y_{1}(x)= x+1 $
+    %     \hfill Απ: $ y_{2}(x) = \mathrm{e}^{x} , \; y_{p}(x)= \frac{x-1}{2}
+    %     \mathrm{e}^{2x} $ 
+
+    %   \item $ x^{2}y''-2xy'+2y=x $, όπου $ y_{1}(x) = x $. 
+    %     \hfill Απ: $ y_{2}(x) = x^{2}, \; y_{p}(x) = -x(\ln{\abs{x}} +1) $ 
+
+    %   \item $ x^{2}y''-2xy'-(x^{2}-2)y=3x^{4} $, όπου $ y_{1}(x)=x \mathrm{e}^{x} $.
+    %    \hfill Απ: $ y_{2}(x)=x \mathrm{e}^{-x} , \; y_{p}(x)=-3 x^{2} $ 
+
+    %  \item $ x^{2}y''-xy'-3y=x^{3/2} $, όπου $ y_{1}= {1}/{x} $. 
+    %    \hfill Απ: $ y_{2}(x)=x^{3}, \; y_{p}(x) = - \frac{4x^{3/2}}{15} $ 
+
+    %  \item $ x^{2}y''-(2a-1)xy'+a^{2}y=x^{a+1} $, όπου $ y_{1}(x)=x^{a} $.
+    %    \hfill Απ: $ y_{2}(x)=x^{a} \ln{\abs{x}} , \; y_{p}(x) = x^{a+1} $ 
+    % \end{enumerate}
+
+\end{enumerate}
+
+
+
+\end{document}
+
