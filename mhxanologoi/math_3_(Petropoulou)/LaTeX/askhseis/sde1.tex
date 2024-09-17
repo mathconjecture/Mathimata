@@ -1,11 +1,13 @@
 \documentclass[a4paper,table]{report}
-\input{preamble_ask.tex}
-\input{definitions_ask.tex}
+\input{preamble.tex}
+\input{definitions.tex}
 % \everymath{\displaystyle}
 \pagestyle{askhseis}
 
 
+
 \begin{document}
+
 
 
 \begin{center}
@@ -18,20 +20,26 @@
 
   \item Να λυθούν οι παρακάτω σδε χωριζομένων μεταβλητών.
 
-    \begin{enumerate}[i)]
-      \item $ y'+y^{2} \cos{x} = 0 $ \hfill Απ: $ y = \frac{1}{\sin{x} + c} $  %Argyriou
-      \item $2xyy'=y^2+1$\hfill Απ: $y= \pm \sqrt{cx-1}$  %Argyriou
-      \item $(2x+xy)y'=y^2$\hfill Απ: $y=cx \mathrm{e}^{\frac{2}{y}}$
-      \item $y'+2xy^2=0$\hfill Απ: $y=\frac{1}{x^2+c}$ %Argyriou
-      \item $xy'+y^2=0$\hfill Απ: $y=\frac{1}{\ln|x|+c}$ %Argyriou
-      \item $y'-2yy'+ \mathrm{e}^x=0$\hfill Απ: $y^2-y- \mathrm{e}^x=c$ %Argyriou
-      \item $2xy'+y^2-1=0$\hfill Απ: $y=\frac{x-c}{x+c}$ %Argyriou
-      \item $(1+x^2)y'-2x(1-y^2)=0$ %Argyriou
-        \hfill Απ: $y= \frac{1+x^{2}-c}{1+x^{2}+c}$
-      \item $y'=1+x+y^2+xy^2$\hfill Απ: $y=\tan{\Bigl(x+\frac{x^2}{2}+c\Bigr)}$ %Argyriou
-      \item $y'=xy+x+y+1$
-        \hfill Απ: $y=-1+c_2 \mathrm{e}^{\frac{(x+1)^2}{2}}, \; y_{\text{ιδιαζ.}}=-1$
-    \end{enumerate}
+    \twocolumnsidee{
+      \begin{enumerate}[i)]
+        \item $ y'+y^{2} \cos{x} = 0 $ \hfill Απ: $ y = \frac{1}{\sin{x} + c} $  %Argyriou
+        \item $2xyy'=y^2+1$\hfill Απ: $y= \pm \sqrt{cx-1}$  %Argyriou
+        \item $(2x+xy)y'=y^2$\hfill Απ: $y=cx \mathrm{e}^{\frac{2}{y}}$
+        \item $y'+2xy^2=0$\hfill Απ: $y=\frac{1}{x^2+c}$ %Argyriou
+        \item $xy'+y^2=0$\hfill Απ: $y=\frac{1}{\ln|x|+c}$ %Argyriou
+      \end{enumerate}
+    }{
+      \begin{enumerate}[i)]
+        \item $y'-2yy'+ \mathrm{e}^x=0$\hfill Απ: $y^2-y- \mathrm{e}^x=c$ %Argyriou
+        \item $2xy'+y^2-1=0$\hfill Απ: $y=\frac{x-c}{x+c}$ %Argyriou
+        \item $(1+x^2)y'-2x(1-y^2)=0$ %Argyriou
+          \hfill Απ: $y= \frac{1+x^{2}-c}{1+x^{2}+c}$
+        % \item $y'=1+x+y^2+xy^2$\hfill Απ: $y=\tan{\Bigl(x+\frac{x^2}{2}+c\Bigr)}$ %Argyriou
+        % \item $y'=xy+x+y+1$
+          % \hfill Απ: $y=-1+c_2 \mathrm{e}^{\frac{(x+1)^2}{2}}, \; y_{\text{ιδιαζ.}}=-1$
+      \end{enumerate}
+    }
+
 
   \item Να λυθούν οι παρακάτω σδε γραμμικές 1ης τάξης.
 
@@ -46,11 +54,11 @@
         \hfill Απ: $y=x^2-x-1$
       \item $(x+1)y'-ny= \mathrm{e}^x(x+1)^{n+1}, \quad x>-1, n\in \mathbb{R}$
         \hfill Απ: $y=(x+1)^n(\mathrm{e}^x+c)$
-      % \item $(1+y^2)dx=(\sqrt{1+y^2}\sin y-xy)dy$
-      %   \hfill Απ: $x=\frac{-\cos y+c}{\sqrt{1+y^2}}$
+        % \item $(1+y^2)dx=(\sqrt{1+y^2}\sin y-xy)dy$
+        %   \hfill Απ: $x=\frac{-\cos y+c}{\sqrt{1+y^2}}$
     \end{enumerate}
 
-  \item Να λυθούν οι παρακάτω σδε \textlatin{Bernoulli}
+  \item Να λυθούν οι παρακάτω σδε Bernoulli
 
     \begin{enumerate}[i)]
       \item $xy'-y+x^{3}y^{2}=0$ \hfill Απ: $ y= \frac{4x}{x^{4}+c} $ %Argyriou
@@ -67,7 +75,7 @@
       \item $y'+xy=xy^2$\hfill Απ: $y=\frac{1}{1+c \mathrm{e}^{\frac{x^2}{2}}}$
     \end{enumerate}
 
-  \item Να λυθούν οι παρακάτω σδε, \textlatin{Riccati}
+  \item Να λυθούν οι παρακάτω σδε, Riccati
     \begin{enumerate}[i)]
       \item $xy'=(y-1)(xy-x+1)$ \hfill Απ: $y=1-\frac{2x}{x^2+c}$
       \item $xy'=(x-y)^2+x$ \hfill Απ: $y=x-\frac{1}{\ln\abs{x}+c}$
@@ -114,31 +122,31 @@
         \hfill Απ: $ y= \frac{3 \textcolor{Col1}{+} \sqrt{9+12x^{2}-4x^{3}}}{x^{2}} $ 
       \item $(4x^3y^3+\frac{1}{x})dx+(3x^4y^2-\frac{1}{y})dy=0, \quad x(\mathrm{e})=1$
         \hfill Απ: $x^4y^3+\ln |\frac{x}{y}|= \mathrm{e}^3-1$
-      % \item $(3x^2+6xy^2)dx+(6x^2y+4y^3)dy=0$\hfill Απ: $x^3+3x^2y^2+y^4=c$
+        % \item $(3x^2+6xy^2)dx+(6x^2y+4y^3)dy=0$\hfill Απ: $x^3+3x^2y^2+y^4=c$
     \end{enumerate}
 
-% \item Να λυθούν οι παρακάτω σδε με τη βοήθεια κατάλληλων ολοκληρωτικών παραγόντων.
-	
-  % \begin{enumerate}[i)]
-  %   \item $ (x^{2}+y^{2})dx - 2xydy = 0 $   
-  %     \hfill Απ: $ \mu(x)= \frac{1}{x^{2}}, \; - \frac{y^{2}}{x} + x = c $
-  %   \item $ x(x^{3}+y^{3}+4x^{2})dx+ 3y^{2}(x-1)dy=0 $ %Arnos p.64
-  %     \hfill Απ: $ \mu (x)= \mathrm{e}^{x}, \; x^{4} \mathrm{e}^{x} + y^{3}(x-1)
-  %     \mathrm{e}^{x} - y^{3}=c $ 
-  %   \item $ (x+ \sin{x} + \sin{y} )dx + \cos{y} dy=0 $ % Κραββαριτης p.47
-  %     \hfill Απ: $ \mu (x) = \mathrm{e}^{x} $, \; $ \mathrm{e}^{x} \sin{y} + x
-  %     \mathrm{e}^{x} - \mathrm{e}^{x} + \frac{\mathrm{e}^{x}}{2} (\sin{x} - \cos{x})=c$
-  %   \item $ \mathrm{e}^{x}(x+1)dx - (x \mathrm{e}^{x}-y \mathrm{e}^{y})dy = 0 $ 
-  %     \hfill Απ: $ \mu(y) = \mathrm{e}^{-y}, \; x\mathrm{e}^{x-y} +\frac{y^{2}}{2}=c$
-  %   \item $ y(4x+y)dx-2(x^{2}-y)dy=0 $ % Κραββαριτης p.48
-  %     \hfill Απ: $ \mu (y) = \frac{1}{y^{2}} $, \; $ 2x^{2}+xy+y \ln{y^{2}} = cy $  
-  %   \item $ y(2xy+1)dx-xdy=0 $ %Arnos p.37
-  %     \hfill Απ: $ \mu (y) = \frac{1}{y^{2}}, \; x^{2} + \frac{x}{y} = c $ 
-  % \end{enumerate}
+    % \item Να λυθούν οι παρακάτω σδε με τη βοήθεια κατάλληλων ολοκληρωτικών παραγόντων.
 
-\item Να δείξετε ότι οι παραστάσεις που δίνονται αποτελούν ολοκληρωτικούς παράγοντες για
-  τις αντίστοιχες εξισώσεις και στη συνέχεια να βρείτε τη γενική τους λύση.
-  \begin{enumerate}[i)]
+    % \begin{enumerate}[i)]
+    %   \item $ (x^{2}+y^{2})dx - 2xydy = 0 $   
+    %     \hfill Απ: $ \mu(x)= \frac{1}{x^{2}}, \; - \frac{y^{2}}{x} + x = c $
+    %   \item $ x(x^{3}+y^{3}+4x^{2})dx+ 3y^{2}(x-1)dy=0 $ %Arnos p.64
+    %     \hfill Απ: $ \mu (x)= \mathrm{e}^{x}, \; x^{4} \mathrm{e}^{x} + y^{3}(x-1)
+    %     \mathrm{e}^{x} - y^{3}=c $ 
+    %   \item $ (x+ \sin{x} + \sin{y} )dx + \cos{y} dy=0 $ % Κραββαριτης p.47
+    %     \hfill Απ: $ \mu (x) = \mathrm{e}^{x} $, \; $ \mathrm{e}^{x} \sin{y} + x
+    %     \mathrm{e}^{x} - \mathrm{e}^{x} + \frac{\mathrm{e}^{x}}{2} (\sin{x} - \cos{x})=c$
+    %   \item $ \mathrm{e}^{x}(x+1)dx - (x \mathrm{e}^{x}-y \mathrm{e}^{y})dy = 0 $ 
+    %     \hfill Απ: $ \mu(y) = \mathrm{e}^{-y}, \; x\mathrm{e}^{x-y} +\frac{y^{2}}{2}=c$
+    %   \item $ y(4x+y)dx-2(x^{2}-y)dy=0 $ % Κραββαριτης p.48
+    %     \hfill Απ: $ \mu (y) = \frac{1}{y^{2}} $, \; $ 2x^{2}+xy+y \ln{y^{2}} = cy $  
+    %   \item $ y(2xy+1)dx-xdy=0 $ %Arnos p.37
+    %     \hfill Απ: $ \mu (y) = \frac{1}{y^{2}}, \; x^{2} + \frac{x}{y} = c $ 
+    % \end{enumerate}
+
+  \item Να δείξετε ότι οι παραστάσεις που δίνονται αποτελούν ολοκληρωτικούς παράγοντες για
+    τις αντίστοιχες εξισώσεις και στη συνέχεια να βρείτε τη γενική τους λύση.
+    \begin{enumerate}[i)]
       \item $ (2y-6x)dx+\left(3x-4\frac{x^{2}}{y}\right)dy=0 $, \; $ \mu (x,y) = xy^{2} $
         \hfill Απ: $ x^{2}y^{3}-2x^{3}y^{2}=c $ %Argyriou
       \item $ y' =- \frac{5xy+4y^{2}+1}{x^{2}+2xy}, \quad \mu(x)=x^{3} $  
@@ -146,7 +154,7 @@
       \item $ (2xy^{4} \mathrm{e}^{y} + 2xy^{3}+y)dx + (x^{2}y^{4}\mathrm{e}^{y} -
         x^{2}y^{2}-3x)dy=0, \quad \mu (y) = \frac{1}{y^{4}} $ 
         \hfill Απ: $ x^{2}e^{y}+ \frac{x^{2}}{y} + \frac{x}{y^{3}} =c $ 
-  \end{enumerate}
+    \end{enumerate}
 
 \end{enumerate}
 

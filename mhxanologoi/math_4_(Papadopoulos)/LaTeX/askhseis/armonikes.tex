@@ -1,0 +1,68 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_ask.tex}
+\input{definitions.tex}
+
+
+\pagestyle{askhseis}
+\everymath{\displaystyle}
+% \geometry{top=2cm}
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col1}{Ασκήσεις στις Αρμονικές Συναρτήσεις}}
+\end{center}
+
+\vspace{\baselineskip} 
+
+
+\section*{Αρμονικές Συναρτήσεις}
+
+\begin{enumerate}
+
+  \item Δίνεται η συνάρτηση $ u(x,y) = x^{2} +4x-y^{2}+2y $. 
+    \begin{enumerate}[i)]
+      \item Να δείξετε ότι η συνάρτηση $ u $ είναι αρμονική.
+      \item Να βρεθεί η συνάρτηση $ v(x,y) $ τέτοια ώστε η μιγαδική συνάρτηση 
+        $ f(z) = u(x,y) + iv(x,y) $ να είναι αναλυτική. 
+      \item Να γραφεί η αντίστοιχη συνάρτηση $ f(z) $.
+    \end{enumerate}
+
+    \hfill Απ: $ f(z) = z^{2}+4z-2iz+a $ 
+
+  \item Δίνεται η συνάρτηση $ u(x,y) = \ln{\sqrt{x^{2}+y^{2}}} $ που είναι ορισμένη 
+    στο σύνολο $ \mathbb{R}^{2}- \{ 0,0 \} $. 
+    \begin{enumerate}[i)]
+      \item Να δείξετε ότι η συνάρτηση $ u $ είναι αρμονική.
+      \item Να βρεθεί μια συζυγής αρμονική συνάρτηση της $u$.
+      \item Να γραφεί η αντίστοιχη ολόμορφη συνάρτηση.
+    \end{enumerate}
+
+    \hfill Απ: $ f(z) = \ln{\sqrt{x^{2}+y^{2}}} + i(\arctan{\frac{y}{x}} + c)  $ 
+
+  \item Δίνεται η συνάρτηση $ u(x,y) = 2x-x^{3}+axy^{2} $. 
+    \begin{enumerate}[i)]
+      \item Να βρεθεί για ποια τιμή του $a$, η συνάρτηση είναι αρμονική. 
+      \item Για αυτήν την τιμή του $a$ να βρεθεί η συζυγής αρμονική συνάρτηση της $u$.
+    \end{enumerate} 
+
+    \hfill Απ: $ a=3 $, $ v(x,y) = 2y-3x^{2}y+y^{3}+c $ 
+
+  \item Να εξεταστούν με χρήση πολικών συντεταγμένων, αν οι παρακάτω συναρτήσεις είναι
+    αναλυτικές. 
+    \begin{enumerate}[i)]
+      \item $ f(z)=z^{3}+z $ \hfill Απ: ναι 
+      \item $ f(z) = r + i \theta $ \hfill Απ: όχι 
+    \end{enumerate} 
+\end{enumerate}
+
+
+\section*{Υπόδειξη}
+
+Οι συνθήκες Cauchy - Riemann σε πολικές συντεταγμένες, είναι:
+\begin{gather*}
+  u_r(r,\theta) = \frac{1}{r} v_{\theta} \\
+  v_{r}(r,\theta) = - \frac{1}{r} u_{\theta}
+\end{gather*}
+
+\end{document}

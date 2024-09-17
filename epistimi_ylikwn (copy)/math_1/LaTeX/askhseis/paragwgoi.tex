@@ -1,0 +1,108 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\pagestyle{askhseis}
+\everymath{\displaystyle}
+
+\begin{document}
+
+
+\begin{center}
+  \minibox{\large \bfseries \textcolor{Col1}{Ασκήσεις στις Παραγώγους}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+
+  \item Να υπολογιστούν οι \textbf{παράγωγοι} των παρακάτω συναρτήσεων
+    \begin{enumerate}[(i)]
+      \item $ f(x) = \ln{\left(\sqrt{1+3x^{2}}\right)} $ \hfill Απ: $
+        \frac{3x}{(1+3x^{2})} $
+      \item $ f(x) = \ln({\sin({\cos{x}})}) $ \hfill Απ: $
+        \frac{1}{\sin{(\cos{x})}} [\cos{(\cos{x})}] (- \sin{x}) $ 
+      \item $ f(x)= \arcsin(\frac{1}{x}) $ \hfill Απ: $ - \frac{1}{x \sqrt{x^{2}-1}} $ 
+    \end{enumerate}
+
+  \item  Να υπολογιστούν οι \textbf{παράγωγοι} των παρακάτω συναρτήσεων
+
+    \begin{enumerate}[(i)]
+      \item $ f(x) = (\cos{x})^{\sin{2x}} $ \hfill Απ: $
+        (\cos{x})^{\sin{2x}} 2(\cos{2x} \ln{(\cos{x})} - \sin^{2}{x}) $
+      \item $ f(x) = \Bigl(1 + \frac{1}{x}\Bigr)^{x} $ \hfill Απ: $
+        \Bigl(1 + \frac{1}{x}\Bigr)^{x}\left[\ln{(1 + \frac{1}{x})} -
+        \frac{1}{x+1}\right] $
+      \item $ f(x)=(\sin{x})^{x} $ \hfill Απ: $ (\sin{x})^{x}[\ln{(\sin{x}
+        )} + x \cot{x}] $ 
+      \item $ f(x)=\cos{x}^{x} $ \hfill Απ: $ (- \sin{x^{x}})x^{x} (1 +
+        \ln{x}) $
+    \end{enumerate}
+
+  \item Να βρεθούν οι παράγωγοι των \textbf{αντίστροφων}, των παρακάτω συναρτήσεων.
+
+    \textcolor{Col1}{Υπόδειξη:} 
+    $ \cosh^{2}{x} - \sinh^{2}{x} = 1 $, \;
+    $ \tanh{x} = \frac{\sinh{x}}{\cosh{x}} $ 
+    \begin{enumerate}[(i)]
+      \twocolumnside{
+        \item $ y = \cos{x} $ \hfill Απ: $ \frac{-1}{\sqrt{1 - y^{2}}} $
+        \item $ y = \tan{x} $ \hfill Απ: $ \frac{1}{1 + y^{2}} $
+          }{
+        \item $ y = \cosh{x} $  \hfill Απ: $ \frac{1}{\sqrt{y^{2} - 1}} $
+        \item $ y = \tanh{x} $ \hfill Απ: $ \frac{1}{x^{2} - 1} $
+        }
+    \end{enumerate}
+
+  \item Δίνεται η σχέση $ x^{2} - xy + y^{2} = 3 $, $ y=y(x) $. Να βρεθεί η 1η
+    και η 2η παράγωγος της $y$ ως προς $x$ στο σημείο $ (1,-1) $.
+    \hfill Απ: $ y' = 1$, $ y'' = 2/3 $
+
+  \item Έστω η καμπύλη $ x^{2} + xy + y^{2} = 7 $. Να υπολογιστεί η \textbf{κλίση} της 
+    εφαπτομένης στο σημείο $ (1,2) $.
+    \hfill Απ: -4/5 
+
+  \item Έστω η καμπύλη $ y^{2}-6x^2 + 4y + 19 = 0 $. Να υπολογιστούν οι εξισώσεις της
+    \textbf{εφαπτομένης} και της \textbf{κάθετης} ευθείας στο σημείο  $ (2,1) $.
+    \hfill Απ: $\varepsilon\colon y - 1 = 4 (x-2) $, 
+    $\kappa\colon y - 1 = -1/4 (x-2) $.
+
+  \item Έστω η καμπύλη $ 4x^{3} - 3xy^{2} + 6x^{2} - 5xy - 8 y^{2} + 9x + 14 = 0$. 
+    Να υπολογιστούν οι εξισώσεις της \textbf{εφαπτομένης} και της \textbf{κάθετης} 
+    ευθείας στο σημείο  $ (-2,3) $.
+
+    \textcolor{Col1}{Υπόδειξη:} 
+    $ \varepsilon: y-y(x_{0}) = y'(x_{0})(x- x_{0}) $, \;
+    $ \kappa: y-y(x_{0}) = -\frac{1}{y'(x_{0})}(x- x_{0}) $, \;
+
+    \hfill Απ: $\varepsilon\colon y = \frac{9}{2} x - 6 $, 
+    $\kappa\colon y = \frac{2}{9} x + \frac{31}{9} $.
+
+  \item Δίνονται οι παραμετρικές εξισώσεις $ x(t)=t^{3}+t $ και $ y(t)=t^{2}+1 $. 
+    Να υποογιστεί η παράγωγος $ \dv{y}{x} $ στο σημείο $ (2,2) $.
+    \hfill Απ: $ 1/2 $
+
+  \item Να υπολογιστούν τα παρακάτω όρια.
+    \begin{enumerate}[i)]
+      \twocolumnside{
+        %A Desmi p.217
+        \item $ \lim_{x \to 0} \frac{\mathrm{e}^{x} - x -1}{x^{2}} $ \hfill Απ: $1/2$  
+        \item $ \lim_{x \to \infty} x \ln{(1+ \frac{1}{x})} $ \hfill Απ: $1$ 
+        \item $ \lim_{x \to \infty} (x - \ln{x}) $ \hfill Απ: $ \infty $  
+        \item $ \lim_{x \to \infty} (1+2x)^{1/x} $ \hfill Απ: $ 1 $ 
+        \item $ \lim_{x \to 0^{+}} (1+x)^{\cot{x}} $ \hfill Απ: $ \mathrm{e} $ 
+          }{
+        \item $ \lim_{x\to 1} \left(\frac{1}{\ln{x}} - \frac{1}{x-1}\right) $ \hfill
+          Απ: $ \frac{1}{2} $
+        \item $ \lim_{x\to +\infty} \left(1 + \frac{1}{x} +
+          \frac{2}{x^{2}}\right)^{x} $ \hfill Απ: $ e $ 
+        \item $ \lim_{x\to 0^{+}} \left(\frac{1}{x}\right)^{\sin{x}} $ \hfill $ 1 $
+        \item $ \lim_{x\to 0} \left(\cos{2x}\right)^{\frac{3}{x^{2}}}  $ \hfill Απ:
+          $ e^{-6} $
+        }
+    \end{enumerate}
+\end{enumerate}
+
+
+\end{document}
+

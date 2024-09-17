@@ -1,0 +1,69 @@
+\documentclass[a4paper]{report}
+\input{preamble.tex}
+\input{definitions_ask.tex}
+
+
+\everymath{\displaystyle}
+
+\pagestyle{askhseis}
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col1}{Ασκήσεις στα ολοκληρώματα}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{exercise}
+  Να υπολογιστούν τα παρακάτω ολοκληρώματα.
+
+  \begin{enumerate}[i)]
+    \item $ \int t \sin{(\pi - t)} \,{dt} $ 
+      \quad \textcolor{Col1}{Υπόδειξη:} $ \sin{(\pi - t)} = \sin{t}$  
+      \hfill Απ: $ -t \cos{t} + \sin{t} $ 
+    \item $ \int 2t \cos{(1+t)} \,{dt} $
+      \hfill Απ: $ 2(t \sin{(1+t)} + \cos{(1+t)}) $  
+    \item $ \int t^{3} \ln{(2t)}\,{dt} $
+      \hfill Απ: $ \frac{t^4}{4} \ln{(2t)} - \frac{t^4}{16} $ 
+  \end{enumerate}
+
+\end{exercise}
+
+\begin{exercise}
+  Να υπολογιστούν τα παρακάτω ολοκληρώματα.
+
+  \begin{enumerate}[i)]
+    \item $ \int 2t \cos{(1+t^2)} \,{dt} $ 
+      \hfill Απ: $ \sin{(1+t^{2})}  $ 
+    \item $ \int \frac{t}{3+t^{2}} \,{dt} $
+      \hfill Απ: $ \frac{1}{2} \ln{(3+t^2)} $ 
+    \item $ \int \frac{t}{\sqrt{1-t^{2}}} \,{dt} $
+      \hfill Απ: $ - \sqrt{1-t^2} $ 
+  \end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}
+  Να υπολογιστούν τα παρακάτω ολοκληρώματα.
+
+  \begin{enumerate}[i)]
+    \item $ \int \frac{1}{t^{2}-4} \,{dt} $ 
+      \hfill Απ: $ \frac{1}{4} \ln{\abs{\frac{t-2}{t+2}}} $  
+    \item $ \int \frac{2}{t^{2}+t} \,{dt} $ 
+      \hfill Απ: $ 2\ln{\abs{\frac{t}{t+1}} } $ 
+    \item $ \int \frac{t+1}{t^{3}+t^{2}-6t} \,{dt} $ 
+      \hfill Απ: $ \frac{3}{10} \ln{\abs{t-2} - \frac{1}{6} 
+      \ln{\abs{t} - \frac{2}{15}} \ln{\abs{t+3}}} $
+    \item $ \int \frac{1}{t^{2}+2t+2} \,{dt} $
+      \hfill Απ: $ \arctan{(t+1)} $  
+    \item $ \int \frac{1}{t^{2}-2t+1} \,{dt} $
+      \hfill Απ: $ - \frac{1}{t-1} $  
+  \end{enumerate}
+\end{exercise}
+
+
+
+
+
+\end{document}

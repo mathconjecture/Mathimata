@@ -1,0 +1,77 @@
+\documentclass[a4paper]{report}
+\input{preamble.tex}
+\input{definitions_ask.tex}
+
+\pagestyle{askhseis}
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col1}{Ασκήσεις στον τύπο Taylor}}
+\end{center}
+
+\vspace{\baselineskip}
+
+
+
+
+
+
+\begin{exercise}
+\item 
+  \begin{enumerate}[i)]
+    \item Η συνάρτηση $ y(x) $ ικανοποιεί την εξίσωση $ y'' + 4y = 2(2x^3 - x) $ και τις 
+      συνθήκες $ y(0) = 0 $ και $ y'(0)=-1 $. Να προσεγγιστεί η τιμή $ y(0.25) $ με 
+      χρήση ενός πολυωνύμου Taylor 4ου βαθμού.
+    \item Υπολογίστε το πολυώνυμο Taylor 4ης τάξης, που παράγεται από την 
+      $ y(x) = \cos{( \frac{2x}{\pi} )} $ με κέντρο το $ x=0 $. Υπολογίστε άνω φράγμα 
+      $M$ για τον όρο σφάλματος αποκοπής, δοθέντος ότι $ \abs{x} < 1 $ και να 
+      συγκρίνετε τις τιμές $ y(0.5) $ και $ p_{4}(0.5) $.
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+\item 
+  \begin{enumerate}[i)]
+    \item Η συνάρτηση $ y(x) $ ικανοποιεί την εξίσωση $ y''=y'= 2 \mathrm{e}^{2x} -1$ 
+      και τις συνθήκες $ y(0) = 0 $ και $ y'(0)=3 $. Να προσεγγιστεί η τιμή $ y(0.3) $ 
+      με χρήση ενός πολυωνύμου Taylor 4ου βαθμού.
+    \item Υπολογίστε το πολυώνυμο Taylor 3ης τάξης, που παράγεται από την 
+      $ y(x) = \ln{(x+1)} $ με κέντρο το $ x=0 $. Υπολογίστε άνω φράγμα 
+      $M$ για τον όρο σφάλματος αποκοπής, δοθέντος ότι $ \abs{x} < 1 $ και στη συνέχεια 
+      να υπολογίσετε το σφάλμα της προσέγγισης της τιμής $ y(0.5) $ από την
+      τιμή $ p_{4}(0.5) $.
+  \end{enumerate}
+\end{exercise}
+
+\vspace{\baselineskip}
+
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col1}{Ασκήσεις στις παραγώγους}}
+\end{center}
+
+\vspace{\baselineskip}
+
+
+\begin{exercise}
+  \item 
+    \begin{enumerate}[i)]
+      \item Αν $ y= x^{3}+2x-1 $ να εκτιμήσετε τη μεταβολή $ \delta y $ καθώς το $x$ 
+        μεταβάλλεται από 1 σε $ 1.01 $ και να συγκρίνετε την εκτίμηση που υπολογίσατε 
+        με την πραγματική μεταβολή.
+      \item Να βρεθεί το $ \frac{dy}{dx} $ στις παρακάτω περιπτώσεις. 
+        \begin{enumerate}[i)]
+          \item $ y = \mathrm{e}^{2x} (1 - (2+x^2)^3 ) $
+          \item $ y(t) = \mathrm{e}^{t^2} + 1 $ και $ x(t) = 2 \sqrt{t} $
+          \item $ x^{2} + 2xy+ y^2 = 2x - y $
+        \end{enumerate}
+      \item Έστω η συνάρτηση $ f(x) = x^{3}+3x^{2}-5 $. Να βρεθούν ακρότατα και σημεία 
+        αλλαγής της καμπυλότητας.
+
+        \hfill Απ: $ f_{\rm min}(0) = -5 $, $ f_{\rm max}(-2) = -1 $ 
+    \end{enumerate}
+\end{exercise}
+
+
+
+\end{document}
